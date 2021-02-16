@@ -78,7 +78,12 @@
         <meta class="swiftype" name="title" data-type="string" content="{{ .Params.title_tag }}" />
         <title>{{ .Params.title_tag }} | Pulumi</title>
     {{ else if .Title }}
-        <meta class="swiftype" name="title" data-type="string" content="{{ .Title }}" />
+        <!-- For blog posts that come up in Swiftype result sets, denote that the links are blog posts by adding a "Blog" prefix to the title. -->
+        {{ if and (eq .Type "blog") .IsPage }}
+            <meta class="swiftype" name="title" data-type="string" content="Blog: {{ .Title }}" />
+        {{ else }}
+            <meta class="swiftype" name="title" data-type="string" content="{{ .Title }}" />
+        {{ end }}
         <title>{{ .Title }} | Pulumi</title>
     {{ else if not (or .Params.redirect_to .Params.private) }}
         <!--
