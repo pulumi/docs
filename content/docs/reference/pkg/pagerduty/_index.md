@@ -56,24 +56,6 @@ A Pulumi package for creating and managing pagerduty cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).</dd>
 	<dt>Version</dt>
-	<dd>1.3.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.html" title="Pulumi.Pagerduty">Pulumi.Pagerduty</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#" title="pagerduty">pagerduty</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#" title="@pulumi/pagerduty">@pulumi/pagerduty</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_pagerduty" title="pulumi_pagerduty">pulumi_pagerduty</a></dd>
-
+	<dd>1.3.1</dd>
 </dl>
 
