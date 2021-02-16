@@ -25,24 +25,6 @@ Explore the resources and functions of the objectstorage module in the Open Stac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.ObjectStorage.html" title="Pulumi.OpenStack.ObjectStorage">Pulumi.OpenStack.ObjectStorage</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/objectstorage?tab=doc#" title="openstack/objectstorage">openstack/objectstorage</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/objectstorage/#" title="@pulumi/openstack/objectstorage">@pulumi/openstack/objectstorage</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/objectstorage" title="pulumi_openstack/objectstorage">pulumi_openstack/objectstorage</a></dd>
-
+	<dd>2.14.0</dd>
 </dl>
 

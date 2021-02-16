@@ -23,24 +23,6 @@ Explore the resources and functions of the orchestration module in the Open Stac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Orchestration.html" title="Pulumi.OpenStack.Orchestration">Pulumi.OpenStack.Orchestration</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#" title="openstack/orchestration">openstack/orchestration</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/orchestration/#" title="@pulumi/openstack/orchestration">@pulumi/openstack/orchestration</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/orchestration" title="pulumi_openstack/orchestration">pulumi_openstack/orchestration</a></dd>
-
+	<dd>2.14.0</dd>
 </dl>
 
