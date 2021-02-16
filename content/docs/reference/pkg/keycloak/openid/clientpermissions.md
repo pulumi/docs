@@ -18,19 +18,19 @@ meta_desc: "Documentation for the keycloak.openid.ClientPermissions resource wit
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#ClientPermissions">ClientPermissions</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#ClientPermissionsArgs">ClientPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ClientPermissions</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClientPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#pulumi_keycloak.openid.ClientPermissions">ClientPermissions</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configure_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsConfigureScopeArgs]</span> = None<span class="p">, </span><span class="nx">manage_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsManageScopeArgs]</span> = None<span class="p">, </span><span class="nx">map_roles_client_scope_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsMapRolesClientScopeScopeArgs]</span> = None<span class="p">, </span><span class="nx">map_roles_composite_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsMapRolesCompositeScopeArgs]</span> = None<span class="p">, </span><span class="nx">map_roles_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsMapRolesScopeArgs]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_exchange_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsTokenExchangeScopeArgs]</span> = None<span class="p">, </span><span class="nx">view_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsViewScopeArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ClientPermissions</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configure_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsConfigureScopeArgs]</span> = None<span class="p">, </span><span class="nx">manage_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsManageScopeArgs]</span> = None<span class="p">, </span><span class="nx">map_roles_client_scope_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsMapRolesClientScopeScopeArgs]</span> = None<span class="p">, </span><span class="nx">map_roles_composite_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsMapRolesCompositeScopeArgs]</span> = None<span class="p">, </span><span class="nx">map_roles_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsMapRolesScopeArgs]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_exchange_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsTokenExchangeScopeArgs]</span> = None<span class="p">, </span><span class="nx">view_scope</span><span class="p">:</span> <span class="nx">Optional[ClientPermissionsViewScopeArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissions">NewClientPermissions</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsArgs">ClientPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissions">ClientPermissions</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClientPermissions</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClientPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClientPermissions</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientPermissions.html">ClientPermissions</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientPermissionsArgs.html">ClientPermissionsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ClientPermissions</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClientPermissionsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -51,7 +51,7 @@ meta_desc: "Documentation for the keycloak.openid.ClientPermissions resource wit
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#ClientPermissionsArgs">ClientPermissionsArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClientPermissionsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -120,7 +120,7 @@ meta_desc: "Documentation for the keycloak.openid.ClientPermissions resource wit
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsArgs">ClientPermissionsArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClientPermissionsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -159,7 +159,7 @@ meta_desc: "Documentation for the keycloak.openid.ClientPermissions resource wit
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientPermissionsArgs.html">ClientPermissionsArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClientPermissionsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -182,11 +182,11 @@ meta_desc: "Documentation for the keycloak.openid.ClientPermissions resource wit
 
 ## ClientPermissions Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ClientPermissions resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ClientPermissions resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -689,7 +689,7 @@ Get an existing ClientPermissions resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#ClientPermissionsState">ClientPermissionsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#ClientPermissions">ClientPermissions</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClientPermissionsState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ClientPermissions</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -698,11 +698,11 @@ Get an existing ClientPermissions resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClientPermissions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsState">ClientPermissionsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissions">ClientPermissions</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClientPermissions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClientPermissionsState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClientPermissions</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientPermissions.html">ClientPermissions</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientPermissionsState.html">ClientPermissionsState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ClientPermissions</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClientPermissionsState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1238,18 +1238,6 @@ The following state arguments are supported:
 
 
 <h4 id="clientpermissionsconfigurescope">Client<wbr>Permissions<wbr>Configure<wbr>Scope</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientPermissionsConfigureScope">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#ClientPermissionsConfigureScope">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsConfigureScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsConfigureScopeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Inputs.ClientPermissionsConfigureScopeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Outputs.ClientPermissionsConfigureScope.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1384,18 +1372,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clientpermissionsmanagescope">Client<wbr>Permissions<wbr>Manage<wbr>Scope</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientPermissionsManageScope">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#ClientPermissionsManageScope">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsManageScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsManageScopeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Inputs.ClientPermissionsManageScopeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Outputs.ClientPermissionsManageScope.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1530,18 +1506,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clientpermissionsmaprolesclientscopescope">Client<wbr>Permissions<wbr>Map<wbr>Roles<wbr>Client<wbr>Scope<wbr>Scope</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientPermissionsMapRolesClientScopeScope">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#ClientPermissionsMapRolesClientScopeScope">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsMapRolesClientScopeScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsMapRolesClientScopeScopeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Inputs.ClientPermissionsMapRolesClientScopeScopeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Outputs.ClientPermissionsMapRolesClientScopeScope.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1676,18 +1640,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clientpermissionsmaprolescompositescope">Client<wbr>Permissions<wbr>Map<wbr>Roles<wbr>Composite<wbr>Scope</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientPermissionsMapRolesCompositeScope">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#ClientPermissionsMapRolesCompositeScope">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsMapRolesCompositeScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsMapRolesCompositeScopeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Inputs.ClientPermissionsMapRolesCompositeScopeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Outputs.ClientPermissionsMapRolesCompositeScope.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1822,18 +1774,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clientpermissionsmaprolesscope">Client<wbr>Permissions<wbr>Map<wbr>Roles<wbr>Scope</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientPermissionsMapRolesScope">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#ClientPermissionsMapRolesScope">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsMapRolesScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsMapRolesScopeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Inputs.ClientPermissionsMapRolesScopeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Outputs.ClientPermissionsMapRolesScope.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1968,18 +1908,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clientpermissionstokenexchangescope">Client<wbr>Permissions<wbr>Token<wbr>Exchange<wbr>Scope</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientPermissionsTokenExchangeScope">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#ClientPermissionsTokenExchangeScope">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsTokenExchangeScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsTokenExchangeScopeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Inputs.ClientPermissionsTokenExchangeScopeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Outputs.ClientPermissionsTokenExchangeScope.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2114,18 +2042,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clientpermissionsviewscope">Client<wbr>Permissions<wbr>View<wbr>Scope</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientPermissionsViewScope">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#ClientPermissionsViewScope">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsViewScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientPermissionsViewScopeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Inputs.ClientPermissionsViewScopeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Outputs.ClientPermissionsViewScope.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
