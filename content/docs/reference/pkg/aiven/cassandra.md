@@ -61,7 +61,6 @@ import (
 	"fmt"
 
 	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
