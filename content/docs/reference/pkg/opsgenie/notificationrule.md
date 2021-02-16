@@ -174,19 +174,19 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/#NotificationRule">NotificationRule</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/#NotificationRuleArgs">NotificationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NotificationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NotificationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_opsgenie/#pulumi_opsgenie.NotificationRule">NotificationRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">criterias</span><span class="p">:</span> <span class="nx">Optional[Sequence[NotificationRuleCriteriaArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_times</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">order</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">repeats</span><span class="p">:</span> <span class="nx">Optional[Sequence[NotificationRuleRepeatArgs]]</span> = None<span class="p">, </span><span class="nx">schedules</span><span class="p">:</span> <span class="nx">Optional[Sequence[NotificationRuleScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[NotificationRuleStepArgs]]</span> = None<span class="p">, </span><span class="nx">time_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[NotificationRuleTimeRestrictionArgs]]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NotificationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">criterias</span><span class="p">:</span> <span class="nx">Optional[Sequence[NotificationRuleCriteriaArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_times</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">order</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">repeats</span><span class="p">:</span> <span class="nx">Optional[Sequence[NotificationRuleRepeatArgs]]</span> = None<span class="p">, </span><span class="nx">schedules</span><span class="p">:</span> <span class="nx">Optional[Sequence[NotificationRuleScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[NotificationRuleStepArgs]]</span> = None<span class="p">, </span><span class="nx">time_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[NotificationRuleTimeRestrictionArgs]]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRule">NewNotificationRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleArgs">NotificationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRule">NotificationRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNotificationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NotificationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NotificationRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.NotificationRule.html">NotificationRule</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.NotificationRuleArgs.html">NotificationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NotificationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NotificationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -207,7 +207,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/#NotificationRuleArgs">NotificationRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">NotificationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -276,7 +276,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleArgs">NotificationRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">NotificationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -315,7 +315,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.NotificationRuleArgs.html">NotificationRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">NotificationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -338,11 +338,11 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
 
 ## NotificationRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NotificationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NotificationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -869,7 +869,7 @@ Get an existing NotificationRule resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/#NotificationRuleState">NotificationRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/#NotificationRule">NotificationRule</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NotificationRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NotificationRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -878,11 +878,11 @@ Get an existing NotificationRule resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNotificationRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleState">NotificationRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRule">NotificationRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNotificationRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NotificationRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NotificationRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.NotificationRule.html">NotificationRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie..NotificationRuleState.html">NotificationRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NotificationRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NotificationRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1442,18 +1442,6 @@ The following state arguments are supported:
 
 
 <h4 id="notificationrulecriteria">Notification<wbr>Rule<wbr>Criteria</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#NotificationRuleCriteria">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#NotificationRuleCriteria">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleCriteriaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleCriteriaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.NotificationRuleCriteriaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.NotificationRuleCriteria.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1560,18 +1548,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="notificationrulecriteriacondition">Notification<wbr>Rule<wbr>Criteria<wbr>Condition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#NotificationRuleCriteriaCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#NotificationRuleCriteriaCondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleCriteriaConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleCriteriaConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.NotificationRuleCriteriaConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.NotificationRuleCriteriaCondition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1834,18 +1810,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="notificationrulerepeat">Notification<wbr>Rule<wbr>Repeat</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#NotificationRuleRepeat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#NotificationRuleRepeat">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleRepeatArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleRepeatOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.NotificationRuleRepeatArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.NotificationRuleRepeat.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1948,18 +1912,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="notificationruleschedule">Notification<wbr>Rule<wbr>Schedule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#NotificationRuleSchedule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#NotificationRuleSchedule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleScheduleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.NotificationRuleScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.NotificationRuleSchedule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2066,18 +2018,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="notificationrulestep">Notification<wbr>Rule<wbr>Step</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#NotificationRuleStep">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#NotificationRuleStep">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleStepOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.NotificationRuleStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.NotificationRuleStep.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2224,18 +2164,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="notificationrulestepcontact">Notification<wbr>Rule<wbr>Step<wbr>Contact</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#NotificationRuleStepContact">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#NotificationRuleStepContact">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleStepContactArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleStepContactOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.NotificationRuleStepContactArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.NotificationRuleStepContact.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2342,18 +2270,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="notificationruletimerestriction">Notification<wbr>Rule<wbr>Time<wbr>Restriction</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#NotificationRuleTimeRestriction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#NotificationRuleTimeRestriction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleTimeRestrictionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleTimeRestrictionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.NotificationRuleTimeRestrictionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.NotificationRuleTimeRestriction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2456,18 +2372,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="notificationruletimerestrictionrestriction">Notification<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Restriction</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#NotificationRuleTimeRestrictionRestriction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#NotificationRuleTimeRestrictionRestriction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleTimeRestrictionRestrictionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#NotificationRuleTimeRestrictionRestrictionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.NotificationRuleTimeRestrictionRestrictionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.NotificationRuleTimeRestrictionRestriction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
