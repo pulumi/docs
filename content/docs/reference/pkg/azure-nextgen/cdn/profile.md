@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.Profile resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 CDN profile is a logical grouping of endpoints that share the same settings, such as CDN provider and pricing tier.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Cdn.Latest.Profile("profile", new AzureNextGen.Cdn.Latest.ProfileArgs
+        var profile = new AzureNextGen.Cdn.Profile("profile", new AzureNextGen.Cdn.ProfileArgs
         {
             Location = "WestCentralUs",
             ProfileName = "profile1",
             ResourceGroupName = "RG",
-            Sku = new AzureNextGen.Cdn.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Cdn.Inputs.SkuArgs
             {
                 Name = "Standard_Verizon",
             },
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,11 +82,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.cdn.latest.Profile("profile",
+profile = azure_nextgen.cdn.Profile("profile",
     location="WestCentralUs",
     profile_name="profile1",
     resource_group_name="RG",
-    sku=azure_nextgen.cdn.latest.SkuArgs(
+    sku=azure_nextgen.cdn.SkuArgs(
         name="Standard_Verizon",
     ))
 
@@ -100,7 +100,7 @@ profile = azure_nextgen.cdn.latest.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const profile = new azure_nextgen.cdn.latest.Profile("profile", {
+const profile = new azure_nextgen.cdn.Profile("profile", {
     location: "WestCentralUs",
     profileName: "profile1",
     resourceGroupName: "RG",
@@ -121,7 +121,7 @@ const profile = new azure_nextgen.cdn.latest.Profile("profile", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -129,11 +129,11 @@ const profile = new azure_nextgen.cdn.latest.Profile("profile", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Profile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Profile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ProfileArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -154,7 +154,7 @@ const profile = new azure_nextgen.cdn.latest.Profile("profile", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProfileArgs</span>
+        <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -223,7 +223,7 @@ const profile = new azure_nextgen.cdn.latest.Profile("profile", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProfileArgs</span>
+        <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -262,7 +262,7 @@ const profile = new azure_nextgen.cdn.latest.Profile("profile", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProfileArgs</span>
+        <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -285,11 +285,11 @@ const profile = new azure_nextgen.cdn.latest.Profile("profile", {
 
 ## Profile Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Profile resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Profile resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1295,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:Profile profile1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1 
+$ pulumi import azure-nextgen:cdn:Profile profile1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1 
 ```
 
 

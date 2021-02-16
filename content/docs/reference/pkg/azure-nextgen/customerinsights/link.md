@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Link resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The link resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var link = new AzureNextGen.CustomerInsights.Latest.Link("link", new AzureNextGen.CustomerInsights.Latest.LinkArgs
+        var link = new AzureNextGen.CustomerInsights.Link("link", new AzureNextGen.CustomerInsights.LinkArgs
         {
             Description = 
             {
@@ -41,7 +41,7 @@ class MyStack : Stack
             LinkName = "linkTest4806",
             Mappings = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.TypePropertiesMappingArgs
+                new AzureNextGen.CustomerInsights.Inputs.TypePropertiesMappingArgs
                 {
                     LinkType = "UpdateAlways",
                     SourcePropertyName = "testInteraction1949",
@@ -50,7 +50,7 @@ class MyStack : Stack
             },
             ParticipantPropertyReferences = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.ParticipantPropertyReferenceArgs
+                new AzureNextGen.CustomerInsights.Inputs.ParticipantPropertyReferenceArgs
                 {
                     SourcePropertyName = "testInteraction1949",
                     TargetPropertyName = "ProfileId",
@@ -76,7 +76,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -127,7 +127,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-link = azure_nextgen.customerinsights.latest.Link("link",
+link = azure_nextgen.customerinsights.Link("link",
     description={
         "en-us": "Link Description",
     },
@@ -136,12 +136,12 @@ link = azure_nextgen.customerinsights.latest.Link("link",
     },
     hub_name="sdkTestHub",
     link_name="linkTest4806",
-    mappings=[azure_nextgen.customerinsights.latest.TypePropertiesMappingArgs(
+    mappings=[azure_nextgen.customerinsights.TypePropertiesMappingArgs(
         link_type="UpdateAlways",
         source_property_name="testInteraction1949",
         target_property_name="testProfile1446",
     )],
-    participant_property_references=[azure_nextgen.customerinsights.latest.ParticipantPropertyReferenceArgs(
+    participant_property_references=[azure_nextgen.customerinsights.ParticipantPropertyReferenceArgs(
         source_property_name="testInteraction1949",
         target_property_name="ProfileId",
     )],
@@ -161,7 +161,7 @@ link = azure_nextgen.customerinsights.latest.Link("link",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const link = new azure_nextgen.customerinsights.latest.Link("link", {
+const link = new azure_nextgen.customerinsights.Link("link", {
     description: {
         "en-us": "Link Description",
     },
@@ -198,7 +198,7 @@ const link = new azure_nextgen.customerinsights.latest.Link("link", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Link</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">LinkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Link</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -206,11 +206,11 @@ const link = new azure_nextgen.customerinsights.latest.Link("link", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLink</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">LinkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Link</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLink</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Link</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Link</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">LinkArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Link</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LinkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -231,7 +231,7 @@ const link = new azure_nextgen.customerinsights.latest.Link("link", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkArgs</span>
+        <span class="property-type"><a href="#inputs">LinkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -300,7 +300,7 @@ const link = new azure_nextgen.customerinsights.latest.Link("link", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkArgs</span>
+        <span class="property-type"><a href="#inputs">LinkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -339,7 +339,7 @@ const link = new azure_nextgen.customerinsights.latest.Link("link", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkArgs</span>
+        <span class="property-type"><a href="#inputs">LinkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -362,11 +362,11 @@ const link = new azure_nextgen.customerinsights.latest.Link("link", {
 
 ## Link Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Link resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Link resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1682,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:Link azSdkTestHub/linkTest4806 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/links/linkTest4806 
+$ pulumi import azure-nextgen:customerinsights:Link azSdkTestHub/linkTest4806 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/links/linkTest4806 
 ```
 
 

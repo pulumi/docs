@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.maps.Account resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure resource which represents access to a suite of Maps REST APIs.
-Latest API Version: 2018-05-01.
+API Version: 2018-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Maps.Latest.Account("account", new AzureNextGen.Maps.Latest.AccountArgs
+        var account = new AzureNextGen.Maps.Account("account", new AzureNextGen.Maps.AccountArgs
         {
             AccountName = "myMapsAccount",
             Location = "global",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Maps.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Maps.Inputs.SkuArgs
             {
                 Name = "S0",
             },
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	maps "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maps/latest"
+	maps "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maps"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,11 +89,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.maps.latest.Account("account",
+account = azure_nextgen.maps.Account("account",
     account_name="myMapsAccount",
     location="global",
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.maps.latest.SkuArgs(
+    sku=azure_nextgen.maps.SkuArgs(
         name="S0",
     ),
     tags={
@@ -110,7 +110,7 @@ account = azure_nextgen.maps.latest.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.maps.latest.Account("account", {
+const account = new azure_nextgen.maps.Account("account", {
     accountName: "myMapsAccount",
     location: "global",
     resourceGroupName: "myResourceGroup",
@@ -134,7 +134,7 @@ const account = new azure_nextgen.maps.latest.Account("account", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -142,11 +142,11 @@ const account = new azure_nextgen.maps.latest.Account("account", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -167,7 +167,7 @@ const account = new azure_nextgen.maps.latest.Account("account", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -236,7 +236,7 @@ const account = new azure_nextgen.maps.latest.Account("account", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -275,7 +275,7 @@ const account = new azure_nextgen.maps.latest.Account("account", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -298,11 +298,11 @@ const account = new azure_nextgen.maps.latest.Account("account", {
 
 ## Account Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Account resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Account resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -922,7 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:maps/latest:Account myMapsAccount /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/myResourceGroup/providers/Microsoft.Maps/accounts/myMapsAccount 
+$ pulumi import azure-nextgen:maps:Account myMapsAccount /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/myResourceGroup/providers/Microsoft.Maps/accounts/myMapsAccount 
 ```
 
 

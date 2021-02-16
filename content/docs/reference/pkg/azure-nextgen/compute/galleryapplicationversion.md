@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.GalleryApplicationVersio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the gallery Application Version that you want to create or update.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,29 +27,29 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryApplicationVersion = new AzureNextGen.Compute.Latest.GalleryApplicationVersion("galleryApplicationVersion", new AzureNextGen.Compute.Latest.GalleryApplicationVersionArgs
+        var galleryApplicationVersion = new AzureNextGen.Compute.GalleryApplicationVersion("galleryApplicationVersion", new AzureNextGen.Compute.GalleryApplicationVersionArgs
         {
             GalleryApplicationName = "myGalleryApplicationName",
             GalleryApplicationVersionName = "1.0.0",
             GalleryName = "myGalleryName",
             Location = "West US",
-            PublishingProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryApplicationVersionPublishingProfileArgs
+            PublishingProfile = new AzureNextGen.Compute.Inputs.GalleryApplicationVersionPublishingProfileArgs
             {
                 EndOfLifeDate = "2019-07-01T07:00:00Z",
-                ManageActions = new AzureNextGen.Compute.Latest.Inputs.UserArtifactManageArgs
+                ManageActions = new AzureNextGen.Compute.Inputs.UserArtifactManageArgs
                 {
                     Install = "powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
                     Remove = "del C:\\package ",
                 },
                 ReplicaCount = 1,
-                Source = new AzureNextGen.Compute.Latest.Inputs.UserArtifactSourceArgs
+                Source = new AzureNextGen.Compute.Inputs.UserArtifactSourceArgs
                 {
                     MediaLink = "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
                 },
                 StorageAccountType = "Standard_LRS",
                 TargetRegions = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute.Inputs.TargetRegionArgs
                     {
                         Name = "West US",
                         RegionalReplicaCount = 1,
@@ -73,7 +73,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -122,23 +122,23 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_application_version = azure_nextgen.compute.latest.GalleryApplicationVersion("galleryApplicationVersion",
+gallery_application_version = azure_nextgen.compute.GalleryApplicationVersion("galleryApplicationVersion",
     gallery_application_name="myGalleryApplicationName",
     gallery_application_version_name="1.0.0",
     gallery_name="myGalleryName",
     location="West US",
-    publishing_profile=azure_nextgen.compute.latest.GalleryApplicationVersionPublishingProfileArgs(
+    publishing_profile=azure_nextgen.compute.GalleryApplicationVersionPublishingProfileArgs(
         end_of_life_date="2019-07-01T07:00:00Z",
-        manage_actions=azure_nextgen.compute.latest.UserArtifactManageArgs(
+        manage_actions=azure_nextgen.compute.UserArtifactManageArgs(
             install="powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
             remove="del C:\\package ",
         ),
         replica_count=1,
-        source=azure_nextgen.compute.latest.UserArtifactSourceArgs(
+        source=azure_nextgen.compute.UserArtifactSourceArgs(
             media_link="https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
         ),
         storage_account_type="Standard_LRS",
-        target_regions=[azure_nextgen.compute.latest.TargetRegionArgs(
+        target_regions=[azure_nextgen.compute.TargetRegionArgs(
             name="West US",
             regional_replica_count=1,
             storage_account_type="Standard_LRS",
@@ -156,7 +156,7 @@ gallery_application_version = azure_nextgen.compute.latest.GalleryApplicationVer
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const galleryApplicationVersion = new azure_nextgen.compute.latest.GalleryApplicationVersion("galleryApplicationVersion", {
+const galleryApplicationVersion = new azure_nextgen.compute.GalleryApplicationVersion("galleryApplicationVersion", {
     galleryApplicationName: "myGalleryApplicationName",
     galleryApplicationVersionName: "1.0.0",
     galleryName: "myGalleryName",
@@ -193,7 +193,7 @@ const galleryApplicationVersion = new azure_nextgen.compute.latest.GalleryApplic
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GalleryApplicationVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">GalleryApplicationVersionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GalleryApplicationVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryApplicationVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -201,11 +201,11 @@ const galleryApplicationVersion = new azure_nextgen.compute.latest.GalleryApplic
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGalleryApplicationVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">GalleryApplicationVersionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GalleryApplicationVersion</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGalleryApplicationVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GalleryApplicationVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GalleryApplicationVersion</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GalleryApplicationVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">GalleryApplicationVersionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GalleryApplicationVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GalleryApplicationVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -226,7 +226,7 @@ const galleryApplicationVersion = new azure_nextgen.compute.latest.GalleryApplic
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GalleryApplicationVersionArgs</span>
+        <span class="property-type"><a href="#inputs">GalleryApplicationVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -295,7 +295,7 @@ const galleryApplicationVersion = new azure_nextgen.compute.latest.GalleryApplic
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GalleryApplicationVersionArgs</span>
+        <span class="property-type"><a href="#inputs">GalleryApplicationVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -334,7 +334,7 @@ const galleryApplicationVersion = new azure_nextgen.compute.latest.GalleryApplic
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GalleryApplicationVersionArgs</span>
+        <span class="property-type"><a href="#inputs">GalleryApplicationVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -357,11 +357,11 @@ const galleryApplicationVersion = new azure_nextgen.compute.latest.GalleryApplic
 
 ## GalleryApplicationVersion Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The GalleryApplicationVersion resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The GalleryApplicationVersion resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3165,7 +3165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:GalleryApplicationVersion 1.0.0 /subscriptions/01523d7c-60da-455e-adef-521b547922c4/resourceGroups/galleryPsTestRg98/providers/Microsoft.Compute/galleries/galleryPsTestGallery6165/applications/galleryPsTestGalleryApplication7825/versions/1.0.0 
+$ pulumi import azure-nextgen:compute:GalleryApplicationVersion 1.0.0 /subscriptions/01523d7c-60da-455e-adef-521b547922c4/resourceGroups/galleryPsTestRg98/providers/Microsoft.Compute/galleries/galleryPsTestGallery6165/applications/galleryPsTestGalleryApplication7825/versions/1.0.0 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.TopicAuthorizationRul
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a namespace authorization rule.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var topicAuthorizationRule = new AzureNextGen.ServiceBus.Latest.TopicAuthorizationRule("topicAuthorizationRule", new AzureNextGen.ServiceBus.Latest.TopicAuthorizationRuleArgs
+        var topicAuthorizationRule = new AzureNextGen.ServiceBus.TopicAuthorizationRule("topicAuthorizationRule", new AzureNextGen.ServiceBus.TopicAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-AuthRules-4310",
             NamespaceName = "sdk-Namespace-6261",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-topic_authorization_rule = azure_nextgen.servicebus.latest.TopicAuthorizationRule("topicAuthorizationRule",
+topic_authorization_rule = azure_nextgen.servicebus.TopicAuthorizationRule("topicAuthorizationRule",
     authorization_rule_name="sdk-AuthRules-4310",
     namespace_name="sdk-Namespace-6261",
     resource_group_name="ArunMonocle",
@@ -77,7 +77,7 @@ topic_authorization_rule = azure_nextgen.servicebus.latest.TopicAuthorizationRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const topicAuthorizationRule = new azure_nextgen.servicebus.latest.TopicAuthorizationRule("topicAuthorizationRule", {
+const topicAuthorizationRule = new azure_nextgen.servicebus.TopicAuthorizationRule("topicAuthorizationRule", {
     authorizationRuleName: "sdk-AuthRules-4310",
     namespaceName: "sdk-Namespace-6261",
     resourceGroupName: "ArunMonocle",
@@ -100,7 +100,7 @@ const topicAuthorizationRule = new azure_nextgen.servicebus.latest.TopicAuthoriz
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TopicAuthorizationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">TopicAuthorizationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TopicAuthorizationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TopicAuthorizationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -108,11 +108,11 @@ const topicAuthorizationRule = new azure_nextgen.servicebus.latest.TopicAuthoriz
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTopicAuthorizationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">TopicAuthorizationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TopicAuthorizationRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTopicAuthorizationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TopicAuthorizationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TopicAuthorizationRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TopicAuthorizationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">TopicAuthorizationRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TopicAuthorizationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TopicAuthorizationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -133,7 +133,7 @@ const topicAuthorizationRule = new azure_nextgen.servicebus.latest.TopicAuthoriz
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TopicAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">TopicAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -202,7 +202,7 @@ const topicAuthorizationRule = new azure_nextgen.servicebus.latest.TopicAuthoriz
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TopicAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">TopicAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -241,7 +241,7 @@ const topicAuthorizationRule = new azure_nextgen.servicebus.latest.TopicAuthoriz
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TopicAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">TopicAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -264,11 +264,11 @@ const topicAuthorizationRule = new azure_nextgen.servicebus.latest.TopicAuthoriz
 
 ## TopicAuthorizationRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The TopicAuthorizationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The TopicAuthorizationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:TopicAuthorizationRule sdk-AuthRules-4310 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-6261/topics/sdk-Topics-1984/authorizationRules/sdk-AuthRules-4310 
+$ pulumi import azure-nextgen:servicebus:TopicAuthorizationRule sdk-AuthRules-4310 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-6261/topics/sdk-Topics-1984/authorizationRules/sdk-AuthRules-4310 
 ```
 
 

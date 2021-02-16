@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.billing.BillingRoleAssignmentByD
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The role assignment
+API Version: 2019-10-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var billingRoleAssignmentByDepartment = new AzureNextGen.Billing.V20191001Preview.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment", new AzureNextGen.Billing.V20191001Preview.BillingRoleAssignmentByDepartmentArgs
+        var billingRoleAssignmentByDepartment = new AzureNextGen.Billing.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment", new AzureNextGen.Billing.BillingRoleAssignmentByDepartmentArgs
         {
             BillingAccountName = "{billingAccountName}",
             BillingRoleAssignmentName = "{billingRoleAssignmentName}",
@@ -49,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	billing "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/billing/v20191001preview"
+	billing "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/billing"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-billing_role_assignment_by_department = azure_nextgen.billing.v20191001preview.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment",
+billing_role_assignment_by_department = azure_nextgen.billing.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment",
     billing_account_name="{billingAccountName}",
     billing_role_assignment_name="{billingRoleAssignmentName}",
     department_name="{departmentName}",
@@ -98,7 +99,7 @@ billing_role_assignment_by_department = azure_nextgen.billing.v20191001preview.B
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const billingRoleAssignmentByDepartment = new azure_nextgen.billing.v20191001preview.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment", {
+const billingRoleAssignmentByDepartment = new azure_nextgen.billing.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment", {
     billingAccountName: "{billingAccountName}",
     billingRoleAssignmentName: "{billingRoleAssignmentName}",
     departmentName: "{departmentName}",
@@ -119,7 +120,7 @@ const billingRoleAssignmentByDepartment = new azure_nextgen.billing.v20191001pre
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BillingRoleAssignmentByDepartment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BillingRoleAssignmentByDepartmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BillingRoleAssignmentByDepartment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BillingRoleAssignmentByDepartmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -127,11 +128,11 @@ const billingRoleAssignmentByDepartment = new azure_nextgen.billing.v20191001pre
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBillingRoleAssignmentByDepartment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BillingRoleAssignmentByDepartmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BillingRoleAssignmentByDepartment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBillingRoleAssignmentByDepartment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BillingRoleAssignmentByDepartmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BillingRoleAssignmentByDepartment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BillingRoleAssignmentByDepartment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BillingRoleAssignmentByDepartmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BillingRoleAssignmentByDepartment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BillingRoleAssignmentByDepartmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -152,7 +153,7 @@ const billingRoleAssignmentByDepartment = new azure_nextgen.billing.v20191001pre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BillingRoleAssignmentByDepartmentArgs</span>
+        <span class="property-type"><a href="#inputs">BillingRoleAssignmentByDepartmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -221,7 +222,7 @@ const billingRoleAssignmentByDepartment = new azure_nextgen.billing.v20191001pre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BillingRoleAssignmentByDepartmentArgs</span>
+        <span class="property-type"><a href="#inputs">BillingRoleAssignmentByDepartmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -260,7 +261,7 @@ const billingRoleAssignmentByDepartment = new azure_nextgen.billing.v20191001pre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BillingRoleAssignmentByDepartmentArgs</span>
+        <span class="property-type"><a href="#inputs">BillingRoleAssignmentByDepartmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,11 +284,11 @@ const billingRoleAssignmentByDepartment = new azure_nextgen.billing.v20191001pre
 
 ## BillingRoleAssignmentByDepartment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The BillingRoleAssignmentByDepartment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The BillingRoleAssignmentByDepartment resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -933,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:billing/v20191001preview:BillingRoleAssignmentByDepartment 9dfd08c2-62a3-4d47-85bd-1cdba1408402 /providers/Microsoft.Billing/billingAccounts/7898901/departments/97603/billingRoleAssignments/9dfd08c2-62a3-4d47-85bd-1cdba1408402 
+$ pulumi import azure-nextgen:billing:BillingRoleAssignmentByDepartment 9dfd08c2-62a3-4d47-85bd-1cdba1408402 /providers/Microsoft.Billing/billingAccounts/7898901/departments/97603/billingRoleAssignments/9dfd08c2-62a3-4d47-85bd-1cdba1408402 
 ```
 
 

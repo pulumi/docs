@@ -12,6 +12,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.AgentPool reso
 
 The agentpool that has the ARM resource and properties.
 The agentpool will have all information to create an agent pool.
+API Version: 2019-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +28,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.ContainerRegistry.V20190601Preview.AgentPool("agentPool", new AzureNextGen.ContainerRegistry.V20190601Preview.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerRegistry.AgentPool("agentPool", new AzureNextGen.ContainerRegistry.AgentPoolArgs
         {
             AgentPoolName = "myAgentPool",
             Count = 1,
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20190601preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerregistry.v20190601preview.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerregistry.AgentPool("agentPool",
     agent_pool_name="myAgentPool",
     count=1,
     location="WESTUS",
@@ -112,7 +113,7 @@ agent_pool = azure_nextgen.containerregistry.v20190601preview.AgentPool("agentPo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const agentPool = new azure_nextgen.containerregistry.v20190601preview.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerregistry.AgentPool("agentPool", {
     agentPoolName: "myAgentPool",
     count: 1,
     location: "WESTUS",
@@ -137,7 +138,7 @@ const agentPool = new azure_nextgen.containerregistry.v20190601preview.AgentPool
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AgentPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AgentPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AgentPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -145,11 +146,11 @@ const agentPool = new azure_nextgen.containerregistry.v20190601preview.AgentPool
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAgentPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AgentPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AgentPool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAgentPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AgentPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AgentPool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AgentPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AgentPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AgentPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AgentPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,7 +171,7 @@ const agentPool = new azure_nextgen.containerregistry.v20190601preview.AgentPool
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AgentPoolArgs</span>
+        <span class="property-type"><a href="#inputs">AgentPoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -239,7 +240,7 @@ const agentPool = new azure_nextgen.containerregistry.v20190601preview.AgentPool
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AgentPoolArgs</span>
+        <span class="property-type"><a href="#inputs">AgentPoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -278,7 +279,7 @@ const agentPool = new azure_nextgen.containerregistry.v20190601preview.AgentPool
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AgentPoolArgs</span>
+        <span class="property-type"><a href="#inputs">AgentPoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,11 +302,11 @@ const agentPool = new azure_nextgen.containerregistry.v20190601preview.AgentPool
 
 ## AgentPool Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AgentPool resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AgentPool resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1163,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20190601preview:AgentPool myAgentPool /subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourceGroups/huanwudfwestgroup/providers/Microsoft.ContainerRegistry/registries/huanglidfwest01/agentPools/testagent26 
+$ pulumi import azure-nextgen:containerregistry:AgentPool myAgentPool /subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourceGroups/huanwudfwestgroup/providers/Microsoft.ContainerRegistry/registries/huanglidfwest01/agentPools/testagent26 
 ```
 
 

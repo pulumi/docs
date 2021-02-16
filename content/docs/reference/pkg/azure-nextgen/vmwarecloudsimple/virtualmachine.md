@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.vmwarecloudsimple.VirtualMachine
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Virtual machine model
-Latest API Version: 2019-04-01.
+API Version: 2019-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.VMwareCloudSimple.Latest.VirtualMachine("virtualMachine", new AzureNextGen.VMwareCloudSimple.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.VMwareCloudSimple.VirtualMachine("virtualMachine", new AzureNextGen.VMwareCloudSimple.VirtualMachineArgs
         {
             AmountOfRam = 4096,
             Disks = 
             {
-                new AzureNextGen.VMwareCloudSimple.Latest.Inputs.VirtualDiskArgs
+                new AzureNextGen.VMwareCloudSimple.Inputs.VirtualDiskArgs
                 {
                     ControllerId = "1000",
                     IndependenceMode = "persistent",
@@ -43,9 +43,9 @@ class MyStack : Stack
             Location = "westus2",
             Nics = 
             {
-                new AzureNextGen.VMwareCloudSimple.Latest.Inputs.VirtualNicArgs
+                new AzureNextGen.VMwareCloudSimple.Inputs.VirtualNicArgs
                 {
-                    Network = new AzureNextGen.VMwareCloudSimple.Latest.Inputs.VirtualNetworkArgs
+                    Network = new AzureNextGen.VMwareCloudSimple.Inputs.VirtualNetworkArgs
                     {
                         Id = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
                     },
@@ -57,7 +57,7 @@ class MyStack : Stack
             NumberOfCores = 2,
             PrivateCloudId = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
             ResourceGroupName = "myResourceGroup",
-            ResourcePool = new AzureNextGen.VMwareCloudSimple.Latest.Inputs.ResourcePoolArgs
+            ResourcePool = new AzureNextGen.VMwareCloudSimple.Inputs.ResourcePoolArgs
             {
                 Id = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
             },
@@ -78,7 +78,7 @@ class MyStack : Stack
 package main
 
 import (
-	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/vmwarecloudsimple/latest"
+	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/vmwarecloudsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -131,17 +131,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.vmwarecloudsimple.latest.VirtualMachine("virtualMachine",
+virtual_machine = azure_nextgen.vmwarecloudsimple.VirtualMachine("virtualMachine",
     amount_of_ram=4096,
-    disks=[azure_nextgen.vmwarecloudsimple.latest.VirtualDiskArgs(
+    disks=[azure_nextgen.vmwarecloudsimple.VirtualDiskArgs(
         controller_id="1000",
         independence_mode="persistent",
         total_size=10485760,
         virtual_disk_id="2000",
     )],
     location="westus2",
-    nics=[azure_nextgen.vmwarecloudsimple.latest.VirtualNicArgs(
-        network=azure_nextgen.vmwarecloudsimple.latest.VirtualNetworkArgs(
+    nics=[azure_nextgen.vmwarecloudsimple.VirtualNicArgs(
+        network=azure_nextgen.vmwarecloudsimple.VirtualNetworkArgs(
             id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
         ),
         nic_type="E1000",
@@ -151,7 +151,7 @@ virtual_machine = azure_nextgen.vmwarecloudsimple.latest.VirtualMachine("virtual
     number_of_cores=2,
     private_cloud_id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
     resource_group_name="myResourceGroup",
-    resource_pool=azure_nextgen.vmwarecloudsimple.latest.ResourcePoolArgs(
+    resource_pool=azure_nextgen.vmwarecloudsimple.ResourcePoolArgs(
         id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
     ),
     template_id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34",
@@ -167,7 +167,7 @@ virtual_machine = azure_nextgen.vmwarecloudsimple.latest.VirtualMachine("virtual
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.vmwarecloudsimple.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.vmwarecloudsimple.VirtualMachine("virtualMachine", {
     amountOfRam: 4096,
     disks: [{
         controllerId: "1000",
@@ -206,7 +206,7 @@ const virtualMachine = new azure_nextgen.vmwarecloudsimple.latest.VirtualMachine
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -214,11 +214,11 @@ const virtualMachine = new azure_nextgen.vmwarecloudsimple.latest.VirtualMachine
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualMachineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -239,7 +239,7 @@ const virtualMachine = new azure_nextgen.vmwarecloudsimple.latest.VirtualMachine
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -308,7 +308,7 @@ const virtualMachine = new azure_nextgen.vmwarecloudsimple.latest.VirtualMachine
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -347,7 +347,7 @@ const virtualMachine = new azure_nextgen.vmwarecloudsimple.latest.VirtualMachine
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -370,11 +370,11 @@ const virtualMachine = new azure_nextgen.vmwarecloudsimple.latest.VirtualMachine
 
 ## VirtualMachine Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualMachine resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualMachine resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4322,7 +4322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:vmwarecloudsimple/latest:VirtualMachine myVirtualMachine /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VMwareCloudSimple/virtualMachines/myVirtualMachine 
+$ pulumi import azure-nextgen:vmwarecloudsimple:VirtualMachine myVirtualMachine /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VMwareCloudSimple/virtualMachines/myVirtualMachine 
 ```
 
 

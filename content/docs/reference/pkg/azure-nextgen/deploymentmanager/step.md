@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.deploymentmanager.Step resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The resource representation of a rollout step.
+API Version: 2019-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,33 +27,33 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var step = new AzureNextGen.DeploymentManager.V20191101Preview.Step("step", new AzureNextGen.DeploymentManager.V20191101Preview.StepArgs
+        var step = new AzureNextGen.DeploymentManager.Step("step", new AzureNextGen.DeploymentManager.StepArgs
         {
             Location = "centralus",
-            Properties = 
+            Properties = new AzureNextGen.DeploymentManager.Inputs.HealthCheckStepPropertiesArgs
             {
-                { "attributes", 
+                Attributes = new AzureNextGen.DeploymentManager.Inputs.RestHealthCheckStepAttributesArgs
                 {
-                    { "healthChecks", 
+                    HealthChecks = 
                     {
-                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestHealthCheckArgs
+                        new AzureNextGen.DeploymentManager.Inputs.RestHealthCheckArgs
                         {
                             Name = "appHealth",
-                            Request = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestRequestArgs
+                            Request = new AzureNextGen.DeploymentManager.Inputs.RestRequestArgs
                             {
-                                Authentication = 
+                                Authentication = new AzureNextGen.DeploymentManager.Inputs.ApiKeyAuthenticationArgs
                                 {
-                                    { "in", "Query" },
-                                    { "name", "Code" },
-                                    { "type", "ApiKey" },
-                                    { "value", "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==" },
+                                    In = "Query",
+                                    Name = "Code",
+                                    Type = "ApiKey",
+                                    Value = "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
                                 },
                                 Method = "GET",
                                 Uri = "https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus",
                             },
-                            Response = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestResponseArgs
+                            Response = new AzureNextGen.DeploymentManager.Inputs.RestResponseArgs
                             {
-                                Regex = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestResponseRegexArgs
+                                Regex = new AzureNextGen.DeploymentManager.Inputs.RestResponseRegexArgs
                                 {
                                     MatchQuantifier = "All",
                                     Matches = 
@@ -69,24 +70,24 @@ class MyStack : Stack
                                 },
                             },
                         },
-                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestHealthCheckArgs
+                        new AzureNextGen.DeploymentManager.Inputs.RestHealthCheckArgs
                         {
                             Name = "serviceHealth",
-                            Request = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestRequestArgs
+                            Request = new AzureNextGen.DeploymentManager.Inputs.RestRequestArgs
                             {
-                                Authentication = 
+                                Authentication = new AzureNextGen.DeploymentManager.Inputs.ApiKeyAuthenticationArgs
                                 {
-                                    { "in", "Header" },
-                                    { "name", "code" },
-                                    { "type", "ApiKey" },
-                                    { "value", "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==" },
+                                    In = "Header",
+                                    Name = "code",
+                                    Type = "ApiKey",
+                                    Value = "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
                                 },
                                 Method = "GET",
                                 Uri = "https://resthealth.healthservice.com/api/services/contosoService/healthStatus",
                             },
-                            Response = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestResponseArgs
+                            Response = new AzureNextGen.DeploymentManager.Inputs.RestResponseArgs
                             {
-                                Regex = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestResponseRegexArgs
+                                Regex = new AzureNextGen.DeploymentManager.Inputs.RestResponseRegexArgs
                                 {
                                     MatchQuantifier = "All",
                                     Matches = 
@@ -102,13 +103,13 @@ class MyStack : Stack
                                 },
                             },
                         },
-                    } },
-                    { "healthyStateDuration", "PT2H" },
-                    { "maxElasticDuration", "PT30M" },
-                    { "type", "REST" },
-                    { "waitDuration", "PT15M" },
-                } },
-                { "stepType", "HealthCheck" },
+                    },
+                    HealthyStateDuration = "PT2H",
+                    MaxElasticDuration = "PT30M",
+                    Type = "REST",
+                    WaitDuration = "PT15M",
+                },
+                StepType = "HealthCheck",
             },
             ResourceGroupName = "myResourceGroup",
             StepName = "healthCheckStep",
@@ -123,7 +124,96 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	"fmt"
+
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := deploymentmanager.NewStep(ctx, "step", &deploymentmanager.StepArgs{
+			Location: pulumi.String("centralus"),
+			Properties: &deploymentmanager.HealthCheckStepPropertiesArgs{
+				Attributes: &deploymentmanager.RestHealthCheckStepAttributesArgs{
+					HealthChecks: deploymentmanager.RestHealthCheckArray{
+						&deploymentmanager.RestHealthCheckArgs{
+							Name: pulumi.String("appHealth"),
+							Request: &deploymentmanager.RestRequestArgs{
+								Authentication: &deploymentmanager.ApiKeyAuthenticationArgs{
+									In:    "Query",
+									Name:  pulumi.String("Code"),
+									Type:  pulumi.String("ApiKey"),
+									Value: pulumi.String("NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg=="),
+								},
+								Method: "GET",
+								Uri:    pulumi.String("https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus"),
+							},
+							Response: &deploymentmanager.RestResponseArgs{
+								Regex: &deploymentmanager.RestResponseRegexArgs{
+									MatchQuantifier: "All",
+									Matches: pulumi.StringArray{
+										pulumi.String("(?i)Contoso-App"),
+										pulumi.String("(?i)\"health_status\":((.|\n)*)\"(green|yellow)\""),
+										pulumi.String(fmt.Sprintf("%v%v", "(?mi)^(\"application_host\": 94781052)", "$")),
+									},
+								},
+								SuccessStatusCodes: pulumi.StringArray{
+									pulumi.String("OK"),
+								},
+							},
+						},
+						&deploymentmanager.RestHealthCheckArgs{
+							Name: pulumi.String("serviceHealth"),
+							Request: &deploymentmanager.RestRequestArgs{
+								Authentication: &deploymentmanager.ApiKeyAuthenticationArgs{
+									In:    "Header",
+									Name:  pulumi.String("code"),
+									Type:  pulumi.String("ApiKey"),
+									Value: pulumi.String("NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg=="),
+								},
+								Method: "GET",
+								Uri:    pulumi.String("https://resthealth.healthservice.com/api/services/contosoService/healthStatus"),
+							},
+							Response: &deploymentmanager.RestResponseArgs{
+								Regex: &deploymentmanager.RestResponseRegexArgs{
+									MatchQuantifier: "All",
+									Matches: pulumi.StringArray{
+										pulumi.String("(?i)Contoso-Service-EndToEnd"),
+										pulumi.String("(?i)\"health_status\":((.|\n)*)\"(green)\""),
+									},
+								},
+								SuccessStatusCodes: pulumi.StringArray{
+									pulumi.String("OK"),
+								},
+							},
+						},
+					},
+					HealthyStateDuration: pulumi.String("PT2H"),
+					MaxElasticDuration:   pulumi.String("PT30M"),
+					Type:                 pulumi.String("REST"),
+					WaitDuration:         pulumi.String("PT15M"),
+				},
+				StepType: pulumi.String("HealthCheck"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StepName:          pulumi.String("healthCheckStep"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -132,25 +222,25 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
+step = azure_nextgen.deploymentmanager.Step("step",
     location="centralus",
-    properties={
-        "attributes": {
-            "healthChecks": [
-                azure_nextgen.deploymentmanager.v20191101preview.RestHealthCheckArgs(
+    properties=azure_nextgen.deploymentmanager.HealthCheckStepPropertiesArgs(
+        attributes=azure_nextgen.deploymentmanager.RestHealthCheckStepAttributesArgs(
+            health_checks=[
+                azure_nextgen.deploymentmanager.RestHealthCheckArgs(
                     name="appHealth",
-                    request=azure_nextgen.deploymentmanager.v20191101preview.RestRequestArgs(
-                        authentication={
-                            "in": "Query",
-                            "name": "Code",
-                            "type": "ApiKey",
-                            "value": "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
-                        },
+                    request=azure_nextgen.deploymentmanager.RestRequestArgs(
+                        authentication=azure_nextgen.deploymentmanager.ApiKeyAuthenticationArgs(
+                            in_="Query",
+                            name="Code",
+                            type="ApiKey",
+                            value="NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
+                        ),
                         method="GET",
                         uri="https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus",
                     ),
-                    response=azure_nextgen.deploymentmanager.v20191101preview.RestResponseArgs(
-                        regex=azure_nextgen.deploymentmanager.v20191101preview.RestResponseRegexArgs(
+                    response=azure_nextgen.deploymentmanager.RestResponseArgs(
+                        regex=azure_nextgen.deploymentmanager.RestResponseRegexArgs(
                             match_quantifier="All",
                             matches=[
                                 "(?i)Contoso-App",
@@ -162,20 +252,20 @@ step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
                         success_status_codes=["OK"],
                     ),
                 ),
-                azure_nextgen.deploymentmanager.v20191101preview.RestHealthCheckArgs(
+                azure_nextgen.deploymentmanager.RestHealthCheckArgs(
                     name="serviceHealth",
-                    request=azure_nextgen.deploymentmanager.v20191101preview.RestRequestArgs(
-                        authentication={
-                            "in": "Header",
-                            "name": "code",
-                            "type": "ApiKey",
-                            "value": "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
-                        },
+                    request=azure_nextgen.deploymentmanager.RestRequestArgs(
+                        authentication=azure_nextgen.deploymentmanager.ApiKeyAuthenticationArgs(
+                            in_="Header",
+                            name="code",
+                            type="ApiKey",
+                            value="NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
+                        ),
                         method="GET",
                         uri="https://resthealth.healthservice.com/api/services/contosoService/healthStatus",
                     ),
-                    response=azure_nextgen.deploymentmanager.v20191101preview.RestResponseArgs(
-                        regex=azure_nextgen.deploymentmanager.v20191101preview.RestResponseRegexArgs(
+                    response=azure_nextgen.deploymentmanager.RestResponseArgs(
+                        regex=azure_nextgen.deploymentmanager.RestResponseRegexArgs(
                             match_quantifier="All",
                             matches=[
                                 "(?i)Contoso-Service-EndToEnd",
@@ -187,13 +277,13 @@ step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
                     ),
                 ),
             ],
-            "healthyStateDuration": "PT2H",
-            "maxElasticDuration": "PT30M",
-            "type": "REST",
-            "waitDuration": "PT15M",
-        },
-        "stepType": "HealthCheck",
-    },
+            healthy_state_duration="PT2H",
+            max_elastic_duration="PT30M",
+            type="REST",
+            wait_duration="PT15M",
+        ),
+        step_type="HealthCheck",
+    ),
     resource_group_name="myResourceGroup",
     step_name="healthCheckStep",
     tags={})
@@ -208,7 +298,7 @@ step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
+const step = new azure_nextgen.deploymentmanager.Step("step", {
     location: "centralus",
     properties: {
         attributes: {
@@ -289,16 +379,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var step = new AzureNextGen.DeploymentManager.V20191101Preview.Step("step", new AzureNextGen.DeploymentManager.V20191101Preview.StepArgs
+        var step = new AzureNextGen.DeploymentManager.Step("step", new AzureNextGen.DeploymentManager.StepArgs
         {
             Location = "centralus",
-            Properties = 
+            Properties = new AzureNextGen.DeploymentManager.Inputs.WaitStepPropertiesArgs
             {
-                { "attributes", 
+                Attributes = new AzureNextGen.DeploymentManager.Inputs.WaitStepAttributesArgs
                 {
-                    { "duration", "PT20M" },
-                } },
-                { "stepType", "Wait" },
+                    Duration = "PT20M",
+                },
+                StepType = "Wait",
             },
             ResourceGroupName = "myResourceGroup",
             StepName = "waitStep",
@@ -313,7 +403,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := deploymentmanager.NewStep(ctx, "step", &deploymentmanager.StepArgs{
+			Location: pulumi.String("centralus"),
+			Properties: &deploymentmanager.WaitStepPropertiesArgs{
+				Attributes: &deploymentmanager.WaitStepAttributesArgs{
+					Duration: pulumi.String("PT20M"),
+				},
+				StepType: pulumi.String("Wait"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StepName:          pulumi.String("waitStep"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -322,14 +443,14 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
+step = azure_nextgen.deploymentmanager.Step("step",
     location="centralus",
-    properties={
-        "attributes": {
-            "duration": "PT20M",
-        },
-        "stepType": "Wait",
-    },
+    properties=azure_nextgen.deploymentmanager.WaitStepPropertiesArgs(
+        attributes=azure_nextgen.deploymentmanager.WaitStepAttributesArgs(
+            duration="PT20M",
+        ),
+        step_type="Wait",
+    ),
     resource_group_name="myResourceGroup",
     step_name="waitStep",
     tags={})
@@ -344,7 +465,7 @@ step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
+const step = new azure_nextgen.deploymentmanager.Step("step", {
     location: "centralus",
     properties: {
         attributes: {
@@ -369,7 +490,7 @@ const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Step</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">StepArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Step</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StepArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -377,11 +498,11 @@ const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStep</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">StepArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Step</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStep</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StepArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Step</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Step</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">StepArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Step</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StepArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -402,7 +523,7 @@ const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StepArgs</span>
+        <span class="property-type"><a href="#inputs">StepArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -471,7 +592,7 @@ const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StepArgs</span>
+        <span class="property-type"><a href="#inputs">StepArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -510,7 +631,7 @@ const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StepArgs</span>
+        <span class="property-type"><a href="#inputs">StepArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -533,11 +654,11 @@ const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
 
 ## Step Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Step resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Step resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2973,7 +3094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:Step waitStep /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/steps/{stepName} 
+$ pulumi import azure-nextgen:deploymentmanager:Step waitStep /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/steps/{stepName} 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.costmanagement.CostAllocationRul
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The cost allocation rule model definition
+API Version: 2020-03-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var costAllocationRule = new AzureNextGen.CostManagement.V20200301Preview.CostAllocationRule("costAllocationRule", new AzureNextGen.CostManagement.V20200301Preview.CostAllocationRuleArgs
+        var costAllocationRule = new AzureNextGen.CostManagement.CostAllocationRule("costAllocationRule", new AzureNextGen.CostManagement.CostAllocationRuleArgs
         {
             BillingAccountId = "100",
-            Properties = new AzureNextGen.CostManagement.V20200301Preview.Inputs.CostAllocationRulePropertiesArgs
+            Properties = new AzureNextGen.CostManagement.Inputs.CostAllocationRulePropertiesArgs
             {
                 Description = "This is a testRule",
-                Details = new AzureNextGen.CostManagement.V20200301Preview.Inputs.CostAllocationRuleDetailsArgs
+                Details = new AzureNextGen.CostManagement.Inputs.CostAllocationRuleDetailsArgs
                 {
                     SourceResources = 
                     {
-                        new AzureNextGen.CostManagement.V20200301Preview.Inputs.SourceCostAllocationResourceArgs
+                        new AzureNextGen.CostManagement.Inputs.SourceCostAllocationResourceArgs
                         {
                             Name = "ResourceGroupName",
                             ResourceType = "Dimension",
@@ -49,19 +50,19 @@ class MyStack : Stack
                     },
                     TargetResources = 
                     {
-                        new AzureNextGen.CostManagement.V20200301Preview.Inputs.TargetCostAllocationResourceArgs
+                        new AzureNextGen.CostManagement.Inputs.TargetCostAllocationResourceArgs
                         {
                             Name = "ResourceGroupName",
                             PolicyType = "FixedProportion",
                             ResourceType = "Dimension",
                             Values = 
                             {
-                                new AzureNextGen.CostManagement.V20200301Preview.Inputs.CostAllocationProportionArgs
+                                new AzureNextGen.CostManagement.Inputs.CostAllocationProportionArgs
                                 {
                                     Name = "destinationRG",
                                     Percentage = 45,
                                 },
-                                new AzureNextGen.CostManagement.V20200301Preview.Inputs.CostAllocationProportionArgs
+                                new AzureNextGen.CostManagement.Inputs.CostAllocationProportionArgs
                                 {
                                     Name = "destinationRG2",
                                     Percentage = 54,
@@ -88,7 +89,7 @@ class MyStack : Stack
 package main
 
 import (
-	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/v20200301preview"
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -148,12 +149,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cost_allocation_rule = azure_nextgen.costmanagement.v20200301preview.CostAllocationRule("costAllocationRule",
+cost_allocation_rule = azure_nextgen.costmanagement.CostAllocationRule("costAllocationRule",
     billing_account_id="100",
-    properties=azure_nextgen.costmanagement.v20200301preview.CostAllocationRulePropertiesArgs(
+    properties=azure_nextgen.costmanagement.CostAllocationRulePropertiesArgs(
         description="This is a testRule",
-        details=azure_nextgen.costmanagement.v20200301preview.CostAllocationRuleDetailsArgs(
-            source_resources=[azure_nextgen.costmanagement.v20200301preview.SourceCostAllocationResourceArgs(
+        details=azure_nextgen.costmanagement.CostAllocationRuleDetailsArgs(
+            source_resources=[azure_nextgen.costmanagement.SourceCostAllocationResourceArgs(
                 name="ResourceGroupName",
                 resource_type="Dimension",
                 values=[
@@ -161,16 +162,16 @@ cost_allocation_rule = azure_nextgen.costmanagement.v20200301preview.CostAllocat
                     "secondRG",
                 ],
             )],
-            target_resources=[azure_nextgen.costmanagement.v20200301preview.TargetCostAllocationResourceArgs(
+            target_resources=[azure_nextgen.costmanagement.TargetCostAllocationResourceArgs(
                 name="ResourceGroupName",
                 policy_type="FixedProportion",
                 resource_type="Dimension",
                 values=[
-                    azure_nextgen.costmanagement.v20200301preview.CostAllocationProportionArgs(
+                    azure_nextgen.costmanagement.CostAllocationProportionArgs(
                         name="destinationRG",
                         percentage=45,
                     ),
-                    azure_nextgen.costmanagement.v20200301preview.CostAllocationProportionArgs(
+                    azure_nextgen.costmanagement.CostAllocationProportionArgs(
                         name="destinationRG2",
                         percentage=54,
                     ),
@@ -191,7 +192,7 @@ cost_allocation_rule = azure_nextgen.costmanagement.v20200301preview.CostAllocat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const costAllocationRule = new azure_nextgen.costmanagement.v20200301preview.CostAllocationRule("costAllocationRule", {
+const costAllocationRule = new azure_nextgen.costmanagement.CostAllocationRule("costAllocationRule", {
     billingAccountId: "100",
     properties: {
         description: "This is a testRule",
@@ -239,17 +240,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var costAllocationRule = new AzureNextGen.CostManagement.V20200301Preview.CostAllocationRule("costAllocationRule", new AzureNextGen.CostManagement.V20200301Preview.CostAllocationRuleArgs
+        var costAllocationRule = new AzureNextGen.CostManagement.CostAllocationRule("costAllocationRule", new AzureNextGen.CostManagement.CostAllocationRuleArgs
         {
             BillingAccountId = "100",
-            Properties = new AzureNextGen.CostManagement.V20200301Preview.Inputs.CostAllocationRulePropertiesArgs
+            Properties = new AzureNextGen.CostManagement.Inputs.CostAllocationRulePropertiesArgs
             {
                 Description = "This is a testRule",
-                Details = new AzureNextGen.CostManagement.V20200301Preview.Inputs.CostAllocationRuleDetailsArgs
+                Details = new AzureNextGen.CostManagement.Inputs.CostAllocationRuleDetailsArgs
                 {
                     SourceResources = 
                     {
-                        new AzureNextGen.CostManagement.V20200301Preview.Inputs.SourceCostAllocationResourceArgs
+                        new AzureNextGen.CostManagement.Inputs.SourceCostAllocationResourceArgs
                         {
                             Name = "category",
                             ResourceType = "Tag",
@@ -261,24 +262,24 @@ class MyStack : Stack
                     },
                     TargetResources = 
                     {
-                        new AzureNextGen.CostManagement.V20200301Preview.Inputs.TargetCostAllocationResourceArgs
+                        new AzureNextGen.CostManagement.Inputs.TargetCostAllocationResourceArgs
                         {
                             Name = "ResourceGroupName",
                             PolicyType = "FixedProportion",
                             ResourceType = "Dimension",
                             Values = 
                             {
-                                new AzureNextGen.CostManagement.V20200301Preview.Inputs.CostAllocationProportionArgs
+                                new AzureNextGen.CostManagement.Inputs.CostAllocationProportionArgs
                                 {
                                     Name = "destinationRG",
                                     Percentage = 33.33,
                                 },
-                                new AzureNextGen.CostManagement.V20200301Preview.Inputs.CostAllocationProportionArgs
+                                new AzureNextGen.CostManagement.Inputs.CostAllocationProportionArgs
                                 {
                                     Name = "destinationRG2",
                                     Percentage = 33.33,
                                 },
-                                new AzureNextGen.CostManagement.V20200301Preview.Inputs.CostAllocationProportionArgs
+                                new AzureNextGen.CostManagement.Inputs.CostAllocationProportionArgs
                                 {
                                     Name = "destinationRG3",
                                     Percentage = 33.34,
@@ -305,7 +306,7 @@ class MyStack : Stack
 package main
 
 import (
-	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/v20200301preview"
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -368,30 +369,30 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cost_allocation_rule = azure_nextgen.costmanagement.v20200301preview.CostAllocationRule("costAllocationRule",
+cost_allocation_rule = azure_nextgen.costmanagement.CostAllocationRule("costAllocationRule",
     billing_account_id="100",
-    properties=azure_nextgen.costmanagement.v20200301preview.CostAllocationRulePropertiesArgs(
+    properties=azure_nextgen.costmanagement.CostAllocationRulePropertiesArgs(
         description="This is a testRule",
-        details=azure_nextgen.costmanagement.v20200301preview.CostAllocationRuleDetailsArgs(
-            source_resources=[azure_nextgen.costmanagement.v20200301preview.SourceCostAllocationResourceArgs(
+        details=azure_nextgen.costmanagement.CostAllocationRuleDetailsArgs(
+            source_resources=[azure_nextgen.costmanagement.SourceCostAllocationResourceArgs(
                 name="category",
                 resource_type="Tag",
                 values=["devops"],
             )],
-            target_resources=[azure_nextgen.costmanagement.v20200301preview.TargetCostAllocationResourceArgs(
+            target_resources=[azure_nextgen.costmanagement.TargetCostAllocationResourceArgs(
                 name="ResourceGroupName",
                 policy_type="FixedProportion",
                 resource_type="Dimension",
                 values=[
-                    azure_nextgen.costmanagement.v20200301preview.CostAllocationProportionArgs(
+                    azure_nextgen.costmanagement.CostAllocationProportionArgs(
                         name="destinationRG",
                         percentage=33.33,
                     ),
-                    azure_nextgen.costmanagement.v20200301preview.CostAllocationProportionArgs(
+                    azure_nextgen.costmanagement.CostAllocationProportionArgs(
                         name="destinationRG2",
                         percentage=33.33,
                     ),
-                    azure_nextgen.costmanagement.v20200301preview.CostAllocationProportionArgs(
+                    azure_nextgen.costmanagement.CostAllocationProportionArgs(
                         name="destinationRG3",
                         percentage=33.34,
                     ),
@@ -412,7 +413,7 @@ cost_allocation_rule = azure_nextgen.costmanagement.v20200301preview.CostAllocat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const costAllocationRule = new azure_nextgen.costmanagement.v20200301preview.CostAllocationRule("costAllocationRule", {
+const costAllocationRule = new azure_nextgen.costmanagement.CostAllocationRule("costAllocationRule", {
     billingAccountId: "100",
     properties: {
         description: "This is a testRule",
@@ -459,7 +460,7 @@ const costAllocationRule = new azure_nextgen.costmanagement.v20200301preview.Cos
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">CostAllocationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CostAllocationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -467,11 +468,11 @@ const costAllocationRule = new azure_nextgen.costmanagement.v20200301preview.Cos
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCostAllocationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">CostAllocationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CostAllocationRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCostAllocationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CostAllocationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CostAllocationRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">CostAllocationRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CostAllocationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -492,7 +493,7 @@ const costAllocationRule = new azure_nextgen.costmanagement.v20200301preview.Cos
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CostAllocationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">CostAllocationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -561,7 +562,7 @@ const costAllocationRule = new azure_nextgen.costmanagement.v20200301preview.Cos
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CostAllocationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">CostAllocationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -600,7 +601,7 @@ const costAllocationRule = new azure_nextgen.costmanagement.v20200301preview.Cos
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CostAllocationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">CostAllocationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -623,11 +624,11 @@ const costAllocationRule = new azure_nextgen.costmanagement.v20200301preview.Cos
 
 ## CostAllocationRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The CostAllocationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The CostAllocationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2371,7 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:costmanagement/v20200301preview:CostAllocationRule testRule providers/Microsoft.Billing/billingAccounts/100/providers/Microsoft.CostManagement/costAllocationRules/testRule 
+$ pulumi import azure-nextgen:costmanagement:CostAllocationRule testRule providers/Microsoft.Billing/billingAccounts/100/providers/Microsoft.CostManagement/costAllocationRules/testRule 
 ```
 
 

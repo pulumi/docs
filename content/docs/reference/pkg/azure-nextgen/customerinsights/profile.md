@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Profile resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The profile resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,40 +27,40 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.CustomerInsights.Latest.Profile("profile", new AzureNextGen.CustomerInsights.Latest.ProfileArgs
+        var profile = new AzureNextGen.CustomerInsights.Profile("profile", new AzureNextGen.CustomerInsights.ProfileArgs
         {
             ApiEntitySetName = "TestProfileType396",
             Fields = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights.Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "Id",
                     FieldType = "Edm.String",
                     IsArray = false,
                     IsRequired = true,
                 },
-                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights.Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "ProfileId",
                     FieldType = "Edm.String",
                     IsArray = false,
                     IsRequired = true,
                 },
-                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights.Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "LastName",
                     FieldType = "Edm.String",
                     IsArray = false,
                     IsRequired = true,
                 },
-                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights.Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "TestProfileType396",
                     FieldType = "Edm.String",
                     IsArray = false,
                     IsRequired = true,
                 },
-                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights.Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "SavingAccountBalance",
                     FieldType = "Edm.Int32",
@@ -77,7 +77,7 @@ class MyStack : Stack
             SmallImage = "\\\\Images\\\\smallImage",
             StrongIds = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.StrongIdArgs
+                new AzureNextGen.CustomerInsights.Inputs.StrongIdArgs
                 {
                     KeyPropertyNames = 
                     {
@@ -86,7 +86,7 @@ class MyStack : Stack
                     },
                     StrongIdName = "Id",
                 },
-                new AzureNextGen.CustomerInsights.Latest.Inputs.StrongIdArgs
+                new AzureNextGen.CustomerInsights.Inputs.StrongIdArgs
                 {
                     KeyPropertyNames = 
                     {
@@ -111,7 +111,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -192,34 +192,34 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.customerinsights.latest.Profile("profile",
+profile = azure_nextgen.customerinsights.Profile("profile",
     api_entity_set_name="TestProfileType396",
     fields=[
-        azure_nextgen.customerinsights.latest.PropertyDefinitionArgs(
+        azure_nextgen.customerinsights.PropertyDefinitionArgs(
             field_name="Id",
             field_type="Edm.String",
             is_array=False,
             is_required=True,
         ),
-        azure_nextgen.customerinsights.latest.PropertyDefinitionArgs(
+        azure_nextgen.customerinsights.PropertyDefinitionArgs(
             field_name="ProfileId",
             field_type="Edm.String",
             is_array=False,
             is_required=True,
         ),
-        azure_nextgen.customerinsights.latest.PropertyDefinitionArgs(
+        azure_nextgen.customerinsights.PropertyDefinitionArgs(
             field_name="LastName",
             field_type="Edm.String",
             is_array=False,
             is_required=True,
         ),
-        azure_nextgen.customerinsights.latest.PropertyDefinitionArgs(
+        azure_nextgen.customerinsights.PropertyDefinitionArgs(
             field_name="TestProfileType396",
             field_type="Edm.String",
             is_array=False,
             is_required=True,
         ),
-        azure_nextgen.customerinsights.latest.PropertyDefinitionArgs(
+        azure_nextgen.customerinsights.PropertyDefinitionArgs(
             field_name="SavingAccountBalance",
             field_type="Edm.Int32",
             is_array=False,
@@ -234,14 +234,14 @@ profile = azure_nextgen.customerinsights.latest.Profile("profile",
     schema_item_type_link="SchemaItemTypeLink",
     small_image="\\\\Images\\\\smallImage",
     strong_ids=[
-        azure_nextgen.customerinsights.latest.StrongIdArgs(
+        azure_nextgen.customerinsights.StrongIdArgs(
             key_property_names=[
                 "Id",
                 "SavingAccountBalance",
             ],
             strong_id_name="Id",
         ),
-        azure_nextgen.customerinsights.latest.StrongIdArgs(
+        azure_nextgen.customerinsights.StrongIdArgs(
             key_property_names=[
                 "ProfileId",
                 "LastName",
@@ -260,7 +260,7 @@ profile = azure_nextgen.customerinsights.latest.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const profile = new azure_nextgen.customerinsights.latest.Profile("profile", {
+const profile = new azure_nextgen.customerinsights.Profile("profile", {
     apiEntitySetName: "TestProfileType396",
     fields: [
         {
@@ -331,7 +331,7 @@ const profile = new azure_nextgen.customerinsights.latest.Profile("profile", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -339,11 +339,11 @@ const profile = new azure_nextgen.customerinsights.latest.Profile("profile", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Profile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Profile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ProfileArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -364,7 +364,7 @@ const profile = new azure_nextgen.customerinsights.latest.Profile("profile", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProfileArgs</span>
+        <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -433,7 +433,7 @@ const profile = new azure_nextgen.customerinsights.latest.Profile("profile", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProfileArgs</span>
+        <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -472,7 +472,7 @@ const profile = new azure_nextgen.customerinsights.latest.Profile("profile", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProfileArgs</span>
+        <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -495,11 +495,11 @@ const profile = new azure_nextgen.customerinsights.latest.Profile("profile", {
 
 ## Profile Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Profile resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Profile resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3437,7 +3437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:Profile azSdkTestHub/TestProfileType396 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/profiles/TestProfileType396 
+$ pulumi import azure-nextgen:customerinsights:Profile azSdkTestHub/TestProfileType396 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/profiles/TestProfileType396 
 ```
 
 

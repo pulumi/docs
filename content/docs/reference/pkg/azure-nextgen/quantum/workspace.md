@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.quantum.Workspace resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The resource proxy definition object for quantum workspace.
+API Version: 2019-11-04-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,22 +27,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Quantum.V20191104Preview.Workspace("workspace", new AzureNextGen.Quantum.V20191104Preview.WorkspaceArgs
+        var workspace = new AzureNextGen.Quantum.Workspace("workspace", new AzureNextGen.Quantum.WorkspaceArgs
         {
             Location = "West US",
             Providers = 
             {
-                new AzureNextGen.Quantum.V20191104Preview.Inputs.ProviderArgs
+                new AzureNextGen.Quantum.Inputs.ProviderArgs
                 {
                     ProviderId = "Honeywell",
                     ProviderSku = "Basic",
                 },
-                new AzureNextGen.Quantum.V20191104Preview.Inputs.ProviderArgs
+                new AzureNextGen.Quantum.Inputs.ProviderArgs
                 {
                     ProviderId = "IonQ",
                     ProviderSku = "Basic",
                 },
-                new AzureNextGen.Quantum.V20191104Preview.Inputs.ProviderArgs
+                new AzureNextGen.Quantum.Inputs.ProviderArgs
                 {
                     ProviderId = "OneQBit",
                     ProviderSku = "Basic",
@@ -65,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	quantum "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/quantum/v20191104preview"
+	quantum "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/quantum"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -108,18 +109,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.quantum.v20191104preview.Workspace("workspace",
+workspace = azure_nextgen.quantum.Workspace("workspace",
     location="West US",
     providers=[
-        azure_nextgen.quantum.v20191104preview.ProviderArgs(
+        azure_nextgen.quantum.ProviderArgs(
             provider_id="Honeywell",
             provider_sku="Basic",
         ),
-        azure_nextgen.quantum.v20191104preview.ProviderArgs(
+        azure_nextgen.quantum.ProviderArgs(
             provider_id="IonQ",
             provider_sku="Basic",
         ),
-        azure_nextgen.quantum.v20191104preview.ProviderArgs(
+        azure_nextgen.quantum.ProviderArgs(
             provider_id="OneQBit",
             provider_sku="Basic",
         ),
@@ -138,7 +139,7 @@ workspace = azure_nextgen.quantum.v20191104preview.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.quantum.v20191104preview.Workspace("workspace", {
+const workspace = new azure_nextgen.quantum.Workspace("workspace", {
     location: "West US",
     providers: [
         {
@@ -171,7 +172,7 @@ const workspace = new azure_nextgen.quantum.v20191104preview.Workspace("workspac
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -179,11 +180,11 @@ const workspace = new azure_nextgen.quantum.v20191104preview.Workspace("workspac
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -204,7 +205,7 @@ const workspace = new azure_nextgen.quantum.v20191104preview.Workspace("workspac
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -273,7 +274,7 @@ const workspace = new azure_nextgen.quantum.v20191104preview.Workspace("workspac
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -312,7 +313,7 @@ const workspace = new azure_nextgen.quantum.v20191104preview.Workspace("workspac
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -335,11 +336,11 @@ const workspace = new azure_nextgen.quantum.v20191104preview.Workspace("workspac
 
 ## Workspace Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Workspace resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Workspace resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1669,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:quantum/v20191104preview:Workspace quantumworkspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/quantumResourcegroup/providers/Microsoft.Quantum/Workspaces/quantumworkspace1 
+$ pulumi import azure-nextgen:quantum:Workspace quantumworkspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/quantumResourcegroup/providers/Microsoft.Quantum/Workspaces/quantumworkspace1 
 ```
 
 

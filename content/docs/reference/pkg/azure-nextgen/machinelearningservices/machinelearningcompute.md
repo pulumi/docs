@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.MachineL
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Machine Learning compute object wrapped into ARM resource envelope.
-Latest API Version: 2021-01-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNextGen.MachineLearningServices.Inputs.AKSArgs
             {
-                { "computeType", "AKS" },
+                ComputeType = "AKS",
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -47,7 +47,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: &machinelearningservices.AKSArgs{
+				ComputeType: pulumi.String("AKS"),
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -56,12 +84,12 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "AKS",
-    },
+    properties=azure_nextgen.machinelearningservices.AKSArgs(
+        compute_type="AKS",
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -75,7 +103,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -99,32 +127,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNextGen.MachineLearningServices.Inputs.AmlComputeArgs
             {
-                { "computeType", "AmlCompute" },
-                { "properties", 
+                ComputeType = "AmlCompute",
+                Properties = new AzureNextGen.MachineLearningServices.Inputs.AmlComputePropertiesArgs
                 {
-                    { "enableNodePublicIp", true },
-                    { "isolatedNetwork", false },
-                    { "osType", "Windows" },
-                    { "remoteLoginPortPublicAccess", "NotSpecified" },
-                    { "scaleSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ScaleSettingsArgs
+                    EnableNodePublicIp = true,
+                    IsolatedNetwork = false,
+                    OsType = "Windows",
+                    RemoteLoginPortPublicAccess = "NotSpecified",
+                    ScaleSettings = new AzureNextGen.MachineLearningServices.Inputs.ScaleSettingsArgs
                     {
                         MaxNodeCount = 1,
                         MinNodeCount = 0,
                         NodeIdleTimeBeforeScaleDown = "PT5M",
-                    } },
-                    { "virtualMachineImage", new AzureNextGen.MachineLearningServices.Latest.Inputs.VirtualMachineImageArgs
+                    },
+                    VirtualMachineImage = new AzureNextGen.MachineLearningServices.Inputs.VirtualMachineImageArgs
                     {
                         Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
-                    } },
-                    { "vmPriority", "Dedicated" },
-                    { "vmSize", "STANDARD_NC6" },
-                } },
+                    },
+                    VmPriority = "Dedicated",
+                    VmSize = "STANDARD_NC6",
+                },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -138,7 +166,51 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: &machinelearningservices.AmlComputeArgs{
+				ComputeType: pulumi.String("AmlCompute"),
+				Properties: &machinelearningservices.AmlComputePropertiesArgs{
+					EnableNodePublicIp:          pulumi.Bool(true),
+					IsolatedNetwork:             pulumi.Bool(false),
+					OsType:                      pulumi.String("Windows"),
+					RemoteLoginPortPublicAccess: pulumi.String("NotSpecified"),
+					ScaleSettings: &machinelearningservices.ScaleSettingsArgs{
+						MaxNodeCount:                pulumi.Int(1),
+						MinNodeCount:                pulumi.Int(0),
+						NodeIdleTimeBeforeScaleDown: pulumi.String("PT5M"),
+					},
+					VirtualMachineImage: &machinelearningservices.VirtualMachineImageArgs{
+						Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1"),
+					},
+					VmPriority: pulumi.String("Dedicated"),
+					VmSize:     pulumi.String("STANDARD_NC6"),
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -147,28 +219,28 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "AmlCompute",
-        "properties": {
-            "enableNodePublicIp": True,
-            "isolatedNetwork": False,
-            "osType": "Windows",
-            "remoteLoginPortPublicAccess": "NotSpecified",
-            "scaleSettings": azure_nextgen.machinelearningservices.latest.ScaleSettingsArgs(
+    properties=azure_nextgen.machinelearningservices.AmlComputeArgs(
+        compute_type="AmlCompute",
+        properties=azure_nextgen.machinelearningservices.AmlComputePropertiesArgs(
+            enable_node_public_ip=True,
+            isolated_network=False,
+            os_type="Windows",
+            remote_login_port_public_access="NotSpecified",
+            scale_settings=azure_nextgen.machinelearningservices.ScaleSettingsArgs(
                 max_node_count=1,
                 min_node_count=0,
                 node_idle_time_before_scale_down="PT5M",
             ),
-            "virtualMachineImage": azure_nextgen.machinelearningservices.latest.VirtualMachineImageArgs(
+            virtual_machine_image=azure_nextgen.machinelearningservices.VirtualMachineImageArgs(
                 id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
             ),
-            "vmPriority": "Dedicated",
-            "vmSize": "STANDARD_NC6",
-        },
-    },
+            vm_priority="Dedicated",
+            vm_size="STANDARD_NC6",
+        ),
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -182,7 +254,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -222,13 +294,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNextGen.MachineLearningServices.Inputs.DataFactoryArgs
             {
-                { "computeType", "DataFactory" },
+                ComputeType = "DataFactory",
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -242,7 +314,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: &machinelearningservices.DataFactoryArgs{
+				ComputeType: pulumi.String("DataFactory"),
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -251,12 +351,12 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "DataFactory",
-    },
+    properties=azure_nextgen.machinelearningservices.DataFactoryArgs(
+        compute_type="DataFactory",
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -270,7 +370,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -294,32 +394,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNextGen.MachineLearningServices.Inputs.ComputeInstanceArgs
             {
-                { "computeType", "ComputeInstance" },
-                { "properties", 
+                ComputeType = "ComputeInstance",
+                Properties = new AzureNextGen.MachineLearningServices.Inputs.ComputeInstancePropertiesArgs
                 {
-                    { "applicationSharingPolicy", "Personal" },
-                    { "computeInstanceAuthorizationType", "personal" },
-                    { "personalComputeInstanceSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.PersonalComputeInstanceSettingsArgs
+                    ApplicationSharingPolicy = "Personal",
+                    ComputeInstanceAuthorizationType = "personal",
+                    PersonalComputeInstanceSettings = new AzureNextGen.MachineLearningServices.Inputs.PersonalComputeInstanceSettingsArgs
                     {
-                        AssignedUser = new AzureNextGen.MachineLearningServices.Latest.Inputs.AssignedUserArgs
+                        AssignedUser = new AzureNextGen.MachineLearningServices.Inputs.AssignedUserArgs
                         {
                             ObjectId = "00000000-0000-0000-0000-000000000000",
                             TenantId = "00000000-0000-0000-0000-000000000000",
                         },
-                    } },
-                    { "sshSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ComputeInstanceSshSettingsArgs
+                    },
+                    SshSettings = new AzureNextGen.MachineLearningServices.Inputs.ComputeInstanceSshSettingsArgs
                     {
                         SshPublicAccess = "Disabled",
-                    } },
-                    { "subnet", "test-subnet-resource-id" },
-                    { "vmSize", "STANDARD_NC6" },
-                } },
+                    },
+                    Subnet = "test-subnet-resource-id",
+                    VmSize = "STANDARD_NC6",
+                },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -333,7 +433,50 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: &machinelearningservices.ComputeInstanceArgs{
+				ComputeType: pulumi.String("ComputeInstance"),
+				Properties: &machinelearningservices.ComputeInstancePropertiesArgs{
+					ApplicationSharingPolicy:         pulumi.String("Personal"),
+					ComputeInstanceAuthorizationType: pulumi.String("personal"),
+					PersonalComputeInstanceSettings: &machinelearningservices.PersonalComputeInstanceSettingsArgs{
+						AssignedUser: &machinelearningservices.AssignedUserArgs{
+							ObjectId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+							TenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+						},
+					},
+					SshSettings: &machinelearningservices.ComputeInstanceSshSettingsArgs{
+						SshPublicAccess: pulumi.String("Disabled"),
+					},
+					Subnet: "test-subnet-resource-id",
+					VmSize: pulumi.String("STANDARD_NC6"),
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -342,27 +485,27 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "ComputeInstance",
-        "properties": {
-            "applicationSharingPolicy": "Personal",
-            "computeInstanceAuthorizationType": "personal",
-            "personalComputeInstanceSettings": azure_nextgen.machinelearningservices.latest.PersonalComputeInstanceSettingsArgs(
-                assigned_user=azure_nextgen.machinelearningservices.latest.AssignedUserArgs(
+    properties=azure_nextgen.machinelearningservices.ComputeInstanceArgs(
+        compute_type="ComputeInstance",
+        properties=azure_nextgen.machinelearningservices.ComputeInstancePropertiesArgs(
+            application_sharing_policy="Personal",
+            compute_instance_authorization_type="personal",
+            personal_compute_instance_settings=azure_nextgen.machinelearningservices.PersonalComputeInstanceSettingsArgs(
+                assigned_user=azure_nextgen.machinelearningservices.AssignedUserArgs(
                     object_id="00000000-0000-0000-0000-000000000000",
                     tenant_id="00000000-0000-0000-0000-000000000000",
                 ),
             ),
-            "sshSettings": azure_nextgen.machinelearningservices.latest.ComputeInstanceSshSettingsArgs(
+            ssh_settings=azure_nextgen.machinelearningservices.ComputeInstanceSshSettingsArgs(
                 ssh_public_access="Disabled",
             ),
-            "subnet": "test-subnet-resource-id",
-            "vmSize": "STANDARD_NC6",
-        },
-    },
+            subnet="test-subnet-resource-id",
+            vm_size="STANDARD_NC6",
+        ),
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -376,7 +519,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -415,17 +558,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNextGen.MachineLearningServices.Inputs.ComputeInstanceArgs
             {
-                { "computeType", "ComputeInstance" },
-                { "properties", 
+                ComputeType = "ComputeInstance",
+                Properties = new AzureNextGen.MachineLearningServices.Inputs.ComputeInstancePropertiesArgs
                 {
-                    { "vmSize", "STANDARD_NC6" },
-                } },
+                    VmSize = "STANDARD_NC6",
+                },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -439,7 +582,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: &machinelearningservices.ComputeInstanceArgs{
+				ComputeType: pulumi.String("ComputeInstance"),
+				Properties: &machinelearningservices.ComputeInstancePropertiesArgs{
+					VmSize: pulumi.String("STANDARD_NC6"),
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -448,15 +622,15 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "ComputeInstance",
-        "properties": {
-            "vmSize": "STANDARD_NC6",
-        },
-    },
+    properties=azure_nextgen.machinelearningservices.ComputeInstanceArgs(
+        compute_type="ComputeInstance",
+        properties=azure_nextgen.machinelearningservices.ComputeInstancePropertiesArgs(
+            vm_size="STANDARD_NC6",
+        ),
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -470,7 +644,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -497,19 +671,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNextGen.MachineLearningServices.Inputs.AKSArgs
             {
-                { "computeType", "AKS" },
-                { "description", "some compute" },
-                { "properties", 
+                ComputeType = "AKS",
+                Description = "some compute",
+                Properties = new AzureNextGen.MachineLearningServices.Inputs.AKSPropertiesArgs
                 {
-                    { "agentCount", 4 },
-                } },
-                { "resourceId", "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2" },
+                    AgentCount = 4,
+                },
+                ResourceId = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -523,7 +697,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: &machinelearningservices.AKSArgs{
+				ComputeType: pulumi.String("AKS"),
+				Description: pulumi.String("some compute"),
+				Properties: &machinelearningservices.AKSPropertiesArgs{
+					AgentCount: pulumi.Int(4),
+				},
+				ResourceId: pulumi.String("/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2"),
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -532,17 +739,17 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "AKS",
-        "description": "some compute",
-        "properties": {
-            "agentCount": 4,
-        },
-        "resourceId": "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
-    },
+    properties=azure_nextgen.machinelearningservices.AKSArgs(
+        compute_type="AKS",
+        description="some compute",
+        properties=azure_nextgen.machinelearningservices.AKSPropertiesArgs(
+            agent_count=4,
+        ),
+        resource_id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -556,7 +763,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -585,23 +792,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNextGen.MachineLearningServices.Inputs.AmlComputeArgs
             {
-                { "computeType", "AmlCompute" },
-                { "description", "some compute" },
-                { "properties", 
+                ComputeType = "AmlCompute",
+                Description = "some compute",
+                Properties = new AzureNextGen.MachineLearningServices.Inputs.AmlComputePropertiesArgs
                 {
-                    { "scaleSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ScaleSettingsArgs
+                    ScaleSettings = new AzureNextGen.MachineLearningServices.Inputs.ScaleSettingsArgs
                     {
                         MaxNodeCount = 4,
                         MinNodeCount = 4,
                         NodeIdleTimeBeforeScaleDown = "PT5M",
-                    } },
-                } },
+                    },
+                },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -615,7 +822,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: &machinelearningservices.AmlComputeArgs{
+				ComputeType: pulumi.String("AmlCompute"),
+				Description: pulumi.String("some compute"),
+				Properties: &machinelearningservices.AmlComputePropertiesArgs{
+					ScaleSettings: &machinelearningservices.ScaleSettingsArgs{
+						MaxNodeCount:                pulumi.Int(4),
+						MinNodeCount:                pulumi.Int(4),
+						NodeIdleTimeBeforeScaleDown: pulumi.String("PT5M"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -624,20 +867,20 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "AmlCompute",
-        "description": "some compute",
-        "properties": {
-            "scaleSettings": azure_nextgen.machinelearningservices.latest.ScaleSettingsArgs(
+    properties=azure_nextgen.machinelearningservices.AmlComputeArgs(
+        compute_type="AmlCompute",
+        description="some compute",
+        properties=azure_nextgen.machinelearningservices.AmlComputePropertiesArgs(
+            scale_settings=azure_nextgen.machinelearningservices.ScaleSettingsArgs(
                 max_node_count=4,
                 min_node_count=4,
                 node_idle_time_before_scale_down="PT5M",
             ),
-        },
-    },
+        ),
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -651,7 +894,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -681,7 +924,7 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">MachineLearningComputeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningComputeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -689,11 +932,11 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningCompute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">MachineLearningComputeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningCompute</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningCompute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineLearningComputeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningCompute</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">MachineLearningComputeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MachineLearningComputeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -714,7 +957,7 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MachineLearningComputeArgs</span>
+        <span class="property-type"><a href="#inputs">MachineLearningComputeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -783,7 +1026,7 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MachineLearningComputeArgs</span>
+        <span class="property-type"><a href="#inputs">MachineLearningComputeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -822,7 +1065,7 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MachineLearningComputeArgs</span>
+        <span class="property-type"><a href="#inputs">MachineLearningComputeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -845,11 +1088,11 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
 
 ## MachineLearningCompute Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The MachineLearningCompute resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The MachineLearningCompute resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -13429,7 +13672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningservices/latest:MachineLearningCompute compute123 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspaces123/computes/compute123 
+$ pulumi import azure-nextgen:machinelearningservices:MachineLearningCompute compute123 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspaces123/computes/compute123 
 ```
 
 

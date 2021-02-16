@@ -19,7 +19,7 @@ meta_desc: "Explore the GetManagedInstancePrivateEndpointConnection function of 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedInstancePrivateEndpointConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagedInstancePrivateEndpointConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetManagedInstancePrivateEndpointConnectionResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedInstancePrivateEndpointConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagedInstancePrivateEndpointConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetManagedInstancePrivateEndpointConnectionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetManagedInstancePrivateEndpointConnection function of 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagedInstancePrivateEndpointConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagedInstancePrivateEndpointConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupManagedInstancePrivateEndpointConnectionResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagedInstancePrivateEndpointConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagedInstancePrivateEndpointConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupManagedInstancePrivateEndpointConnectionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupManagedInstancePrivateEndpointConnection` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetManagedInstancePrivateEndpointConnection function of 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetManagedInstancePrivateEndpointConnection </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetManagedInstancePrivateEndpointConnectionResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagedInstancePrivateEndpointConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetManagedInstancePrivateEndpointConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagedInstancePrivateEndpointConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -438,9 +438,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -502,9 +499,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="managedinstanceprivatelinkserviceconnectionstatepropertyresponse">Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</h4>
-
-
-
 
 
 

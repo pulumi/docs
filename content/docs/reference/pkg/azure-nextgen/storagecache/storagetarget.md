@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagecache.StorageTarget resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Type of the Storage Target.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageTarget = new AzureNextGen.StorageCache.Latest.StorageTarget("storageTarget", new AzureNextGen.StorageCache.Latest.StorageTargetArgs
+        var storageTarget = new AzureNextGen.StorageCache.StorageTarget("storageTarget", new AzureNextGen.StorageCache.StorageTargetArgs
         {
             CacheName = "sc1",
             Junctions = 
             {
-                new AzureNextGen.StorageCache.Latest.Inputs.NamespaceJunctionArgs
+                new AzureNextGen.StorageCache.Inputs.NamespaceJunctionArgs
                 {
                     NamespacePath = "/path/on/cache",
                     NfsAccessPolicy = "default",
                     NfsExport = "exp1",
                     TargetPath = "/path/on/exp1",
                 },
-                new AzureNextGen.StorageCache.Latest.Inputs.NamespaceJunctionArgs
+                new AzureNextGen.StorageCache.Inputs.NamespaceJunctionArgs
                 {
                     NamespacePath = "/path2/on/cache",
                     NfsAccessPolicy = "rootSquash",
@@ -47,7 +47,7 @@ class MyStack : Stack
                     TargetPath = "/path2/on/exp2",
                 },
             },
-            Nfs3 = new AzureNextGen.StorageCache.Latest.Inputs.Nfs3TargetArgs
+            Nfs3 = new AzureNextGen.StorageCache.Inputs.Nfs3TargetArgs
             {
                 Target = "10.0.44.44",
                 UsageModel = "READ_HEAVY_INFREQ",
@@ -70,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache/latest"
+	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -117,23 +117,23 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_target = azure_nextgen.storagecache.latest.StorageTarget("storageTarget",
+storage_target = azure_nextgen.storagecache.StorageTarget("storageTarget",
     cache_name="sc1",
     junctions=[
-        azure_nextgen.storagecache.latest.NamespaceJunctionArgs(
+        azure_nextgen.storagecache.NamespaceJunctionArgs(
             namespace_path="/path/on/cache",
             nfs_access_policy="default",
             nfs_export="exp1",
             target_path="/path/on/exp1",
         ),
-        azure_nextgen.storagecache.latest.NamespaceJunctionArgs(
+        azure_nextgen.storagecache.NamespaceJunctionArgs(
             namespace_path="/path2/on/cache",
             nfs_access_policy="rootSquash",
             nfs_export="exp2",
             target_path="/path2/on/exp2",
         ),
     ],
-    nfs3=azure_nextgen.storagecache.latest.Nfs3TargetArgs(
+    nfs3=azure_nextgen.storagecache.Nfs3TargetArgs(
         target="10.0.44.44",
         usage_model="READ_HEAVY_INFREQ",
     ),
@@ -151,7 +151,7 @@ storage_target = azure_nextgen.storagecache.latest.StorageTarget("storageTarget"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageTarget = new azure_nextgen.storagecache.latest.StorageTarget("storageTarget", {
+const storageTarget = new azure_nextgen.storagecache.StorageTarget("storageTarget", {
     cacheName: "sc1",
     junctions: [
         {
@@ -190,10 +190,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageTarget = new AzureNextGen.StorageCache.Latest.StorageTarget("storageTarget", new AzureNextGen.StorageCache.Latest.StorageTargetArgs
+        var storageTarget = new AzureNextGen.StorageCache.StorageTarget("storageTarget", new AzureNextGen.StorageCache.StorageTargetArgs
         {
             CacheName = "sc1",
-            Nfs3 = new AzureNextGen.StorageCache.Latest.Inputs.Nfs3TargetArgs
+            Nfs3 = new AzureNextGen.StorageCache.Inputs.Nfs3TargetArgs
             {
                 Target = "10.0.44.44",
                 UsageModel = "READ_HEAVY_INFREQ",
@@ -216,7 +216,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache/latest"
+	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -249,9 +249,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_target = azure_nextgen.storagecache.latest.StorageTarget("storageTarget",
+storage_target = azure_nextgen.storagecache.StorageTarget("storageTarget",
     cache_name="sc1",
-    nfs3=azure_nextgen.storagecache.latest.Nfs3TargetArgs(
+    nfs3=azure_nextgen.storagecache.Nfs3TargetArgs(
         target="10.0.44.44",
         usage_model="READ_HEAVY_INFREQ",
     ),
@@ -269,7 +269,7 @@ storage_target = azure_nextgen.storagecache.latest.StorageTarget("storageTarget"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageTarget = new azure_nextgen.storagecache.latest.StorageTarget("storageTarget", {
+const storageTarget = new azure_nextgen.storagecache.StorageTarget("storageTarget", {
     cacheName: "sc1",
     nfs3: {
         target: "10.0.44.44",
@@ -292,7 +292,7 @@ const storageTarget = new azure_nextgen.storagecache.latest.StorageTarget("stora
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">StorageTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StorageTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -300,11 +300,11 @@ const storageTarget = new azure_nextgen.storagecache.latest.StorageTarget("stora
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">StorageTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageTarget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StorageTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageTarget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">StorageTargetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StorageTargetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -325,7 +325,7 @@ const storageTarget = new azure_nextgen.storagecache.latest.StorageTarget("stora
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageTargetArgs</span>
+        <span class="property-type"><a href="#inputs">StorageTargetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -394,7 +394,7 @@ const storageTarget = new azure_nextgen.storagecache.latest.StorageTarget("stora
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageTargetArgs</span>
+        <span class="property-type"><a href="#inputs">StorageTargetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -433,7 +433,7 @@ const storageTarget = new azure_nextgen.storagecache.latest.StorageTarget("stora
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageTargetArgs</span>
+        <span class="property-type"><a href="#inputs">StorageTargetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -456,11 +456,11 @@ const storageTarget = new azure_nextgen.storagecache.latest.StorageTarget("stora
 
 ## StorageTarget Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The StorageTarget resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The StorageTarget resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2180,7 +2180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagecache/latest:StorageTarget st1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.StorageCache/caches/sc1/storagetargets/st1 
+$ pulumi import azure-nextgen:storagecache:StorageTarget st1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.StorageCache/caches/sc1/storagetargets/st1 
 ```
 
 

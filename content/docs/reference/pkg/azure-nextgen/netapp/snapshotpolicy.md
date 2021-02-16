@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.netapp.SnapshotPolicy resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Snapshot policy information
-Latest API Version: 2020-11-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,22 +27,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var snapshotPolicy = new AzureNextGen.NetApp.Latest.SnapshotPolicy("snapshotPolicy", new AzureNextGen.NetApp.Latest.SnapshotPolicyArgs
+        var snapshotPolicy = new AzureNextGen.NetApp.SnapshotPolicy("snapshotPolicy", new AzureNextGen.NetApp.SnapshotPolicyArgs
         {
             AccountName = "account1",
-            DailySchedule = new AzureNextGen.NetApp.Latest.Inputs.DailyScheduleArgs
+            DailySchedule = new AzureNextGen.NetApp.Inputs.DailyScheduleArgs
             {
                 Hour = 14,
                 Minute = 30,
                 SnapshotsToKeep = 4,
             },
-            HourlySchedule = new AzureNextGen.NetApp.Latest.Inputs.HourlyScheduleArgs
+            HourlySchedule = new AzureNextGen.NetApp.Inputs.HourlyScheduleArgs
             {
                 Minute = 50,
                 SnapshotsToKeep = 2,
             },
             Location = "eastus",
-            MonthlySchedule = new AzureNextGen.NetApp.Latest.Inputs.MonthlyScheduleArgs
+            MonthlySchedule = new AzureNextGen.NetApp.Inputs.MonthlyScheduleArgs
             {
                 DaysOfMonth = "10,11,12",
                 Hour = 14,
@@ -51,7 +51,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "myRG",
             SnapshotPolicyName = "snapshotPolicyName",
-            WeeklySchedule = new AzureNextGen.NetApp.Latest.Inputs.WeeklyScheduleArgs
+            WeeklySchedule = new AzureNextGen.NetApp.Inputs.WeeklyScheduleArgs
             {
                 Day = "Wednesday",
                 Hour = 14,
@@ -73,7 +73,7 @@ class MyStack : Stack
 package main
 
 import (
-	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp/latest"
+	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -123,19 +123,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-snapshot_policy = azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy",
+snapshot_policy = azure_nextgen.netapp.SnapshotPolicy("snapshotPolicy",
     account_name="account1",
-    daily_schedule=azure_nextgen.netapp.latest.DailyScheduleArgs(
+    daily_schedule=azure_nextgen.netapp.DailyScheduleArgs(
         hour=14,
         minute=30,
         snapshots_to_keep=4,
     ),
-    hourly_schedule=azure_nextgen.netapp.latest.HourlyScheduleArgs(
+    hourly_schedule=azure_nextgen.netapp.HourlyScheduleArgs(
         minute=50,
         snapshots_to_keep=2,
     ),
     location="eastus",
-    monthly_schedule=azure_nextgen.netapp.latest.MonthlyScheduleArgs(
+    monthly_schedule=azure_nextgen.netapp.MonthlyScheduleArgs(
         days_of_month="10,11,12",
         hour=14,
         minute=15,
@@ -143,7 +143,7 @@ snapshot_policy = azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy",
     ),
     resource_group_name="myRG",
     snapshot_policy_name="snapshotPolicyName",
-    weekly_schedule=azure_nextgen.netapp.latest.WeeklyScheduleArgs(
+    weekly_schedule=azure_nextgen.netapp.WeeklyScheduleArgs(
         day="Wednesday",
         hour=14,
         minute=45,
@@ -160,7 +160,7 @@ snapshot_policy = azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const snapshotPolicy = new azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy", {
+const snapshotPolicy = new azure_nextgen.netapp.SnapshotPolicy("snapshotPolicy", {
     accountName: "account1",
     dailySchedule: {
         hour: 14,
@@ -200,7 +200,7 @@ const snapshotPolicy = new azure_nextgen.netapp.latest.SnapshotPolicy("snapshotP
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SnapshotPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SnapshotPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SnapshotPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SnapshotPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -208,11 +208,11 @@ const snapshotPolicy = new azure_nextgen.netapp.latest.SnapshotPolicy("snapshotP
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSnapshotPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SnapshotPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SnapshotPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSnapshotPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SnapshotPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SnapshotPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SnapshotPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SnapshotPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SnapshotPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SnapshotPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -233,7 +233,7 @@ const snapshotPolicy = new azure_nextgen.netapp.latest.SnapshotPolicy("snapshotP
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SnapshotPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">SnapshotPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -302,7 +302,7 @@ const snapshotPolicy = new azure_nextgen.netapp.latest.SnapshotPolicy("snapshotP
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SnapshotPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">SnapshotPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -341,7 +341,7 @@ const snapshotPolicy = new azure_nextgen.netapp.latest.SnapshotPolicy("snapshotP
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SnapshotPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">SnapshotPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -364,11 +364,11 @@ const snapshotPolicy = new azure_nextgen.netapp.latest.SnapshotPolicy("snapshotP
 
 ## SnapshotPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2378,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:netapp/latest:SnapshotPolicy account1/snapshotPolicy1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/snapshotPolicies/snapshotPolicy1 
+$ pulumi import azure-nextgen:netapp:SnapshotPolicy account1/snapshotPolicy1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/snapshotPolicies/snapshotPolicy1 
 ```
 
 

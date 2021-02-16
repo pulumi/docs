@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.Job resource with examples, 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A job.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.Sql.V20200801Preview.Job("job", new AzureNextGen.Sql.V20200801Preview.JobArgs
+        var job = new AzureNextGen.Sql.Job("job", new AzureNextGen.Sql.JobArgs
         {
             Description = "my favourite job",
             JobAgentName = "agent1",
             JobName = "job1",
             ResourceGroupName = "group1",
-            Schedule = new AzureNextGen.Sql.V20200801Preview.Inputs.JobScheduleArgs
+            Schedule = new AzureNextGen.Sql.Inputs.JobScheduleArgs
             {
                 Enabled = true,
                 EndTime = "2015-09-24T23:59:59Z",
@@ -56,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,12 +94,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.sql.v20200801preview.Job("job",
+job = azure_nextgen.sql.Job("job",
     description="my favourite job",
     job_agent_name="agent1",
     job_name="job1",
     resource_group_name="group1",
-    schedule=azure_nextgen.sql.v20200801preview.JobScheduleArgs(
+    schedule=azure_nextgen.sql.JobScheduleArgs(
         enabled=True,
         end_time="2015-09-24T23:59:59Z",
         interval="PT5M",
@@ -117,7 +118,7 @@ job = azure_nextgen.sql.v20200801preview.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.sql.v20200801preview.Job("job", {
+const job = new azure_nextgen.sql.Job("job", {
     description: "my favourite job",
     jobAgentName: "agent1",
     jobName: "job1",
@@ -146,7 +147,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.Sql.V20200801Preview.Job("job", new AzureNextGen.Sql.V20200801Preview.JobArgs
+        var job = new AzureNextGen.Sql.Job("job", new AzureNextGen.Sql.JobArgs
         {
             JobAgentName = "agent1",
             JobName = "job1",
@@ -167,7 +168,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -196,7 +197,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.sql.v20200801preview.Job("job",
+job = azure_nextgen.sql.Job("job",
     job_agent_name="agent1",
     job_name="job1",
     resource_group_name="group1",
@@ -212,7 +213,7 @@ job = azure_nextgen.sql.v20200801preview.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.sql.v20200801preview.Job("job", {
+const job = new azure_nextgen.sql.Job("job", {
     jobAgentName: "agent1",
     jobName: "job1",
     resourceGroupName: "group1",
@@ -231,7 +232,7 @@ const job = new azure_nextgen.sql.v20200801preview.Job("job", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">JobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -239,11 +240,11 @@ const job = new azure_nextgen.sql.v20200801preview.Job("job", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">JobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">JobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -264,7 +265,7 @@ const job = new azure_nextgen.sql.v20200801preview.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobArgs</span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -333,7 +334,7 @@ const job = new azure_nextgen.sql.v20200801preview.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobArgs</span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -372,7 +373,7 @@ const job = new azure_nextgen.sql.v20200801preview.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobArgs</span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -395,11 +396,11 @@ const job = new azure_nextgen.sql.v20200801preview.Job("job", {
 
 ## Job Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1283,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:Job job1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/jobs/job1 
+$ pulumi import azure-nextgen:sql:Job job1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/jobs/job1 
 ```
 
 

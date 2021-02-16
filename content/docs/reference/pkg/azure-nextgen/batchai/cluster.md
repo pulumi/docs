@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batchai.Cluster resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about a Cluster.
-Latest API Version: 2018-05-01.
+API Version: 2018-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.BatchAI.Latest.Cluster("cluster", new AzureNextGen.BatchAI.Latest.ClusterArgs
+        var cluster = new AzureNextGen.BatchAI.Cluster("cluster", new AzureNextGen.BatchAI.ClusterArgs
         {
             ClusterName = "demo_cluster",
-            NodeSetup = new AzureNextGen.BatchAI.Latest.Inputs.NodeSetupArgs
+            NodeSetup = new AzureNextGen.BatchAI.Inputs.NodeSetupArgs
             {
-                MountVolumes = new AzureNextGen.BatchAI.Latest.Inputs.MountVolumesArgs
+                MountVolumes = new AzureNextGen.BatchAI.Inputs.MountVolumesArgs
                 {
                     AzureFileShares = 
                     {
-                        new AzureNextGen.BatchAI.Latest.Inputs.AzureFileShareReferenceArgs
+                        new AzureNextGen.BatchAI.Inputs.AzureFileShareReferenceArgs
                         {
                             AccountName = "storage_account_name",
                             AzureFileUrl = "https://storage_account_name.file.core.windows.net/azure_file_share_name",
-                            Credentials = new AzureNextGen.BatchAI.Latest.Inputs.AzureStorageCredentialsInfoArgs
+                            Credentials = new AzureNextGen.BatchAI.Inputs.AzureStorageCredentialsInfoArgs
                             {
                                 AccountKey = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
                             },
@@ -51,9 +51,9 @@ class MyStack : Stack
                     },
                     FileServers = 
                     {
-                        new AzureNextGen.BatchAI.Latest.Inputs.FileServerReferenceArgs
+                        new AzureNextGen.BatchAI.Inputs.FileServerReferenceArgs
                         {
-                            FileServer = new AzureNextGen.BatchAI.Latest.Inputs.ResourceIdArgs
+                            FileServer = new AzureNextGen.BatchAI.Inputs.ResourceIdArgs
                             {
                                 Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
                             },
@@ -64,15 +64,15 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "demo_resource_group",
-            ScaleSettings = new AzureNextGen.BatchAI.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.BatchAI.Inputs.ScaleSettingsArgs
             {
-                Manual = new AzureNextGen.BatchAI.Latest.Inputs.ManualScaleSettingsArgs
+                Manual = new AzureNextGen.BatchAI.Inputs.ManualScaleSettingsArgs
                 {
                     NodeDeallocationOption = "requeue",
                     TargetNodeCount = 1,
                 },
             },
-            UserAccountSettings = new AzureNextGen.BatchAI.Latest.Inputs.UserAccountSettingsArgs
+            UserAccountSettings = new AzureNextGen.BatchAI.Inputs.UserAccountSettingsArgs
             {
                 AdminUserName = "admin_user_name",
                 AdminUserPassword = "admin_user_password",
@@ -96,7 +96,7 @@ class MyStack : Stack
 package main
 
 import (
-	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai/latest"
+	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -162,22 +162,22 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.batchai.latest.Cluster("cluster",
+cluster = azure_nextgen.batchai.Cluster("cluster",
     cluster_name="demo_cluster",
-    node_setup=azure_nextgen.batchai.latest.NodeSetupArgs(
-        mount_volumes=azure_nextgen.batchai.latest.MountVolumesArgs(
-            azure_file_shares=[azure_nextgen.batchai.latest.AzureFileShareReferenceArgs(
+    node_setup=azure_nextgen.batchai.NodeSetupArgs(
+        mount_volumes=azure_nextgen.batchai.MountVolumesArgs(
+            azure_file_shares=[azure_nextgen.batchai.AzureFileShareReferenceArgs(
                 account_name="storage_account_name",
                 azure_file_url="https://storage_account_name.file.core.windows.net/azure_file_share_name",
-                credentials=azure_nextgen.batchai.latest.AzureStorageCredentialsInfoArgs(
+                credentials=azure_nextgen.batchai.AzureStorageCredentialsInfoArgs(
                     account_key="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
                 ),
                 directory_mode="0777",
                 file_mode="0777",
                 relative_mount_path="azfiles",
             )],
-            file_servers=[azure_nextgen.batchai.latest.FileServerReferenceArgs(
-                file_server=azure_nextgen.batchai.latest.ResourceIdArgs(
+            file_servers=[azure_nextgen.batchai.FileServerReferenceArgs(
+                file_server=azure_nextgen.batchai.ResourceIdArgs(
                     id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
                 ),
                 mount_options="rw",
@@ -186,13 +186,13 @@ cluster = azure_nextgen.batchai.latest.Cluster("cluster",
         ),
     ),
     resource_group_name="demo_resource_group",
-    scale_settings=azure_nextgen.batchai.latest.ScaleSettingsArgs(
-        manual=azure_nextgen.batchai.latest.ManualScaleSettingsArgs(
+    scale_settings=azure_nextgen.batchai.ScaleSettingsArgs(
+        manual=azure_nextgen.batchai.ManualScaleSettingsArgs(
             node_deallocation_option="requeue",
             target_node_count=1,
         ),
     ),
-    user_account_settings=azure_nextgen.batchai.latest.UserAccountSettingsArgs(
+    user_account_settings=azure_nextgen.batchai.UserAccountSettingsArgs(
         admin_user_name="admin_user_name",
         admin_user_password="admin_user_password",
         admin_user_ssh_public_key="ssh-rsa AAAAB3NzaC1yc...",
@@ -211,7 +211,7 @@ cluster = azure_nextgen.batchai.latest.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.batchai.latest.Cluster("cluster", {
+const cluster = new azure_nextgen.batchai.Cluster("cluster", {
     clusterName: "demo_cluster",
     nodeSetup: {
         mountVolumes: {
@@ -263,7 +263,7 @@ const cluster = new azure_nextgen.batchai.latest.Cluster("cluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -271,11 +271,11 @@ const cluster = new azure_nextgen.batchai.latest.Cluster("cluster", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -296,7 +296,7 @@ const cluster = new azure_nextgen.batchai.latest.Cluster("cluster", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -365,7 +365,7 @@ const cluster = new azure_nextgen.batchai.latest.Cluster("cluster", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -404,7 +404,7 @@ const cluster = new azure_nextgen.batchai.latest.Cluster("cluster", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -427,11 +427,11 @@ const cluster = new azure_nextgen.batchai.latest.Cluster("cluster", {
 
 ## Cluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Cluster resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Cluster resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -7035,7 +7035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:batchai/latest:Cluster demo_cluster /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/clusters/demo_cluster 
+$ pulumi import azure-nextgen:batchai:Cluster demo_cluster /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/clusters/demo_cluster 
 ```
 
 

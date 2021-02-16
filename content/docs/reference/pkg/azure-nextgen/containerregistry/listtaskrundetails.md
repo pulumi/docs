@@ -19,7 +19,7 @@ meta_desc: "Explore the ListTaskRunDetails function of the containerregistry mod
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listTaskRunDetails<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListTaskRunDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">ListTaskRunDetailsResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listTaskRunDetails<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListTaskRunDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListTaskRunDetailsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,14 @@ meta_desc: "Explore the ListTaskRunDetails function of the containerregistry mod
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListTaskRunDetails<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListTaskRunDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">ListTaskRunDetailsResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListTaskRunDetails<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListTaskRunDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListTaskRunDetailsResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListTaskRunDetails </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">ListTaskRunDetailsResult</span>> <span class="p">InvokeAsync(</span><span class="nx">ListTaskRunDetailsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListTaskRunDetailsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListTaskRunDetailsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -580,9 +580,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -644,9 +641,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="argumentresponse">Argument<wbr>Response</h4>
-
-
-
 
 
 
@@ -786,9 +780,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -894,9 +885,6 @@ the value of the item will be the registry credentials for accessing the registr
 {{% /choosable %}}
 
 <h4 id="customregistrycredentialsresponse">Custom<wbr>Registry<wbr>Credentials<wbr>Response</h4>
-
-
-
 
 
 
@@ -1053,9 +1041,6 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="dockerbuildrequestresponse">Docker<wbr>Build<wbr>Request<wbr>Response</h4>
-
-
-
 
 
 
@@ -1595,9 +1580,6 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2023,9 +2005,6 @@ If it is relative URL, the relative path should be obtained from calling listBui
 {{% /choosable %}}
 
 <h4 id="filetaskrunrequestresponse">File<wbr>Task<wbr>Run<wbr>Request<wbr>Response</h4>
-
-
-
 
 
 
@@ -2457,9 +2436,6 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2644,9 +2620,6 @@ dictionary key references will be ARM resource ids in the form:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2819,9 +2792,6 @@ dictionary key references will be ARM resource ids in the form:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2955,9 +2925,6 @@ dictionary key references will be ARM resource ids in the form:
 {{% /choosable %}}
 
 <h4 id="overridetasksteppropertiesresponse">Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -3209,9 +3176,6 @@ executing a build step.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3345,9 +3309,6 @@ executing a build step.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="runresponse">Run<wbr>Response</h4>
-
-
-
 
 
 
@@ -4315,9 +4276,6 @@ executing a build step.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4427,9 +4385,6 @@ used as is without any modification.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="setvalueresponse">Set<wbr>Value<wbr>Response</h4>
-
-
-
 
 
 
@@ -4569,9 +4524,6 @@ used as is without any modification.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4641,9 +4593,6 @@ the source registry during the run.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="sourcetriggerdescriptorresponse">Source<wbr>Trigger<wbr>Descriptor<wbr>Response</h4>
-
-
-
 
 
 
@@ -4927,9 +4876,6 @@ the source registry during the run.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5174,9 +5120,6 @@ the source registry during the run.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5385,9 +5328,6 @@ the source registry during the run.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5485,9 +5425,6 @@ the source registry during the run.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="useridentitypropertiesresponse">User<wbr>Identity<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 

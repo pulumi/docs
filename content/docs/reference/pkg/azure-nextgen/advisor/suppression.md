@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.advisor.Suppression resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
-Latest API Version: 2020-01-01.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var suppression = new AzureNextGen.Advisor.Latest.Suppression("suppression", new AzureNextGen.Advisor.Latest.SuppressionArgs
+        var suppression = new AzureNextGen.Advisor.Suppression("suppression", new AzureNextGen.Advisor.SuppressionArgs
         {
             Name = "suppressionName1",
             RecommendationId = "recommendationId",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	advisor "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/advisor/latest"
+	advisor "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/advisor"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-suppression = azure_nextgen.advisor.latest.Suppression("suppression",
+suppression = azure_nextgen.advisor.Suppression("suppression",
     name="suppressionName1",
     recommendation_id="recommendationId",
     resource_uri="resourceUri",
@@ -93,7 +93,7 @@ suppression = azure_nextgen.advisor.latest.Suppression("suppression",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const suppression = new azure_nextgen.advisor.latest.Suppression("suppression", {
+const suppression = new azure_nextgen.advisor.Suppression("suppression", {
     name: "suppressionName1",
     recommendationId: "recommendationId",
     resourceUri: "resourceUri",
@@ -112,7 +112,7 @@ const suppression = new azure_nextgen.advisor.latest.Suppression("suppression", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Suppression</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SuppressionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Suppression</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SuppressionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -120,11 +120,11 @@ const suppression = new azure_nextgen.advisor.latest.Suppression("suppression", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSuppression</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SuppressionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Suppression</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSuppression</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SuppressionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Suppression</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Suppression</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SuppressionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Suppression</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SuppressionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -145,7 +145,7 @@ const suppression = new azure_nextgen.advisor.latest.Suppression("suppression", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SuppressionArgs</span>
+        <span class="property-type"><a href="#inputs">SuppressionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -214,7 +214,7 @@ const suppression = new azure_nextgen.advisor.latest.Suppression("suppression", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SuppressionArgs</span>
+        <span class="property-type"><a href="#inputs">SuppressionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -253,7 +253,7 @@ const suppression = new azure_nextgen.advisor.latest.Suppression("suppression", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SuppressionArgs</span>
+        <span class="property-type"><a href="#inputs">SuppressionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -276,11 +276,11 @@ const suppression = new azure_nextgen.advisor.latest.Suppression("suppression", 
 
 ## Suppression Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Suppression resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Suppression resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -638,7 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:advisor/latest:Suppression suppressionName1 /resourceUri/providers/Microsoft.Advisor/recommendations/recommendationId/suppressions/suppressionName1 
+$ pulumi import azure-nextgen:advisor:Suppression suppressionName1 /resourceUri/providers/Microsoft.Advisor/recommendations/recommendationId/suppressions/suppressionName1 
 ```
 
 

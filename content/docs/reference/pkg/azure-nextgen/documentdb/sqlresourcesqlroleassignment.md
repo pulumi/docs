@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.SqlResourceSqlRoleAss
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB Role Assignment
+API Version: 2020-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlRoleAssignment = new AzureNextGen.DocumentDB.V20200601Preview.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment", new AzureNextGen.DocumentDB.V20200601Preview.SqlResourceSqlRoleAssignmentArgs
+        var sqlResourceSqlRoleAssignment = new AzureNextGen.DocumentDB.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment", new AzureNextGen.DocumentDB.SqlResourceSqlRoleAssignmentArgs
         {
             AccountName = "myAccountName",
             PrincipalId = "myPrincipalId",
@@ -49,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/v20200601preview"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_role_assignment = azure_nextgen.documentdb.v20200601preview.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment",
+sql_resource_sql_role_assignment = azure_nextgen.documentdb.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment",
     account_name="myAccountName",
     principal_id="myPrincipalId",
     resource_group_name="myResourceGroupName",
@@ -98,7 +99,7 @@ sql_resource_sql_role_assignment = azure_nextgen.documentdb.v20200601preview.Sql
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlResourceSqlRoleAssignment = new azure_nextgen.documentdb.v20200601preview.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment", {
+const sqlResourceSqlRoleAssignment = new azure_nextgen.documentdb.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment", {
     accountName: "myAccountName",
     principalId: "myPrincipalId",
     resourceGroupName: "myResourceGroupName",
@@ -119,7 +120,7 @@ const sqlResourceSqlRoleAssignment = new azure_nextgen.documentdb.v20200601previ
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlResourceSqlRoleAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SqlResourceSqlRoleAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlResourceSqlRoleAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlResourceSqlRoleAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -127,11 +128,11 @@ const sqlResourceSqlRoleAssignment = new azure_nextgen.documentdb.v20200601previ
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlResourceSqlRoleAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SqlResourceSqlRoleAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlResourceSqlRoleAssignment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlResourceSqlRoleAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlResourceSqlRoleAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlResourceSqlRoleAssignment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlResourceSqlRoleAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SqlResourceSqlRoleAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlResourceSqlRoleAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SqlResourceSqlRoleAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -152,7 +153,7 @@ const sqlResourceSqlRoleAssignment = new azure_nextgen.documentdb.v20200601previ
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlResourceSqlRoleAssignmentArgs</span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlRoleAssignmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -221,7 +222,7 @@ const sqlResourceSqlRoleAssignment = new azure_nextgen.documentdb.v20200601previ
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlResourceSqlRoleAssignmentArgs</span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlRoleAssignmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -260,7 +261,7 @@ const sqlResourceSqlRoleAssignment = new azure_nextgen.documentdb.v20200601previ
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlResourceSqlRoleAssignmentArgs</span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlRoleAssignmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,11 +284,11 @@ const sqlResourceSqlRoleAssignment = new azure_nextgen.documentdb.v20200601previ
 
 ## SqlResourceSqlRoleAssignment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SqlResourceSqlRoleAssignment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SqlResourceSqlRoleAssignment resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -681,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/v20200601preview:SqlResourceSqlRoleAssignment myRoleAssignmentId /subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleAssignments/myRoleAssignmentId 
+$ pulumi import azure-nextgen:documentdb:SqlResourceSqlRoleAssignment myRoleAssignmentId /subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleAssignments/myRoleAssignmentId 
 ```
 
 

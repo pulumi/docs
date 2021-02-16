@@ -19,7 +19,7 @@ meta_desc: "Explore the GetCloudConnector function of the costmanagement module,
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCloudConnector<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCloudConnectorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetCloudConnectorResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCloudConnector<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCloudConnectorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCloudConnectorResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetCloudConnector function of the costmanagement module,
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCloudConnector<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCloudConnectorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupCloudConnectorResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCloudConnector<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCloudConnectorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCloudConnectorResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCloudConnector` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetCloudConnector function of the costmanagement module,
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCloudConnector </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetCloudConnectorResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetCloudConnectorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCloudConnectorResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCloudConnectorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -870,9 +870,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -884,16 +881,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error code{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="errorinnermessage_csharp">
-<a href="#errorinnermessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Inner<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}External Provider error message{{% /md %}}</dd>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
@@ -911,7 +899,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -926,16 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error code{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="errorinnermessage_go">
-<a href="#errorinnermessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Inner<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}External Provider error message{{% /md %}}</dd>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="errormessage_go">
@@ -953,7 +932,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -968,16 +947,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error code{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="errorinnermessage_nodejs">
-<a href="#errorinnermessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Inner<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}External Provider error message{{% /md %}}</dd>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
@@ -995,7 +965,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1010,16 +980,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Short error code{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="error_inner_message_python">
-<a href="#error_inner_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>inner_<wbr>message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}External Provider error message{{% /md %}}</dd>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="error_message_python">
@@ -1037,14 +998,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -1053,13 +1011,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastchecked_csharp">
-<a href="#lastchecked_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Checked</a>
+        <span id="lastrun_csharp">
+<a href="#lastrun_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="lastupdated_csharp">
@@ -1095,13 +1053,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastchecked_go">
-<a href="#lastchecked_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Checked</a>
+        <span id="lastrun_go">
+<a href="#lastrun_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="lastupdated_go">
@@ -1137,13 +1095,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastchecked_nodejs">
-<a href="#lastchecked_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Checked</a>
+        <span id="lastrun_nodejs">
+<a href="#lastrun_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="lastupdated_nodejs">
@@ -1179,13 +1137,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="last_checked_python">
-<a href="#last_checked_python" style="color: inherit; text-decoration: inherit;">last_<wbr>checked</a>
+        <span id="last_run_python">
+<a href="#last_run_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="last_updated_python">

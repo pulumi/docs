@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.WebTest resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Application Insights web test definition.
-Latest API Version: 2015-05-01.
+API Version: 2015-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var webTest = new AzureNextGen.Insights.Latest.WebTest("webTest", new AzureNextGen.Insights.Latest.WebTestArgs
+        var webTest = new AzureNextGen.Insights.WebTest("webTest", new AzureNextGen.Insights.WebTestArgs
         {
-            Configuration = new AzureNextGen.Insights.Latest.Inputs.WebTestPropertiesConfigurationArgs
+            Configuration = new AzureNextGen.Insights.Inputs.WebTestPropertiesConfigurationArgs
             {
                 WebTest = "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"120\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"120\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
             },
@@ -40,7 +40,7 @@ class MyStack : Stack
             Location = "South Central US",
             Locations = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.WebTestGeolocationArgs
+                new AzureNextGen.Insights.Inputs.WebTestGeolocationArgs
                 {
                     Location = "us-fl-mia-edge",
                 },
@@ -66,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -110,8 +110,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-web_test = azure_nextgen.insights.latest.WebTest("webTest",
-    configuration=azure_nextgen.insights.latest.WebTestPropertiesConfigurationArgs(
+web_test = azure_nextgen.insights.WebTest("webTest",
+    configuration=azure_nextgen.insights.WebTestPropertiesConfigurationArgs(
         web_test="<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"120\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"120\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
     ),
     description="Ping web test alert for mytestwebapp",
@@ -119,7 +119,7 @@ web_test = azure_nextgen.insights.latest.WebTest("webTest",
     frequency=900,
     kind="ping",
     location="South Central US",
-    locations=[azure_nextgen.insights.latest.WebTestGeolocationArgs(
+    locations=[azure_nextgen.insights.WebTestGeolocationArgs(
         location="us-fl-mia-edge",
     )],
     resource_group_name="my-resource-group",
@@ -139,7 +139,7 @@ web_test = azure_nextgen.insights.latest.WebTest("webTest",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const webTest = new azure_nextgen.insights.latest.WebTest("webTest", {
+const webTest = new azure_nextgen.insights.WebTest("webTest", {
     configuration: {
         webTest: "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"120\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"120\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
     },
@@ -173,9 +173,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var webTest = new AzureNextGen.Insights.Latest.WebTest("webTest", new AzureNextGen.Insights.Latest.WebTestArgs
+        var webTest = new AzureNextGen.Insights.WebTest("webTest", new AzureNextGen.Insights.WebTestArgs
         {
-            Configuration = new AzureNextGen.Insights.Latest.Inputs.WebTestPropertiesConfigurationArgs
+            Configuration = new AzureNextGen.Insights.Inputs.WebTestPropertiesConfigurationArgs
             {
                 WebTest = "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"30\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"30\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
             },
@@ -184,11 +184,11 @@ class MyStack : Stack
             Location = "South Central US",
             Locations = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.WebTestGeolocationArgs
+                new AzureNextGen.Insights.Inputs.WebTestGeolocationArgs
                 {
                     Location = "us-fl-mia-edge",
                 },
-                new AzureNextGen.Insights.Latest.Inputs.WebTestGeolocationArgs
+                new AzureNextGen.Insights.Inputs.WebTestGeolocationArgs
                 {
                     Location = "apac-hk-hkn-azr",
                 },
@@ -213,7 +213,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -257,18 +257,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-web_test = azure_nextgen.insights.latest.WebTest("webTest",
-    configuration=azure_nextgen.insights.latest.WebTestPropertiesConfigurationArgs(
+web_test = azure_nextgen.insights.WebTest("webTest",
+    configuration=azure_nextgen.insights.WebTestPropertiesConfigurationArgs(
         web_test="<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"30\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"30\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
     ),
     frequency=600,
     kind="ping",
     location="South Central US",
     locations=[
-        azure_nextgen.insights.latest.WebTestGeolocationArgs(
+        azure_nextgen.insights.WebTestGeolocationArgs(
             location="us-fl-mia-edge",
         ),
-        azure_nextgen.insights.latest.WebTestGeolocationArgs(
+        azure_nextgen.insights.WebTestGeolocationArgs(
             location="apac-hk-hkn-azr",
         ),
     ],
@@ -288,7 +288,7 @@ web_test = azure_nextgen.insights.latest.WebTest("webTest",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const webTest = new azure_nextgen.insights.latest.WebTest("webTest", {
+const webTest = new azure_nextgen.insights.WebTest("webTest", {
     configuration: {
         webTest: "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"30\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"30\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
     },
@@ -322,7 +322,7 @@ const webTest = new azure_nextgen.insights.latest.WebTest("webTest", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebTest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WebTestArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebTest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -330,11 +330,11 @@ const webTest = new azure_nextgen.insights.latest.WebTest("webTest", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebTest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WebTestArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebTest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebTest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebTest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebTest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WebTestArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebTest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebTestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -355,7 +355,7 @@ const webTest = new azure_nextgen.insights.latest.WebTest("webTest", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WebTestArgs</span>
+        <span class="property-type"><a href="#inputs">WebTestArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -424,7 +424,7 @@ const webTest = new azure_nextgen.insights.latest.WebTest("webTest", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WebTestArgs</span>
+        <span class="property-type"><a href="#inputs">WebTestArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -463,7 +463,7 @@ const webTest = new azure_nextgen.insights.latest.WebTest("webTest", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WebTestArgs</span>
+        <span class="property-type"><a href="#inputs">WebTestArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -486,11 +486,11 @@ const webTest = new azure_nextgen.insights.latest.WebTest("webTest", {
 
 ## WebTest Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The WebTest resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The WebTest resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1498,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:WebTest my-webtest-my-component /subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.Insights/webtests/my-webtest-my-component 
+$ pulumi import azure-nextgen:insights:WebTest my-webtest-my-component /subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.Insights/webtests/my-webtest-my-component 
 ```
 
 

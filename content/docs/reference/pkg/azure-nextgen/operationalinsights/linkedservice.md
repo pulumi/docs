@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.LinkedServic
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The top level Linked service resource container.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedService = new AzureNextGen.OperationalInsights.Latest.LinkedService("linkedService", new AzureNextGen.OperationalInsights.Latest.LinkedServiceArgs
+        var linkedService = new AzureNextGen.OperationalInsights.LinkedService("linkedService", new AzureNextGen.OperationalInsights.LinkedServiceArgs
         {
             LinkedServiceName = "Cluster",
             ResourceGroupName = "mms-eus",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/latest"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_service = azure_nextgen.operationalinsights.latest.LinkedService("linkedService",
+linked_service = azure_nextgen.operationalinsights.LinkedService("linkedService",
     linked_service_name="Cluster",
     resource_group_name="mms-eus",
     workspace_name="TestLinkWS",
@@ -93,7 +93,7 @@ linked_service = azure_nextgen.operationalinsights.latest.LinkedService("linkedS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const linkedService = new azure_nextgen.operationalinsights.latest.LinkedService("linkedService", {
+const linkedService = new azure_nextgen.operationalinsights.LinkedService("linkedService", {
     linkedServiceName: "Cluster",
     resourceGroupName: "mms-eus",
     workspaceName: "TestLinkWS",
@@ -112,7 +112,7 @@ const linkedService = new azure_nextgen.operationalinsights.latest.LinkedService
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LinkedService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">LinkedServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LinkedService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LinkedServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -120,11 +120,11 @@ const linkedService = new azure_nextgen.operationalinsights.latest.LinkedService
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLinkedService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">LinkedServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LinkedService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLinkedService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LinkedServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LinkedService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LinkedService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">LinkedServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LinkedService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LinkedServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -145,7 +145,7 @@ const linkedService = new azure_nextgen.operationalinsights.latest.LinkedService
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkedServiceArgs</span>
+        <span class="property-type"><a href="#inputs">LinkedServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -214,7 +214,7 @@ const linkedService = new azure_nextgen.operationalinsights.latest.LinkedService
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkedServiceArgs</span>
+        <span class="property-type"><a href="#inputs">LinkedServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -253,7 +253,7 @@ const linkedService = new azure_nextgen.operationalinsights.latest.LinkedService
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkedServiceArgs</span>
+        <span class="property-type"><a href="#inputs">LinkedServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -276,11 +276,11 @@ const linkedService = new azure_nextgen.operationalinsights.latest.LinkedService
 
 ## LinkedService Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LinkedService resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The LinkedService resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -768,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationalinsights/latest:LinkedService TestLinkWS/Cluster /subscriptions/00000000-0000-0000-0000-00000000000/resourcegroups/mms-eus/providers/microsoft.operationalinsights/workspaces/testlinkws/linkedservices/cluster 
+$ pulumi import azure-nextgen:operationalinsights:LinkedService TestLinkWS/Cluster /subscriptions/00000000-0000-0000-0000-00000000000/resourcegroups/mms-eus/providers/microsoft.operationalinsights/workspaces/testlinkws/linkedservices/cluster 
 ```
 
 

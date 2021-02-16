@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.streamanalytics.StreamingJob res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A streaming job object, containing all information associated with the named streaming job.
-Latest API Version: 2016-03-01.
+API Version: 2016-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingJob = new AzureNextGen.StreamAnalytics.Latest.StreamingJob("streamingJob", new AzureNextGen.StreamAnalytics.Latest.StreamingJobArgs
+        var streamingJob = new AzureNextGen.StreamAnalytics.StreamingJob("streamingJob", new AzureNextGen.StreamAnalytics.StreamingJobArgs
         {
             CompatibilityLevel = "1.0",
             DataLocale = "en-US",
@@ -37,31 +37,31 @@ class MyStack : Stack
             Functions = {},
             Inputs = 
             {
-                new AzureNextGen.StreamAnalytics.Latest.Inputs.InputArgs
+                new AzureNextGen.StreamAnalytics.Inputs.InputArgs
                 {
                     Name = "inputtest",
-                    Properties = 
+                    Properties = new AzureNextGen.StreamAnalytics.Inputs.StreamInputPropertiesArgs
                     {
-                        { "datasource", 
+                        Datasource = new AzureNextGen.StreamAnalytics.Inputs.BlobStreamInputDataSourceArgs
                         {
-                            { "container", "containerName" },
-                            { "pathPattern", "" },
-                            { "storageAccounts", 
+                            Container = "containerName",
+                            PathPattern = "",
+                            StorageAccounts = 
                             {
-                                new AzureNextGen.StreamAnalytics.Latest.Inputs.StorageAccountArgs
+                                new AzureNextGen.StreamAnalytics.Inputs.StorageAccountArgs
                                 {
                                     AccountKey = "yourAccountKey==",
                                     AccountName = "yourAccountName",
                                 },
-                            } },
-                            { "type", "Microsoft.Storage/Blob" },
-                        } },
-                        { "serialization", 
+                            },
+                            Type = "Microsoft.Storage/Blob",
+                        },
+                        Serialization = new AzureNextGen.StreamAnalytics.Inputs.JsonSerializationArgs
                         {
-                            { "encoding", "UTF8" },
-                            { "type", "Json" },
-                        } },
-                        { "type", "Stream" },
+                            Encoding = "UTF8",
+                            Type = "Json",
+                        },
+                        Type = "Stream",
                     },
                 },
             },
@@ -70,22 +70,22 @@ class MyStack : Stack
             OutputErrorPolicy = "Drop",
             Outputs = 
             {
-                new AzureNextGen.StreamAnalytics.Latest.Inputs.OutputArgs
+                new AzureNextGen.StreamAnalytics.Inputs.OutputArgs
                 {
-                    Datasource = 
+                    Datasource = new AzureNextGen.StreamAnalytics.Inputs.AzureSqlDatabaseOutputDataSourceArgs
                     {
-                        { "database", "databaseName" },
-                        { "password", "userPassword" },
-                        { "server", "serverName" },
-                        { "table", "tableName" },
-                        { "type", "Microsoft.Sql/Server/Database" },
-                        { "user", "<user>" },
+                        Database = "databaseName",
+                        Password = "userPassword",
+                        Server = "serverName",
+                        Table = "tableName",
+                        Type = "Microsoft.Sql/Server/Database",
+                        User = "<user>",
                     },
                     Name = "outputtest",
                 },
             },
             ResourceGroupName = "sjrg3276",
-            Sku = new AzureNextGen.StreamAnalytics.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.StreamAnalytics.Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -95,7 +95,7 @@ class MyStack : Stack
                 { "key3", "value3" },
                 { "randomKey", "randomValue" },
             },
-            Transformation = new AzureNextGen.StreamAnalytics.Latest.Inputs.TransformationArgs
+            Transformation = new AzureNextGen.StreamAnalytics.Inputs.TransformationArgs
             {
                 Name = "transformationtest",
                 Query = "Select Id, Name from inputtest",
@@ -111,7 +111,87 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewStreamingJob(ctx, "streamingJob", &streamanalytics.StreamingJobArgs{
+			CompatibilityLevel:                 pulumi.String("1.0"),
+			DataLocale:                         pulumi.String("en-US"),
+			EventsLateArrivalMaxDelayInSeconds: pulumi.Int(5),
+			EventsOutOfOrderMaxDelayInSeconds:  pulumi.Int(0),
+			EventsOutOfOrderPolicy:             pulumi.String("Drop"),
+			Functions:                          streamanalytics.FunctionArray{},
+			Inputs: streamanalytics.InputArray{
+				&streamanalytics.InputArgs{
+					Name: pulumi.String("inputtest"),
+					Properties: &streamanalytics.StreamInputPropertiesArgs{
+						Datasource: &streamanalytics.BlobStreamInputDataSourceArgs{
+							Container:   pulumi.String("containerName"),
+							PathPattern: pulumi.String(""),
+							StorageAccounts: streamanalytics.StorageAccountArray{
+								&streamanalytics.StorageAccountArgs{
+									AccountKey:  pulumi.String("yourAccountKey=="),
+									AccountName: pulumi.String("yourAccountName"),
+								},
+							},
+							Type: pulumi.String("Microsoft.Storage/Blob"),
+						},
+						Serialization: &streamanalytics.JsonSerializationArgs{
+							Encoding: pulumi.String("UTF8"),
+							Type:     pulumi.String("Json"),
+						},
+						Type: pulumi.String("Stream"),
+					},
+				},
+			},
+			JobName:           pulumi.String("sj7804"),
+			Location:          pulumi.String("West US"),
+			OutputErrorPolicy: pulumi.String("Drop"),
+			Outputs: streamanalytics.OutputArray{
+				&streamanalytics.OutputArgs{
+					Datasource: &streamanalytics.AzureSqlDatabaseOutputDataSourceArgs{
+						Database: pulumi.String("databaseName"),
+						Password: pulumi.String("userPassword"),
+						Server:   pulumi.String("serverName"),
+						Table:    pulumi.String("tableName"),
+						Type:     pulumi.String("Microsoft.Sql/Server/Database"),
+						User:     pulumi.String("<user>"),
+					},
+					Name: pulumi.String("outputtest"),
+				},
+			},
+			ResourceGroupName: pulumi.String("sjrg3276"),
+			Sku: &streamanalytics.SkuArgs{
+				Name: pulumi.String("Standard"),
+			},
+			Tags: pulumi.StringMap{
+				"key1":      pulumi.String("value1"),
+				"key3":      pulumi.String("value3"),
+				"randomKey": pulumi.String("randomValue"),
+			},
+			Transformation: &streamanalytics.TransformationArgs{
+				Name:           pulumi.String("transformationtest"),
+				Query:          pulumi.String("Select Id, Name from inputtest"),
+				StreamingUnits: pulumi.Int(1),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -120,48 +200,48 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob",
+streaming_job = azure_nextgen.streamanalytics.StreamingJob("streamingJob",
     compatibility_level="1.0",
     data_locale="en-US",
     events_late_arrival_max_delay_in_seconds=5,
     events_out_of_order_max_delay_in_seconds=0,
     events_out_of_order_policy="Drop",
     functions=[],
-    inputs=[azure_nextgen.streamanalytics.latest.InputArgs(
+    inputs=[azure_nextgen.streamanalytics.InputArgs(
         name="inputtest",
-        properties={
-            "datasource": {
-                "container": "containerName",
-                "pathPattern": "",
-                "storageAccounts": [azure_nextgen.streamanalytics.latest.StorageAccountArgs(
+        properties=azure_nextgen.streamanalytics.StreamInputPropertiesArgs(
+            datasource=azure_nextgen.streamanalytics.BlobStreamInputDataSourceArgs(
+                container="containerName",
+                path_pattern="",
+                storage_accounts=[azure_nextgen.streamanalytics.StorageAccountArgs(
                     account_key="yourAccountKey==",
                     account_name="yourAccountName",
                 )],
-                "type": "Microsoft.Storage/Blob",
-            },
-            "serialization": {
-                "encoding": "UTF8",
-                "type": "Json",
-            },
-            "type": "Stream",
-        },
+                type="Microsoft.Storage/Blob",
+            ),
+            serialization=azure_nextgen.streamanalytics.JsonSerializationArgs(
+                encoding="UTF8",
+                type="Json",
+            ),
+            type="Stream",
+        ),
     )],
     job_name="sj7804",
     location="West US",
     output_error_policy="Drop",
-    outputs=[azure_nextgen.streamanalytics.latest.OutputArgs(
-        datasource={
-            "database": "databaseName",
-            "password": "userPassword",
-            "server": "serverName",
-            "table": "tableName",
-            "type": "Microsoft.Sql/Server/Database",
-            "user": "<user>",
-        },
+    outputs=[azure_nextgen.streamanalytics.OutputArgs(
+        datasource=azure_nextgen.streamanalytics.AzureSqlDatabaseOutputDataSourceArgs(
+            database="databaseName",
+            password="userPassword",
+            server="serverName",
+            table="tableName",
+            type="Microsoft.Sql/Server/Database",
+            user="<user>",
+        ),
         name="outputtest",
     )],
     resource_group_name="sjrg3276",
-    sku=azure_nextgen.streamanalytics.latest.SkuArgs(
+    sku=azure_nextgen.streamanalytics.SkuArgs(
         name="Standard",
     ),
     tags={
@@ -169,7 +249,7 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
         "key3": "value3",
         "randomKey": "randomValue",
     },
-    transformation=azure_nextgen.streamanalytics.latest.TransformationArgs(
+    transformation=azure_nextgen.streamanalytics.TransformationArgs(
         name="transformationtest",
         query="Select Id, Name from inputtest",
         streaming_units=1,
@@ -185,7 +265,7 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob", {
+const streamingJob = new azure_nextgen.streamanalytics.StreamingJob("streamingJob", {
     compatibilityLevel: "1.0",
     dataLocale: "en-US",
     eventsLateArrivalMaxDelayInSeconds: 5,
@@ -255,7 +335,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingJob = new AzureNextGen.StreamAnalytics.Latest.StreamingJob("streamingJob", new AzureNextGen.StreamAnalytics.Latest.StreamingJobArgs
+        var streamingJob = new AzureNextGen.StreamAnalytics.StreamingJob("streamingJob", new AzureNextGen.StreamAnalytics.StreamingJobArgs
         {
             CompatibilityLevel = "1.0",
             DataLocale = "en-US",
@@ -269,7 +349,7 @@ class MyStack : Stack
             OutputErrorPolicy = "Drop",
             Outputs = {},
             ResourceGroupName = "sjrg6936",
-            Sku = new AzureNextGen.StreamAnalytics.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.StreamAnalytics.Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -294,7 +374,7 @@ class MyStack : Stack
 package main
 
 import (
-	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics/latest"
+	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -339,7 +419,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob",
+streaming_job = azure_nextgen.streamanalytics.StreamingJob("streamingJob",
     compatibility_level="1.0",
     data_locale="en-US",
     events_late_arrival_max_delay_in_seconds=16,
@@ -352,7 +432,7 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
     output_error_policy="Drop",
     outputs=[],
     resource_group_name="sjrg6936",
-    sku=azure_nextgen.streamanalytics.latest.SkuArgs(
+    sku=azure_nextgen.streamanalytics.SkuArgs(
         name="Standard",
     ),
     tags={
@@ -371,7 +451,7 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob", {
+const streamingJob = new azure_nextgen.streamanalytics.StreamingJob("streamingJob", {
     compatibilityLevel: "1.0",
     dataLocale: "en-US",
     eventsLateArrivalMaxDelayInSeconds: 16,
@@ -406,7 +486,7 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">StreamingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -414,11 +494,11 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">StreamingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">StreamingJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -439,7 +519,7 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StreamingJobArgs</span>
+        <span class="property-type"><a href="#inputs">StreamingJobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -508,7 +588,7 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StreamingJobArgs</span>
+        <span class="property-type"><a href="#inputs">StreamingJobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -547,7 +627,7 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StreamingJobArgs</span>
+        <span class="property-type"><a href="#inputs">StreamingJobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -570,11 +650,11 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
 
 ## StreamingJob Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -12478,7 +12558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:streamanalytics/latest:StreamingJob sj59 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg6936/providers/Microsoft.StreamAnalytics/streamingjobs/sj59 
+$ pulumi import azure-nextgen:streamanalytics:StreamingJob sj59 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg6936/providers/Microsoft.StreamAnalytics/streamingjobs/sj59 
 ```
 
 

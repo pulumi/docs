@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiManagementServi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A single API Management service resource in List or Get response.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,28 +27,28 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.ApiManagementServiceArgs
         {
             AdditionalLocations = 
             {
-                new AzureNextGen.ApiManagement.Latest.Inputs.AdditionalLocationArgs
+                new AzureNextGen.ApiManagement.Inputs.AdditionalLocationArgs
                 {
                     DisableGateway = true,
                     Location = "East US",
-                    Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+                    Sku = new AzureNextGen.ApiManagement.Inputs.ApiManagementServiceSkuPropertiesArgs
                     {
                         Capacity = 1,
                         Name = "Premium",
                     },
                 },
             },
-            ApiVersionConstraint = new AzureNextGen.ApiManagement.Latest.Inputs.ApiVersionConstraintArgs
+            ApiVersionConstraint = new AzureNextGen.ApiManagement.Inputs.ApiVersionConstraintArgs
             {
                 MinApiVersion = "2019-01-01",
             },
             HostnameConfigurations = 
             {
-                new AzureNextGen.ApiManagement.Latest.Inputs.HostnameConfigurationArgs
+                new AzureNextGen.ApiManagement.Inputs.HostnameConfigurationArgs
                 {
                     CertificatePassword = "Password",
                     DefaultSslBinding = true,
@@ -56,14 +56,14 @@ class MyStack : Stack
                     HostName = "gateway1.msitesting.net",
                     Type = "Proxy",
                 },
-                new AzureNextGen.ApiManagement.Latest.Inputs.HostnameConfigurationArgs
+                new AzureNextGen.ApiManagement.Inputs.HostnameConfigurationArgs
                 {
                     CertificatePassword = "Password",
                     EncodedCertificate = "****** Base 64 Encoded Certificate ************",
                     HostName = "mgmt.msitesting.net",
                     Type = "Management",
                 },
-                new AzureNextGen.ApiManagement.Latest.Inputs.HostnameConfigurationArgs
+                new AzureNextGen.ApiManagement.Inputs.HostnameConfigurationArgs
                 {
                     CertificatePassword = "Password",
                     EncodedCertificate = "****** Base 64 Encoded Certificate ************",
@@ -76,7 +76,7 @@ class MyStack : Stack
             PublisherName = "autorestsdk",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement.Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 1,
                 Name = "Premium",
@@ -103,7 +103,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -177,33 +177,33 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
-    additional_locations=[azure_nextgen.apimanagement.latest.AdditionalLocationArgs(
+api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+    additional_locations=[azure_nextgen.apimanagement.AdditionalLocationArgs(
         disable_gateway=True,
         location="East US",
-        sku=azure_nextgen.apimanagement.latest.ApiManagementServiceSkuPropertiesArgs(
+        sku=azure_nextgen.apimanagement.ApiManagementServiceSkuPropertiesArgs(
             capacity=1,
             name="Premium",
         ),
     )],
-    api_version_constraint=azure_nextgen.apimanagement.latest.ApiVersionConstraintArgs(
+    api_version_constraint=azure_nextgen.apimanagement.ApiVersionConstraintArgs(
         min_api_version="2019-01-01",
     ),
     hostname_configurations=[
-        azure_nextgen.apimanagement.latest.HostnameConfigurationArgs(
+        azure_nextgen.apimanagement.HostnameConfigurationArgs(
             certificate_password="Password",
             default_ssl_binding=True,
             encoded_certificate="****** Base 64 Encoded Certificate ************",
             host_name="gateway1.msitesting.net",
             type="Proxy",
         ),
-        azure_nextgen.apimanagement.latest.HostnameConfigurationArgs(
+        azure_nextgen.apimanagement.HostnameConfigurationArgs(
             certificate_password="Password",
             encoded_certificate="****** Base 64 Encoded Certificate ************",
             host_name="mgmt.msitesting.net",
             type="Management",
         ),
-        azure_nextgen.apimanagement.latest.HostnameConfigurationArgs(
+        azure_nextgen.apimanagement.HostnameConfigurationArgs(
             certificate_password="Password",
             encoded_certificate="****** Base 64 Encoded Certificate ************",
             host_name="portal1.msitesting.net",
@@ -215,7 +215,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
     publisher_name="autorestsdk",
     resource_group_name="rg1",
     service_name="apimService1",
-    sku=azure_nextgen.apimanagement.latest.ApiManagementServiceSkuPropertiesArgs(
+    sku=azure_nextgen.apimanagement.ApiManagementServiceSkuPropertiesArgs(
         capacity=1,
         name="Premium",
     ),
@@ -236,7 +236,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
     additionalLocations: [{
         disableGateway: true,
         location: "East US",
@@ -300,14 +300,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.ApiManagementServiceArgs
         {
             Location = "South Central US",
             PublisherEmail = "foo@contoso.com",
             PublisherName = "foo",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement.Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 1,
                 Name = "Developer",
@@ -332,7 +332,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -370,13 +370,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
+api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
     location="South Central US",
     publisher_email="foo@contoso.com",
     publisher_name="foo",
     resource_group_name="rg1",
     service_name="apimService1",
-    sku=azure_nextgen.apimanagement.latest.ApiManagementServiceSkuPropertiesArgs(
+    sku=azure_nextgen.apimanagement.ApiManagementServiceSkuPropertiesArgs(
         capacity=1,
         name="Developer",
     ),
@@ -395,7 +395,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
     location: "South Central US",
     publisherEmail: "foo@contoso.com",
     publisherName: "foo",
@@ -425,9 +425,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.ApiManagementServiceArgs
         {
-            Identity = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceIdentityArgs
+            Identity = new AzureNextGen.ApiManagement.Inputs.ApiManagementServiceIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -436,7 +436,7 @@ class MyStack : Stack
             PublisherName = "autorestsdk",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement.Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 0,
                 Name = "Consumption",
@@ -462,7 +462,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -504,8 +504,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
-    identity=azure_nextgen.apimanagement.latest.ApiManagementServiceIdentityArgs(
+api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+    identity=azure_nextgen.apimanagement.ApiManagementServiceIdentityArgs(
         type="SystemAssigned",
     ),
     location="West US",
@@ -513,7 +513,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
     publisher_name="autorestsdk",
     resource_group_name="rg1",
     service_name="apimService1",
-    sku=azure_nextgen.apimanagement.latest.ApiManagementServiceSkuPropertiesArgs(
+    sku=azure_nextgen.apimanagement.ApiManagementServiceSkuPropertiesArgs(
         capacity=0,
         name="Consumption",
     ),
@@ -533,7 +533,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
     identity: {
         type: "SystemAssigned",
     },
@@ -567,11 +567,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.ApiManagementServiceArgs
         {
             Certificates = 
             {
-                new AzureNextGen.ApiManagement.Latest.Inputs.CertificateConfigurationArgs
+                new AzureNextGen.ApiManagement.Inputs.CertificateConfigurationArgs
                 {
                     CertificatePassword = "Password",
                     EncodedCertificate = "*******Base64 encoded Certificate******************",
@@ -583,7 +583,7 @@ class MyStack : Stack
             PublisherName = "autorestsdk",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement.Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 1,
                 Name = "Basic",
@@ -609,7 +609,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -655,8 +655,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
-    certificates=[azure_nextgen.apimanagement.latest.CertificateConfigurationArgs(
+api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+    certificates=[azure_nextgen.apimanagement.CertificateConfigurationArgs(
         certificate_password="Password",
         encoded_certificate="*******Base64 encoded Certificate******************",
         store_name="CertificateAuthority",
@@ -666,7 +666,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
     publisher_name="autorestsdk",
     resource_group_name="rg1",
     service_name="apimService1",
-    sku=azure_nextgen.apimanagement.latest.ApiManagementServiceSkuPropertiesArgs(
+    sku=azure_nextgen.apimanagement.ApiManagementServiceSkuPropertiesArgs(
         capacity=1,
         name="Basic",
     ),
@@ -686,7 +686,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
     certificates: [{
         certificatePassword: "Password",
         encodedCertificate: "*******Base64 encoded Certificate******************",
@@ -722,9 +722,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.ApiManagementServiceArgs
         {
-            Identity = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceIdentityArgs
+            Identity = new AzureNextGen.ApiManagement.Inputs.ApiManagementServiceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -737,7 +737,7 @@ class MyStack : Stack
             PublisherName = "autorestsdk",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement.Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 0,
                 Name = "Consumption",
@@ -767,11 +767,11 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
-    identity=azure_nextgen.apimanagement.latest.ApiManagementServiceIdentityArgs(
+api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+    identity=azure_nextgen.apimanagement.ApiManagementServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
-            "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apimService1": azure_nextgen.apimanagement.latest.UserIdentityPropertiesArgs(),
+            "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apimService1": azure_nextgen.apimanagement.UserIdentityPropertiesArgs(),
         },
     ),
     location="West US",
@@ -779,7 +779,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
     publisher_name="autorestsdk",
     resource_group_name="rg1",
     service_name="apimService1",
-    sku=azure_nextgen.apimanagement.latest.ApiManagementServiceSkuPropertiesArgs(
+    sku=azure_nextgen.apimanagement.ApiManagementServiceSkuPropertiesArgs(
         capacity=0,
         name="Consumption",
     ),
@@ -799,7 +799,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {
@@ -834,7 +834,7 @@ const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagemen
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApiManagementService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ApiManagementServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApiManagementService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiManagementServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -842,11 +842,11 @@ const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagemen
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApiManagementService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ApiManagementServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiManagementService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApiManagementService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiManagementServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiManagementService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApiManagementService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ApiManagementServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApiManagementService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApiManagementServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -867,7 +867,7 @@ const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagemen
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApiManagementServiceArgs</span>
+        <span class="property-type"><a href="#inputs">ApiManagementServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -936,7 +936,7 @@ const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagemen
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApiManagementServiceArgs</span>
+        <span class="property-type"><a href="#inputs">ApiManagementServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -975,7 +975,7 @@ const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagemen
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApiManagementServiceArgs</span>
+        <span class="property-type"><a href="#inputs">ApiManagementServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -998,11 +998,11 @@ const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagemen
 
 ## ApiManagementService Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ApiManagementService resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ApiManagementService resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -5176,7 +5176,7 @@ dictionary key references will be ARM resource ids in the form:
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiManagementService apimService1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1 
+$ pulumi import azure-nextgen:apimanagement:ApiManagementService apimService1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1 
 ```
 
 

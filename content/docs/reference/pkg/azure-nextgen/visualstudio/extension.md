@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.visualstudio.Extension resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The response to an extension resource GET request.
+API Version: 2014-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var extension = new AzureNextGen.VisualStudio.V20140401Preview.Extension("extension", new AzureNextGen.VisualStudio.V20140401Preview.ExtensionArgs
+        var extension = new AzureNextGen.VisualStudio.Extension("extension", new AzureNextGen.VisualStudio.ExtensionArgs
         {
             AccountResourceName = "ExampleAccount",
             ExtensionResourceName = "ms.example",
             Location = "Central US",
-            Plan = new AzureNextGen.VisualStudio.V20140401Preview.Inputs.ExtensionResourcePlanArgs
+            Plan = new AzureNextGen.VisualStudio.Inputs.ExtensionResourcePlanArgs
             {
                 Name = "ExamplePlan",
                 Product = "ExampleExtensionName",
@@ -57,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio/v20140401preview"
+	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,11 +96,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-extension = azure_nextgen.visualstudio.v20140401preview.Extension("extension",
+extension = azure_nextgen.visualstudio.Extension("extension",
     account_resource_name="ExampleAccount",
     extension_resource_name="ms.example",
     location="Central US",
-    plan=azure_nextgen.visualstudio.v20140401preview.ExtensionResourcePlanArgs(
+    plan=azure_nextgen.visualstudio.ExtensionResourcePlanArgs(
         name="ExamplePlan",
         product="ExampleExtensionName",
         promotion_code="",
@@ -120,7 +121,7 @@ extension = azure_nextgen.visualstudio.v20140401preview.Extension("extension",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const extension = new azure_nextgen.visualstudio.v20140401preview.Extension("extension", {
+const extension = new azure_nextgen.visualstudio.Extension("extension", {
     accountResourceName: "ExampleAccount",
     extensionResourceName: "ms.example",
     location: "Central US",
@@ -148,7 +149,7 @@ const extension = new azure_nextgen.visualstudio.v20140401preview.Extension("ext
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ExtensionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExtensionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -156,11 +157,11 @@ const extension = new azure_nextgen.visualstudio.v20140401preview.Extension("ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExtension</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ExtensionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Extension</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExtension</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExtensionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Extension</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ExtensionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExtensionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -181,7 +182,7 @@ const extension = new azure_nextgen.visualstudio.v20140401preview.Extension("ext
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExtensionArgs</span>
+        <span class="property-type"><a href="#inputs">ExtensionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -250,7 +251,7 @@ const extension = new azure_nextgen.visualstudio.v20140401preview.Extension("ext
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExtensionArgs</span>
+        <span class="property-type"><a href="#inputs">ExtensionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -289,7 +290,7 @@ const extension = new azure_nextgen.visualstudio.v20140401preview.Extension("ext
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExtensionArgs</span>
+        <span class="property-type"><a href="#inputs">ExtensionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -312,11 +313,11 @@ const extension = new azure_nextgen.visualstudio.v20140401preview.Extension("ext
 
 ## Extension Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Extension resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Extension resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1162,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:visualstudio/v20140401preview:Extension ms.example /subscriptions/0de7f055-dbea-498d-8e9e-da287eedca90/resourceGroups/VS-Example-Group/providers/Microsoft.VisualStudio/account/ExampleAccount/extension/ms.example 
+$ pulumi import azure-nextgen:visualstudio:Extension ms.example /subscriptions/0de7f055-dbea-498d-8e9e-da287eedca90/resourceGroups/VS-Example-Group/providers/Microsoft.VisualStudio/account/ExampleAccount/extension/ms.example 
 ```
 
 

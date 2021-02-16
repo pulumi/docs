@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.costmanagement.ViewByScope resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 States and configurations of Cost Analysis.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var viewByScope = new AzureNextGen.CostManagement.Latest.ViewByScope("viewByScope", new AzureNextGen.CostManagement.Latest.ViewByScopeArgs
+        var viewByScope = new AzureNextGen.CostManagement.ViewByScope("viewByScope", new AzureNextGen.CostManagement.ViewByScopeArgs
         {
             Accumulated = "true",
             Chart = "Table",
-            Dataset = new AzureNextGen.CostManagement.Latest.Inputs.ReportConfigDatasetArgs
+            Dataset = new AzureNextGen.CostManagement.Inputs.ReportConfigDatasetArgs
             {
                 Aggregation = 
                 {
-                    { "totalCost", new AzureNextGen.CostManagement.Latest.Inputs.ReportConfigAggregationArgs
+                    { "totalCost", new AzureNextGen.CostManagement.Inputs.ReportConfigAggregationArgs
                     {
                         Function = "Sum",
                         Name = "PreTaxCost",
@@ -45,7 +45,7 @@ class MyStack : Stack
                 Grouping = {},
                 Sorting = 
                 {
-                    new AzureNextGen.CostManagement.Latest.Inputs.ReportConfigSortingArgs
+                    new AzureNextGen.CostManagement.Inputs.ReportConfigSortingArgs
                     {
                         Direction = "Ascending",
                         Name = "UsageDate",
@@ -56,12 +56,12 @@ class MyStack : Stack
             ETag = "\"1d4ff9fe66f1d10\"",
             Kpis = 
             {
-                new AzureNextGen.CostManagement.Latest.Inputs.KpiPropertiesArgs
+                new AzureNextGen.CostManagement.Inputs.KpiPropertiesArgs
                 {
                     Enabled = true,
                     Type = "Forecast",
                 },
-                new AzureNextGen.CostManagement.Latest.Inputs.KpiPropertiesArgs
+                new AzureNextGen.CostManagement.Inputs.KpiPropertiesArgs
                 {
                     Enabled = true,
                     Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Consumption/budgets/swaggerDemo",
@@ -71,17 +71,17 @@ class MyStack : Stack
             Metric = "ActualCost",
             Pivots = 
             {
-                new AzureNextGen.CostManagement.Latest.Inputs.PivotPropertiesArgs
+                new AzureNextGen.CostManagement.Inputs.PivotPropertiesArgs
                 {
                     Name = "ServiceName",
                     Type = "Dimension",
                 },
-                new AzureNextGen.CostManagement.Latest.Inputs.PivotPropertiesArgs
+                new AzureNextGen.CostManagement.Inputs.PivotPropertiesArgs
                 {
                     Name = "MeterCategory",
                     Type = "Dimension",
                 },
-                new AzureNextGen.CostManagement.Latest.Inputs.PivotPropertiesArgs
+                new AzureNextGen.CostManagement.Inputs.PivotPropertiesArgs
                 {
                     Name = "swaggerTagKey",
                     Type = "TagKey",
@@ -110,19 +110,19 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-view_by_scope = azure_nextgen.costmanagement.latest.ViewByScope("viewByScope",
+view_by_scope = azure_nextgen.costmanagement.ViewByScope("viewByScope",
     accumulated="true",
     chart="Table",
-    dataset=azure_nextgen.costmanagement.latest.ReportConfigDatasetArgs(
+    dataset=azure_nextgen.costmanagement.ReportConfigDatasetArgs(
         aggregation={
-            "totalCost": azure_nextgen.costmanagement.latest.ReportConfigAggregationArgs(
+            "totalCost": azure_nextgen.costmanagement.ReportConfigAggregationArgs(
                 function="Sum",
                 name="PreTaxCost",
             ),
         },
         granularity="Daily",
         grouping=[],
-        sorting=[azure_nextgen.costmanagement.latest.ReportConfigSortingArgs(
+        sorting=[azure_nextgen.costmanagement.ReportConfigSortingArgs(
             direction="Ascending",
             name="UsageDate",
         )],
@@ -130,11 +130,11 @@ view_by_scope = azure_nextgen.costmanagement.latest.ViewByScope("viewByScope",
     display_name="swagger Example",
     e_tag="\"1d4ff9fe66f1d10\"",
     kpis=[
-        azure_nextgen.costmanagement.latest.KpiPropertiesArgs(
+        azure_nextgen.costmanagement.KpiPropertiesArgs(
             enabled=True,
             type="Forecast",
         ),
-        azure_nextgen.costmanagement.latest.KpiPropertiesArgs(
+        azure_nextgen.costmanagement.KpiPropertiesArgs(
             enabled=True,
             id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Consumption/budgets/swaggerDemo",
             type="Budget",
@@ -142,15 +142,15 @@ view_by_scope = azure_nextgen.costmanagement.latest.ViewByScope("viewByScope",
     ],
     metric="ActualCost",
     pivots=[
-        azure_nextgen.costmanagement.latest.PivotPropertiesArgs(
+        azure_nextgen.costmanagement.PivotPropertiesArgs(
             name="ServiceName",
             type="Dimension",
         ),
-        azure_nextgen.costmanagement.latest.PivotPropertiesArgs(
+        azure_nextgen.costmanagement.PivotPropertiesArgs(
             name="MeterCategory",
             type="Dimension",
         ),
-        azure_nextgen.costmanagement.latest.PivotPropertiesArgs(
+        azure_nextgen.costmanagement.PivotPropertiesArgs(
             name="swaggerTagKey",
             type="TagKey",
         ),
@@ -170,7 +170,7 @@ view_by_scope = azure_nextgen.costmanagement.latest.ViewByScope("viewByScope",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const viewByScope = new azure_nextgen.costmanagement.latest.ViewByScope("viewByScope", {
+const viewByScope = new azure_nextgen.costmanagement.ViewByScope("viewByScope", {
     accumulated: "true",
     chart: "Table",
     dataset: {
@@ -233,7 +233,7 @@ const viewByScope = new azure_nextgen.costmanagement.latest.ViewByScope("viewByS
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ViewByScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ViewByScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ViewByScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ViewByScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -241,11 +241,11 @@ const viewByScope = new azure_nextgen.costmanagement.latest.ViewByScope("viewByS
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewViewByScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ViewByScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ViewByScope</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewViewByScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ViewByScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ViewByScope</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ViewByScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ViewByScopeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ViewByScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ViewByScopeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -266,7 +266,7 @@ const viewByScope = new azure_nextgen.costmanagement.latest.ViewByScope("viewByS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ViewByScopeArgs</span>
+        <span class="property-type"><a href="#inputs">ViewByScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -335,7 +335,7 @@ const viewByScope = new azure_nextgen.costmanagement.latest.ViewByScope("viewByS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ViewByScopeArgs</span>
+        <span class="property-type"><a href="#inputs">ViewByScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -374,7 +374,7 @@ const viewByScope = new azure_nextgen.costmanagement.latest.ViewByScope("viewByS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ViewByScopeArgs</span>
+        <span class="property-type"><a href="#inputs">ViewByScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -397,11 +397,11 @@ const viewByScope = new azure_nextgen.costmanagement.latest.ViewByScope("viewByS
 
 ## ViewByScope Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ViewByScope resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ViewByScope resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4073,7 +4073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:costmanagement/latest:ViewByScope swaggerExample /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.CostManagement/views/swaggerExample 
+$ pulumi import azure-nextgen:costmanagement:ViewByScope swaggerExample /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.CostManagement/views/swaggerExample 
 ```
 
 

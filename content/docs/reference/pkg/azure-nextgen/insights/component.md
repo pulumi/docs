@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.Component resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Application Insights component definition.
-Latest API Version: 2015-05-01.
+API Version: 2015-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var component = new AzureNextGen.Insights.Latest.Component("component", new AzureNextGen.Insights.Latest.ComponentArgs
+        var component = new AzureNextGen.Insights.Component("component", new AzureNextGen.Insights.ComponentArgs
         {
             ApplicationType = "web",
             FlowType = "Bluefield",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-component = azure_nextgen.insights.latest.Component("component",
+component = azure_nextgen.insights.Component("component",
     application_type="web",
     flow_type="Bluefield",
     kind="web",
@@ -102,7 +102,7 @@ component = azure_nextgen.insights.latest.Component("component",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const component = new azure_nextgen.insights.latest.Component("component", {
+const component = new azure_nextgen.insights.Component("component", {
     applicationType: "web",
     flowType: "Bluefield",
     kind: "web",
@@ -126,7 +126,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var component = new AzureNextGen.Insights.Latest.Component("component", new AzureNextGen.Insights.Latest.ComponentArgs
+        var component = new AzureNextGen.Insights.Component("component", new AzureNextGen.Insights.ComponentArgs
         {
             Kind = "web",
             Location = "South Central US",
@@ -152,7 +152,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -185,7 +185,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-component = azure_nextgen.insights.latest.Component("component",
+component = azure_nextgen.insights.Component("component",
     kind="web",
     location="South Central US",
     resource_group_name="my-resource-group",
@@ -205,7 +205,7 @@ component = azure_nextgen.insights.latest.Component("component",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const component = new azure_nextgen.insights.latest.Component("component", {
+const component = new azure_nextgen.insights.Component("component", {
     kind: "web",
     location: "South Central US",
     resourceGroupName: "my-resource-group",
@@ -228,7 +228,7 @@ const component = new azure_nextgen.insights.latest.Component("component", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Component</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ComponentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Component</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ComponentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -236,11 +236,11 @@ const component = new azure_nextgen.insights.latest.Component("component", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewComponent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ComponentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Component</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewComponent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ComponentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Component</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Component</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ComponentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Component</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ComponentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -261,7 +261,7 @@ const component = new azure_nextgen.insights.latest.Component("component", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ComponentArgs</span>
+        <span class="property-type"><a href="#inputs">ComponentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -330,7 +330,7 @@ const component = new azure_nextgen.insights.latest.Component("component", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ComponentArgs</span>
+        <span class="property-type"><a href="#inputs">ComponentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -369,7 +369,7 @@ const component = new azure_nextgen.insights.latest.Component("component", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ComponentArgs</span>
+        <span class="property-type"><a href="#inputs">ComponentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -392,11 +392,11 @@ const component = new azure_nextgen.insights.latest.Component("component", {
 
 ## Component Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Component resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Component resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1648,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:Component my-component /subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.Insights/components/my-component 
+$ pulumi import azure-nextgen:insights:Component my-component /subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.Insights/components/my-component 
 ```
 
 

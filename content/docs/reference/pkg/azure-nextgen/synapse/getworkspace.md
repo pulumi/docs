@@ -19,7 +19,7 @@ meta_desc: "Explore the GetWorkspace function of the synapse module, including e
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWorkspace<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetWorkspaceResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWorkspace<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWorkspaceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetWorkspace function of the synapse module, including e
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupWorkspaceResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWorkspaceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupWorkspace` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetWorkspace function of the synapse module, including e
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetWorkspace </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetWorkspaceResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetWorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetWorkspaceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -978,9 +978,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1078,9 +1075,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="datalakestorageaccountdetailsresponse">Data<wbr>Lake<wbr>Storage<wbr>Account<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -1184,9 +1178,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1284,9 +1275,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="managedidentityresponse">Managed<wbr>Identity<wbr>Response</h4>
-
-
-
 
 
 
@@ -1426,9 +1414,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1562,9 +1547,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
-
-
-
 
 
 
@@ -1812,9 +1794,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1876,9 +1855,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
-
-
-
 
 
 
@@ -2018,9 +1994,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2085,9 +2058,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2149,9 +2119,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="workspacekeydetailsresponse">Workspace<wbr>Key<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -2252,9 +2219,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="workspacerepositoryconfigurationresponse">Workspace<wbr>Repository<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 

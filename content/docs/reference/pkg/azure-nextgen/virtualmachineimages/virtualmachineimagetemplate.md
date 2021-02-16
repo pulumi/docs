@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.virtualmachineimages.VirtualMach
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
-Latest API Version: 2020-02-14.
+API Version: 2020-02-14.
 
 {{% examples %}}
 ## Example Usage
@@ -27,32 +27,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineImageTemplate = new AzureNextGen.VirtualMachineImages.Latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureNextGen.VirtualMachineImages.Latest.VirtualMachineImageTemplateArgs
+        var virtualMachineImageTemplate = new AzureNextGen.VirtualMachineImages.VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureNextGen.VirtualMachineImages.VirtualMachineImageTemplateArgs
         {
             Customize = 
             {
-                
+                new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateShellCustomizerArgs
                 {
-                    { "name", "Shell Customizer Example" },
-                    { "scriptUri", "https://example.com/path/to/script.sh" },
-                    { "type", "Shell" },
+                    Name = "Shell Customizer Example",
+                    ScriptUri = "https://example.com/path/to/script.sh",
+                    Type = "Shell",
                 },
             },
             Distribute = 
             {
-                
+                new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateManagedImageDistributorArgs
                 {
-                    { "artifactTags", 
+                    ArtifactTags = 
                     {
                         { "tagName", "value" },
-                    } },
-                    { "imageId", "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1" },
-                    { "location", "1_location" },
-                    { "runOutputName", "image_it_pir_1" },
-                    { "type", "ManagedImage" },
+                    },
+                    ImageId = "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
+                    Location = "1_location",
+                    RunOutputName = "image_it_pir_1",
+                    Type = "ManagedImage",
                 },
             },
-            Identity = new AzureNextGen.VirtualMachineImages.Latest.Inputs.ImageTemplateIdentityArgs
+            Identity = new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -63,21 +63,21 @@ class MyStack : Stack
             ImageTemplateName = "myImageTemplate",
             Location = "westus",
             ResourceGroupName = "myResourceGroup",
-            Source = 
+            Source = new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateManagedImageSourceArgs
             {
-                { "imageId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image" },
-                { "type", "ManagedImage" },
+                ImageId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
+                Type = "ManagedImage",
             },
             Tags = 
             {
                 { "imagetemplate_tag1", "IT_T1" },
                 { "imagetemplate_tag2", "IT_T2" },
             },
-            VmProfile = new AzureNextGen.VirtualMachineImages.Latest.Inputs.ImageTemplateVmProfileArgs
+            VmProfile = new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateVmProfileArgs
             {
                 OsDiskSizeGB = 64,
                 VmSize = "Standard_D2s_v3",
-                VnetConfig = new AzureNextGen.VirtualMachineImages.Latest.Inputs.VirtualNetworkConfigArgs
+                VnetConfig = new AzureNextGen.VirtualMachineImages.Inputs.VirtualNetworkConfigArgs
                 {
                     SubnetId = "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
                 },
@@ -101,22 +101,22 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate",
-    customize=[{
-        "name": "Shell Customizer Example",
-        "scriptUri": "https://example.com/path/to/script.sh",
-        "type": "Shell",
-    }],
-    distribute=[{
-        "artifactTags": {
+virtual_machine_image_template = azure_nextgen.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate",
+    customize=[azure_nextgen.virtualmachineimages.ImageTemplateShellCustomizerArgs(
+        name="Shell Customizer Example",
+        script_uri="https://example.com/path/to/script.sh",
+        type="Shell",
+    )],
+    distribute=[azure_nextgen.virtualmachineimages.ImageTemplateManagedImageDistributorArgs(
+        artifact_tags={
             "tagName": "value",
         },
-        "imageId": "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
-        "location": "1_location",
-        "runOutputName": "image_it_pir_1",
-        "type": "ManagedImage",
-    }],
-    identity=azure_nextgen.virtualmachineimages.latest.ImageTemplateIdentityArgs(
+        image_id="/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
+        location="1_location",
+        run_output_name="image_it_pir_1",
+        type="ManagedImage",
+    )],
+    identity=azure_nextgen.virtualmachineimages.ImageTemplateIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity_1": {},
@@ -125,18 +125,18 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
     image_template_name="myImageTemplate",
     location="westus",
     resource_group_name="myResourceGroup",
-    source={
-        "imageId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
-        "type": "ManagedImage",
-    },
+    source=azure_nextgen.virtualmachineimages.ImageTemplateManagedImageSourceArgs(
+        image_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
+        type="ManagedImage",
+    ),
     tags={
         "imagetemplate_tag1": "IT_T1",
         "imagetemplate_tag2": "IT_T2",
     },
-    vm_profile=azure_nextgen.virtualmachineimages.latest.ImageTemplateVmProfileArgs(
+    vm_profile=azure_nextgen.virtualmachineimages.ImageTemplateVmProfileArgs(
         os_disk_size_gb=64,
         vm_size="Standard_D2s_v3",
-        vnet_config=azure_nextgen.virtualmachineimages.latest.VirtualNetworkConfigArgs(
+        vnet_config=azure_nextgen.virtualmachineimages.VirtualNetworkConfigArgs(
             subnet_id="/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
         ),
     ))
@@ -151,7 +151,7 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
+const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
     customize: [{
         name: "Shell Customizer Example",
         scriptUri: "https://example.com/path/to/script.sh",
@@ -206,117 +206,117 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineImageTemplate = new AzureNextGen.VirtualMachineImages.Latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureNextGen.VirtualMachineImages.Latest.VirtualMachineImageTemplateArgs
+        var virtualMachineImageTemplate = new AzureNextGen.VirtualMachineImages.VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureNextGen.VirtualMachineImages.VirtualMachineImageTemplateArgs
         {
             Customize = 
             {
-                
+                new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs
                 {
-                    { "inline", 
+                    Inline = 
                     {
                         "Powershell command-1",
                         "Powershell command-2",
                         "Powershell command-3",
-                    } },
-                    { "name", "PowerShell (inline) Customizer Example" },
-                    { "type", "PowerShell" },
+                    },
+                    Name = "PowerShell (inline) Customizer Example",
+                    Type = "PowerShell",
                 },
-                
+                new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs
                 {
-                    { "inline", 
+                    Inline = 
                     {
                         "Powershell command-1",
                         "Powershell command-2",
                         "Powershell command-3",
-                    } },
-                    { "name", "PowerShell (inline) Customizer Elevated user Example" },
-                    { "runElevated", true },
-                    { "type", "PowerShell" },
+                    },
+                    Name = "PowerShell (inline) Customizer Elevated user Example",
+                    RunElevated = true,
+                    Type = "PowerShell",
                 },
-                
+                new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs
                 {
-                    { "inline", 
+                    Inline = 
                     {
                         "Powershell command-1",
                         "Powershell command-2",
                         "Powershell command-3",
-                    } },
-                    { "name", "PowerShell (inline) Customizer Elevated Local System user Example" },
-                    { "runAsSystem", true },
-                    { "runElevated", true },
-                    { "type", "PowerShell" },
+                    },
+                    Name = "PowerShell (inline) Customizer Elevated Local System user Example",
+                    RunAsSystem = true,
+                    RunElevated = true,
+                    Type = "PowerShell",
                 },
-                
+                new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs
                 {
-                    { "name", "PowerShell (script) Customizer Example" },
-                    { "scriptUri", "https://example.com/path/to/script.ps1" },
-                    { "type", "PowerShell" },
-                    { "validExitCodes", 
+                    Name = "PowerShell (script) Customizer Example",
+                    ScriptUri = "https://example.com/path/to/script.ps1",
+                    Type = "PowerShell",
+                    ValidExitCodes = 
                     {
                         0,
                         1,
-                    } },
+                    },
                 },
-                
+                new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs
                 {
-                    { "name", "PowerShell (script) Customizer Elevated Local System user Example" },
-                    { "runElevated", true },
-                    { "scriptUri", "https://example.com/path/to/script.ps1" },
-                    { "type", "PowerShell" },
-                    { "validExitCodes", 
+                    Name = "PowerShell (script) Customizer Elevated Local System user Example",
+                    RunElevated = true,
+                    ScriptUri = "https://example.com/path/to/script.ps1",
+                    Type = "PowerShell",
+                    ValidExitCodes = 
                     {
                         0,
                         1,
-                    } },
+                    },
                 },
-                
+                new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs
                 {
-                    { "name", "PowerShell (script) Customizer Elevated Local System user Example" },
-                    { "runAsSystem", true },
-                    { "runElevated", true },
-                    { "scriptUri", "https://example.com/path/to/script.ps1" },
-                    { "type", "PowerShell" },
-                    { "validExitCodes", 
+                    Name = "PowerShell (script) Customizer Elevated Local System user Example",
+                    RunAsSystem = true,
+                    RunElevated = true,
+                    ScriptUri = "https://example.com/path/to/script.ps1",
+                    Type = "PowerShell",
+                    ValidExitCodes = 
                     {
                         0,
                         1,
-                    } },
+                    },
                 },
-                
+                new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateRestartCustomizerArgs
                 {
-                    { "name", "Restart Customizer Example" },
-                    { "restartCheckCommand", "powershell -command \"& {Write-Output 'restarted.'}\"" },
-                    { "restartCommand", "shutdown /f /r /t 0 /c \"packer restart\"" },
-                    { "restartTimeout", "10m" },
-                    { "type", "WindowsRestart" },
+                    Name = "Restart Customizer Example",
+                    RestartCheckCommand = "powershell -command \"& {Write-Output 'restarted.'}\"",
+                    RestartCommand = "shutdown /f /r /t 0 /c \"packer restart\"",
+                    RestartTimeout = "10m",
+                    Type = "WindowsRestart",
                 },
-                
+                new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateWindowsUpdateCustomizerArgs
                 {
-                    { "filters", 
+                    Filters = 
                     {
                         "$_.BrowseOnly",
-                    } },
-                    { "name", "Windows Update Customizer Example" },
-                    { "searchCriteria", "BrowseOnly=0 and IsInstalled=0" },
-                    { "type", "WindowsUpdate" },
-                    { "updateLimit", 100 },
+                    },
+                    Name = "Windows Update Customizer Example",
+                    SearchCriteria = "BrowseOnly=0 and IsInstalled=0",
+                    Type = "WindowsUpdate",
+                    UpdateLimit = 100,
                 },
             },
             Distribute = 
             {
-                
+                new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateManagedImageDistributorArgs
                 {
-                    { "artifactTags", 
+                    ArtifactTags = 
                     {
                         { "tagName", "value" },
-                    } },
-                    { "imageId", "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1" },
-                    { "location", "1_location" },
-                    { "runOutputName", "image_it_pir_1" },
-                    { "type", "ManagedImage" },
+                    },
+                    ImageId = "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
+                    Location = "1_location",
+                    RunOutputName = "image_it_pir_1",
+                    Type = "ManagedImage",
                 },
             },
-            Identity = new AzureNextGen.VirtualMachineImages.Latest.Inputs.ImageTemplateIdentityArgs
+            Identity = new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -327,21 +327,21 @@ class MyStack : Stack
             ImageTemplateName = "myImageTemplate",
             Location = "westus",
             ResourceGroupName = "myResourceGroup",
-            Source = 
+            Source = new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateManagedImageSourceArgs
             {
-                { "imageId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image" },
-                { "type", "ManagedImage" },
+                ImageId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
+                Type = "ManagedImage",
             },
             Tags = 
             {
                 { "imagetemplate_tag1", "IT_T1" },
                 { "imagetemplate_tag2", "IT_T2" },
             },
-            VmProfile = new AzureNextGen.VirtualMachineImages.Latest.Inputs.ImageTemplateVmProfileArgs
+            VmProfile = new AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateVmProfileArgs
             {
                 OsDiskSizeGB = 64,
                 VmSize = "Standard_D2s_v3",
-                VnetConfig = new AzureNextGen.VirtualMachineImages.Latest.Inputs.VirtualNetworkConfigArgs
+                VnetConfig = new AzureNextGen.VirtualMachineImages.Inputs.VirtualNetworkConfigArgs
                 {
                     SubnetId = "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
                 },
@@ -365,93 +365,93 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate",
+virtual_machine_image_template = azure_nextgen.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate",
     customize=[
-        {
-            "inline": [
+        azure_nextgen.virtualmachineimages.ImageTemplatePowerShellCustomizerArgs(
+            inline=[
                 "Powershell command-1",
                 "Powershell command-2",
                 "Powershell command-3",
             ],
-            "name": "PowerShell (inline) Customizer Example",
-            "type": "PowerShell",
-        },
-        {
-            "inline": [
+            name="PowerShell (inline) Customizer Example",
+            type="PowerShell",
+        ),
+        azure_nextgen.virtualmachineimages.ImageTemplatePowerShellCustomizerArgs(
+            inline=[
                 "Powershell command-1",
                 "Powershell command-2",
                 "Powershell command-3",
             ],
-            "name": "PowerShell (inline) Customizer Elevated user Example",
-            "runElevated": True,
-            "type": "PowerShell",
-        },
-        {
-            "inline": [
+            name="PowerShell (inline) Customizer Elevated user Example",
+            run_elevated=True,
+            type="PowerShell",
+        ),
+        azure_nextgen.virtualmachineimages.ImageTemplatePowerShellCustomizerArgs(
+            inline=[
                 "Powershell command-1",
                 "Powershell command-2",
                 "Powershell command-3",
             ],
-            "name": "PowerShell (inline) Customizer Elevated Local System user Example",
-            "runAsSystem": True,
-            "runElevated": True,
-            "type": "PowerShell",
-        },
-        {
-            "name": "PowerShell (script) Customizer Example",
-            "scriptUri": "https://example.com/path/to/script.ps1",
-            "type": "PowerShell",
-            "validExitCodes": [
+            name="PowerShell (inline) Customizer Elevated Local System user Example",
+            run_as_system=True,
+            run_elevated=True,
+            type="PowerShell",
+        ),
+        azure_nextgen.virtualmachineimages.ImageTemplatePowerShellCustomizerArgs(
+            name="PowerShell (script) Customizer Example",
+            script_uri="https://example.com/path/to/script.ps1",
+            type="PowerShell",
+            valid_exit_codes=[
                 0,
                 1,
             ],
-        },
-        {
-            "name": "PowerShell (script) Customizer Elevated Local System user Example",
-            "runElevated": True,
-            "scriptUri": "https://example.com/path/to/script.ps1",
-            "type": "PowerShell",
-            "validExitCodes": [
+        ),
+        azure_nextgen.virtualmachineimages.ImageTemplatePowerShellCustomizerArgs(
+            name="PowerShell (script) Customizer Elevated Local System user Example",
+            run_elevated=True,
+            script_uri="https://example.com/path/to/script.ps1",
+            type="PowerShell",
+            valid_exit_codes=[
                 0,
                 1,
             ],
-        },
-        {
-            "name": "PowerShell (script) Customizer Elevated Local System user Example",
-            "runAsSystem": True,
-            "runElevated": True,
-            "scriptUri": "https://example.com/path/to/script.ps1",
-            "type": "PowerShell",
-            "validExitCodes": [
+        ),
+        azure_nextgen.virtualmachineimages.ImageTemplatePowerShellCustomizerArgs(
+            name="PowerShell (script) Customizer Elevated Local System user Example",
+            run_as_system=True,
+            run_elevated=True,
+            script_uri="https://example.com/path/to/script.ps1",
+            type="PowerShell",
+            valid_exit_codes=[
                 0,
                 1,
             ],
-        },
-        {
-            "name": "Restart Customizer Example",
-            "restartCheckCommand": "powershell -command \"& {Write-Output 'restarted.'}\"",
-            "restartCommand": "shutdown /f /r /t 0 /c \"packer restart\"",
-            "restartTimeout": "10m",
-            "type": "WindowsRestart",
-        },
-        {
-            "filters": ["$_.BrowseOnly"],
-            "name": "Windows Update Customizer Example",
-            "searchCriteria": "BrowseOnly=0 and IsInstalled=0",
-            "type": "WindowsUpdate",
-            "updateLimit": 100,
-        },
+        ),
+        azure_nextgen.virtualmachineimages.ImageTemplateRestartCustomizerArgs(
+            name="Restart Customizer Example",
+            restart_check_command="powershell -command \"& {Write-Output 'restarted.'}\"",
+            restart_command="shutdown /f /r /t 0 /c \"packer restart\"",
+            restart_timeout="10m",
+            type="WindowsRestart",
+        ),
+        azure_nextgen.virtualmachineimages.ImageTemplateWindowsUpdateCustomizerArgs(
+            filters=["$_.BrowseOnly"],
+            name="Windows Update Customizer Example",
+            search_criteria="BrowseOnly=0 and IsInstalled=0",
+            type="WindowsUpdate",
+            update_limit=100,
+        ),
     ],
-    distribute=[{
-        "artifactTags": {
+    distribute=[azure_nextgen.virtualmachineimages.ImageTemplateManagedImageDistributorArgs(
+        artifact_tags={
             "tagName": "value",
         },
-        "imageId": "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
-        "location": "1_location",
-        "runOutputName": "image_it_pir_1",
-        "type": "ManagedImage",
-    }],
-    identity=azure_nextgen.virtualmachineimages.latest.ImageTemplateIdentityArgs(
+        image_id="/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
+        location="1_location",
+        run_output_name="image_it_pir_1",
+        type="ManagedImage",
+    )],
+    identity=azure_nextgen.virtualmachineimages.ImageTemplateIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity_1": {},
@@ -460,18 +460,18 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
     image_template_name="myImageTemplate",
     location="westus",
     resource_group_name="myResourceGroup",
-    source={
-        "imageId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
-        "type": "ManagedImage",
-    },
+    source=azure_nextgen.virtualmachineimages.ImageTemplateManagedImageSourceArgs(
+        image_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
+        type="ManagedImage",
+    ),
     tags={
         "imagetemplate_tag1": "IT_T1",
         "imagetemplate_tag2": "IT_T2",
     },
-    vm_profile=azure_nextgen.virtualmachineimages.latest.ImageTemplateVmProfileArgs(
+    vm_profile=azure_nextgen.virtualmachineimages.ImageTemplateVmProfileArgs(
         os_disk_size_gb=64,
         vm_size="Standard_D2s_v3",
-        vnet_config=azure_nextgen.virtualmachineimages.latest.VirtualNetworkConfigArgs(
+        vnet_config=azure_nextgen.virtualmachineimages.VirtualNetworkConfigArgs(
             subnet_id="/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
         ),
     ))
@@ -486,7 +486,7 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
+const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
     customize: [
         {
             inline: [
@@ -610,7 +610,7 @@ const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.lates
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualMachineImageTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -618,11 +618,11 @@ const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.lates
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualMachineImageTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineImageTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineImageTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualMachineImageTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -643,7 +643,7 @@ const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.lates
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineImageTemplateArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -712,7 +712,7 @@ const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.lates
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineImageTemplateArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -751,7 +751,7 @@ const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.lates
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineImageTemplateArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineImageTemplateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -774,11 +774,11 @@ const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.lates
 
 ## VirtualMachineImageTemplate Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualMachineImageTemplate resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualMachineImageTemplate resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -6358,7 +6358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:virtualmachineimages/latest:VirtualMachineImageTemplate myImageTemplate /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VirtualMachineImages/imageTemplates/myImageTemplate 
+$ pulumi import azure-nextgen:virtualmachineimages:VirtualMachineImageTemplate myImageTemplate /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VirtualMachineImages/imageTemplates/myImageTemplate 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagecache.Cache resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cache = new AzureNextGen.StorageCache.Latest.Cache("cache", new AzureNextGen.StorageCache.Latest.CacheArgs
+        var cache = new AzureNextGen.StorageCache.Cache("cache", new AzureNextGen.StorageCache.CacheArgs
         {
             CacheName = "sc1",
             CacheSizeGB = 3072,
-            DirectoryServicesSettings = new AzureNextGen.StorageCache.Latest.Inputs.CacheDirectorySettingsArgs
+            DirectoryServicesSettings = new AzureNextGen.StorageCache.Inputs.CacheDirectorySettingsArgs
             {
-                ActiveDirectory = new AzureNextGen.StorageCache.Latest.Inputs.CacheActiveDirectorySettingsArgs
+                ActiveDirectory = new AzureNextGen.StorageCache.Inputs.CacheActiveDirectorySettingsArgs
                 {
                     CacheNetBiosName = "contosoSmb",
-                    Credentials = new AzureNextGen.StorageCache.Latest.Inputs.CacheActiveDirectorySettingsCredentialsArgs
+                    Credentials = new AzureNextGen.StorageCache.Inputs.CacheActiveDirectorySettingsCredentialsArgs
                     {
                         Password = "<password>",
                         Username = "consotoAdmin",
@@ -46,9 +46,9 @@ class MyStack : Stack
                     PrimaryDnsIpAddress = "192.0.2.10",
                     SecondaryDnsIpAddress = "192.0.2.11",
                 },
-                UsernameDownload = new AzureNextGen.StorageCache.Latest.Inputs.CacheUsernameDownloadSettingsArgs
+                UsernameDownload = new AzureNextGen.StorageCache.Inputs.CacheUsernameDownloadSettingsArgs
                 {
-                    Credentials = new AzureNextGen.StorageCache.Latest.Inputs.CacheUsernameDownloadSettingsCredentialsArgs
+                    Credentials = new AzureNextGen.StorageCache.Inputs.CacheUsernameDownloadSettingsCredentialsArgs
                     {
                         BindDn = "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                         BindPassword = "<bindPassword>",
@@ -59,12 +59,12 @@ class MyStack : Stack
                     UsernameSource = "LDAP",
                 },
             },
-            EncryptionSettings = new AzureNextGen.StorageCache.Latest.Inputs.CacheEncryptionSettingsArgs
+            EncryptionSettings = new AzureNextGen.StorageCache.Inputs.CacheEncryptionSettingsArgs
             {
-                KeyEncryptionKey = new AzureNextGen.StorageCache.Latest.Inputs.KeyVaultKeyReferenceArgs
+                KeyEncryptionKey = new AzureNextGen.StorageCache.Inputs.KeyVaultKeyReferenceArgs
                 {
                     KeyUrl = "https://keyvault-cmk.vault.azure.net/keys/key2047/test",
-                    SourceVault = new AzureNextGen.StorageCache.Latest.Inputs.KeyVaultKeyReferenceSourceVaultArgs
+                    SourceVault = new AzureNextGen.StorageCache.Inputs.KeyVaultKeyReferenceSourceVaultArgs
                     {
                         Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
                     },
@@ -72,15 +72,15 @@ class MyStack : Stack
             },
             Location = "westus",
             ResourceGroupName = "scgroup",
-            SecuritySettings = new AzureNextGen.StorageCache.Latest.Inputs.CacheSecuritySettingsArgs
+            SecuritySettings = new AzureNextGen.StorageCache.Inputs.CacheSecuritySettingsArgs
             {
                 AccessPolicies = 
                 {
-                    new AzureNextGen.StorageCache.Latest.Inputs.NfsAccessPolicyArgs
+                    new AzureNextGen.StorageCache.Inputs.NfsAccessPolicyArgs
                     {
                         AccessRules = 
                         {
-                            new AzureNextGen.StorageCache.Latest.Inputs.NfsAccessRuleArgs
+                            new AzureNextGen.StorageCache.Inputs.NfsAccessRuleArgs
                             {
                                 Access = "rw",
                                 RootSquash = false,
@@ -93,7 +93,7 @@ class MyStack : Stack
                     },
                 },
             },
-            Sku = new AzureNextGen.StorageCache.Latest.Inputs.CacheSkuArgs
+            Sku = new AzureNextGen.StorageCache.Inputs.CacheSkuArgs
             {
                 Name = "Standard_2G",
             },
@@ -117,7 +117,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache/latest"
+	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -200,13 +200,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cache = azure_nextgen.storagecache.latest.Cache("cache",
+cache = azure_nextgen.storagecache.Cache("cache",
     cache_name="sc1",
     cache_size_gb=3072,
-    directory_services_settings=azure_nextgen.storagecache.latest.CacheDirectorySettingsArgs(
-        active_directory=azure_nextgen.storagecache.latest.CacheActiveDirectorySettingsArgs(
+    directory_services_settings=azure_nextgen.storagecache.CacheDirectorySettingsArgs(
+        active_directory=azure_nextgen.storagecache.CacheActiveDirectorySettingsArgs(
             cache_net_bios_name="contosoSmb",
-            credentials=azure_nextgen.storagecache.latest.CacheActiveDirectorySettingsCredentialsArgs(
+            credentials=azure_nextgen.storagecache.CacheActiveDirectorySettingsCredentialsArgs(
                 password="<password>",
                 username="consotoAdmin",
             ),
@@ -215,8 +215,8 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
             primary_dns_ip_address="192.0.2.10",
             secondary_dns_ip_address="192.0.2.11",
         ),
-        username_download=azure_nextgen.storagecache.latest.CacheUsernameDownloadSettingsArgs(
-            credentials=azure_nextgen.storagecache.latest.CacheUsernameDownloadSettingsCredentialsArgs(
+        username_download=azure_nextgen.storagecache.CacheUsernameDownloadSettingsArgs(
+            credentials=azure_nextgen.storagecache.CacheUsernameDownloadSettingsCredentialsArgs(
                 bind_dn="cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                 bind_password="<bindPassword>",
             ),
@@ -226,19 +226,19 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
             username_source="LDAP",
         ),
     ),
-    encryption_settings=azure_nextgen.storagecache.latest.CacheEncryptionSettingsArgs(
-        key_encryption_key=azure_nextgen.storagecache.latest.KeyVaultKeyReferenceArgs(
+    encryption_settings=azure_nextgen.storagecache.CacheEncryptionSettingsArgs(
+        key_encryption_key=azure_nextgen.storagecache.KeyVaultKeyReferenceArgs(
             key_url="https://keyvault-cmk.vault.azure.net/keys/key2047/test",
-            source_vault=azure_nextgen.storagecache.latest.KeyVaultKeyReferenceSourceVaultArgs(
+            source_vault=azure_nextgen.storagecache.KeyVaultKeyReferenceSourceVaultArgs(
                 id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
             ),
         ),
     ),
     location="westus",
     resource_group_name="scgroup",
-    security_settings=azure_nextgen.storagecache.latest.CacheSecuritySettingsArgs(
-        access_policies=[azure_nextgen.storagecache.latest.NfsAccessPolicyArgs(
-            access_rules=[azure_nextgen.storagecache.latest.NfsAccessRuleArgs(
+    security_settings=azure_nextgen.storagecache.CacheSecuritySettingsArgs(
+        access_policies=[azure_nextgen.storagecache.NfsAccessPolicyArgs(
+            access_rules=[azure_nextgen.storagecache.NfsAccessRuleArgs(
                 access="rw",
                 root_squash=False,
                 scope="default",
@@ -248,7 +248,7 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
             name="default",
         )],
     ),
-    sku=azure_nextgen.storagecache.latest.CacheSkuArgs(
+    sku=azure_nextgen.storagecache.CacheSkuArgs(
         name="Standard_2G",
     ),
     subnet="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
@@ -266,7 +266,7 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
+const cache = new azure_nextgen.storagecache.Cache("cache", {
     cacheName: "sc1",
     cacheSizeGB: 3072,
     directoryServicesSettings: {
@@ -337,15 +337,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cache = new AzureNextGen.StorageCache.Latest.Cache("cache", new AzureNextGen.StorageCache.Latest.CacheArgs
+        var cache = new AzureNextGen.StorageCache.Cache("cache", new AzureNextGen.StorageCache.CacheArgs
         {
             CacheName = "sc1",
             CacheSizeGB = 3072,
-            DirectoryServicesSettings = new AzureNextGen.StorageCache.Latest.Inputs.CacheDirectorySettingsArgs
+            DirectoryServicesSettings = new AzureNextGen.StorageCache.Inputs.CacheDirectorySettingsArgs
             {
-                UsernameDownload = new AzureNextGen.StorageCache.Latest.Inputs.CacheUsernameDownloadSettingsArgs
+                UsernameDownload = new AzureNextGen.StorageCache.Inputs.CacheUsernameDownloadSettingsArgs
                 {
-                    Credentials = new AzureNextGen.StorageCache.Latest.Inputs.CacheUsernameDownloadSettingsCredentialsArgs
+                    Credentials = new AzureNextGen.StorageCache.Inputs.CacheUsernameDownloadSettingsCredentialsArgs
                     {
                         BindDn = "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                         BindPassword = "<bindPassword>",
@@ -356,12 +356,12 @@ class MyStack : Stack
                     UsernameSource = "LDAP",
                 },
             },
-            EncryptionSettings = new AzureNextGen.StorageCache.Latest.Inputs.CacheEncryptionSettingsArgs
+            EncryptionSettings = new AzureNextGen.StorageCache.Inputs.CacheEncryptionSettingsArgs
             {
-                KeyEncryptionKey = new AzureNextGen.StorageCache.Latest.Inputs.KeyVaultKeyReferenceArgs
+                KeyEncryptionKey = new AzureNextGen.StorageCache.Inputs.KeyVaultKeyReferenceArgs
                 {
                     KeyUrl = "https://keyvault-cmk.vault.azure.net/keys/key2048/test",
-                    SourceVault = new AzureNextGen.StorageCache.Latest.Inputs.KeyVaultKeyReferenceSourceVaultArgs
+                    SourceVault = new AzureNextGen.StorageCache.Inputs.KeyVaultKeyReferenceSourceVaultArgs
                     {
                         Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
                     },
@@ -369,15 +369,15 @@ class MyStack : Stack
             },
             Location = "westus",
             ResourceGroupName = "scgroup",
-            SecuritySettings = new AzureNextGen.StorageCache.Latest.Inputs.CacheSecuritySettingsArgs
+            SecuritySettings = new AzureNextGen.StorageCache.Inputs.CacheSecuritySettingsArgs
             {
                 AccessPolicies = 
                 {
-                    new AzureNextGen.StorageCache.Latest.Inputs.NfsAccessPolicyArgs
+                    new AzureNextGen.StorageCache.Inputs.NfsAccessPolicyArgs
                     {
                         AccessRules = 
                         {
-                            new AzureNextGen.StorageCache.Latest.Inputs.NfsAccessRuleArgs
+                            new AzureNextGen.StorageCache.Inputs.NfsAccessRuleArgs
                             {
                                 Access = "rw",
                                 RootSquash = false,
@@ -390,7 +390,7 @@ class MyStack : Stack
                     },
                 },
             },
-            Sku = new AzureNextGen.StorageCache.Latest.Inputs.CacheSkuArgs
+            Sku = new AzureNextGen.StorageCache.Inputs.CacheSkuArgs
             {
                 Name = "Standard_2G",
             },
@@ -414,7 +414,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache/latest"
+	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -486,12 +486,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cache = azure_nextgen.storagecache.latest.Cache("cache",
+cache = azure_nextgen.storagecache.Cache("cache",
     cache_name="sc1",
     cache_size_gb=3072,
-    directory_services_settings=azure_nextgen.storagecache.latest.CacheDirectorySettingsArgs(
-        username_download=azure_nextgen.storagecache.latest.CacheUsernameDownloadSettingsArgs(
-            credentials=azure_nextgen.storagecache.latest.CacheUsernameDownloadSettingsCredentialsArgs(
+    directory_services_settings=azure_nextgen.storagecache.CacheDirectorySettingsArgs(
+        username_download=azure_nextgen.storagecache.CacheUsernameDownloadSettingsArgs(
+            credentials=azure_nextgen.storagecache.CacheUsernameDownloadSettingsCredentialsArgs(
                 bind_dn="cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                 bind_password="<bindPassword>",
             ),
@@ -501,19 +501,19 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
             username_source="LDAP",
         ),
     ),
-    encryption_settings=azure_nextgen.storagecache.latest.CacheEncryptionSettingsArgs(
-        key_encryption_key=azure_nextgen.storagecache.latest.KeyVaultKeyReferenceArgs(
+    encryption_settings=azure_nextgen.storagecache.CacheEncryptionSettingsArgs(
+        key_encryption_key=azure_nextgen.storagecache.KeyVaultKeyReferenceArgs(
             key_url="https://keyvault-cmk.vault.azure.net/keys/key2048/test",
-            source_vault=azure_nextgen.storagecache.latest.KeyVaultKeyReferenceSourceVaultArgs(
+            source_vault=azure_nextgen.storagecache.KeyVaultKeyReferenceSourceVaultArgs(
                 id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
             ),
         ),
     ),
     location="westus",
     resource_group_name="scgroup",
-    security_settings=azure_nextgen.storagecache.latest.CacheSecuritySettingsArgs(
-        access_policies=[azure_nextgen.storagecache.latest.NfsAccessPolicyArgs(
-            access_rules=[azure_nextgen.storagecache.latest.NfsAccessRuleArgs(
+    security_settings=azure_nextgen.storagecache.CacheSecuritySettingsArgs(
+        access_policies=[azure_nextgen.storagecache.NfsAccessPolicyArgs(
+            access_rules=[azure_nextgen.storagecache.NfsAccessRuleArgs(
                 access="rw",
                 root_squash=False,
                 scope="default",
@@ -523,7 +523,7 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
             name="default",
         )],
     ),
-    sku=azure_nextgen.storagecache.latest.CacheSkuArgs(
+    sku=azure_nextgen.storagecache.CacheSkuArgs(
         name="Standard_2G",
     ),
     subnet="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
@@ -541,7 +541,7 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
+const cache = new azure_nextgen.storagecache.Cache("cache", {
     cacheName: "sc1",
     cacheSizeGB: 3072,
     directoryServicesSettings: {
@@ -599,7 +599,7 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">CacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -607,11 +607,11 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCache</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">CacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cache</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCache</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cache</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">CacheArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -632,7 +632,7 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CacheArgs</span>
+        <span class="property-type"><a href="#inputs">CacheArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -701,7 +701,7 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CacheArgs</span>
+        <span class="property-type"><a href="#inputs">CacheArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -740,7 +740,7 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CacheArgs</span>
+        <span class="property-type"><a href="#inputs">CacheArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -763,11 +763,11 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
 
 ## Cache Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Cache resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Cache resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -6221,7 +6221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagecache/latest:Cache sc1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.StorageCache/caches/sc1 
+$ pulumi import azure-nextgen:storagecache:Cache sc1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.StorageCache/caches/sc1 
 ```
 
 

@@ -19,7 +19,7 @@ meta_desc: "Explore the GetStreamingJob function of the streamanalytics module, 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getStreamingJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetStreamingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetStreamingJobResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getStreamingJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetStreamingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetStreamingJobResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetStreamingJob function of the streamanalytics module, 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStreamingJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupStreamingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupStreamingJobResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStreamingJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupStreamingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupStreamingJobResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupStreamingJob` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetStreamingJob function of the streamanalytics module, 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetStreamingJob </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetStreamingJobResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetStreamingJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetStreamingJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetStreamingJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1086,9 +1086,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1114,9 +1111,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuredatalakestoreoutputdatasourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -1436,9 +1430,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1647,9 +1638,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1786,9 +1774,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1889,9 +1874,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1989,9 +1971,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuresqldatabaseoutputdatasourceresponse">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -2200,9 +2179,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuretableoutputdatasourceresponse">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -2486,9 +2462,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2697,9 +2670,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2905,9 +2875,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -3155,9 +3122,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3255,9 +3219,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="diagnosticconditionresponse">Diagnostic<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 
@@ -3397,9 +3358,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3461,9 +3419,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="documentdboutputdatasourceresponse">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -3711,9 +3666,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3919,9 +3871,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -4133,9 +4082,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4236,9 +4182,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4300,9 +4243,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="functionresponse">Function<wbr>Response</h4>
-
-
-
 
 
 
@@ -4478,9 +4418,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4650,9 +4587,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -4864,9 +4798,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4928,9 +4859,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="jsonserializationresponse">Json<wbr>Serialization<wbr>Response</h4>
-
-
-
 
 
 
@@ -5031,9 +4959,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="outputresponse">Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -5317,9 +5242,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5600,9 +5522,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5775,9 +5694,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5947,9 +5863,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="servicebusqueueoutputdatasourceresponse">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -6161,9 +6074,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6372,9 +6282,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6436,9 +6343,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="storageaccountresponse">Storage<wbr>Account<wbr>Response</h4>
-
-
-
 
 
 
@@ -6539,9 +6443,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="streaminputpropertiesresponse">Stream<wbr>Input<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -6714,9 +6615,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="transformationresponse">Transformation<wbr>Response</h4>
-
-
-
 
 
 

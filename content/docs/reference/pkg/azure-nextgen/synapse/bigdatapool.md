@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.BigDataPool resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Big Data pool
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bigDataPool = new AzureNextGen.Synapse.Latest.BigDataPool("bigDataPool", new AzureNextGen.Synapse.Latest.BigDataPoolArgs
+        var bigDataPool = new AzureNextGen.Synapse.BigDataPool("bigDataPool", new AzureNextGen.Synapse.BigDataPoolArgs
         {
-            AutoPause = new AzureNextGen.Synapse.Latest.Inputs.AutoPausePropertiesArgs
+            AutoPause = new AzureNextGen.Synapse.Inputs.AutoPausePropertiesArgs
             {
                 DelayInMinutes = 15,
                 Enabled = true,
             },
-            AutoScale = new AzureNextGen.Synapse.Latest.Inputs.AutoScalePropertiesArgs
+            AutoScale = new AzureNextGen.Synapse.Inputs.AutoScalePropertiesArgs
             {
                 Enabled = true,
                 MaxNodeCount = 50,
@@ -42,7 +42,7 @@ class MyStack : Stack
             },
             BigDataPoolName = "ExamplePool",
             DefaultSparkLogFolder = "/logs",
-            LibraryRequirements = new AzureNextGen.Synapse.Latest.Inputs.LibraryRequirementsArgs
+            LibraryRequirements = new AzureNextGen.Synapse.Inputs.LibraryRequirementsArgs
             {
                 Content = "",
                 Filename = "requirements.txt",
@@ -74,7 +74,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -125,19 +125,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-big_data_pool = azure_nextgen.synapse.latest.BigDataPool("bigDataPool",
-    auto_pause=azure_nextgen.synapse.latest.AutoPausePropertiesArgs(
+big_data_pool = azure_nextgen.synapse.BigDataPool("bigDataPool",
+    auto_pause=azure_nextgen.synapse.AutoPausePropertiesArgs(
         delay_in_minutes=15,
         enabled=True,
     ),
-    auto_scale=azure_nextgen.synapse.latest.AutoScalePropertiesArgs(
+    auto_scale=azure_nextgen.synapse.AutoScalePropertiesArgs(
         enabled=True,
         max_node_count=50,
         min_node_count=3,
     ),
     big_data_pool_name="ExamplePool",
     default_spark_log_folder="/logs",
-    library_requirements=azure_nextgen.synapse.latest.LibraryRequirementsArgs(
+    library_requirements=azure_nextgen.synapse.LibraryRequirementsArgs(
         content="",
         filename="requirements.txt",
     ),
@@ -163,7 +163,7 @@ big_data_pool = azure_nextgen.synapse.latest.BigDataPool("bigDataPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const bigDataPool = new azure_nextgen.synapse.latest.BigDataPool("bigDataPool", {
+const bigDataPool = new azure_nextgen.synapse.BigDataPool("bigDataPool", {
     autoPause: {
         delayInMinutes: 15,
         enabled: true,
@@ -204,7 +204,7 @@ const bigDataPool = new azure_nextgen.synapse.latest.BigDataPool("bigDataPool", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BigDataPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BigDataPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BigDataPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BigDataPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -212,11 +212,11 @@ const bigDataPool = new azure_nextgen.synapse.latest.BigDataPool("bigDataPool", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBigDataPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BigDataPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BigDataPool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBigDataPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BigDataPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BigDataPool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BigDataPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BigDataPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BigDataPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BigDataPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -237,7 +237,7 @@ const bigDataPool = new azure_nextgen.synapse.latest.BigDataPool("bigDataPool", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BigDataPoolArgs</span>
+        <span class="property-type"><a href="#inputs">BigDataPoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -306,7 +306,7 @@ const bigDataPool = new azure_nextgen.synapse.latest.BigDataPool("bigDataPool", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BigDataPoolArgs</span>
+        <span class="property-type"><a href="#inputs">BigDataPoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -345,7 +345,7 @@ const bigDataPool = new azure_nextgen.synapse.latest.BigDataPool("bigDataPool", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BigDataPoolArgs</span>
+        <span class="property-type"><a href="#inputs">BigDataPoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -368,11 +368,11 @@ const bigDataPool = new azure_nextgen.synapse.latest.BigDataPool("bigDataPool", 
 
 ## BigDataPool Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2802,7 +2802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/latest:BigDataPool ExamplePool /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/bigDataPools/ExamplePool 
+$ pulumi import azure-nextgen:synapse:BigDataPool ExamplePool /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/bigDataPools/ExamplePool 
 ```
 
 

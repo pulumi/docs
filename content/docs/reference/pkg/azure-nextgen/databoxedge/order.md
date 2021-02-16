@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.Order resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The order details.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var order = new AzureNextGen.DataBoxEdge.Latest.Order("order", new AzureNextGen.DataBoxEdge.Latest.OrderArgs
+        var order = new AzureNextGen.DataBoxEdge.Order("order", new AzureNextGen.DataBoxEdge.OrderArgs
         {
-            ContactInformation = new AzureNextGen.DataBoxEdge.Latest.Inputs.ContactDetailsArgs
+            ContactInformation = new AzureNextGen.DataBoxEdge.Inputs.ContactDetailsArgs
             {
                 CompanyName = "Microsoft",
                 ContactPerson = "John Mcclane",
@@ -41,7 +41,7 @@ class MyStack : Stack
             },
             DeviceName = "testedgedevice",
             ResourceGroupName = "GroupForEdgeAutomation",
-            ShippingAddress = new AzureNextGen.DataBoxEdge.Latest.Inputs.AddressArgs
+            ShippingAddress = new AzureNextGen.DataBoxEdge.Inputs.AddressArgs
             {
                 AddressLine1 = "Microsoft Corporation",
                 AddressLine2 = "One Microsoft Way",
@@ -66,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -110,8 +110,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-order = azure_nextgen.databoxedge.latest.Order("order",
-    contact_information=azure_nextgen.databoxedge.latest.ContactDetailsArgs(
+order = azure_nextgen.databoxedge.Order("order",
+    contact_information=azure_nextgen.databoxedge.ContactDetailsArgs(
         company_name="Microsoft",
         contact_person="John Mcclane",
         email_list=["john@microsoft.com"],
@@ -119,7 +119,7 @@ order = azure_nextgen.databoxedge.latest.Order("order",
     ),
     device_name="testedgedevice",
     resource_group_name="GroupForEdgeAutomation",
-    shipping_address=azure_nextgen.databoxedge.latest.AddressArgs(
+    shipping_address=azure_nextgen.databoxedge.AddressArgs(
         address_line1="Microsoft Corporation",
         address_line2="One Microsoft Way",
         address_line3="Redmond",
@@ -139,7 +139,7 @@ order = azure_nextgen.databoxedge.latest.Order("order",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const order = new azure_nextgen.databoxedge.latest.Order("order", {
+const order = new azure_nextgen.databoxedge.Order("order", {
     contactInformation: {
         companyName: "Microsoft",
         contactPerson: "John Mcclane",
@@ -171,7 +171,7 @@ const order = new azure_nextgen.databoxedge.latest.Order("order", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Order</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">OrderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Order</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -179,11 +179,11 @@ const order = new azure_nextgen.databoxedge.latest.Order("order", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrder</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">OrderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Order</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrder</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Order</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Order</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">OrderArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Order</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -204,7 +204,7 @@ const order = new azure_nextgen.databoxedge.latest.Order("order", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrderArgs</span>
+        <span class="property-type"><a href="#inputs">OrderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -273,7 +273,7 @@ const order = new azure_nextgen.databoxedge.latest.Order("order", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrderArgs</span>
+        <span class="property-type"><a href="#inputs">OrderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -312,7 +312,7 @@ const order = new azure_nextgen.databoxedge.latest.Order("order", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrderArgs</span>
+        <span class="property-type"><a href="#inputs">OrderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -335,11 +335,11 @@ const order = new azure_nextgen.databoxedge.latest.Order("order", {
 
 ## Order Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Order resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Order resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2203,7 +2203,7 @@ by the already existing properties{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:Order default /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/orders/default 
+$ pulumi import azure-nextgen:databoxedge:Order default /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/orders/default 
 ```
 
 

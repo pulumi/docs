@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountAssembly
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The assembly definition.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountAssembly = new AzureNextGen.Logic.Latest.IntegrationAccountAssembly("integrationAccountAssembly", new AzureNextGen.Logic.Latest.IntegrationAccountAssemblyArgs
+        var integrationAccountAssembly = new AzureNextGen.Logic.IntegrationAccountAssembly("integrationAccountAssembly", new AzureNextGen.Logic.IntegrationAccountAssemblyArgs
         {
             AssemblyArtifactName = "testAssembly",
             IntegrationAccountName = "testIntegrationAccount",
             Location = "westus",
-            Properties = new AzureNextGen.Logic.Latest.Inputs.AssemblyPropertiesArgs
+            Properties = new AzureNextGen.Logic.Inputs.AssemblyPropertiesArgs
             {
                 AssemblyName = "System.IdentityModel.Tokens.Jwt",
                 Content = "Base64 encoded Assembly Content",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,11 +88,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_assembly = azure_nextgen.logic.latest.IntegrationAccountAssembly("integrationAccountAssembly",
+integration_account_assembly = azure_nextgen.logic.IntegrationAccountAssembly("integrationAccountAssembly",
     assembly_artifact_name="testAssembly",
     integration_account_name="testIntegrationAccount",
     location="westus",
-    properties=azure_nextgen.logic.latest.AssemblyPropertiesArgs(
+    properties=azure_nextgen.logic.AssemblyPropertiesArgs(
         assembly_name="System.IdentityModel.Tokens.Jwt",
         content="Base64 encoded Assembly Content",
         metadata={},
@@ -109,7 +109,7 @@ integration_account_assembly = azure_nextgen.logic.latest.IntegrationAccountAsse
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationAccountAssembly = new azure_nextgen.logic.latest.IntegrationAccountAssembly("integrationAccountAssembly", {
+const integrationAccountAssembly = new azure_nextgen.logic.IntegrationAccountAssembly("integrationAccountAssembly", {
     assemblyArtifactName: "testAssembly",
     integrationAccountName: "testIntegrationAccount",
     location: "westus",
@@ -133,7 +133,7 @@ const integrationAccountAssembly = new azure_nextgen.logic.latest.IntegrationAcc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountAssembly</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IntegrationAccountAssemblyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountAssembly</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountAssemblyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -141,11 +141,11 @@ const integrationAccountAssembly = new azure_nextgen.logic.latest.IntegrationAcc
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountAssembly</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IntegrationAccountAssemblyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountAssembly</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountAssembly</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationAccountAssemblyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountAssembly</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountAssembly</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IntegrationAccountAssemblyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountAssembly</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationAccountAssemblyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -166,7 +166,7 @@ const integrationAccountAssembly = new azure_nextgen.logic.latest.IntegrationAcc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountAssemblyArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountAssemblyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -235,7 +235,7 @@ const integrationAccountAssembly = new azure_nextgen.logic.latest.IntegrationAcc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountAssemblyArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountAssemblyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,7 +274,7 @@ const integrationAccountAssembly = new azure_nextgen.logic.latest.IntegrationAcc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountAssemblyArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountAssemblyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -297,11 +297,11 @@ const integrationAccountAssembly = new azure_nextgen.logic.latest.IntegrationAcc
 
 ## IntegrationAccountAssembly Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IntegrationAccountAssembly resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IntegrationAccountAssembly resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2079,7 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationAccountAssembly testAssembly /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/assemblies/testAssembly 
+$ pulumi import azure-nextgen:logic:IntegrationAccountAssembly testAssembly /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/assemblies/testAssembly 
 ```
 
 

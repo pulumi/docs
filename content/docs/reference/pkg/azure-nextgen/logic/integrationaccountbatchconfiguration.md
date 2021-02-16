@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountBatchCon
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The batch configuration resource definition.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountBatchConfiguration = new AzureNextGen.Logic.Latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", new AzureNextGen.Logic.Latest.IntegrationAccountBatchConfigurationArgs
+        var integrationAccountBatchConfiguration = new AzureNextGen.Logic.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", new AzureNextGen.Logic.IntegrationAccountBatchConfigurationArgs
         {
             BatchConfigurationName = "testBatchConfiguration",
             IntegrationAccountName = "testIntegrationAccount",
             Location = "westus",
-            Properties = new AzureNextGen.Logic.Latest.Inputs.BatchConfigurationPropertiesArgs
+            Properties = new AzureNextGen.Logic.Inputs.BatchConfigurationPropertiesArgs
             {
                 BatchGroupName = "DEFAULT",
-                ReleaseCriteria = new AzureNextGen.Logic.Latest.Inputs.BatchReleaseCriteriaArgs
+                ReleaseCriteria = new AzureNextGen.Logic.Inputs.BatchReleaseCriteriaArgs
                 {
                     BatchSize = 234567,
                     MessageCount = 10,
-                    Recurrence = new AzureNextGen.Logic.Latest.Inputs.WorkflowTriggerRecurrenceArgs
+                    Recurrence = new AzureNextGen.Logic.Inputs.WorkflowTriggerRecurrenceArgs
                     {
                         Frequency = "Minute",
                         Interval = 1,
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -106,16 +106,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_batch_configuration = azure_nextgen.logic.latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration",
+integration_account_batch_configuration = azure_nextgen.logic.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration",
     batch_configuration_name="testBatchConfiguration",
     integration_account_name="testIntegrationAccount",
     location="westus",
-    properties=azure_nextgen.logic.latest.BatchConfigurationPropertiesArgs(
+    properties=azure_nextgen.logic.BatchConfigurationPropertiesArgs(
         batch_group_name="DEFAULT",
-        release_criteria=azure_nextgen.logic.latest.BatchReleaseCriteriaArgs(
+        release_criteria=azure_nextgen.logic.BatchReleaseCriteriaArgs(
             batch_size=234567,
             message_count=10,
-            recurrence=azure_nextgen.logic.latest.WorkflowTriggerRecurrenceArgs(
+            recurrence=azure_nextgen.logic.WorkflowTriggerRecurrenceArgs(
                 frequency="Minute",
                 interval=1,
                 start_time="2017-03-24T11:43:00",
@@ -135,7 +135,7 @@ integration_account_batch_configuration = azure_nextgen.logic.latest.Integration
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationAccountBatchConfiguration = new azure_nextgen.logic.latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", {
+const integrationAccountBatchConfiguration = new azure_nextgen.logic.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", {
     batchConfigurationName: "testBatchConfiguration",
     integrationAccountName: "testIntegrationAccount",
     location: "westus",
@@ -167,7 +167,7 @@ const integrationAccountBatchConfiguration = new azure_nextgen.logic.latest.Inte
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IntegrationAccountBatchConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -175,11 +175,11 @@ const integrationAccountBatchConfiguration = new azure_nextgen.logic.latest.Inte
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IntegrationAccountBatchConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountBatchConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountBatchConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IntegrationAccountBatchConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -200,7 +200,7 @@ const integrationAccountBatchConfiguration = new azure_nextgen.logic.latest.Inte
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountBatchConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -269,7 +269,7 @@ const integrationAccountBatchConfiguration = new azure_nextgen.logic.latest.Inte
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountBatchConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -308,7 +308,7 @@ const integrationAccountBatchConfiguration = new azure_nextgen.logic.latest.Inte
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountBatchConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -331,11 +331,11 @@ const integrationAccountBatchConfiguration = new azure_nextgen.logic.latest.Inte
 
 ## IntegrationAccountBatchConfiguration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IntegrationAccountBatchConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IntegrationAccountBatchConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2747,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationAccountBatchConfiguration testBatchConfiguration /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/batchConfigurations/testBatchConfiguration 
+$ pulumi import azure-nextgen:logic:IntegrationAccountBatchConfiguration testBatchConfiguration /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/batchConfigurations/testBatchConfiguration 
 ```
 
 

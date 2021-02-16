@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerservice.OpenShiftManage
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 OpenShift Managed cluster.
-Latest API Version: 2019-04-30.
+API Version: 2019-04-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var openShiftManagedCluster = new AzureNextGen.ContainerService.Latest.OpenShiftManagedCluster("openShiftManagedCluster", new AzureNextGen.ContainerService.Latest.OpenShiftManagedClusterArgs
+        var openShiftManagedCluster = new AzureNextGen.ContainerService.OpenShiftManagedCluster("openShiftManagedCluster", new AzureNextGen.ContainerService.OpenShiftManagedClusterArgs
         {
             AgentPoolProfiles = 
             {
-                new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
                 {
                     Count = 2,
                     Name = "infra",
@@ -40,7 +40,7 @@ class MyStack : Stack
                     SubnetCidr = "10.0.0.0/24",
                     VmSize = "Standard_D4s_v3",
                 },
-                new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
                 {
                     Count = 4,
                     Name = "compute",
@@ -50,14 +50,14 @@ class MyStack : Stack
                     VmSize = "Standard_D4s_v3",
                 },
             },
-            AuthProfile = new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterAuthProfileArgs
+            AuthProfile = new AzureNextGen.ContainerService.Inputs.OpenShiftManagedClusterAuthProfileArgs
             {
                 IdentityProviders = 
                 {
-                    new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterIdentityProviderArgs
+                    new AzureNextGen.ContainerService.Inputs.OpenShiftManagedClusterIdentityProviderArgs
                     {
                         Name = "Azure AD",
-                        Provider = new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterAADIdentityProviderArgs
+                        Provider = new AzureNextGen.ContainerService.Inputs.OpenShiftManagedClusterAADIdentityProviderArgs
                         {
                             ClientId = "clientId",
                             CustomerAdminGroupId = "customerAdminGroupId",
@@ -69,7 +69,7 @@ class MyStack : Stack
                 },
             },
             Location = "location1",
-            MasterPoolProfile = new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterMasterPoolProfileArgs
+            MasterPoolProfile = new AzureNextGen.ContainerService.Inputs.OpenShiftManagedClusterMasterPoolProfileArgs
             {
                 Count = 3,
                 Name = "master",
@@ -77,7 +77,7 @@ class MyStack : Stack
                 SubnetCidr = "10.0.0.0/24",
                 VmSize = "Standard_D4s_v3",
             },
-            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerService.Inputs.NetworkProfileArgs
             {
                 VnetCidr = "10.0.0.0/8",
             },
@@ -86,7 +86,7 @@ class MyStack : Stack
             ResourceName = "clustername1",
             RouterProfiles = 
             {
-                new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftRouterProfileArgs
+                new AzureNextGen.ContainerService.Inputs.OpenShiftRouterProfileArgs
                 {
                     Name = "default",
                 },
@@ -111,7 +111,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -191,9 +191,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftManagedCluster("openShiftManagedCluster",
+open_shift_managed_cluster = azure_nextgen.containerservice.OpenShiftManagedCluster("openShiftManagedCluster",
     agent_pool_profiles=[
-        azure_nextgen.containerservice.latest.OpenShiftManagedClusterAgentPoolProfileArgs(
+        azure_nextgen.containerservice.OpenShiftManagedClusterAgentPoolProfileArgs(
             count=2,
             name="infra",
             os_type="Linux",
@@ -201,7 +201,7 @@ open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftMana
             subnet_cidr="10.0.0.0/24",
             vm_size="Standard_D4s_v3",
         ),
-        azure_nextgen.containerservice.latest.OpenShiftManagedClusterAgentPoolProfileArgs(
+        azure_nextgen.containerservice.OpenShiftManagedClusterAgentPoolProfileArgs(
             count=4,
             name="compute",
             os_type="Linux",
@@ -210,10 +210,10 @@ open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftMana
             vm_size="Standard_D4s_v3",
         ),
     ],
-    auth_profile=azure_nextgen.containerservice.latest.OpenShiftManagedClusterAuthProfileArgs(
-        identity_providers=[azure_nextgen.containerservice.latest.OpenShiftManagedClusterIdentityProviderArgs(
+    auth_profile=azure_nextgen.containerservice.OpenShiftManagedClusterAuthProfileArgs(
+        identity_providers=[azure_nextgen.containerservice.OpenShiftManagedClusterIdentityProviderArgs(
             name="Azure AD",
-            provider=azure_nextgen.containerservice.latest.OpenShiftManagedClusterAADIdentityProviderArgs(
+            provider=azure_nextgen.containerservice.OpenShiftManagedClusterAADIdentityProviderArgs(
                 client_id="clientId",
                 customer_admin_group_id="customerAdminGroupId",
                 kind="AADIdentityProvider",
@@ -223,20 +223,20 @@ open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftMana
         )],
     ),
     location="location1",
-    master_pool_profile=azure_nextgen.containerservice.latest.OpenShiftManagedClusterMasterPoolProfileArgs(
+    master_pool_profile=azure_nextgen.containerservice.OpenShiftManagedClusterMasterPoolProfileArgs(
         count=3,
         name="master",
         os_type="Linux",
         subnet_cidr="10.0.0.0/24",
         vm_size="Standard_D4s_v3",
     ),
-    network_profile=azure_nextgen.containerservice.latest.NetworkProfileArgs(
+    network_profile=azure_nextgen.containerservice.NetworkProfileArgs(
         vnet_cidr="10.0.0.0/8",
     ),
     open_shift_version="v3.11",
     resource_group_name="rg1",
     resource_name="clustername1",
-    router_profiles=[azure_nextgen.containerservice.latest.OpenShiftRouterProfileArgs(
+    router_profiles=[azure_nextgen.containerservice.OpenShiftRouterProfileArgs(
         name="default",
     )],
     tags={
@@ -254,7 +254,7 @@ open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftMana
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const openShiftManagedCluster = new azure_nextgen.containerservice.latest.OpenShiftManagedCluster("openShiftManagedCluster", {
+const openShiftManagedCluster = new azure_nextgen.containerservice.OpenShiftManagedCluster("openShiftManagedCluster", {
     agentPoolProfiles: [
         {
             count: 2,
@@ -320,7 +320,7 @@ const openShiftManagedCluster = new azure_nextgen.containerservice.latest.OpenSh
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">OpenShiftManagedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -328,11 +328,11 @@ const openShiftManagedCluster = new azure_nextgen.containerservice.latest.OpenSh
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOpenShiftManagedCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">OpenShiftManagedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OpenShiftManagedCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOpenShiftManagedCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OpenShiftManagedCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">OpenShiftManagedClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -353,7 +353,7 @@ const openShiftManagedCluster = new azure_nextgen.containerservice.latest.OpenSh
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OpenShiftManagedClusterArgs</span>
+        <span class="property-type"><a href="#inputs">OpenShiftManagedClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -422,7 +422,7 @@ const openShiftManagedCluster = new azure_nextgen.containerservice.latest.OpenSh
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OpenShiftManagedClusterArgs</span>
+        <span class="property-type"><a href="#inputs">OpenShiftManagedClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -461,7 +461,7 @@ const openShiftManagedCluster = new azure_nextgen.containerservice.latest.OpenSh
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OpenShiftManagedClusterArgs</span>
+        <span class="property-type"><a href="#inputs">OpenShiftManagedClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -484,11 +484,11 @@ const openShiftManagedCluster = new azure_nextgen.containerservice.latest.OpenSh
 
 ## OpenShiftManagedCluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3932,7 +3932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerservice/latest:OpenShiftManagedCluster clustername1 /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/openShiftManagedClusters/clustername1 
+$ pulumi import azure-nextgen:containerservice:OpenShiftManagedCluster clustername1 /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/openShiftManagedClusters/clustername1 
 ```
 
 

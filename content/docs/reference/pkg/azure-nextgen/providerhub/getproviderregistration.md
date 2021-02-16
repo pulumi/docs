@@ -19,7 +19,7 @@ meta_desc: "Explore the GetProviderRegistration function of the providerhub modu
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProviderRegistration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProviderRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetProviderRegistrationResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProviderRegistration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProviderRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProviderRegistrationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetProviderRegistration function of the providerhub modu
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProviderRegistration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProviderRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupProviderRegistrationResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProviderRegistration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProviderRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupProviderRegistrationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupProviderRegistration` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetProviderRegistration function of the providerhub modu
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProviderRegistration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetProviderRegistrationResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetProviderRegistrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetProviderRegistrationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProviderRegistrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -294,9 +294,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -397,9 +394,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -461,9 +455,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="providerhubmetadataresponsethirdpartyproviderauthorization">Provider<wbr>Hub<wbr>Metadata<wbr>Response<wbr>Third<wbr>Party<wbr>Provider<wbr>Authorization</h4>
-
-
-
 
 
 
@@ -564,9 +555,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="providerregistrationpropertiesresponseproviderhubmetadata">Provider<wbr>Registration<wbr>Properties<wbr>Response<wbr>Provider<wbr>Hub<wbr>Metadata</h4>
-
-
-
 
 
 
@@ -706,9 +694,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -806,9 +791,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="providerregistrationresponseproperties">Provider<wbr>Registration<wbr>Response<wbr>Properties</h4>
-
-
-
 
 
 
@@ -1380,9 +1362,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1516,9 +1495,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourceprovidercapabilitiesresponse">Resource<wbr>Provider<wbr>Capabilities<wbr>Response</h4>
-
-
-
 
 
 
@@ -1658,9 +1634,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1722,9 +1695,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourceprovidermanifestpropertiesresponsemanagement">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Management</h4>
-
-
-
 
 
 
@@ -2044,9 +2014,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2111,9 +2078,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2175,9 +2139,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourceprovidermanifestpropertiesresponsetemplatedeploymentoptions">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Template<wbr>Deployment<wbr>Options</h4>
-
-
-
 
 
 
@@ -2281,9 +2242,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2381,9 +2339,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="subscriptionstateoverrideactionresponse">Subscription<wbr>State<wbr>Override<wbr>Action<wbr>Response</h4>
-
-
-
 
 
 

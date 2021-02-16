@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cache.LinkedServer resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Response to put/get linked server (with properties) for Redis cache.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedServer = new AzureNextGen.Cache.Latest.LinkedServer("linkedServer", new AzureNextGen.Cache.Latest.LinkedServerArgs
+        var linkedServer = new AzureNextGen.Cache.LinkedServer("linkedServer", new AzureNextGen.Cache.LinkedServerArgs
         {
             LinkedRedisCacheId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
             LinkedRedisCacheLocation = "West US",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache/latest"
+	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_server = azure_nextgen.cache.latest.LinkedServer("linkedServer",
+linked_server = azure_nextgen.cache.LinkedServer("linkedServer",
     linked_redis_cache_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
     linked_redis_cache_location="West US",
     linked_server_name="cache2",
@@ -99,7 +99,7 @@ linked_server = azure_nextgen.cache.latest.LinkedServer("linkedServer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const linkedServer = new azure_nextgen.cache.latest.LinkedServer("linkedServer", {
+const linkedServer = new azure_nextgen.cache.LinkedServer("linkedServer", {
     linkedRedisCacheId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
     linkedRedisCacheLocation: "West US",
     linkedServerName: "cache2",
@@ -120,7 +120,7 @@ const linkedServer = new azure_nextgen.cache.latest.LinkedServer("linkedServer",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LinkedServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">LinkedServerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LinkedServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LinkedServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -128,11 +128,11 @@ const linkedServer = new azure_nextgen.cache.latest.LinkedServer("linkedServer",
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLinkedServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">LinkedServerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LinkedServer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLinkedServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LinkedServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LinkedServer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LinkedServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">LinkedServerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LinkedServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LinkedServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -153,7 +153,7 @@ const linkedServer = new azure_nextgen.cache.latest.LinkedServer("linkedServer",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkedServerArgs</span>
+        <span class="property-type"><a href="#inputs">LinkedServerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -222,7 +222,7 @@ const linkedServer = new azure_nextgen.cache.latest.LinkedServer("linkedServer",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkedServerArgs</span>
+        <span class="property-type"><a href="#inputs">LinkedServerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -261,7 +261,7 @@ const linkedServer = new azure_nextgen.cache.latest.LinkedServer("linkedServer",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkedServerArgs</span>
+        <span class="property-type"><a href="#inputs">LinkedServerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -284,11 +284,11 @@ const linkedServer = new azure_nextgen.cache.latest.LinkedServer("linkedServer",
 
 ## LinkedServer Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -724,7 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cache/latest:LinkedServer cache2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/linkedServers/cache2 
+$ pulumi import azure-nextgen:cache:LinkedServer cache2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/linkedServers/cache2 
 ```
 
 

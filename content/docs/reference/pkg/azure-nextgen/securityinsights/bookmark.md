@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.Bookmark resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a bookmark in Azure Security Insights.
-Latest API Version: 2020-01-01.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bookmark = new AzureNextGen.SecurityInsights.Latest.Bookmark("bookmark", new AzureNextGen.SecurityInsights.Latest.BookmarkArgs
+        var bookmark = new AzureNextGen.SecurityInsights.Bookmark("bookmark", new AzureNextGen.SecurityInsights.BookmarkArgs
         {
             BookmarkId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
             Created = "2019-01-01T13:15:30Z",
-            CreatedBy = new AzureNextGen.SecurityInsights.Latest.Inputs.UserInfoArgs
+            CreatedBy = new AzureNextGen.SecurityInsights.Inputs.UserInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -47,7 +47,7 @@ class MyStack : Stack
             QueryResult = "Security Event query result",
             ResourceGroupName = "myRg",
             Updated = "2019-01-01T13:15:30Z",
-            UpdatedBy = new AzureNextGen.SecurityInsights.Latest.Inputs.UserInfoArgs
+            UpdatedBy = new AzureNextGen.SecurityInsights.Inputs.UserInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -67,7 +67,7 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/latest"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -112,10 +112,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bookmark = azure_nextgen.securityinsights.latest.Bookmark("bookmark",
+bookmark = azure_nextgen.securityinsights.Bookmark("bookmark",
     bookmark_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     created="2019-01-01T13:15:30Z",
-    created_by=azure_nextgen.securityinsights.latest.UserInfoArgs(
+    created_by=azure_nextgen.securityinsights.UserInfoArgs(
         object_id="2046feea-040d-4a46-9e2b-91c2941bfa70",
     ),
     display_name="My bookmark",
@@ -129,7 +129,7 @@ bookmark = azure_nextgen.securityinsights.latest.Bookmark("bookmark",
     query_result="Security Event query result",
     resource_group_name="myRg",
     updated="2019-01-01T13:15:30Z",
-    updated_by=azure_nextgen.securityinsights.latest.UserInfoArgs(
+    updated_by=azure_nextgen.securityinsights.UserInfoArgs(
         object_id="2046feea-040d-4a46-9e2b-91c2941bfa70",
     ),
     workspace_name="myWorkspace")
@@ -144,7 +144,7 @@ bookmark = azure_nextgen.securityinsights.latest.Bookmark("bookmark",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const bookmark = new azure_nextgen.securityinsights.latest.Bookmark("bookmark", {
+const bookmark = new azure_nextgen.securityinsights.Bookmark("bookmark", {
     bookmarkId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     created: "2019-01-01T13:15:30Z",
     createdBy: {
@@ -179,7 +179,7 @@ const bookmark = new azure_nextgen.securityinsights.latest.Bookmark("bookmark", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bookmark</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BookmarkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bookmark</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BookmarkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -187,11 +187,11 @@ const bookmark = new azure_nextgen.securityinsights.latest.Bookmark("bookmark", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBookmark</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BookmarkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bookmark</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBookmark</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BookmarkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bookmark</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bookmark</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BookmarkArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bookmark</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BookmarkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -212,7 +212,7 @@ const bookmark = new azure_nextgen.securityinsights.latest.Bookmark("bookmark", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BookmarkArgs</span>
+        <span class="property-type"><a href="#inputs">BookmarkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,7 +281,7 @@ const bookmark = new azure_nextgen.securityinsights.latest.Bookmark("bookmark", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BookmarkArgs</span>
+        <span class="property-type"><a href="#inputs">BookmarkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -320,7 +320,7 @@ const bookmark = new azure_nextgen.securityinsights.latest.Bookmark("bookmark", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BookmarkArgs</span>
+        <span class="property-type"><a href="#inputs">BookmarkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -343,11 +343,11 @@ const bookmark = new azure_nextgen.securityinsights.latest.Bookmark("bookmark", 
 
 ## Bookmark Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Bookmark resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Bookmark resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1543,8 +1543,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
 </span>
@@ -1558,8 +1558,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
 </span>
@@ -1573,8 +1573,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
@@ -1588,8 +1588,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
@@ -1623,8 +1623,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
 </span>
@@ -1656,8 +1656,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
 </span>
@@ -1689,8 +1689,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
@@ -1722,8 +1722,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
@@ -1739,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:securityinsights/latest:Bookmark 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
+$ pulumi import azure-nextgen:securityinsights:Bookmark 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
 ```
 
 

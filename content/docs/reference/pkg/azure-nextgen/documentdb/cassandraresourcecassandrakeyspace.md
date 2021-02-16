@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.CassandraResourceCass
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB Cassandra keyspace.
-Latest API Version: 2020-09-01.
+API Version: 2021-01-15.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cassandraResourceCassandraKeyspace = new AzureNextGen.DocumentDB.Latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", new AzureNextGen.DocumentDB.Latest.CassandraResourceCassandraKeyspaceArgs
+        var cassandraResourceCassandraKeyspace = new AzureNextGen.DocumentDB.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", new AzureNextGen.DocumentDB.CassandraResourceCassandraKeyspaceArgs
         {
             AccountName = "ddb1",
             KeyspaceName = "keyspaceName",
             Location = "West US",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.CassandraKeyspaceResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Inputs.CassandraKeyspaceResourceArgs
             {
                 Id = "keyspaceName",
             },
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,12 +88,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cassandra_resource_cassandra_keyspace = azure_nextgen.documentdb.latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace",
+cassandra_resource_cassandra_keyspace = azure_nextgen.documentdb.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace",
     account_name="ddb1",
     keyspace_name="keyspaceName",
     location="West US",
-    options=azure_nextgen.documentdb.latest.CreateUpdateOptionsArgs(),
-    resource=azure_nextgen.documentdb.latest.CassandraKeyspaceResourceArgs(
+    options=azure_nextgen.documentdb.CreateUpdateOptionsArgs(),
+    resource=azure_nextgen.documentdb.CassandraKeyspaceResourceArgs(
         id="keyspaceName",
     ),
     resource_group_name="rg1",
@@ -109,7 +109,7 @@ cassandra_resource_cassandra_keyspace = azure_nextgen.documentdb.latest.Cassandr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cassandraResourceCassandraKeyspace = new azure_nextgen.documentdb.latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", {
+const cassandraResourceCassandraKeyspace = new azure_nextgen.documentdb.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", {
     accountName: "ddb1",
     keyspaceName: "keyspaceName",
     location: "West US",
@@ -133,7 +133,7 @@ const cassandraResourceCassandraKeyspace = new azure_nextgen.documentdb.latest.C
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CassandraResourceCassandraKeyspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">CassandraResourceCassandraKeyspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CassandraResourceCassandraKeyspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraResourceCassandraKeyspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -141,11 +141,11 @@ const cassandraResourceCassandraKeyspace = new azure_nextgen.documentdb.latest.C
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCassandraResourceCassandraKeyspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">CassandraResourceCassandraKeyspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CassandraResourceCassandraKeyspace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCassandraResourceCassandraKeyspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CassandraResourceCassandraKeyspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CassandraResourceCassandraKeyspace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CassandraResourceCassandraKeyspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">CassandraResourceCassandraKeyspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CassandraResourceCassandraKeyspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CassandraResourceCassandraKeyspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -166,7 +166,7 @@ const cassandraResourceCassandraKeyspace = new azure_nextgen.documentdb.latest.C
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CassandraResourceCassandraKeyspaceArgs</span>
+        <span class="property-type"><a href="#inputs">CassandraResourceCassandraKeyspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -235,7 +235,7 @@ const cassandraResourceCassandraKeyspace = new azure_nextgen.documentdb.latest.C
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CassandraResourceCassandraKeyspaceArgs</span>
+        <span class="property-type"><a href="#inputs">CassandraResourceCassandraKeyspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,7 +274,7 @@ const cassandraResourceCassandraKeyspace = new azure_nextgen.documentdb.latest.C
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CassandraResourceCassandraKeyspaceArgs</span>
+        <span class="property-type"><a href="#inputs">CassandraResourceCassandraKeyspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -297,11 +297,11 @@ const cassandraResourceCassandraKeyspace = new azure_nextgen.documentdb.latest.C
 
 ## CassandraResourceCassandraKeyspace Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The CassandraResourceCassandraKeyspace resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The CassandraResourceCassandraKeyspace resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1287,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:CassandraResourceCassandraKeyspace keyspaceName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/cassandraKeyspaces/keyspaceName 
+$ pulumi import azure-nextgen:documentdb:CassandraResourceCassandraKeyspace keyspaceName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/cassandraKeyspaces/keyspaceName 
 ```
 
 

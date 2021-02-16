@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.VirtualNetworkRule resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A virtual network rule.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkRule = new AzureNextGen.Sql.V20200801Preview.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.Sql.V20200801Preview.VirtualNetworkRuleArgs
+        var virtualNetworkRule = new AzureNextGen.Sql.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.Sql.VirtualNetworkRuleArgs
         {
             IgnoreMissingVnetServiceEndpoint = false,
             ResourceGroupName = "Default",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_rule = azure_nextgen.sql.v20200801preview.VirtualNetworkRule("virtualNetworkRule",
+virtual_network_rule = azure_nextgen.sql.VirtualNetworkRule("virtualNetworkRule",
     ignore_missing_vnet_service_endpoint=False,
     resource_group_name="Default",
     server_name="vnet-test-svr",
@@ -95,7 +96,7 @@ virtual_network_rule = azure_nextgen.sql.v20200801preview.VirtualNetworkRule("vi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetworkRule = new azure_nextgen.sql.v20200801preview.VirtualNetworkRule("virtualNetworkRule", {
+const virtualNetworkRule = new azure_nextgen.sql.VirtualNetworkRule("virtualNetworkRule", {
     ignoreMissingVnetServiceEndpoint: false,
     resourceGroupName: "Default",
     serverName: "vnet-test-svr",
@@ -115,7 +116,7 @@ const virtualNetworkRule = new azure_nextgen.sql.v20200801preview.VirtualNetwork
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualNetworkRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualNetworkRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualNetworkRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualNetworkRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -123,11 +124,11 @@ const virtualNetworkRule = new azure_nextgen.sql.v20200801preview.VirtualNetwork
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualNetworkRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualNetworkRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNetworkRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualNetworkRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualNetworkRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNetworkRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualNetworkRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualNetworkRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualNetworkRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualNetworkRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,7 +149,7 @@ const virtualNetworkRule = new azure_nextgen.sql.v20200801preview.VirtualNetwork
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualNetworkRuleArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualNetworkRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -217,7 +218,7 @@ const virtualNetworkRule = new azure_nextgen.sql.v20200801preview.VirtualNetwork
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualNetworkRuleArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualNetworkRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -256,7 +257,7 @@ const virtualNetworkRule = new azure_nextgen.sql.v20200801preview.VirtualNetwork
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualNetworkRuleArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualNetworkRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -279,11 +280,11 @@ const virtualNetworkRule = new azure_nextgen.sql.v20200801preview.VirtualNetwork
 
 ## VirtualNetworkRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualNetworkRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualNetworkRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -677,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:VirtualNetworkRule vnet-firewall-rule /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/vnet-test-svr/virtualNetworkRules/vnet-firewall-rule 
+$ pulumi import azure-nextgen:sql:VirtualNetworkRule vnet-firewall-rule /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/vnet-test-svr/virtualNetworkRules/vnet-firewall-rule 
 ```
 
 

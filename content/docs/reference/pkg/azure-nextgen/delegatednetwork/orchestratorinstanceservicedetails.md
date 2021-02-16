@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.delegatednetwork.OrchestratorIns
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of a orchestrator.
+API Version: 2020-08-08-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var orchestratorInstanceServiceDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails", new AzureNextGen.DelegatedNetwork.V20200808Preview.OrchestratorInstanceServiceDetailsArgs
+        var orchestratorInstanceServiceDetails = new AzureNextGen.DelegatedNetwork.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails", new AzureNextGen.DelegatedNetwork.OrchestratorInstanceServiceDetailsArgs
         {
             ApiServerEndpoint = "https://testk8s.cloudapp.net",
             ClusterRootCA = "ddsadsad344mfdsfdl",
-            ControllerDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.Inputs.ControllerDetailsArgs
+            ControllerDetails = new AzureNextGen.DelegatedNetwork.Inputs.ControllerDetailsArgs
             {
                 Id = "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller",
             },
-            Identity = new AzureNextGen.DelegatedNetwork.V20200808Preview.Inputs.OrchestratorIdentityArgs
+            Identity = new AzureNextGen.DelegatedNetwork.Inputs.OrchestratorIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -59,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	delegatednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/delegatednetwork/v20200808preview"
+	delegatednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/delegatednetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,13 +99,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-orchestrator_instance_service_details = azure_nextgen.delegatednetwork.v20200808preview.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails",
+orchestrator_instance_service_details = azure_nextgen.delegatednetwork.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails",
     api_server_endpoint="https://testk8s.cloudapp.net",
     cluster_root_ca="ddsadsad344mfdsfdl",
-    controller_details=azure_nextgen.delegatednetwork.v20200808preview.ControllerDetailsArgs(
+    controller_details=azure_nextgen.delegatednetwork.ControllerDetailsArgs(
         id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller",
     ),
-    identity=azure_nextgen.delegatednetwork.v20200808preview.OrchestratorIdentityArgs(
+    identity=azure_nextgen.delegatednetwork.OrchestratorIdentityArgs(
         type="SystemAssigned",
     ),
     kind="Kubernetes",
@@ -124,7 +125,7 @@ orchestrator_instance_service_details = azure_nextgen.delegatednetwork.v20200808
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const orchestratorInstanceServiceDetails = new azure_nextgen.delegatednetwork.v20200808preview.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails", {
+const orchestratorInstanceServiceDetails = new azure_nextgen.delegatednetwork.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails", {
     apiServerEndpoint: "https://testk8s.cloudapp.net",
     clusterRootCA: "ddsadsad344mfdsfdl",
     controllerDetails: {
@@ -153,7 +154,7 @@ const orchestratorInstanceServiceDetails = new azure_nextgen.delegatednetwork.v2
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrchestratorInstanceServiceDetails</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">OrchestratorInstanceServiceDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrchestratorInstanceServiceDetails</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrchestratorInstanceServiceDetailsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -161,11 +162,11 @@ const orchestratorInstanceServiceDetails = new azure_nextgen.delegatednetwork.v2
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrchestratorInstanceServiceDetails</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">OrchestratorInstanceServiceDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrchestratorInstanceServiceDetails</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrchestratorInstanceServiceDetails</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrchestratorInstanceServiceDetailsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrchestratorInstanceServiceDetails</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrchestratorInstanceServiceDetails</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">OrchestratorInstanceServiceDetailsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrchestratorInstanceServiceDetails</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrchestratorInstanceServiceDetailsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,7 +187,7 @@ const orchestratorInstanceServiceDetails = new azure_nextgen.delegatednetwork.v2
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrchestratorInstanceServiceDetailsArgs</span>
+        <span class="property-type"><a href="#inputs">OrchestratorInstanceServiceDetailsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -255,7 +256,7 @@ const orchestratorInstanceServiceDetails = new azure_nextgen.delegatednetwork.v2
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrchestratorInstanceServiceDetailsArgs</span>
+        <span class="property-type"><a href="#inputs">OrchestratorInstanceServiceDetailsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -294,7 +295,7 @@ const orchestratorInstanceServiceDetails = new azure_nextgen.delegatednetwork.v2
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrchestratorInstanceServiceDetailsArgs</span>
+        <span class="property-type"><a href="#inputs">OrchestratorInstanceServiceDetailsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -317,11 +318,11 @@ const orchestratorInstanceServiceDetails = new azure_nextgen.delegatednetwork.v2
 
 ## OrchestratorInstanceServiceDetails Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The OrchestratorInstanceServiceDetails resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The OrchestratorInstanceServiceDetails resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1359,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:delegatednetwork/v20200808preview:OrchestratorInstanceServiceDetails testk8s1 /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/orchestrators/testk8s1 
+$ pulumi import azure-nextgen:delegatednetwork:OrchestratorInstanceServiceDetails testk8s1 /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/orchestrators/testk8s1 
 ```
 
 

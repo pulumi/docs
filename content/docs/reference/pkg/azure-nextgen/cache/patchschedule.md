@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cache.PatchSchedule resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Response to put/get patch schedules for Redis cache.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var patchSchedule = new AzureNextGen.Cache.Latest.PatchSchedule("patchSchedule", new AzureNextGen.Cache.Latest.PatchScheduleArgs
+        var patchSchedule = new AzureNextGen.Cache.PatchSchedule("patchSchedule", new AzureNextGen.Cache.PatchScheduleArgs
         {
             Default = "default",
             Name = "cache1",
             ResourceGroupName = "rg1",
             ScheduleEntries = 
             {
-                new AzureNextGen.Cache.Latest.Inputs.ScheduleEntryArgs
+                new AzureNextGen.Cache.Inputs.ScheduleEntryArgs
                 {
                     DayOfWeek = "Monday",
                     MaintenanceWindow = "PT5H",
                     StartHourUtc = 12,
                 },
-                new AzureNextGen.Cache.Latest.Inputs.ScheduleEntryArgs
+                new AzureNextGen.Cache.Inputs.ScheduleEntryArgs
                 {
                     DayOfWeek = "Tuesday",
                     StartHourUtc = 12,
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache/latest"
+	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,17 +100,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-patch_schedule = azure_nextgen.cache.latest.PatchSchedule("patchSchedule",
+patch_schedule = azure_nextgen.cache.PatchSchedule("patchSchedule",
     default="default",
     name="cache1",
     resource_group_name="rg1",
     schedule_entries=[
-        azure_nextgen.cache.latest.ScheduleEntryArgs(
+        azure_nextgen.cache.ScheduleEntryArgs(
             day_of_week="Monday",
             maintenance_window="PT5H",
             start_hour_utc=12,
         ),
-        azure_nextgen.cache.latest.ScheduleEntryArgs(
+        azure_nextgen.cache.ScheduleEntryArgs(
             day_of_week="Tuesday",
             start_hour_utc=12,
         ),
@@ -126,7 +126,7 @@ patch_schedule = azure_nextgen.cache.latest.PatchSchedule("patchSchedule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const patchSchedule = new azure_nextgen.cache.latest.PatchSchedule("patchSchedule", {
+const patchSchedule = new azure_nextgen.cache.PatchSchedule("patchSchedule", {
     "default": "default",
     name: "cache1",
     resourceGroupName: "rg1",
@@ -155,7 +155,7 @@ const patchSchedule = new azure_nextgen.cache.latest.PatchSchedule("patchSchedul
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PatchScheduleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -163,11 +163,11 @@ const patchSchedule = new azure_nextgen.cache.latest.PatchSchedule("patchSchedul
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPatchSchedule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PatchScheduleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchSchedule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPatchSchedule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PatchScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchSchedule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PatchScheduleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PatchScheduleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -188,7 +188,7 @@ const patchSchedule = new azure_nextgen.cache.latest.PatchSchedule("patchSchedul
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PatchScheduleArgs</span>
+        <span class="property-type"><a href="#inputs">PatchScheduleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -257,7 +257,7 @@ const patchSchedule = new azure_nextgen.cache.latest.PatchSchedule("patchSchedul
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PatchScheduleArgs</span>
+        <span class="property-type"><a href="#inputs">PatchScheduleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -296,7 +296,7 @@ const patchSchedule = new azure_nextgen.cache.latest.PatchSchedule("patchSchedul
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PatchScheduleArgs</span>
+        <span class="property-type"><a href="#inputs">PatchScheduleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -319,11 +319,11 @@ const patchSchedule = new azure_nextgen.cache.latest.PatchSchedule("patchSchedul
 
 ## PatchSchedule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -975,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cache/latest:PatchSchedule default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/patchSchedules/default 
+$ pulumi import azure-nextgen:cache:PatchSchedule default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/patchSchedules/default 
 ```
 
 

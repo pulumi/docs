@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.signalrservice.SignalR resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A class represent a SignalR service resource.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var signalR = new AzureNextGen.SignalRService.Latest.SignalR("signalR", new AzureNextGen.SignalRService.Latest.SignalRArgs
+        var signalR = new AzureNextGen.SignalRService.SignalR("signalR", new AzureNextGen.SignalRService.SignalRArgs
         {
-            Cors = new AzureNextGen.SignalRService.Latest.Inputs.SignalRCorsSettingsArgs
+            Cors = new AzureNextGen.SignalRService.Inputs.SignalRCorsSettingsArgs
             {
                 AllowedOrigins = 
                 {
@@ -39,19 +39,19 @@ class MyStack : Stack
             },
             Features = 
             {
-                new AzureNextGen.SignalRService.Latest.Inputs.SignalRFeatureArgs
+                new AzureNextGen.SignalRService.Inputs.SignalRFeatureArgs
                 {
                     Flag = "ServiceMode",
                     Properties = ,
                     Value = "Serverless",
                 },
-                new AzureNextGen.SignalRService.Latest.Inputs.SignalRFeatureArgs
+                new AzureNextGen.SignalRService.Inputs.SignalRFeatureArgs
                 {
                     Flag = "EnableConnectivityLogs",
                     Properties = ,
                     Value = "True",
                 },
-                new AzureNextGen.SignalRService.Latest.Inputs.SignalRFeatureArgs
+                new AzureNextGen.SignalRService.Inputs.SignalRFeatureArgs
                 {
                     Flag = "EnableMessagingLogs",
                     Properties = ,
@@ -60,12 +60,12 @@ class MyStack : Stack
             },
             Kind = "SignalR",
             Location = "eastus",
-            NetworkACLs = new AzureNextGen.SignalRService.Latest.Inputs.SignalRNetworkACLsArgs
+            NetworkACLs = new AzureNextGen.SignalRService.Inputs.SignalRNetworkACLsArgs
             {
                 DefaultAction = "Deny",
                 PrivateEndpoints = 
                 {
-                    new AzureNextGen.SignalRService.Latest.Inputs.PrivateEndpointACLArgs
+                    new AzureNextGen.SignalRService.Inputs.PrivateEndpointACLArgs
                     {
                         Allow = 
                         {
@@ -74,7 +74,7 @@ class MyStack : Stack
                         Name = "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
                     },
                 },
-                PublicNetwork = new AzureNextGen.SignalRService.Latest.Inputs.NetworkACLArgs
+                PublicNetwork = new AzureNextGen.SignalRService.Inputs.NetworkACLArgs
                 {
                     Allow = 
                     {
@@ -84,7 +84,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "myResourceGroup",
             ResourceName = "mySignalRService",
-            Sku = new AzureNextGen.SignalRService.Latest.Inputs.ResourceSkuArgs
+            Sku = new AzureNextGen.SignalRService.Inputs.ResourceSkuArgs
             {
                 Capacity = 1,
                 Name = "Standard_S1",
@@ -94,11 +94,11 @@ class MyStack : Stack
             {
                 { "key1", "value1" },
             },
-            Upstream = new AzureNextGen.SignalRService.Latest.Inputs.ServerlessUpstreamSettingsArgs
+            Upstream = new AzureNextGen.SignalRService.Inputs.ServerlessUpstreamSettingsArgs
             {
                 Templates = 
                 {
-                    new AzureNextGen.SignalRService.Latest.Inputs.UpstreamTemplateArgs
+                    new AzureNextGen.SignalRService.Inputs.UpstreamTemplateArgs
                     {
                         CategoryPattern = "*",
                         EventPattern = "connect,disconnect",
@@ -122,7 +122,7 @@ class MyStack : Stack
 package main
 
 import (
-	signalrservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/signalrservice/latest"
+	signalrservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/signalrservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -208,25 +208,25 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-signal_r = azure_nextgen.signalrservice.latest.SignalR("signalR",
-    cors=azure_nextgen.signalrservice.latest.SignalRCorsSettingsArgs(
+signal_r = azure_nextgen.signalrservice.SignalR("signalR",
+    cors=azure_nextgen.signalrservice.SignalRCorsSettingsArgs(
         allowed_origins=[
             "https://foo.com",
             "https://bar.com",
         ],
     ),
     features=[
-        azure_nextgen.signalrservice.latest.SignalRFeatureArgs(
+        azure_nextgen.signalrservice.SignalRFeatureArgs(
             flag="ServiceMode",
             properties={},
             value="Serverless",
         ),
-        azure_nextgen.signalrservice.latest.SignalRFeatureArgs(
+        azure_nextgen.signalrservice.SignalRFeatureArgs(
             flag="EnableConnectivityLogs",
             properties={},
             value="True",
         ),
-        azure_nextgen.signalrservice.latest.SignalRFeatureArgs(
+        azure_nextgen.signalrservice.SignalRFeatureArgs(
             flag="EnableMessagingLogs",
             properties={},
             value="False",
@@ -234,19 +234,19 @@ signal_r = azure_nextgen.signalrservice.latest.SignalR("signalR",
     ],
     kind="SignalR",
     location="eastus",
-    network_acls=azure_nextgen.signalrservice.latest.SignalRNetworkACLsArgs(
+    network_acls=azure_nextgen.signalrservice.SignalRNetworkACLsArgs(
         default_action="Deny",
-        private_endpoints=[azure_nextgen.signalrservice.latest.PrivateEndpointACLArgs(
+        private_endpoints=[azure_nextgen.signalrservice.PrivateEndpointACLArgs(
             allow=["ServerConnection"],
             name="mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
         )],
-        public_network=azure_nextgen.signalrservice.latest.NetworkACLArgs(
+        public_network=azure_nextgen.signalrservice.NetworkACLArgs(
             allow=["ClientConnection"],
         ),
     ),
     resource_group_name="myResourceGroup",
     resource_name="mySignalRService",
-    sku=azure_nextgen.signalrservice.latest.ResourceSkuArgs(
+    sku=azure_nextgen.signalrservice.ResourceSkuArgs(
         capacity=1,
         name="Standard_S1",
         tier="Standard",
@@ -254,8 +254,8 @@ signal_r = azure_nextgen.signalrservice.latest.SignalR("signalR",
     tags={
         "key1": "value1",
     },
-    upstream=azure_nextgen.signalrservice.latest.ServerlessUpstreamSettingsArgs(
-        templates=[azure_nextgen.signalrservice.latest.UpstreamTemplateArgs(
+    upstream=azure_nextgen.signalrservice.ServerlessUpstreamSettingsArgs(
+        templates=[azure_nextgen.signalrservice.UpstreamTemplateArgs(
             category_pattern="*",
             event_pattern="connect,disconnect",
             hub_pattern="*",
@@ -273,7 +273,7 @@ signal_r = azure_nextgen.signalrservice.latest.SignalR("signalR",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
+const signalR = new azure_nextgen.signalrservice.SignalR("signalR", {
     cors: {
         allowedOrigins: [
             "https://foo.com",
@@ -341,7 +341,7 @@ const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SignalRArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SignalRArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -349,11 +349,11 @@ const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSignalR</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SignalRArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SignalR</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSignalR</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SignalRArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SignalR</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SignalRArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SignalRArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -374,7 +374,7 @@ const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SignalRArgs</span>
+        <span class="property-type"><a href="#inputs">SignalRArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -443,7 +443,7 @@ const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SignalRArgs</span>
+        <span class="property-type"><a href="#inputs">SignalRArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -482,7 +482,7 @@ const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SignalRArgs</span>
+        <span class="property-type"><a href="#inputs">SignalRArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -505,11 +505,11 @@ const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
 
 ## SignalR Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SignalR resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SignalR resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4135,7 +4135,7 @@ There are 3 kind of patterns supported:
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:signalrservice/latest:SignalR mySignalRService /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/SignalR/mySignalRService 
+$ pulumi import azure-nextgen:signalrservice:SignalR mySignalRService /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/SignalR/mySignalRService 
 ```
 
 

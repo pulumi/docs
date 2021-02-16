@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.appplatform.App resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 App resource payload
-Latest API Version: 2020-07-01.
+API Version: 2020-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,22 +27,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var app = new AzureNextGen.AppPlatform.Latest.App("app", new AzureNextGen.AppPlatform.Latest.AppArgs
+        var app = new AzureNextGen.AppPlatform.App("app", new AzureNextGen.AppPlatform.AppArgs
         {
             AppName = "myapp",
             Location = "eastus",
-            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.AppResourcePropertiesArgs
+            Properties = new AzureNextGen.AppPlatform.Inputs.AppResourcePropertiesArgs
             {
                 ActiveDeploymentName = "mydeployment1",
                 Fqdn = "myapp.mydomain.com",
                 HttpsOnly = false,
-                PersistentDisk = new AzureNextGen.AppPlatform.Latest.Inputs.PersistentDiskArgs
+                PersistentDisk = new AzureNextGen.AppPlatform.Inputs.PersistentDiskArgs
                 {
                     MountPath = "mypersistentdisk",
                     SizeInGB = 2,
                 },
                 Public = true,
-                TemporaryDisk = new AzureNextGen.AppPlatform.Latest.Inputs.TemporaryDiskArgs
+                TemporaryDisk = new AzureNextGen.AppPlatform.Inputs.TemporaryDiskArgs
                 {
                     MountPath = "mytemporarydisk",
                     SizeInGB = 2,
@@ -65,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -108,19 +108,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-app = azure_nextgen.appplatform.latest.App("app",
+app = azure_nextgen.appplatform.App("app",
     app_name="myapp",
     location="eastus",
-    properties=azure_nextgen.appplatform.latest.AppResourcePropertiesArgs(
+    properties=azure_nextgen.appplatform.AppResourcePropertiesArgs(
         active_deployment_name="mydeployment1",
         fqdn="myapp.mydomain.com",
         https_only=False,
-        persistent_disk=azure_nextgen.appplatform.latest.PersistentDiskArgs(
+        persistent_disk=azure_nextgen.appplatform.PersistentDiskArgs(
             mount_path="mypersistentdisk",
             size_in_gb=2,
         ),
         public=True,
-        temporary_disk=azure_nextgen.appplatform.latest.TemporaryDiskArgs(
+        temporary_disk=azure_nextgen.appplatform.TemporaryDiskArgs(
             mount_path="mytemporarydisk",
             size_in_gb=2,
         ),
@@ -138,7 +138,7 @@ app = azure_nextgen.appplatform.latest.App("app",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const app = new azure_nextgen.appplatform.latest.App("app", {
+const app = new azure_nextgen.appplatform.App("app", {
     appName: "myapp",
     location: "eastus",
     properties: {
@@ -171,7 +171,7 @@ const app = new azure_nextgen.appplatform.latest.App("app", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">App</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">App</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -179,11 +179,11 @@ const app = new azure_nextgen.appplatform.latest.App("app", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">App</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">App</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">App</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AppArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">App</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -204,7 +204,7 @@ const app = new azure_nextgen.appplatform.latest.App("app", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AppArgs</span>
+        <span class="property-type"><a href="#inputs">AppArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -273,7 +273,7 @@ const app = new azure_nextgen.appplatform.latest.App("app", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AppArgs</span>
+        <span class="property-type"><a href="#inputs">AppArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -312,7 +312,7 @@ const app = new azure_nextgen.appplatform.latest.App("app", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AppArgs</span>
+        <span class="property-type"><a href="#inputs">AppArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -335,11 +335,11 @@ const app = new azure_nextgen.appplatform.latest.App("app", {
 
 ## App Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The App resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The App resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2079,7 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:appplatform/latest:App myapp /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp 
+$ pulumi import azure-nextgen:appplatform:App myapp /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp 
 ```
 
 

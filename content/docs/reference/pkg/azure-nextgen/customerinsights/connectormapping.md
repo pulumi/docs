@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.ConnectorMappin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The connector mapping resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectorMapping = new AzureNextGen.CustomerInsights.Latest.ConnectorMapping("connectorMapping", new AzureNextGen.CustomerInsights.Latest.ConnectorMappingArgs
+        var connectorMapping = new AzureNextGen.CustomerInsights.ConnectorMapping("connectorMapping", new AzureNextGen.CustomerInsights.ConnectorMappingArgs
         {
             ConnectorName = "testConnector8858",
             Description = "Test mapping",
@@ -36,26 +36,26 @@ class MyStack : Stack
             EntityTypeName = "TestInteractionType2967",
             HubName = "sdkTestHub",
             MappingName = "testMapping12491",
-            MappingProperties = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingPropertiesArgs
+            MappingProperties = new AzureNextGen.CustomerInsights.Inputs.ConnectorMappingPropertiesArgs
             {
-                Availability = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingAvailabilityArgs
+                Availability = new AzureNextGen.CustomerInsights.Inputs.ConnectorMappingAvailabilityArgs
                 {
                     Frequency = "Hour",
                     Interval = 5,
                 },
-                CompleteOperation = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingCompleteOperationArgs
+                CompleteOperation = new AzureNextGen.CustomerInsights.Inputs.ConnectorMappingCompleteOperationArgs
                 {
                     CompletionOperationType = "DeleteFile",
                     DestinationFolder = "fakePath",
                 },
-                ErrorManagement = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingErrorManagementArgs
+                ErrorManagement = new AzureNextGen.CustomerInsights.Inputs.ConnectorMappingErrorManagementArgs
                 {
                     ErrorLimit = 10,
                     ErrorManagementType = "StopImport",
                 },
                 FileFilter = "unknown",
                 FolderPath = "http://sample.dne/file",
-                Format = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingFormatArgs
+                Format = new AzureNextGen.CustomerInsights.Inputs.ConnectorMappingFormatArgs
                 {
                     ColumnDelimiter = "|",
                     FormatType = "TextFormat",
@@ -63,13 +63,13 @@ class MyStack : Stack
                 HasHeader = false,
                 Structure = 
                 {
-                    new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingStructureArgs
+                    new AzureNextGen.CustomerInsights.Inputs.ConnectorMappingStructureArgs
                     {
                         ColumnName = "unknown1",
                         IsEncrypted = false,
                         PropertyName = "unknwon1",
                     },
-                    new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingStructureArgs
+                    new AzureNextGen.CustomerInsights.Inputs.ConnectorMappingStructureArgs
                     {
                         ColumnName = "unknown2",
                         IsEncrypted = true,
@@ -93,7 +93,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -159,7 +159,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connector_mapping = azure_nextgen.customerinsights.latest.ConnectorMapping("connectorMapping",
+connector_mapping = azure_nextgen.customerinsights.ConnectorMapping("connectorMapping",
     connector_name="testConnector8858",
     description="Test mapping",
     display_name="testMapping12491",
@@ -167,33 +167,33 @@ connector_mapping = azure_nextgen.customerinsights.latest.ConnectorMapping("conn
     entity_type_name="TestInteractionType2967",
     hub_name="sdkTestHub",
     mapping_name="testMapping12491",
-    mapping_properties=azure_nextgen.customerinsights.latest.ConnectorMappingPropertiesArgs(
-        availability=azure_nextgen.customerinsights.latest.ConnectorMappingAvailabilityArgs(
+    mapping_properties=azure_nextgen.customerinsights.ConnectorMappingPropertiesArgs(
+        availability=azure_nextgen.customerinsights.ConnectorMappingAvailabilityArgs(
             frequency="Hour",
             interval=5,
         ),
-        complete_operation=azure_nextgen.customerinsights.latest.ConnectorMappingCompleteOperationArgs(
+        complete_operation=azure_nextgen.customerinsights.ConnectorMappingCompleteOperationArgs(
             completion_operation_type="DeleteFile",
             destination_folder="fakePath",
         ),
-        error_management=azure_nextgen.customerinsights.latest.ConnectorMappingErrorManagementArgs(
+        error_management=azure_nextgen.customerinsights.ConnectorMappingErrorManagementArgs(
             error_limit=10,
             error_management_type="StopImport",
         ),
         file_filter="unknown",
         folder_path="http://sample.dne/file",
-        format=azure_nextgen.customerinsights.latest.ConnectorMappingFormatArgs(
+        format=azure_nextgen.customerinsights.ConnectorMappingFormatArgs(
             column_delimiter="|",
             format_type="TextFormat",
         ),
         has_header=False,
         structure=[
-            azure_nextgen.customerinsights.latest.ConnectorMappingStructureArgs(
+            azure_nextgen.customerinsights.ConnectorMappingStructureArgs(
                 column_name="unknown1",
                 is_encrypted=False,
                 property_name="unknwon1",
             ),
-            azure_nextgen.customerinsights.latest.ConnectorMappingStructureArgs(
+            azure_nextgen.customerinsights.ConnectorMappingStructureArgs(
                 column_name="unknown2",
                 is_encrypted=True,
                 property_name="unknwon2",
@@ -212,7 +212,7 @@ connector_mapping = azure_nextgen.customerinsights.latest.ConnectorMapping("conn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connectorMapping = new azure_nextgen.customerinsights.latest.ConnectorMapping("connectorMapping", {
+const connectorMapping = new azure_nextgen.customerinsights.ConnectorMapping("connectorMapping", {
     connectorName: "testConnector8858",
     description: "Test mapping",
     displayName: "testMapping12491",
@@ -268,7 +268,7 @@ const connectorMapping = new azure_nextgen.customerinsights.latest.ConnectorMapp
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectorMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ConnectorMappingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectorMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectorMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -276,11 +276,11 @@ const connectorMapping = new azure_nextgen.customerinsights.latest.ConnectorMapp
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectorMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ConnectorMappingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectorMapping</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectorMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectorMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectorMapping</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectorMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ConnectorMappingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectorMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectorMappingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -301,7 +301,7 @@ const connectorMapping = new azure_nextgen.customerinsights.latest.ConnectorMapp
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectorMappingArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectorMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -370,7 +370,7 @@ const connectorMapping = new azure_nextgen.customerinsights.latest.ConnectorMapp
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectorMappingArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectorMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -409,7 +409,7 @@ const connectorMapping = new azure_nextgen.customerinsights.latest.ConnectorMapp
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectorMappingArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectorMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -432,11 +432,11 @@ const connectorMapping = new azure_nextgen.customerinsights.latest.ConnectorMapp
 
 ## ConnectorMapping Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ConnectorMapping resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ConnectorMapping resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3614,7 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:ConnectorMapping sdkTestHub/testConnector8858/testMapping12491 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/connectors/testConnector8858/mappings/testMapping12491 
+$ pulumi import azure-nextgen:customerinsights:ConnectorMapping sdkTestHub/testConnector8858/testMapping12491 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/connectors/testConnector8858/mappings/testMapping12491 
 ```
 
 

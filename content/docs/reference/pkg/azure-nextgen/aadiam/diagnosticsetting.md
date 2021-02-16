@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.aadiam.DiagnosticSetting resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The diagnostic setting resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diagnosticSetting = new AzureNextGen.AadIam.Latest.DiagnosticSetting("diagnosticSetting", new AzureNextGen.AadIam.Latest.DiagnosticSettingArgs
+        var diagnosticSetting = new AzureNextGen.AadIam.DiagnosticSetting("diagnosticSetting", new AzureNextGen.AadIam.DiagnosticSettingArgs
         {
             EventHubAuthorizationRuleId = "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
             EventHubName = "myeventhub",
             Logs = 
             {
-                new AzureNextGen.AadIam.Latest.Inputs.LogSettingsArgs
+                new AzureNextGen.AadIam.Inputs.LogSettingsArgs
                 {
                     Category = "AuditLogs",
                     Enabled = true,
-                    RetentionPolicy = new AzureNextGen.AadIam.Latest.Inputs.RetentionPolicyArgs
+                    RetentionPolicy = new AzureNextGen.AadIam.Inputs.RetentionPolicyArgs
                     {
                         Days = 0,
                         Enabled = false,
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	aadiam "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aadiam/latest"
+	aadiam "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aadiam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -102,13 +102,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-diagnostic_setting = azure_nextgen.aadiam.latest.DiagnosticSetting("diagnosticSetting",
+diagnostic_setting = azure_nextgen.aadiam.DiagnosticSetting("diagnosticSetting",
     event_hub_authorization_rule_id="/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     event_hub_name="myeventhub",
-    logs=[azure_nextgen.aadiam.latest.LogSettingsArgs(
+    logs=[azure_nextgen.aadiam.LogSettingsArgs(
         category="AuditLogs",
         enabled=True,
-        retention_policy=azure_nextgen.aadiam.latest.RetentionPolicyArgs(
+        retention_policy=azure_nextgen.aadiam.RetentionPolicyArgs(
             days=0,
             enabled=False,
         ),
@@ -127,7 +127,7 @@ diagnostic_setting = azure_nextgen.aadiam.latest.DiagnosticSetting("diagnosticSe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const diagnosticSetting = new azure_nextgen.aadiam.latest.DiagnosticSetting("diagnosticSetting", {
+const diagnosticSetting = new azure_nextgen.aadiam.DiagnosticSetting("diagnosticSetting", {
     eventHubAuthorizationRuleId: "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     eventHubName: "myeventhub",
     logs: [{
@@ -155,7 +155,7 @@ const diagnosticSetting = new azure_nextgen.aadiam.latest.DiagnosticSetting("dia
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DiagnosticSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DiagnosticSettingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DiagnosticSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DiagnosticSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -163,11 +163,11 @@ const diagnosticSetting = new azure_nextgen.aadiam.latest.DiagnosticSetting("dia
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDiagnosticSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DiagnosticSettingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DiagnosticSetting</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDiagnosticSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DiagnosticSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DiagnosticSetting</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DiagnosticSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DiagnosticSettingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DiagnosticSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DiagnosticSettingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -188,7 +188,7 @@ const diagnosticSetting = new azure_nextgen.aadiam.latest.DiagnosticSetting("dia
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DiagnosticSettingArgs</span>
+        <span class="property-type"><a href="#inputs">DiagnosticSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -257,7 +257,7 @@ const diagnosticSetting = new azure_nextgen.aadiam.latest.DiagnosticSetting("dia
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DiagnosticSettingArgs</span>
+        <span class="property-type"><a href="#inputs">DiagnosticSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -296,7 +296,7 @@ const diagnosticSetting = new azure_nextgen.aadiam.latest.DiagnosticSetting("dia
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DiagnosticSettingArgs</span>
+        <span class="property-type"><a href="#inputs">DiagnosticSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -319,11 +319,11 @@ const diagnosticSetting = new azure_nextgen.aadiam.latest.DiagnosticSetting("dia
 
 ## DiagnosticSetting Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1223,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:aadiam/latest:DiagnosticSetting mysetting providers/microsoft.aadiam/diagnosticSettings/mysetting 
+$ pulumi import azure-nextgen:aadiam:DiagnosticSetting mysetting providers/microsoft.aadiam/diagnosticSettings/mysetting 
 ```
 
 

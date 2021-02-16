@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.AssessmentMetadataInSub
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Security assessment metadata
-Latest API Version: 2020-01-01.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assessmentMetadataInSubscription = new AzureNextGen.Security.Latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", new AzureNextGen.Security.Latest.AssessmentMetadataInSubscriptionArgs
+        var assessmentMetadataInSubscription = new AzureNextGen.Security.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", new AzureNextGen.Security.AssessmentMetadataInSubscriptionArgs
         {
             AssessmentMetadataName = "ca039e75-a276-4175-aebc-bcd41e4b14b7",
             AssessmentType = "CustomerManaged",
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/latest"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,7 +103,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assessment_metadata_in_subscription = azure_nextgen.security.latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription",
+assessment_metadata_in_subscription = azure_nextgen.security.AssessmentMetadataInSubscription("assessmentMetadataInSubscription",
     assessment_metadata_name="ca039e75-a276-4175-aebc-bcd41e4b14b7",
     assessment_type="CustomerManaged",
     category=["Compute"],
@@ -129,7 +129,7 @@ assessment_metadata_in_subscription = azure_nextgen.security.latest.AssessmentMe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const assessmentMetadataInSubscription = new azure_nextgen.security.latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", {
+const assessmentMetadataInSubscription = new azure_nextgen.security.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", {
     assessmentMetadataName: "ca039e75-a276-4175-aebc-bcd41e4b14b7",
     assessmentType: "CustomerManaged",
     category: ["Compute"],
@@ -158,7 +158,7 @@ const assessmentMetadataInSubscription = new azure_nextgen.security.latest.Asses
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AssessmentMetadataInSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AssessmentMetadataInSubscriptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AssessmentMetadataInSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssessmentMetadataInSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -166,11 +166,11 @@ const assessmentMetadataInSubscription = new azure_nextgen.security.latest.Asses
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessmentMetadataInSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AssessmentMetadataInSubscriptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AssessmentMetadataInSubscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessmentMetadataInSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AssessmentMetadataInSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AssessmentMetadataInSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AssessmentMetadataInSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AssessmentMetadataInSubscriptionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AssessmentMetadataInSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AssessmentMetadataInSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -191,7 +191,7 @@ const assessmentMetadataInSubscription = new azure_nextgen.security.latest.Asses
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AssessmentMetadataInSubscriptionArgs</span>
+        <span class="property-type"><a href="#inputs">AssessmentMetadataInSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -260,7 +260,7 @@ const assessmentMetadataInSubscription = new azure_nextgen.security.latest.Asses
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AssessmentMetadataInSubscriptionArgs</span>
+        <span class="property-type"><a href="#inputs">AssessmentMetadataInSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -299,7 +299,7 @@ const assessmentMetadataInSubscription = new azure_nextgen.security.latest.Asses
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AssessmentMetadataInSubscriptionArgs</span>
+        <span class="property-type"><a href="#inputs">AssessmentMetadataInSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -322,11 +322,11 @@ const assessmentMetadataInSubscription = new azure_nextgen.security.latest.Asses
 
 ## AssessmentMetadataInSubscription Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AssessmentMetadataInSubscription resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AssessmentMetadataInSubscription resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1584,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/latest:AssessmentMetadataInSubscription ca039e75-a276-4175-aebc-bcd41e4b14b7 /providers/Microsoft.Security/assessmentMetadata/ca039e75-a276-4175-aebc-bcd41e4b14b7 
+$ pulumi import azure-nextgen:security:AssessmentMetadataInSubscription ca039e75-a276-4175-aebc-bcd41e4b14b7 /providers/Microsoft.Security/assessmentMetadata/ca039e75-a276-4175-aebc-bcd41e4b14b7 
 ```
 
 

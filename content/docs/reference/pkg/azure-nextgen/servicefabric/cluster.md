@@ -12,7 +12,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.Cluster resource w
 
 The cluster resource
 
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -28,7 +28,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.ServiceFabric.Latest.Cluster("cluster", new AzureNextGen.ServiceFabric.Latest.ClusterArgs
+        var cluster = new AzureNextGen.ServiceFabric.Cluster("cluster", new AzureNextGen.ServiceFabric.ClusterArgs
         {
             AddOnFeatures = 
             {
@@ -37,21 +37,21 @@ class MyStack : Stack
                 "BackupRestoreService",
                 "ResourceMonitorService",
             },
-            ApplicationTypeVersionsCleanupPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ApplicationTypeVersionsCleanupPolicyArgs
+            ApplicationTypeVersionsCleanupPolicy = new AzureNextGen.ServiceFabric.Inputs.ApplicationTypeVersionsCleanupPolicyArgs
             {
                 MaxUnusedVersionsToKeep = 2,
             },
-            AzureActiveDirectory = new AzureNextGen.ServiceFabric.Latest.Inputs.AzureActiveDirectoryArgs
+            AzureActiveDirectory = new AzureNextGen.ServiceFabric.Inputs.AzureActiveDirectoryArgs
             {
                 ClientApplication = "d151ad89-4bce-4ae8-b3d1-1dc79679fa75",
                 ClusterApplication = "5886372e-7bf4-4878-a497-8098aba608ae",
                 TenantId = "6abcc6a0-8666-43f1-87b8-172cf86a9f9c",
             },
-            CertificateCommonNames = new AzureNextGen.ServiceFabric.Latest.Inputs.ServerCertificateCommonNamesArgs
+            CertificateCommonNames = new AzureNextGen.ServiceFabric.Inputs.ServerCertificateCommonNamesArgs
             {
                 CommonNames = 
                 {
-                    new AzureNextGen.ServiceFabric.Latest.Inputs.ServerCertificateCommonNameArgs
+                    new AzureNextGen.ServiceFabric.Inputs.ServerCertificateCommonNameArgs
                     {
                         CertificateCommonName = "abc.com",
                         CertificateIssuerThumbprint = "12599211F8F14C90AFA9532AD79A6F2CA1C00622",
@@ -61,7 +61,7 @@ class MyStack : Stack
             },
             ClientCertificateCommonNames = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.ClientCertificateCommonNameArgs
+                new AzureNextGen.ServiceFabric.Inputs.ClientCertificateCommonNameArgs
                 {
                     CertificateCommonName = "abc.com",
                     CertificateIssuerThumbprint = "5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
@@ -70,7 +70,7 @@ class MyStack : Stack
             },
             ClientCertificateThumbprints = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.ClientCertificateThumbprintArgs
+                new AzureNextGen.ServiceFabric.Inputs.ClientCertificateThumbprintArgs
                 {
                     CertificateThumbprint = "5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
                     IsAdmin = true,
@@ -78,7 +78,7 @@ class MyStack : Stack
             },
             ClusterCodeVersion = "7.0.470.9590",
             ClusterName = "myCluster",
-            DiagnosticsStorageAccountConfig = new AzureNextGen.ServiceFabric.Latest.Inputs.DiagnosticsStorageAccountConfigArgs
+            DiagnosticsStorageAccountConfig = new AzureNextGen.ServiceFabric.Inputs.DiagnosticsStorageAccountConfigArgs
             {
                 BlobEndpoint = "https://diag.blob.core.windows.net/",
                 ProtectedAccountKeyName = "StorageAccountKey1",
@@ -89,12 +89,12 @@ class MyStack : Stack
             EventStoreServiceEnabled = true,
             FabricSettings = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.SettingsSectionDescriptionArgs
+                new AzureNextGen.ServiceFabric.Inputs.SettingsSectionDescriptionArgs
                 {
                     Name = "UpgradeService",
                     Parameters = 
                     {
-                        new AzureNextGen.ServiceFabric.Latest.Inputs.SettingsParameterDescriptionArgs
+                        new AzureNextGen.ServiceFabric.Inputs.SettingsParameterDescriptionArgs
                         {
                             Name = "AppPollIntervalInSeconds",
                             Value = "60",
@@ -106,16 +106,16 @@ class MyStack : Stack
             ManagementEndpoint = "https://myCluster.eastus.cloudapp.azure.com:19080",
             NodeTypes = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.NodeTypeDescriptionArgs
+                new AzureNextGen.ServiceFabric.Inputs.NodeTypeDescriptionArgs
                 {
-                    ApplicationPorts = new AzureNextGen.ServiceFabric.Latest.Inputs.EndpointRangeDescriptionArgs
+                    ApplicationPorts = new AzureNextGen.ServiceFabric.Inputs.EndpointRangeDescriptionArgs
                     {
                         EndPort = 30000,
                         StartPort = 20000,
                     },
                     ClientConnectionEndpointPort = 19000,
                     DurabilityLevel = "Bronze",
-                    EphemeralPorts = new AzureNextGen.ServiceFabric.Latest.Inputs.EndpointRangeDescriptionArgs
+                    EphemeralPorts = new AzureNextGen.ServiceFabric.Inputs.EndpointRangeDescriptionArgs
                     {
                         EndPort = 64000,
                         StartPort = 49000,
@@ -128,11 +128,11 @@ class MyStack : Stack
             },
             ReliabilityLevel = "Silver",
             ResourceGroupName = "resRg",
-            ReverseProxyCertificateCommonNames = new AzureNextGen.ServiceFabric.Latest.Inputs.ServerCertificateCommonNamesArgs
+            ReverseProxyCertificateCommonNames = new AzureNextGen.ServiceFabric.Inputs.ServerCertificateCommonNamesArgs
             {
                 CommonNames = 
                 {
-                    new AzureNextGen.ServiceFabric.Latest.Inputs.ServerCertificateCommonNameArgs
+                    new AzureNextGen.ServiceFabric.Inputs.ServerCertificateCommonNameArgs
                     {
                         CertificateCommonName = "abc.com",
                         CertificateIssuerThumbprint = "12599211F8F14C90AFA9532AD79A6F2CA1C00622",
@@ -141,21 +141,21 @@ class MyStack : Stack
                 X509StoreName = "My",
             },
             Tags = ,
-            UpgradeDescription = new AzureNextGen.ServiceFabric.Latest.Inputs.ClusterUpgradePolicyArgs
+            UpgradeDescription = new AzureNextGen.ServiceFabric.Inputs.ClusterUpgradePolicyArgs
             {
-                DeltaHealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ClusterUpgradeDeltaHealthPolicyArgs
+                DeltaHealthPolicy = new AzureNextGen.ServiceFabric.Inputs.ClusterUpgradeDeltaHealthPolicyArgs
                 {
                     ApplicationDeltaHealthPolicies = 
                     {
-                        { "fabric:/myApp1", new AzureNextGen.ServiceFabric.Latest.Inputs.ApplicationDeltaHealthPolicyArgs
+                        { "fabric:/myApp1", new AzureNextGen.ServiceFabric.Inputs.ApplicationDeltaHealthPolicyArgs
                         {
-                            DefaultServiceTypeDeltaHealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceTypeDeltaHealthPolicyArgs
+                            DefaultServiceTypeDeltaHealthPolicy = new AzureNextGen.ServiceFabric.Inputs.ServiceTypeDeltaHealthPolicyArgs
                             {
                                 MaxPercentDeltaUnhealthyServices = 0,
                             },
                             ServiceTypeDeltaHealthPolicies = 
                             {
-                                { "myServiceType1", new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceTypeDeltaHealthPolicyArgs
+                                { "myServiceType1", new AzureNextGen.ServiceFabric.Inputs.ServiceTypeDeltaHealthPolicyArgs
                                 {
                                     MaxPercentDeltaUnhealthyServices = 0,
                                 } },
@@ -170,19 +170,19 @@ class MyStack : Stack
                 HealthCheckRetryTimeout = "00:05:00",
                 HealthCheckStableDuration = "00:00:30",
                 HealthCheckWaitDuration = "00:00:30",
-                HealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ClusterHealthPolicyArgs
+                HealthPolicy = new AzureNextGen.ServiceFabric.Inputs.ClusterHealthPolicyArgs
                 {
                     ApplicationHealthPolicies = 
                     {
-                        { "fabric:/myApp1", new AzureNextGen.ServiceFabric.Latest.Inputs.ApplicationHealthPolicyArgs
+                        { "fabric:/myApp1", new AzureNextGen.ServiceFabric.Inputs.ApplicationHealthPolicyArgs
                         {
-                            DefaultServiceTypeHealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceTypeHealthPolicyArgs
+                            DefaultServiceTypeHealthPolicy = new AzureNextGen.ServiceFabric.Inputs.ServiceTypeHealthPolicyArgs
                             {
                                 MaxPercentUnhealthyServices = 0,
                             },
                             ServiceTypeHealthPolicies = 
                             {
-                                { "myServiceType1", new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceTypeHealthPolicyArgs
+                                { "myServiceType1", new AzureNextGen.ServiceFabric.Inputs.ServiceTypeHealthPolicyArgs
                                 {
                                     MaxPercentUnhealthyServices = 100,
                                 } },
@@ -217,40 +217,40 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
+cluster = azure_nextgen.servicefabric.Cluster("cluster",
     add_on_features=[
         "RepairManager",
         "DnsService",
         "BackupRestoreService",
         "ResourceMonitorService",
     ],
-    application_type_versions_cleanup_policy=azure_nextgen.servicefabric.latest.ApplicationTypeVersionsCleanupPolicyArgs(
+    application_type_versions_cleanup_policy=azure_nextgen.servicefabric.ApplicationTypeVersionsCleanupPolicyArgs(
         max_unused_versions_to_keep=2,
     ),
-    azure_active_directory=azure_nextgen.servicefabric.latest.AzureActiveDirectoryArgs(
+    azure_active_directory=azure_nextgen.servicefabric.AzureActiveDirectoryArgs(
         client_application="d151ad89-4bce-4ae8-b3d1-1dc79679fa75",
         cluster_application="5886372e-7bf4-4878-a497-8098aba608ae",
         tenant_id="6abcc6a0-8666-43f1-87b8-172cf86a9f9c",
     ),
-    certificate_common_names=azure_nextgen.servicefabric.latest.ServerCertificateCommonNamesArgs(
-        common_names=[azure_nextgen.servicefabric.latest.ServerCertificateCommonNameArgs(
+    certificate_common_names=azure_nextgen.servicefabric.ServerCertificateCommonNamesArgs(
+        common_names=[azure_nextgen.servicefabric.ServerCertificateCommonNameArgs(
             certificate_common_name="abc.com",
             certificate_issuer_thumbprint="12599211F8F14C90AFA9532AD79A6F2CA1C00622",
         )],
         x509_store_name="My",
     ),
-    client_certificate_common_names=[azure_nextgen.servicefabric.latest.ClientCertificateCommonNameArgs(
+    client_certificate_common_names=[azure_nextgen.servicefabric.ClientCertificateCommonNameArgs(
         certificate_common_name="abc.com",
         certificate_issuer_thumbprint="5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
         is_admin=True,
     )],
-    client_certificate_thumbprints=[azure_nextgen.servicefabric.latest.ClientCertificateThumbprintArgs(
+    client_certificate_thumbprints=[azure_nextgen.servicefabric.ClientCertificateThumbprintArgs(
         certificate_thumbprint="5F3660C715EBBDA31DB1FFDCF508302348DE8E7A",
         is_admin=True,
     )],
     cluster_code_version="7.0.470.9590",
     cluster_name="myCluster",
-    diagnostics_storage_account_config=azure_nextgen.servicefabric.latest.DiagnosticsStorageAccountConfigArgs(
+    diagnostics_storage_account_config=azure_nextgen.servicefabric.DiagnosticsStorageAccountConfigArgs(
         blob_endpoint="https://diag.blob.core.windows.net/",
         protected_account_key_name="StorageAccountKey1",
         queue_endpoint="https://diag.queue.core.windows.net/",
@@ -258,23 +258,23 @@ cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
         table_endpoint="https://diag.table.core.windows.net/",
     ),
     event_store_service_enabled=True,
-    fabric_settings=[azure_nextgen.servicefabric.latest.SettingsSectionDescriptionArgs(
+    fabric_settings=[azure_nextgen.servicefabric.SettingsSectionDescriptionArgs(
         name="UpgradeService",
-        parameters=[azure_nextgen.servicefabric.latest.SettingsParameterDescriptionArgs(
+        parameters=[azure_nextgen.servicefabric.SettingsParameterDescriptionArgs(
             name="AppPollIntervalInSeconds",
             value="60",
         )],
     )],
     location="eastus",
     management_endpoint="https://myCluster.eastus.cloudapp.azure.com:19080",
-    node_types=[azure_nextgen.servicefabric.latest.NodeTypeDescriptionArgs(
-        application_ports=azure_nextgen.servicefabric.latest.EndpointRangeDescriptionArgs(
+    node_types=[azure_nextgen.servicefabric.NodeTypeDescriptionArgs(
+        application_ports=azure_nextgen.servicefabric.EndpointRangeDescriptionArgs(
             end_port=30000,
             start_port=20000,
         ),
         client_connection_endpoint_port=19000,
         durability_level="Bronze",
-        ephemeral_ports=azure_nextgen.servicefabric.latest.EndpointRangeDescriptionArgs(
+        ephemeral_ports=azure_nextgen.servicefabric.EndpointRangeDescriptionArgs(
             end_port=64000,
             start_port=49000,
         ),
@@ -285,23 +285,23 @@ cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
     )],
     reliability_level="Silver",
     resource_group_name="resRg",
-    reverse_proxy_certificate_common_names=azure_nextgen.servicefabric.latest.ServerCertificateCommonNamesArgs(
-        common_names=[azure_nextgen.servicefabric.latest.ServerCertificateCommonNameArgs(
+    reverse_proxy_certificate_common_names=azure_nextgen.servicefabric.ServerCertificateCommonNamesArgs(
+        common_names=[azure_nextgen.servicefabric.ServerCertificateCommonNameArgs(
             certificate_common_name="abc.com",
             certificate_issuer_thumbprint="12599211F8F14C90AFA9532AD79A6F2CA1C00622",
         )],
         x509_store_name="My",
     ),
     tags={},
-    upgrade_description=azure_nextgen.servicefabric.latest.ClusterUpgradePolicyArgs(
-        delta_health_policy=azure_nextgen.servicefabric.latest.ClusterUpgradeDeltaHealthPolicyArgs(
+    upgrade_description=azure_nextgen.servicefabric.ClusterUpgradePolicyArgs(
+        delta_health_policy=azure_nextgen.servicefabric.ClusterUpgradeDeltaHealthPolicyArgs(
             application_delta_health_policies={
-                "fabric:/myApp1": azure_nextgen.servicefabric.latest.ApplicationDeltaHealthPolicyArgs(
-                    default_service_type_delta_health_policy=azure_nextgen.servicefabric.latest.ServiceTypeDeltaHealthPolicyArgs(
+                "fabric:/myApp1": azure_nextgen.servicefabric.ApplicationDeltaHealthPolicyArgs(
+                    default_service_type_delta_health_policy=azure_nextgen.servicefabric.ServiceTypeDeltaHealthPolicyArgs(
                         max_percent_delta_unhealthy_services=0,
                     ),
                     service_type_delta_health_policies={
-                        "myServiceType1": azure_nextgen.servicefabric.latest.ServiceTypeDeltaHealthPolicyArgs(
+                        "myServiceType1": azure_nextgen.servicefabric.ServiceTypeDeltaHealthPolicyArgs(
                             max_percent_delta_unhealthy_services=0,
                         ),
                     },
@@ -315,14 +315,14 @@ cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
         health_check_retry_timeout="00:05:00",
         health_check_stable_duration="00:00:30",
         health_check_wait_duration="00:00:30",
-        health_policy=azure_nextgen.servicefabric.latest.ClusterHealthPolicyArgs(
+        health_policy=azure_nextgen.servicefabric.ClusterHealthPolicyArgs(
             application_health_policies={
-                "fabric:/myApp1": azure_nextgen.servicefabric.latest.ApplicationHealthPolicyArgs(
-                    default_service_type_health_policy=azure_nextgen.servicefabric.latest.ServiceTypeHealthPolicyArgs(
+                "fabric:/myApp1": azure_nextgen.servicefabric.ApplicationHealthPolicyArgs(
+                    default_service_type_health_policy=azure_nextgen.servicefabric.ServiceTypeHealthPolicyArgs(
                         max_percent_unhealthy_services=0,
                     ),
                     service_type_health_policies={
-                        "myServiceType1": azure_nextgen.servicefabric.latest.ServiceTypeHealthPolicyArgs(
+                        "myServiceType1": azure_nextgen.servicefabric.ServiceTypeHealthPolicyArgs(
                             max_percent_unhealthy_services=100,
                         ),
                     },
@@ -348,7 +348,7 @@ cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.servicefabric.latest.Cluster("cluster", {
+const cluster = new azure_nextgen.servicefabric.Cluster("cluster", {
     addOnFeatures: [
         "RepairManager",
         "DnsService",
@@ -484,10 +484,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.ServiceFabric.Latest.Cluster("cluster", new AzureNextGen.ServiceFabric.Latest.ClusterArgs
+        var cluster = new AzureNextGen.ServiceFabric.Cluster("cluster", new AzureNextGen.ServiceFabric.ClusterArgs
         {
             ClusterName = "myCluster",
-            DiagnosticsStorageAccountConfig = new AzureNextGen.ServiceFabric.Latest.Inputs.DiagnosticsStorageAccountConfigArgs
+            DiagnosticsStorageAccountConfig = new AzureNextGen.ServiceFabric.Inputs.DiagnosticsStorageAccountConfigArgs
             {
                 BlobEndpoint = "https://diag.blob.core.windows.net/",
                 ProtectedAccountKeyName = "StorageAccountKey1",
@@ -497,12 +497,12 @@ class MyStack : Stack
             },
             FabricSettings = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.SettingsSectionDescriptionArgs
+                new AzureNextGen.ServiceFabric.Inputs.SettingsSectionDescriptionArgs
                 {
                     Name = "UpgradeService",
                     Parameters = 
                     {
-                        new AzureNextGen.ServiceFabric.Latest.Inputs.SettingsParameterDescriptionArgs
+                        new AzureNextGen.ServiceFabric.Inputs.SettingsParameterDescriptionArgs
                         {
                             Name = "AppPollIntervalInSeconds",
                             Value = "60",
@@ -514,16 +514,16 @@ class MyStack : Stack
             ManagementEndpoint = "http://myCluster.eastus.cloudapp.azure.com:19080",
             NodeTypes = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.NodeTypeDescriptionArgs
+                new AzureNextGen.ServiceFabric.Inputs.NodeTypeDescriptionArgs
                 {
-                    ApplicationPorts = new AzureNextGen.ServiceFabric.Latest.Inputs.EndpointRangeDescriptionArgs
+                    ApplicationPorts = new AzureNextGen.ServiceFabric.Inputs.EndpointRangeDescriptionArgs
                     {
                         EndPort = 30000,
                         StartPort = 20000,
                     },
                     ClientConnectionEndpointPort = 19000,
                     DurabilityLevel = "Bronze",
-                    EphemeralPorts = new AzureNextGen.ServiceFabric.Latest.Inputs.EndpointRangeDescriptionArgs
+                    EphemeralPorts = new AzureNextGen.ServiceFabric.Inputs.EndpointRangeDescriptionArgs
                     {
                         EndPort = 64000,
                         StartPort = 49000,
@@ -553,7 +553,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/latest"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -621,32 +621,32 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
+cluster = azure_nextgen.servicefabric.Cluster("cluster",
     cluster_name="myCluster",
-    diagnostics_storage_account_config=azure_nextgen.servicefabric.latest.DiagnosticsStorageAccountConfigArgs(
+    diagnostics_storage_account_config=azure_nextgen.servicefabric.DiagnosticsStorageAccountConfigArgs(
         blob_endpoint="https://diag.blob.core.windows.net/",
         protected_account_key_name="StorageAccountKey1",
         queue_endpoint="https://diag.queue.core.windows.net/",
         storage_account_name="diag",
         table_endpoint="https://diag.table.core.windows.net/",
     ),
-    fabric_settings=[azure_nextgen.servicefabric.latest.SettingsSectionDescriptionArgs(
+    fabric_settings=[azure_nextgen.servicefabric.SettingsSectionDescriptionArgs(
         name="UpgradeService",
-        parameters=[azure_nextgen.servicefabric.latest.SettingsParameterDescriptionArgs(
+        parameters=[azure_nextgen.servicefabric.SettingsParameterDescriptionArgs(
             name="AppPollIntervalInSeconds",
             value="60",
         )],
     )],
     location="eastus",
     management_endpoint="http://myCluster.eastus.cloudapp.azure.com:19080",
-    node_types=[azure_nextgen.servicefabric.latest.NodeTypeDescriptionArgs(
-        application_ports=azure_nextgen.servicefabric.latest.EndpointRangeDescriptionArgs(
+    node_types=[azure_nextgen.servicefabric.NodeTypeDescriptionArgs(
+        application_ports=azure_nextgen.servicefabric.EndpointRangeDescriptionArgs(
             end_port=30000,
             start_port=20000,
         ),
         client_connection_endpoint_port=19000,
         durability_level="Bronze",
-        ephemeral_ports=azure_nextgen.servicefabric.latest.EndpointRangeDescriptionArgs(
+        ephemeral_ports=azure_nextgen.servicefabric.EndpointRangeDescriptionArgs(
             end_port=64000,
             start_port=49000,
         ),
@@ -670,7 +670,7 @@ cluster = azure_nextgen.servicefabric.latest.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.servicefabric.latest.Cluster("cluster", {
+const cluster = new azure_nextgen.servicefabric.Cluster("cluster", {
     clusterName: "myCluster",
     diagnosticsStorageAccountConfig: {
         blobEndpoint: "https://diag.blob.core.windows.net/",
@@ -722,7 +722,7 @@ const cluster = new azure_nextgen.servicefabric.latest.Cluster("cluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -730,11 +730,11 @@ const cluster = new azure_nextgen.servicefabric.latest.Cluster("cluster", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -755,7 +755,7 @@ const cluster = new azure_nextgen.servicefabric.latest.Cluster("cluster", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -824,7 +824,7 @@ const cluster = new azure_nextgen.servicefabric.latest.Cluster("cluster", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -863,7 +863,7 @@ const cluster = new azure_nextgen.servicefabric.latest.Cluster("cluster", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -886,11 +886,11 @@ const cluster = new azure_nextgen.servicefabric.latest.Cluster("cluster", {
 
 ## Cluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Cluster resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Cluster resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -7978,7 +7978,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabric/latest:Cluster myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster 
+$ pulumi import azure-nextgen:servicefabric:Cluster myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster 
 ```
 
 

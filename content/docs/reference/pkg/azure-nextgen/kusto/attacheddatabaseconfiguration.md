@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kusto.AttachedDatabaseConfigurat
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing an attached database configuration.
-Latest API Version: 2020-09-18.
+API Version: 2020-09-18.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var attachedDatabaseConfiguration = new AzureNextGen.Kusto.Latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", new AzureNextGen.Kusto.Latest.AttachedDatabaseConfigurationArgs
+        var attachedDatabaseConfiguration = new AzureNextGen.Kusto.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", new AzureNextGen.Kusto.AttachedDatabaseConfigurationArgs
         {
             AttachedDatabaseConfigurationName = "attachedDatabaseConfigurations1",
             ClusterName = "kustoclusterrptest4",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto/latest"
+	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-attached_database_configuration = azure_nextgen.kusto.latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration",
+attached_database_configuration = azure_nextgen.kusto.AttachedDatabaseConfiguration("attachedDatabaseConfiguration",
     attached_database_configuration_name="attachedDatabaseConfigurations1",
     cluster_name="kustoclusterrptest4",
     cluster_resource_id="/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader",
@@ -102,7 +102,7 @@ attached_database_configuration = azure_nextgen.kusto.latest.AttachedDatabaseCon
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const attachedDatabaseConfiguration = new azure_nextgen.kusto.latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", {
+const attachedDatabaseConfiguration = new azure_nextgen.kusto.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", {
     attachedDatabaseConfigurationName: "attachedDatabaseConfigurations1",
     clusterName: "kustoclusterrptest4",
     clusterResourceId: "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader",
@@ -124,7 +124,7 @@ const attachedDatabaseConfiguration = new azure_nextgen.kusto.latest.AttachedDat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AttachedDatabaseConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -132,11 +132,11 @@ const attachedDatabaseConfiguration = new azure_nextgen.kusto.latest.AttachedDat
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AttachedDatabaseConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AttachedDatabaseConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AttachedDatabaseConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AttachedDatabaseConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -157,7 +157,7 @@ const attachedDatabaseConfiguration = new azure_nextgen.kusto.latest.AttachedDat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AttachedDatabaseConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -226,7 +226,7 @@ const attachedDatabaseConfiguration = new azure_nextgen.kusto.latest.AttachedDat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AttachedDatabaseConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -265,7 +265,7 @@ const attachedDatabaseConfiguration = new azure_nextgen.kusto.latest.AttachedDat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AttachedDatabaseConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -288,11 +288,11 @@ const attachedDatabaseConfiguration = new azure_nextgen.kusto.latest.AttachedDat
 
 ## AttachedDatabaseConfiguration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AttachedDatabaseConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AttachedDatabaseConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -844,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kusto/latest:AttachedDatabaseConfiguration KustoClusterRPTest4/attachedDatabaseConfigurations1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/attachedDatabaseConfigurations/attachedDatabaseConfigurations1 
+$ pulumi import azure-nextgen:kusto:AttachedDatabaseConfiguration KustoClusterRPTest4/attachedDatabaseConfigurations1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/attachedDatabaseConfigurations/attachedDatabaseConfigurations1 
 ```
 
 

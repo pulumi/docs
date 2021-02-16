@@ -12,6 +12,8 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.ManagedCluster res
 
 The manged cluster resource
 
+API Version: 2020-01-01-preview.
+
 {{% examples %}}
 ## Example Usage
 
@@ -26,7 +28,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.ServiceFabric.V20200101Preview.ManagedCluster("managedCluster", new AzureNextGen.ServiceFabric.V20200101Preview.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ServiceFabric.ManagedCluster("managedCluster", new AzureNextGen.ServiceFabric.ManagedClusterArgs
         {
             AdminPassword = "{vm-password}",
             AdminUserName = "vmadmin",
@@ -36,12 +38,12 @@ class MyStack : Stack
             DnsName = "myCluster",
             FabricSettings = 
             {
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SettingsSectionDescriptionArgs
+                new AzureNextGen.ServiceFabric.Inputs.SettingsSectionDescriptionArgs
                 {
                     Name = "ManagedIdentityTokenService",
                     Parameters = 
                     {
-                        new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SettingsParameterDescriptionArgs
+                        new AzureNextGen.ServiceFabric.Inputs.SettingsParameterDescriptionArgs
                         {
                             Name = "IsEnabled",
                             Value = "true",
@@ -52,21 +54,21 @@ class MyStack : Stack
             HttpGatewayConnectionPort = 19080,
             LoadBalancingRules = 
             {
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.ServiceFabric.Inputs.LoadBalancingRuleArgs
                 {
                     BackendPort = 80,
                     FrontendPort = 80,
                     ProbeProtocol = "http",
                     Protocol = "http",
                 },
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.ServiceFabric.Inputs.LoadBalancingRuleArgs
                 {
                     BackendPort = 443,
                     FrontendPort = 443,
                     ProbeProtocol = "http",
                     Protocol = "http",
                 },
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.ServiceFabric.Inputs.LoadBalancingRuleArgs
                 {
                     BackendPort = 10000,
                     FrontendPort = 10000,
@@ -76,7 +78,7 @@ class MyStack : Stack
             },
             Location = "eastus",
             ResourceGroupName = "resRg",
-            Sku = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.ServiceFabric.Inputs.SkuArgs
             {
                 Name = "Basic",
             },
@@ -96,7 +98,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/v20200101preview"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -165,35 +167,35 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.servicefabric.ManagedCluster("managedCluster",
     admin_password="{vm-password}",
     admin_user_name="vmadmin",
     client_connection_port=19000,
     cluster_code_version="7.1.168.9494",
     cluster_name="myCluster",
     dns_name="myCluster",
-    fabric_settings=[azure_nextgen.servicefabric.v20200101preview.SettingsSectionDescriptionArgs(
+    fabric_settings=[azure_nextgen.servicefabric.SettingsSectionDescriptionArgs(
         name="ManagedIdentityTokenService",
-        parameters=[azure_nextgen.servicefabric.v20200101preview.SettingsParameterDescriptionArgs(
+        parameters=[azure_nextgen.servicefabric.SettingsParameterDescriptionArgs(
             name="IsEnabled",
             value="true",
         )],
     )],
     http_gateway_connection_port=19080,
     load_balancing_rules=[
-        azure_nextgen.servicefabric.v20200101preview.LoadBalancingRuleArgs(
+        azure_nextgen.servicefabric.LoadBalancingRuleArgs(
             backend_port=80,
             frontend_port=80,
             probe_protocol="http",
             protocol="http",
         ),
-        azure_nextgen.servicefabric.v20200101preview.LoadBalancingRuleArgs(
+        azure_nextgen.servicefabric.LoadBalancingRuleArgs(
             backend_port=443,
             frontend_port=443,
             probe_protocol="http",
             protocol="http",
         ),
-        azure_nextgen.servicefabric.v20200101preview.LoadBalancingRuleArgs(
+        azure_nextgen.servicefabric.LoadBalancingRuleArgs(
             backend_port=10000,
             frontend_port=10000,
             probe_protocol="http",
@@ -202,7 +204,7 @@ managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("m
     ],
     location="eastus",
     resource_group_name="resRg",
-    sku=azure_nextgen.servicefabric.v20200101preview.SkuArgs(
+    sku=azure_nextgen.servicefabric.SkuArgs(
         name="Basic",
     ),
     tags={})
@@ -217,7 +219,7 @@ managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("m
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.servicefabric.ManagedCluster("managedCluster", {
     adminPassword: "{vm-password}",
     adminUserName: "vmadmin",
     clientConnectionPort: 19000,
@@ -274,7 +276,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.ServiceFabric.V20200101Preview.ManagedCluster("managedCluster", new AzureNextGen.ServiceFabric.V20200101Preview.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ServiceFabric.ManagedCluster("managedCluster", new AzureNextGen.ServiceFabric.ManagedClusterArgs
         {
             AdminPassword = "{vm-password}",
             AdminUserName = "vmadmin",
@@ -283,12 +285,12 @@ class MyStack : Stack
             DnsName = "myCluster",
             FabricSettings = 
             {
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SettingsSectionDescriptionArgs
+                new AzureNextGen.ServiceFabric.Inputs.SettingsSectionDescriptionArgs
                 {
                     Name = "ManagedIdentityTokenService",
                     Parameters = 
                     {
-                        new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SettingsParameterDescriptionArgs
+                        new AzureNextGen.ServiceFabric.Inputs.SettingsParameterDescriptionArgs
                         {
                             Name = "IsEnabled",
                             Value = "true",
@@ -313,7 +315,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/v20200101preview"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -356,15 +358,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.servicefabric.ManagedCluster("managedCluster",
     admin_password="{vm-password}",
     admin_user_name="vmadmin",
     cluster_code_version="7.1.168.9494",
     cluster_name="myCluster",
     dns_name="myCluster",
-    fabric_settings=[azure_nextgen.servicefabric.v20200101preview.SettingsSectionDescriptionArgs(
+    fabric_settings=[azure_nextgen.servicefabric.SettingsSectionDescriptionArgs(
         name="ManagedIdentityTokenService",
-        parameters=[azure_nextgen.servicefabric.v20200101preview.SettingsParameterDescriptionArgs(
+        parameters=[azure_nextgen.servicefabric.SettingsParameterDescriptionArgs(
             name="IsEnabled",
             value="true",
         )],
@@ -382,7 +384,7 @@ managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("m
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.servicefabric.ManagedCluster("managedCluster", {
     adminPassword: "{vm-password}",
     adminUserName: "vmadmin",
     clusterCodeVersion: "7.1.168.9494",
@@ -411,7 +413,7 @@ const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedC
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -419,11 +421,11 @@ const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedC
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagedClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagedClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -444,7 +446,7 @@ const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -513,7 +515,7 @@ const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -552,7 +554,7 @@ const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -575,11 +577,11 @@ const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedC
 
 ## ManagedCluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ManagedCluster resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ManagedCluster resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3173,7 +3175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabric/v20200101preview:ManagedCluster myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedClusters/myCluster 
+$ pulumi import azure-nextgen:servicefabric:ManagedCluster myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedClusters/myCluster 
 ```
 
 

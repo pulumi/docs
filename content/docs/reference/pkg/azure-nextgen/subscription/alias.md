@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.subscription.Alias resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Subscription Information with the alias.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @alias = new AzureNextGen.Subscription.Latest.Alias("alias", new AzureNextGen.Subscription.Latest.AliasArgs
+        var @alias = new AzureNextGen.Subscription.Alias("alias", new AzureNextGen.Subscription.AliasArgs
         {
             AliasName = "aliasForNewSub",
-            Properties = new AzureNextGen.Subscription.Latest.Inputs.PutAliasRequestPropertiesArgs
+            Properties = new AzureNextGen.Subscription.Inputs.PutAliasRequestPropertiesArgs
             {
                 BillingScope = "/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB",
                 DisplayName = "Contoso MCA subscription",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	subscription "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/subscription/latest"
+	subscription "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/subscription"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,9 +82,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alias = azure_nextgen.subscription.latest.Alias("alias",
+alias = azure_nextgen.subscription.Alias("alias",
     alias_name="aliasForNewSub",
-    properties=azure_nextgen.subscription.latest.PutAliasRequestPropertiesArgs(
+    properties=azure_nextgen.subscription.PutAliasRequestPropertiesArgs(
         billing_scope="/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB",
         display_name="Contoso MCA subscription",
         workload="Production",
@@ -100,7 +100,7 @@ alias = azure_nextgen.subscription.latest.Alias("alias",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alias = new azure_nextgen.subscription.latest.Alias("alias", {
+const alias = new azure_nextgen.subscription.Alias("alias", {
     aliasName: "aliasForNewSub",
     properties: {
         billingScope: "/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB",
@@ -121,7 +121,7 @@ const alias = new azure_nextgen.subscription.latest.Alias("alias", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AliasArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AliasArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -129,11 +129,11 @@ const alias = new azure_nextgen.subscription.latest.Alias("alias", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlias</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AliasArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Alias</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlias</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AliasArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Alias</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AliasArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AliasArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -154,7 +154,7 @@ const alias = new azure_nextgen.subscription.latest.Alias("alias", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AliasArgs</span>
+        <span class="property-type"><a href="#inputs">AliasArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -223,7 +223,7 @@ const alias = new azure_nextgen.subscription.latest.Alias("alias", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AliasArgs</span>
+        <span class="property-type"><a href="#inputs">AliasArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -262,7 +262,7 @@ const alias = new azure_nextgen.subscription.latest.Alias("alias", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AliasArgs</span>
+        <span class="property-type"><a href="#inputs">AliasArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -285,11 +285,11 @@ const alias = new azure_nextgen.subscription.latest.Alias("alias", {
 
 ## Alias Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Alias resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Alias resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -885,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:subscription/latest:Alias aliasForNewSub /providers/Microsoft.Subscription/aliases/aliasForNewSub 
+$ pulumi import azure-nextgen:subscription:Alias aliasForNewSub /providers/Microsoft.Subscription/aliases/aliasForNewSub 
 ```
 
 

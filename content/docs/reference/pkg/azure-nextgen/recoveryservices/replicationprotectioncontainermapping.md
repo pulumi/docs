@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationProt
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Protection container mapping object.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationProtectionContainerMapping = new AzureNextGen.RecoveryServices.Latest.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping", new AzureNextGen.RecoveryServices.Latest.ReplicationProtectionContainerMappingArgs
+        var replicationProtectionContainerMapping = new AzureNextGen.RecoveryServices.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping", new AzureNextGen.RecoveryServices.ReplicationProtectionContainerMappingArgs
         {
             FabricName = "cloud1",
             MappingName = "cloud1protectionprofile1",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.CreateProtectionContainerMappingInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices.Inputs.CreateProtectionContainerMappingInputPropertiesArgs
             {
                 PolicyId = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
                 ProviderSpecificInput = ,
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,10 +90,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_protection_container_mapping = azure_nextgen.recoveryservices.latest.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping",
+replication_protection_container_mapping = azure_nextgen.recoveryservices.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping",
     fabric_name="cloud1",
     mapping_name="cloud1protectionprofile1",
-    properties=azure_nextgen.recoveryservices.latest.CreateProtectionContainerMappingInputPropertiesArgs(
+    properties=azure_nextgen.recoveryservices.CreateProtectionContainerMappingInputPropertiesArgs(
         policy_id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
         provider_specific_input={},
         target_protection_container_id="Microsoft Azure",
@@ -112,7 +112,7 @@ replication_protection_container_mapping = azure_nextgen.recoveryservices.latest
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationProtectionContainerMapping = new azure_nextgen.recoveryservices.latest.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping", {
+const replicationProtectionContainerMapping = new azure_nextgen.recoveryservices.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping", {
     fabricName: "cloud1",
     mappingName: "cloud1protectionprofile1",
     properties: {
@@ -137,7 +137,7 @@ const replicationProtectionContainerMapping = new azure_nextgen.recoveryservices
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationProtectionContainerMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReplicationProtectionContainerMappingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationProtectionContainerMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationProtectionContainerMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -145,11 +145,11 @@ const replicationProtectionContainerMapping = new azure_nextgen.recoveryservices
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationProtectionContainerMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReplicationProtectionContainerMappingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationProtectionContainerMapping</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationProtectionContainerMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationProtectionContainerMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationProtectionContainerMapping</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationProtectionContainerMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReplicationProtectionContainerMappingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationProtectionContainerMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationProtectionContainerMappingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,7 +170,7 @@ const replicationProtectionContainerMapping = new azure_nextgen.recoveryservices
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationProtectionContainerMappingArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationProtectionContainerMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -239,7 +239,7 @@ const replicationProtectionContainerMapping = new azure_nextgen.recoveryservices
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationProtectionContainerMappingArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationProtectionContainerMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -278,7 +278,7 @@ const replicationProtectionContainerMapping = new azure_nextgen.recoveryservices
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationProtectionContainerMappingArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationProtectionContainerMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,11 +301,11 @@ const replicationProtectionContainerMapping = new azure_nextgen.recoveryservices
 
 ## ReplicationProtectionContainerMapping Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ReplicationProtectionContainerMapping resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ReplicationProtectionContainerMapping resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3109,7 +3109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationProtectionContainerMapping cloud1protectionprofile1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectionContainerMappings/cloud1protectionprofile1 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationProtectionContainerMapping cloud1protectionprofile1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectionContainerMappings/cloud1protectionprofile1 
 ```
 
 

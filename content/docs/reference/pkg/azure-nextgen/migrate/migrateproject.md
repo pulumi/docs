@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.migrate.MigrateProject resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Migrate Project REST Resource.
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var migrateProject = new AzureNextGen.Migrate.V20180901Preview.MigrateProject("migrateProject", new AzureNextGen.Migrate.V20180901Preview.MigrateProjectArgs
+        var migrateProject = new AzureNextGen.Migrate.MigrateProject("migrateProject", new AzureNextGen.Migrate.MigrateProjectArgs
         {
             ETag = "\"b701c73a-0000-0000-0000-59c12ff00000\"",
             Location = "Southeast Asia",
@@ -49,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/v20180901preview"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,13 +81,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-migrate_project = azure_nextgen.migrate.v20180901preview.MigrateProject("migrateProject",
+migrate_project = azure_nextgen.migrate.MigrateProject("migrateProject",
     e_tag="\"b701c73a-0000-0000-0000-59c12ff00000\"",
     location="Southeast Asia",
     migrate_project_name="project01",
-    properties=azure_nextgen.migrate.v20180901preview.MigrateProjectPropertiesArgs(),
+    properties=azure_nextgen.migrate.MigrateProjectPropertiesArgs(),
     resource_group_name="myResourceGroup",
-    tags=azure_nextgen.migrate.v20180901preview.MigrateProjectTagsArgs())
+    tags=azure_nextgen.migrate.MigrateProjectTagsArgs())
 
 ```
 
@@ -98,7 +99,7 @@ migrate_project = azure_nextgen.migrate.v20180901preview.MigrateProject("migrate
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const migrateProject = new azure_nextgen.migrate.v20180901preview.MigrateProject("migrateProject", {
+const migrateProject = new azure_nextgen.migrate.MigrateProject("migrateProject", {
     eTag: "\"b701c73a-0000-0000-0000-59c12ff00000\"",
     location: "Southeast Asia",
     migrateProjectName: "project01",
@@ -119,7 +120,7 @@ const migrateProject = new azure_nextgen.migrate.v20180901preview.MigrateProject
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MigrateProject</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">MigrateProjectArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MigrateProject</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MigrateProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -127,11 +128,11 @@ const migrateProject = new azure_nextgen.migrate.v20180901preview.MigrateProject
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMigrateProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">MigrateProjectArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MigrateProject</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMigrateProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MigrateProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MigrateProject</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MigrateProject</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">MigrateProjectArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MigrateProject</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MigrateProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -152,7 +153,7 @@ const migrateProject = new azure_nextgen.migrate.v20180901preview.MigrateProject
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MigrateProjectArgs</span>
+        <span class="property-type"><a href="#inputs">MigrateProjectArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -221,7 +222,7 @@ const migrateProject = new azure_nextgen.migrate.v20180901preview.MigrateProject
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MigrateProjectArgs</span>
+        <span class="property-type"><a href="#inputs">MigrateProjectArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -260,7 +261,7 @@ const migrateProject = new azure_nextgen.migrate.v20180901preview.MigrateProject
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MigrateProjectArgs</span>
+        <span class="property-type"><a href="#inputs">MigrateProjectArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,11 +284,11 @@ const migrateProject = new azure_nextgen.migrate.v20180901preview.MigrateProject
 
 ## MigrateProject Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The MigrateProject resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The MigrateProject resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1631,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:migrate/v20180901preview:MigrateProject project01 /subscriptions/75dd7e42-4fd1-4512-af04-83ad9864335b/resourceGroups/myResourceGroup/providers/Microsoft.Migrate/MigrateProjects/project01 
+$ pulumi import azure-nextgen:migrate:MigrateProject project01 /subscriptions/75dd7e42-4fd1-4512-af04-83ad9864335b/resourceGroups/myResourceGroup/providers/Microsoft.Migrate/MigrateProjects/project01 
 ```
 
 

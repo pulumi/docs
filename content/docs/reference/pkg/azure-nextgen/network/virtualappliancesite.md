@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualApplianceSite res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Virtual Appliance Site resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualApplianceSite = new AzureNextGen.Network.Latest.VirtualApplianceSite("virtualApplianceSite", new AzureNextGen.Network.Latest.VirtualApplianceSiteArgs
+        var virtualApplianceSite = new AzureNextGen.Network.VirtualApplianceSite("virtualApplianceSite", new AzureNextGen.Network.VirtualApplianceSiteArgs
         {
             AddressPrefix = "192.168.1.0/24",
             NetworkVirtualApplianceName = "nva",
-            O365Policy = new AzureNextGen.Network.Latest.Inputs.Office365PolicyPropertiesArgs
+            O365Policy = new AzureNextGen.Network.Inputs.Office365PolicyPropertiesArgs
             {
-                BreakOutCategories = new AzureNextGen.Network.Latest.Inputs.BreakOutCategoryPoliciesArgs
+                BreakOutCategories = new AzureNextGen.Network.Inputs.BreakOutCategoryPoliciesArgs
                 {
                     Allow = true,
                     Default = true,
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,11 +93,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_appliance_site = azure_nextgen.network.latest.VirtualApplianceSite("virtualApplianceSite",
+virtual_appliance_site = azure_nextgen.network.VirtualApplianceSite("virtualApplianceSite",
     address_prefix="192.168.1.0/24",
     network_virtual_appliance_name="nva",
-    o365_policy=azure_nextgen.network.latest.Office365PolicyPropertiesArgs(
-        break_out_categories=azure_nextgen.network.latest.BreakOutCategoryPoliciesArgs(
+    o365_policy=azure_nextgen.network.Office365PolicyPropertiesArgs(
+        break_out_categories=azure_nextgen.network.BreakOutCategoryPoliciesArgs(
             allow=True,
             default=True,
             optimize=True,
@@ -116,7 +116,7 @@ virtual_appliance_site = azure_nextgen.network.latest.VirtualApplianceSite("virt
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualApplianceSite = new azure_nextgen.network.latest.VirtualApplianceSite("virtualApplianceSite", {
+const virtualApplianceSite = new azure_nextgen.network.VirtualApplianceSite("virtualApplianceSite", {
     addressPrefix: "192.168.1.0/24",
     networkVirtualApplianceName: "nva",
     o365Policy: {
@@ -142,7 +142,7 @@ const virtualApplianceSite = new azure_nextgen.network.latest.VirtualApplianceSi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualApplianceSiteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualApplianceSiteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -150,11 +150,11 @@ const virtualApplianceSite = new azure_nextgen.network.latest.VirtualApplianceSi
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualApplianceSite</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualApplianceSiteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualApplianceSite</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualApplianceSite</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualApplianceSiteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualApplianceSite</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualApplianceSiteArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualApplianceSiteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -175,7 +175,7 @@ const virtualApplianceSite = new azure_nextgen.network.latest.VirtualApplianceSi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualApplianceSiteArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualApplianceSiteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -244,7 +244,7 @@ const virtualApplianceSite = new azure_nextgen.network.latest.VirtualApplianceSi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualApplianceSiteArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualApplianceSiteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,7 +283,7 @@ const virtualApplianceSite = new azure_nextgen.network.latest.VirtualApplianceSi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualApplianceSiteArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualApplianceSiteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -306,11 +306,11 @@ const virtualApplianceSite = new azure_nextgen.network.latest.VirtualApplianceSi
 
 ## VirtualApplianceSite Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualApplianceSite resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualApplianceSite resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1172,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VirtualApplianceSite site1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkVirtualAppliances/nva/virtualApplianceSites/site1 
+$ pulumi import azure-nextgen:network:VirtualApplianceSite site1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkVirtualAppliances/nva/virtualApplianceSites/site1 
 ```
 
 

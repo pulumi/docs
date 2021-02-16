@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.SystemTopic resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 EventGrid System Topic.
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var systemTopic = new AzureNextGen.EventGrid.V20200401Preview.SystemTopic("systemTopic", new AzureNextGen.EventGrid.V20200401Preview.SystemTopicArgs
+        var systemTopic = new AzureNextGen.EventGrid.SystemTopic("systemTopic", new AzureNextGen.EventGrid.SystemTopicArgs
         {
             Location = "westus2",
             ResourceGroupName = "examplerg",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid/v20200401preview"
+	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-system_topic = azure_nextgen.eventgrid.v20200401preview.SystemTopic("systemTopic",
+system_topic = azure_nextgen.eventgrid.SystemTopic("systemTopic",
     location="westus2",
     resource_group_name="examplerg",
     system_topic_name="exampleSystemTopic1",
@@ -102,7 +103,7 @@ system_topic = azure_nextgen.eventgrid.v20200401preview.SystemTopic("systemTopic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const systemTopic = new azure_nextgen.eventgrid.v20200401preview.SystemTopic("systemTopic", {
+const systemTopic = new azure_nextgen.eventgrid.SystemTopic("systemTopic", {
     location: "westus2",
     resourceGroupName: "examplerg",
     systemTopicName: "exampleSystemTopic1",
@@ -124,7 +125,7 @@ const systemTopic = new azure_nextgen.eventgrid.v20200401preview.SystemTopic("sy
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SystemTopic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SystemTopicArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SystemTopic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SystemTopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -132,11 +133,11 @@ const systemTopic = new azure_nextgen.eventgrid.v20200401preview.SystemTopic("sy
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSystemTopic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SystemTopicArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SystemTopic</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSystemTopic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SystemTopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SystemTopic</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SystemTopic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SystemTopicArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SystemTopic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SystemTopicArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -157,7 +158,7 @@ const systemTopic = new azure_nextgen.eventgrid.v20200401preview.SystemTopic("sy
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SystemTopicArgs</span>
+        <span class="property-type"><a href="#inputs">SystemTopicArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -226,7 +227,7 @@ const systemTopic = new azure_nextgen.eventgrid.v20200401preview.SystemTopic("sy
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SystemTopicArgs</span>
+        <span class="property-type"><a href="#inputs">SystemTopicArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -265,7 +266,7 @@ const systemTopic = new azure_nextgen.eventgrid.v20200401preview.SystemTopic("sy
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SystemTopicArgs</span>
+        <span class="property-type"><a href="#inputs">SystemTopicArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -288,11 +289,11 @@ const systemTopic = new azure_nextgen.eventgrid.v20200401preview.SystemTopic("sy
 
 ## SystemTopic Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SystemTopic resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SystemTopic resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -758,7 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventgrid/v20200401preview:SystemTopic exampleSystemTopic2 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/systemTopics/exampleSystemTopic2 
+$ pulumi import azure-nextgen:eventgrid:SystemTopic exampleSystemTopic2 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/systemTopics/exampleSystemTopic2 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.AFDOriginGroup resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var afdOriginGroup = new AzureNextGen.Cdn.Latest.AFDOriginGroup("afdOriginGroup", new AzureNextGen.Cdn.Latest.AFDOriginGroupArgs
+        var afdOriginGroup = new AzureNextGen.Cdn.AFDOriginGroup("afdOriginGroup", new AzureNextGen.Cdn.AFDOriginGroupArgs
         {
-            HealthProbeSettings = new AzureNextGen.Cdn.Latest.Inputs.HealthProbeParametersArgs
+            HealthProbeSettings = new AzureNextGen.Cdn.Inputs.HealthProbeParametersArgs
             {
                 ProbeIntervalInSeconds = 10,
                 ProbePath = "/path2",
                 ProbeProtocol = "NotSet",
                 ProbeRequestType = "NotSet",
             },
-            LoadBalancingSettings = new AzureNextGen.Cdn.Latest.Inputs.LoadBalancingSettingsParametersArgs
+            LoadBalancingSettings = new AzureNextGen.Cdn.Inputs.LoadBalancingSettingsParametersArgs
             {
                 AdditionalLatencyInMilliseconds = 1000,
                 SampleSize = 3,
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,14 +101,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-afd_origin_group = azure_nextgen.cdn.latest.AFDOriginGroup("afdOriginGroup",
-    health_probe_settings=azure_nextgen.cdn.latest.HealthProbeParametersArgs(
+afd_origin_group = azure_nextgen.cdn.AFDOriginGroup("afdOriginGroup",
+    health_probe_settings=azure_nextgen.cdn.HealthProbeParametersArgs(
         probe_interval_in_seconds=10,
         probe_path="/path2",
         probe_protocol="NotSet",
         probe_request_type="NotSet",
     ),
-    load_balancing_settings=azure_nextgen.cdn.latest.LoadBalancingSettingsParametersArgs(
+    load_balancing_settings=azure_nextgen.cdn.LoadBalancingSettingsParametersArgs(
         additional_latency_in_milliseconds=1000,
         sample_size=3,
         successful_samples_required=3,
@@ -128,7 +128,7 @@ afd_origin_group = azure_nextgen.cdn.latest.AFDOriginGroup("afdOriginGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const afdOriginGroup = new azure_nextgen.cdn.latest.AFDOriginGroup("afdOriginGroup", {
+const afdOriginGroup = new azure_nextgen.cdn.AFDOriginGroup("afdOriginGroup", {
     healthProbeSettings: {
         probeIntervalInSeconds: 10,
         probePath: "/path2",
@@ -158,7 +158,7 @@ const afdOriginGroup = new azure_nextgen.cdn.latest.AFDOriginGroup("afdOriginGro
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AFDOriginGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AFDOriginGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AFDOriginGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AFDOriginGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -166,11 +166,11 @@ const afdOriginGroup = new azure_nextgen.cdn.latest.AFDOriginGroup("afdOriginGro
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAFDOriginGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AFDOriginGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AFDOriginGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAFDOriginGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AFDOriginGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AFDOriginGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AFDOriginGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AFDOriginGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AFDOriginGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AFDOriginGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -191,7 +191,7 @@ const afdOriginGroup = new azure_nextgen.cdn.latest.AFDOriginGroup("afdOriginGro
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AFDOriginGroupArgs</span>
+        <span class="property-type"><a href="#inputs">AFDOriginGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -260,7 +260,7 @@ const afdOriginGroup = new azure_nextgen.cdn.latest.AFDOriginGroup("afdOriginGro
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AFDOriginGroupArgs</span>
+        <span class="property-type"><a href="#inputs">AFDOriginGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -299,7 +299,7 @@ const afdOriginGroup = new azure_nextgen.cdn.latest.AFDOriginGroup("afdOriginGro
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AFDOriginGroupArgs</span>
+        <span class="property-type"><a href="#inputs">AFDOriginGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -322,11 +322,11 @@ const afdOriginGroup = new azure_nextgen.cdn.latest.AFDOriginGroup("afdOriginGro
 
 ## AFDOriginGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2394,7 +2394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:AFDOriginGroup origingroup1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/origingroups/origingroup1 
+$ pulumi import azure-nextgen:cdn:AFDOriginGroup origingroup1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/origingroups/origingroup1 
 ```
 
 

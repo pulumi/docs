@@ -19,7 +19,7 @@ meta_desc: "Explore the GetGuestConfigurationHCRPAssignment function of the gues
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGuestConfigurationHCRPAssignment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGuestConfigurationHCRPAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetGuestConfigurationHCRPAssignmentResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGuestConfigurationHCRPAssignment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGuestConfigurationHCRPAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGuestConfigurationHCRPAssignmentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetGuestConfigurationHCRPAssignment function of the gues
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGuestConfigurationHCRPAssignment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGuestConfigurationHCRPAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupGuestConfigurationHCRPAssignmentResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGuestConfigurationHCRPAssignment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGuestConfigurationHCRPAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupGuestConfigurationHCRPAssignmentResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupGuestConfigurationHCRPAssignment` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetGuestConfigurationHCRPAssignment function of the gues
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGuestConfigurationHCRPAssignment </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetGuestConfigurationHCRPAssignmentResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetGuestConfigurationHCRPAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGuestConfigurationHCRPAssignmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGuestConfigurationHCRPAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -505,9 +502,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -605,9 +599,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="assignmentreportresourceresponse">Assignment<wbr>Report<wbr>Resource<wbr>Response</h4>
-
-
-
 
 
 
@@ -780,9 +771,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="assignmentreportresponse">Assignment<wbr>Report<wbr>Response</h4>
-
-
-
 
 
 
@@ -1138,9 +1126,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1241,9 +1226,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1341,9 +1323,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="configurationsettingresponse">Configuration<wbr>Setting<wbr>Response</h4>
-
-
-
 
 
 
@@ -1588,9 +1567,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="guestconfigurationassignmentpropertiesresponse">Guest<wbr>Configuration<wbr>Assignment<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1946,9 +1922,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2226,9 +2199,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vminforesponse">VMInfo<wbr>Response</h4>
-
-
-
 
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.authorization.PolicyDefinition r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The policy definition.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policyDefinition = new AzureNextGen.Authorization.Latest.PolicyDefinition("policyDefinition", new AzureNextGen.Authorization.Latest.PolicyDefinitionArgs
+        var policyDefinition = new AzureNextGen.Authorization.PolicyDefinition("policyDefinition", new AzureNextGen.Authorization.PolicyDefinitionArgs
         {
             Description = "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
             DisplayName = "Enforce resource naming convention",
@@ -38,18 +38,18 @@ class MyStack : Stack
             Mode = "All",
             Parameters = 
             {
-                { "prefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueArgs
+                { "prefix", new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueArgs
                 {
-                    Metadata = new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
+                    Metadata = new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
                     {
                         Description = "Resource name prefix",
                         DisplayName = "Prefix",
                     },
                     Type = "String",
                 } },
-                { "suffix", new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueArgs
+                { "suffix", new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueArgs
                 {
-                    Metadata = new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
+                    Metadata = new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
                     {
                         Description = "Resource name suffix",
                         DisplayName = "Suffix",
@@ -92,7 +92,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyDefinition",
+policy_definition = azure_nextgen.authorization.PolicyDefinition("policyDefinition",
     description="Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
     display_name="Enforce resource naming convention",
     metadata={
@@ -100,15 +100,15 @@ policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyD
     },
     mode="All",
     parameters={
-        "prefix": azure_nextgen.authorization.latest.ParameterDefinitionsValueArgs(
-            metadata=azure_nextgen.authorization.latest.ParameterDefinitionsValueMetadataArgs(
+        "prefix": azure_nextgen.authorization.ParameterDefinitionsValueArgs(
+            metadata=azure_nextgen.authorization.ParameterDefinitionsValueMetadataArgs(
                 description="Resource name prefix",
                 display_name="Prefix",
             ),
             type="String",
         ),
-        "suffix": azure_nextgen.authorization.latest.ParameterDefinitionsValueArgs(
-            metadata=azure_nextgen.authorization.latest.ParameterDefinitionsValueMetadataArgs(
+        "suffix": azure_nextgen.authorization.ParameterDefinitionsValueArgs(
+            metadata=azure_nextgen.authorization.ParameterDefinitionsValueMetadataArgs(
                 description="Resource name suffix",
                 display_name="Suffix",
             ),
@@ -138,7 +138,7 @@ policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyD
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition("policyDefinition", {
+const policyDefinition = new azure_nextgen.authorization.PolicyDefinition("policyDefinition", {
     description: "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
     displayName: "Enforce resource naming convention",
     metadata: {
@@ -189,7 +189,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policyDefinition = new AzureNextGen.Authorization.Latest.PolicyDefinition("policyDefinition", new AzureNextGen.Authorization.Latest.PolicyDefinitionArgs
+        var policyDefinition = new AzureNextGen.Authorization.PolicyDefinition("policyDefinition", new AzureNextGen.Authorization.PolicyDefinitionArgs
         {
             Description = "Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised",
             DisplayName = "Event Hubs should have diagnostic logging enabled",
@@ -200,7 +200,7 @@ class MyStack : Stack
             Mode = "Indexed",
             Parameters = 
             {
-                { "requiredRetentionDays", new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueArgs
+                { "requiredRetentionDays", new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueArgs
                 {
                     AllowedValues = 
                     {
@@ -211,7 +211,7 @@ class MyStack : Stack
                         365,
                     },
                     DefaultValue = 365,
-                    Metadata = new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
+                    Metadata = new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
                     {
                         Description = "The required diagnostic logs retention in days",
                         DisplayName = "Required retention (days)",
@@ -271,7 +271,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyDefinition",
+policy_definition = azure_nextgen.authorization.PolicyDefinition("policyDefinition",
     description="Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised",
     display_name="Event Hubs should have diagnostic logging enabled",
     metadata={
@@ -279,7 +279,7 @@ policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyD
     },
     mode="Indexed",
     parameters={
-        "requiredRetentionDays": azure_nextgen.authorization.latest.ParameterDefinitionsValueArgs(
+        "requiredRetentionDays": azure_nextgen.authorization.ParameterDefinitionsValueArgs(
             allowed_values=[
                 0,
                 30,
@@ -288,7 +288,7 @@ policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyD
                 365,
             ],
             default_value=365,
-            metadata=azure_nextgen.authorization.latest.ParameterDefinitionsValueMetadataArgs(
+            metadata=azure_nextgen.authorization.ParameterDefinitionsValueMetadataArgs(
                 description="The required diagnostic logs retention in days",
                 display_name="Required retention (days)",
             ),
@@ -331,7 +331,7 @@ policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyD
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition("policyDefinition", {
+const policyDefinition = new azure_nextgen.authorization.PolicyDefinition("policyDefinition", {
     description: "Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised",
     displayName: "Event Hubs should have diagnostic logging enabled",
     metadata: {
@@ -394,7 +394,7 @@ const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PolicyDefinitionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -402,11 +402,11 @@ const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PolicyDefinitionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PolicyDefinitionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicyDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -427,7 +427,7 @@ const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PolicyDefinitionArgs</span>
+        <span class="property-type"><a href="#inputs">PolicyDefinitionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -496,7 +496,7 @@ const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PolicyDefinitionArgs</span>
+        <span class="property-type"><a href="#inputs">PolicyDefinitionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -535,7 +535,7 @@ const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PolicyDefinitionArgs</span>
+        <span class="property-type"><a href="#inputs">PolicyDefinitionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -558,11 +558,11 @@ const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition
 
 ## PolicyDefinition Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PolicyDefinition resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PolicyDefinition resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1844,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:authorization/latest:PolicyDefinition ResourceNaming /subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming 
+$ pulumi import azure-nextgen:authorization:PolicyDefinition ResourceNaming /subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming 
 ```
 
 

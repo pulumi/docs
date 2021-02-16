@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.LogProfile resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The log profile resource.
-Latest API Version: 2016-03-01.
+API Version: 2016-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var logProfile = new AzureNextGen.Insights.Latest.LogProfile("logProfile", new AzureNextGen.Insights.Latest.LogProfileArgs
+        var logProfile = new AzureNextGen.Insights.LogProfile("logProfile", new AzureNextGen.Insights.LogProfileArgs
         {
             Categories = 
             {
@@ -41,7 +41,7 @@ class MyStack : Stack
                 "global",
             },
             LogProfileName = "Rac46PostSwapRG",
-            RetentionPolicy = new AzureNextGen.Insights.Latest.Inputs.RetentionPolicyArgs
+            RetentionPolicy = new AzureNextGen.Insights.Inputs.RetentionPolicyArgs
             {
                 Days = 3,
                 Enabled = true,
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -106,7 +106,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-log_profile = azure_nextgen.insights.latest.LogProfile("logProfile",
+log_profile = azure_nextgen.insights.LogProfile("logProfile",
     categories=[
         "Write",
         "Delete",
@@ -115,7 +115,7 @@ log_profile = azure_nextgen.insights.latest.LogProfile("logProfile",
     location="",
     locations=["global"],
     log_profile_name="Rac46PostSwapRG",
-    retention_policy=azure_nextgen.insights.latest.RetentionPolicyArgs(
+    retention_policy=azure_nextgen.insights.RetentionPolicyArgs(
         days=3,
         enabled=True,
     ),
@@ -133,7 +133,7 @@ log_profile = azure_nextgen.insights.latest.LogProfile("logProfile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const logProfile = new azure_nextgen.insights.latest.LogProfile("logProfile", {
+const logProfile = new azure_nextgen.insights.LogProfile("logProfile", {
     categories: [
         "Write",
         "Delete",
@@ -163,7 +163,7 @@ const logProfile = new azure_nextgen.insights.latest.LogProfile("logProfile", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LogProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">LogProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LogProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LogProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -171,11 +171,11 @@ const logProfile = new azure_nextgen.insights.latest.LogProfile("logProfile", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLogProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">LogProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LogProfile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLogProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LogProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LogProfile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LogProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">LogProfileArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LogProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LogProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -196,7 +196,7 @@ const logProfile = new azure_nextgen.insights.latest.LogProfile("logProfile", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LogProfileArgs</span>
+        <span class="property-type"><a href="#inputs">LogProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -265,7 +265,7 @@ const logProfile = new azure_nextgen.insights.latest.LogProfile("logProfile", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LogProfileArgs</span>
+        <span class="property-type"><a href="#inputs">LogProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -304,7 +304,7 @@ const logProfile = new azure_nextgen.insights.latest.LogProfile("logProfile", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LogProfileArgs</span>
+        <span class="property-type"><a href="#inputs">LogProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -327,11 +327,11 @@ const logProfile = new azure_nextgen.insights.latest.LogProfile("logProfile", {
 
 ## LogProfile Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LogProfile resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The LogProfile resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -997,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:LogProfile default /subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/providers/microsoft.insights/logprofiles/default 
+$ pulumi import azure-nextgen:insights:LogProfile default /subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/providers/microsoft.insights/logprofiles/default 
 ```
 
 

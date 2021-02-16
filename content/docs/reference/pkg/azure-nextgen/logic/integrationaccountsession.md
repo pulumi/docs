@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountSession 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The integration account session.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountSession = new AzureNextGen.Logic.Latest.IntegrationAccountSession("integrationAccountSession", new AzureNextGen.Logic.Latest.IntegrationAccountSessionArgs
+        var integrationAccountSession = new AzureNextGen.Logic.IntegrationAccountSession("integrationAccountSession", new AzureNextGen.Logic.IntegrationAccountSessionArgs
         {
             Content = 
             {
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_session = azure_nextgen.logic.latest.IntegrationAccountSession("integrationAccountSession",
+integration_account_session = azure_nextgen.logic.IntegrationAccountSession("integrationAccountSession",
     content={
         "controlNumber": "1234",
         "controlNumberChangedTime": "2017-02-21T22:30:11.9923759Z",
@@ -103,7 +103,7 @@ integration_account_session = azure_nextgen.logic.latest.IntegrationAccountSessi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationAccountSession = new azure_nextgen.logic.latest.IntegrationAccountSession("integrationAccountSession", {
+const integrationAccountSession = new azure_nextgen.logic.IntegrationAccountSession("integrationAccountSession", {
     content: {
         controlNumber: "1234",
         controlNumberChangedTime: "2017-02-21T22:30:11.9923759Z",
@@ -125,7 +125,7 @@ const integrationAccountSession = new azure_nextgen.logic.latest.IntegrationAcco
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountSession</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IntegrationAccountSessionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountSession</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountSessionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -133,11 +133,11 @@ const integrationAccountSession = new azure_nextgen.logic.latest.IntegrationAcco
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountSession</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IntegrationAccountSessionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountSession</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountSession</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationAccountSessionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountSession</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountSession</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IntegrationAccountSessionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountSession</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationAccountSessionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -158,7 +158,7 @@ const integrationAccountSession = new azure_nextgen.logic.latest.IntegrationAcco
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountSessionArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountSessionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -227,7 +227,7 @@ const integrationAccountSession = new azure_nextgen.logic.latest.IntegrationAcco
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountSessionArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountSessionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -266,7 +266,7 @@ const integrationAccountSession = new azure_nextgen.logic.latest.IntegrationAcco
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountSessionArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountSessionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -289,11 +289,11 @@ const integrationAccountSession = new azure_nextgen.logic.latest.IntegrationAcco
 
 ## IntegrationAccountSession Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IntegrationAccountSession resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IntegrationAccountSession resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -759,7 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationAccountSession testsession123-ICN /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Logic/integrationAccounts/testia123/sessions/testsession123-ICN 
+$ pulumi import azure-nextgen:logic:IntegrationAccountSession testsession123-ICN /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Logic/integrationAccounts/testia123/sessions/testsession123-ICN 
 ```
 
 

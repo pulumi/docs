@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.edgeorder.OrderByName resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents order contract
+API Version: 2020-12-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var orderByName = new AzureNextGen.EdgeOrder.V20201201Preview.OrderByName("orderByName", new AzureNextGen.EdgeOrder.V20201201Preview.OrderByNameArgs
+        var orderByName = new AzureNextGen.EdgeOrder.OrderByName("orderByName", new AzureNextGen.EdgeOrder.OrderByNameArgs
         {
-            AddressDetails = new AzureNextGen.EdgeOrder.V20201201Preview.Inputs.AddressDetailsArgs
+            AddressDetails = new AzureNextGen.EdgeOrder.Inputs.AddressDetailsArgs
             {
-                ShippingAddress = new AzureNextGen.EdgeOrder.V20201201Preview.Inputs.AddressPropertiesArgs
+                ShippingAddress = new AzureNextGen.EdgeOrder.Inputs.AddressPropertiesArgs
                 {
-                    ContactDetails = new AzureNextGen.EdgeOrder.V20201201Preview.Inputs.ContactDetailsArgs
+                    ContactDetails = new AzureNextGen.EdgeOrder.Inputs.ContactDetailsArgs
                     {
                         ContactName = "first",
                         Phone = "11111",
@@ -40,19 +41,19 @@ class MyStack : Stack
                 },
             },
             Location = "westus",
-            OrderDetails = new AzureNextGen.EdgeOrder.V20201201Preview.Inputs.OrderDetailsArgs
+            OrderDetails = new AzureNextGen.EdgeOrder.Inputs.OrderDetailsArgs
             {
                 OrderType = "Purchase",
-                Preferences = new AzureNextGen.EdgeOrder.V20201201Preview.Inputs.PreferencesArgs
+                Preferences = new AzureNextGen.EdgeOrder.Inputs.PreferencesArgs
                 {
-                    TransportPreferences = new AzureNextGen.EdgeOrder.V20201201Preview.Inputs.TransportPreferencesArgs
+                    TransportPreferences = new AzureNextGen.EdgeOrder.Inputs.TransportPreferencesArgs
                     {
                         PreferredShipmentType = "MicrosoftManaged",
                     },
                 },
-                ProductDetails = new AzureNextGen.EdgeOrder.V20201201Preview.Inputs.ProductDetailsArgs
+                ProductDetails = new AzureNextGen.EdgeOrder.Inputs.ProductDetailsArgs
                 {
-                    HierarchyInformation = new AzureNextGen.EdgeOrder.V20201201Preview.Inputs.HierarchyInformationArgs
+                    HierarchyInformation = new AzureNextGen.EdgeOrder.Inputs.HierarchyInformationArgs
                     {
                         ConfigurationName = "1gpu",
                         ProductFamilyName = "azurestackedge",
@@ -83,7 +84,7 @@ class MyStack : Stack
 package main
 
 import (
-	edgeorder "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/edgeorder/v20201201preview"
+	edgeorder "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/edgeorder"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -139,25 +140,25 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-order_by_name = azure_nextgen.edgeorder.v20201201preview.OrderByName("orderByName",
-    address_details=azure_nextgen.edgeorder.v20201201preview.AddressDetailsArgs(
-        shipping_address=azure_nextgen.edgeorder.v20201201preview.AddressPropertiesArgs(
-            contact_details=azure_nextgen.edgeorder.v20201201preview.ContactDetailsArgs(
+order_by_name = azure_nextgen.edgeorder.OrderByName("orderByName",
+    address_details=azure_nextgen.edgeorder.AddressDetailsArgs(
+        shipping_address=azure_nextgen.edgeorder.AddressPropertiesArgs(
+            contact_details=azure_nextgen.edgeorder.ContactDetailsArgs(
                 contact_name="first",
                 phone="11111",
             ),
         ),
     ),
     location="westus",
-    order_details=azure_nextgen.edgeorder.v20201201preview.OrderDetailsArgs(
+    order_details=azure_nextgen.edgeorder.OrderDetailsArgs(
         order_type="Purchase",
-        preferences=azure_nextgen.edgeorder.v20201201preview.PreferencesArgs(
-            transport_preferences=azure_nextgen.edgeorder.v20201201preview.TransportPreferencesArgs(
+        preferences=azure_nextgen.edgeorder.PreferencesArgs(
+            transport_preferences=azure_nextgen.edgeorder.TransportPreferencesArgs(
                 preferred_shipment_type="MicrosoftManaged",
             ),
         ),
-        product_details=azure_nextgen.edgeorder.v20201201preview.ProductDetailsArgs(
-            hierarchy_information=azure_nextgen.edgeorder.v20201201preview.HierarchyInformationArgs(
+        product_details=azure_nextgen.edgeorder.ProductDetailsArgs(
+            hierarchy_information=azure_nextgen.edgeorder.HierarchyInformationArgs(
                 configuration_name="1gpu",
                 product_family_name="azurestackedge",
                 product_line_name="azurestackedge",
@@ -182,7 +183,7 @@ order_by_name = azure_nextgen.edgeorder.v20201201preview.OrderByName("orderByNam
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const orderByName = new azure_nextgen.edgeorder.v20201201preview.OrderByName("orderByName", {
+const orderByName = new azure_nextgen.edgeorder.OrderByName("orderByName", {
     addressDetails: {
         shippingAddress: {
             contactDetails: {
@@ -228,7 +229,7 @@ const orderByName = new azure_nextgen.edgeorder.v20201201preview.OrderByName("or
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrderByName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">OrderByNameArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrderByName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrderByNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -236,11 +237,11 @@ const orderByName = new azure_nextgen.edgeorder.v20201201preview.OrderByName("or
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrderByName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">OrderByNameArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrderByName</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrderByName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrderByNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrderByName</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrderByName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">OrderByNameArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrderByName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrderByNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -261,7 +262,7 @@ const orderByName = new azure_nextgen.edgeorder.v20201201preview.OrderByName("or
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrderByNameArgs</span>
+        <span class="property-type"><a href="#inputs">OrderByNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -330,7 +331,7 @@ const orderByName = new azure_nextgen.edgeorder.v20201201preview.OrderByName("or
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrderByNameArgs</span>
+        <span class="property-type"><a href="#inputs">OrderByNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -369,7 +370,7 @@ const orderByName = new azure_nextgen.edgeorder.v20201201preview.OrderByName("or
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrderByNameArgs</span>
+        <span class="property-type"><a href="#inputs">OrderByNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -392,11 +393,11 @@ const orderByName = new azure_nextgen.edgeorder.v20201201preview.OrderByName("or
 
 ## OrderByName Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The OrderByName resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The OrderByName resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -5298,7 +5299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:edgeorder/v20201201preview:OrderByName TestOrderName1 /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/orders/TestOrderName1 
+$ pulumi import azure-nextgen:edgeorder:OrderByName TestOrderName1 /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/orders/TestOrderName1 
 ```
 
 

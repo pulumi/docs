@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiDiagnostic reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Diagnostic details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiDiagnostic = new AzureNextGen.ApiManagement.Latest.ApiDiagnostic("apiDiagnostic", new AzureNextGen.ApiManagement.Latest.ApiDiagnosticArgs
+        var apiDiagnostic = new AzureNextGen.ApiManagement.ApiDiagnostic("apiDiagnostic", new AzureNextGen.ApiManagement.ApiDiagnosticArgs
         {
             AlwaysLog = "allErrors",
             ApiId = "57d1f7558aa04f15146d9d8a",
-            Backend = new AzureNextGen.ApiManagement.Latest.Inputs.PipelineDiagnosticSettingsArgs
+            Backend = new AzureNextGen.ApiManagement.Inputs.PipelineDiagnosticSettingsArgs
             {
-                Request = new AzureNextGen.ApiManagement.Latest.Inputs.HttpMessageDiagnosticArgs
+                Request = new AzureNextGen.ApiManagement.Inputs.HttpMessageDiagnosticArgs
                 {
-                    Body = new AzureNextGen.ApiManagement.Latest.Inputs.BodyDiagnosticSettingsArgs
+                    Body = new AzureNextGen.ApiManagement.Inputs.BodyDiagnosticSettingsArgs
                     {
                         Bytes = 512,
                     },
@@ -44,9 +44,9 @@ class MyStack : Stack
                         "Content-type",
                     },
                 },
-                Response = new AzureNextGen.ApiManagement.Latest.Inputs.HttpMessageDiagnosticArgs
+                Response = new AzureNextGen.ApiManagement.Inputs.HttpMessageDiagnosticArgs
                 {
-                    Body = new AzureNextGen.ApiManagement.Latest.Inputs.BodyDiagnosticSettingsArgs
+                    Body = new AzureNextGen.ApiManagement.Inputs.BodyDiagnosticSettingsArgs
                     {
                         Bytes = 512,
                     },
@@ -57,11 +57,11 @@ class MyStack : Stack
                 },
             },
             DiagnosticId = "applicationinsights",
-            Frontend = new AzureNextGen.ApiManagement.Latest.Inputs.PipelineDiagnosticSettingsArgs
+            Frontend = new AzureNextGen.ApiManagement.Inputs.PipelineDiagnosticSettingsArgs
             {
-                Request = new AzureNextGen.ApiManagement.Latest.Inputs.HttpMessageDiagnosticArgs
+                Request = new AzureNextGen.ApiManagement.Inputs.HttpMessageDiagnosticArgs
                 {
-                    Body = new AzureNextGen.ApiManagement.Latest.Inputs.BodyDiagnosticSettingsArgs
+                    Body = new AzureNextGen.ApiManagement.Inputs.BodyDiagnosticSettingsArgs
                     {
                         Bytes = 512,
                     },
@@ -70,9 +70,9 @@ class MyStack : Stack
                         "Content-type",
                     },
                 },
-                Response = new AzureNextGen.ApiManagement.Latest.Inputs.HttpMessageDiagnosticArgs
+                Response = new AzureNextGen.ApiManagement.Inputs.HttpMessageDiagnosticArgs
                 {
-                    Body = new AzureNextGen.ApiManagement.Latest.Inputs.BodyDiagnosticSettingsArgs
+                    Body = new AzureNextGen.ApiManagement.Inputs.BodyDiagnosticSettingsArgs
                     {
                         Bytes = 512,
                     },
@@ -84,7 +84,7 @@ class MyStack : Stack
             },
             LoggerId = "/loggers/applicationinsights",
             ResourceGroupName = "rg1",
-            Sampling = new AzureNextGen.ApiManagement.Latest.Inputs.SamplingSettingsArgs
+            Sampling = new AzureNextGen.ApiManagement.Inputs.SamplingSettingsArgs
             {
                 Percentage = 50,
                 SamplingType = "fixed",
@@ -105,7 +105,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -176,33 +176,33 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_diagnostic = azure_nextgen.apimanagement.latest.ApiDiagnostic("apiDiagnostic",
+api_diagnostic = azure_nextgen.apimanagement.ApiDiagnostic("apiDiagnostic",
     always_log="allErrors",
     api_id="57d1f7558aa04f15146d9d8a",
-    backend=azure_nextgen.apimanagement.latest.PipelineDiagnosticSettingsArgs(
-        request=azure_nextgen.apimanagement.latest.HttpMessageDiagnosticArgs(
-            body=azure_nextgen.apimanagement.latest.BodyDiagnosticSettingsArgs(
+    backend=azure_nextgen.apimanagement.PipelineDiagnosticSettingsArgs(
+        request=azure_nextgen.apimanagement.HttpMessageDiagnosticArgs(
+            body=azure_nextgen.apimanagement.BodyDiagnosticSettingsArgs(
                 bytes=512,
             ),
             headers=["Content-type"],
         ),
-        response=azure_nextgen.apimanagement.latest.HttpMessageDiagnosticArgs(
-            body=azure_nextgen.apimanagement.latest.BodyDiagnosticSettingsArgs(
+        response=azure_nextgen.apimanagement.HttpMessageDiagnosticArgs(
+            body=azure_nextgen.apimanagement.BodyDiagnosticSettingsArgs(
                 bytes=512,
             ),
             headers=["Content-type"],
         ),
     ),
     diagnostic_id="applicationinsights",
-    frontend=azure_nextgen.apimanagement.latest.PipelineDiagnosticSettingsArgs(
-        request=azure_nextgen.apimanagement.latest.HttpMessageDiagnosticArgs(
-            body=azure_nextgen.apimanagement.latest.BodyDiagnosticSettingsArgs(
+    frontend=azure_nextgen.apimanagement.PipelineDiagnosticSettingsArgs(
+        request=azure_nextgen.apimanagement.HttpMessageDiagnosticArgs(
+            body=azure_nextgen.apimanagement.BodyDiagnosticSettingsArgs(
                 bytes=512,
             ),
             headers=["Content-type"],
         ),
-        response=azure_nextgen.apimanagement.latest.HttpMessageDiagnosticArgs(
-            body=azure_nextgen.apimanagement.latest.BodyDiagnosticSettingsArgs(
+        response=azure_nextgen.apimanagement.HttpMessageDiagnosticArgs(
+            body=azure_nextgen.apimanagement.BodyDiagnosticSettingsArgs(
                 bytes=512,
             ),
             headers=["Content-type"],
@@ -210,7 +210,7 @@ api_diagnostic = azure_nextgen.apimanagement.latest.ApiDiagnostic("apiDiagnostic
     ),
     logger_id="/loggers/applicationinsights",
     resource_group_name="rg1",
-    sampling=azure_nextgen.apimanagement.latest.SamplingSettingsArgs(
+    sampling=azure_nextgen.apimanagement.SamplingSettingsArgs(
         percentage=50,
         sampling_type="fixed",
     ),
@@ -226,7 +226,7 @@ api_diagnostic = azure_nextgen.apimanagement.latest.ApiDiagnostic("apiDiagnostic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const apiDiagnostic = new azure_nextgen.apimanagement.latest.ApiDiagnostic("apiDiagnostic", {
+const apiDiagnostic = new azure_nextgen.apimanagement.ApiDiagnostic("apiDiagnostic", {
     alwaysLog: "allErrors",
     apiId: "57d1f7558aa04f15146d9d8a",
     backend: {
@@ -279,7 +279,7 @@ const apiDiagnostic = new azure_nextgen.apimanagement.latest.ApiDiagnostic("apiD
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApiDiagnostic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ApiDiagnosticArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApiDiagnostic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiDiagnosticArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -287,11 +287,11 @@ const apiDiagnostic = new azure_nextgen.apimanagement.latest.ApiDiagnostic("apiD
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApiDiagnostic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ApiDiagnosticArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiDiagnostic</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApiDiagnostic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiDiagnosticArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiDiagnostic</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApiDiagnostic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ApiDiagnosticArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApiDiagnostic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApiDiagnosticArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -312,7 +312,7 @@ const apiDiagnostic = new azure_nextgen.apimanagement.latest.ApiDiagnostic("apiD
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApiDiagnosticArgs</span>
+        <span class="property-type"><a href="#inputs">ApiDiagnosticArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -381,7 +381,7 @@ const apiDiagnostic = new azure_nextgen.apimanagement.latest.ApiDiagnostic("apiD
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApiDiagnosticArgs</span>
+        <span class="property-type"><a href="#inputs">ApiDiagnosticArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -420,7 +420,7 @@ const apiDiagnostic = new azure_nextgen.apimanagement.latest.ApiDiagnostic("apiD
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApiDiagnosticArgs</span>
+        <span class="property-type"><a href="#inputs">ApiDiagnosticArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -443,11 +443,11 @@ const apiDiagnostic = new azure_nextgen.apimanagement.latest.ApiDiagnostic("apiD
 
 ## ApiDiagnostic Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1925,7 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:ApiDiagnostic applicationinsights /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/diagnostics/applicationinsights 
+$ pulumi import azure-nextgen:apimanagement:ApiDiagnostic applicationinsights /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/diagnostics/applicationinsights 
 ```
 
 

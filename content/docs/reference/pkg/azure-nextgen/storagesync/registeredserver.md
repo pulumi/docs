@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.RegisteredServer res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Registered Server resource.
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registeredServer = new AzureNextGen.StorageSync.Latest.RegisteredServer("registeredServer", new AzureNextGen.StorageSync.Latest.RegisteredServerArgs
+        var registeredServer = new AzureNextGen.StorageSync.RegisteredServer("registeredServer", new AzureNextGen.StorageSync.RegisteredServerArgs
         {
             AgentVersion = "1.0.277.0",
             LastHeartBeat = "\"2017-08-08T18:29:06.470652Z\"",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync/latest"
+	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registered_server = azure_nextgen.storagesync.latest.RegisteredServer("registeredServer",
+registered_server = azure_nextgen.storagesync.RegisteredServer("registeredServer",
     agent_version="1.0.277.0",
     last_heart_beat="\"2017-08-08T18:29:06.470652Z\"",
     resource_group_name="SampleResourceGroup_1",
@@ -105,7 +105,7 @@ registered_server = azure_nextgen.storagesync.latest.RegisteredServer("registere
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const registeredServer = new azure_nextgen.storagesync.latest.RegisteredServer("registeredServer", {
+const registeredServer = new azure_nextgen.storagesync.RegisteredServer("registeredServer", {
     agentVersion: "1.0.277.0",
     lastHeartBeat: "\"2017-08-08T18:29:06.470652Z\"",
     resourceGroupName: "SampleResourceGroup_1",
@@ -128,7 +128,7 @@ const registeredServer = new azure_nextgen.storagesync.latest.RegisteredServer("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegisteredServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RegisteredServerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegisteredServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegisteredServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -136,11 +136,11 @@ const registeredServer = new azure_nextgen.storagesync.latest.RegisteredServer("
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegisteredServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RegisteredServerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegisteredServer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegisteredServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegisteredServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegisteredServer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegisteredServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RegisteredServerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegisteredServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegisteredServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -161,7 +161,7 @@ const registeredServer = new azure_nextgen.storagesync.latest.RegisteredServer("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RegisteredServerArgs</span>
+        <span class="property-type"><a href="#inputs">RegisteredServerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -230,7 +230,7 @@ const registeredServer = new azure_nextgen.storagesync.latest.RegisteredServer("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RegisteredServerArgs</span>
+        <span class="property-type"><a href="#inputs">RegisteredServerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -269,7 +269,7 @@ const registeredServer = new azure_nextgen.storagesync.latest.RegisteredServer("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RegisteredServerArgs</span>
+        <span class="property-type"><a href="#inputs">RegisteredServerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -292,11 +292,11 @@ const registeredServer = new azure_nextgen.storagesync.latest.RegisteredServer("
 
 ## RegisteredServer Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RegisteredServer resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RegisteredServer resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1266,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagesync/latest:RegisteredServer ankushb-prod3.redmond.corp.microsoft.com /subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/530a0384-50ac-456d-8240-9d6621404151 
+$ pulumi import azure-nextgen:storagesync:RegisteredServer ankushb-prod3.redmond.corp.microsoft.com /subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/530a0384-50ac-456d-8240-9d6621404151 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databricks.Workspace resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about workspace.
-Latest API Version: 2018-04-01.
+API Version: 2018-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks.Workspace("workspace", new AzureNextGen.Databricks.WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            Parameters = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
+            Parameters = new AzureNextGen.Databricks.Inputs.WorkspaceCustomParametersArgs
             {
-                PrepareEncryption = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomBooleanParameterArgs
+                PrepareEncryption = new AzureNextGen.Databricks.Inputs.WorkspaceCustomBooleanParameterArgs
                 {
                     Value = true,
                 },
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks/latest"
+	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,11 +89,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.latest.Workspace("workspace",
+workspace = azure_nextgen.databricks.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    parameters=azure_nextgen.databricks.latest.WorkspaceCustomParametersArgs(
-        prepare_encryption=azure_nextgen.databricks.latest.WorkspaceCustomBooleanParameterArgs(
+    parameters=azure_nextgen.databricks.WorkspaceCustomParametersArgs(
+        prepare_encryption=azure_nextgen.databricks.WorkspaceCustomBooleanParameterArgs(
             value=True,
         ),
     ),
@@ -110,7 +110,7 @@ workspace = azure_nextgen.databricks.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     parameters: {
@@ -136,7 +136,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks.Workspace("workspace", new AzureNextGen.Databricks.WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
@@ -157,7 +157,7 @@ class MyStack : Stack
 package main
 
 import (
-	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks/latest"
+	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -186,7 +186,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.latest.Workspace("workspace",
+workspace = azure_nextgen.databricks.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
     resource_group_name="rg",
@@ -202,7 +202,7 @@ workspace = azure_nextgen.databricks.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     resourceGroupName: "rg",
@@ -223,21 +223,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks.Workspace("workspace", new AzureNextGen.Databricks.WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            Parameters = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
+            Parameters = new AzureNextGen.Databricks.Inputs.WorkspaceCustomParametersArgs
             {
-                CustomPrivateSubnetName = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomStringParameterArgs
+                CustomPrivateSubnetName = new AzureNextGen.Databricks.Inputs.WorkspaceCustomStringParameterArgs
                 {
                     Value = "myPrivateSubnet",
                 },
-                CustomPublicSubnetName = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomStringParameterArgs
+                CustomPublicSubnetName = new AzureNextGen.Databricks.Inputs.WorkspaceCustomStringParameterArgs
                 {
                     Value = "myPublicSubnet",
                 },
-                CustomVirtualNetworkId = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomStringParameterArgs
+                CustomVirtualNetworkId = new AzureNextGen.Databricks.Inputs.WorkspaceCustomStringParameterArgs
                 {
                     Value = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
                 },
@@ -259,7 +259,7 @@ class MyStack : Stack
 package main
 
 import (
-	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks/latest"
+	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -299,17 +299,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.latest.Workspace("workspace",
+workspace = azure_nextgen.databricks.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    parameters=azure_nextgen.databricks.latest.WorkspaceCustomParametersArgs(
-        custom_private_subnet_name=azure_nextgen.databricks.latest.WorkspaceCustomStringParameterArgs(
+    parameters=azure_nextgen.databricks.WorkspaceCustomParametersArgs(
+        custom_private_subnet_name=azure_nextgen.databricks.WorkspaceCustomStringParameterArgs(
             value="myPrivateSubnet",
         ),
-        custom_public_subnet_name=azure_nextgen.databricks.latest.WorkspaceCustomStringParameterArgs(
+        custom_public_subnet_name=azure_nextgen.databricks.WorkspaceCustomStringParameterArgs(
             value="myPublicSubnet",
         ),
-        custom_virtual_network_id=azure_nextgen.databricks.latest.WorkspaceCustomStringParameterArgs(
+        custom_virtual_network_id=azure_nextgen.databricks.WorkspaceCustomStringParameterArgs(
             value="/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
         ),
     ),
@@ -326,7 +326,7 @@ workspace = azure_nextgen.databricks.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     parameters: {
@@ -358,15 +358,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks.Workspace("workspace", new AzureNextGen.Databricks.WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            Parameters = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
+            Parameters = new AzureNextGen.Databricks.Inputs.WorkspaceCustomParametersArgs
             {
-                Encryption = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceEncryptionParameterArgs
+                Encryption = new AzureNextGen.Databricks.Inputs.WorkspaceEncryptionParameterArgs
                 {
-                    Value = new AzureNextGen.Databricks.Latest.Inputs.EncryptionArgs
+                    Value = new AzureNextGen.Databricks.Inputs.EncryptionArgs
                     {
                         KeyName = "myKeyName",
                         KeySource = "Microsoft.Keyvault",
@@ -374,7 +374,7 @@ class MyStack : Stack
                         KeyVersion = "00000000000000000000000000000000",
                     },
                 },
-                PrepareEncryption = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomBooleanParameterArgs
+                PrepareEncryption = new AzureNextGen.Databricks.Inputs.WorkspaceCustomBooleanParameterArgs
                 {
                     Value = true,
                 },
@@ -396,7 +396,7 @@ class MyStack : Stack
 package main
 
 import (
-	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks/latest"
+	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -438,19 +438,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.latest.Workspace("workspace",
+workspace = azure_nextgen.databricks.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    parameters=azure_nextgen.databricks.latest.WorkspaceCustomParametersArgs(
-        encryption=azure_nextgen.databricks.latest.WorkspaceEncryptionParameterArgs(
-            value=azure_nextgen.databricks.latest.EncryptionArgs(
+    parameters=azure_nextgen.databricks.WorkspaceCustomParametersArgs(
+        encryption=azure_nextgen.databricks.WorkspaceEncryptionParameterArgs(
+            value=azure_nextgen.databricks.EncryptionArgs(
                 key_name="myKeyName",
                 key_source="Microsoft.Keyvault",
                 key_vault_uri="https://myKeyVault.vault.azure.net/",
                 key_version="00000000000000000000000000000000",
             ),
         ),
-        prepare_encryption=azure_nextgen.databricks.latest.WorkspaceCustomBooleanParameterArgs(
+        prepare_encryption=azure_nextgen.databricks.WorkspaceCustomBooleanParameterArgs(
             value=True,
         ),
     ),
@@ -467,7 +467,7 @@ workspace = azure_nextgen.databricks.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     parameters: {
@@ -501,15 +501,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks.Workspace("workspace", new AzureNextGen.Databricks.WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            Parameters = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
+            Parameters = new AzureNextGen.Databricks.Inputs.WorkspaceCustomParametersArgs
             {
-                Encryption = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceEncryptionParameterArgs
+                Encryption = new AzureNextGen.Databricks.Inputs.WorkspaceEncryptionParameterArgs
                 {
-                    Value = new AzureNextGen.Databricks.Latest.Inputs.EncryptionArgs
+                    Value = new AzureNextGen.Databricks.Inputs.EncryptionArgs
                     {
                         KeySource = "Default",
                     },
@@ -532,7 +532,7 @@ class MyStack : Stack
 package main
 
 import (
-	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks/latest"
+	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -568,12 +568,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.latest.Workspace("workspace",
+workspace = azure_nextgen.databricks.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
-    parameters=azure_nextgen.databricks.latest.WorkspaceCustomParametersArgs(
-        encryption=azure_nextgen.databricks.latest.WorkspaceEncryptionParameterArgs(
-            value=azure_nextgen.databricks.latest.EncryptionArgs(
+    parameters=azure_nextgen.databricks.WorkspaceCustomParametersArgs(
+        encryption=azure_nextgen.databricks.WorkspaceEncryptionParameterArgs(
+            value=azure_nextgen.databricks.EncryptionArgs(
                 key_source="Default",
             ),
         ),
@@ -591,7 +591,7 @@ workspace = azure_nextgen.databricks.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     parameters: {
@@ -617,7 +617,7 @@ const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -625,11 +625,11 @@ const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -650,7 +650,7 @@ const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -719,7 +719,7 @@ const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -758,7 +758,7 @@ const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -781,11 +781,11 @@ const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
 
 ## Workspace Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Workspace resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Workspace resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3689,7 +3689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databricks/latest:Workspace myWorkspace /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Databricks/workspaces/myWorkspace 
+$ pulumi import azure-nextgen:databricks:Workspace myWorkspace /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Databricks/workspaces/myWorkspace 
 ```
 
 

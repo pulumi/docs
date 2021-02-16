@@ -24,6 +24,8 @@ Explore the resources and functions of the web module in the Azure NextGen packa
     <li><a href="siteinstancedeploymentslot" title="SiteInstanceDeploymentSlot"><span class="symbol resource"></span>SiteInstanceDeploymentSlot</a></li>
     <li><a href="staticsite" title="StaticSite"><span class="symbol resource"></span>StaticSite</a></li>
     <li><a href="webapp" title="WebApp"><span class="symbol resource"></span>WebApp</a></li>
+    <li><a href="webappapplicationsettings" title="WebAppApplicationSettings"><span class="symbol resource"></span>WebAppApplicationSettings</a></li>
+    <li><a href="webappapplicationsettingsslot" title="WebAppApplicationSettingsSlot"><span class="symbol resource"></span>WebAppApplicationSettingsSlot</a></li>
     <li><a href="webappauthsettings" title="WebAppAuthSettings"><span class="symbol resource"></span>WebAppAuthSettings</a></li>
     <li><a href="webappauthsettingsslot" title="WebAppAuthSettingsSlot"><span class="symbol resource"></span>WebAppAuthSettingsSlot</a></li>
     <li><a href="webappauthsettingsv2" title="WebAppAuthSettingsV2"><span class="symbol resource"></span>WebAppAuthSettingsV2</a></li>
@@ -66,8 +68,6 @@ Explore the resources and functions of the web module in the Azure NextGen packa
     <li><a href="webappswiftvirtualnetworkconnectionslot" title="WebAppSwiftVirtualNetworkConnectionSlot"><span class="symbol resource"></span>WebAppSwiftVirtualNetworkConnectionSlot</a></li>
     <li><a href="webappvnetconnection" title="WebAppVnetConnection"><span class="symbol resource"></span>WebAppVnetConnection</a></li>
     <li><a href="webappvnetconnectionslot" title="WebAppVnetConnectionSlot"><span class="symbol resource"></span>WebAppVnetConnectionSlot</a></li>
-    <li><a href="webapplicationsettings" title="WebApplicationSettings"><span class="symbol resource"></span>WebApplicationSettings</a></li>
-    <li><a href="webapplicationsettingsslot" title="WebApplicationSettingsSlot"><span class="symbol resource"></span>WebApplicationSettingsSlot</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -121,6 +121,8 @@ Explore the resources and functions of the web module in the Azure NextGen packa
     <li><a href="liststaticsitefunctionappsettings" title="ListStaticSiteFunctionAppSettings"><span class="symbol function"></span>ListStaticSiteFunctionAppSettings</a></li>
     <li><a href="liststaticsitesecrets" title="ListStaticSiteSecrets"><span class="symbol function"></span>ListStaticSiteSecrets</a></li>
     <li><a href="liststaticsiteusers" title="ListStaticSiteUsers"><span class="symbol function"></span>ListStaticSiteUsers</a></li>
+    <li><a href="listwebappapplicationsettings" title="ListWebAppApplicationSettings"><span class="symbol function"></span>ListWebAppApplicationSettings</a></li>
+    <li><a href="listwebappapplicationsettingsslot" title="ListWebAppApplicationSettingsSlot"><span class="symbol function"></span>ListWebAppApplicationSettingsSlot</a></li>
     <li><a href="listwebappauthsettings" title="ListWebAppAuthSettings"><span class="symbol function"></span>ListWebAppAuthSettings</a></li>
     <li><a href="listwebappauthsettingsslot" title="ListWebAppAuthSettingsSlot"><span class="symbol function"></span>ListWebAppAuthSettingsSlot</a></li>
     <li><a href="listwebappazurestorageaccounts" title="ListWebAppAzureStorageAccounts"><span class="symbol function"></span>ListWebAppAzureStorageAccounts</a></li>
@@ -149,8 +151,6 @@ Explore the resources and functions of the web module in the Azure NextGen packa
     <li><a href="listwebappsitepushsettingsslot" title="ListWebAppSitePushSettingsSlot"><span class="symbol function"></span>ListWebAppSitePushSettingsSlot</a></li>
     <li><a href="listwebappsyncfunctiontriggers" title="ListWebAppSyncFunctionTriggers"><span class="symbol function"></span>ListWebAppSyncFunctionTriggers</a></li>
     <li><a href="listwebappsyncfunctiontriggersslot" title="ListWebAppSyncFunctionTriggersSlot"><span class="symbol function"></span>ListWebAppSyncFunctionTriggersSlot</a></li>
-    <li><a href="listwebapplicationsettings" title="ListWebApplicationSettings"><span class="symbol function"></span>ListWebApplicationSettings</a></li>
-    <li><a href="listwebapplicationsettingsslot" title="ListWebApplicationSettingsSlot"><span class="symbol function"></span>ListWebApplicationSettingsSlot</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -160,9 +160,6 @@ Explore the resources and functions of the web module in the Azure NextGen packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.6.1</dd>
+	<dd>0.7.0</dd>
 </dl>
-
-
-
 

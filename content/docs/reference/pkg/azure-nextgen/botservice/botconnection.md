@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.botservice.BotConnection resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Bot channel resource definition
-Latest API Version: 2020-06-02.
+API Version: 2020-06-02.
 
 {{% examples %}}
 ## Example Usage
@@ -27,23 +27,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var botConnection = new AzureNextGen.BotService.Latest.BotConnection("botConnection", new AzureNextGen.BotService.Latest.BotConnectionArgs
+        var botConnection = new AzureNextGen.BotService.BotConnection("botConnection", new AzureNextGen.BotService.BotConnectionArgs
         {
             ConnectionName = "sampleConnection",
             Etag = "etag1",
             Location = "West US",
-            Properties = new AzureNextGen.BotService.Latest.Inputs.ConnectionSettingPropertiesArgs
+            Properties = new AzureNextGen.BotService.Inputs.ConnectionSettingPropertiesArgs
             {
                 ClientId = "sampleclientid",
                 ClientSecret = "samplesecret",
                 Parameters = 
                 {
-                    new AzureNextGen.BotService.Latest.Inputs.ConnectionSettingParameterArgs
+                    new AzureNextGen.BotService.Inputs.ConnectionSettingParameterArgs
                     {
                         Key = "key1",
                         Value = "value1",
                     },
-                    new AzureNextGen.BotService.Latest.Inputs.ConnectionSettingParameterArgs
+                    new AzureNextGen.BotService.Inputs.ConnectionSettingParameterArgs
                     {
                         Key = "key2",
                         Value = "value2",
@@ -69,7 +69,7 @@ class MyStack : Stack
 package main
 
 import (
-	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice/latest"
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -115,19 +115,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bot_connection = azure_nextgen.botservice.latest.BotConnection("botConnection",
+bot_connection = azure_nextgen.botservice.BotConnection("botConnection",
     connection_name="sampleConnection",
     etag="etag1",
     location="West US",
-    properties=azure_nextgen.botservice.latest.ConnectionSettingPropertiesArgs(
+    properties=azure_nextgen.botservice.ConnectionSettingPropertiesArgs(
         client_id="sampleclientid",
         client_secret="samplesecret",
         parameters=[
-            azure_nextgen.botservice.latest.ConnectionSettingParameterArgs(
+            azure_nextgen.botservice.ConnectionSettingParameterArgs(
                 key="key1",
                 value="value1",
             ),
-            azure_nextgen.botservice.latest.ConnectionSettingParameterArgs(
+            azure_nextgen.botservice.ConnectionSettingParameterArgs(
                 key="key2",
                 value="value2",
             ),
@@ -148,7 +148,7 @@ bot_connection = azure_nextgen.botservice.latest.BotConnection("botConnection",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const botConnection = new azure_nextgen.botservice.latest.BotConnection("botConnection", {
+const botConnection = new azure_nextgen.botservice.BotConnection("botConnection", {
     connectionName: "sampleConnection",
     etag: "etag1",
     location: "West US",
@@ -184,7 +184,7 @@ const botConnection = new azure_nextgen.botservice.latest.BotConnection("botConn
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BotConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BotConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BotConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BotConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -192,11 +192,11 @@ const botConnection = new azure_nextgen.botservice.latest.BotConnection("botConn
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBotConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BotConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BotConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBotConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BotConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BotConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BotConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BotConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BotConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BotConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -217,7 +217,7 @@ const botConnection = new azure_nextgen.botservice.latest.BotConnection("botConn
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BotConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">BotConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -286,7 +286,7 @@ const botConnection = new azure_nextgen.botservice.latest.BotConnection("botConn
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BotConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">BotConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -325,7 +325,7 @@ const botConnection = new azure_nextgen.botservice.latest.BotConnection("botConn
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BotConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">BotConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -348,11 +348,11 @@ const botConnection = new azure_nextgen.botservice.latest.BotConnection("botConn
 
 ## BotConnection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The BotConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The BotConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1826,7 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:botservice/latest:BotConnection sampleConnection /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.BotService/botServices/samplebotname/connections/sampleConnection 
+$ pulumi import azure-nextgen:botservice:BotConnection sampleConnection /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.BotService/botServices/samplebotname/connections/sampleConnection 
 ```
 
 

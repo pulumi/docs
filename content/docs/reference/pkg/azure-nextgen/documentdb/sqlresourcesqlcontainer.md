@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.SqlResourceSqlContain
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB container.
-Latest API Version: 2020-09-01.
+API Version: 2021-01-15.
 
 {{% examples %}}
 ## Example Usage
@@ -27,39 +27,39 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlContainer = new AzureNextGen.DocumentDB.Latest.SqlResourceSqlContainer("sqlResourceSqlContainer", new AzureNextGen.DocumentDB.Latest.SqlResourceSqlContainerArgs
+        var sqlResourceSqlContainer = new AzureNextGen.DocumentDB.SqlResourceSqlContainer("sqlResourceSqlContainer", new AzureNextGen.DocumentDB.SqlResourceSqlContainerArgs
         {
             AccountName = "ddb1",
             ContainerName = "containerName",
             DatabaseName = "databaseName",
             Location = "West US",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlContainerResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Inputs.SqlContainerResourceArgs
             {
-                ConflictResolutionPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.ConflictResolutionPolicyArgs
+                ConflictResolutionPolicy = new AzureNextGen.DocumentDB.Inputs.ConflictResolutionPolicyArgs
                 {
                     ConflictResolutionPath = "/path",
                     Mode = "LastWriterWins",
                 },
                 DefaultTtl = 100,
                 Id = "containerName",
-                IndexingPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.IndexingPolicyArgs
+                IndexingPolicy = new AzureNextGen.DocumentDB.Inputs.IndexingPolicyArgs
                 {
                     Automatic = true,
                     ExcludedPaths = {},
                     IncludedPaths = 
                     {
-                        new AzureNextGen.DocumentDB.Latest.Inputs.IncludedPathArgs
+                        new AzureNextGen.DocumentDB.Inputs.IncludedPathArgs
                         {
                             Indexes = 
                             {
-                                new AzureNextGen.DocumentDB.Latest.Inputs.IndexesArgs
+                                new AzureNextGen.DocumentDB.Inputs.IndexesArgs
                                 {
                                     DataType = "String",
                                     Kind = "Range",
                                     Precision = -1,
                                 },
-                                new AzureNextGen.DocumentDB.Latest.Inputs.IndexesArgs
+                                new AzureNextGen.DocumentDB.Inputs.IndexesArgs
                                 {
                                     DataType = "Number",
                                     Kind = "Range",
@@ -69,9 +69,9 @@ class MyStack : Stack
                             Path = "/*",
                         },
                     },
-                    IndexingMode = "Consistent",
+                    IndexingMode = "consistent",
                 },
-                PartitionKey = new AzureNextGen.DocumentDB.Latest.Inputs.ContainerPartitionKeyArgs
+                PartitionKey = new AzureNextGen.DocumentDB.Inputs.ContainerPartitionKeyArgs
                 {
                     Kind = "Hash",
                     Paths = 
@@ -79,11 +79,11 @@ class MyStack : Stack
                         "/AccountNumber",
                     },
                 },
-                UniqueKeyPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.UniqueKeyPolicyArgs
+                UniqueKeyPolicy = new AzureNextGen.DocumentDB.Inputs.UniqueKeyPolicyArgs
                 {
                     UniqueKeys = 
                     {
-                        new AzureNextGen.DocumentDB.Latest.Inputs.UniqueKeyArgs
+                        new AzureNextGen.DocumentDB.Inputs.UniqueKeyArgs
                         {
                             Paths = 
                             {
@@ -110,7 +110,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -149,7 +149,7 @@ func main() {
 							Path: pulumi.String("/*"),
 						},
 					},
-					IndexingMode: pulumi.String("Consistent"),
+					IndexingMode: pulumi.String("consistent"),
 				},
 				PartitionKey: &documentdb.ContainerPartitionKeyArgs{
 					Kind: pulumi.String("Hash"),
@@ -187,30 +187,30 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_container = azure_nextgen.documentdb.latest.SqlResourceSqlContainer("sqlResourceSqlContainer",
+sql_resource_sql_container = azure_nextgen.documentdb.SqlResourceSqlContainer("sqlResourceSqlContainer",
     account_name="ddb1",
     container_name="containerName",
     database_name="databaseName",
     location="West US",
-    options=azure_nextgen.documentdb.latest.CreateUpdateOptionsArgs(),
-    resource=azure_nextgen.documentdb.latest.SqlContainerResourceArgs(
-        conflict_resolution_policy=azure_nextgen.documentdb.latest.ConflictResolutionPolicyArgs(
+    options=azure_nextgen.documentdb.CreateUpdateOptionsArgs(),
+    resource=azure_nextgen.documentdb.SqlContainerResourceArgs(
+        conflict_resolution_policy=azure_nextgen.documentdb.ConflictResolutionPolicyArgs(
             conflict_resolution_path="/path",
             mode="LastWriterWins",
         ),
         default_ttl=100,
         id="containerName",
-        indexing_policy=azure_nextgen.documentdb.latest.IndexingPolicyArgs(
+        indexing_policy=azure_nextgen.documentdb.IndexingPolicyArgs(
             automatic=True,
             excluded_paths=[],
-            included_paths=[azure_nextgen.documentdb.latest.IncludedPathArgs(
+            included_paths=[azure_nextgen.documentdb.IncludedPathArgs(
                 indexes=[
-                    azure_nextgen.documentdb.latest.IndexesArgs(
+                    azure_nextgen.documentdb.IndexesArgs(
                         data_type="String",
                         kind="Range",
                         precision=-1,
                     ),
-                    azure_nextgen.documentdb.latest.IndexesArgs(
+                    azure_nextgen.documentdb.IndexesArgs(
                         data_type="Number",
                         kind="Range",
                         precision=-1,
@@ -218,14 +218,14 @@ sql_resource_sql_container = azure_nextgen.documentdb.latest.SqlResourceSqlConta
                 ],
                 path="/*",
             )],
-            indexing_mode="Consistent",
+            indexing_mode="consistent",
         ),
-        partition_key=azure_nextgen.documentdb.latest.ContainerPartitionKeyArgs(
+        partition_key=azure_nextgen.documentdb.ContainerPartitionKeyArgs(
             kind="Hash",
             paths=["/AccountNumber"],
         ),
-        unique_key_policy=azure_nextgen.documentdb.latest.UniqueKeyPolicyArgs(
-            unique_keys=[azure_nextgen.documentdb.latest.UniqueKeyArgs(
+        unique_key_policy=azure_nextgen.documentdb.UniqueKeyPolicyArgs(
+            unique_keys=[azure_nextgen.documentdb.UniqueKeyArgs(
                 paths=["/testPath"],
             )],
         ),
@@ -243,7 +243,7 @@ sql_resource_sql_container = azure_nextgen.documentdb.latest.SqlResourceSqlConta
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceSqlContainer("sqlResourceSqlContainer", {
+const sqlResourceSqlContainer = new azure_nextgen.documentdb.SqlResourceSqlContainer("sqlResourceSqlContainer", {
     accountName: "ddb1",
     containerName: "containerName",
     databaseName: "databaseName",
@@ -274,7 +274,7 @@ const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceS
                 ],
                 path: "/*",
             }],
-            indexingMode: "Consistent",
+            indexingMode: "consistent",
         },
         partitionKey: {
             kind: "Hash",
@@ -302,7 +302,7 @@ const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceS
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SqlResourceSqlContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlResourceSqlContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -310,11 +310,11 @@ const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceS
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlResourceSqlContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SqlResourceSqlContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlResourceSqlContainer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlResourceSqlContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlResourceSqlContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlResourceSqlContainer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SqlResourceSqlContainerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SqlResourceSqlContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -335,7 +335,7 @@ const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlResourceSqlContainerArgs</span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlContainerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -404,7 +404,7 @@ const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlResourceSqlContainerArgs</span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlContainerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -443,7 +443,7 @@ const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlResourceSqlContainerArgs</span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlContainerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -466,11 +466,11 @@ const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceS
 
 ## SqlResourceSqlContainer Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SqlResourceSqlContainer resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SqlResourceSqlContainer resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1259,37 +1259,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular">
-    <dt>Ascending</dt>
-    <dd>Ascending</dd>
-    <dt>Descending</dt>
-    <dd>Descending</dd>
+    <dt>@Ascending</dt>
+    <dd>ascending</dd>
+    <dt>@Descending</dt>
+    <dd>descending</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular">
     <dt>Composite<wbr>Path<wbr>Sort<wbr>Order<wbr>Ascending</dt>
-    <dd>Ascending</dd>
+    <dd>ascending</dd>
     <dt>Composite<wbr>Path<wbr>Sort<wbr>Order<wbr>Descending</dt>
-    <dd>Descending</dd>
+    <dd>descending</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular">
     <dt>Ascending</dt>
-    <dd>Ascending</dd>
+    <dd>ascending</dd>
     <dt>Descending</dt>
-    <dd>Descending</dd>
+    <dd>descending</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular">
     <dt>ASCENDING</dt>
-    <dd>Ascending</dd>
+    <dd>ascending</dd>
     <dt>DESCENDING</dt>
-    <dd>Descending</dd>
+    <dd>descending</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1612,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#partitionkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Partition<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="paths_csharp">
@@ -1645,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#partitionkind">Partition<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="paths_go">
@@ -1678,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#partitionkind">Partition<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="paths_nodejs">
@@ -1711,7 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#partitionkind">Partition<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="paths_python">
@@ -1738,6 +1738,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="systemkey_csharp">
+<a href="#systemkey_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the container is using a system generated partition key{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
@@ -1746,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="paths_csharp">
@@ -1771,6 +1780,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="systemkey_go">
+<a href="#systemkey_go" style="color: inherit; text-decoration: inherit;">System<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the container is using a system generated partition key{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kind_go">
@@ -1779,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="paths_go">
@@ -1804,6 +1822,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="systemkey_nodejs">
+<a href="#systemkey_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the container is using a system generated partition key{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
@@ -1812,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="paths_nodejs">
@@ -1837,6 +1864,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="system_key_python">
+<a href="#system_key_python" style="color: inherit; text-decoration: inherit;">system_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the container is using a system generated partition key{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kind_python">
@@ -1845,7 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="paths_python">
@@ -2674,44 +2710,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="tabular">
     <dt>Consistent</dt>
-    <dd>Consistent</dd>
+    <dd>consistent</dd>
     <dt>Lazy</dt>
-    <dd>Lazy</dd>
+    <dd>lazy</dd>
     <dt>None</dt>
-    <dd>None</dd>
+    <dd>none</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular">
     <dt>Indexing<wbr>Mode<wbr>Consistent</dt>
-    <dd>Consistent</dd>
+    <dd>consistent</dd>
     <dt>Indexing<wbr>Mode<wbr>Lazy</dt>
-    <dd>Lazy</dd>
+    <dd>lazy</dd>
     <dt>Indexing<wbr>Mode<wbr>None</dt>
-    <dd>None</dd>
+    <dd>none</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular">
     <dt>Consistent</dt>
-    <dd>Consistent</dd>
+    <dd>consistent</dd>
     <dt>Lazy</dt>
-    <dd>Lazy</dd>
+    <dd>lazy</dd>
     <dt>None</dt>
-    <dd>None</dd>
+    <dd>none</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular">
     <dt>CONSISTENT</dt>
-    <dd>Consistent</dd>
+    <dd>consistent</dd>
     <dt>LAZY</dt>
-    <dd>Lazy</dd>
+    <dd>lazy</dd>
     <dt>NONE</dt>
-    <dd>None</dd>
+    <dd>none</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3207,6 +3243,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Hash</dd>
     <dt>Range</dt>
     <dd>Range</dd>
+    <dt>Multi<wbr>Hash</dt>
+    <dd>MultiHash</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3216,6 +3254,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Hash</dd>
     <dt>Partition<wbr>Kind<wbr>Range</dt>
     <dd>Range</dd>
+    <dt>Partition<wbr>Kind<wbr>Multi<wbr>Hash</dt>
+    <dd>MultiHash</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3225,6 +3265,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Hash</dd>
     <dt>Range</dt>
     <dd>Range</dd>
+    <dt>Multi<wbr>Hash</dt>
+    <dd>MultiHash</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3234,6 +3276,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Hash</dd>
     <dt>RANGE</dt>
     <dd>Range</dd>
+    <dt>MULTI_HASH</dt>
+    <dd>MultiHash</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4502,7 +4546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:SqlResourceSqlContainer containerName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName 
+$ pulumi import azure-nextgen:documentdb:SqlResourceSqlContainer containerName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.GalleryImageVersion reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the gallery image version that you want to create or update.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,34 +27,34 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryImageVersion = new AzureNextGen.Compute.Latest.GalleryImageVersion("galleryImageVersion", new AzureNextGen.Compute.Latest.GalleryImageVersionArgs
+        var galleryImageVersion = new AzureNextGen.Compute.GalleryImageVersion("galleryImageVersion", new AzureNextGen.Compute.GalleryImageVersionArgs
         {
             GalleryImageName = "myGalleryImageName",
             GalleryImageVersionName = "1.0.0",
             GalleryName = "myGalleryName",
             Location = "West US",
-            PublishingProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryImageVersionPublishingProfileArgs
+            PublishingProfile = new AzureNextGen.Compute.Inputs.GalleryImageVersionPublishingProfileArgs
             {
                 TargetRegions = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute.Inputs.TargetRegionArgs
                     {
-                        Encryption = new AzureNextGen.Compute.Latest.Inputs.EncryptionImagesArgs
+                        Encryption = new AzureNextGen.Compute.Inputs.EncryptionImagesArgs
                         {
                             DataDiskImages = 
                             {
-                                new AzureNextGen.Compute.Latest.Inputs.DataDiskImageEncryptionArgs
+                                new AzureNextGen.Compute.Inputs.DataDiskImageEncryptionArgs
                                 {
                                     DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                                     Lun = 0,
                                 },
-                                new AzureNextGen.Compute.Latest.Inputs.DataDiskImageEncryptionArgs
+                                new AzureNextGen.Compute.Inputs.DataDiskImageEncryptionArgs
                                 {
                                     DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                                     Lun = 1,
                                 },
                             },
-                            OsDiskImage = new AzureNextGen.Compute.Latest.Inputs.OSDiskImageEncryptionArgs
+                            OsDiskImage = new AzureNextGen.Compute.Inputs.OSDiskImageEncryptionArgs
                             {
                                 DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                             },
@@ -62,7 +62,7 @@ class MyStack : Stack
                         Name = "West US",
                         RegionalReplicaCount = 1,
                     },
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute.Inputs.TargetRegionArgs
                     {
                         Name = "East US",
                         RegionalReplicaCount = 2,
@@ -71,9 +71,9 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryImageVersionStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.GalleryImageVersionStorageProfileArgs
             {
-                Source = new AzureNextGen.Compute.Latest.Inputs.GalleryArtifactVersionSourceArgs
+                Source = new AzureNextGen.Compute.Inputs.GalleryArtifactVersionSourceArgs
                 {
                     Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}",
                 },
@@ -93,7 +93,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -156,33 +156,33 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion",
+gallery_image_version = azure_nextgen.compute.GalleryImageVersion("galleryImageVersion",
     gallery_image_name="myGalleryImageName",
     gallery_image_version_name="1.0.0",
     gallery_name="myGalleryName",
     location="West US",
-    publishing_profile=azure_nextgen.compute.latest.GalleryImageVersionPublishingProfileArgs(
+    publishing_profile=azure_nextgen.compute.GalleryImageVersionPublishingProfileArgs(
         target_regions=[
-            azure_nextgen.compute.latest.TargetRegionArgs(
-                encryption=azure_nextgen.compute.latest.EncryptionImagesArgs(
+            azure_nextgen.compute.TargetRegionArgs(
+                encryption=azure_nextgen.compute.EncryptionImagesArgs(
                     data_disk_images=[
-                        azure_nextgen.compute.latest.DataDiskImageEncryptionArgs(
+                        azure_nextgen.compute.DataDiskImageEncryptionArgs(
                             disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                             lun=0,
                         ),
-                        azure_nextgen.compute.latest.DataDiskImageEncryptionArgs(
+                        azure_nextgen.compute.DataDiskImageEncryptionArgs(
                             disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                             lun=1,
                         ),
                     ],
-                    os_disk_image=azure_nextgen.compute.latest.OSDiskImageEncryptionArgs(
+                    os_disk_image=azure_nextgen.compute.OSDiskImageEncryptionArgs(
                         disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                     ),
                 ),
                 name="West US",
                 regional_replica_count=1,
             ),
-            azure_nextgen.compute.latest.TargetRegionArgs(
+            azure_nextgen.compute.TargetRegionArgs(
                 name="East US",
                 regional_replica_count=2,
                 storage_account_type="Standard_ZRS",
@@ -190,8 +190,8 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
         ],
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.GalleryImageVersionStorageProfileArgs(
-        source=azure_nextgen.compute.latest.GalleryArtifactVersionSourceArgs(
+    storage_profile=azure_nextgen.compute.GalleryImageVersionStorageProfileArgs(
+        source=azure_nextgen.compute.GalleryArtifactVersionSourceArgs(
             id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}",
         ),
     ))
@@ -206,7 +206,7 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion", {
+const galleryImageVersion = new azure_nextgen.compute.GalleryImageVersion("galleryImageVersion", {
     galleryImageName: "myGalleryImageName",
     galleryImageVersionName: "1.0.0",
     galleryName: "myGalleryName",
@@ -261,29 +261,29 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryImageVersion = new AzureNextGen.Compute.Latest.GalleryImageVersion("galleryImageVersion", new AzureNextGen.Compute.Latest.GalleryImageVersionArgs
+        var galleryImageVersion = new AzureNextGen.Compute.GalleryImageVersion("galleryImageVersion", new AzureNextGen.Compute.GalleryImageVersionArgs
         {
             GalleryImageName = "myGalleryImageName",
             GalleryImageVersionName = "1.0.0",
             GalleryName = "myGalleryName",
             Location = "West US",
-            PublishingProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryImageVersionPublishingProfileArgs
+            PublishingProfile = new AzureNextGen.Compute.Inputs.GalleryImageVersionPublishingProfileArgs
             {
                 TargetRegions = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute.Inputs.TargetRegionArgs
                     {
-                        Encryption = new AzureNextGen.Compute.Latest.Inputs.EncryptionImagesArgs
+                        Encryption = new AzureNextGen.Compute.Inputs.EncryptionImagesArgs
                         {
                             DataDiskImages = 
                             {
-                                new AzureNextGen.Compute.Latest.Inputs.DataDiskImageEncryptionArgs
+                                new AzureNextGen.Compute.Inputs.DataDiskImageEncryptionArgs
                                 {
                                     DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                                     Lun = 1,
                                 },
                             },
-                            OsDiskImage = new AzureNextGen.Compute.Latest.Inputs.OSDiskImageEncryptionArgs
+                            OsDiskImage = new AzureNextGen.Compute.Inputs.OSDiskImageEncryptionArgs
                             {
                                 DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                             },
@@ -291,7 +291,7 @@ class MyStack : Stack
                         Name = "West US",
                         RegionalReplicaCount = 1,
                     },
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute.Inputs.TargetRegionArgs
                     {
                         Name = "East US",
                         RegionalReplicaCount = 2,
@@ -300,24 +300,24 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryImageVersionStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.GalleryImageVersionStorageProfileArgs
             {
                 DataDiskImages = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.GalleryDataDiskImageArgs
+                    new AzureNextGen.Compute.Inputs.GalleryDataDiskImageArgs
                     {
                         HostCaching = "None",
                         Lun = 1,
-                        Source = new AzureNextGen.Compute.Latest.Inputs.GalleryArtifactVersionSourceArgs
+                        Source = new AzureNextGen.Compute.Inputs.GalleryArtifactVersionSourceArgs
                         {
                             Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
                         },
                     },
                 },
-                OsDiskImage = new AzureNextGen.Compute.Latest.Inputs.GalleryOSDiskImageArgs
+                OsDiskImage = new AzureNextGen.Compute.Inputs.GalleryOSDiskImageArgs
                 {
                     HostCaching = "ReadOnly",
-                    Source = new AzureNextGen.Compute.Latest.Inputs.GalleryArtifactVersionSourceArgs
+                    Source = new AzureNextGen.Compute.Inputs.GalleryArtifactVersionSourceArgs
                     {
                         Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
                     },
@@ -338,7 +338,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -409,27 +409,27 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion",
+gallery_image_version = azure_nextgen.compute.GalleryImageVersion("galleryImageVersion",
     gallery_image_name="myGalleryImageName",
     gallery_image_version_name="1.0.0",
     gallery_name="myGalleryName",
     location="West US",
-    publishing_profile=azure_nextgen.compute.latest.GalleryImageVersionPublishingProfileArgs(
+    publishing_profile=azure_nextgen.compute.GalleryImageVersionPublishingProfileArgs(
         target_regions=[
-            azure_nextgen.compute.latest.TargetRegionArgs(
-                encryption=azure_nextgen.compute.latest.EncryptionImagesArgs(
-                    data_disk_images=[azure_nextgen.compute.latest.DataDiskImageEncryptionArgs(
+            azure_nextgen.compute.TargetRegionArgs(
+                encryption=azure_nextgen.compute.EncryptionImagesArgs(
+                    data_disk_images=[azure_nextgen.compute.DataDiskImageEncryptionArgs(
                         disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                         lun=1,
                     )],
-                    os_disk_image=azure_nextgen.compute.latest.OSDiskImageEncryptionArgs(
+                    os_disk_image=azure_nextgen.compute.OSDiskImageEncryptionArgs(
                         disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                     ),
                 ),
                 name="West US",
                 regional_replica_count=1,
             ),
-            azure_nextgen.compute.latest.TargetRegionArgs(
+            azure_nextgen.compute.TargetRegionArgs(
                 name="East US",
                 regional_replica_count=2,
                 storage_account_type="Standard_ZRS",
@@ -437,17 +437,17 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
         ],
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.GalleryImageVersionStorageProfileArgs(
-        data_disk_images=[azure_nextgen.compute.latest.GalleryDataDiskImageArgs(
+    storage_profile=azure_nextgen.compute.GalleryImageVersionStorageProfileArgs(
+        data_disk_images=[azure_nextgen.compute.GalleryDataDiskImageArgs(
             host_caching="None",
             lun=1,
-            source=azure_nextgen.compute.latest.GalleryArtifactVersionSourceArgs(
+            source=azure_nextgen.compute.GalleryArtifactVersionSourceArgs(
                 id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
             ),
         )],
-        os_disk_image=azure_nextgen.compute.latest.GalleryOSDiskImageArgs(
+        os_disk_image=azure_nextgen.compute.GalleryOSDiskImageArgs(
             host_caching="ReadOnly",
-            source=azure_nextgen.compute.latest.GalleryArtifactVersionSourceArgs(
+            source=azure_nextgen.compute.GalleryArtifactVersionSourceArgs(
                 id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
             ),
         ),
@@ -463,7 +463,7 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion", {
+const galleryImageVersion = new azure_nextgen.compute.GalleryImageVersion("galleryImageVersion", {
     galleryImageName: "myGalleryImageName",
     galleryImageVersionName: "1.0.0",
     galleryName: "myGalleryName",
@@ -522,29 +522,29 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryImageVersion = new AzureNextGen.Compute.Latest.GalleryImageVersion("galleryImageVersion", new AzureNextGen.Compute.Latest.GalleryImageVersionArgs
+        var galleryImageVersion = new AzureNextGen.Compute.GalleryImageVersion("galleryImageVersion", new AzureNextGen.Compute.GalleryImageVersionArgs
         {
             GalleryImageName = "myGalleryImageName",
             GalleryImageVersionName = "1.0.0",
             GalleryName = "myGalleryName",
             Location = "West US",
-            PublishingProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryImageVersionPublishingProfileArgs
+            PublishingProfile = new AzureNextGen.Compute.Inputs.GalleryImageVersionPublishingProfileArgs
             {
                 TargetRegions = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute.Inputs.TargetRegionArgs
                     {
-                        Encryption = new AzureNextGen.Compute.Latest.Inputs.EncryptionImagesArgs
+                        Encryption = new AzureNextGen.Compute.Inputs.EncryptionImagesArgs
                         {
                             DataDiskImages = 
                             {
-                                new AzureNextGen.Compute.Latest.Inputs.DataDiskImageEncryptionArgs
+                                new AzureNextGen.Compute.Inputs.DataDiskImageEncryptionArgs
                                 {
                                     DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                                     Lun = 1,
                                 },
                             },
-                            OsDiskImage = new AzureNextGen.Compute.Latest.Inputs.OSDiskImageEncryptionArgs
+                            OsDiskImage = new AzureNextGen.Compute.Inputs.OSDiskImageEncryptionArgs
                             {
                                 DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                             },
@@ -552,7 +552,7 @@ class MyStack : Stack
                         Name = "West US",
                         RegionalReplicaCount = 1,
                     },
-                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute.Inputs.TargetRegionArgs
                     {
                         Name = "East US",
                         RegionalReplicaCount = 2,
@@ -561,9 +561,9 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryImageVersionStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.GalleryImageVersionStorageProfileArgs
             {
-                Source = new AzureNextGen.Compute.Latest.Inputs.GalleryArtifactVersionSourceArgs
+                Source = new AzureNextGen.Compute.Inputs.GalleryArtifactVersionSourceArgs
                 {
                     Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
                     Uri = "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
@@ -584,7 +584,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -644,27 +644,27 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion",
+gallery_image_version = azure_nextgen.compute.GalleryImageVersion("galleryImageVersion",
     gallery_image_name="myGalleryImageName",
     gallery_image_version_name="1.0.0",
     gallery_name="myGalleryName",
     location="West US",
-    publishing_profile=azure_nextgen.compute.latest.GalleryImageVersionPublishingProfileArgs(
+    publishing_profile=azure_nextgen.compute.GalleryImageVersionPublishingProfileArgs(
         target_regions=[
-            azure_nextgen.compute.latest.TargetRegionArgs(
-                encryption=azure_nextgen.compute.latest.EncryptionImagesArgs(
-                    data_disk_images=[azure_nextgen.compute.latest.DataDiskImageEncryptionArgs(
+            azure_nextgen.compute.TargetRegionArgs(
+                encryption=azure_nextgen.compute.EncryptionImagesArgs(
+                    data_disk_images=[azure_nextgen.compute.DataDiskImageEncryptionArgs(
                         disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                         lun=1,
                     )],
-                    os_disk_image=azure_nextgen.compute.latest.OSDiskImageEncryptionArgs(
+                    os_disk_image=azure_nextgen.compute.OSDiskImageEncryptionArgs(
                         disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                     ),
                 ),
                 name="West US",
                 regional_replica_count=1,
             ),
-            azure_nextgen.compute.latest.TargetRegionArgs(
+            azure_nextgen.compute.TargetRegionArgs(
                 name="East US",
                 regional_replica_count=2,
                 storage_account_type="Standard_ZRS",
@@ -672,8 +672,8 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
         ],
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.GalleryImageVersionStorageProfileArgs(
-        source=azure_nextgen.compute.latest.GalleryArtifactVersionSourceArgs(
+    storage_profile=azure_nextgen.compute.GalleryImageVersionStorageProfileArgs(
+        source=azure_nextgen.compute.GalleryArtifactVersionSourceArgs(
             id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
             uri="https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
         ),
@@ -689,7 +689,7 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion", {
+const galleryImageVersion = new azure_nextgen.compute.GalleryImageVersion("galleryImageVersion", {
     galleryImageName: "myGalleryImageName",
     galleryImageVersionName: "1.0.0",
     galleryName: "myGalleryName",
@@ -737,7 +737,7 @@ const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">GalleryImageVersionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -745,11 +745,11 @@ const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGalleryImageVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">GalleryImageVersionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GalleryImageVersion</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGalleryImageVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GalleryImageVersion</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">GalleryImageVersionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -770,7 +770,7 @@ const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GalleryImageVersionArgs</span>
+        <span class="property-type"><a href="#inputs">GalleryImageVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -839,7 +839,7 @@ const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GalleryImageVersionArgs</span>
+        <span class="property-type"><a href="#inputs">GalleryImageVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -878,7 +878,7 @@ const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GalleryImageVersionArgs</span>
+        <span class="property-type"><a href="#inputs">GalleryImageVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -901,11 +901,11 @@ const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion
 
 ## GalleryImageVersion Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The GalleryImageVersion resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The GalleryImageVersion resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4111,7 +4111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:GalleryImageVersion 1.0.0 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName}/versions/{galleryImageVersionName} 
+$ pulumi import azure-nextgen:compute:GalleryImageVersion 1.0.0 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName}/versions/{galleryImageVersionName} 
 ```
 
 

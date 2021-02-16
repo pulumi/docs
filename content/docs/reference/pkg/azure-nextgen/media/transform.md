@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.Transform resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,18 +27,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var transform = new AzureNextGen.Media.Latest.Transform("transform", new AzureNextGen.Media.Latest.TransformArgs
+        var transform = new AzureNextGen.Media.Transform("transform", new AzureNextGen.Media.TransformArgs
         {
             AccountName = "contosomedia",
             Description = "Example Transform to illustrate create and update.",
             Outputs = 
             {
-                new AzureNextGen.Media.Latest.Inputs.TransformOutputArgs
+                new AzureNextGen.Media.Inputs.TransformOutputArgs
                 {
-                    Preset = 
+                    Preset = new AzureNextGen.Media.Inputs.BuiltInStandardEncoderPresetArgs
                     {
-                        { "odataType", "#Microsoft.Media.BuiltInStandardEncoderPreset" },
-                        { "presetName", "AdaptiveStreaming" },
+                        OdataType = "#Microsoft.Media.BuiltInStandardEncoderPreset",
+                        PresetName = "AdaptiveStreaming",
                     },
                 },
             },
@@ -54,7 +54,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewTransform(ctx, "transform", &media.TransformArgs{
+			AccountName: pulumi.String("contosomedia"),
+			Description: pulumi.String("Example Transform to illustrate create and update."),
+			Outputs: media.TransformOutputArray{
+				&media.TransformOutputArgs{
+					Preset: &media.BuiltInStandardEncoderPresetArgs{
+						OdataType:  pulumi.String("#Microsoft.Media.BuiltInStandardEncoderPreset"),
+						PresetName: pulumi.String("AdaptiveStreaming"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("contosoresources"),
+			TransformName:     pulumi.String("createdTransform"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -63,14 +96,14 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-transform = azure_nextgen.media.latest.Transform("transform",
+transform = azure_nextgen.media.Transform("transform",
     account_name="contosomedia",
     description="Example Transform to illustrate create and update.",
-    outputs=[azure_nextgen.media.latest.TransformOutputArgs(
-        preset={
-            "odataType": "#Microsoft.Media.BuiltInStandardEncoderPreset",
-            "presetName": "AdaptiveStreaming",
-        },
+    outputs=[azure_nextgen.media.TransformOutputArgs(
+        preset=azure_nextgen.media.BuiltInStandardEncoderPresetArgs(
+            odata_type="#Microsoft.Media.BuiltInStandardEncoderPreset",
+            preset_name="AdaptiveStreaming",
+        ),
     )],
     resource_group_name="contosoresources",
     transform_name="createdTransform")
@@ -85,7 +118,7 @@ transform = azure_nextgen.media.latest.Transform("transform",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const transform = new azure_nextgen.media.latest.Transform("transform", {
+const transform = new azure_nextgen.media.Transform("transform", {
     accountName: "contosomedia",
     description: "Example Transform to illustrate create and update.",
     outputs: [{
@@ -110,7 +143,7 @@ const transform = new azure_nextgen.media.latest.Transform("transform", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">TransformArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -118,11 +151,11 @@ const transform = new azure_nextgen.media.latest.Transform("transform", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTransform</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">TransformArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Transform</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTransform</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Transform</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">TransformArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -143,7 +176,7 @@ const transform = new azure_nextgen.media.latest.Transform("transform", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TransformArgs</span>
+        <span class="property-type"><a href="#inputs">TransformArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -212,7 +245,7 @@ const transform = new azure_nextgen.media.latest.Transform("transform", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TransformArgs</span>
+        <span class="property-type"><a href="#inputs">TransformArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -251,7 +284,7 @@ const transform = new azure_nextgen.media.latest.Transform("transform", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TransformArgs</span>
+        <span class="property-type"><a href="#inputs">TransformArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,11 +307,11 @@ const transform = new azure_nextgen.media.latest.Transform("transform", {
 
 ## Transform Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Transform resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Transform resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -13736,7 +13769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:Transform createdTransform /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoresources/providers/Microsoft.Media/mediaservices/contosomedia/transforms/createdTransform 
+$ pulumi import azure-nextgen:media:Transform createdTransform /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoresources/providers/Microsoft.Media/mediaservices/contosomedia/transforms/createdTransform 
 ```
 
 

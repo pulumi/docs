@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.Profile resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a Traffic Manager profile.
-Latest API Version: 2018-04-01.
+API Version: 2018-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Network.Latest.Profile("profile", new AzureNextGen.Network.Latest.ProfileArgs
+        var profile = new AzureNextGen.Network.Profile("profile", new AzureNextGen.Network.ProfileArgs
         {
-            DnsConfig = new AzureNextGen.Network.Latest.Inputs.DnsConfigArgs
+            DnsConfig = new AzureNextGen.Network.Inputs.DnsConfigArgs
             {
                 RelativeName = "azsmnet6386",
                 Ttl = 35,
             },
             Location = "global",
-            MonitorConfig = new AzureNextGen.Network.Latest.Inputs.MonitorConfigArgs
+            MonitorConfig = new AzureNextGen.Network.Inputs.MonitorConfigArgs
             {
                 Path = "/testpath.aspx",
                 Port = 80,
@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -99,13 +99,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.network.latest.Profile("profile",
-    dns_config=azure_nextgen.network.latest.DnsConfigArgs(
+profile = azure_nextgen.network.Profile("profile",
+    dns_config=azure_nextgen.network.DnsConfigArgs(
         relative_name="azsmnet6386",
         ttl=35,
     ),
     location="global",
-    monitor_config=azure_nextgen.network.latest.MonitorConfigArgs(
+    monitor_config=azure_nextgen.network.MonitorConfigArgs(
         path="/testpath.aspx",
         port=80,
         protocol="HTTP",
@@ -125,7 +125,7 @@ profile = azure_nextgen.network.latest.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const profile = new azure_nextgen.network.latest.Profile("profile", {
+const profile = new azure_nextgen.network.Profile("profile", {
     dnsConfig: {
         relativeName: "azsmnet6386",
         ttl: 35,
@@ -156,20 +156,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Network.Latest.Profile("profile", new AzureNextGen.Network.Latest.ProfileArgs
+        var profile = new AzureNextGen.Network.Profile("profile", new AzureNextGen.Network.ProfileArgs
         {
-            DnsConfig = new AzureNextGen.Network.Latest.Inputs.DnsConfigArgs
+            DnsConfig = new AzureNextGen.Network.Inputs.DnsConfigArgs
             {
                 RelativeName = "azuresdkfornetautoresttrafficmanager6192",
                 Ttl = 35,
             },
             Endpoints = 
             {
-                new AzureNextGen.Network.Latest.Inputs.EndpointArgs
+                new AzureNextGen.Network.Inputs.EndpointArgs
                 {
                     CustomHeaders = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.EndpointPropertiesCustomHeadersArgs
+                        new AzureNextGen.Network.Inputs.EndpointPropertiesCustomHeadersArgs
                         {
                             Name = "header-2",
                             Value = "value-2-overridden",
@@ -183,16 +183,16 @@ class MyStack : Stack
                 },
             },
             Location = "global",
-            MonitorConfig = new AzureNextGen.Network.Latest.Inputs.MonitorConfigArgs
+            MonitorConfig = new AzureNextGen.Network.Inputs.MonitorConfigArgs
             {
                 CustomHeaders = 
                 {
-                    new AzureNextGen.Network.Latest.Inputs.MonitorConfigCustomHeadersArgs
+                    new AzureNextGen.Network.Inputs.MonitorConfigCustomHeadersArgs
                     {
                         Name = "header-1",
                         Value = "value-1",
                     },
-                    new AzureNextGen.Network.Latest.Inputs.MonitorConfigCustomHeadersArgs
+                    new AzureNextGen.Network.Inputs.MonitorConfigCustomHeadersArgs
                     {
                         Name = "header-2",
                         Value = "value-2",
@@ -200,12 +200,12 @@ class MyStack : Stack
                 },
                 ExpectedStatusCodeRanges = 
                 {
-                    new AzureNextGen.Network.Latest.Inputs.MonitorConfigExpectedStatusCodeRangesArgs
+                    new AzureNextGen.Network.Inputs.MonitorConfigExpectedStatusCodeRangesArgs
                     {
                         Max = 205,
                         Min = 200,
                     },
-                    new AzureNextGen.Network.Latest.Inputs.MonitorConfigExpectedStatusCodeRangesArgs
+                    new AzureNextGen.Network.Inputs.MonitorConfigExpectedStatusCodeRangesArgs
                     {
                         Max = 410,
                         Min = 400,
@@ -238,7 +238,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -316,13 +316,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.network.latest.Profile("profile",
-    dns_config=azure_nextgen.network.latest.DnsConfigArgs(
+profile = azure_nextgen.network.Profile("profile",
+    dns_config=azure_nextgen.network.DnsConfigArgs(
         relative_name="azuresdkfornetautoresttrafficmanager6192",
         ttl=35,
     ),
-    endpoints=[azure_nextgen.network.latest.EndpointArgs(
-        custom_headers=[azure_nextgen.network.latest.EndpointPropertiesCustomHeadersArgs(
+    endpoints=[azure_nextgen.network.EndpointArgs(
+        custom_headers=[azure_nextgen.network.EndpointPropertiesCustomHeadersArgs(
             name="header-2",
             value="value-2-overridden",
         )],
@@ -333,23 +333,23 @@ profile = azure_nextgen.network.latest.Profile("profile",
         type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
     )],
     location="global",
-    monitor_config=azure_nextgen.network.latest.MonitorConfigArgs(
+    monitor_config=azure_nextgen.network.MonitorConfigArgs(
         custom_headers=[
-            azure_nextgen.network.latest.MonitorConfigCustomHeadersArgs(
+            azure_nextgen.network.MonitorConfigCustomHeadersArgs(
                 name="header-1",
                 value="value-1",
             ),
-            azure_nextgen.network.latest.MonitorConfigCustomHeadersArgs(
+            azure_nextgen.network.MonitorConfigCustomHeadersArgs(
                 name="header-2",
                 value="value-2",
             ),
         ],
         expected_status_code_ranges=[
-            azure_nextgen.network.latest.MonitorConfigExpectedStatusCodeRangesArgs(
+            azure_nextgen.network.MonitorConfigExpectedStatusCodeRangesArgs(
                 max=205,
                 min=200,
             ),
-            azure_nextgen.network.latest.MonitorConfigExpectedStatusCodeRangesArgs(
+            azure_nextgen.network.MonitorConfigExpectedStatusCodeRangesArgs(
                 max=410,
                 min=400,
             ),
@@ -377,7 +377,7 @@ profile = azure_nextgen.network.latest.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const profile = new azure_nextgen.network.latest.Profile("profile", {
+const profile = new azure_nextgen.network.Profile("profile", {
     dnsConfig: {
         relativeName: "azuresdkfornetautoresttrafficmanager6192",
         ttl: 35,
@@ -443,16 +443,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Network.Latest.Profile("profile", new AzureNextGen.Network.Latest.ProfileArgs
+        var profile = new AzureNextGen.Network.Profile("profile", new AzureNextGen.Network.ProfileArgs
         {
-            DnsConfig = new AzureNextGen.Network.Latest.Inputs.DnsConfigArgs
+            DnsConfig = new AzureNextGen.Network.Inputs.DnsConfigArgs
             {
                 RelativeName = "azuresdkfornetautoresttrafficmanager6192",
                 Ttl = 35,
             },
             Endpoints = 
             {
-                new AzureNextGen.Network.Latest.Inputs.EndpointArgs
+                new AzureNextGen.Network.Inputs.EndpointArgs
                 {
                     EndpointLocation = "North Europe",
                     EndpointStatus = "Enabled",
@@ -462,7 +462,7 @@ class MyStack : Stack
                 },
             },
             Location = "global",
-            MonitorConfig = new AzureNextGen.Network.Latest.Inputs.MonitorConfigArgs
+            MonitorConfig = new AzureNextGen.Network.Inputs.MonitorConfigArgs
             {
                 IntervalInSeconds = 10,
                 Path = "/testpath.aspx",
@@ -490,7 +490,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -541,12 +541,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.network.latest.Profile("profile",
-    dns_config=azure_nextgen.network.latest.DnsConfigArgs(
+profile = azure_nextgen.network.Profile("profile",
+    dns_config=azure_nextgen.network.DnsConfigArgs(
         relative_name="azuresdkfornetautoresttrafficmanager6192",
         ttl=35,
     ),
-    endpoints=[azure_nextgen.network.latest.EndpointArgs(
+    endpoints=[azure_nextgen.network.EndpointArgs(
         endpoint_location="North Europe",
         endpoint_status="Enabled",
         name="My external endpoint",
@@ -554,7 +554,7 @@ profile = azure_nextgen.network.latest.Profile("profile",
         type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
     )],
     location="global",
-    monitor_config=azure_nextgen.network.latest.MonitorConfigArgs(
+    monitor_config=azure_nextgen.network.MonitorConfigArgs(
         interval_in_seconds=10,
         path="/testpath.aspx",
         port=80,
@@ -577,7 +577,7 @@ profile = azure_nextgen.network.latest.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const profile = new azure_nextgen.network.latest.Profile("profile", {
+const profile = new azure_nextgen.network.Profile("profile", {
     dnsConfig: {
         relativeName: "azuresdkfornetautoresttrafficmanager6192",
         ttl: 35,
@@ -616,7 +616,7 @@ const profile = new azure_nextgen.network.latest.Profile("profile", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -624,11 +624,11 @@ const profile = new azure_nextgen.network.latest.Profile("profile", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Profile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Profile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ProfileArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -649,7 +649,7 @@ const profile = new azure_nextgen.network.latest.Profile("profile", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProfileArgs</span>
+        <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -718,7 +718,7 @@ const profile = new azure_nextgen.network.latest.Profile("profile", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProfileArgs</span>
+        <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -757,7 +757,7 @@ const profile = new azure_nextgen.network.latest.Profile("profile", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProfileArgs</span>
+        <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -780,11 +780,11 @@ const profile = new azure_nextgen.network.latest.Profile("profile", {
 
 ## Profile Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Profile resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Profile resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4608,7 +4608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:Profile azuresdkfornetautoresttrafficmanager6192 /subscriptions/{subscription-id}/resourceGroups/azuresdkfornetautoresttrafficmanager2583/providers/Microsoft.Network/trafficManagerProfiles/azuresdkfornetautoresttrafficmanager6192 
+$ pulumi import azure-nextgen:network:Profile azuresdkfornetautoresttrafficmanager6192 /subscriptions/{subscription-id}/resourceGroups/azuresdkfornetautoresttrafficmanager2583/providers/Microsoft.Network/trafficManagerProfiles/azuresdkfornetautoresttrafficmanager6192 
 ```
 
 

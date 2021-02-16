@@ -19,24 +19,24 @@ meta_desc: "Explore the ListConnectedClusterUserCredentials function of the kube
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listConnectedClusterUserCredentials<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListConnectedClusterUserCredentialsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">ListConnectedClusterUserCredentialsResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listConnectedClusterUserCredentials<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListConnectedClusterUserCredentialsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListConnectedClusterUserCredentialsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_connected_cluster_user_credentials(</span><span class="nx">authentication_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, AuthenticationMethod]]</span> = None<span class="p">, </span><span class="nx">client_proxy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[AuthenticationDetailsValueArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListConnectedClusterUserCredentialsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_connected_cluster_user_credentials(</span><span class="nx">authentication_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, AuthenticationMethod]]</span> = None<span class="p">, </span><span class="nx">client_proxy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListConnectedClusterUserCredentialsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListConnectedClusterUserCredentials<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListConnectedClusterUserCredentialsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">ListConnectedClusterUserCredentialsResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListConnectedClusterUserCredentials<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListConnectedClusterUserCredentialsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListConnectedClusterUserCredentialsResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListConnectedClusterUserCredentials </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">ListConnectedClusterUserCredentialsResult</span>> <span class="p">InvokeAsync(</span><span class="nx">ListConnectedClusterUserCredentialsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListConnectedClusterUserCredentialsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListConnectedClusterUserCredentialsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -59,6 +59,15 @@ The following arguments are supported:
     <dd>{{% md %}}The mode of client authentication.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="clientproxy_csharp">
+<a href="#clientproxy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean value to indicate whether the request is for client side proxy or not{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
 </span>
@@ -75,24 +84,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationdetailsvalue">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Inputs.<wbr>Authentication<wbr>Details<wbr>Value<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clientproxy_csharp">
-<a href="#clientproxy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Parameter to indicate whether the request is for client side proxy or not{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -108,6 +99,15 @@ The following arguments are supported:
         <span class="property-type">string | <a href="#authenticationmethod">Authentication<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The mode of client authentication.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="clientproxy_go">
+<a href="#clientproxy_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean value to indicate whether the request is for client side proxy or not{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="clustername_go">
@@ -126,24 +126,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationdetailsvalue">Authentication<wbr>Details<wbr>Value</a></span>
-    </dt>
-    <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clientproxy_go">
-<a href="#clientproxy_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Parameter to indicate whether the request is for client side proxy or not{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -159,6 +141,15 @@ The following arguments are supported:
         <span class="property-type">string | <a href="#authenticationmethod">Authentication<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The mode of client authentication.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="clientproxy_nodejs">
+<a href="#clientproxy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean value to indicate whether the request is for client side proxy or not{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
@@ -177,24 +168,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationdetailsvalue">Authentication<wbr>Details<wbr>Value</a></span>
-    </dt>
-    <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clientproxy_nodejs">
-<a href="#clientproxy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Parameter to indicate whether the request is for client side proxy or not{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -210,6 +183,15 @@ The following arguments are supported:
         <span class="property-type">str | <a href="#authenticationmethod">Authentication<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The mode of client authentication.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="client_proxy_python">
+<a href="#client_proxy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean value to indicate whether the request is for client side proxy or not{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
@@ -228,24 +210,6 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationdetailsvalue">Authentication<wbr>Details<wbr>Value<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Authentication token value.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="client_proxy_python">
-<a href="#client_proxy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Parameter to indicate whether the request is for client side proxy or not{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -360,84 +324,11 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="authenticationdetailsvalue">Authentication<wbr>Details<wbr>Value</h4>
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="token_csharp">
-<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Authentication token.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="token_go">
-<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Authentication token.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="token_nodejs">
-<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Authentication token.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="token_python">
-<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Authentication token.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
 <h4 id="authenticationmethod">Authentication<wbr>Method</h4>
 
 
 
-
-
-
 <h4 id="credentialresultresponse">Credential<wbr>Result<wbr>Response</h4>
-
-
-
 
 
 
@@ -538,9 +429,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hybridconnectionconfigresponse">Hybrid<wbr>Connection<wbr>Config<wbr>Response</h4>
-
-
-
 
 
 

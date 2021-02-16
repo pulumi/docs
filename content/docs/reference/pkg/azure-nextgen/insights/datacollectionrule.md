@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.DataCollectionRule reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of ARM tracked top level resource.
+API Version: 2019-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataCollectionRule = new AzureNextGen.Insights.V20191101Preview.DataCollectionRule("dataCollectionRule", new AzureNextGen.Insights.V20191101Preview.DataCollectionRuleArgs
+        var dataCollectionRule = new AzureNextGen.Insights.DataCollectionRule("dataCollectionRule", new AzureNextGen.Insights.DataCollectionRuleArgs
         {
             DataCollectionRuleName = "myCollectionRule",
             DataFlows = 
             {
-                new AzureNextGen.Insights.V20191101Preview.Inputs.DataFlowArgs
+                new AzureNextGen.Insights.Inputs.DataFlowArgs
                 {
                     Destinations = 
                     {
@@ -45,11 +46,11 @@ class MyStack : Stack
                     },
                 },
             },
-            DataSources = new AzureNextGen.Insights.V20191101Preview.Inputs.DataCollectionRuleDataSourcesArgs
+            DataSources = new AzureNextGen.Insights.Inputs.DataCollectionRuleDataSourcesArgs
             {
                 PerformanceCounters = 
                 {
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.PerfCounterDataSourceArgs
+                    new AzureNextGen.Insights.Inputs.PerfCounterDataSourceArgs
                     {
                         CounterSpecifiers = 
                         {
@@ -66,7 +67,7 @@ class MyStack : Stack
                             "Microsoft-Perf",
                         },
                     },
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.PerfCounterDataSourceArgs
+                    new AzureNextGen.Insights.Inputs.PerfCounterDataSourceArgs
                     {
                         CounterSpecifiers = 
                         {
@@ -83,7 +84,7 @@ class MyStack : Stack
                 },
                 Syslog = 
                 {
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.SyslogDataSourceArgs
+                    new AzureNextGen.Insights.Inputs.SyslogDataSourceArgs
                     {
                         FacilityNames = 
                         {
@@ -101,7 +102,7 @@ class MyStack : Stack
                             "Microsoft-Syslog",
                         },
                     },
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.SyslogDataSourceArgs
+                    new AzureNextGen.Insights.Inputs.SyslogDataSourceArgs
                     {
                         FacilityNames = 
                         {
@@ -122,7 +123,7 @@ class MyStack : Stack
                 },
                 WindowsEventLogs = 
                 {
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.WindowsEventLogDataSourceArgs
+                    new AzureNextGen.Insights.Inputs.WindowsEventLogDataSourceArgs
                     {
                         Name = "cloudSecurityTeamEvents",
                         ScheduledTransferPeriod = "PT1M",
@@ -135,7 +136,7 @@ class MyStack : Stack
                             "Security!",
                         },
                     },
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.WindowsEventLogDataSourceArgs
+                    new AzureNextGen.Insights.Inputs.WindowsEventLogDataSourceArgs
                     {
                         Name = "appTeam1AppEvents",
                         ScheduledTransferPeriod = "PT5M",
@@ -151,11 +152,11 @@ class MyStack : Stack
                     },
                 },
             },
-            Destinations = new AzureNextGen.Insights.V20191101Preview.Inputs.DataCollectionRuleDestinationsArgs
+            Destinations = new AzureNextGen.Insights.Inputs.DataCollectionRuleDestinationsArgs
             {
                 LogAnalytics = 
                 {
-                    new AzureNextGen.Insights.V20191101Preview.Inputs.LogAnalyticsDestinationArgs
+                    new AzureNextGen.Insights.Inputs.LogAnalyticsDestinationArgs
                     {
                         Name = "centralWorkspace",
                         WorkspaceResourceId = "/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace",
@@ -181,7 +182,7 @@ package main
 import (
 	"fmt"
 
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20191101preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -311,9 +312,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRule("dataCollectionRule",
+data_collection_rule = azure_nextgen.insights.DataCollectionRule("dataCollectionRule",
     data_collection_rule_name="myCollectionRule",
-    data_flows=[azure_nextgen.insights.v20191101preview.DataFlowArgs(
+    data_flows=[azure_nextgen.insights.DataFlowArgs(
         destinations=["centralWorkspace"],
         streams=[
             "Microsoft-Perf",
@@ -321,9 +322,9 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
             "Microsoft-WindowsEvent",
         ],
     )],
-    data_sources=azure_nextgen.insights.v20191101preview.DataCollectionRuleDataSourcesArgs(
+    data_sources=azure_nextgen.insights.DataCollectionRuleDataSourcesArgs(
         performance_counters=[
-            azure_nextgen.insights.v20191101preview.PerfCounterDataSourceArgs(
+            azure_nextgen.insights.PerfCounterDataSourceArgs(
                 counter_specifiers=[
                     "\\Processor(_Total)\\% Processor Time",
                     "\\Memory\\Committed Bytes",
@@ -335,7 +336,7 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
                 scheduled_transfer_period="PT1M",
                 streams=["Microsoft-Perf"],
             ),
-            azure_nextgen.insights.v20191101preview.PerfCounterDataSourceArgs(
+            azure_nextgen.insights.PerfCounterDataSourceArgs(
                 counter_specifiers=["\\Process(_Total)\\Thread Count"],
                 name="appTeamExtraCounters",
                 sampling_frequency_in_seconds=30,
@@ -344,7 +345,7 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
             ),
         ],
         syslog=[
-            azure_nextgen.insights.v20191101preview.SyslogDataSourceArgs(
+            azure_nextgen.insights.SyslogDataSourceArgs(
                 facility_names=["cron"],
                 log_levels=[
                     "Debug",
@@ -354,7 +355,7 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
                 name="cronSyslog",
                 streams=["Microsoft-Syslog"],
             ),
-            azure_nextgen.insights.v20191101preview.SyslogDataSourceArgs(
+            azure_nextgen.insights.SyslogDataSourceArgs(
                 facility_names=["syslog"],
                 log_levels=[
                     "Alert",
@@ -366,13 +367,13 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
             ),
         ],
         windows_event_logs=[
-            azure_nextgen.insights.v20191101preview.WindowsEventLogDataSourceArgs(
+            azure_nextgen.insights.WindowsEventLogDataSourceArgs(
                 name="cloudSecurityTeamEvents",
                 scheduled_transfer_period="PT1M",
                 streams=["Microsoft-WindowsEvent"],
                 x_path_queries=["Security!"],
             ),
-            azure_nextgen.insights.v20191101preview.WindowsEventLogDataSourceArgs(
+            azure_nextgen.insights.WindowsEventLogDataSourceArgs(
                 name="appTeam1AppEvents",
                 scheduled_transfer_period="PT5M",
                 streams=["Microsoft-WindowsEvent"],
@@ -383,8 +384,8 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
             ),
         ],
     ),
-    destinations=azure_nextgen.insights.v20191101preview.DataCollectionRuleDestinationsArgs(
-        log_analytics=[azure_nextgen.insights.v20191101preview.LogAnalyticsDestinationArgs(
+    destinations=azure_nextgen.insights.DataCollectionRuleDestinationsArgs(
+        log_analytics=[azure_nextgen.insights.LogAnalyticsDestinationArgs(
             name="centralWorkspace",
             workspace_resource_id="/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace",
         )],
@@ -402,7 +403,7 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataCollectionRule = new azure_nextgen.insights.v20191101preview.DataCollectionRule("dataCollectionRule", {
+const dataCollectionRule = new azure_nextgen.insights.DataCollectionRule("dataCollectionRule", {
     dataCollectionRuleName: "myCollectionRule",
     dataFlows: [{
         destinations: ["centralWorkspace"],
@@ -496,7 +497,7 @@ const dataCollectionRule = new azure_nextgen.insights.v20191101preview.DataColle
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataCollectionRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DataCollectionRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataCollectionRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataCollectionRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -504,11 +505,11 @@ const dataCollectionRule = new azure_nextgen.insights.v20191101preview.DataColle
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataCollectionRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DataCollectionRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataCollectionRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataCollectionRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataCollectionRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataCollectionRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataCollectionRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DataCollectionRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataCollectionRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataCollectionRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -529,7 +530,7 @@ const dataCollectionRule = new azure_nextgen.insights.v20191101preview.DataColle
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataCollectionRuleArgs</span>
+        <span class="property-type"><a href="#inputs">DataCollectionRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -598,7 +599,7 @@ const dataCollectionRule = new azure_nextgen.insights.v20191101preview.DataColle
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataCollectionRuleArgs</span>
+        <span class="property-type"><a href="#inputs">DataCollectionRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -637,7 +638,7 @@ const dataCollectionRule = new azure_nextgen.insights.v20191101preview.DataColle
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataCollectionRuleArgs</span>
+        <span class="property-type"><a href="#inputs">DataCollectionRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -660,11 +661,11 @@ const dataCollectionRule = new azure_nextgen.insights.v20191101preview.DataColle
 
 ## DataCollectionRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DataCollectionRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DataCollectionRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4652,7 +4653,7 @@ A stream indicates what schema will be used for this data and usually what table
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20191101preview:DataCollectionRule myCollectionRule /subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule 
+$ pulumi import azure-nextgen:insights:DataCollectionRule myCollectionRule /subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule 
 ```
 
 

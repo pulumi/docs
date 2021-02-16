@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.Manager resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The StorSimple Manager.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var manager = new AzureNextGen.StorSimple.Latest.Manager("manager", new AzureNextGen.StorSimple.Latest.ManagerArgs
+        var manager = new AzureNextGen.StorSimple.Manager("manager", new AzureNextGen.StorSimple.ManagerArgs
         {
-            CisIntrinsicSettings = new AzureNextGen.StorSimple.Latest.Inputs.ManagerIntrinsicSettingsArgs
+            CisIntrinsicSettings = new AzureNextGen.StorSimple.Inputs.ManagerIntrinsicSettingsArgs
             {
                 Type = "GardaV1",
             },
             Location = "westus",
             ManagerName = "ManagerForSDKTest2",
             ResourceGroupName = "ResourceGroupForSDKTest",
-            Sku = new AzureNextGen.StorSimple.Latest.Inputs.ManagerSkuArgs
+            Sku = new AzureNextGen.StorSimple.Inputs.ManagerSkuArgs
             {
                 Name = "Standard",
             },
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,14 +89,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-manager = azure_nextgen.storsimple.latest.Manager("manager",
-    cis_intrinsic_settings=azure_nextgen.storsimple.latest.ManagerIntrinsicSettingsArgs(
+manager = azure_nextgen.storsimple.Manager("manager",
+    cis_intrinsic_settings=azure_nextgen.storsimple.ManagerIntrinsicSettingsArgs(
         type="GardaV1",
     ),
     location="westus",
     manager_name="ManagerForSDKTest2",
     resource_group_name="ResourceGroupForSDKTest",
-    sku=azure_nextgen.storsimple.latest.ManagerSkuArgs(
+    sku=azure_nextgen.storsimple.ManagerSkuArgs(
         name="Standard",
     ))
 
@@ -110,7 +110,7 @@ manager = azure_nextgen.storsimple.latest.Manager("manager",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const manager = new azure_nextgen.storsimple.latest.Manager("manager", {
+const manager = new azure_nextgen.storsimple.Manager("manager", {
     cisIntrinsicSettings: {
         type: "GardaV1",
     },
@@ -134,7 +134,7 @@ const manager = new azure_nextgen.storsimple.latest.Manager("manager", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Manager</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Manager</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -142,11 +142,11 @@ const manager = new azure_nextgen.storsimple.latest.Manager("manager", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManager</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Manager</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManager</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Manager</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Manager</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Manager</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -167,7 +167,7 @@ const manager = new azure_nextgen.storsimple.latest.Manager("manager", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagerArgs</span>
+        <span class="property-type"><a href="#inputs">ManagerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -236,7 +236,7 @@ const manager = new azure_nextgen.storsimple.latest.Manager("manager", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagerArgs</span>
+        <span class="property-type"><a href="#inputs">ManagerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -275,7 +275,7 @@ const manager = new azure_nextgen.storsimple.latest.Manager("manager", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagerArgs</span>
+        <span class="property-type"><a href="#inputs">ManagerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -298,11 +298,11 @@ const manager = new azure_nextgen.storsimple.latest.Manager("manager", {
 
 ## Manager Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Manager resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Manager resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1088,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:Manager ManagerForSDKTest2 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/Managers/ManagerForSDKTest2 
+$ pulumi import azure-nextgen:storsimple:Manager ManagerForSDKTest2 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/Managers/ManagerForSDKTest2 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationFabr
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Fabric definition.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationFabric = new AzureNextGen.RecoveryServices.Latest.ReplicationFabric("replicationFabric", new AzureNextGen.RecoveryServices.Latest.ReplicationFabricArgs
+        var replicationFabric = new AzureNextGen.RecoveryServices.ReplicationFabric("replicationFabric", new AzureNextGen.RecoveryServices.ReplicationFabricArgs
         {
             FabricName = "cloud1",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.FabricCreationInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices.Inputs.FabricCreationInputPropertiesArgs
             {
                 CustomDetails = 
                 {
@@ -58,9 +58,9 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_fabric = azure_nextgen.recoveryservices.latest.ReplicationFabric("replicationFabric",
+replication_fabric = azure_nextgen.recoveryservices.ReplicationFabric("replicationFabric",
     fabric_name="cloud1",
-    properties=azure_nextgen.recoveryservices.latest.FabricCreationInputPropertiesArgs(
+    properties=azure_nextgen.recoveryservices.FabricCreationInputPropertiesArgs(
         custom_details={
             "instanceType": "FabricSpecificCreationInput",
         },
@@ -78,7 +78,7 @@ replication_fabric = azure_nextgen.recoveryservices.latest.ReplicationFabric("re
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationFabric = new azure_nextgen.recoveryservices.latest.ReplicationFabric("replicationFabric", {
+const replicationFabric = new azure_nextgen.recoveryservices.ReplicationFabric("replicationFabric", {
     fabricName: "cloud1",
     properties: {
         customDetails: {
@@ -101,7 +101,7 @@ const replicationFabric = new azure_nextgen.recoveryservices.latest.ReplicationF
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationFabric</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReplicationFabricArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationFabric</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationFabricArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -109,11 +109,11 @@ const replicationFabric = new azure_nextgen.recoveryservices.latest.ReplicationF
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationFabric</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReplicationFabricArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationFabric</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationFabric</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationFabricArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationFabric</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationFabric</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReplicationFabricArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationFabric</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationFabricArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -134,7 +134,7 @@ const replicationFabric = new azure_nextgen.recoveryservices.latest.ReplicationF
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationFabricArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationFabricArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -203,7 +203,7 @@ const replicationFabric = new azure_nextgen.recoveryservices.latest.ReplicationF
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationFabricArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationFabricArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -242,7 +242,7 @@ const replicationFabric = new azure_nextgen.recoveryservices.latest.ReplicationF
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationFabricArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationFabricArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -265,11 +265,11 @@ const replicationFabric = new azure_nextgen.recoveryservices.latest.ReplicationF
 
 ## ReplicationFabric Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ReplicationFabric resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ReplicationFabric resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -9763,7 +9763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationFabric cloud1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationFabric cloud1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1 
 ```
 
 

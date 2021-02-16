@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.Gallery resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the Shared Image Gallery that you want to create or update.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gallery = new AzureNextGen.Compute.Latest.Gallery("gallery", new AzureNextGen.Compute.Latest.GalleryArgs
+        var gallery = new AzureNextGen.Compute.Gallery("gallery", new AzureNextGen.Compute.GalleryArgs
         {
             Description = "This is the gallery description.",
             GalleryName = "myGalleryName",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            SharingProfile = new AzureNextGen.Compute.Latest.Inputs.SharingProfileArgs
+            SharingProfile = new AzureNextGen.Compute.Inputs.SharingProfileArgs
             {
                 Permissions = "Groups",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,12 +84,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery = azure_nextgen.compute.latest.Gallery("gallery",
+gallery = azure_nextgen.compute.Gallery("gallery",
     description="This is the gallery description.",
     gallery_name="myGalleryName",
     location="West US",
     resource_group_name="myResourceGroup",
-    sharing_profile=azure_nextgen.compute.latest.SharingProfileArgs(
+    sharing_profile=azure_nextgen.compute.SharingProfileArgs(
         permissions="Groups",
     ))
 
@@ -103,7 +103,7 @@ gallery = azure_nextgen.compute.latest.Gallery("gallery",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
+const gallery = new azure_nextgen.compute.Gallery("gallery", {
     description: "This is the gallery description.",
     galleryName: "myGalleryName",
     location: "West US",
@@ -127,7 +127,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gallery = new AzureNextGen.Compute.Latest.Gallery("gallery", new AzureNextGen.Compute.Latest.GalleryArgs
+        var gallery = new AzureNextGen.Compute.Gallery("gallery", new AzureNextGen.Compute.GalleryArgs
         {
             Description = "This is the gallery description.",
             GalleryName = "myGalleryName",
@@ -148,7 +148,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -177,7 +177,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery = azure_nextgen.compute.latest.Gallery("gallery",
+gallery = azure_nextgen.compute.Gallery("gallery",
     description="This is the gallery description.",
     gallery_name="myGalleryName",
     location="West US",
@@ -193,7 +193,7 @@ gallery = azure_nextgen.compute.latest.Gallery("gallery",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
+const gallery = new azure_nextgen.compute.Gallery("gallery", {
     description: "This is the gallery description.",
     galleryName: "myGalleryName",
     location: "West US",
@@ -212,7 +212,7 @@ const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Gallery</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">GalleryArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Gallery</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -220,11 +220,11 @@ const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGallery</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">GalleryArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Gallery</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGallery</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GalleryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Gallery</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Gallery</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">GalleryArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Gallery</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GalleryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -245,7 +245,7 @@ const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GalleryArgs</span>
+        <span class="property-type"><a href="#inputs">GalleryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -314,7 +314,7 @@ const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GalleryArgs</span>
+        <span class="property-type"><a href="#inputs">GalleryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -353,7 +353,7 @@ const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GalleryArgs</span>
+        <span class="property-type"><a href="#inputs">GalleryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -376,11 +376,11 @@ const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
 
 ## Gallery Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Gallery resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Gallery resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1208,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:Gallery myGalleryName /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName} 
+$ pulumi import azure-nextgen:compute:Gallery myGalleryName /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName} 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.LiveOutput resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Live Output.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var liveOutput = new AzureNextGen.Media.Latest.LiveOutput("liveOutput", new AzureNextGen.Media.Latest.LiveOutputArgs
+        var liveOutput = new AzureNextGen.Media.LiveOutput("liveOutput", new AzureNextGen.Media.LiveOutputArgs
         {
             AccountName = "slitestmedia10",
             ArchiveWindowLength = "PT5M",
             AssetName = "6f3264f5-a189-48b4-a29a-a40f22575212",
             Description = "test live output 1",
-            Hls = new AzureNextGen.Media.Latest.Inputs.HlsArgs
+            Hls = new AzureNextGen.Media.Inputs.HlsArgs
             {
                 FragmentsPerTsSegment = 5,
             },
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,12 +92,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-live_output = azure_nextgen.media.latest.LiveOutput("liveOutput",
+live_output = azure_nextgen.media.LiveOutput("liveOutput",
     account_name="slitestmedia10",
     archive_window_length="PT5M",
     asset_name="6f3264f5-a189-48b4-a29a-a40f22575212",
     description="test live output 1",
-    hls=azure_nextgen.media.latest.HlsArgs(
+    hls=azure_nextgen.media.HlsArgs(
         fragments_per_ts_segment=5,
     ),
     live_event_name="myLiveEvent1",
@@ -115,7 +115,7 @@ live_output = azure_nextgen.media.latest.LiveOutput("liveOutput",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const liveOutput = new azure_nextgen.media.latest.LiveOutput("liveOutput", {
+const liveOutput = new azure_nextgen.media.LiveOutput("liveOutput", {
     accountName: "slitestmedia10",
     archiveWindowLength: "PT5M",
     assetName: "6f3264f5-a189-48b4-a29a-a40f22575212",
@@ -141,7 +141,7 @@ const liveOutput = new azure_nextgen.media.latest.LiveOutput("liveOutput", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LiveOutput</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">LiveOutputArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LiveOutput</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LiveOutputArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -149,11 +149,11 @@ const liveOutput = new azure_nextgen.media.latest.LiveOutput("liveOutput", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLiveOutput</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">LiveOutputArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LiveOutput</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLiveOutput</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LiveOutputArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LiveOutput</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LiveOutput</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">LiveOutputArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LiveOutput</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LiveOutputArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -174,7 +174,7 @@ const liveOutput = new azure_nextgen.media.latest.LiveOutput("liveOutput", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LiveOutputArgs</span>
+        <span class="property-type"><a href="#inputs">LiveOutputArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -243,7 +243,7 @@ const liveOutput = new azure_nextgen.media.latest.LiveOutput("liveOutput", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LiveOutputArgs</span>
+        <span class="property-type"><a href="#inputs">LiveOutputArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -282,7 +282,7 @@ const liveOutput = new azure_nextgen.media.latest.LiveOutput("liveOutput", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LiveOutputArgs</span>
+        <span class="property-type"><a href="#inputs">LiveOutputArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -305,11 +305,11 @@ const liveOutput = new azure_nextgen.media.latest.LiveOutput("liveOutput", {
 
 ## LiveOutput Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1119,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:LiveOutput myLiveOutput1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/liveevents/myLiveEvent1/liveoutputs/myLiveOutput1 
+$ pulumi import azure-nextgen:media:LiveOutput myLiveOutput1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/liveevents/myLiveEvent1/liveoutputs/myLiveOutput1 
 ```
 
 

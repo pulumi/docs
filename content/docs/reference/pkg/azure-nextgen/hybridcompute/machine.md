@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybridcompute.Machine resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a hybrid machine.
-Latest API Version: 2020-08-02.
+API Version: 2020-08-02.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machine = new AzureNextGen.HybridCompute.Latest.Machine("machine", new AzureNextGen.HybridCompute.Latest.MachineArgs
+        var machine = new AzureNextGen.HybridCompute.Machine("machine", new AzureNextGen.HybridCompute.MachineArgs
         {
             ClientPublicKey = "string",
-            Identity = new AzureNextGen.HybridCompute.Latest.Inputs.MachineIdentityArgs
+            Identity = new AzureNextGen.HybridCompute.Inputs.MachineIdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "eastus2euap",
-            LocationData = new AzureNextGen.HybridCompute.Latest.Inputs.LocationDataArgs
+            LocationData = new AzureNextGen.HybridCompute.Inputs.LocationDataArgs
             {
                 Name = "Redmond",
             },
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute/latest"
+	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,13 +93,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine = azure_nextgen.hybridcompute.latest.Machine("machine",
+machine = azure_nextgen.hybridcompute.Machine("machine",
     client_public_key="string",
-    identity=azure_nextgen.hybridcompute.latest.MachineIdentityArgs(
+    identity=azure_nextgen.hybridcompute.MachineIdentityArgs(
         type="SystemAssigned",
     ),
     location="eastus2euap",
-    location_data=azure_nextgen.hybridcompute.latest.LocationDataArgs(
+    location_data=azure_nextgen.hybridcompute.LocationDataArgs(
         name="Redmond",
     ),
     name="myMachine",
@@ -116,7 +116,7 @@ machine = azure_nextgen.hybridcompute.latest.Machine("machine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machine = new azure_nextgen.hybridcompute.latest.Machine("machine", {
+const machine = new azure_nextgen.hybridcompute.Machine("machine", {
     clientPublicKey: "string",
     identity: {
         type: "SystemAssigned",
@@ -142,7 +142,7 @@ const machine = new azure_nextgen.hybridcompute.latest.Machine("machine", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">MachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -150,11 +150,11 @@ const machine = new azure_nextgen.hybridcompute.latest.Machine("machine", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">MachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Machine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Machine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">MachineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -175,7 +175,7 @@ const machine = new azure_nextgen.hybridcompute.latest.Machine("machine", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MachineArgs</span>
+        <span class="property-type"><a href="#inputs">MachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -244,7 +244,7 @@ const machine = new azure_nextgen.hybridcompute.latest.Machine("machine", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MachineArgs</span>
+        <span class="property-type"><a href="#inputs">MachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,7 +283,7 @@ const machine = new azure_nextgen.hybridcompute.latest.Machine("machine", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MachineArgs</span>
+        <span class="property-type"><a href="#inputs">MachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -306,11 +306,11 @@ const machine = new azure_nextgen.hybridcompute.latest.Machine("machine", {
 
 ## Machine Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Machine resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Machine resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2464,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybridcompute/latest:Machine myMachine /subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/machines/myMachine 
+$ pulumi import azure-nextgen:hybridcompute:Machine myMachine /subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/machines/myMachine 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.DisasterRecoveryConfig 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single item in List or Get Alias(Disaster Recovery configuration) operation
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disasterRecoveryConfig = new AzureNextGen.EventHub.Latest.DisasterRecoveryConfig("disasterRecoveryConfig", new AzureNextGen.EventHub.Latest.DisasterRecoveryConfigArgs
+        var disasterRecoveryConfig = new AzureNextGen.EventHub.DisasterRecoveryConfig("disasterRecoveryConfig", new AzureNextGen.EventHub.DisasterRecoveryConfigArgs
         {
             Alias = "sdk-DisasterRecovery-3814",
             NamespaceName = "sdk-Namespace-8859",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/latest"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disaster_recovery_config = azure_nextgen.eventhub.latest.DisasterRecoveryConfig("disasterRecoveryConfig",
+disaster_recovery_config = azure_nextgen.eventhub.DisasterRecoveryConfig("disasterRecoveryConfig",
     alias="sdk-DisasterRecovery-3814",
     namespace_name="sdk-Namespace-8859",
     partner_namespace="sdk-Namespace-37",
@@ -93,7 +93,7 @@ disaster_recovery_config = azure_nextgen.eventhub.latest.DisasterRecoveryConfig(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disasterRecoveryConfig = new azure_nextgen.eventhub.latest.DisasterRecoveryConfig("disasterRecoveryConfig", {
+const disasterRecoveryConfig = new azure_nextgen.eventhub.DisasterRecoveryConfig("disasterRecoveryConfig", {
     alias: "sdk-DisasterRecovery-3814",
     namespaceName: "sdk-Namespace-8859",
     partnerNamespace: "sdk-Namespace-37",
@@ -112,7 +112,7 @@ const disasterRecoveryConfig = new azure_nextgen.eventhub.latest.DisasterRecover
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DisasterRecoveryConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DisasterRecoveryConfigArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DisasterRecoveryConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DisasterRecoveryConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -120,11 +120,11 @@ const disasterRecoveryConfig = new azure_nextgen.eventhub.latest.DisasterRecover
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDisasterRecoveryConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DisasterRecoveryConfigArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DisasterRecoveryConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDisasterRecoveryConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DisasterRecoveryConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DisasterRecoveryConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DisasterRecoveryConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DisasterRecoveryConfigArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DisasterRecoveryConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DisasterRecoveryConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -145,7 +145,7 @@ const disasterRecoveryConfig = new azure_nextgen.eventhub.latest.DisasterRecover
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DisasterRecoveryConfigArgs</span>
+        <span class="property-type"><a href="#inputs">DisasterRecoveryConfigArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -214,7 +214,7 @@ const disasterRecoveryConfig = new azure_nextgen.eventhub.latest.DisasterRecover
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DisasterRecoveryConfigArgs</span>
+        <span class="property-type"><a href="#inputs">DisasterRecoveryConfigArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -253,7 +253,7 @@ const disasterRecoveryConfig = new azure_nextgen.eventhub.latest.DisasterRecover
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DisasterRecoveryConfigArgs</span>
+        <span class="property-type"><a href="#inputs">DisasterRecoveryConfigArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -276,11 +276,11 @@ const disasterRecoveryConfig = new azure_nextgen.eventhub.latest.DisasterRecover
 
 ## DisasterRecoveryConfig Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DisasterRecoveryConfig resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DisasterRecoveryConfig resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -746,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/latest:DisasterRecoveryConfig sdk-DisasterRecovery-3814 /subscriptions/exampleResourceGroup/resourceGroups/exampleResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-8859/disasterRecoveryConfig/sdk-DisasterRecovery-3814 
+$ pulumi import azure-nextgen:eventhub:DisasterRecoveryConfig sdk-DisasterRecovery-3814 /subscriptions/exampleResourceGroup/resourceGroups/exampleResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-8859/disasterRecoveryConfig/sdk-DisasterRecovery-3814 
 ```
 
 

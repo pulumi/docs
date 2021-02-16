@@ -19,7 +19,7 @@ meta_desc: "Explore the GetApplication function of the hdinsight module, includi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApplication<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetApplicationResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApplication<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetApplicationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetApplication function of the hdinsight module, includi
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupApplicationResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupApplicationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupApplication` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetApplication function of the hdinsight module, includi
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApplication </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetApplicationResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetApplicationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetApplicationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -438,9 +438,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -610,9 +607,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="applicationgethttpsendpointresponse">Application<wbr>Get<wbr>Https<wbr>Endpoint<wbr>Response</h4>
-
-
-
 
 
 
@@ -893,9 +887,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="applicationpropertiesresponse">Application<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1323,9 +1314,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1423,9 +1411,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="autoscalerecurrenceresponse">Autoscale<wbr>Recurrence<wbr>Response</h4>
-
-
-
 
 
 
@@ -1529,9 +1514,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1632,9 +1614,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1732,9 +1711,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="autoscaletimeandcapacityresponse">Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response</h4>
-
-
-
 
 
 
@@ -1874,9 +1850,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1938,9 +1911,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="datadisksgroupsresponse">Data<wbr>Disks<wbr>Groups<wbr>Response</h4>
-
-
-
 
 
 
@@ -2080,9 +2050,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2183,9 +2150,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2247,9 +2211,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="linuxoperatingsystemprofileresponse">Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 
@@ -2389,9 +2350,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2453,9 +2411,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="roleresponse">Role<wbr>Response</h4>
-
-
-
 
 
 
@@ -2883,9 +2838,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3094,9 +3046,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3233,9 +3182,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3300,9 +3246,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3364,9 +3307,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 

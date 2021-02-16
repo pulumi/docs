@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.NetworkSecurityGroup res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NetworkSecurityGroup resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var networkSecurityGroup = new AzureNextGen.Network.Latest.NetworkSecurityGroup("networkSecurityGroup", new AzureNextGen.Network.Latest.NetworkSecurityGroupArgs
+        var networkSecurityGroup = new AzureNextGen.Network.NetworkSecurityGroup("networkSecurityGroup", new AzureNextGen.Network.NetworkSecurityGroupArgs
         {
             Location = "eastus",
             NetworkSecurityGroupName = "testnsg",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network_security_group = azure_nextgen.network.latest.NetworkSecurityGroup("networkSecurityGroup",
+network_security_group = azure_nextgen.network.NetworkSecurityGroup("networkSecurityGroup",
     location="eastus",
     network_security_group_name="testnsg",
     resource_group_name="rg1")
@@ -90,7 +90,7 @@ network_security_group = azure_nextgen.network.latest.NetworkSecurityGroup("netw
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const networkSecurityGroup = new azure_nextgen.network.latest.NetworkSecurityGroup("networkSecurityGroup", {
+const networkSecurityGroup = new azure_nextgen.network.NetworkSecurityGroup("networkSecurityGroup", {
     location: "eastus",
     networkSecurityGroupName: "testnsg",
     resourceGroupName: "rg1",
@@ -110,14 +110,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var networkSecurityGroup = new AzureNextGen.Network.Latest.NetworkSecurityGroup("networkSecurityGroup", new AzureNextGen.Network.Latest.NetworkSecurityGroupArgs
+        var networkSecurityGroup = new AzureNextGen.Network.NetworkSecurityGroup("networkSecurityGroup", new AzureNextGen.Network.NetworkSecurityGroupArgs
         {
             Location = "eastus",
             NetworkSecurityGroupName = "testnsg",
             ResourceGroupName = "rg1",
             SecurityRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.SecurityRuleArgs
+                new AzureNextGen.Network.Inputs.SecurityRuleArgs
                 {
                     Access = "Allow",
                     DestinationAddressPrefix = "*",
@@ -145,7 +145,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -186,11 +186,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network_security_group = azure_nextgen.network.latest.NetworkSecurityGroup("networkSecurityGroup",
+network_security_group = azure_nextgen.network.NetworkSecurityGroup("networkSecurityGroup",
     location="eastus",
     network_security_group_name="testnsg",
     resource_group_name="rg1",
-    security_rules=[azure_nextgen.network.latest.SecurityRuleArgs(
+    security_rules=[azure_nextgen.network.SecurityRuleArgs(
         access="Allow",
         destination_address_prefix="*",
         destination_port_range="80",
@@ -212,7 +212,7 @@ network_security_group = azure_nextgen.network.latest.NetworkSecurityGroup("netw
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const networkSecurityGroup = new azure_nextgen.network.latest.NetworkSecurityGroup("networkSecurityGroup", {
+const networkSecurityGroup = new azure_nextgen.network.NetworkSecurityGroup("networkSecurityGroup", {
     location: "eastus",
     networkSecurityGroupName: "testnsg",
     resourceGroupName: "rg1",
@@ -241,7 +241,7 @@ const networkSecurityGroup = new azure_nextgen.network.latest.NetworkSecurityGro
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkSecurityGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">NetworkSecurityGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkSecurityGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -249,11 +249,11 @@ const networkSecurityGroup = new azure_nextgen.network.latest.NetworkSecurityGro
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkSecurityGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">NetworkSecurityGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkSecurityGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkSecurityGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkSecurityGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkSecurityGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">NetworkSecurityGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkSecurityGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NetworkSecurityGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -274,7 +274,7 @@ const networkSecurityGroup = new azure_nextgen.network.latest.NetworkSecurityGro
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkSecurityGroupArgs</span>
+        <span class="property-type"><a href="#inputs">NetworkSecurityGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -343,7 +343,7 @@ const networkSecurityGroup = new azure_nextgen.network.latest.NetworkSecurityGro
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkSecurityGroupArgs</span>
+        <span class="property-type"><a href="#inputs">NetworkSecurityGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -382,7 +382,7 @@ const networkSecurityGroup = new azure_nextgen.network.latest.NetworkSecurityGro
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkSecurityGroupArgs</span>
+        <span class="property-type"><a href="#inputs">NetworkSecurityGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -405,11 +405,11 @@ const networkSecurityGroup = new azure_nextgen.network.latest.NetworkSecurityGro
 
 ## NetworkSecurityGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NetworkSecurityGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NetworkSecurityGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -15309,7 +15309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:NetworkSecurityGroup testnsg /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/testnsg 
+$ pulumi import azure-nextgen:network:NetworkSecurityGroup testnsg /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/testnsg 
 ```
 
 

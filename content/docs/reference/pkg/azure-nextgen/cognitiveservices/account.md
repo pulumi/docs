@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cognitiveservices.Account resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Cognitive Services Account is an Azure resource representing the provisioned account, its type, location and SKU.
-Latest API Version: 2017-04-18.
+API Version: 2017-04-18.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.CognitiveServices.Latest.Account("account", new AzureNextGen.CognitiveServices.Latest.AccountArgs
+        var account = new AzureNextGen.CognitiveServices.Account("account", new AzureNextGen.CognitiveServices.AccountArgs
         {
             AccountName = "testCreate1",
-            Identity = new AzureNextGen.CognitiveServices.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.CognitiveServices.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Kind = "Emotion",
             Location = "West US",
-            Properties = new AzureNextGen.CognitiveServices.Latest.Inputs.CognitiveServicesAccountPropertiesArgs
+            Properties = new AzureNextGen.CognitiveServices.Inputs.CognitiveServicesAccountPropertiesArgs
             {
-                Encryption = new AzureNextGen.CognitiveServices.Latest.Inputs.EncryptionArgs
+                Encryption = new AzureNextGen.CognitiveServices.Inputs.EncryptionArgs
                 {
                     KeySource = "Microsoft.KeyVault",
-                    KeyVaultProperties = new AzureNextGen.CognitiveServices.Latest.Inputs.KeyVaultPropertiesArgs
+                    KeyVaultProperties = new AzureNextGen.CognitiveServices.Inputs.KeyVaultPropertiesArgs
                     {
                         KeyName = "KeyName",
                         KeyVaultUri = "https://pltfrmscrts-use-pc-dev.vault.azure.net/",
@@ -50,14 +50,14 @@ class MyStack : Stack
                 },
                 UserOwnedStorage = 
                 {
-                    new AzureNextGen.CognitiveServices.Latest.Inputs.UserOwnedStorageArgs
+                    new AzureNextGen.CognitiveServices.Inputs.UserOwnedStorageArgs
                     {
                         ResourceId = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
                     },
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.CognitiveServices.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.CognitiveServices.Inputs.SkuArgs
             {
                 Name = "S0",
             },
@@ -76,7 +76,7 @@ class MyStack : Stack
 package main
 
 import (
-	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices/latest"
+	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -126,28 +126,28 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.cognitiveservices.latest.Account("account",
+account = azure_nextgen.cognitiveservices.Account("account",
     account_name="testCreate1",
-    identity=azure_nextgen.cognitiveservices.latest.IdentityArgs(
+    identity=azure_nextgen.cognitiveservices.IdentityArgs(
         type="SystemAssigned",
     ),
     kind="Emotion",
     location="West US",
-    properties=azure_nextgen.cognitiveservices.latest.CognitiveServicesAccountPropertiesArgs(
-        encryption=azure_nextgen.cognitiveservices.latest.EncryptionArgs(
+    properties=azure_nextgen.cognitiveservices.CognitiveServicesAccountPropertiesArgs(
+        encryption=azure_nextgen.cognitiveservices.EncryptionArgs(
             key_source="Microsoft.KeyVault",
-            key_vault_properties=azure_nextgen.cognitiveservices.latest.KeyVaultPropertiesArgs(
+            key_vault_properties=azure_nextgen.cognitiveservices.KeyVaultPropertiesArgs(
                 key_name="KeyName",
                 key_vault_uri="https://pltfrmscrts-use-pc-dev.vault.azure.net/",
                 key_version="891CF236-D241-4738-9462-D506AF493DFA",
             ),
         ),
-        user_owned_storage=[azure_nextgen.cognitiveservices.latest.UserOwnedStorageArgs(
+        user_owned_storage=[azure_nextgen.cognitiveservices.UserOwnedStorageArgs(
             resource_id="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
         )],
     ),
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.cognitiveservices.latest.SkuArgs(
+    sku=azure_nextgen.cognitiveservices.SkuArgs(
         name="S0",
     ))
 
@@ -161,7 +161,7 @@ account = azure_nextgen.cognitiveservices.latest.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
+const account = new azure_nextgen.cognitiveservices.Account("account", {
     accountName: "testCreate1",
     identity: {
         type: "SystemAssigned",
@@ -201,10 +201,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.CognitiveServices.Latest.Account("account", new AzureNextGen.CognitiveServices.Latest.AccountArgs
+        var account = new AzureNextGen.CognitiveServices.Account("account", new AzureNextGen.CognitiveServices.AccountArgs
         {
             AccountName = "testCreate1",
-            Identity = new AzureNextGen.CognitiveServices.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.CognitiveServices.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -212,7 +212,7 @@ class MyStack : Stack
             Location = "West US",
             Properties = ,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.CognitiveServices.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.CognitiveServices.Inputs.SkuArgs
             {
                 Name = "S0",
             },
@@ -231,7 +231,7 @@ class MyStack : Stack
 package main
 
 import (
-	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices/latest"
+	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -267,16 +267,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.cognitiveservices.latest.Account("account",
+account = azure_nextgen.cognitiveservices.Account("account",
     account_name="testCreate1",
-    identity=azure_nextgen.cognitiveservices.latest.IdentityArgs(
+    identity=azure_nextgen.cognitiveservices.IdentityArgs(
         type="SystemAssigned",
     ),
     kind="CognitiveServices",
     location="West US",
-    properties=azure_nextgen.cognitiveservices.latest.CognitiveServicesAccountPropertiesArgs(),
+    properties=azure_nextgen.cognitiveservices.CognitiveServicesAccountPropertiesArgs(),
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.cognitiveservices.latest.SkuArgs(
+    sku=azure_nextgen.cognitiveservices.SkuArgs(
         name="S0",
     ))
 
@@ -290,7 +290,7 @@ account = azure_nextgen.cognitiveservices.latest.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
+const account = new azure_nextgen.cognitiveservices.Account("account", {
     accountName: "testCreate1",
     identity: {
         type: "SystemAssigned",
@@ -316,7 +316,7 @@ const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -324,11 +324,11 @@ const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -349,7 +349,7 @@ const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -418,7 +418,7 @@ const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -457,7 +457,7 @@ const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -480,11 +480,11 @@ const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
 
 ## Account Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Account resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Account resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -5332,7 +5332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cognitiveservices/latest:Account testCreate1 /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.CognitiveServices/accounts/testCreate1 
+$ pulumi import azure-nextgen:cognitiveservices:Account testCreate1 /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.CognitiveServices/accounts/testCreate1 
 ```
 
 

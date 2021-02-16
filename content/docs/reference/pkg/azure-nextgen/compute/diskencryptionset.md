@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.DiskEncryptionSet resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 disk encryption set resource.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diskEncryptionSet = new AzureNextGen.Compute.Latest.DiskEncryptionSet("diskEncryptionSet", new AzureNextGen.Compute.Latest.DiskEncryptionSetArgs
+        var diskEncryptionSet = new AzureNextGen.Compute.DiskEncryptionSet("diskEncryptionSet", new AzureNextGen.Compute.DiskEncryptionSetArgs
         {
-            ActiveKey = new AzureNextGen.Compute.Latest.Inputs.KeyForDiskEncryptionSetArgs
+            ActiveKey = new AzureNextGen.Compute.Inputs.KeyForDiskEncryptionSetArgs
             {
                 KeyUrl = "https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}",
             },
             DiskEncryptionSetName = "myDiskEncryptionSet",
             EncryptionType = "EncryptionAtRestWithCustomerKey",
-            Identity = new AzureNextGen.Compute.Latest.Inputs.EncryptionSetIdentityArgs
+            Identity = new AzureNextGen.Compute.Inputs.EncryptionSetIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,13 +91,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk_encryption_set = azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet",
-    active_key=azure_nextgen.compute.latest.KeyForDiskEncryptionSetArgs(
+disk_encryption_set = azure_nextgen.compute.DiskEncryptionSet("diskEncryptionSet",
+    active_key=azure_nextgen.compute.KeyForDiskEncryptionSetArgs(
         key_url="https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}",
     ),
     disk_encryption_set_name="myDiskEncryptionSet",
     encryption_type="EncryptionAtRestWithCustomerKey",
-    identity=azure_nextgen.compute.latest.EncryptionSetIdentityArgs(
+    identity=azure_nextgen.compute.EncryptionSetIdentityArgs(
         type="SystemAssigned",
     ),
     location="West US",
@@ -113,7 +113,7 @@ disk_encryption_set = azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryp
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet", {
+const diskEncryptionSet = new azure_nextgen.compute.DiskEncryptionSet("diskEncryptionSet", {
     activeKey: {
         keyUrl: "https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}",
     },
@@ -140,19 +140,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diskEncryptionSet = new AzureNextGen.Compute.Latest.DiskEncryptionSet("diskEncryptionSet", new AzureNextGen.Compute.Latest.DiskEncryptionSetArgs
+        var diskEncryptionSet = new AzureNextGen.Compute.DiskEncryptionSet("diskEncryptionSet", new AzureNextGen.Compute.DiskEncryptionSetArgs
         {
-            ActiveKey = new AzureNextGen.Compute.Latest.Inputs.KeyForDiskEncryptionSetArgs
+            ActiveKey = new AzureNextGen.Compute.Inputs.KeyForDiskEncryptionSetArgs
             {
                 KeyUrl = "https://myvmvault.vault-int.azure-int.net/keys/{key}",
-                SourceVault = new AzureNextGen.Compute.Latest.Inputs.SourceVaultArgs
+                SourceVault = new AzureNextGen.Compute.Inputs.SourceVaultArgs
                 {
                     Id = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault",
                 },
             },
             DiskEncryptionSetName = "myDiskEncryptionSet",
             EncryptionType = "EncryptionAtRestWithCustomerKey",
-            Identity = new AzureNextGen.Compute.Latest.Inputs.EncryptionSetIdentityArgs
+            Identity = new AzureNextGen.Compute.Inputs.EncryptionSetIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -173,7 +173,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -211,16 +211,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk_encryption_set = azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet",
-    active_key=azure_nextgen.compute.latest.KeyForDiskEncryptionSetArgs(
+disk_encryption_set = azure_nextgen.compute.DiskEncryptionSet("diskEncryptionSet",
+    active_key=azure_nextgen.compute.KeyForDiskEncryptionSetArgs(
         key_url="https://myvmvault.vault-int.azure-int.net/keys/{key}",
-        source_vault=azure_nextgen.compute.latest.SourceVaultArgs(
+        source_vault=azure_nextgen.compute.SourceVaultArgs(
             id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault",
         ),
     ),
     disk_encryption_set_name="myDiskEncryptionSet",
     encryption_type="EncryptionAtRestWithCustomerKey",
-    identity=azure_nextgen.compute.latest.EncryptionSetIdentityArgs(
+    identity=azure_nextgen.compute.EncryptionSetIdentityArgs(
         type="SystemAssigned",
     ),
     location="West US",
@@ -236,7 +236,7 @@ disk_encryption_set = azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryp
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet", {
+const diskEncryptionSet = new azure_nextgen.compute.DiskEncryptionSet("diskEncryptionSet", {
     activeKey: {
         keyUrl: "https://myvmvault.vault-int.azure-int.net/keys/{key}",
         sourceVault: {
@@ -264,7 +264,7 @@ const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("di
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DiskEncryptionSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DiskEncryptionSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -272,11 +272,11 @@ const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("di
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDiskEncryptionSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DiskEncryptionSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DiskEncryptionSet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDiskEncryptionSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DiskEncryptionSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DiskEncryptionSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DiskEncryptionSetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DiskEncryptionSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -297,7 +297,7 @@ const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("di
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DiskEncryptionSetArgs</span>
+        <span class="property-type"><a href="#inputs">DiskEncryptionSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -366,7 +366,7 @@ const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("di
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DiskEncryptionSetArgs</span>
+        <span class="property-type"><a href="#inputs">DiskEncryptionSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -405,7 +405,7 @@ const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("di
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DiskEncryptionSetArgs</span>
+        <span class="property-type"><a href="#inputs">DiskEncryptionSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -428,11 +428,11 @@ const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("di
 
 ## DiskEncryptionSet Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1530,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:DiskEncryptionSet myDiskEncryptionSet /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName} 
+$ pulumi import azure-nextgen:compute:DiskEncryptionSet myDiskEncryptionSet /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName} 
 ```
 
 

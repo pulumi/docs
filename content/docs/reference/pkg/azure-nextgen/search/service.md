@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.search.Service resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes an Azure Cognitive Search service and its current state.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Search.Latest.Service("service", new AzureNextGen.Search.Latest.ServiceArgs
+        var service = new AzureNextGen.Search.Service("service", new AzureNextGen.Search.ServiceArgs
         {
             HostingMode = "default",
             Location = "westus",
@@ -35,7 +35,7 @@ class MyStack : Stack
             ReplicaCount = 3,
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
-            Sku = new AzureNextGen.Search.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Search.Inputs.SkuArgs
             {
                 Name = "standard",
             },
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search/latest"
+	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,14 +95,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.search.latest.Service("service",
+service = azure_nextgen.search.Service("service",
     hosting_mode="default",
     location="westus",
     partition_count=1,
     replica_count=3,
     resource_group_name="rg1",
     search_service_name="mysearchservice",
-    sku=azure_nextgen.search.latest.SkuArgs(
+    sku=azure_nextgen.search.SkuArgs(
         name="standard",
     ),
     tags={
@@ -119,7 +119,7 @@ service = azure_nextgen.search.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.search.latest.Service("service", {
+const service = new azure_nextgen.search.Service("service", {
     hostingMode: "default",
     location: "westus",
     partitionCount: 1,
@@ -148,7 +148,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Search.Latest.Service("service", new AzureNextGen.Search.Latest.ServiceArgs
+        var service = new AzureNextGen.Search.Service("service", new AzureNextGen.Search.ServiceArgs
         {
             HostingMode = "default",
             Location = "westus",
@@ -157,7 +157,7 @@ class MyStack : Stack
             ReplicaCount = 3,
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
-            Sku = new AzureNextGen.Search.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Search.Inputs.SkuArgs
             {
                 Name = "standard",
             },
@@ -180,7 +180,7 @@ class MyStack : Stack
 package main
 
 import (
-	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search/latest"
+	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -218,7 +218,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.search.latest.Service("service",
+service = azure_nextgen.search.Service("service",
     hosting_mode="default",
     location="westus",
     partition_count=1,
@@ -226,7 +226,7 @@ service = azure_nextgen.search.latest.Service("service",
     replica_count=3,
     resource_group_name="rg1",
     search_service_name="mysearchservice",
-    sku=azure_nextgen.search.latest.SkuArgs(
+    sku=azure_nextgen.search.SkuArgs(
         name="standard",
     ),
     tags={
@@ -243,7 +243,7 @@ service = azure_nextgen.search.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.search.latest.Service("service", {
+const service = new azure_nextgen.search.Service("service", {
     hostingMode: "default",
     location: "westus",
     partitionCount: 1,
@@ -273,19 +273,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Search.Latest.Service("service", new AzureNextGen.Search.Latest.ServiceArgs
+        var service = new AzureNextGen.Search.Service("service", new AzureNextGen.Search.ServiceArgs
         {
             HostingMode = "default",
             Location = "westus",
-            NetworkRuleSet = new AzureNextGen.Search.Latest.Inputs.NetworkRuleSetArgs
+            NetworkRuleSet = new AzureNextGen.Search.Inputs.NetworkRuleSetArgs
             {
                 IpRules = 
                 {
-                    new AzureNextGen.Search.Latest.Inputs.IpRuleArgs
+                    new AzureNextGen.Search.Inputs.IpRuleArgs
                     {
                         Value = "123.4.5.6",
                     },
-                    new AzureNextGen.Search.Latest.Inputs.IpRuleArgs
+                    new AzureNextGen.Search.Inputs.IpRuleArgs
                     {
                         Value = "123.4.6.0/18",
                     },
@@ -295,7 +295,7 @@ class MyStack : Stack
             ReplicaCount = 1,
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
-            Sku = new AzureNextGen.Search.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Search.Inputs.SkuArgs
             {
                 Name = "standard",
             },
@@ -318,7 +318,7 @@ class MyStack : Stack
 package main
 
 import (
-	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search/latest"
+	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -365,15 +365,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.search.latest.Service("service",
+service = azure_nextgen.search.Service("service",
     hosting_mode="default",
     location="westus",
-    network_rule_set=azure_nextgen.search.latest.NetworkRuleSetArgs(
+    network_rule_set=azure_nextgen.search.NetworkRuleSetArgs(
         ip_rules=[
-            azure_nextgen.search.latest.IpRuleArgs(
+            azure_nextgen.search.IpRuleArgs(
                 value="123.4.5.6",
             ),
-            azure_nextgen.search.latest.IpRuleArgs(
+            azure_nextgen.search.IpRuleArgs(
                 value="123.4.6.0/18",
             ),
         ],
@@ -382,7 +382,7 @@ service = azure_nextgen.search.latest.Service("service",
     replica_count=1,
     resource_group_name="rg1",
     search_service_name="mysearchservice",
-    sku=azure_nextgen.search.latest.SkuArgs(
+    sku=azure_nextgen.search.SkuArgs(
         name="standard",
     ),
     tags={
@@ -399,7 +399,7 @@ service = azure_nextgen.search.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.search.latest.Service("service", {
+const service = new azure_nextgen.search.Service("service", {
     hostingMode: "default",
     location: "westus",
     networkRuleSet: {
@@ -438,10 +438,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Search.Latest.Service("service", new AzureNextGen.Search.Latest.ServiceArgs
+        var service = new AzureNextGen.Search.Service("service", new AzureNextGen.Search.ServiceArgs
         {
             HostingMode = "default",
-            Identity = new AzureNextGen.Search.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.Search.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -450,7 +450,7 @@ class MyStack : Stack
             ReplicaCount = 3,
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
-            Sku = new AzureNextGen.Search.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Search.Inputs.SkuArgs
             {
                 Name = "standard",
             },
@@ -473,7 +473,7 @@ class MyStack : Stack
 package main
 
 import (
-	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search/latest"
+	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -513,9 +513,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.search.latest.Service("service",
+service = azure_nextgen.search.Service("service",
     hosting_mode="default",
-    identity=azure_nextgen.search.latest.IdentityArgs(
+    identity=azure_nextgen.search.IdentityArgs(
         type="SystemAssigned",
     ),
     location="westus",
@@ -523,7 +523,7 @@ service = azure_nextgen.search.latest.Service("service",
     replica_count=3,
     resource_group_name="rg1",
     search_service_name="mysearchservice",
-    sku=azure_nextgen.search.latest.SkuArgs(
+    sku=azure_nextgen.search.SkuArgs(
         name="standard",
     ),
     tags={
@@ -540,7 +540,7 @@ service = azure_nextgen.search.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.search.latest.Service("service", {
+const service = new azure_nextgen.search.Service("service", {
     hostingMode: "default",
     identity: {
         type: "SystemAssigned",
@@ -570,7 +570,7 @@ const service = new azure_nextgen.search.latest.Service("service", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -578,11 +578,11 @@ const service = new azure_nextgen.search.latest.Service("service", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -603,7 +603,7 @@ const service = new azure_nextgen.search.latest.Service("service", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServiceArgs</span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -672,7 +672,7 @@ const service = new azure_nextgen.search.latest.Service("service", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServiceArgs</span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -711,7 +711,7 @@ const service = new azure_nextgen.search.latest.Service("service", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServiceArgs</span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -734,11 +734,11 @@ const service = new azure_nextgen.search.latest.Service("service", {
 
 ## Service Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Service resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Service resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3132,7 +3132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:search/latest:Service mysearchservice /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Search/searchServices/mysearchservice 
+$ pulumi import azure-nextgen:search:Service mysearchservice /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Search/searchServices/mysearchservice 
 ```
 
 

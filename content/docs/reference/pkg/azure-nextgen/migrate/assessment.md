@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.migrate.Assessment resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An assessment created for a group in the Migration project.
-Latest API Version: 2019-10-01.
+API Version: 2019-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assessment = new AzureNextGen.Migrate.Latest.Assessment("assessment", new AzureNextGen.Migrate.Latest.AssessmentArgs
+        var assessment = new AzureNextGen.Migrate.Assessment("assessment", new AzureNextGen.Migrate.AssessmentArgs
         {
             AssessmentName = "assessment_5_14_2019_16_48_47",
             ETag = "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
             GroupName = "Group2",
             ProjectName = "abgoyalWEselfhostb72bproject",
-            Properties = new AzureNextGen.Migrate.Latest.Inputs.AssessmentPropertiesArgs
+            Properties = new AzureNextGen.Migrate.Inputs.AssessmentPropertiesArgs
             {
                 AzureDiskType = "StandardOrPremium",
                 AzureHybridUseBenefit = "Yes",
@@ -65,7 +65,7 @@ class MyStack : Stack
                 SizingCriterion = "PerformanceBased",
                 Stage = "InProgress",
                 TimeRange = "Day",
-                VmUptime = new AzureNextGen.Migrate.Latest.Inputs.VmUptimeArgs
+                VmUptime = new AzureNextGen.Migrate.Inputs.VmUptimeArgs
                 {
                     DaysPerMonth = 31,
                     HoursPerDay = 24,
@@ -87,7 +87,7 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/latest"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -152,12 +152,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assessment = azure_nextgen.migrate.latest.Assessment("assessment",
+assessment = azure_nextgen.migrate.Assessment("assessment",
     assessment_name="assessment_5_14_2019_16_48_47",
     e_tag="\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
     group_name="Group2",
     project_name="abgoyalWEselfhostb72bproject",
-    properties=azure_nextgen.migrate.latest.AssessmentPropertiesArgs(
+    properties=azure_nextgen.migrate.AssessmentPropertiesArgs(
         azure_disk_type="StandardOrPremium",
         azure_hybrid_use_benefit="Yes",
         azure_location="NorthEurope",
@@ -187,7 +187,7 @@ assessment = azure_nextgen.migrate.latest.Assessment("assessment",
         sizing_criterion="PerformanceBased",
         stage="InProgress",
         time_range="Day",
-        vm_uptime=azure_nextgen.migrate.latest.VmUptimeArgs(
+        vm_uptime=azure_nextgen.migrate.VmUptimeArgs(
             days_per_month=31,
             hours_per_day=24,
         ),
@@ -204,7 +204,7 @@ assessment = azure_nextgen.migrate.latest.Assessment("assessment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
+const assessment = new azure_nextgen.migrate.Assessment("assessment", {
     assessmentName: "assessment_5_14_2019_16_48_47",
     eTag: "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
     groupName: "Group2",
@@ -259,7 +259,7 @@ const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AssessmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -267,11 +267,11 @@ const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AssessmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assessment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assessment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AssessmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -292,7 +292,7 @@ const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AssessmentArgs</span>
+        <span class="property-type"><a href="#inputs">AssessmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -361,7 +361,7 @@ const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AssessmentArgs</span>
+        <span class="property-type"><a href="#inputs">AssessmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -400,7 +400,7 @@ const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AssessmentArgs</span>
+        <span class="property-type"><a href="#inputs">AssessmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -423,11 +423,11 @@ const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
 
 ## Assessment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Assessment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Assessment resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4263,7 +4263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:migrate/latest:Assessment assessment_5_14_2019_16_48_47 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abgoyalWEselfhostb72bproject/groups/Group2/assessments/assessment_5_14_2019_16_48_47 
+$ pulumi import azure-nextgen:migrate:Assessment assessment_5_14_2019_16_48_47 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abgoyalWEselfhostb72bproject/groups/Group2/assessments/assessment_5_14_2019_16_48_47 
 ```
 
 

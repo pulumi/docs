@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.DeploymentAtSubscripti
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Deployment information.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var deploymentAtSubscriptionScope = new AzureNextGen.Resources.Latest.DeploymentAtSubscriptionScope("deploymentAtSubscriptionScope", new AzureNextGen.Resources.Latest.DeploymentAtSubscriptionScopeArgs
+        var deploymentAtSubscriptionScope = new AzureNextGen.Resources.DeploymentAtSubscriptionScope("deploymentAtSubscriptionScope", new AzureNextGen.Resources.DeploymentAtSubscriptionScopeArgs
         {
             DeploymentName = "my-deployment",
             Location = "eastus",
-            Properties = new AzureNextGen.Resources.Latest.Inputs.DeploymentPropertiesArgs
+            Properties = new AzureNextGen.Resources.Inputs.DeploymentPropertiesArgs
             {
                 Mode = "Incremental",
                 Parameters = ,
-                TemplateLink = new AzureNextGen.Resources.Latest.Inputs.TemplateLinkArgs
+                TemplateLink = new AzureNextGen.Resources.Inputs.TemplateLinkArgs
                 {
                     Id = "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1",
                 },
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,13 +89,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-deployment_at_subscription_scope = azure_nextgen.resources.latest.DeploymentAtSubscriptionScope("deploymentAtSubscriptionScope",
+deployment_at_subscription_scope = azure_nextgen.resources.DeploymentAtSubscriptionScope("deploymentAtSubscriptionScope",
     deployment_name="my-deployment",
     location="eastus",
-    properties=azure_nextgen.resources.latest.DeploymentPropertiesArgs(
+    properties=azure_nextgen.resources.DeploymentPropertiesArgs(
         mode="Incremental",
         parameters={},
-        template_link=azure_nextgen.resources.latest.TemplateLinkArgs(
+        template_link=azure_nextgen.resources.TemplateLinkArgs(
             id="/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1",
         ),
     ))
@@ -110,7 +110,7 @@ deployment_at_subscription_scope = azure_nextgen.resources.latest.DeploymentAtSu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const deploymentAtSubscriptionScope = new azure_nextgen.resources.latest.DeploymentAtSubscriptionScope("deploymentAtSubscriptionScope", {
+const deploymentAtSubscriptionScope = new azure_nextgen.resources.DeploymentAtSubscriptionScope("deploymentAtSubscriptionScope", {
     deploymentName: "my-deployment",
     location: "eastus",
     properties: {
@@ -134,7 +134,7 @@ const deploymentAtSubscriptionScope = new azure_nextgen.resources.latest.Deploym
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeploymentAtSubscriptionScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DeploymentAtSubscriptionScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeploymentAtSubscriptionScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentAtSubscriptionScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -142,11 +142,11 @@ const deploymentAtSubscriptionScope = new azure_nextgen.resources.latest.Deploym
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeploymentAtSubscriptionScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DeploymentAtSubscriptionScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentAtSubscriptionScope</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeploymentAtSubscriptionScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentAtSubscriptionScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentAtSubscriptionScope</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeploymentAtSubscriptionScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DeploymentAtSubscriptionScopeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeploymentAtSubscriptionScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeploymentAtSubscriptionScopeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -167,7 +167,7 @@ const deploymentAtSubscriptionScope = new azure_nextgen.resources.latest.Deploym
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DeploymentAtSubscriptionScopeArgs</span>
+        <span class="property-type"><a href="#inputs">DeploymentAtSubscriptionScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -236,7 +236,7 @@ const deploymentAtSubscriptionScope = new azure_nextgen.resources.latest.Deploym
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DeploymentAtSubscriptionScopeArgs</span>
+        <span class="property-type"><a href="#inputs">DeploymentAtSubscriptionScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -275,7 +275,7 @@ const deploymentAtSubscriptionScope = new azure_nextgen.resources.latest.Deploym
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DeploymentAtSubscriptionScopeArgs</span>
+        <span class="property-type"><a href="#inputs">DeploymentAtSubscriptionScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -298,11 +298,11 @@ const deploymentAtSubscriptionScope = new azure_nextgen.resources.latest.Deploym
 
 ## DeploymentAtSubscriptionScope Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DeploymentAtSubscriptionScope resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DeploymentAtSubscriptionScope resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4830,7 +4830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:resources/latest:DeploymentAtSubscriptionScope my-deployment /subscriptions/00000000-0000-0000-0000-000000000001/providers/Microsoft.Resources/deployments/my-deployment 
+$ pulumi import azure-nextgen:resources:DeploymentAtSubscriptionScope my-deployment /subscriptions/00000000-0000-0000-0000-000000000001/providers/Microsoft.Resources/deployments/my-deployment 
 ```
 
 

@@ -19,7 +19,7 @@ meta_desc: "Explore the GetEventChannel function of the eventgrid module, includ
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEventChannel<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEventChannelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetEventChannelResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEventChannel<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEventChannelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEventChannelResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetEventChannel function of the eventgrid module, includ
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEventChannel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEventChannelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupEventChannelResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEventChannel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEventChannelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupEventChannelResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupEventChannel` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetEventChannel function of the eventgrid module, includ
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEventChannel </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetEventChannelResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetEventChannelArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEventChannelResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEventChannelArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -590,9 +590,6 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -690,9 +687,6 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 {{% /choosable %}}
 
 <h4 id="eventchanneldestinationresponse">Event<wbr>Channel<wbr>Destination<wbr>Response</h4>
-
-
-
 
 
 
@@ -840,9 +834,6 @@ associated with the event channel will be created under this resource group.{{% 
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -904,9 +895,6 @@ associated with the event channel will be created under this resource group.{{% 
 {{% /choosable %}}
 
 <h4 id="eventchannelsourceresponse">Event<wbr>Channel<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -975,9 +963,6 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 <h4 id="numbergreaterthanadvancedfilterresponse">Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 
@@ -1081,9 +1066,6 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1181,9 +1163,6 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 <h4 id="numberinadvancedfilterresponse">Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 
@@ -1287,9 +1266,6 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1387,9 +1363,6 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 <h4 id="numberlessthanorequalsadvancedfilterresponse">Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 
@@ -1493,9 +1466,6 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1593,9 +1563,6 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 <h4 id="stringbeginswithadvancedfilterresponse">String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 
@@ -1699,9 +1666,6 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1799,9 +1763,6 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 <h4 id="stringendswithadvancedfilterresponse">String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 
@@ -1905,9 +1866,6 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2005,9 +1963,6 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 <h4 id="stringnotinadvancedfilterresponse">String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 

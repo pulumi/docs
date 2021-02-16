@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.deploymentmanager.ServiceUnit re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents the response of a service unit resource.
+API Version: 2019-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serviceUnit = new AzureNextGen.DeploymentManager.V20191101Preview.ServiceUnit("serviceUnit", new AzureNextGen.DeploymentManager.V20191101Preview.ServiceUnitArgs
+        var serviceUnit = new AzureNextGen.DeploymentManager.ServiceUnit("serviceUnit", new AzureNextGen.DeploymentManager.ServiceUnitArgs
         {
-            Artifacts = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.ServiceUnitArtifactsArgs
+            Artifacts = new AzureNextGen.DeploymentManager.Inputs.ServiceUnitArtifactsArgs
             {
                 ParametersUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
                 TemplateUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
@@ -58,7 +59,7 @@ package main
 import (
 	"fmt"
 
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,8 +96,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service_unit = azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit",
-    artifacts=azure_nextgen.deploymentmanager.v20191101preview.ServiceUnitArtifactsArgs(
+service_unit = azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit",
+    artifacts=azure_nextgen.deploymentmanager.ServiceUnitArtifactsArgs(
         parameters_uri="https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
         template_uri="https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
     ),
@@ -119,7 +120,7 @@ service_unit = azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("ser
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit", {
+const serviceUnit = new azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit", {
     artifacts: {
         parametersUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
         templateUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
@@ -148,9 +149,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serviceUnit = new AzureNextGen.DeploymentManager.V20191101Preview.ServiceUnit("serviceUnit", new AzureNextGen.DeploymentManager.V20191101Preview.ServiceUnitArgs
+        var serviceUnit = new AzureNextGen.DeploymentManager.ServiceUnit("serviceUnit", new AzureNextGen.DeploymentManager.ServiceUnitArgs
         {
-            Artifacts = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.ServiceUnitArtifactsArgs
+            Artifacts = new AzureNextGen.DeploymentManager.Inputs.ServiceUnitArtifactsArgs
             {
                 ParametersArtifactSourceRelativePath = "parameter/myTopologyUnit.parameters.json",
                 TemplateArtifactSourceRelativePath = "templates/myTopologyUnit.template.json",
@@ -178,7 +179,7 @@ class MyStack : Stack
 package main
 
 import (
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -215,8 +216,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service_unit = azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit",
-    artifacts=azure_nextgen.deploymentmanager.v20191101preview.ServiceUnitArtifactsArgs(
+service_unit = azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit",
+    artifacts=azure_nextgen.deploymentmanager.ServiceUnitArtifactsArgs(
         parameters_artifact_source_relative_path="parameter/myTopologyUnit.parameters.json",
         template_artifact_source_relative_path="templates/myTopologyUnit.template.json",
     ),
@@ -239,7 +240,7 @@ service_unit = azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("ser
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit", {
+const serviceUnit = new azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit", {
     artifacts: {
         parametersArtifactSourceRelativePath: "parameter/myTopologyUnit.parameters.json",
         templateArtifactSourceRelativePath: "templates/myTopologyUnit.template.json",
@@ -266,7 +267,7 @@ const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.Service
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ServiceUnitArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceUnitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -274,11 +275,11 @@ const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.Service
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceUnit</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ServiceUnitArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceUnit</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceUnit</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceUnitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceUnit</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ServiceUnitArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceUnitArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -299,7 +300,7 @@ const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.Service
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServiceUnitArgs</span>
+        <span class="property-type"><a href="#inputs">ServiceUnitArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -368,7 +369,7 @@ const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.Service
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServiceUnitArgs</span>
+        <span class="property-type"><a href="#inputs">ServiceUnitArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -407,7 +408,7 @@ const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.Service
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServiceUnitArgs</span>
+        <span class="property-type"><a href="#inputs">ServiceUnitArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -430,11 +431,11 @@ const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.Service
 
 ## ServiceUnit Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1318,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:ServiceUnit myServiceUnit /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/serviceTopologies/{serviceTopologyName}/services/{serviceName}/serviceUnits/{serviceUnitName} 
+$ pulumi import azure-nextgen:deploymentmanager:ServiceUnit myServiceUnit /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/serviceTopologies/{serviceTopologyName}/services/{serviceName}/serviceUnits/{serviceUnitName} 
 ```
 
 

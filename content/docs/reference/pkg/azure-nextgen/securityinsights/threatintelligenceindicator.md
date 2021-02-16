@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.ThreatIntellige
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Threat intelligence information object.
+API Version: 2019-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var threatIntelligenceIndicator = new AzureNextGen.SecurityInsights.V20190101Preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator", new AzureNextGen.SecurityInsights.V20190101Preview.ThreatIntelligenceIndicatorArgs
+        var threatIntelligenceIndicator = new AzureNextGen.SecurityInsights.ThreatIntelligenceIndicator("threatIntelligenceIndicator", new AzureNextGen.SecurityInsights.ThreatIntelligenceIndicatorArgs
         {
             Confidence = 78,
             CreatedByRef = "contoso@contoso.com",
@@ -71,7 +72,7 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -122,7 +123,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-threat_intelligence_indicator = azure_nextgen.securityinsights.v20190101preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator",
+threat_intelligence_indicator = azure_nextgen.securityinsights.ThreatIntelligenceIndicator("threatIntelligenceIndicator",
     confidence=78,
     created_by_ref="contoso@contoso.com",
     description="debugging indicators",
@@ -156,7 +157,7 @@ threat_intelligence_indicator = azure_nextgen.securityinsights.v20190101preview.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const threatIntelligenceIndicator = new azure_nextgen.securityinsights.v20190101preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator", {
+const threatIntelligenceIndicator = new azure_nextgen.securityinsights.ThreatIntelligenceIndicator("threatIntelligenceIndicator", {
     confidence: 78,
     createdByRef: "contoso@contoso.com",
     description: "debugging indicators",
@@ -193,7 +194,7 @@ const threatIntelligenceIndicator = new azure_nextgen.securityinsights.v20190101
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ThreatIntelligenceIndicatorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -201,11 +202,11 @@ const threatIntelligenceIndicator = new azure_nextgen.securityinsights.v20190101
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ThreatIntelligenceIndicatorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ThreatIntelligenceIndicator</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ThreatIntelligenceIndicator</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ThreatIntelligenceIndicatorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -226,7 +227,7 @@ const threatIntelligenceIndicator = new azure_nextgen.securityinsights.v20190101
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ThreatIntelligenceIndicatorArgs</span>
+        <span class="property-type"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -295,7 +296,7 @@ const threatIntelligenceIndicator = new azure_nextgen.securityinsights.v20190101
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ThreatIntelligenceIndicatorArgs</span>
+        <span class="property-type"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -334,7 +335,7 @@ const threatIntelligenceIndicator = new azure_nextgen.securityinsights.v20190101
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ThreatIntelligenceIndicatorArgs</span>
+        <span class="property-type"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -357,11 +358,11 @@ const threatIntelligenceIndicator = new azure_nextgen.securityinsights.v20190101
 
 ## ThreatIntelligenceIndicator Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ThreatIntelligenceIndicator resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ThreatIntelligenceIndicator resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2045,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:securityinsights/v20190101preview:ThreatIntelligenceIndicator 180105c7-a28d-b1a2-4a78-234f6ec80fd6 /subscriptions/bd794837-4d29-4647-9105-6339bfdb4e6a/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/ThreatIntelligence/180105c7-a28d-b1a2-4a78-234f6ec80fd6 
+$ pulumi import azure-nextgen:securityinsights:ThreatIntelligenceIndicator 180105c7-a28d-b1a2-4a78-234f6ec80fd6 /subscriptions/bd794837-4d29-4647-9105-6339bfdb4e6a/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/ThreatIntelligence/180105c7-a28d-b1a2-4a78-234f6ec80fd6 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datalakeanalytics.Account resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
-Latest API Version: 2016-11-01.
+API Version: 2016-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.DataLakeAnalytics.Latest.Account("account", new AzureNextGen.DataLakeAnalytics.Latest.AccountArgs
+        var account = new AzureNextGen.DataLakeAnalytics.Account("account", new AzureNextGen.DataLakeAnalytics.AccountArgs
         {
             AccountName = "contosoadla",
             ComputePolicies = 
             {
-                new AzureNextGen.DataLakeAnalytics.Latest.Inputs.CreateComputePolicyWithAccountParametersArgs
+                new AzureNextGen.DataLakeAnalytics.Inputs.CreateComputePolicyWithAccountParametersArgs
                 {
                     MaxDegreeOfParallelismPerJob = 1,
                     MinPriorityPerJob = 1,
@@ -43,7 +43,7 @@ class MyStack : Stack
             },
             DataLakeStoreAccounts = 
             {
-                new AzureNextGen.DataLakeAnalytics.Latest.Inputs.AddDataLakeStoreWithAccountParametersArgs
+                new AzureNextGen.DataLakeAnalytics.Inputs.AddDataLakeStoreWithAccountParametersArgs
                 {
                     Name = "test_adls",
                     Suffix = "test_suffix",
@@ -53,7 +53,7 @@ class MyStack : Stack
             FirewallAllowAzureIps = "Enabled",
             FirewallRules = 
             {
-                new AzureNextGen.DataLakeAnalytics.Latest.Inputs.CreateFirewallRuleWithAccountParametersArgs
+                new AzureNextGen.DataLakeAnalytics.Inputs.CreateFirewallRuleWithAccountParametersArgs
                 {
                     EndIpAddress = "2.2.2.2",
                     Name = "test_rule",
@@ -71,7 +71,7 @@ class MyStack : Stack
             ResourceGroupName = "contosorg",
             StorageAccounts = 
             {
-                new AzureNextGen.DataLakeAnalytics.Latest.Inputs.AddStorageAccountWithAccountParametersArgs
+                new AzureNextGen.DataLakeAnalytics.Inputs.AddStorageAccountWithAccountParametersArgs
                 {
                     AccessKey = "34adfa4f-cedf-4dc0-ba29-b6d1a69ab346",
                     Name = "test_storage",
@@ -97,7 +97,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakeanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakeanalytics/latest"
+	datalakeanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakeanalytics"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -166,22 +166,22 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.datalakeanalytics.latest.Account("account",
+account = azure_nextgen.datalakeanalytics.Account("account",
     account_name="contosoadla",
-    compute_policies=[azure_nextgen.datalakeanalytics.latest.CreateComputePolicyWithAccountParametersArgs(
+    compute_policies=[azure_nextgen.datalakeanalytics.CreateComputePolicyWithAccountParametersArgs(
         max_degree_of_parallelism_per_job=1,
         min_priority_per_job=1,
         name="test_policy",
         object_id="34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
         object_type="User",
     )],
-    data_lake_store_accounts=[azure_nextgen.datalakeanalytics.latest.AddDataLakeStoreWithAccountParametersArgs(
+    data_lake_store_accounts=[azure_nextgen.datalakeanalytics.AddDataLakeStoreWithAccountParametersArgs(
         name="test_adls",
         suffix="test_suffix",
     )],
     default_data_lake_store_account="test_adls",
     firewall_allow_azure_ips="Enabled",
-    firewall_rules=[azure_nextgen.datalakeanalytics.latest.CreateFirewallRuleWithAccountParametersArgs(
+    firewall_rules=[azure_nextgen.datalakeanalytics.CreateFirewallRuleWithAccountParametersArgs(
         end_ip_address="2.2.2.2",
         name="test_rule",
         start_ip_address="1.1.1.1",
@@ -195,7 +195,7 @@ account = azure_nextgen.datalakeanalytics.latest.Account("account",
     new_tier="Consumption",
     query_store_retention=30,
     resource_group_name="contosorg",
-    storage_accounts=[azure_nextgen.datalakeanalytics.latest.AddStorageAccountWithAccountParametersArgs(
+    storage_accounts=[azure_nextgen.datalakeanalytics.AddStorageAccountWithAccountParametersArgs(
         access_key="34adfa4f-cedf-4dc0-ba29-b6d1a69ab346",
         name="test_storage",
         suffix="test_suffix",
@@ -214,7 +214,7 @@ account = azure_nextgen.datalakeanalytics.latest.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.datalakeanalytics.latest.Account("account", {
+const account = new azure_nextgen.datalakeanalytics.Account("account", {
     accountName: "contosoadla",
     computePolicies: [{
         maxDegreeOfParallelismPerJob: 1,
@@ -265,7 +265,7 @@ const account = new azure_nextgen.datalakeanalytics.latest.Account("account", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -273,11 +273,11 @@ const account = new azure_nextgen.datalakeanalytics.latest.Account("account", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -298,7 +298,7 @@ const account = new azure_nextgen.datalakeanalytics.latest.Account("account", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -367,7 +367,7 @@ const account = new azure_nextgen.datalakeanalytics.latest.Account("account", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -406,7 +406,7 @@ const account = new azure_nextgen.datalakeanalytics.latest.Account("account", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -429,11 +429,11 @@ const account = new azure_nextgen.datalakeanalytics.latest.Account("account", {
 
 ## Account Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Account resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Account resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3827,7 +3827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datalakeanalytics/latest:Account test_account /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rgaba12041/providers/Microsoft.DataLakeAnalytics/accounts/testaba15818 
+$ pulumi import azure-nextgen:datalakeanalytics:Account test_account /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rgaba12041/providers/Microsoft.DataLakeAnalytics/accounts/testaba15818 
 ```
 
 

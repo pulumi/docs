@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datalakestore.Account resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data Lake Store account information.
-Latest API Version: 2016-11-01.
+API Version: 2016-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.DataLakeStore.Latest.Account("account", new AzureNextGen.DataLakeStore.Latest.AccountArgs
+        var account = new AzureNextGen.DataLakeStore.Account("account", new AzureNextGen.DataLakeStore.AccountArgs
         {
             AccountName = "contosoadla",
             DefaultGroup = "test_default_group",
-            EncryptionConfig = new AzureNextGen.DataLakeStore.Latest.Inputs.EncryptionConfigArgs
+            EncryptionConfig = new AzureNextGen.DataLakeStore.Inputs.EncryptionConfigArgs
             {
-                KeyVaultMetaInfo = new AzureNextGen.DataLakeStore.Latest.Inputs.KeyVaultMetaInfoArgs
+                KeyVaultMetaInfo = new AzureNextGen.DataLakeStore.Inputs.KeyVaultMetaInfoArgs
                 {
                     EncryptionKeyName = "test_encryption_key_name",
                     EncryptionKeyVersion = "encryption_key_version",
@@ -45,7 +45,7 @@ class MyStack : Stack
             FirewallAllowAzureIps = "Enabled",
             FirewallRules = 
             {
-                new AzureNextGen.DataLakeStore.Latest.Inputs.CreateFirewallRuleWithAccountParametersArgs
+                new AzureNextGen.DataLakeStore.Inputs.CreateFirewallRuleWithAccountParametersArgs
                 {
                     EndIpAddress = "2.2.2.2",
                     Name = "test_rule",
@@ -53,7 +53,7 @@ class MyStack : Stack
                 },
             },
             FirewallState = "Enabled",
-            Identity = new AzureNextGen.DataLakeStore.Latest.Inputs.EncryptionIdentityArgs
+            Identity = new AzureNextGen.DataLakeStore.Inputs.EncryptionIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -67,7 +67,7 @@ class MyStack : Stack
             TrustedIdProviderState = "Enabled",
             TrustedIdProviders = 
             {
-                new AzureNextGen.DataLakeStore.Latest.Inputs.CreateTrustedIdProviderWithAccountParametersArgs
+                new AzureNextGen.DataLakeStore.Inputs.CreateTrustedIdProviderWithAccountParametersArgs
                 {
                     IdProvider = "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
                     Name = "test_trusted_id_provider_name",
@@ -88,7 +88,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore/latest"
+	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -149,11 +149,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.datalakestore.latest.Account("account",
+account = azure_nextgen.datalakestore.Account("account",
     account_name="contosoadla",
     default_group="test_default_group",
-    encryption_config=azure_nextgen.datalakestore.latest.EncryptionConfigArgs(
-        key_vault_meta_info=azure_nextgen.datalakestore.latest.KeyVaultMetaInfoArgs(
+    encryption_config=azure_nextgen.datalakestore.EncryptionConfigArgs(
+        key_vault_meta_info=azure_nextgen.datalakestore.KeyVaultMetaInfoArgs(
             encryption_key_name="test_encryption_key_name",
             encryption_key_version="encryption_key_version",
             key_vault_resource_id="34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
@@ -162,13 +162,13 @@ account = azure_nextgen.datalakestore.latest.Account("account",
     ),
     encryption_state="Enabled",
     firewall_allow_azure_ips="Enabled",
-    firewall_rules=[azure_nextgen.datalakestore.latest.CreateFirewallRuleWithAccountParametersArgs(
+    firewall_rules=[azure_nextgen.datalakestore.CreateFirewallRuleWithAccountParametersArgs(
         end_ip_address="2.2.2.2",
         name="test_rule",
         start_ip_address="1.1.1.1",
     )],
     firewall_state="Enabled",
-    identity=azure_nextgen.datalakestore.latest.EncryptionIdentityArgs(
+    identity=azure_nextgen.datalakestore.EncryptionIdentityArgs(
         type="SystemAssigned",
     ),
     location="eastus2",
@@ -178,7 +178,7 @@ account = azure_nextgen.datalakestore.latest.Account("account",
         "test_key": "test_value",
     },
     trusted_id_provider_state="Enabled",
-    trusted_id_providers=[azure_nextgen.datalakestore.latest.CreateTrustedIdProviderWithAccountParametersArgs(
+    trusted_id_providers=[azure_nextgen.datalakestore.CreateTrustedIdProviderWithAccountParametersArgs(
         id_provider="https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
         name="test_trusted_id_provider_name",
     )])
@@ -193,7 +193,7 @@ account = azure_nextgen.datalakestore.latest.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.datalakestore.latest.Account("account", {
+const account = new azure_nextgen.datalakestore.Account("account", {
     accountName: "contosoadla",
     defaultGroup: "test_default_group",
     encryptionConfig: {
@@ -240,7 +240,7 @@ const account = new azure_nextgen.datalakestore.latest.Account("account", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -248,11 +248,11 @@ const account = new azure_nextgen.datalakestore.latest.Account("account", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -273,7 +273,7 @@ const account = new azure_nextgen.datalakestore.latest.Account("account", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -342,7 +342,7 @@ const account = new azure_nextgen.datalakestore.latest.Account("account", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -381,7 +381,7 @@ const account = new azure_nextgen.datalakestore.latest.Account("account", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -404,11 +404,11 @@ const account = new azure_nextgen.datalakestore.latest.Account("account", {
 
 ## Account Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Account resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Account resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3252,7 +3252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datalakestore/latest:Account contosoadla 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
+$ pulumi import azure-nextgen:datalakestore:Account contosoadla 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
 ```
 
 

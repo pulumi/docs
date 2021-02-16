@@ -20,7 +20,7 @@ The provider type for the Azure NextGen package.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx">ProviderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -28,11 +28,11 @@ The provider type for the Azure NextGen package.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ProviderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ProviderArgs</span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -53,7 +53,7 @@ The provider type for the Azure NextGen package.
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProviderArgs</span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -122,7 +122,7 @@ The provider type for the Azure NextGen package.
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProviderArgs</span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -161,7 +161,7 @@ The provider type for the Azure NextGen package.
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProviderArgs</span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -184,11 +184,11 @@ The provider type for the Azure NextGen package.
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -203,7 +203,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}} It can also be sourced from the following environment variable: `ARM_AUXILIARY_TENANT_IDS`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_csharp">
@@ -212,7 +212,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate{{% /md %}}</dd>
+    <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate It can also be sourced from the following environment variable: `ARM_CLIENT_CERTIFICATE_PASSWORD`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepath_csharp">
@@ -221,7 +221,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate.{{% /md %}}</dd>
+    <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate. It can also be sourced from the following environment variable: `ARM_CLIENT_CERTIFICATE_PATH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
@@ -230,7 +230,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID which should be used.{{% /md %}}</dd>
+    <dd>{{% md %}}The Client ID which should be used. It can also be sourced from the following environment variable: `ARM_CLIENT_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
@@ -239,7 +239,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.{{% /md %}}</dd>
+    <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret. It can also be sourced from the following environment variable: `ARM_CLIENT_SECRET`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disablepulumipartnerid_csharp">
@@ -248,7 +248,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified.{{% /md %}}</dd>
+    <dd>{{% md %}}This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified. It can also be sourced from the following environment variable: `ARM_DISABLE_PULUMI_PARTNER_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="environment_csharp">
@@ -257,7 +257,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.{{% /md %}}</dd>
+    <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public. It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_csharp">
@@ -266,7 +266,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically. {{% /md %}}</dd>
+    <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically.  It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="partnerid_csharp">
@@ -275,7 +275,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.{{% /md %}}</dd>
+    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution. It can also be sourced from the following environment variable: `ARM_PARTNER_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
@@ -284,7 +284,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Subscription ID which should be used.{{% /md %}}</dd>
+    <dd>{{% md %}}The Subscription ID which should be used. It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
@@ -293,7 +293,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID which should be used.{{% /md %}}</dd>
+    <dd>{{% md %}}The Tenant ID which should be used. It can also be sourced from the following environment variable: `ARM_TENANT_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="usemsi_csharp">
@@ -302,7 +302,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication. It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -317,7 +317,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}} It can also be sourced from the following environment variable: `ARM_AUXILIARY_TENANT_IDS`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_go">
@@ -326,7 +326,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate{{% /md %}}</dd>
+    <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate It can also be sourced from the following environment variable: `ARM_CLIENT_CERTIFICATE_PASSWORD`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepath_go">
@@ -335,7 +335,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate.{{% /md %}}</dd>
+    <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate. It can also be sourced from the following environment variable: `ARM_CLIENT_CERTIFICATE_PATH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
@@ -344,7 +344,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID which should be used.{{% /md %}}</dd>
+    <dd>{{% md %}}The Client ID which should be used. It can also be sourced from the following environment variable: `ARM_CLIENT_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
@@ -353,7 +353,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.{{% /md %}}</dd>
+    <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret. It can also be sourced from the following environment variable: `ARM_CLIENT_SECRET`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disablepulumipartnerid_go">
@@ -362,7 +362,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified.{{% /md %}}</dd>
+    <dd>{{% md %}}This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified. It can also be sourced from the following environment variable: `ARM_DISABLE_PULUMI_PARTNER_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="environment_go">
@@ -371,7 +371,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.{{% /md %}}</dd>
+    <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public. It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_go">
@@ -380,7 +380,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically. {{% /md %}}</dd>
+    <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically.  It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="partnerid_go">
@@ -389,7 +389,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.{{% /md %}}</dd>
+    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution. It can also be sourced from the following environment variable: `ARM_PARTNER_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
@@ -398,7 +398,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Subscription ID which should be used.{{% /md %}}</dd>
+    <dd>{{% md %}}The Subscription ID which should be used. It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
@@ -407,7 +407,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID which should be used.{{% /md %}}</dd>
+    <dd>{{% md %}}The Tenant ID which should be used. It can also be sourced from the following environment variable: `ARM_TENANT_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="usemsi_go">
@@ -416,7 +416,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication. It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -431,7 +431,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}} It can also be sourced from the following environment variable: `ARM_AUXILIARY_TENANT_IDS`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_nodejs">
@@ -440,7 +440,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate{{% /md %}}</dd>
+    <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate It can also be sourced from the following environment variable: `ARM_CLIENT_CERTIFICATE_PASSWORD`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepath_nodejs">
@@ -449,7 +449,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate.{{% /md %}}</dd>
+    <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate. It can also be sourced from the following environment variable: `ARM_CLIENT_CERTIFICATE_PATH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
@@ -458,7 +458,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID which should be used.{{% /md %}}</dd>
+    <dd>{{% md %}}The Client ID which should be used. It can also be sourced from the following environment variable: `ARM_CLIENT_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
@@ -467,7 +467,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.{{% /md %}}</dd>
+    <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret. It can also be sourced from the following environment variable: `ARM_CLIENT_SECRET`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disablepulumipartnerid_nodejs">
@@ -476,7 +476,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified.{{% /md %}}</dd>
+    <dd>{{% md %}}This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified. It can also be sourced from the following environment variable: `ARM_DISABLE_PULUMI_PARTNER_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="environment_nodejs">
@@ -485,7 +485,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.{{% /md %}}</dd>
+    <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public. It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_nodejs">
@@ -494,7 +494,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically. {{% /md %}}</dd>
+    <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically.  It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="partnerid_nodejs">
@@ -503,7 +503,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.{{% /md %}}</dd>
+    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution. It can also be sourced from the following environment variable: `ARM_PARTNER_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
@@ -512,7 +512,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Subscription ID which should be used.{{% /md %}}</dd>
+    <dd>{{% md %}}The Subscription ID which should be used. It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
@@ -521,7 +521,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID which should be used.{{% /md %}}</dd>
+    <dd>{{% md %}}The Tenant ID which should be used. It can also be sourced from the following environment variable: `ARM_TENANT_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="usemsi_nodejs">
@@ -530,7 +530,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication. It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -545,7 +545,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}} It can also be sourced from the following environment variable: `ARM_AUXILIARY_TENANT_IDS`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="client_certificate_password_python">
@@ -554,7 +554,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate{{% /md %}}</dd>
+    <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate It can also be sourced from the following environment variable: `ARM_CLIENT_CERTIFICATE_PASSWORD`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="client_certificate_path_python">
@@ -563,7 +563,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate.{{% /md %}}</dd>
+    <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate. It can also be sourced from the following environment variable: `ARM_CLIENT_CERTIFICATE_PATH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
@@ -572,7 +572,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Client ID which should be used.{{% /md %}}</dd>
+    <dd>{{% md %}}The Client ID which should be used. It can also be sourced from the following environment variable: `ARM_CLIENT_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="client_secret_python">
@@ -581,7 +581,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.{{% /md %}}</dd>
+    <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret. It can also be sourced from the following environment variable: `ARM_CLIENT_SECRET`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disable_pulumi_partner_id_python">
@@ -590,7 +590,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified.{{% /md %}}</dd>
+    <dd>{{% md %}}This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified. It can also be sourced from the following environment variable: `ARM_DISABLE_PULUMI_PARTNER_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="environment_python">
@@ -599,7 +599,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.{{% /md %}}</dd>
+    <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public. It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="msi_endpoint_python">
@@ -608,7 +608,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically. {{% /md %}}</dd>
+    <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically.  It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="partner_id_python">
@@ -617,7 +617,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.{{% /md %}}</dd>
+    <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution. It can also be sourced from the following environment variable: `ARM_PARTNER_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
@@ -626,7 +626,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Subscription ID which should be used.{{% /md %}}</dd>
+    <dd>{{% md %}}The Subscription ID which should be used. It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
@@ -635,7 +635,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID which should be used.{{% /md %}}</dd>
+    <dd>{{% md %}}The Tenant ID which should be used. It can also be sourced from the following environment variable: `ARM_TENANT_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="use_msi_python">
@@ -644,7 +644,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication. It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

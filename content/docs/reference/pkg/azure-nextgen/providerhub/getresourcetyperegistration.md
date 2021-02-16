@@ -19,7 +19,7 @@ meta_desc: "Explore the GetResourceTypeRegistration function of the providerhub 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getResourceTypeRegistration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetResourceTypeRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetResourceTypeRegistrationResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getResourceTypeRegistration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetResourceTypeRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetResourceTypeRegistrationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetResourceTypeRegistration function of the providerhub 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupResourceTypeRegistration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupResourceTypeRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupResourceTypeRegistrationResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupResourceTypeRegistration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupResourceTypeRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupResourceTypeRegistrationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupResourceTypeRegistration` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetResourceTypeRegistration function of the providerhub 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetResourceTypeRegistration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetResourceTypeRegistrationResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetResourceTypeRegistrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetResourceTypeRegistrationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetResourceTypeRegistrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -330,9 +330,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -433,9 +430,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -533,9 +527,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="linkedaccesscheckresponse">Linked<wbr>Access<wbr>Check<wbr>Response</h4>
-
-
-
 
 
 
@@ -747,9 +738,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -922,9 +910,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1022,9 +1007,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetypeendpointresponse">Resource<wbr>Type<wbr>Endpoint<wbr>Response</h4>
-
-
-
 
 
 
@@ -1308,9 +1290,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1372,9 +1351,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetypeextensionoptionsresponseresourcecreationbegin">Resource<wbr>Type<wbr>Extension<wbr>Options<wbr>Response<wbr>Resource<wbr>Creation<wbr>Begin</h4>
-
-
-
 
 
 
@@ -1475,9 +1451,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetypeextensionresponse">Resource<wbr>Type<wbr>Extension<wbr>Response</h4>
-
-
-
 
 
 
@@ -1617,9 +1590,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1720,9 +1690,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1787,9 +1754,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1851,9 +1815,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetyperegistrationpropertiesresponseidentitymanagement">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Identity<wbr>Management</h4>
-
-
-
 
 
 
@@ -1957,9 +1918,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2021,9 +1979,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetyperegistrationpropertiesresponseresourcemovepolicy">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Resource<wbr>Move<wbr>Policy</h4>
-
-
-
 
 
 
@@ -2163,9 +2118,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2266,9 +2218,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2366,9 +2315,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetyperegistrationresponseproperties">Resource<wbr>Type<wbr>Registration<wbr>Response<wbr>Properties</h4>
-
-
-
 
 
 
@@ -3444,9 +3390,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3544,9 +3487,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="subscriptionstateoverrideactionresponse">Subscription<wbr>State<wbr>Override<wbr>Action<wbr>Response</h4>
-
-
-
 
 
 
@@ -3650,9 +3590,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3753,9 +3690,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3853,9 +3787,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="throttlingmetricresponse">Throttling<wbr>Metric<wbr>Response</h4>
-
-
-
 
 
 
@@ -3992,9 +3923,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="throttlingruleresponse">Throttling<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 

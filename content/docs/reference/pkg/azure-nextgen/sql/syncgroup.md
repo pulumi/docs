@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.SyncGroup resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure SQL Database sync group.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncGroup = new AzureNextGen.Sql.V20200801Preview.SyncGroup("syncGroup", new AzureNextGen.Sql.V20200801Preview.SyncGroupArgs
+        var syncGroup = new AzureNextGen.Sql.SyncGroup("syncGroup", new AzureNextGen.Sql.SyncGroupArgs
         {
             ConflictResolutionPolicy = "HubWin",
             DatabaseName = "syncgroupcrud-4328",
@@ -52,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,7 +87,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_group = azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup",
+sync_group = azure_nextgen.sql.SyncGroup("syncGroup",
     conflict_resolution_policy="HubWin",
     database_name="syncgroupcrud-4328",
     hub_database_user_name="hubUser",
@@ -107,7 +108,7 @@ sync_group = azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncGroup = new azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup", {
+const syncGroup = new azure_nextgen.sql.SyncGroup("syncGroup", {
     conflictResolutionPolicy: "HubWin",
     databaseName: "syncgroupcrud-4328",
     hubDatabaseUserName: "hubUser",
@@ -133,7 +134,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncGroup = new AzureNextGen.Sql.V20200801Preview.SyncGroup("syncGroup", new AzureNextGen.Sql.V20200801Preview.SyncGroupArgs
+        var syncGroup = new AzureNextGen.Sql.SyncGroup("syncGroup", new AzureNextGen.Sql.SyncGroupArgs
         {
             ConflictResolutionPolicy = "HubWin",
             DatabaseName = "syncgroupcrud-4328",
@@ -159,7 +160,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -193,7 +194,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_group = azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup",
+sync_group = azure_nextgen.sql.SyncGroup("syncGroup",
     conflict_resolution_policy="HubWin",
     database_name="syncgroupcrud-4328",
     hub_database_user_name="hubUser",
@@ -214,7 +215,7 @@ sync_group = azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncGroup = new azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup", {
+const syncGroup = new azure_nextgen.sql.SyncGroup("syncGroup", {
     conflictResolutionPolicy: "HubWin",
     databaseName: "syncgroupcrud-4328",
     hubDatabaseUserName: "hubUser",
@@ -238,7 +239,7 @@ const syncGroup = new azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SyncGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -246,11 +247,11 @@ const syncGroup = new azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyncGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SyncGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyncGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyncGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyncGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SyncGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -271,7 +272,7 @@ const syncGroup = new azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SyncGroupArgs</span>
+        <span class="property-type"><a href="#inputs">SyncGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -340,7 +341,7 @@ const syncGroup = new azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SyncGroupArgs</span>
+        <span class="property-type"><a href="#inputs">SyncGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -379,7 +380,7 @@ const syncGroup = new azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SyncGroupArgs</span>
+        <span class="property-type"><a href="#inputs">SyncGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -402,11 +403,11 @@ const syncGroup = new azure_nextgen.sql.v20200801preview.SyncGroup("syncGroup", 
 
 ## SyncGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2310,7 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:SyncGroup syncgroupcrud-3187 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328/syncGroups/syncgroupcrud-3187 
+$ pulumi import azure-nextgen:sql:SyncGroup syncgroupcrud-3187 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328/syncGroups/syncgroupcrud-3187 
 ```
 
 

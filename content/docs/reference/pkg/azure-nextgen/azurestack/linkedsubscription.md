@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.azurestack.LinkedSubscription re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Linked Subscription information.
+API Version: 2020-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedSubscription = new AzureNextGen.AzureStack.V20200601Preview.LinkedSubscription("linkedSubscription", new AzureNextGen.AzureStack.V20200601Preview.LinkedSubscriptionArgs
+        var linkedSubscription = new AzureNextGen.AzureStack.LinkedSubscription("linkedSubscription", new AzureNextGen.AzureStack.LinkedSubscriptionArgs
         {
             LinkedSubscriptionId = "104fbb77-2b0e-476a-83de-65ad8acd1f0b",
             LinkedSubscriptionName = "testLinkedSubscription",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	azurestack "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azurestack/v20200601preview"
+	azurestack "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azurestack"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_subscription = azure_nextgen.azurestack.v20200601preview.LinkedSubscription("linkedSubscription",
+linked_subscription = azure_nextgen.azurestack.LinkedSubscription("linkedSubscription",
     linked_subscription_id="104fbb77-2b0e-476a-83de-65ad8acd1f0b",
     linked_subscription_name="testLinkedSubscription",
     location="eastus",
@@ -95,7 +96,7 @@ linked_subscription = azure_nextgen.azurestack.v20200601preview.LinkedSubscripti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const linkedSubscription = new azure_nextgen.azurestack.v20200601preview.LinkedSubscription("linkedSubscription", {
+const linkedSubscription = new azure_nextgen.azurestack.LinkedSubscription("linkedSubscription", {
     linkedSubscriptionId: "104fbb77-2b0e-476a-83de-65ad8acd1f0b",
     linkedSubscriptionName: "testLinkedSubscription",
     location: "eastus",
@@ -115,7 +116,7 @@ const linkedSubscription = new azure_nextgen.azurestack.v20200601preview.LinkedS
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LinkedSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">LinkedSubscriptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LinkedSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LinkedSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -123,11 +124,11 @@ const linkedSubscription = new azure_nextgen.azurestack.v20200601preview.LinkedS
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLinkedSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">LinkedSubscriptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LinkedSubscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLinkedSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LinkedSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LinkedSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LinkedSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">LinkedSubscriptionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LinkedSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LinkedSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,7 +149,7 @@ const linkedSubscription = new azure_nextgen.azurestack.v20200601preview.LinkedS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkedSubscriptionArgs</span>
+        <span class="property-type"><a href="#inputs">LinkedSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -217,7 +218,7 @@ const linkedSubscription = new azure_nextgen.azurestack.v20200601preview.LinkedS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkedSubscriptionArgs</span>
+        <span class="property-type"><a href="#inputs">LinkedSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -256,7 +257,7 @@ const linkedSubscription = new azure_nextgen.azurestack.v20200601preview.LinkedS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkedSubscriptionArgs</span>
+        <span class="property-type"><a href="#inputs">LinkedSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -279,11 +280,11 @@ const linkedSubscription = new azure_nextgen.azurestack.v20200601preview.LinkedS
 
 ## LinkedSubscription Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LinkedSubscription resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The LinkedSubscription resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1241,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:azurestack/v20200601preview:LinkedSubscription testLinkedSubscription /subscriptions/dd8597b4-8739-4467-8b10-f8679f62bfbf/resourceGroups/azurestack/providers/Microsoft.AzureStack/linkedSubscriptions/testLinkedSubscription 
+$ pulumi import azure-nextgen:azurestack:LinkedSubscription testLinkedSubscription /subscriptions/dd8597b4-8739-4467-8b10-f8679f62bfbf/resourceGroups/azurestack/providers/Microsoft.AzureStack/linkedSubscriptions/testLinkedSubscription 
 ```
 
 

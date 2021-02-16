@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualNetworkGatewayCon
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A common class for general resource information.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkGatewayConnection = new AzureNextGen.Network.Latest.VirtualNetworkGatewayConnection("virtualNetworkGatewayConnection", new AzureNextGen.Network.Latest.VirtualNetworkGatewayConnectionArgs
+        var virtualNetworkGatewayConnection = new AzureNextGen.Network.VirtualNetworkGatewayConnection("virtualNetworkGatewayConnection", new AzureNextGen.Network.VirtualNetworkGatewayConnectionArgs
         {
             ConnectionMode = "Default",
             ConnectionProtocol = "IKEv2",
@@ -35,11 +35,11 @@ class MyStack : Stack
             DpdTimeoutSeconds = 30,
             EnableBgp = false,
             IpsecPolicies = {},
-            LocalNetworkGateway2 = new AzureNextGen.Network.Latest.Inputs.LocalNetworkGatewayArgs
+            LocalNetworkGateway2 = new AzureNextGen.Network.Inputs.LocalNetworkGatewayArgs
             {
                 GatewayIpAddress = "x.x.x.x",
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw",
-                LocalNetworkAddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+                LocalNetworkAddressSpace = new AzureNextGen.Network.Inputs.AddressSpaceArgs
                 {
                     AddressPrefixes = 
                     {
@@ -55,10 +55,10 @@ class MyStack : Stack
             SharedKey = "Abc123",
             TrafficSelectorPolicies = {},
             UsePolicyBasedTrafficSelectors = false,
-            VirtualNetworkGateway1 = new AzureNextGen.Network.Latest.Inputs.VirtualNetworkGatewayArgs
+            VirtualNetworkGateway1 = new AzureNextGen.Network.Inputs.VirtualNetworkGatewayArgs
             {
                 ActiveActive = false,
-                BgpSettings = new AzureNextGen.Network.Latest.Inputs.BgpSettingsArgs
+                BgpSettings = new AzureNextGen.Network.Inputs.BgpSettingsArgs
                 {
                     Asn = 65514,
                     BgpPeeringAddress = "10.0.1.30",
@@ -69,23 +69,23 @@ class MyStack : Stack
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw",
                 IpConfigurations = 
                 {
-                    new AzureNextGen.Network.Latest.Inputs.VirtualNetworkGatewayIPConfigurationArgs
+                    new AzureNextGen.Network.Inputs.VirtualNetworkGatewayIPConfigurationArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1",
                         Name = "gwipconfig1",
                         PrivateIPAllocationMethod = "Dynamic",
-                        PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        PublicIPAddress = new AzureNextGen.Network.Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
                         },
-                        Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        Subnet = new AzureNextGen.Network.Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
                         },
                     },
                 },
                 Location = "centralus",
-                Sku = new AzureNextGen.Network.Latest.Inputs.VirtualNetworkGatewaySkuArgs
+                Sku = new AzureNextGen.Network.Inputs.VirtualNetworkGatewaySkuArgs
                 {
                     Name = "VpnGw1",
                     Tier = "VpnGw1",
@@ -109,7 +109,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -189,17 +189,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_gateway_connection = azure_nextgen.network.latest.VirtualNetworkGatewayConnection("virtualNetworkGatewayConnection",
+virtual_network_gateway_connection = azure_nextgen.network.VirtualNetworkGatewayConnection("virtualNetworkGatewayConnection",
     connection_mode="Default",
     connection_protocol="IKEv2",
     connection_type="IPsec",
     dpd_timeout_seconds=30,
     enable_bgp=False,
     ipsec_policies=[],
-    local_network_gateway2=azure_nextgen.network.latest.LocalNetworkGatewayArgs(
+    local_network_gateway2=azure_nextgen.network.LocalNetworkGatewayArgs(
         gateway_ip_address="x.x.x.x",
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw",
-        local_network_address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+        local_network_address_space=azure_nextgen.network.AddressSpaceArgs(
             address_prefixes=["10.1.0.0/16"],
         ),
         location="centralus",
@@ -211,9 +211,9 @@ virtual_network_gateway_connection = azure_nextgen.network.latest.VirtualNetwork
     shared_key="Abc123",
     traffic_selector_policies=[],
     use_policy_based_traffic_selectors=False,
-    virtual_network_gateway1=azure_nextgen.network.latest.VirtualNetworkGatewayArgs(
+    virtual_network_gateway1=azure_nextgen.network.VirtualNetworkGatewayArgs(
         active_active=False,
-        bgp_settings=azure_nextgen.network.latest.BgpSettingsArgs(
+        bgp_settings=azure_nextgen.network.BgpSettingsArgs(
             asn=65514,
             bgp_peering_address="10.0.1.30",
             peer_weight=0,
@@ -221,19 +221,19 @@ virtual_network_gateway_connection = azure_nextgen.network.latest.VirtualNetwork
         enable_bgp=False,
         gateway_type="Vpn",
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw",
-        ip_configurations=[azure_nextgen.network.latest.VirtualNetworkGatewayIPConfigurationArgs(
+        ip_configurations=[azure_nextgen.network.VirtualNetworkGatewayIPConfigurationArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1",
             name="gwipconfig1",
             private_ip_allocation_method="Dynamic",
-            public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+            public_ip_address=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
             ),
-            subnet=azure_nextgen.network.latest.SubResourceArgs(
+            subnet=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
             ),
         )],
         location="centralus",
-        sku=azure_nextgen.network.latest.VirtualNetworkGatewaySkuArgs(
+        sku=azure_nextgen.network.VirtualNetworkGatewaySkuArgs(
             name="VpnGw1",
             tier="VpnGw1",
         ),
@@ -252,7 +252,7 @@ virtual_network_gateway_connection = azure_nextgen.network.latest.VirtualNetwork
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetworkGatewayConnection = new azure_nextgen.network.latest.VirtualNetworkGatewayConnection("virtualNetworkGatewayConnection", {
+const virtualNetworkGatewayConnection = new azure_nextgen.network.VirtualNetworkGatewayConnection("virtualNetworkGatewayConnection", {
     connectionMode: "Default",
     connectionProtocol: "IKEv2",
     connectionType: "IPsec",
@@ -318,7 +318,7 @@ const virtualNetworkGatewayConnection = new azure_nextgen.network.latest.Virtual
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualNetworkGatewayConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -326,11 +326,11 @@ const virtualNetworkGatewayConnection = new azure_nextgen.network.latest.Virtual
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualNetworkGatewayConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNetworkGatewayConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNetworkGatewayConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualNetworkGatewayConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -351,7 +351,7 @@ const virtualNetworkGatewayConnection = new azure_nextgen.network.latest.Virtual
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualNetworkGatewayConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -420,7 +420,7 @@ const virtualNetworkGatewayConnection = new azure_nextgen.network.latest.Virtual
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualNetworkGatewayConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -459,7 +459,7 @@ const virtualNetworkGatewayConnection = new azure_nextgen.network.latest.Virtual
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualNetworkGatewayConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualNetworkGatewayConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -482,11 +482,11 @@ const virtualNetworkGatewayConnection = new azure_nextgen.network.latest.Virtual
 
 ## VirtualNetworkGatewayConnection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualNetworkGatewayConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualNetworkGatewayConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -9828,7 +9828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VirtualNetworkGatewayConnection connS2S /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/connections/connS2S 
+$ pulumi import azure-nextgen:network:VirtualNetworkGatewayConnection connS2S /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/connections/connS2S 
 ```
 
 

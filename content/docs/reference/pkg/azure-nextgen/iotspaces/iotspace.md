@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.iotspaces.IoTSpace resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The description of the IoTSpaces service.
+API Version: 2017-10-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ioTSpace = new AzureNextGen.IoTSpaces.V20171001Preview.IoTSpace("ioTSpace", new AzureNextGen.IoTSpaces.V20171001Preview.IoTSpaceArgs
+        var ioTSpace = new AzureNextGen.IoTSpaces.IoTSpace("ioTSpace", new AzureNextGen.IoTSpaces.IoTSpaceArgs
         {
             Location = "string",
-            Properties = new AzureNextGen.IoTSpaces.V20171001Preview.Inputs.IoTSpacesPropertiesArgs
+            Properties = new AzureNextGen.IoTSpaces.Inputs.IoTSpacesPropertiesArgs
             {
-                StorageContainer = new AzureNextGen.IoTSpaces.V20171001Preview.Inputs.StorageContainerPropertiesArgs
+                StorageContainer = new AzureNextGen.IoTSpaces.Inputs.StorageContainerPropertiesArgs
                 {
                     ConnectionString = "string",
                     ContainerName = "string",
@@ -41,7 +42,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "resRg",
             ResourceName = "myIoTSpacesService",
-            Sku = new AzureNextGen.IoTSpaces.V20171001Preview.Inputs.IoTSpacesSkuInfoArgs
+            Sku = new AzureNextGen.IoTSpaces.Inputs.IoTSpacesSkuInfoArgs
             {
                 Name = "F1",
             },
@@ -60,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	iotspaces "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotspaces/v20171001preview"
+	iotspaces "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotspaces"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -99,10 +100,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-io_t_space = azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace",
+io_t_space = azure_nextgen.iotspaces.IoTSpace("ioTSpace",
     location="string",
-    properties=azure_nextgen.iotspaces.v20171001preview.IoTSpacesPropertiesArgs(
-        storage_container=azure_nextgen.iotspaces.v20171001preview.StorageContainerPropertiesArgs(
+    properties=azure_nextgen.iotspaces.IoTSpacesPropertiesArgs(
+        storage_container=azure_nextgen.iotspaces.StorageContainerPropertiesArgs(
             connection_string="string",
             container_name="string",
             resource_group="string",
@@ -111,7 +112,7 @@ io_t_space = azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace",
     ),
     resource_group_name="resRg",
     resource_name="myIoTSpacesService",
-    sku=azure_nextgen.iotspaces.v20171001preview.IoTSpacesSkuInfoArgs(
+    sku=azure_nextgen.iotspaces.IoTSpacesSkuInfoArgs(
         name="F1",
     ))
 
@@ -125,7 +126,7 @@ io_t_space = azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const ioTSpace = new azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace", {
+const ioTSpace = new azure_nextgen.iotspaces.IoTSpace("ioTSpace", {
     location: "string",
     properties: {
         storageContainer: {
@@ -154,7 +155,7 @@ const ioTSpace = new azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IoTSpaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IoTSpaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -162,11 +163,11 @@ const ioTSpace = new azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIoTSpace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IoTSpaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IoTSpace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIoTSpace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IoTSpaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IoTSpace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IoTSpaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IoTSpaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -187,7 +188,7 @@ const ioTSpace = new azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IoTSpaceArgs</span>
+        <span class="property-type"><a href="#inputs">IoTSpaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -256,7 +257,7 @@ const ioTSpace = new azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IoTSpaceArgs</span>
+        <span class="property-type"><a href="#inputs">IoTSpaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -295,7 +296,7 @@ const ioTSpace = new azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IoTSpaceArgs</span>
+        <span class="property-type"><a href="#inputs">IoTSpaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -318,11 +319,11 @@ const ioTSpace = new azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace
 
 ## IoTSpace Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1470,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:iotspaces/v20171001preview:IoTSpace myIoTSpacesService /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.IoTSpaces/IoTSpacesService/myIoTSpacesService 
+$ pulumi import azure-nextgen:iotspaces:IoTSpace myIoTSpacesService /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.IoTSpaces/IoTSpacesService/myIoTSpacesService 
 ```
 
 

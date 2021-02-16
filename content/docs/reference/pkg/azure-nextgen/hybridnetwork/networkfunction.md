@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybridnetwork.NetworkFunction re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Network function resource response.
+API Version: 2020-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var networkFunction = new AzureNextGen.HybridNetwork.V20200101Preview.NetworkFunction("networkFunction", new AzureNextGen.HybridNetwork.V20200101Preview.NetworkFunctionArgs
+        var networkFunction = new AzureNextGen.HybridNetwork.NetworkFunction("networkFunction", new AzureNextGen.HybridNetwork.NetworkFunctionArgs
         {
-            Device = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.SubResourceArgs
+            Device = new AzureNextGen.HybridNetwork.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
             },
@@ -37,15 +38,15 @@ class MyStack : Stack
             NetworkFunctionName = "testNf",
             NetworkFunctionUserConfigurations = 
             {
-                new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkFunctionUserConfigurationArgs
+                new AzureNextGen.HybridNetwork.Inputs.NetworkFunctionUserConfigurationArgs
                 {
                     NetworkInterfaces = 
                     {
-                        new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
+                        new AzureNextGen.HybridNetwork.Inputs.NetworkInterfaceArgs
                         {
                             IpConfigurations = 
                             {
-                                new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
+                                new AzureNextGen.HybridNetwork.Inputs.NetworkInterfaceIPConfigurationArgs
                                 {
                                     Gateway = "",
                                     IpAddress = "",
@@ -58,11 +59,11 @@ class MyStack : Stack
                             NetworkInterfaceName = "nic1",
                             VmSwitchType = "Management",
                         },
-                        new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
+                        new AzureNextGen.HybridNetwork.Inputs.NetworkInterfaceArgs
                         {
                             IpConfigurations = 
                             {
-                                new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
+                                new AzureNextGen.HybridNetwork.Inputs.NetworkInterfaceIPConfigurationArgs
                                 {
                                     Gateway = "",
                                     IpAddress = "",
@@ -98,7 +99,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork/v20200101preview"
+	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -168,17 +169,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network_function = azure_nextgen.hybridnetwork.v20200101preview.NetworkFunction("networkFunction",
-    device=azure_nextgen.hybridnetwork.v20200101preview.SubResourceArgs(
+network_function = azure_nextgen.hybridnetwork.NetworkFunction("networkFunction",
+    device=azure_nextgen.hybridnetwork.SubResourceArgs(
         id="/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
     ),
     location="eastus",
     managed_application_parameters={},
     network_function_name="testNf",
-    network_function_user_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkFunctionUserConfigurationArgs(
+    network_function_user_configurations=[azure_nextgen.hybridnetwork.NetworkFunctionUserConfigurationArgs(
         network_interfaces=[
-            azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceArgs(
-                ip_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceIPConfigurationArgs(
+            azure_nextgen.hybridnetwork.NetworkInterfaceArgs(
+                ip_configurations=[azure_nextgen.hybridnetwork.NetworkInterfaceIPConfigurationArgs(
                     gateway="",
                     ip_address="",
                     ip_allocation_method="Dynamic",
@@ -189,8 +190,8 @@ network_function = azure_nextgen.hybridnetwork.v20200101preview.NetworkFunction(
                 network_interface_name="nic1",
                 vm_switch_type="Management",
             ),
-            azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceArgs(
-                ip_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceIPConfigurationArgs(
+            azure_nextgen.hybridnetwork.NetworkInterfaceArgs(
+                ip_configurations=[azure_nextgen.hybridnetwork.NetworkInterfaceIPConfigurationArgs(
                     gateway="",
                     ip_address="",
                     ip_allocation_method="Dynamic",
@@ -219,7 +220,7 @@ network_function = azure_nextgen.hybridnetwork.v20200101preview.NetworkFunction(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const networkFunction = new azure_nextgen.hybridnetwork.v20200101preview.NetworkFunction("networkFunction", {
+const networkFunction = new azure_nextgen.hybridnetwork.NetworkFunction("networkFunction", {
     device: {
         id: "/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
     },
@@ -273,7 +274,7 @@ const networkFunction = new azure_nextgen.hybridnetwork.v20200101preview.Network
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkFunction</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">NetworkFunctionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkFunction</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkFunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -281,11 +282,11 @@ const networkFunction = new azure_nextgen.hybridnetwork.v20200101preview.Network
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">NetworkFunctionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkFunction</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkFunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkFunction</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkFunction</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">NetworkFunctionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkFunction</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NetworkFunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -306,7 +307,7 @@ const networkFunction = new azure_nextgen.hybridnetwork.v20200101preview.Network
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkFunctionArgs</span>
+        <span class="property-type"><a href="#inputs">NetworkFunctionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -375,7 +376,7 @@ const networkFunction = new azure_nextgen.hybridnetwork.v20200101preview.Network
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkFunctionArgs</span>
+        <span class="property-type"><a href="#inputs">NetworkFunctionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -414,7 +415,7 @@ const networkFunction = new azure_nextgen.hybridnetwork.v20200101preview.Network
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkFunctionArgs</span>
+        <span class="property-type"><a href="#inputs">NetworkFunctionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -437,11 +438,11 @@ const networkFunction = new azure_nextgen.hybridnetwork.v20200101preview.Network
 
 ## NetworkFunction Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NetworkFunction resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NetworkFunction resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2713,7 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybridnetwork/v20200101preview:NetworkFunction testNf /subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/networkFunctions/testNf 
+$ pulumi import azure-nextgen:hybridnetwork:NetworkFunction testNf /subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/networkFunctions/testNf 
 ```
 
 

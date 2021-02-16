@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.deploymentmanager.ArtifactSource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The resource that defines the source location where the artifacts are located.
+API Version: 2019-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifactSource = new AzureNextGen.DeploymentManager.V20191101Preview.ArtifactSource("artifactSource", new AzureNextGen.DeploymentManager.V20191101Preview.ArtifactSourceArgs
+        var artifactSource = new AzureNextGen.DeploymentManager.ArtifactSource("artifactSource", new AzureNextGen.DeploymentManager.ArtifactSourceArgs
         {
             ArtifactSourceName = "myArtifactSource",
-            Authentication = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.SasAuthenticationArgs
+            Authentication = new AzureNextGen.DeploymentManager.Inputs.SasAuthenticationArgs
             {
                 SasUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
                 Type = "Sas",
@@ -55,7 +56,7 @@ package main
 import (
 	"fmt"
 
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,9 +90,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource",
+artifact_source = azure_nextgen.deploymentmanager.ArtifactSource("artifactSource",
     artifact_source_name="myArtifactSource",
-    authentication=azure_nextgen.deploymentmanager.v20191101preview.SasAuthenticationArgs(
+    authentication=azure_nextgen.deploymentmanager.SasAuthenticationArgs(
         sas_uri="https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
         type="Sas",
     ),
@@ -110,7 +111,7 @@ artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSourc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource", {
+const artifactSource = new azure_nextgen.deploymentmanager.ArtifactSource("artifactSource", {
     artifactSourceName: "myArtifactSource",
     authentication: {
         sasUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
@@ -136,11 +137,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifactSource = new AzureNextGen.DeploymentManager.V20191101Preview.ArtifactSource("artifactSource", new AzureNextGen.DeploymentManager.V20191101Preview.ArtifactSourceArgs
+        var artifactSource = new AzureNextGen.DeploymentManager.ArtifactSource("artifactSource", new AzureNextGen.DeploymentManager.ArtifactSourceArgs
         {
             ArtifactRoot = "1.0.0.0",
             ArtifactSourceName = "myArtifactSource",
-            Authentication = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.SasAuthenticationArgs
+            Authentication = new AzureNextGen.DeploymentManager.Inputs.SasAuthenticationArgs
             {
                 SasUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
                 Type = "Sas",
@@ -166,7 +167,7 @@ package main
 import (
 	"fmt"
 
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -201,10 +202,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource",
+artifact_source = azure_nextgen.deploymentmanager.ArtifactSource("artifactSource",
     artifact_root="1.0.0.0",
     artifact_source_name="myArtifactSource",
-    authentication=azure_nextgen.deploymentmanager.v20191101preview.SasAuthenticationArgs(
+    authentication=azure_nextgen.deploymentmanager.SasAuthenticationArgs(
         sas_uri="https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
         type="Sas",
     ),
@@ -223,7 +224,7 @@ artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSourc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource", {
+const artifactSource = new azure_nextgen.deploymentmanager.ArtifactSource("artifactSource", {
     artifactRoot: "1.0.0.0",
     artifactSourceName: "myArtifactSource",
     authentication: {
@@ -248,7 +249,7 @@ const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.Arti
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ArtifactSource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ArtifactSourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ArtifactSource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ArtifactSourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -256,11 +257,11 @@ const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.Arti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewArtifactSource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ArtifactSourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ArtifactSource</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewArtifactSource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ArtifactSourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ArtifactSource</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ArtifactSource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ArtifactSourceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ArtifactSource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ArtifactSourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -281,7 +282,7 @@ const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.Arti
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ArtifactSourceArgs</span>
+        <span class="property-type"><a href="#inputs">ArtifactSourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -350,7 +351,7 @@ const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.Arti
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ArtifactSourceArgs</span>
+        <span class="property-type"><a href="#inputs">ArtifactSourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -389,7 +390,7 @@ const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.Arti
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ArtifactSourceArgs</span>
+        <span class="property-type"><a href="#inputs">ArtifactSourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -412,11 +413,11 @@ const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.Arti
 
 ## ArtifactSource Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ArtifactSource resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ArtifactSource resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -974,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:ArtifactSource myArtifactSource /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/artifactSources/{artifactSourceName} 
+$ pulumi import azure-nextgen:deploymentmanager:ArtifactSource myArtifactSource /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/artifactSources/{artifactSourceName} 
 ```
 
 

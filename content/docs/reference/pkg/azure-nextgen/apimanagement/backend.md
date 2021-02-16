@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Backend resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Backend details.
-Latest API Version: 2019-12-01.
+API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backend = new AzureNextGen.ApiManagement.Latest.Backend("backend", new AzureNextGen.ApiManagement.Latest.BackendArgs
+        var backend = new AzureNextGen.ApiManagement.Backend("backend", new AzureNextGen.ApiManagement.BackendArgs
         {
             BackendId = "proxybackend",
-            Credentials = new AzureNextGen.ApiManagement.Latest.Inputs.BackendCredentialsContractArgs
+            Credentials = new AzureNextGen.ApiManagement.Inputs.BackendCredentialsContractArgs
             {
-                Authorization = new AzureNextGen.ApiManagement.Latest.Inputs.BackendAuthorizationHeaderCredentialsArgs
+                Authorization = new AzureNextGen.ApiManagement.Inputs.BackendAuthorizationHeaderCredentialsArgs
                 {
                     Parameter = "opensesma",
                     Scheme = "Basic",
@@ -57,7 +57,7 @@ class MyStack : Stack
             },
             Description = "description5308",
             Protocol = "http",
-            Proxy = new AzureNextGen.ApiManagement.Latest.Inputs.BackendProxyContractArgs
+            Proxy = new AzureNextGen.ApiManagement.Inputs.BackendProxyContractArgs
             {
                 Password = "<password>",
                 Url = "http://192.168.1.1:8080",
@@ -65,7 +65,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Tls = new AzureNextGen.ApiManagement.Latest.Inputs.BackendTlsPropertiesArgs
+            Tls = new AzureNextGen.ApiManagement.Inputs.BackendTlsPropertiesArgs
             {
                 ValidateCertificateChain = true,
                 ValidateCertificateName = true,
@@ -86,7 +86,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -145,10 +145,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backend = azure_nextgen.apimanagement.latest.Backend("backend",
+backend = azure_nextgen.apimanagement.Backend("backend",
     backend_id="proxybackend",
-    credentials=azure_nextgen.apimanagement.latest.BackendCredentialsContractArgs(
-        authorization=azure_nextgen.apimanagement.latest.BackendAuthorizationHeaderCredentialsArgs(
+    credentials=azure_nextgen.apimanagement.BackendCredentialsContractArgs(
+        authorization=azure_nextgen.apimanagement.BackendAuthorizationHeaderCredentialsArgs(
             parameter="opensesma",
             scheme="Basic",
         ),
@@ -168,14 +168,14 @@ backend = azure_nextgen.apimanagement.latest.Backend("backend",
     ),
     description="description5308",
     protocol="http",
-    proxy=azure_nextgen.apimanagement.latest.BackendProxyContractArgs(
+    proxy=azure_nextgen.apimanagement.BackendProxyContractArgs(
         password="<password>",
         url="http://192.168.1.1:8080",
         username="Contoso\\admin",
     ),
     resource_group_name="rg1",
     service_name="apimService1",
-    tls=azure_nextgen.apimanagement.latest.BackendTlsPropertiesArgs(
+    tls=azure_nextgen.apimanagement.BackendTlsPropertiesArgs(
         validate_certificate_chain=True,
         validate_certificate_name=True,
     ),
@@ -191,7 +191,7 @@ backend = azure_nextgen.apimanagement.latest.Backend("backend",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
+const backend = new azure_nextgen.apimanagement.Backend("backend", {
     backendId: "proxybackend",
     credentials: {
         authorization: {
@@ -242,13 +242,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backend = new AzureNextGen.ApiManagement.Latest.Backend("backend", new AzureNextGen.ApiManagement.Latest.BackendArgs
+        var backend = new AzureNextGen.ApiManagement.Backend("backend", new AzureNextGen.ApiManagement.BackendArgs
         {
             BackendId = "sfbackend",
             Description = "Service Fabric Test App 1",
-            Properties = new AzureNextGen.ApiManagement.Latest.Inputs.BackendPropertiesArgs
+            Properties = new AzureNextGen.ApiManagement.Inputs.BackendPropertiesArgs
             {
-                ServiceFabricCluster = new AzureNextGen.ApiManagement.Latest.Inputs.BackendServiceFabricClusterPropertiesArgs
+                ServiceFabricCluster = new AzureNextGen.ApiManagement.Inputs.BackendServiceFabricClusterPropertiesArgs
                 {
                     ClientCertificatethumbprint = "EBA029198AA3E76EF0D70482626E5BCF148594A6",
                     ManagementEndpoints = 
@@ -258,7 +258,7 @@ class MyStack : Stack
                     MaxPartitionResolutionRetries = 5,
                     ServerX509Names = 
                     {
-                        new AzureNextGen.ApiManagement.Latest.Inputs.X509CertificateNameArgs
+                        new AzureNextGen.ApiManagement.Inputs.X509CertificateNameArgs
                         {
                             IssuerCertificateThumbprint = "IssuerCertificateThumbprint1",
                             Name = "ServerCommonName1",
@@ -285,7 +285,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/latest"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -331,15 +331,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backend = azure_nextgen.apimanagement.latest.Backend("backend",
+backend = azure_nextgen.apimanagement.Backend("backend",
     backend_id="sfbackend",
     description="Service Fabric Test App 1",
-    properties=azure_nextgen.apimanagement.latest.BackendPropertiesArgs(
-        service_fabric_cluster=azure_nextgen.apimanagement.latest.BackendServiceFabricClusterPropertiesArgs(
+    properties=azure_nextgen.apimanagement.BackendPropertiesArgs(
+        service_fabric_cluster=azure_nextgen.apimanagement.BackendServiceFabricClusterPropertiesArgs(
             client_certificatethumbprint="EBA029198AA3E76EF0D70482626E5BCF148594A6",
             management_endpoints=["https://somecluster.com"],
             max_partition_resolution_retries=5,
-            server_x509_names=[azure_nextgen.apimanagement.latest.X509CertificateNameArgs(
+            server_x509_names=[azure_nextgen.apimanagement.X509CertificateNameArgs(
                 issuer_certificate_thumbprint="IssuerCertificateThumbprint1",
                 name="ServerCommonName1",
             )],
@@ -360,7 +360,7 @@ backend = azure_nextgen.apimanagement.latest.Backend("backend",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
+const backend = new azure_nextgen.apimanagement.Backend("backend", {
     backendId: "sfbackend",
     description: "Service Fabric Test App 1",
     properties: {
@@ -392,7 +392,7 @@ const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BackendArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -400,11 +400,11 @@ const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BackendArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Backend</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Backend</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BackendArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -425,7 +425,7 @@ const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BackendArgs</span>
+        <span class="property-type"><a href="#inputs">BackendArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -494,7 +494,7 @@ const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BackendArgs</span>
+        <span class="property-type"><a href="#inputs">BackendArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -533,7 +533,7 @@ const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BackendArgs</span>
+        <span class="property-type"><a href="#inputs">BackendArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -556,11 +556,11 @@ const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
 
 ## Backend Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Backend resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Backend resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2944,7 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/latest:Backend sfbackend /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/sfbackend 
+$ pulumi import azure-nextgen:apimanagement:Backend sfbackend /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/sfbackend 
 ```
 
 

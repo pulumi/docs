@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.PrivateLinkScope resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Monitor PrivateLinkScope definition.
+API Version: 2019-10-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScope = new AzureNextGen.Insights.V20191017Preview.PrivateLinkScope("privateLinkScope", new AzureNextGen.Insights.V20191017Preview.PrivateLinkScopeArgs
+        var privateLinkScope = new AzureNextGen.Insights.PrivateLinkScope("privateLinkScope", new AzureNextGen.Insights.PrivateLinkScopeArgs
         {
             Location = "Global",
             ResourceGroupName = "my-resource-group",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20191017preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scope = azure_nextgen.insights.v20191017preview.PrivateLinkScope("privateLinkScope",
+private_link_scope = azure_nextgen.insights.PrivateLinkScope("privateLinkScope",
     location="Global",
     resource_group_name="my-resource-group",
     scope_name="my-privatelinkscope")
@@ -89,7 +90,7 @@ private_link_scope = azure_nextgen.insights.v20191017preview.PrivateLinkScope("p
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkScope = new azure_nextgen.insights.v20191017preview.PrivateLinkScope("privateLinkScope", {
+const privateLinkScope = new azure_nextgen.insights.PrivateLinkScope("privateLinkScope", {
     location: "Global",
     resourceGroupName: "my-resource-group",
     scopeName: "my-privatelinkscope",
@@ -109,7 +110,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScope = new AzureNextGen.Insights.V20191017Preview.PrivateLinkScope("privateLinkScope", new AzureNextGen.Insights.V20191017Preview.PrivateLinkScopeArgs
+        var privateLinkScope = new AzureNextGen.Insights.PrivateLinkScope("privateLinkScope", new AzureNextGen.Insights.PrivateLinkScopeArgs
         {
             Location = "Global",
             ResourceGroupName = "my-resource-group",
@@ -133,7 +134,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20191017preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -164,7 +165,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scope = azure_nextgen.insights.v20191017preview.PrivateLinkScope("privateLinkScope",
+private_link_scope = azure_nextgen.insights.PrivateLinkScope("privateLinkScope",
     location="Global",
     resource_group_name="my-resource-group",
     scope_name="my-privatelinkscope",
@@ -182,7 +183,7 @@ private_link_scope = azure_nextgen.insights.v20191017preview.PrivateLinkScope("p
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkScope = new azure_nextgen.insights.v20191017preview.PrivateLinkScope("privateLinkScope", {
+const privateLinkScope = new azure_nextgen.insights.PrivateLinkScope("privateLinkScope", {
     location: "Global",
     resourceGroupName: "my-resource-group",
     scopeName: "my-privatelinkscope",
@@ -203,7 +204,7 @@ const privateLinkScope = new azure_nextgen.insights.v20191017preview.PrivateLink
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateLinkScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PrivateLinkScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateLinkScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateLinkScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -211,11 +212,11 @@ const privateLinkScope = new azure_nextgen.insights.v20191017preview.PrivateLink
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateLinkScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PrivateLinkScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateLinkScope</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateLinkScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateLinkScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateLinkScope</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateLinkScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PrivateLinkScopeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateLinkScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateLinkScopeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -236,7 +237,7 @@ const privateLinkScope = new azure_nextgen.insights.v20191017preview.PrivateLink
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateLinkScopeArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateLinkScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -305,7 +306,7 @@ const privateLinkScope = new azure_nextgen.insights.v20191017preview.PrivateLink
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateLinkScopeArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateLinkScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -344,7 +345,7 @@ const privateLinkScope = new azure_nextgen.insights.v20191017preview.PrivateLink
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateLinkScopeArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateLinkScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -367,11 +368,11 @@ const privateLinkScope = new azure_nextgen.insights.v20191017preview.PrivateLink
 
 ## PrivateLinkScope Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PrivateLinkScope resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PrivateLinkScope resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1207,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20191017preview:PrivateLinkScope my-privatelinkscope /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4919/resourceGroups/my-resource-group/providers/microsoft.insights/privateLinkScopes/my-privatelinkscope 
+$ pulumi import azure-nextgen:insights:PrivateLinkScope my-privatelinkscope /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4919/resourceGroups/my-resource-group/providers/microsoft.insights/privateLinkScopes/my-privatelinkscope 
 ```
 
 

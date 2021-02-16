@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.managedservices.RegistrationAssi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Registration assignment.
-Latest API Version: 2019-09-01.
+API Version: 2019-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registrationAssignment = new AzureNextGen.ManagedServices.Latest.RegistrationAssignment("registrationAssignment", new AzureNextGen.ManagedServices.Latest.RegistrationAssignmentArgs
+        var registrationAssignment = new AzureNextGen.ManagedServices.RegistrationAssignment("registrationAssignment", new AzureNextGen.ManagedServices.RegistrationAssignmentArgs
         {
-            Properties = new AzureNextGen.ManagedServices.Latest.Inputs.RegistrationAssignmentPropertiesArgs
+            Properties = new AzureNextGen.ManagedServices.Inputs.RegistrationAssignmentPropertiesArgs
             {
                 RegistrationDefinitionId = "/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
             },
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	managedservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedservices/latest"
+	managedservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,8 +80,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registration_assignment = azure_nextgen.managedservices.latest.RegistrationAssignment("registrationAssignment",
-    properties=azure_nextgen.managedservices.latest.RegistrationAssignmentPropertiesArgs(
+registration_assignment = azure_nextgen.managedservices.RegistrationAssignment("registrationAssignment",
+    properties=azure_nextgen.managedservices.RegistrationAssignmentPropertiesArgs(
         registration_definition_id="/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
     ),
     registration_assignment_id="26c128c2-fefa-4340-9bb1-6e081c90ada2",
@@ -97,7 +97,7 @@ registration_assignment = azure_nextgen.managedservices.latest.RegistrationAssig
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const registrationAssignment = new azure_nextgen.managedservices.latest.RegistrationAssignment("registrationAssignment", {
+const registrationAssignment = new azure_nextgen.managedservices.RegistrationAssignment("registrationAssignment", {
     properties: {
         registrationDefinitionId: "/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
     },
@@ -117,7 +117,7 @@ const registrationAssignment = new azure_nextgen.managedservices.latest.Registra
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegistrationAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RegistrationAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegistrationAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistrationAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -125,11 +125,11 @@ const registrationAssignment = new azure_nextgen.managedservices.latest.Registra
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistrationAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RegistrationAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegistrationAssignment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistrationAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegistrationAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegistrationAssignment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegistrationAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RegistrationAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegistrationAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegistrationAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -150,7 +150,7 @@ const registrationAssignment = new azure_nextgen.managedservices.latest.Registra
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RegistrationAssignmentArgs</span>
+        <span class="property-type"><a href="#inputs">RegistrationAssignmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -219,7 +219,7 @@ const registrationAssignment = new azure_nextgen.managedservices.latest.Registra
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RegistrationAssignmentArgs</span>
+        <span class="property-type"><a href="#inputs">RegistrationAssignmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -258,7 +258,7 @@ const registrationAssignment = new azure_nextgen.managedservices.latest.Registra
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RegistrationAssignmentArgs</span>
+        <span class="property-type"><a href="#inputs">RegistrationAssignmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,11 +281,11 @@ const registrationAssignment = new azure_nextgen.managedservices.latest.Registra
 
 ## RegistrationAssignment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RegistrationAssignment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RegistrationAssignment resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1631,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:managedservices/latest:RegistrationAssignment 484a7d5f-9729-4b87-bc9b-26610985a013 /subscriptions/0afefe50-734e-4610-8c82-a144aff49dea/providers/Microsoft.ManagedServices/registrationAssignments/484a7d5f-9729-4b87-bc9b-26610985a013 
+$ pulumi import azure-nextgen:managedservices:RegistrationAssignment 484a7d5f-9729-4b87-bc9b-26610985a013 /subscriptions/0afefe50-734e-4610-8c82-a144aff49dea/providers/Microsoft.ManagedServices/registrationAssignments/484a7d5f-9729-4b87-bc9b-26610985a013 
 ```
 
 

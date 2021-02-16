@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.PrivateLinkScopedResour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private link scoped resource
+API Version: 2019-10-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScopedResource = new AzureNextGen.Insights.V20191017Preview.PrivateLinkScopedResource("privateLinkScopedResource", new AzureNextGen.Insights.V20191017Preview.PrivateLinkScopedResourceArgs
+        var privateLinkScopedResource = new AzureNextGen.Insights.PrivateLinkScopedResource("privateLinkScopedResource", new AzureNextGen.Insights.PrivateLinkScopedResourceArgs
         {
             LinkedResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",
             Name = "scoped-resource-name",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20191017preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scoped_resource = azure_nextgen.insights.v20191017preview.PrivateLinkScopedResource("privateLinkScopedResource",
+private_link_scoped_resource = azure_nextgen.insights.PrivateLinkScopedResource("privateLinkScopedResource",
     linked_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",
     name="scoped-resource-name",
     resource_group_name="MyResourceGroup",
@@ -92,7 +93,7 @@ private_link_scoped_resource = azure_nextgen.insights.v20191017preview.PrivateLi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkScopedResource = new azure_nextgen.insights.v20191017preview.PrivateLinkScopedResource("privateLinkScopedResource", {
+const privateLinkScopedResource = new azure_nextgen.insights.PrivateLinkScopedResource("privateLinkScopedResource", {
     linkedResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",
     name: "scoped-resource-name",
     resourceGroupName: "MyResourceGroup",
@@ -111,7 +112,7 @@ const privateLinkScopedResource = new azure_nextgen.insights.v20191017preview.Pr
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateLinkScopedResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PrivateLinkScopedResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateLinkScopedResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateLinkScopedResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -119,11 +120,11 @@ const privateLinkScopedResource = new azure_nextgen.insights.v20191017preview.Pr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateLinkScopedResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PrivateLinkScopedResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateLinkScopedResource</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateLinkScopedResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateLinkScopedResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateLinkScopedResource</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateLinkScopedResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PrivateLinkScopedResourceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateLinkScopedResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateLinkScopedResourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -144,7 +145,7 @@ const privateLinkScopedResource = new azure_nextgen.insights.v20191017preview.Pr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateLinkScopedResourceArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateLinkScopedResourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -213,7 +214,7 @@ const privateLinkScopedResource = new azure_nextgen.insights.v20191017preview.Pr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateLinkScopedResourceArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateLinkScopedResourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -252,7 +253,7 @@ const privateLinkScopedResource = new azure_nextgen.insights.v20191017preview.Pr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateLinkScopedResourceArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateLinkScopedResourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -275,11 +276,11 @@ const privateLinkScopedResource = new azure_nextgen.insights.v20191017preview.Pr
 
 ## PrivateLinkScopedResource Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PrivateLinkScopedResource resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PrivateLinkScopedResource resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -601,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20191017preview:PrivateLinkScopedResource scoped-resource-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/privateLinkScopes/MyPrivateLinkScope/scopedResources/scoped-resource-name 
+$ pulumi import azure-nextgen:insights:PrivateLinkScopedResource scoped-resource-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/privateLinkScopes/MyPrivateLinkScope/scopedResources/scoped-resource-name 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRouteCircuitConne
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Express Route Circuit Connection in an ExpressRouteCircuitPeering resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRouteCircuitConnection = new AzureNextGen.Network.Latest.ExpressRouteCircuitConnection("expressRouteCircuitConnection", new AzureNextGen.Network.Latest.ExpressRouteCircuitConnectionArgs
+        var expressRouteCircuitConnection = new AzureNextGen.Network.ExpressRouteCircuitConnection("expressRouteCircuitConnection", new AzureNextGen.Network.ExpressRouteCircuitConnectionArgs
         {
             AddressPrefix = "10.0.0.0/29",
             AuthorizationKey = "946a1918-b7a2-4917-b43c-8c4cdaee006a",
             CircuitName = "ExpressRouteARMCircuitA",
             ConnectionName = "circuitConnectionUSAUS",
-            ExpressRouteCircuitPeering = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            ExpressRouteCircuitPeering = new AzureNextGen.Network.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering",
             },
-            Ipv6CircuitConnectionConfig = new AzureNextGen.Network.Latest.Inputs.Ipv6CircuitConnectionConfigArgs
+            Ipv6CircuitConnectionConfig = new AzureNextGen.Network.Inputs.Ipv6CircuitConnectionConfigArgs
             {
                 AddressPrefix = "aa:bb::/125",
             },
-            PeerExpressRouteCircuitPeering = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            PeerExpressRouteCircuitPeering = new AzureNextGen.Network.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering",
             },
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -102,18 +102,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_circuit_connection = azure_nextgen.network.latest.ExpressRouteCircuitConnection("expressRouteCircuitConnection",
+express_route_circuit_connection = azure_nextgen.network.ExpressRouteCircuitConnection("expressRouteCircuitConnection",
     address_prefix="10.0.0.0/29",
     authorization_key="946a1918-b7a2-4917-b43c-8c4cdaee006a",
     circuit_name="ExpressRouteARMCircuitA",
     connection_name="circuitConnectionUSAUS",
-    express_route_circuit_peering=azure_nextgen.network.latest.SubResourceArgs(
+    express_route_circuit_peering=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering",
     ),
-    ipv6_circuit_connection_config=azure_nextgen.network.latest.Ipv6CircuitConnectionConfigArgs(
+    ipv6_circuit_connection_config=azure_nextgen.network.Ipv6CircuitConnectionConfigArgs(
         address_prefix="aa:bb::/125",
     ),
-    peer_express_route_circuit_peering=azure_nextgen.network.latest.SubResourceArgs(
+    peer_express_route_circuit_peering=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering",
     ),
     peering_name="AzurePrivatePeering",
@@ -129,7 +129,7 @@ express_route_circuit_connection = azure_nextgen.network.latest.ExpressRouteCirc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRouteCircuitConnection = new azure_nextgen.network.latest.ExpressRouteCircuitConnection("expressRouteCircuitConnection", {
+const expressRouteCircuitConnection = new azure_nextgen.network.ExpressRouteCircuitConnection("expressRouteCircuitConnection", {
     addressPrefix: "10.0.0.0/29",
     authorizationKey: "946a1918-b7a2-4917-b43c-8c4cdaee006a",
     circuitName: "ExpressRouteARMCircuitA",
@@ -159,7 +159,7 @@ const expressRouteCircuitConnection = new azure_nextgen.network.latest.ExpressRo
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ExpressRouteCircuitConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -167,11 +167,11 @@ const expressRouteCircuitConnection = new azure_nextgen.network.latest.ExpressRo
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ExpressRouteCircuitConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteCircuitConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteCircuitConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ExpressRouteCircuitConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -192,7 +192,7 @@ const expressRouteCircuitConnection = new azure_nextgen.network.latest.ExpressRo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExpressRouteCircuitConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -261,7 +261,7 @@ const expressRouteCircuitConnection = new azure_nextgen.network.latest.ExpressRo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExpressRouteCircuitConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -300,7 +300,7 @@ const expressRouteCircuitConnection = new azure_nextgen.network.latest.ExpressRo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExpressRouteCircuitConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -323,11 +323,11 @@ const expressRouteCircuitConnection = new azure_nextgen.network.latest.ExpressRo
 
 ## ExpressRouteCircuitConnection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ExpressRouteCircuitConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ExpressRouteCircuitConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1261,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ExpressRouteCircuitConnection circuitConnectionUSAUS /subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/ExpressRouteARMCircuitA/peerings/AzurePrivatePeering/connections/circuitConnectionUSAUS 
+$ pulumi import azure-nextgen:network:ExpressRouteCircuitConnection circuitConnectionUSAUS /subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/ExpressRouteARMCircuitA/peerings/AzurePrivatePeering/connections/circuitConnectionUSAUS 
 ```
 
 

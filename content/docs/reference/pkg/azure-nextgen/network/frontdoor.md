@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.FrontDoor resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var frontDoor = new AzureNextGen.Network.Latest.FrontDoor("frontDoor", new AzureNextGen.Network.Latest.FrontDoorArgs
+        var frontDoor = new AzureNextGen.Network.FrontDoor("frontDoor", new AzureNextGen.Network.FrontDoorArgs
         {
             BackendPools = 
             {
-                new AzureNextGen.Network.Latest.Inputs.BackendPoolArgs
+                new AzureNextGen.Network.Inputs.BackendPoolArgs
                 {
                     Backends = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.BackendArgs
+                        new AzureNextGen.Network.Inputs.BackendArgs
                         {
                             Address = "w3.contoso.com",
                             HttpPort = 80,
@@ -43,7 +43,7 @@ class MyStack : Stack
                             Priority = 2,
                             Weight = 1,
                         },
-                        new AzureNextGen.Network.Latest.Inputs.BackendArgs
+                        new AzureNextGen.Network.Inputs.BackendArgs
                         {
                             Address = "contoso.com.website-us-west-2.othercloud.net",
                             HttpPort = 80,
@@ -54,7 +54,7 @@ class MyStack : Stack
                             PrivateLinkResourceId = "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
                             Weight = 2,
                         },
-                        new AzureNextGen.Network.Latest.Inputs.BackendArgs
+                        new AzureNextGen.Network.Inputs.BackendArgs
                         {
                             Address = "10.0.1.5",
                             HttpPort = 80,
@@ -65,18 +65,18 @@ class MyStack : Stack
                             Weight = 1,
                         },
                     },
-                    HealthProbeSettings = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    HealthProbeSettings = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1",
                     },
-                    LoadBalancingSettings = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    LoadBalancingSettings = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1",
                     },
                     Name = "backendPool1",
                 },
             },
-            BackendPoolsSettings = new AzureNextGen.Network.Latest.Inputs.BackendPoolsSettingsArgs
+            BackendPoolsSettings = new AzureNextGen.Network.Inputs.BackendPoolsSettingsArgs
             {
                 EnforceCertificateNameCheck = "Enabled",
                 SendRecvTimeoutSeconds = 60,
@@ -85,18 +85,18 @@ class MyStack : Stack
             FrontDoorName = "frontDoor1",
             FrontendEndpoints = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FrontendEndpointArgs
+                new AzureNextGen.Network.Inputs.FrontendEndpointArgs
                 {
                     HostName = "www.contoso.com",
                     Name = "frontendEndpoint1",
                     SessionAffinityEnabledState = "Enabled",
                     SessionAffinityTtlSeconds = 60,
-                    WebApplicationFirewallPolicyLink = new AzureNextGen.Network.Latest.Inputs.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs
+                    WebApplicationFirewallPolicyLink = new AzureNextGen.Network.Inputs.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
                     },
                 },
-                new AzureNextGen.Network.Latest.Inputs.FrontendEndpointArgs
+                new AzureNextGen.Network.Inputs.FrontendEndpointArgs
                 {
                     HostName = "frontDoor1.azurefd.net",
                     Name = "default",
@@ -104,7 +104,7 @@ class MyStack : Stack
             },
             HealthProbeSettings = 
             {
-                new AzureNextGen.Network.Latest.Inputs.HealthProbeSettingsModelArgs
+                new AzureNextGen.Network.Inputs.HealthProbeSettingsModelArgs
                 {
                     EnabledState = "Enabled",
                     HealthProbeMethod = "HEAD",
@@ -116,7 +116,7 @@ class MyStack : Stack
             },
             LoadBalancingSettings = 
             {
-                new AzureNextGen.Network.Latest.Inputs.LoadBalancingSettingsModelArgs
+                new AzureNextGen.Network.Inputs.LoadBalancingSettingsModelArgs
                 {
                     Name = "loadBalancingSettings1",
                     SampleSize = 4,
@@ -127,7 +127,7 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             RoutingRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.RoutingRuleArgs
+                new AzureNextGen.Network.Inputs.RoutingRuleArgs
                 {
                     AcceptedProtocols = 
                     {
@@ -136,11 +136,11 @@ class MyStack : Stack
                     EnabledState = "Enabled",
                     FrontendEndpoints = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        new AzureNextGen.Network.Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1",
                         },
-                        new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        new AzureNextGen.Network.Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default",
                         },
@@ -150,19 +150,19 @@ class MyStack : Stack
                     {
                         "/*",
                     },
-                    RouteConfiguration = 
+                    RouteConfiguration = new AzureNextGen.Network.Inputs.ForwardingConfigurationArgs
                     {
-                        { "backendPool", new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        BackendPool = new AzureNextGen.Network.Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
-                        } },
-                        { "odataType", "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration" },
+                        },
+                        OdataType = "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
                     },
-                    RulesEngine = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    RulesEngine = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1",
                     },
-                    WebApplicationFirewallPolicyLink = new AzureNextGen.Network.Latest.Inputs.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs
+                    WebApplicationFirewallPolicyLink = new AzureNextGen.Network.Inputs.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
                     },
@@ -183,7 +183,143 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewFrontDoor(ctx, "frontDoor", &network.FrontDoorArgs{
+			BackendPools: network.BackendPoolArray{
+				&network.BackendPoolArgs{
+					Backends: network.BackendArray{
+						&network.BackendArgs{
+							Address:   pulumi.String("w3.contoso.com"),
+							HttpPort:  pulumi.Int(80),
+							HttpsPort: pulumi.Int(443),
+							Priority:  pulumi.Int(2),
+							Weight:    pulumi.Int(1),
+						},
+						&network.BackendArgs{
+							Address:                    pulumi.String("contoso.com.website-us-west-2.othercloud.net"),
+							HttpPort:                   pulumi.Int(80),
+							HttpsPort:                  pulumi.Int(443),
+							Priority:                   pulumi.Int(1),
+							PrivateLinkApprovalMessage: pulumi.String("Please approve the connection request for this Private Link"),
+							PrivateLinkLocation:        pulumi.String("eastus"),
+							PrivateLinkResourceId:      pulumi.String("/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1"),
+							Weight:                     pulumi.Int(2),
+						},
+						&network.BackendArgs{
+							Address:                    pulumi.String("10.0.1.5"),
+							HttpPort:                   pulumi.Int(80),
+							HttpsPort:                  pulumi.Int(443),
+							Priority:                   pulumi.Int(1),
+							PrivateLinkAlias:           pulumi.String("APPSERVER.d84e61f0-0870-4d24-9746-7438fa0019d1.westus2.azure.privatelinkservice"),
+							PrivateLinkApprovalMessage: pulumi.String("Please approve this request to connect to the Private Link"),
+							Weight:                     pulumi.Int(1),
+						},
+					},
+					HealthProbeSettings: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1"),
+					},
+					LoadBalancingSettings: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1"),
+					},
+					Name: pulumi.String("backendPool1"),
+				},
+			},
+			BackendPoolsSettings: &network.BackendPoolsSettingsArgs{
+				EnforceCertificateNameCheck: pulumi.String("Enabled"),
+				SendRecvTimeoutSeconds:      pulumi.Int(60),
+			},
+			EnabledState:  pulumi.String("Enabled"),
+			FrontDoorName: pulumi.String("frontDoor1"),
+			FrontendEndpoints: network.FrontendEndpointArray{
+				&network.FrontendEndpointArgs{
+					HostName:                    pulumi.String("www.contoso.com"),
+					Name:                        pulumi.String("frontendEndpoint1"),
+					SessionAffinityEnabledState: pulumi.String("Enabled"),
+					SessionAffinityTtlSeconds:   pulumi.Int(60),
+					WebApplicationFirewallPolicyLink: &network.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1"),
+					},
+				},
+				&network.FrontendEndpointArgs{
+					HostName: pulumi.String("frontDoor1.azurefd.net"),
+					Name:     pulumi.String("default"),
+				},
+			},
+			HealthProbeSettings: network.HealthProbeSettingsModelArray{
+				&network.HealthProbeSettingsModelArgs{
+					EnabledState:      pulumi.String("Enabled"),
+					HealthProbeMethod: pulumi.String("HEAD"),
+					IntervalInSeconds: pulumi.Int(120),
+					Name:              pulumi.String("healthProbeSettings1"),
+					Path:              pulumi.String("/"),
+					Protocol:          pulumi.String("Http"),
+				},
+			},
+			LoadBalancingSettings: network.LoadBalancingSettingsModelArray{
+				&network.LoadBalancingSettingsModelArgs{
+					Name:                      pulumi.String("loadBalancingSettings1"),
+					SampleSize:                pulumi.Int(4),
+					SuccessfulSamplesRequired: pulumi.Int(2),
+				},
+			},
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			RoutingRules: network.RoutingRuleArray{
+				&network.RoutingRuleArgs{
+					AcceptedProtocols: pulumi.StringArray{
+						pulumi.String("Http"),
+					},
+					EnabledState: pulumi.String("Enabled"),
+					FrontendEndpoints: network.SubResourceArray{
+						&network.SubResourceArgs{
+							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1"),
+						},
+						&network.SubResourceArgs{
+							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default"),
+						},
+					},
+					Name: pulumi.String("routingRule1"),
+					PatternsToMatch: pulumi.StringArray{
+						pulumi.String("/*"),
+					},
+					RouteConfiguration: &network.ForwardingConfigurationArgs{
+						BackendPool: &network.SubResourceArgs{
+							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1"),
+						},
+						OdataType: pulumi.String("#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration"),
+					},
+					RulesEngine: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1"),
+					},
+					WebApplicationFirewallPolicyLink: &network.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1"),
+					},
+				},
+			},
+			Tags: pulumi.StringMap{
+				"tag1": pulumi.String("value1"),
+				"tag2": pulumi.String("value2"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -192,17 +328,17 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
-    backend_pools=[azure_nextgen.network.latest.BackendPoolArgs(
+front_door = azure_nextgen.network.FrontDoor("frontDoor",
+    backend_pools=[azure_nextgen.network.BackendPoolArgs(
         backends=[
-            azure_nextgen.network.latest.BackendArgs(
+            azure_nextgen.network.BackendArgs(
                 address="w3.contoso.com",
                 http_port=80,
                 https_port=443,
                 priority=2,
                 weight=1,
             ),
-            azure_nextgen.network.latest.BackendArgs(
+            azure_nextgen.network.BackendArgs(
                 address="contoso.com.website-us-west-2.othercloud.net",
                 http_port=80,
                 https_port=443,
@@ -212,7 +348,7 @@ front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
                 private_link_resource_id="/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
                 weight=2,
             ),
-            azure_nextgen.network.latest.BackendArgs(
+            azure_nextgen.network.BackendArgs(
                 address="10.0.1.5",
                 http_port=80,
                 https_port=443,
@@ -222,36 +358,36 @@ front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
                 weight=1,
             ),
         ],
-        health_probe_settings=azure_nextgen.network.latest.SubResourceArgs(
+        health_probe_settings=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1",
         ),
-        load_balancing_settings=azure_nextgen.network.latest.SubResourceArgs(
+        load_balancing_settings=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1",
         ),
         name="backendPool1",
     )],
-    backend_pools_settings=azure_nextgen.network.latest.BackendPoolsSettingsArgs(
+    backend_pools_settings=azure_nextgen.network.BackendPoolsSettingsArgs(
         enforce_certificate_name_check="Enabled",
         send_recv_timeout_seconds=60,
     ),
     enabled_state="Enabled",
     front_door_name="frontDoor1",
     frontend_endpoints=[
-        azure_nextgen.network.latest.FrontendEndpointArgs(
+        azure_nextgen.network.FrontendEndpointArgs(
             host_name="www.contoso.com",
             name="frontendEndpoint1",
             session_affinity_enabled_state="Enabled",
             session_affinity_ttl_seconds=60,
-            web_application_firewall_policy_link=azure_nextgen.network.latest.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs(
+            web_application_firewall_policy_link=azure_nextgen.network.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
             ),
         ),
-        azure_nextgen.network.latest.FrontendEndpointArgs(
+        azure_nextgen.network.FrontendEndpointArgs(
             host_name="frontDoor1.azurefd.net",
             name="default",
         ),
     ],
-    health_probe_settings=[azure_nextgen.network.latest.HealthProbeSettingsModelArgs(
+    health_probe_settings=[azure_nextgen.network.HealthProbeSettingsModelArgs(
         enabled_state="Enabled",
         health_probe_method="HEAD",
         interval_in_seconds=120,
@@ -259,36 +395,36 @@ front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
         path="/",
         protocol="Http",
     )],
-    load_balancing_settings=[azure_nextgen.network.latest.LoadBalancingSettingsModelArgs(
+    load_balancing_settings=[azure_nextgen.network.LoadBalancingSettingsModelArgs(
         name="loadBalancingSettings1",
         sample_size=4,
         successful_samples_required=2,
     )],
     location="westus",
     resource_group_name="rg1",
-    routing_rules=[azure_nextgen.network.latest.RoutingRuleArgs(
+    routing_rules=[azure_nextgen.network.RoutingRuleArgs(
         accepted_protocols=["Http"],
         enabled_state="Enabled",
         frontend_endpoints=[
-            azure_nextgen.network.latest.SubResourceArgs(
+            azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1",
             ),
-            azure_nextgen.network.latest.SubResourceArgs(
+            azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default",
             ),
         ],
         name="routingRule1",
         patterns_to_match=["/*"],
-        route_configuration={
-            "backendPool": azure_nextgen.network.latest.SubResourceArgs(
+        route_configuration=azure_nextgen.network.ForwardingConfigurationArgs(
+            backend_pool=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
             ),
-            "odataType": "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
-        },
-        rules_engine=azure_nextgen.network.latest.SubResourceArgs(
+            odata_type="#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+        ),
+        rules_engine=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1",
         ),
-        web_application_firewall_policy_link=azure_nextgen.network.latest.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs(
+        web_application_firewall_policy_link=azure_nextgen.network.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
         ),
     )],
@@ -307,7 +443,7 @@ front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
+const frontDoor = new azure_nextgen.network.FrontDoor("frontDoor", {
     backendPools: [{
         backends: [
             {
@@ -425,7 +561,7 @@ const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FrontDoorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FrontDoorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -433,11 +569,11 @@ const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFrontDoor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FrontDoorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FrontDoor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFrontDoor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FrontDoorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FrontDoor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FrontDoorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FrontDoorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -458,7 +594,7 @@ const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FrontDoorArgs</span>
+        <span class="property-type"><a href="#inputs">FrontDoorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -527,7 +663,7 @@ const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FrontDoorArgs</span>
+        <span class="property-type"><a href="#inputs">FrontDoorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -566,7 +702,7 @@ const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FrontDoorArgs</span>
+        <span class="property-type"><a href="#inputs">FrontDoorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -589,11 +725,11 @@ const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
 
 ## FrontDoor Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -8835,7 +8971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:FrontDoor frontDoor1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1 
+$ pulumi import azure-nextgen:network:FrontDoor frontDoor1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1 
 ```
 
 

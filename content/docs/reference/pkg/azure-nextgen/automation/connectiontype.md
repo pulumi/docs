@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.ConnectionType resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the connection type.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,25 +27,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectionType = new AzureNextGen.Automation.Latest.ConnectionType("connectionType", new AzureNextGen.Automation.Latest.ConnectionTypeArgs
+        var connectionType = new AzureNextGen.Automation.ConnectionType("connectionType", new AzureNextGen.Automation.ConnectionTypeArgs
         {
             AutomationAccountName = "myAutomationAccount22",
             ConnectionTypeName = "myCT",
             FieldDefinitions = 
             {
-                { "myBoolField", new AzureNextGen.Automation.Latest.Inputs.FieldDefinitionArgs
+                { "myBoolField", new AzureNextGen.Automation.Inputs.FieldDefinitionArgs
                 {
                     IsEncrypted = false,
                     IsOptional = false,
                     Type = "bool",
                 } },
-                { "myStringField", new AzureNextGen.Automation.Latest.Inputs.FieldDefinitionArgs
+                { "myStringField", new AzureNextGen.Automation.Inputs.FieldDefinitionArgs
                 {
                     IsEncrypted = false,
                     IsOptional = false,
                     Type = "string",
                 } },
-                { "myStringFieldEncrypted", new AzureNextGen.Automation.Latest.Inputs.FieldDefinitionArgs
+                { "myStringFieldEncrypted", new AzureNextGen.Automation.Inputs.FieldDefinitionArgs
                 {
                     IsEncrypted = true,
                     IsOptional = false,
@@ -70,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -117,21 +117,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection_type = azure_nextgen.automation.latest.ConnectionType("connectionType",
+connection_type = azure_nextgen.automation.ConnectionType("connectionType",
     automation_account_name="myAutomationAccount22",
     connection_type_name="myCT",
     field_definitions={
-        "myBoolField": azure_nextgen.automation.latest.FieldDefinitionArgs(
+        "myBoolField": azure_nextgen.automation.FieldDefinitionArgs(
             is_encrypted=False,
             is_optional=False,
             type="bool",
         ),
-        "myStringField": azure_nextgen.automation.latest.FieldDefinitionArgs(
+        "myStringField": azure_nextgen.automation.FieldDefinitionArgs(
             is_encrypted=False,
             is_optional=False,
             type="string",
         ),
-        "myStringFieldEncrypted": azure_nextgen.automation.latest.FieldDefinitionArgs(
+        "myStringFieldEncrypted": azure_nextgen.automation.FieldDefinitionArgs(
             is_encrypted=True,
             is_optional=False,
             type="string",
@@ -151,7 +151,7 @@ connection_type = azure_nextgen.automation.latest.ConnectionType("connectionType
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connectionType = new azure_nextgen.automation.latest.ConnectionType("connectionType", {
+const connectionType = new azure_nextgen.automation.ConnectionType("connectionType", {
     automationAccountName: "myAutomationAccount22",
     connectionTypeName: "myCT",
     fieldDefinitions: {
@@ -188,7 +188,7 @@ const connectionType = new azure_nextgen.automation.latest.ConnectionType("conne
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectionType</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ConnectionTypeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectionType</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -196,11 +196,11 @@ const connectionType = new azure_nextgen.automation.latest.ConnectionType("conne
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectionType</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ConnectionTypeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectionType</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectionType</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectionType</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectionType</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ConnectionTypeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectionType</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectionTypeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -221,7 +221,7 @@ const connectionType = new azure_nextgen.automation.latest.ConnectionType("conne
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectionTypeArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectionTypeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -290,7 +290,7 @@ const connectionType = new azure_nextgen.automation.latest.ConnectionType("conne
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectionTypeArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectionTypeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -329,7 +329,7 @@ const connectionType = new azure_nextgen.automation.latest.ConnectionType("conne
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectionTypeArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectionTypeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -352,11 +352,11 @@ const connectionType = new azure_nextgen.automation.latest.ConnectionType("conne
 
 ## ConnectionType Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ConnectionType resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ConnectionType resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1094,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:ConnectionType myCT /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount22/connectionTypes/myCT 
+$ pulumi import azure-nextgen:automation:ConnectionType myCT /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount22/connectionTypes/myCT 
 ```
 
 

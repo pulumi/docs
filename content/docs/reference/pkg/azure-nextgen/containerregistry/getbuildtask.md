@@ -19,7 +19,7 @@ meta_desc: "Explore the GetBuildTask function of the containerregistry module, i
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBuildTask<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBuildTaskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetBuildTaskResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBuildTask<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBuildTaskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBuildTaskResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetBuildTask function of the containerregistry module, i
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBuildTask<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBuildTaskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupBuildTaskResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBuildTask<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBuildTaskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBuildTaskResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBuildTask` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetBuildTask function of the containerregistry module, i
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBuildTask </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetBuildTaskResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetBuildTaskArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBuildTaskResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBuildTaskArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -654,30 +654,36 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_csharp">
-<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+        <span id="os_csharp">
+<a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_csharp">
-<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
+        <span id="architecture_csharp">
+<a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_csharp">
+<a href="#variant_csharp" style="color: inherit; text-decoration: inherit;">Variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -686,22 +692,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_go">
-<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+        <span id="os_go">
+<a href="#os_go" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_go">
-<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
+        <span id="architecture_go">
+<a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_go">
+<a href="#variant_go" style="color: inherit; text-decoration: inherit;">Variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -710,22 +725,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_nodejs">
-<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+        <span id="os_nodejs">
+<a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_nodejs">
-<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
+        <span id="architecture_nodejs">
+<a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_nodejs">
+<a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -734,29 +758,35 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="os_type_python">
-<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+        <span id="os_python">
+<a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cpu_python">
-<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
+        <span id="architecture_python">
+<a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the build.{{% /md %}}</dd>
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="variant_python">
+<a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="sourcecontrolauthinforesponse">Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -965,9 +995,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sourcerepositorypropertiesresponse">Source<wbr>Repository<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 

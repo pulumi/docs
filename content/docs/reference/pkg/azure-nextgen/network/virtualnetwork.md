@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualNetwork resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Virtual Network resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        var virtualNetwork = new AzureNextGen.Network.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.VirtualNetworkArgs
         {
-            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            AddressSpace = new AzureNextGen.Network.Inputs.AddressSpaceArgs
             {
                 AddressPrefixes = 
                 {
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,8 +87,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
-    address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+virtual_network = azure_nextgen.network.VirtualNetwork("virtualNetwork",
+    address_space=azure_nextgen.network.AddressSpaceArgs(
         address_prefixes=["10.0.0.0/16"],
     ),
     location="eastus",
@@ -105,7 +105,7 @@ virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+const virtualNetwork = new azure_nextgen.network.VirtualNetwork("virtualNetwork", {
     addressSpace: {
         addressPrefixes: ["10.0.0.0/16"],
     },
@@ -128,16 +128,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        var virtualNetwork = new AzureNextGen.Network.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.VirtualNetworkArgs
         {
-            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            AddressSpace = new AzureNextGen.Network.Inputs.AddressSpaceArgs
             {
                 AddressPrefixes = 
                 {
                     "10.0.0.0/16",
                 },
             },
-            BgpCommunities = new AzureNextGen.Network.Latest.Inputs.VirtualNetworkBgpCommunitiesArgs
+            BgpCommunities = new AzureNextGen.Network.Inputs.VirtualNetworkBgpCommunitiesArgs
             {
                 VirtualNetworkCommunity = "12076:20000",
             },
@@ -145,7 +145,7 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             Subnets = 
             {
-                new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                new AzureNextGen.Network.Inputs.SubnetArgs
                 {
                     AddressPrefix = "10.0.0.0/24",
                     Name = "test-1",
@@ -167,7 +167,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -209,16 +209,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
-    address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+virtual_network = azure_nextgen.network.VirtualNetwork("virtualNetwork",
+    address_space=azure_nextgen.network.AddressSpaceArgs(
         address_prefixes=["10.0.0.0/16"],
     ),
-    bgp_communities=azure_nextgen.network.latest.VirtualNetworkBgpCommunitiesArgs(
+    bgp_communities=azure_nextgen.network.VirtualNetworkBgpCommunitiesArgs(
         virtual_network_community="12076:20000",
     ),
     location="eastus",
     resource_group_name="rg1",
-    subnets=[azure_nextgen.network.latest.SubnetArgs(
+    subnets=[azure_nextgen.network.SubnetArgs(
         address_prefix="10.0.0.0/24",
         name="test-1",
     )],
@@ -234,7 +234,7 @@ virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+const virtualNetwork = new azure_nextgen.network.VirtualNetwork("virtualNetwork", {
     addressSpace: {
         addressPrefixes: ["10.0.0.0/16"],
     },
@@ -264,9 +264,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        var virtualNetwork = new AzureNextGen.Network.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.VirtualNetworkArgs
         {
-            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            AddressSpace = new AzureNextGen.Network.Inputs.AddressSpaceArgs
             {
                 AddressPrefixes = 
                 {
@@ -277,12 +277,12 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             Subnets = 
             {
-                new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                new AzureNextGen.Network.Inputs.SubnetArgs
                 {
                     AddressPrefix = "10.0.0.0/24",
                     Delegations = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.DelegationArgs
+                        new AzureNextGen.Network.Inputs.DelegationArgs
                         {
                             Name = "myDelegation",
                             ServiceName = "Microsoft.Sql/managedInstances",
@@ -307,7 +307,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -352,15 +352,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
-    address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+virtual_network = azure_nextgen.network.VirtualNetwork("virtualNetwork",
+    address_space=azure_nextgen.network.AddressSpaceArgs(
         address_prefixes=["10.0.0.0/16"],
     ),
     location="westcentralus",
     resource_group_name="rg1",
-    subnets=[azure_nextgen.network.latest.SubnetArgs(
+    subnets=[azure_nextgen.network.SubnetArgs(
         address_prefix="10.0.0.0/24",
-        delegations=[azure_nextgen.network.latest.DelegationArgs(
+        delegations=[azure_nextgen.network.DelegationArgs(
             name="myDelegation",
             service_name="Microsoft.Sql/managedInstances",
         )],
@@ -378,7 +378,7 @@ virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+const virtualNetwork = new azure_nextgen.network.VirtualNetwork("virtualNetwork", {
     addressSpace: {
         addressPrefixes: ["10.0.0.0/16"],
     },
@@ -409,9 +409,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        var virtualNetwork = new AzureNextGen.Network.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.VirtualNetworkArgs
         {
-            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            AddressSpace = new AzureNextGen.Network.Inputs.AddressSpaceArgs
             {
                 AddressPrefixes = 
                 {
@@ -422,13 +422,13 @@ class MyStack : Stack
             ResourceGroupName = "vnetTest",
             Subnets = 
             {
-                new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                new AzureNextGen.Network.Inputs.SubnetArgs
                 {
                     AddressPrefix = "10.0.0.0/16",
                     Name = "test-1",
                     ServiceEndpoints = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.ServiceEndpointPropertiesFormatArgs
+                        new AzureNextGen.Network.Inputs.ServiceEndpointPropertiesFormatArgs
                         {
                             Service = "Microsoft.Storage",
                         },
@@ -451,7 +451,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -495,16 +495,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
-    address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+virtual_network = azure_nextgen.network.VirtualNetwork("virtualNetwork",
+    address_space=azure_nextgen.network.AddressSpaceArgs(
         address_prefixes=["10.0.0.0/16"],
     ),
     location="eastus",
     resource_group_name="vnetTest",
-    subnets=[azure_nextgen.network.latest.SubnetArgs(
+    subnets=[azure_nextgen.network.SubnetArgs(
         address_prefix="10.0.0.0/16",
         name="test-1",
-        service_endpoints=[azure_nextgen.network.latest.ServiceEndpointPropertiesFormatArgs(
+        service_endpoints=[azure_nextgen.network.ServiceEndpointPropertiesFormatArgs(
             service="Microsoft.Storage",
         )],
     )],
@@ -520,7 +520,7 @@ virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+const virtualNetwork = new azure_nextgen.network.VirtualNetwork("virtualNetwork", {
     addressSpace: {
         addressPrefixes: ["10.0.0.0/16"],
     },
@@ -550,9 +550,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        var virtualNetwork = new AzureNextGen.Network.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.VirtualNetworkArgs
         {
-            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            AddressSpace = new AzureNextGen.Network.Inputs.AddressSpaceArgs
             {
                 AddressPrefixes = 
                 {
@@ -563,20 +563,20 @@ class MyStack : Stack
             ResourceGroupName = "vnetTest",
             Subnets = 
             {
-                new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                new AzureNextGen.Network.Inputs.SubnetArgs
                 {
                     AddressPrefix = "10.0.0.0/16",
                     Name = "test-1",
                     ServiceEndpointPolicies = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.ServiceEndpointPolicyArgs
+                        new AzureNextGen.Network.Inputs.ServiceEndpointPolicyArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1",
                         },
                     },
                     ServiceEndpoints = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.ServiceEndpointPropertiesFormatArgs
+                        new AzureNextGen.Network.Inputs.ServiceEndpointPropertiesFormatArgs
                         {
                             Service = "Microsoft.Storage",
                         },
@@ -599,7 +599,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -648,19 +648,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
-    address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+virtual_network = azure_nextgen.network.VirtualNetwork("virtualNetwork",
+    address_space=azure_nextgen.network.AddressSpaceArgs(
         address_prefixes=["10.0.0.0/16"],
     ),
     location="eastus2euap",
     resource_group_name="vnetTest",
-    subnets=[azure_nextgen.network.latest.SubnetArgs(
+    subnets=[azure_nextgen.network.SubnetArgs(
         address_prefix="10.0.0.0/16",
         name="test-1",
-        service_endpoint_policies=[azure_nextgen.network.latest.ServiceEndpointPolicyArgs(
+        service_endpoint_policies=[azure_nextgen.network.ServiceEndpointPolicyArgs(
             id="/subscriptions/subid/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1",
         )],
-        service_endpoints=[azure_nextgen.network.latest.ServiceEndpointPropertiesFormatArgs(
+        service_endpoints=[azure_nextgen.network.ServiceEndpointPropertiesFormatArgs(
             service="Microsoft.Storage",
         )],
     )],
@@ -676,7 +676,7 @@ virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+const virtualNetwork = new azure_nextgen.network.VirtualNetwork("virtualNetwork", {
     addressSpace: {
         addressPrefixes: ["10.0.0.0/16"],
     },
@@ -709,9 +709,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        var virtualNetwork = new AzureNextGen.Network.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.VirtualNetworkArgs
         {
-            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            AddressSpace = new AzureNextGen.Network.Inputs.AddressSpaceArgs
             {
                 AddressPrefixes = 
                 {
@@ -722,7 +722,7 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             Subnets = 
             {
-                new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                new AzureNextGen.Network.Inputs.SubnetArgs
                 {
                     AddressPrefix = "10.0.0.0/24",
                     Name = "test-1",
@@ -744,7 +744,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -783,13 +783,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
-    address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+virtual_network = azure_nextgen.network.VirtualNetwork("virtualNetwork",
+    address_space=azure_nextgen.network.AddressSpaceArgs(
         address_prefixes=["10.0.0.0/16"],
     ),
     location="eastus",
     resource_group_name="rg1",
-    subnets=[azure_nextgen.network.latest.SubnetArgs(
+    subnets=[azure_nextgen.network.SubnetArgs(
         address_prefix="10.0.0.0/24",
         name="test-1",
     )],
@@ -805,7 +805,7 @@ virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+const virtualNetwork = new azure_nextgen.network.VirtualNetwork("virtualNetwork", {
     addressSpace: {
         addressPrefixes: ["10.0.0.0/16"],
     },
@@ -832,9 +832,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        var virtualNetwork = new AzureNextGen.Network.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.VirtualNetworkArgs
         {
-            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            AddressSpace = new AzureNextGen.Network.Inputs.AddressSpaceArgs
             {
                 AddressPrefixes = 
                 {
@@ -845,7 +845,7 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             Subnets = 
             {
-                new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                new AzureNextGen.Network.Inputs.SubnetArgs
                 {
                     AddressPrefixes = 
                     {
@@ -871,7 +871,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -913,13 +913,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
-    address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+virtual_network = azure_nextgen.network.VirtualNetwork("virtualNetwork",
+    address_space=azure_nextgen.network.AddressSpaceArgs(
         address_prefixes=["10.0.0.0/16"],
     ),
     location="eastus",
     resource_group_name="rg1",
-    subnets=[azure_nextgen.network.latest.SubnetArgs(
+    subnets=[azure_nextgen.network.SubnetArgs(
         address_prefixes=[
             "10.0.0.0/28",
             "10.0.1.0/28",
@@ -938,7 +938,7 @@ virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+const virtualNetwork = new azure_nextgen.network.VirtualNetwork("virtualNetwork", {
     addressSpace: {
         addressPrefixes: ["10.0.0.0/16"],
     },
@@ -966,7 +966,7 @@ const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualN
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualNetwork</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualNetworkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualNetwork</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualNetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -974,11 +974,11 @@ const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualN
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualNetwork</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualNetworkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNetwork</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualNetwork</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualNetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNetwork</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualNetwork</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualNetworkArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualNetwork</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualNetworkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -999,7 +999,7 @@ const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualN
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualNetworkArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualNetworkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1068,7 +1068,7 @@ const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualN
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualNetworkArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualNetworkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1107,7 +1107,7 @@ const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualN
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualNetworkArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualNetworkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1130,11 +1130,11 @@ const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualN
 
 ## VirtualNetwork Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -19520,7 +19520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VirtualNetwork test-vnet /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet 
+$ pulumi import azure-nextgen:network:VirtualNetwork test-vnet /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet 
 ```
 
 

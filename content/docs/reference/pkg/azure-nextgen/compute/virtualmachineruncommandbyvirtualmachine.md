@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.VirtualMachineRunCommand
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a Virtual Machine run command.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,18 +27,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineRunCommandByVirtualMachine = new AzureNextGen.Compute.Latest.VirtualMachineRunCommandByVirtualMachine("virtualMachineRunCommandByVirtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineRunCommandByVirtualMachineArgs
+        var virtualMachineRunCommandByVirtualMachine = new AzureNextGen.Compute.VirtualMachineRunCommandByVirtualMachine("virtualMachineRunCommandByVirtualMachine", new AzureNextGen.Compute.VirtualMachineRunCommandByVirtualMachineArgs
         {
             AsyncExecution = false,
             Location = "West US",
             Parameters = 
             {
-                new AzureNextGen.Compute.Latest.Inputs.RunCommandInputParameterArgs
+                new AzureNextGen.Compute.Inputs.RunCommandInputParameterArgs
                 {
                     Name = "param1",
                     Value = "value1",
                 },
-                new AzureNextGen.Compute.Latest.Inputs.RunCommandInputParameterArgs
+                new AzureNextGen.Compute.Inputs.RunCommandInputParameterArgs
                 {
                     Name = "param2",
                     Value = "value2",
@@ -48,7 +48,7 @@ class MyStack : Stack
             RunAsPassword = "<runAsPassword>",
             RunAsUser = "user1",
             RunCommandName = "myRunCommand",
-            Source = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineRunCommandScriptSourceArgs
+            Source = new AzureNextGen.Compute.Inputs.VirtualMachineRunCommandScriptSourceArgs
             {
                 Script = "Write-Host Hello World!",
             },
@@ -69,7 +69,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -115,15 +115,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_run_command_by_virtual_machine = azure_nextgen.compute.latest.VirtualMachineRunCommandByVirtualMachine("virtualMachineRunCommandByVirtualMachine",
+virtual_machine_run_command_by_virtual_machine = azure_nextgen.compute.VirtualMachineRunCommandByVirtualMachine("virtualMachineRunCommandByVirtualMachine",
     async_execution=False,
     location="West US",
     parameters=[
-        azure_nextgen.compute.latest.RunCommandInputParameterArgs(
+        azure_nextgen.compute.RunCommandInputParameterArgs(
             name="param1",
             value="value1",
         ),
-        azure_nextgen.compute.latest.RunCommandInputParameterArgs(
+        azure_nextgen.compute.RunCommandInputParameterArgs(
             name="param2",
             value="value2",
         ),
@@ -132,7 +132,7 @@ virtual_machine_run_command_by_virtual_machine = azure_nextgen.compute.latest.Vi
     run_as_password="<runAsPassword>",
     run_as_user="user1",
     run_command_name="myRunCommand",
-    source=azure_nextgen.compute.latest.VirtualMachineRunCommandScriptSourceArgs(
+    source=azure_nextgen.compute.VirtualMachineRunCommandScriptSourceArgs(
         script="Write-Host Hello World!",
     ),
     timeout_in_seconds=3600,
@@ -148,7 +148,7 @@ virtual_machine_run_command_by_virtual_machine = azure_nextgen.compute.latest.Vi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachineRunCommandByVirtualMachine = new azure_nextgen.compute.latest.VirtualMachineRunCommandByVirtualMachine("virtualMachineRunCommandByVirtualMachine", {
+const virtualMachineRunCommandByVirtualMachine = new azure_nextgen.compute.VirtualMachineRunCommandByVirtualMachine("virtualMachineRunCommandByVirtualMachine", {
     asyncExecution: false,
     location: "West US",
     parameters: [
@@ -184,7 +184,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_nextgen.compute.lates
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualMachineRunCommandByVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -192,11 +192,11 @@ const virtualMachineRunCommandByVirtualMachine = new azure_nextgen.compute.lates
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualMachineRunCommandByVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineRunCommandByVirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineRunCommandByVirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualMachineRunCommandByVirtualMachineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -217,7 +217,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_nextgen.compute.lates
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineRunCommandByVirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -286,7 +286,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_nextgen.compute.lates
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineRunCommandByVirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -325,7 +325,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_nextgen.compute.lates
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineRunCommandByVirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -348,11 +348,11 @@ const virtualMachineRunCommandByVirtualMachine = new azure_nextgen.compute.lates
 
 ## VirtualMachineRunCommandByVirtualMachine Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualMachineRunCommandByVirtualMachine resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualMachineRunCommandByVirtualMachine resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2094,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:VirtualMachineRunCommandByVirtualMachine myRunCommand /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM/runCommands/myRunCommand 
+$ pulumi import azure-nextgen:compute:VirtualMachineRunCommandByVirtualMachine myRunCommand /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM/runCommands/myRunCommand 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.EventHubAuthorizationRu
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single item in a List or Get AuthorizationRule operation
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventHubAuthorizationRule = new AzureNextGen.EventHub.Latest.EventHubAuthorizationRule("eventHubAuthorizationRule", new AzureNextGen.EventHub.Latest.EventHubAuthorizationRuleArgs
+        var eventHubAuthorizationRule = new AzureNextGen.EventHub.EventHubAuthorizationRule("eventHubAuthorizationRule", new AzureNextGen.EventHub.EventHubAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-Authrules-2513",
             EventHubName = "sdk-EventHub-532",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/latest"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_hub_authorization_rule = azure_nextgen.eventhub.latest.EventHubAuthorizationRule("eventHubAuthorizationRule",
+event_hub_authorization_rule = azure_nextgen.eventhub.EventHubAuthorizationRule("eventHubAuthorizationRule",
     authorization_rule_name="sdk-Authrules-2513",
     event_hub_name="sdk-EventHub-532",
     namespace_name="sdk-Namespace-960",
@@ -106,7 +106,7 @@ event_hub_authorization_rule = azure_nextgen.eventhub.latest.EventHubAuthorizati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const eventHubAuthorizationRule = new azure_nextgen.eventhub.latest.EventHubAuthorizationRule("eventHubAuthorizationRule", {
+const eventHubAuthorizationRule = new azure_nextgen.eventhub.EventHubAuthorizationRule("eventHubAuthorizationRule", {
     authorizationRuleName: "sdk-Authrules-2513",
     eventHubName: "sdk-EventHub-532",
     namespaceName: "sdk-Namespace-960",
@@ -129,7 +129,7 @@ const eventHubAuthorizationRule = new azure_nextgen.eventhub.latest.EventHubAuth
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventHubAuthorizationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">EventHubAuthorizationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventHubAuthorizationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventHubAuthorizationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -137,11 +137,11 @@ const eventHubAuthorizationRule = new azure_nextgen.eventhub.latest.EventHubAuth
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventHubAuthorizationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">EventHubAuthorizationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventHubAuthorizationRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventHubAuthorizationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventHubAuthorizationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventHubAuthorizationRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventHubAuthorizationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">EventHubAuthorizationRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventHubAuthorizationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EventHubAuthorizationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -162,7 +162,7 @@ const eventHubAuthorizationRule = new azure_nextgen.eventhub.latest.EventHubAuth
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EventHubAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">EventHubAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -231,7 +231,7 @@ const eventHubAuthorizationRule = new azure_nextgen.eventhub.latest.EventHubAuth
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EventHubAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">EventHubAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -270,7 +270,7 @@ const eventHubAuthorizationRule = new azure_nextgen.eventhub.latest.EventHubAuth
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EventHubAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">EventHubAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -293,11 +293,11 @@ const eventHubAuthorizationRule = new azure_nextgen.eventhub.latest.EventHubAuth
 
 ## EventHubAuthorizationRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The EventHubAuthorizationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The EventHubAuthorizationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -705,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/latest:EventHubAuthorizationRule sdk-Authrules-2513 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.EventHub/namespaces/sdk-Namespace-960/eventhubs/sdk-EventHub-532/authorizationRules/sdk-Authrules-2513 
+$ pulumi import azure-nextgen:eventhub:EventHubAuthorizationRule sdk-Authrules-2513 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.EventHub/namespaces/sdk-Namespace-960/eventhubs/sdk-EventHub-532/authorizationRules/sdk-Authrules-2513 
 ```
 
 

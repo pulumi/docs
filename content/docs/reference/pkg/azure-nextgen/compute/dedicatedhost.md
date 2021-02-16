@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.DedicatedHost resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the Dedicated host.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dedicatedHost = new AzureNextGen.Compute.Latest.DedicatedHost("dedicatedHost", new AzureNextGen.Compute.Latest.DedicatedHostArgs
+        var dedicatedHost = new AzureNextGen.Compute.DedicatedHost("dedicatedHost", new AzureNextGen.Compute.DedicatedHostArgs
         {
             HostGroupName = "myDedicatedHostGroup",
             HostName = "myDedicatedHost",
             Location = "westus",
             PlatformFaultDomain = 1,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
             {
                 Name = "DSv3-Type1",
             },
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,13 +93,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dedicated_host = azure_nextgen.compute.latest.DedicatedHost("dedicatedHost",
+dedicated_host = azure_nextgen.compute.DedicatedHost("dedicatedHost",
     host_group_name="myDedicatedHostGroup",
     host_name="myDedicatedHost",
     location="westus",
     platform_fault_domain=1,
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.compute.latest.SkuArgs(
+    sku=azure_nextgen.compute.SkuArgs(
         name="DSv3-Type1",
     ),
     tags={
@@ -116,7 +116,7 @@ dedicated_host = azure_nextgen.compute.latest.DedicatedHost("dedicatedHost",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dedicatedHost = new azure_nextgen.compute.latest.DedicatedHost("dedicatedHost", {
+const dedicatedHost = new azure_nextgen.compute.DedicatedHost("dedicatedHost", {
     hostGroupName: "myDedicatedHostGroup",
     hostName: "myDedicatedHost",
     location: "westus",
@@ -142,7 +142,7 @@ const dedicatedHost = new azure_nextgen.compute.latest.DedicatedHost("dedicatedH
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DedicatedHost</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DedicatedHostArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DedicatedHost</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DedicatedHostArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -150,11 +150,11 @@ const dedicatedHost = new azure_nextgen.compute.latest.DedicatedHost("dedicatedH
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDedicatedHost</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DedicatedHostArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DedicatedHost</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDedicatedHost</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DedicatedHostArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DedicatedHost</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DedicatedHost</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DedicatedHostArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DedicatedHost</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DedicatedHostArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -175,7 +175,7 @@ const dedicatedHost = new azure_nextgen.compute.latest.DedicatedHost("dedicatedH
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DedicatedHostArgs</span>
+        <span class="property-type"><a href="#inputs">DedicatedHostArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -244,7 +244,7 @@ const dedicatedHost = new azure_nextgen.compute.latest.DedicatedHost("dedicatedH
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DedicatedHostArgs</span>
+        <span class="property-type"><a href="#inputs">DedicatedHostArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,7 +283,7 @@ const dedicatedHost = new azure_nextgen.compute.latest.DedicatedHost("dedicatedH
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DedicatedHostArgs</span>
+        <span class="property-type"><a href="#inputs">DedicatedHostArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -306,11 +306,11 @@ const dedicatedHost = new azure_nextgen.compute.latest.DedicatedHost("dedicatedH
 
 ## DedicatedHost Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1872,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:DedicatedHost myDedicatedHost /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/HostGroups/myDedicatedHostGroup/hosts/myDedicatedHost 
+$ pulumi import azure-nextgen:compute:DedicatedHost myDedicatedHost /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/HostGroups/myDedicatedHostGroup/hosts/myDedicatedHost 
 ```
 
 

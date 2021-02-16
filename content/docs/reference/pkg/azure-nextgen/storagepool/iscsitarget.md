@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagepool.IscsiTarget resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Response for iSCSI target requests.
+API Version: 2020-03-15-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iscsiTarget = new AzureNextGen.StoragePool.V20200315Preview.IscsiTarget("iscsiTarget", new AzureNextGen.StoragePool.V20200315Preview.IscsiTargetArgs
+        var iscsiTarget = new AzureNextGen.StoragePool.IscsiTarget("iscsiTarget", new AzureNextGen.StoragePool.IscsiTargetArgs
         {
             DiskPoolName = "myDiskPool",
             IscsiTargetName = "myIscsiTarget",
@@ -34,11 +35,11 @@ class MyStack : Stack
             TargetIqn = "iqn.2005-03.org.iscsi:server1",
             Tpgs = 
             {
-                new AzureNextGen.StoragePool.V20200315Preview.Inputs.TargetPortalGroupCreateArgs
+                new AzureNextGen.StoragePool.Inputs.TargetPortalGroupCreateArgs
                 {
                     Acls = 
                     {
-                        new AzureNextGen.StoragePool.V20200315Preview.Inputs.AclArgs
+                        new AzureNextGen.StoragePool.Inputs.AclArgs
                         {
                             InitiatorIqn = "iqn.2005-03.org.iscsi:client",
                             MappedLuns = 
@@ -49,14 +50,14 @@ class MyStack : Stack
                             Username = "some_username",
                         },
                     },
-                    Attributes = new AzureNextGen.StoragePool.V20200315Preview.Inputs.AttributesArgs
+                    Attributes = new AzureNextGen.StoragePool.Inputs.AttributesArgs
                     {
                         Authentication = true,
                         ProdModeWriteProtect = false,
                     },
                     Luns = 
                     {
-                        new AzureNextGen.StoragePool.V20200315Preview.Inputs.IscsiLunArgs
+                        new AzureNextGen.StoragePool.Inputs.IscsiLunArgs
                         {
                             ManagedDiskAzureResourceId = "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1",
                             Name = "lun0",
@@ -79,7 +80,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagepool "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagepool/v20200315preview"
+	storagepool "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagepool"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -132,23 +133,23 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iscsi_target = azure_nextgen.storagepool.v20200315preview.IscsiTarget("iscsiTarget",
+iscsi_target = azure_nextgen.storagepool.IscsiTarget("iscsiTarget",
     disk_pool_name="myDiskPool",
     iscsi_target_name="myIscsiTarget",
     resource_group_name="myResourceGroup",
     target_iqn="iqn.2005-03.org.iscsi:server1",
-    tpgs=[azure_nextgen.storagepool.v20200315preview.TargetPortalGroupCreateArgs(
-        acls=[azure_nextgen.storagepool.v20200315preview.AclArgs(
+    tpgs=[azure_nextgen.storagepool.TargetPortalGroupCreateArgs(
+        acls=[azure_nextgen.storagepool.AclArgs(
             initiator_iqn="iqn.2005-03.org.iscsi:client",
             mapped_luns=["lun0"],
             password="some_password",
             username="some_username",
         )],
-        attributes=azure_nextgen.storagepool.v20200315preview.AttributesArgs(
+        attributes=azure_nextgen.storagepool.AttributesArgs(
             authentication=True,
             prod_mode_write_protect=False,
         ),
-        luns=[azure_nextgen.storagepool.v20200315preview.IscsiLunArgs(
+        luns=[azure_nextgen.storagepool.IscsiLunArgs(
             managed_disk_azure_resource_id="/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1",
             name="lun0",
         )],
@@ -164,7 +165,7 @@ iscsi_target = azure_nextgen.storagepool.v20200315preview.IscsiTarget("iscsiTarg
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("iscsiTarget", {
+const iscsiTarget = new azure_nextgen.storagepool.IscsiTarget("iscsiTarget", {
     diskPoolName: "myDiskPool",
     iscsiTargetName: "myIscsiTarget",
     resourceGroupName: "myResourceGroup",
@@ -199,7 +200,7 @@ const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IscsiTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -207,11 +208,11 @@ const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIscsiTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IscsiTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IscsiTarget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIscsiTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IscsiTarget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IscsiTargetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -232,7 +233,7 @@ const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IscsiTargetArgs</span>
+        <span class="property-type"><a href="#inputs">IscsiTargetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,7 +302,7 @@ const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IscsiTargetArgs</span>
+        <span class="property-type"><a href="#inputs">IscsiTargetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -340,7 +341,7 @@ const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IscsiTargetArgs</span>
+        <span class="property-type"><a href="#inputs">IscsiTargetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -363,11 +364,11 @@ const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("
 
 ## IscsiTarget Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1909,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagepool/v20200315preview:IscsiTarget myIscsiTarget /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.StoragePool/diskPools/myDiskPool/iscsiTargets/myIscsiTarget 
+$ pulumi import azure-nextgen:storagepool:IscsiTarget myIscsiTarget /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.StoragePool/diskPools/myDiskPool/iscsiTargets/myIscsiTarget 
 ```
 
 

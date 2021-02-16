@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.keyvault.ManagedHsm resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource information with extended details.
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedHsm = new AzureNextGen.KeyVault.V20200401Preview.ManagedHsm("managedHsm", new AzureNextGen.KeyVault.V20200401Preview.ManagedHsmArgs
+        var managedHsm = new AzureNextGen.KeyVault.ManagedHsm("managedHsm", new AzureNextGen.KeyVault.ManagedHsmArgs
         {
             Location = "westus",
             Name = "hsm1",
-            Properties = new AzureNextGen.KeyVault.V20200401Preview.Inputs.ManagedHsmPropertiesArgs
+            Properties = new AzureNextGen.KeyVault.Inputs.ManagedHsmPropertiesArgs
             {
                 EnablePurgeProtection = true,
                 EnableSoftDelete = true,
@@ -42,7 +43,7 @@ class MyStack : Stack
                 TenantId = "00000000-0000-0000-0000-000000000000",
             },
             ResourceGroupName = "hsm-group",
-            Sku = new AzureNextGen.KeyVault.V20200401Preview.Inputs.ManagedHsmSkuArgs
+            Sku = new AzureNextGen.KeyVault.Inputs.ManagedHsmSkuArgs
             {
                 Family = "B",
                 Name = "Standard_B1",
@@ -67,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault/v20200401preview"
+	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -112,10 +113,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_hsm = azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm",
+managed_hsm = azure_nextgen.keyvault.ManagedHsm("managedHsm",
     location="westus",
     name="hsm1",
-    properties=azure_nextgen.keyvault.v20200401preview.ManagedHsmPropertiesArgs(
+    properties=azure_nextgen.keyvault.ManagedHsmPropertiesArgs(
         enable_purge_protection=True,
         enable_soft_delete=True,
         initial_admin_object_ids=["00000000-0000-0000-0000-000000000000"],
@@ -123,7 +124,7 @@ managed_hsm = azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm",
         tenant_id="00000000-0000-0000-0000-000000000000",
     ),
     resource_group_name="hsm-group",
-    sku=azure_nextgen.keyvault.v20200401preview.ManagedHsmSkuArgs(
+    sku=azure_nextgen.keyvault.ManagedHsmSkuArgs(
         family="B",
         name="Standard_B1",
     ),
@@ -142,7 +143,7 @@ managed_hsm = azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedHsm = new azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm", {
+const managedHsm = new azure_nextgen.keyvault.ManagedHsm("managedHsm", {
     location: "westus",
     name: "hsm1",
     properties: {
@@ -175,7 +176,7 @@ const managedHsm = new azure_nextgen.keyvault.v20200401preview.ManagedHsm("manag
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagedHsmArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedHsmArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -183,11 +184,11 @@ const managedHsm = new azure_nextgen.keyvault.v20200401preview.ManagedHsm("manag
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedHsm</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagedHsmArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedHsm</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedHsm</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedHsmArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedHsm</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagedHsmArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagedHsmArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -208,7 +209,7 @@ const managedHsm = new azure_nextgen.keyvault.v20200401preview.ManagedHsm("manag
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedHsmArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedHsmArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -277,7 +278,7 @@ const managedHsm = new azure_nextgen.keyvault.v20200401preview.ManagedHsm("manag
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedHsmArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedHsmArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -316,7 +317,7 @@ const managedHsm = new azure_nextgen.keyvault.v20200401preview.ManagedHsm("manag
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedHsmArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedHsmArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -339,11 +340,11 @@ const managedHsm = new azure_nextgen.keyvault.v20200401preview.ManagedHsm("manag
 
 ## ManagedHsm Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -705,36 +706,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="tabular">
     <dt>Recover</dt>
-    <dd>recover{{% md %}}Recover the managed HSM pool from a soft-deleted resource.{{% /md %}}</dd>
+    <dd>recover</dd>
     <dt>@Default</dt>
-    <dd>default{{% md %}}Create a new managed HSM pool. This is the default option.{{% /md %}}</dd>
+    <dd>default</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular">
     <dt>Create<wbr>Mode<wbr>Recover</dt>
-    <dd>recover{{% md %}}Recover the managed HSM pool from a soft-deleted resource.{{% /md %}}</dd>
+    <dd>recover</dd>
     <dt>Create<wbr>Mode<wbr>Default</dt>
-    <dd>default{{% md %}}Create a new managed HSM pool. This is the default option.{{% /md %}}</dd>
+    <dd>default</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular">
     <dt>Recover</dt>
-    <dd>recover{{% md %}}Recover the managed HSM pool from a soft-deleted resource.{{% /md %}}</dd>
+    <dd>recover</dd>
     <dt>Default</dt>
-    <dd>default{{% md %}}Create a new managed HSM pool. This is the default option.{{% /md %}}</dd>
+    <dd>default</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular">
     <dt>RECOVER</dt>
-    <dd>recover{{% md %}}Recover the managed HSM pool from a soft-deleted resource.{{% /md %}}</dd>
+    <dd>recover</dd>
     <dt>DEFAULT</dt>
-    <dd>default{{% md %}}Create a new managed HSM pool. This is the default option.{{% /md %}}</dd>
+    <dd>default</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1599,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:keyvault/v20200401preview:ManagedHsm hsm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.KeyVault/managedHSMs/hsm1 
+$ pulumi import azure-nextgen:keyvault:ManagedHsm hsm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.KeyVault/managedHSMs/hsm1 
 ```
 
 

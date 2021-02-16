@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.edgeorder.AddressByName resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Address Resource.
+API Version: 2020-12-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var addressByName = new AzureNextGen.EdgeOrder.V20201201Preview.AddressByName("addressByName", new AzureNextGen.EdgeOrder.V20201201Preview.AddressByNameArgs
+        var addressByName = new AzureNextGen.EdgeOrder.AddressByName("addressByName", new AzureNextGen.EdgeOrder.AddressByNameArgs
         {
             AddressName = "TestMSAddressName",
-            ContactDetails = new AzureNextGen.EdgeOrder.V20201201Preview.Inputs.ContactDetailsArgs
+            ContactDetails = new AzureNextGen.EdgeOrder.Inputs.ContactDetailsArgs
             {
                 ContactName = "Petr Cech",
                 Phone = "123344334",
@@ -37,7 +38,7 @@ class MyStack : Stack
             },
             Location = "westus",
             ResourceGroupName = "TestRG",
-            ShippingAddress = new AzureNextGen.EdgeOrder.V20201201Preview.Inputs.ShippingAddressArgs
+            ShippingAddress = new AzureNextGen.EdgeOrder.Inputs.ShippingAddressArgs
             {
                 AddressType = "None",
                 City = "San Francisco",
@@ -63,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	edgeorder "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/edgeorder/v20201201preview"
+	edgeorder "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/edgeorder"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -106,16 +107,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-address_by_name = azure_nextgen.edgeorder.v20201201preview.AddressByName("addressByName",
+address_by_name = azure_nextgen.edgeorder.AddressByName("addressByName",
     address_name="TestMSAddressName",
-    contact_details=azure_nextgen.edgeorder.v20201201preview.ContactDetailsArgs(
+    contact_details=azure_nextgen.edgeorder.ContactDetailsArgs(
         contact_name="Petr Cech",
         phone="123344334",
         phone_extension="",
     ),
     location="westus",
     resource_group_name="TestRG",
-    shipping_address=azure_nextgen.edgeorder.v20201201preview.ShippingAddressArgs(
+    shipping_address=azure_nextgen.edgeorder.ShippingAddressArgs(
         address_type="None",
         city="San Francisco",
         company_name="Microsoft",
@@ -136,7 +137,7 @@ address_by_name = azure_nextgen.edgeorder.v20201201preview.AddressByName("addres
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const addressByName = new azure_nextgen.edgeorder.v20201201preview.AddressByName("addressByName", {
+const addressByName = new azure_nextgen.edgeorder.AddressByName("addressByName", {
     addressName: "TestMSAddressName",
     contactDetails: {
         contactName: "Petr Cech",
@@ -169,7 +170,7 @@ const addressByName = new azure_nextgen.edgeorder.v20201201preview.AddressByName
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AddressByName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AddressByNameArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AddressByName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AddressByNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -177,11 +178,11 @@ const addressByName = new azure_nextgen.edgeorder.v20201201preview.AddressByName
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAddressByName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AddressByNameArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AddressByName</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAddressByName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AddressByNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AddressByName</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AddressByName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AddressByNameArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AddressByName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AddressByNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -202,7 +203,7 @@ const addressByName = new azure_nextgen.edgeorder.v20201201preview.AddressByName
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AddressByNameArgs</span>
+        <span class="property-type"><a href="#inputs">AddressByNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -271,7 +272,7 @@ const addressByName = new azure_nextgen.edgeorder.v20201201preview.AddressByName
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AddressByNameArgs</span>
+        <span class="property-type"><a href="#inputs">AddressByNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -310,7 +311,7 @@ const addressByName = new azure_nextgen.edgeorder.v20201201preview.AddressByName
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AddressByNameArgs</span>
+        <span class="property-type"><a href="#inputs">AddressByNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -333,11 +334,11 @@ const addressByName = new azure_nextgen.edgeorder.v20201201preview.AddressByName
 
 ## AddressByName Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AddressByName resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AddressByName resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2171,7 +2172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:edgeorder/v20201201preview:AddressByName TestMSAddressName /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/addresses/TestMSAddressName 
+$ pulumi import azure-nextgen:edgeorder:AddressByName TestMSAddressName /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/addresses/TestMSAddressName 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkPortMirroring
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NSX Port Mirroring
+API Version: 2020-07-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadNetworkPortMirroring = new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring", new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkPortMirroringArgs
+        var workloadNetworkPortMirroring = new AzureNextGen.AVS.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring", new AzureNextGen.AVS.WorkloadNetworkPortMirroringArgs
         {
             Destination = "vmGroup2",
             Direction = "BIDIRECTIONAL",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/v20200717preview"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_network_port_mirroring = azure_nextgen.avs.v20200717preview.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring",
+workload_network_port_mirroring = azure_nextgen.avs.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring",
     destination="vmGroup2",
     direction="BIDIRECTIONAL",
     display_name="portMirroring1",
@@ -104,7 +105,7 @@ workload_network_port_mirroring = azure_nextgen.avs.v20200717preview.WorkloadNet
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadNetworkPortMirroring = new azure_nextgen.avs.v20200717preview.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring", {
+const workloadNetworkPortMirroring = new azure_nextgen.avs.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring", {
     destination: "vmGroup2",
     direction: "BIDIRECTIONAL",
     displayName: "portMirroring1",
@@ -127,7 +128,7 @@ const workloadNetworkPortMirroring = new azure_nextgen.avs.v20200717preview.Work
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkloadNetworkPortMirroring</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WorkloadNetworkPortMirroringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkloadNetworkPortMirroring</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkloadNetworkPortMirroringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -135,11 +136,11 @@ const workloadNetworkPortMirroring = new azure_nextgen.avs.v20200717preview.Work
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkloadNetworkPortMirroring</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WorkloadNetworkPortMirroringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkloadNetworkPortMirroring</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkloadNetworkPortMirroring</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkloadNetworkPortMirroringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkloadNetworkPortMirroring</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkloadNetworkPortMirroring</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WorkloadNetworkPortMirroringArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkloadNetworkPortMirroring</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkloadNetworkPortMirroringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -160,7 +161,7 @@ const workloadNetworkPortMirroring = new azure_nextgen.avs.v20200717preview.Work
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkloadNetworkPortMirroringArgs</span>
+        <span class="property-type"><a href="#inputs">WorkloadNetworkPortMirroringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -229,7 +230,7 @@ const workloadNetworkPortMirroring = new azure_nextgen.avs.v20200717preview.Work
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkloadNetworkPortMirroringArgs</span>
+        <span class="property-type"><a href="#inputs">WorkloadNetworkPortMirroringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -268,7 +269,7 @@ const workloadNetworkPortMirroring = new azure_nextgen.avs.v20200717preview.Work
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkloadNetworkPortMirroringArgs</span>
+        <span class="property-type"><a href="#inputs">WorkloadNetworkPortMirroringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -291,11 +292,11 @@ const workloadNetworkPortMirroring = new azure_nextgen.avs.v20200717preview.Work
 
 ## WorkloadNetworkPortMirroring Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The WorkloadNetworkPortMirroring resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The WorkloadNetworkPortMirroring resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -867,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkPortMirroring portMirroring1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/portMirroringProfiles/portMirroring1 
+$ pulumi import azure-nextgen:avs:WorkloadNetworkPortMirroring portMirroring1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/portMirroringProfiles/portMirroring1 
 ```
 
 

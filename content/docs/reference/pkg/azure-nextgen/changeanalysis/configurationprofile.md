@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.changeanalysis.ConfigurationProf
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A profile object that contains change analysis configuration, such as notification settings, for this subscription
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationProfile = new AzureNextGen.ChangeAnalysis.V20200401Preview.ConfigurationProfile("configurationProfile", new AzureNextGen.ChangeAnalysis.V20200401Preview.ConfigurationProfileArgs
+        var configurationProfile = new AzureNextGen.ChangeAnalysis.ConfigurationProfile("configurationProfile", new AzureNextGen.ChangeAnalysis.ConfigurationProfileArgs
         {
             ProfileName = "default",
         });
@@ -44,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	changeanalysis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/changeanalysis/v20200401preview"
+	changeanalysis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/changeanalysis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -70,7 +71,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_profile = azure_nextgen.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", profile_name="default")
+configuration_profile = azure_nextgen.changeanalysis.ConfigurationProfile("configurationProfile", profile_name="default")
 
 ```
 
@@ -82,7 +83,7 @@ configuration_profile = azure_nextgen.changeanalysis.v20200401preview.Configurat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", {profileName: "default"});
+const configurationProfile = new azure_nextgen.changeanalysis.ConfigurationProfile("configurationProfile", {profileName: "default"});
 
 ```
 
@@ -98,7 +99,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationProfile = new AzureNextGen.ChangeAnalysis.V20200401Preview.ConfigurationProfile("configurationProfile", new AzureNextGen.ChangeAnalysis.V20200401Preview.ConfigurationProfileArgs
+        var configurationProfile = new AzureNextGen.ChangeAnalysis.ConfigurationProfile("configurationProfile", new AzureNextGen.ChangeAnalysis.ConfigurationProfileArgs
         {
             ProfileName = "default",
         });
@@ -116,7 +117,7 @@ class MyStack : Stack
 package main
 
 import (
-	changeanalysis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/changeanalysis/v20200401preview"
+	changeanalysis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/changeanalysis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -142,7 +143,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_profile = azure_nextgen.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", profile_name="default")
+configuration_profile = azure_nextgen.changeanalysis.ConfigurationProfile("configurationProfile", profile_name="default")
 
 ```
 
@@ -154,7 +155,7 @@ configuration_profile = azure_nextgen.changeanalysis.v20200401preview.Configurat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", {profileName: "default"});
+const configurationProfile = new azure_nextgen.changeanalysis.ConfigurationProfile("configurationProfile", {profileName: "default"});
 
 ```
 
@@ -168,7 +169,7 @@ const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.C
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ConfigurationProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConfigurationProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -176,11 +177,11 @@ const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.C
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigurationProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ConfigurationProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigurationProfile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigurationProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConfigurationProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigurationProfile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ConfigurationProfileArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConfigurationProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -201,7 +202,7 @@ const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.C
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConfigurationProfileArgs</span>
+        <span class="property-type"><a href="#inputs">ConfigurationProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -270,7 +271,7 @@ const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.C
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConfigurationProfileArgs</span>
+        <span class="property-type"><a href="#inputs">ConfigurationProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -309,7 +310,7 @@ const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.C
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConfigurationProfileArgs</span>
+        <span class="property-type"><a href="#inputs">ConfigurationProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -332,11 +333,11 @@ const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.C
 
 ## ConfigurationProfile Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ConfigurationProfile resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ConfigurationProfile resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1700,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:changeanalysis/v20200401preview:ConfigurationProfile default /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/providers/Microsoft.ChangeAnalysis/profile/default 
+$ pulumi import azure-nextgen:changeanalysis:ConfigurationProfile default /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/providers/Microsoft.ChangeAnalysis/profile/default 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.OriginGroup resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var originGroup = new AzureNextGen.Cdn.Latest.OriginGroup("originGroup", new AzureNextGen.Cdn.Latest.OriginGroupArgs
+        var originGroup = new AzureNextGen.Cdn.OriginGroup("originGroup", new AzureNextGen.Cdn.OriginGroupArgs
         {
             EndpointName = "endpoint1",
-            HealthProbeSettings = new AzureNextGen.Cdn.Latest.Inputs.HealthProbeParametersArgs
+            HealthProbeSettings = new AzureNextGen.Cdn.Inputs.HealthProbeParametersArgs
             {
                 ProbeIntervalInSeconds = 120,
                 ProbePath = "/health.aspx",
@@ -40,14 +40,14 @@ class MyStack : Stack
             OriginGroupName = "origingroup1",
             Origins = 
             {
-                new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
                 },
             },
             ProfileName = "profile1",
             ResourceGroupName = "RG",
-            ResponseBasedOriginErrorDetectionSettings = new AzureNextGen.Cdn.Latest.Inputs.ResponseBasedOriginErrorDetectionParametersArgs
+            ResponseBasedOriginErrorDetectionSettings = new AzureNextGen.Cdn.Inputs.ResponseBasedOriginErrorDetectionParametersArgs
             {
                 ResponseBasedDetectedErrorTypes = "TcpErrorsOnly",
                 ResponseBasedFailoverThresholdPercentage = 10,
@@ -67,7 +67,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -111,21 +111,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-origin_group = azure_nextgen.cdn.latest.OriginGroup("originGroup",
+origin_group = azure_nextgen.cdn.OriginGroup("originGroup",
     endpoint_name="endpoint1",
-    health_probe_settings=azure_nextgen.cdn.latest.HealthProbeParametersArgs(
+    health_probe_settings=azure_nextgen.cdn.HealthProbeParametersArgs(
         probe_interval_in_seconds=120,
         probe_path="/health.aspx",
         probe_protocol="Http",
         probe_request_type="GET",
     ),
     origin_group_name="origingroup1",
-    origins=[azure_nextgen.cdn.latest.ResourceReferenceArgs(
+    origins=[azure_nextgen.cdn.ResourceReferenceArgs(
         id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
     )],
     profile_name="profile1",
     resource_group_name="RG",
-    response_based_origin_error_detection_settings=azure_nextgen.cdn.latest.ResponseBasedOriginErrorDetectionParametersArgs(
+    response_based_origin_error_detection_settings=azure_nextgen.cdn.ResponseBasedOriginErrorDetectionParametersArgs(
         response_based_detected_error_types="TcpErrorsOnly",
         response_based_failover_threshold_percentage=10,
     ))
@@ -140,7 +140,7 @@ origin_group = azure_nextgen.cdn.latest.OriginGroup("originGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const originGroup = new azure_nextgen.cdn.latest.OriginGroup("originGroup", {
+const originGroup = new azure_nextgen.cdn.OriginGroup("originGroup", {
     endpointName: "endpoint1",
     healthProbeSettings: {
         probeIntervalInSeconds: 120,
@@ -172,7 +172,7 @@ const originGroup = new azure_nextgen.cdn.latest.OriginGroup("originGroup", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OriginGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">OriginGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OriginGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OriginGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -180,11 +180,11 @@ const originGroup = new azure_nextgen.cdn.latest.OriginGroup("originGroup", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOriginGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">OriginGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OriginGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOriginGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OriginGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OriginGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OriginGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">OriginGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OriginGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OriginGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -205,7 +205,7 @@ const originGroup = new azure_nextgen.cdn.latest.OriginGroup("originGroup", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OriginGroupArgs</span>
+        <span class="property-type"><a href="#inputs">OriginGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,7 +274,7 @@ const originGroup = new azure_nextgen.cdn.latest.OriginGroup("originGroup", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OriginGroupArgs</span>
+        <span class="property-type"><a href="#inputs">OriginGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -313,7 +313,7 @@ const originGroup = new azure_nextgen.cdn.latest.OriginGroup("originGroup", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OriginGroupArgs</span>
+        <span class="property-type"><a href="#inputs">OriginGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -336,11 +336,11 @@ const originGroup = new azure_nextgen.cdn.latest.OriginGroup("originGroup", {
 
 ## OriginGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The OriginGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The OriginGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2226,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:OriginGroup originGroup1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1 
+$ pulumi import azure-nextgen:cdn:OriginGroup originGroup1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.Addon resource with examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An addon resource
+API Version: 2020-07-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var addon = new AzureNextGen.AVS.V20200717Preview.Addon("addon", new AzureNextGen.AVS.V20200717Preview.AddonArgs
+        var addon = new AzureNextGen.AVS.Addon("addon", new AzureNextGen.AVS.AddonArgs
         {
             AddonName = "srm",
             AddonType = "SRM",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/v20200717preview"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-addon = azure_nextgen.avs.v20200717preview.Addon("addon",
+addon = azure_nextgen.avs.Addon("addon",
     addon_name="srm",
     addon_type="SRM",
     license_key="41915178-A8FF-4A4D-B683-6D735AF5E3F5",
@@ -95,7 +96,7 @@ addon = azure_nextgen.avs.v20200717preview.Addon("addon",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const addon = new azure_nextgen.avs.v20200717preview.Addon("addon", {
+const addon = new azure_nextgen.avs.Addon("addon", {
     addonName: "srm",
     addonType: "SRM",
     licenseKey: "41915178-A8FF-4A4D-B683-6D735AF5E3F5",
@@ -115,7 +116,7 @@ const addon = new azure_nextgen.avs.v20200717preview.Addon("addon", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Addon</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AddonArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Addon</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AddonArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -123,11 +124,11 @@ const addon = new azure_nextgen.avs.v20200717preview.Addon("addon", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAddon</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AddonArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Addon</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAddon</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AddonArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Addon</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Addon</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AddonArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Addon</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AddonArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,7 +149,7 @@ const addon = new azure_nextgen.avs.v20200717preview.Addon("addon", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AddonArgs</span>
+        <span class="property-type"><a href="#inputs">AddonArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -217,7 +218,7 @@ const addon = new azure_nextgen.avs.v20200717preview.Addon("addon", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AddonArgs</span>
+        <span class="property-type"><a href="#inputs">AddonArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -256,7 +257,7 @@ const addon = new azure_nextgen.avs.v20200717preview.Addon("addon", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AddonArgs</span>
+        <span class="property-type"><a href="#inputs">AddonArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -279,11 +280,11 @@ const addon = new azure_nextgen.avs.v20200717preview.Addon("addon", {
 
 ## Addon Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Addon resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Addon resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -719,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/v20200717preview:Addon srm /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/addons/srm 
+$ pulumi import azure-nextgen:avs:Addon srm /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/addons/srm 
 ```
 
 

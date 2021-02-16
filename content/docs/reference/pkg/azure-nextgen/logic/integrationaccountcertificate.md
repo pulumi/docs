@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountCertific
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The integration account certificate.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountCertificate = new AzureNextGen.Logic.Latest.IntegrationAccountCertificate("integrationAccountCertificate", new AzureNextGen.Logic.Latest.IntegrationAccountCertificateArgs
+        var integrationAccountCertificate = new AzureNextGen.Logic.IntegrationAccountCertificate("integrationAccountCertificate", new AzureNextGen.Logic.IntegrationAccountCertificateArgs
         {
             CertificateName = "testCertificate",
             IntegrationAccountName = "testIntegrationAccount",
-            Key = new AzureNextGen.Logic.Latest.Inputs.KeyVaultKeyReferenceArgs
+            Key = new AzureNextGen.Logic.Inputs.KeyVaultKeyReferenceArgs
             {
                 KeyName = "<keyName>",
-                KeyVault = new AzureNextGen.Logic.Latest.Inputs.KeyVaultKeyReferenceKeyVaultArgs
+                KeyVault = new AzureNextGen.Logic.Inputs.KeyVaultKeyReferenceKeyVaultArgs
                 {
                     Id = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testResourceGroup/providers/microsoft.keyvault/vaults/<keyVaultName>",
                 },
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,12 +95,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_certificate = azure_nextgen.logic.latest.IntegrationAccountCertificate("integrationAccountCertificate",
+integration_account_certificate = azure_nextgen.logic.IntegrationAccountCertificate("integrationAccountCertificate",
     certificate_name="testCertificate",
     integration_account_name="testIntegrationAccount",
-    key=azure_nextgen.logic.latest.KeyVaultKeyReferenceArgs(
+    key=azure_nextgen.logic.KeyVaultKeyReferenceArgs(
         key_name="<keyName>",
-        key_vault=azure_nextgen.logic.latest.KeyVaultKeyReferenceKeyVaultArgs(
+        key_vault=azure_nextgen.logic.KeyVaultKeyReferenceKeyVaultArgs(
             id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testResourceGroup/providers/microsoft.keyvault/vaults/<keyVaultName>",
         ),
         key_version="87d9764197604449b9b8eb7bd8710868",
@@ -119,7 +119,7 @@ integration_account_certificate = azure_nextgen.logic.latest.IntegrationAccountC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationAccountCertificate = new azure_nextgen.logic.latest.IntegrationAccountCertificate("integrationAccountCertificate", {
+const integrationAccountCertificate = new azure_nextgen.logic.IntegrationAccountCertificate("integrationAccountCertificate", {
     certificateName: "testCertificate",
     integrationAccountName: "testIntegrationAccount",
     key: {
@@ -146,7 +146,7 @@ const integrationAccountCertificate = new azure_nextgen.logic.latest.Integration
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountCertificate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IntegrationAccountCertificateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountCertificate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -154,11 +154,11 @@ const integrationAccountCertificate = new azure_nextgen.logic.latest.Integration
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountCertificate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IntegrationAccountCertificateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountCertificate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountCertificate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationAccountCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountCertificate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountCertificate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IntegrationAccountCertificateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountCertificate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationAccountCertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -179,7 +179,7 @@ const integrationAccountCertificate = new azure_nextgen.logic.latest.Integration
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountCertificateArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountCertificateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -248,7 +248,7 @@ const integrationAccountCertificate = new azure_nextgen.logic.latest.Integration
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountCertificateArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountCertificateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -287,7 +287,7 @@ const integrationAccountCertificate = new azure_nextgen.logic.latest.Integration
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountCertificateArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountCertificateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -310,11 +310,11 @@ const integrationAccountCertificate = new azure_nextgen.logic.latest.Integration
 
 ## IntegrationAccountCertificate Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IntegrationAccountCertificate resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IntegrationAccountCertificate resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1320,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationAccountCertificate testCertificate /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/certificates/testCertificate 
+$ pulumi import azure-nextgen:logic:IntegrationAccountCertificate testCertificate /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/certificates/testCertificate 
 ```
 
 

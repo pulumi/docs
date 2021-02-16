@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.Application resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The application resource.
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.ServiceFabric.Latest.Application("application", new AzureNextGen.ServiceFabric.Latest.ApplicationArgs
+        var application = new AzureNextGen.ServiceFabric.Application("application", new AzureNextGen.ServiceFabric.ApplicationArgs
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
             MaximumNodes = 3,
             Metrics = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.ApplicationMetricDescriptionArgs
+                new AzureNextGen.ServiceFabric.Inputs.ApplicationMetricDescriptionArgs
                 {
                     MaximumCapacity = 3,
                     Name = "metric1",
@@ -51,12 +51,12 @@ class MyStack : Stack
             ResourceGroupName = "resRg",
             TypeName = "myAppType",
             TypeVersion = "1.0",
-            UpgradePolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ApplicationUpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.ServiceFabric.Inputs.ApplicationUpgradePolicyArgs
             {
-                ApplicationHealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ArmApplicationHealthPolicyArgs
+                ApplicationHealthPolicy = new AzureNextGen.ServiceFabric.Inputs.ArmApplicationHealthPolicyArgs
                 {
                     ConsiderWarningAsError = true,
-                    DefaultServiceTypeHealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ArmServiceTypeHealthPolicyArgs
+                    DefaultServiceTypeHealthPolicy = new AzureNextGen.ServiceFabric.Inputs.ArmServiceTypeHealthPolicyArgs
                     {
                         MaxPercentUnhealthyPartitionsPerService = 0,
                         MaxPercentUnhealthyReplicasPerPartition = 0,
@@ -65,7 +65,7 @@ class MyStack : Stack
                     MaxPercentUnhealthyDeployedApplications = 0,
                 },
                 ForceRestart = false,
-                RollingUpgradeMonitoringPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ArmRollingUpgradeMonitoringPolicyArgs
+                RollingUpgradeMonitoringPolicy = new AzureNextGen.ServiceFabric.Inputs.ArmRollingUpgradeMonitoringPolicyArgs
                 {
                     FailureAction = "Rollback",
                     HealthCheckRetryTimeout = "00:10:00",
@@ -92,7 +92,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/latest"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -158,11 +158,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.servicefabric.latest.Application("application",
+application = azure_nextgen.servicefabric.Application("application",
     application_name="myApp",
     cluster_name="myCluster",
     maximum_nodes=3,
-    metrics=[azure_nextgen.servicefabric.latest.ApplicationMetricDescriptionArgs(
+    metrics=[azure_nextgen.servicefabric.ApplicationMetricDescriptionArgs(
         maximum_capacity=3,
         name="metric1",
         reservation_capacity=1,
@@ -176,10 +176,10 @@ application = azure_nextgen.servicefabric.latest.Application("application",
     resource_group_name="resRg",
     type_name="myAppType",
     type_version="1.0",
-    upgrade_policy=azure_nextgen.servicefabric.latest.ApplicationUpgradePolicyArgs(
-        application_health_policy=azure_nextgen.servicefabric.latest.ArmApplicationHealthPolicyArgs(
+    upgrade_policy=azure_nextgen.servicefabric.ApplicationUpgradePolicyArgs(
+        application_health_policy=azure_nextgen.servicefabric.ArmApplicationHealthPolicyArgs(
             consider_warning_as_error=True,
-            default_service_type_health_policy=azure_nextgen.servicefabric.latest.ArmServiceTypeHealthPolicyArgs(
+            default_service_type_health_policy=azure_nextgen.servicefabric.ArmServiceTypeHealthPolicyArgs(
                 max_percent_unhealthy_partitions_per_service=0,
                 max_percent_unhealthy_replicas_per_partition=0,
                 max_percent_unhealthy_services=0,
@@ -187,7 +187,7 @@ application = azure_nextgen.servicefabric.latest.Application("application",
             max_percent_unhealthy_deployed_applications=0,
         ),
         force_restart=False,
-        rolling_upgrade_monitoring_policy=azure_nextgen.servicefabric.latest.ArmRollingUpgradeMonitoringPolicyArgs(
+        rolling_upgrade_monitoring_policy=azure_nextgen.servicefabric.ArmRollingUpgradeMonitoringPolicyArgs(
             failure_action="Rollback",
             health_check_retry_timeout="00:10:00",
             health_check_stable_duration="00:05:00",
@@ -209,7 +209,7 @@ application = azure_nextgen.servicefabric.latest.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.servicefabric.latest.Application("application", {
+const application = new azure_nextgen.servicefabric.Application("application", {
     applicationName: "myApp",
     clusterName: "myCluster",
     maximumNodes: 3,
@@ -265,7 +265,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.ServiceFabric.Latest.Application("application", new AzureNextGen.ServiceFabric.Latest.ApplicationArgs
+        var application = new AzureNextGen.ServiceFabric.Application("application", new AzureNextGen.ServiceFabric.ApplicationArgs
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
@@ -288,7 +288,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/latest"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -319,7 +319,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.servicefabric.latest.Application("application",
+application = azure_nextgen.servicefabric.Application("application",
     application_name="myApp",
     cluster_name="myCluster",
     remove_application_capacity=False,
@@ -337,7 +337,7 @@ application = azure_nextgen.servicefabric.latest.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.servicefabric.latest.Application("application", {
+const application = new azure_nextgen.servicefabric.Application("application", {
     applicationName: "myApp",
     clusterName: "myCluster",
     removeApplicationCapacity: false,
@@ -358,7 +358,7 @@ const application = new azure_nextgen.servicefabric.latest.Application("applicat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -366,11 +366,11 @@ const application = new azure_nextgen.servicefabric.latest.Application("applicat
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ApplicationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -391,7 +391,7 @@ const application = new azure_nextgen.servicefabric.latest.Application("applicat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -460,7 +460,7 @@ const application = new azure_nextgen.servicefabric.latest.Application("applicat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -499,7 +499,7 @@ const application = new azure_nextgen.servicefabric.latest.Application("applicat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -522,11 +522,11 @@ const application = new azure_nextgen.servicefabric.latest.Application("applicat
 
 ## Application Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Application resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Application resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4056,7 +4056,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabric/latest:Application myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp 
+$ pulumi import azure-nextgen:servicefabric:Application myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp 
 ```
 
 

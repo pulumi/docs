@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VpnSite resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 VpnSite Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vpnSite = new AzureNextGen.Network.Latest.VpnSite("vpnSite", new AzureNextGen.Network.Latest.VpnSiteArgs
+        var vpnSite = new AzureNextGen.Network.VpnSite("vpnSite", new AzureNextGen.Network.VpnSiteArgs
         {
-            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            AddressSpace = new AzureNextGen.Network.Inputs.AddressSpaceArgs
             {
                 AddressPrefixes = 
                 {
@@ -38,9 +38,9 @@ class MyStack : Stack
             },
             IsSecuritySite = false,
             Location = "West US",
-            O365Policy = new AzureNextGen.Network.Latest.Inputs.O365PolicyPropertiesArgs
+            O365Policy = new AzureNextGen.Network.Inputs.O365PolicyPropertiesArgs
             {
-                BreakOutCategories = new AzureNextGen.Network.Latest.Inputs.O365BreakOutCategoryPoliciesArgs
+                BreakOutCategories = new AzureNextGen.Network.Inputs.O365BreakOutCategoryPoliciesArgs
                 {
                     Allow = true,
                     Default = false,
@@ -52,22 +52,22 @@ class MyStack : Stack
             {
                 { "key1", "value1" },
             },
-            VirtualWan = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            VirtualWan = new AzureNextGen.Network.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1",
             },
             VpnSiteLinks = 
             {
-                new AzureNextGen.Network.Latest.Inputs.VpnSiteLinkArgs
+                new AzureNextGen.Network.Inputs.VpnSiteLinkArgs
                 {
-                    BgpProperties = new AzureNextGen.Network.Latest.Inputs.VpnLinkBgpSettingsArgs
+                    BgpProperties = new AzureNextGen.Network.Inputs.VpnLinkBgpSettingsArgs
                     {
                         Asn = 1234,
                         BgpPeeringAddress = "192.168.0.0",
                     },
                     Fqdn = "link1.vpnsite1.contoso.com",
                     IpAddress = "50.50.50.56",
-                    LinkProperties = new AzureNextGen.Network.Latest.Inputs.VpnLinkProviderPropertiesArgs
+                    LinkProperties = new AzureNextGen.Network.Inputs.VpnLinkProviderPropertiesArgs
                     {
                         LinkProviderName = "vendor1",
                         LinkSpeedInMbps = 0,
@@ -91,7 +91,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -153,14 +153,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vpn_site = azure_nextgen.network.latest.VpnSite("vpnSite",
-    address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+vpn_site = azure_nextgen.network.VpnSite("vpnSite",
+    address_space=azure_nextgen.network.AddressSpaceArgs(
         address_prefixes=["10.0.0.0/16"],
     ),
     is_security_site=False,
     location="West US",
-    o365_policy=azure_nextgen.network.latest.O365PolicyPropertiesArgs(
-        break_out_categories=azure_nextgen.network.latest.O365BreakOutCategoryPoliciesArgs(
+    o365_policy=azure_nextgen.network.O365PolicyPropertiesArgs(
+        break_out_categories=azure_nextgen.network.O365BreakOutCategoryPoliciesArgs(
             allow=True,
             default=False,
             optimize=True,
@@ -170,17 +170,17 @@ vpn_site = azure_nextgen.network.latest.VpnSite("vpnSite",
     tags={
         "key1": "value1",
     },
-    virtual_wan=azure_nextgen.network.latest.SubResourceArgs(
+    virtual_wan=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1",
     ),
-    vpn_site_links=[azure_nextgen.network.latest.VpnSiteLinkArgs(
-        bgp_properties=azure_nextgen.network.latest.VpnLinkBgpSettingsArgs(
+    vpn_site_links=[azure_nextgen.network.VpnSiteLinkArgs(
+        bgp_properties=azure_nextgen.network.VpnLinkBgpSettingsArgs(
             asn=1234,
             bgp_peering_address="192.168.0.0",
         ),
         fqdn="link1.vpnsite1.contoso.com",
         ip_address="50.50.50.56",
-        link_properties=azure_nextgen.network.latest.VpnLinkProviderPropertiesArgs(
+        link_properties=azure_nextgen.network.VpnLinkProviderPropertiesArgs(
             link_provider_name="vendor1",
             link_speed_in_mbps=0,
         ),
@@ -198,7 +198,7 @@ vpn_site = azure_nextgen.network.latest.VpnSite("vpnSite",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vpnSite = new azure_nextgen.network.latest.VpnSite("vpnSite", {
+const vpnSite = new azure_nextgen.network.VpnSite("vpnSite", {
     addressSpace: {
         addressPrefixes: ["10.0.0.0/16"],
     },
@@ -246,7 +246,7 @@ const vpnSite = new azure_nextgen.network.latest.VpnSite("vpnSite", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnSite</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VpnSiteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnSite</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnSiteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -254,11 +254,11 @@ const vpnSite = new azure_nextgen.network.latest.VpnSite("vpnSite", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnSite</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VpnSiteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnSite</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnSite</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnSiteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnSite</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnSite</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VpnSiteArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnSite</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VpnSiteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -279,7 +279,7 @@ const vpnSite = new azure_nextgen.network.latest.VpnSite("vpnSite", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VpnSiteArgs</span>
+        <span class="property-type"><a href="#inputs">VpnSiteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -348,7 +348,7 @@ const vpnSite = new azure_nextgen.network.latest.VpnSite("vpnSite", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VpnSiteArgs</span>
+        <span class="property-type"><a href="#inputs">VpnSiteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -387,7 +387,7 @@ const vpnSite = new azure_nextgen.network.latest.VpnSite("vpnSite", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VpnSiteArgs</span>
+        <span class="property-type"><a href="#inputs">VpnSiteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -410,11 +410,11 @@ const vpnSite = new azure_nextgen.network.latest.VpnSite("vpnSite", {
 
 ## VpnSite Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VpnSite resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VpnSite resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3672,7 +3672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VpnSite vpnSite1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1 
+$ pulumi import azure-nextgen:network:VpnSite vpnSite1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1 
 ```
 
 

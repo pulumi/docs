@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.AlertRule resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The alert rule resource.
-Latest API Version: 2016-03-01.
+API Version: 2016-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,22 +27,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.Insights.Latest.AlertRule("alertRule", new AzureNextGen.Insights.Latest.AlertRuleArgs
+        var alertRule = new AzureNextGen.Insights.AlertRule("alertRule", new AzureNextGen.Insights.AlertRuleArgs
         {
             Actions = {},
-            Condition = 
+            Condition = new AzureNextGen.Insights.Inputs.ThresholdRuleConditionArgs
             {
-                { "dataSource", 
+                DataSource = new AzureNextGen.Insights.Inputs.RuleMetricDataSourceArgs
                 {
-                    { "metricName", "Requests" },
-                    { "odataType", "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource" },
-                    { "resourceUri", "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest" },
-                } },
-                { "odataType", "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition" },
-                { "operator", "GreaterThan" },
-                { "threshold", 3 },
-                { "timeAggregation", "Total" },
-                { "windowSize", "PT5M" },
+                    MetricName = "Requests",
+                    OdataType = "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
+                    ResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
+                },
+                OdataType = "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+                Operator = "GreaterThan",
+                Threshold = 3,
+                TimeAggregation = "Total",
+                WindowSize = "PT5M",
             },
             Description = "Pura Vida",
             IsEnabled = true,
@@ -70,20 +70,20 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.insights.latest.AlertRule("alertRule",
+alert_rule = azure_nextgen.insights.AlertRule("alertRule",
     actions=[],
-    condition={
-        "dataSource": {
-            "metricName": "Requests",
-            "odataType": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
-            "resourceUri": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
-        },
-        "odataType": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
-        "operator": "GreaterThan",
-        "threshold": 3,
-        "timeAggregation": "Total",
-        "windowSize": "PT5M",
-    },
+    condition=azure_nextgen.insights.ThresholdRuleConditionArgs(
+        data_source=azure_nextgen.insights.RuleMetricDataSourceArgs(
+            metric_name="Requests",
+            odata_type="Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
+            resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
+        ),
+        odata_type="Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+        operator="GreaterThan",
+        threshold=3,
+        time_aggregation="Total",
+        window_size="PT5M",
+    ),
     description="Pura Vida",
     is_enabled=True,
     location="West US",
@@ -102,7 +102,7 @@ alert_rule = azure_nextgen.insights.latest.AlertRule("alertRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alertRule = new azure_nextgen.insights.latest.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.insights.AlertRule("alertRule", {
     actions: [],
     condition: {
         dataSource: {
@@ -137,7 +137,7 @@ const alertRule = new azure_nextgen.insights.latest.AlertRule("alertRule", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AlertRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -145,11 +145,11 @@ const alertRule = new azure_nextgen.insights.latest.AlertRule("alertRule", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AlertRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AlertRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,7 +170,7 @@ const alertRule = new azure_nextgen.insights.latest.AlertRule("alertRule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AlertRuleArgs</span>
+        <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -239,7 +239,7 @@ const alertRule = new azure_nextgen.insights.latest.AlertRule("alertRule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AlertRuleArgs</span>
+        <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -278,7 +278,7 @@ const alertRule = new azure_nextgen.insights.latest.AlertRule("alertRule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AlertRuleArgs</span>
+        <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,11 +301,11 @@ const alertRule = new azure_nextgen.insights.latest.AlertRule("alertRule", {
 
 ## AlertRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AlertRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AlertRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4059,7 +4059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:AlertRule chiricutin /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/alertrules/chiricutin 
+$ pulumi import azure-nextgen:insights:AlertRule chiricutin /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/alertrules/chiricutin 
 ```
 
 

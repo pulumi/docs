@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.authorization.PolicyDefinitionAt
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The policy definition.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policyDefinitionAtManagementGroup = new AzureNextGen.Authorization.Latest.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", new AzureNextGen.Authorization.Latest.PolicyDefinitionAtManagementGroupArgs
+        var policyDefinitionAtManagementGroup = new AzureNextGen.Authorization.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", new AzureNextGen.Authorization.PolicyDefinitionAtManagementGroupArgs
         {
             Description = "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
             DisplayName = "Enforce resource naming convention",
@@ -39,18 +39,18 @@ class MyStack : Stack
             Mode = "All",
             Parameters = 
             {
-                { "prefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueArgs
+                { "prefix", new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueArgs
                 {
-                    Metadata = new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
+                    Metadata = new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
                     {
                         Description = "Resource name prefix",
                         DisplayName = "Prefix",
                     },
                     Type = "String",
                 } },
-                { "suffix", new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueArgs
+                { "suffix", new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueArgs
                 {
-                    Metadata = new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
+                    Metadata = new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
                     {
                         Description = "Resource name suffix",
                         DisplayName = "Suffix",
@@ -93,7 +93,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_definition_at_management_group = azure_nextgen.authorization.latest.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup",
+policy_definition_at_management_group = azure_nextgen.authorization.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup",
     description="Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
     display_name="Enforce resource naming convention",
     management_group_id="MyManagementGroup",
@@ -102,15 +102,15 @@ policy_definition_at_management_group = azure_nextgen.authorization.latest.Polic
     },
     mode="All",
     parameters={
-        "prefix": azure_nextgen.authorization.latest.ParameterDefinitionsValueArgs(
-            metadata=azure_nextgen.authorization.latest.ParameterDefinitionsValueMetadataArgs(
+        "prefix": azure_nextgen.authorization.ParameterDefinitionsValueArgs(
+            metadata=azure_nextgen.authorization.ParameterDefinitionsValueMetadataArgs(
                 description="Resource name prefix",
                 display_name="Prefix",
             ),
             type="String",
         ),
-        "suffix": azure_nextgen.authorization.latest.ParameterDefinitionsValueArgs(
-            metadata=azure_nextgen.authorization.latest.ParameterDefinitionsValueMetadataArgs(
+        "suffix": azure_nextgen.authorization.ParameterDefinitionsValueArgs(
+            metadata=azure_nextgen.authorization.ParameterDefinitionsValueMetadataArgs(
                 description="Resource name suffix",
                 display_name="Suffix",
             ),
@@ -140,7 +140,7 @@ policy_definition_at_management_group = azure_nextgen.authorization.latest.Polic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const policyDefinitionAtManagementGroup = new azure_nextgen.authorization.latest.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", {
+const policyDefinitionAtManagementGroup = new azure_nextgen.authorization.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", {
     description: "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
     displayName: "Enforce resource naming convention",
     managementGroupId: "MyManagementGroup",
@@ -190,7 +190,7 @@ const policyDefinitionAtManagementGroup = new azure_nextgen.authorization.latest
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PolicyDefinitionAtManagementGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -198,11 +198,11 @@ const policyDefinitionAtManagementGroup = new azure_nextgen.authorization.latest
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PolicyDefinitionAtManagementGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyDefinitionAtManagementGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyDefinitionAtManagementGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PolicyDefinitionAtManagementGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -223,7 +223,7 @@ const policyDefinitionAtManagementGroup = new azure_nextgen.authorization.latest
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PolicyDefinitionAtManagementGroupArgs</span>
+        <span class="property-type"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -292,7 +292,7 @@ const policyDefinitionAtManagementGroup = new azure_nextgen.authorization.latest
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PolicyDefinitionAtManagementGroupArgs</span>
+        <span class="property-type"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -331,7 +331,7 @@ const policyDefinitionAtManagementGroup = new azure_nextgen.authorization.latest
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PolicyDefinitionAtManagementGroupArgs</span>
+        <span class="property-type"><a href="#inputs">PolicyDefinitionAtManagementGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -354,11 +354,11 @@ const policyDefinitionAtManagementGroup = new azure_nextgen.authorization.latest
 
 ## PolicyDefinitionAtManagementGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PolicyDefinitionAtManagementGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1676,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:authorization/latest:PolicyDefinitionAtManagementGroup ResourceNaming /providers/Microsoft.Management/managementgroups/MyManagementGroup/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming 
+$ pulumi import azure-nextgen:authorization:PolicyDefinitionAtManagementGroup ResourceNaming /providers/Microsoft.Management/managementgroups/MyManagementGroup/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming 
 ```
 
 

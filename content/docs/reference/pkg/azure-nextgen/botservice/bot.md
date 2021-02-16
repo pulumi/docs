@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.botservice.Bot resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Bot resource definition
-Latest API Version: 2020-06-02.
+API Version: 2020-06-02.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bot = new AzureNextGen.BotService.Latest.Bot("bot", new AzureNextGen.BotService.Latest.BotArgs
+        var bot = new AzureNextGen.BotService.Bot("bot", new AzureNextGen.BotService.BotArgs
         {
             Etag = "etag1",
             Kind = "sdk",
             Location = "West US",
-            Properties = new AzureNextGen.BotService.Latest.Inputs.BotPropertiesArgs
+            Properties = new AzureNextGen.BotService.Inputs.BotPropertiesArgs
             {
                 CmekKeyVaultUrl = "https://myCmekKey",
                 Description = "The description of the bot",
@@ -53,7 +53,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
-            Sku = new AzureNextGen.BotService.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.BotService.Inputs.SkuArgs
             {
                 Name = "S1",
             },
@@ -77,7 +77,7 @@ class MyStack : Stack
 package main
 
 import (
-	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice/latest"
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -131,11 +131,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bot = azure_nextgen.botservice.latest.Bot("bot",
+bot = azure_nextgen.botservice.Bot("bot",
     etag="etag1",
     kind="sdk",
     location="West US",
-    properties=azure_nextgen.botservice.latest.BotPropertiesArgs(
+    properties=azure_nextgen.botservice.BotPropertiesArgs(
         cmek_key_vault_url="https://myCmekKey",
         description="The description of the bot",
         developer_app_insight_key="appinsightskey",
@@ -154,7 +154,7 @@ bot = azure_nextgen.botservice.latest.Bot("bot",
     ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname",
-    sku=azure_nextgen.botservice.latest.SkuArgs(
+    sku=azure_nextgen.botservice.SkuArgs(
         name="S1",
     ),
     tags={
@@ -172,7 +172,7 @@ bot = azure_nextgen.botservice.latest.Bot("bot",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const bot = new azure_nextgen.botservice.latest.Bot("bot", {
+const bot = new azure_nextgen.botservice.Bot("bot", {
     etag: "etag1",
     kind: "sdk",
     location: "West US",
@@ -216,7 +216,7 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -224,11 +224,11 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bot</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bot</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BotArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -249,7 +249,7 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BotArgs</span>
+        <span class="property-type"><a href="#inputs">BotArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -318,7 +318,7 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BotArgs</span>
+        <span class="property-type"><a href="#inputs">BotArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -357,7 +357,7 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BotArgs</span>
+        <span class="property-type"><a href="#inputs">BotArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -380,11 +380,11 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
 
 ## Bot Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2130,7 +2130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:botservice/latest:Bot samplebotname /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.BotService/botServices/samplebotname 
+$ pulumi import azure-nextgen:botservice:Bot samplebotname /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.BotService/botServices/samplebotname 
 ```
 
 

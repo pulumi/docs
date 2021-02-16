@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.Endpoint resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The CDN endpoint uses the URL format <endpointname>.azureedge.net.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,36 +27,36 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var endpoint = new AzureNextGen.Cdn.Latest.Endpoint("endpoint", new AzureNextGen.Cdn.Latest.EndpointArgs
+        var endpoint = new AzureNextGen.Cdn.Endpoint("endpoint", new AzureNextGen.Cdn.EndpointArgs
         {
             ContentTypesToCompress = 
             {
                 "text/html",
                 "application/octet-stream",
             },
-            DefaultOriginGroup = new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+            DefaultOriginGroup = new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1",
             },
-            DeliveryPolicy = new AzureNextGen.Cdn.Latest.Inputs.EndpointPropertiesUpdateParametersDeliveryPolicyArgs
+            DeliveryPolicy = new AzureNextGen.Cdn.Inputs.EndpointPropertiesUpdateParametersDeliveryPolicyArgs
             {
                 Description = "Test description for a policy.",
                 Rules = 
                 {
-                    new AzureNextGen.Cdn.Latest.Inputs.DeliveryRuleArgs
+                    new AzureNextGen.Cdn.Inputs.DeliveryRuleArgs
                     {
                         Actions = 
                         {
-                            
+                            new AzureNextGen.Cdn.Inputs.DeliveryRuleCacheExpirationActionArgs
                             {
-                                { "name", "CacheExpiration" },
-                                { "parameters", 
+                                Name = "CacheExpiration",
+                                Parameters = new AzureNextGen.Cdn.Inputs.CacheExpirationActionParametersArgs
                                 {
-                                    { "cacheBehavior", "Override" },
-                                    { "cacheDuration", "10:10:09" },
-                                    { "cacheType", "All" },
-                                    { "odataType", "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters" },
-                                } },
+                                    CacheBehavior = "Override",
+                                    CacheDuration = "10:10:09",
+                                    CacheType = "All",
+                                    OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
+                                },
                             },
                             
                             {
@@ -69,16 +69,16 @@ class MyStack : Stack
                                     { "value", "*" },
                                 } },
                             },
-                            
+                            new AzureNextGen.Cdn.Inputs.DeliveryRuleRequestHeaderActionArgs
                             {
-                                { "name", "ModifyRequestHeader" },
-                                { "parameters", 
+                                Name = "ModifyRequestHeader",
+                                Parameters = new AzureNextGen.Cdn.Inputs.HeaderActionParametersArgs
                                 {
-                                    { "headerAction", "Overwrite" },
-                                    { "headerName", "Accept-Encoding" },
-                                    { "odataType", "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters" },
-                                    { "value", "gzip" },
-                                } },
+                                    HeaderAction = "Overwrite",
+                                    HeaderName = "Accept-Encoding",
+                                    OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+                                    Value = "gzip",
+                                },
                             },
                         },
                         Conditions = 
@@ -111,9 +111,9 @@ class MyStack : Stack
             Location = "WestUs",
             OriginGroups = 
             {
-                new AzureNextGen.Cdn.Latest.Inputs.DeepCreatedOriginGroupArgs
+                new AzureNextGen.Cdn.Inputs.DeepCreatedOriginGroupArgs
                 {
-                    HealthProbeSettings = new AzureNextGen.Cdn.Latest.Inputs.HealthProbeParametersArgs
+                    HealthProbeSettings = new AzureNextGen.Cdn.Inputs.HealthProbeParametersArgs
                     {
                         ProbeIntervalInSeconds = 120,
                         ProbePath = "/health.aspx",
@@ -123,16 +123,16 @@ class MyStack : Stack
                     Name = "originGroup1",
                     Origins = 
                     {
-                        new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                        new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
                         },
-                        new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                        new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin2",
                         },
                     },
-                    ResponseBasedOriginErrorDetectionSettings = new AzureNextGen.Cdn.Latest.Inputs.ResponseBasedOriginErrorDetectionParametersArgs
+                    ResponseBasedOriginErrorDetectionSettings = new AzureNextGen.Cdn.Inputs.ResponseBasedOriginErrorDetectionParametersArgs
                     {
                         ResponseBasedDetectedErrorTypes = "TcpErrorsOnly",
                         ResponseBasedFailoverThresholdPercentage = 10,
@@ -143,7 +143,7 @@ class MyStack : Stack
             OriginPath = "/photos",
             Origins = 
             {
-                new AzureNextGen.Cdn.Latest.Inputs.DeepCreatedOriginArgs
+                new AzureNextGen.Cdn.Inputs.DeepCreatedOriginArgs
                 {
                     Enabled = true,
                     HostName = "www.someDomain1.net",
@@ -154,7 +154,7 @@ class MyStack : Stack
                     Priority = 1,
                     Weight = 50,
                 },
-                new AzureNextGen.Cdn.Latest.Inputs.DeepCreatedOriginArgs
+                new AzureNextGen.Cdn.Inputs.DeepCreatedOriginArgs
                 {
                     Enabled = true,
                     HostName = "www.someDomain2.net",
@@ -192,27 +192,27 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-endpoint = azure_nextgen.cdn.latest.Endpoint("endpoint",
+endpoint = azure_nextgen.cdn.Endpoint("endpoint",
     content_types_to_compress=[
         "text/html",
         "application/octet-stream",
     ],
-    default_origin_group=azure_nextgen.cdn.latest.ResourceReferenceArgs(
+    default_origin_group=azure_nextgen.cdn.ResourceReferenceArgs(
         id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1",
     ),
-    delivery_policy=azure_nextgen.cdn.latest.EndpointPropertiesUpdateParametersDeliveryPolicyArgs(
+    delivery_policy=azure_nextgen.cdn.EndpointPropertiesUpdateParametersDeliveryPolicyArgs(
         description="Test description for a policy.",
-        rules=[azure_nextgen.cdn.latest.DeliveryRuleArgs(
+        rules=[azure_nextgen.cdn.DeliveryRuleArgs(
             actions=[
-                {
-                    "name": "CacheExpiration",
-                    "parameters": {
-                        "cacheBehavior": "Override",
-                        "cacheDuration": "10:10:09",
-                        "cacheType": "All",
-                        "odataType": "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
-                    },
-                },
+                azure_nextgen.cdn.DeliveryRuleCacheExpirationActionArgs(
+                    name="CacheExpiration",
+                    parameters=azure_nextgen.cdn.CacheExpirationActionParametersArgs(
+                        cache_behavior="Override",
+                        cache_duration="10:10:09",
+                        cache_type="All",
+                        odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
+                    ),
+                ),
                 {
                     "name": "ModifyResponseHeader",
                     "parameters": {
@@ -222,15 +222,15 @@ endpoint = azure_nextgen.cdn.latest.Endpoint("endpoint",
                         "value": "*",
                     },
                 },
-                {
-                    "name": "ModifyRequestHeader",
-                    "parameters": {
-                        "headerAction": "Overwrite",
-                        "headerName": "Accept-Encoding",
-                        "odataType": "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                        "value": "gzip",
-                    },
-                },
+                azure_nextgen.cdn.DeliveryRuleRequestHeaderActionArgs(
+                    name="ModifyRequestHeader",
+                    parameters=azure_nextgen.cdn.HeaderActionParametersArgs(
+                        header_action="Overwrite",
+                        header_name="Accept-Encoding",
+                        odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+                        value="gzip",
+                    ),
+                ),
             ],
             conditions=[{
                 "name": "RemoteAddress",
@@ -253,8 +253,8 @@ endpoint = azure_nextgen.cdn.latest.Endpoint("endpoint",
     is_http_allowed=True,
     is_https_allowed=True,
     location="WestUs",
-    origin_groups=[azure_nextgen.cdn.latest.DeepCreatedOriginGroupArgs(
-        health_probe_settings=azure_nextgen.cdn.latest.HealthProbeParametersArgs(
+    origin_groups=[azure_nextgen.cdn.DeepCreatedOriginGroupArgs(
+        health_probe_settings=azure_nextgen.cdn.HealthProbeParametersArgs(
             probe_interval_in_seconds=120,
             probe_path="/health.aspx",
             probe_protocol="Http",
@@ -262,14 +262,14 @@ endpoint = azure_nextgen.cdn.latest.Endpoint("endpoint",
         ),
         name="originGroup1",
         origins=[
-            azure_nextgen.cdn.latest.ResourceReferenceArgs(
+            azure_nextgen.cdn.ResourceReferenceArgs(
                 id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
             ),
-            azure_nextgen.cdn.latest.ResourceReferenceArgs(
+            azure_nextgen.cdn.ResourceReferenceArgs(
                 id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin2",
             ),
         ],
-        response_based_origin_error_detection_settings=azure_nextgen.cdn.latest.ResponseBasedOriginErrorDetectionParametersArgs(
+        response_based_origin_error_detection_settings=azure_nextgen.cdn.ResponseBasedOriginErrorDetectionParametersArgs(
             response_based_detected_error_types="TcpErrorsOnly",
             response_based_failover_threshold_percentage=10,
         ),
@@ -277,7 +277,7 @@ endpoint = azure_nextgen.cdn.latest.Endpoint("endpoint",
     origin_host_header="www.bing.com",
     origin_path="/photos",
     origins=[
-        azure_nextgen.cdn.latest.DeepCreatedOriginArgs(
+        azure_nextgen.cdn.DeepCreatedOriginArgs(
             enabled=True,
             host_name="www.someDomain1.net",
             http_port=80,
@@ -287,7 +287,7 @@ endpoint = azure_nextgen.cdn.latest.Endpoint("endpoint",
             priority=1,
             weight=50,
         ),
-        azure_nextgen.cdn.latest.DeepCreatedOriginArgs(
+        azure_nextgen.cdn.DeepCreatedOriginArgs(
             enabled=True,
             host_name="www.someDomain2.net",
             http_port=80,
@@ -315,7 +315,7 @@ endpoint = azure_nextgen.cdn.latest.Endpoint("endpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const endpoint = new azure_nextgen.cdn.latest.Endpoint("endpoint", {
+const endpoint = new azure_nextgen.cdn.Endpoint("endpoint", {
     contentTypesToCompress: [
         "text/html",
         "application/octet-stream",
@@ -441,7 +441,7 @@ const endpoint = new azure_nextgen.cdn.latest.Endpoint("endpoint", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">EndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -449,11 +449,11 @@ const endpoint = new azure_nextgen.cdn.latest.Endpoint("endpoint", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">EndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">EndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -474,7 +474,7 @@ const endpoint = new azure_nextgen.cdn.latest.Endpoint("endpoint", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EndpointArgs</span>
+        <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -543,7 +543,7 @@ const endpoint = new azure_nextgen.cdn.latest.Endpoint("endpoint", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EndpointArgs</span>
+        <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -582,7 +582,7 @@ const endpoint = new azure_nextgen.cdn.latest.Endpoint("endpoint", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EndpointArgs</span>
+        <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -605,11 +605,11 @@ const endpoint = new azure_nextgen.cdn.latest.Endpoint("endpoint", {
 
 ## Endpoint Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Endpoint resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Endpoint resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -18541,7 +18541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:Endpoint endpoint4899 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1 
+$ pulumi import azure-nextgen:cdn:Endpoint endpoint4899 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1 
 ```
 
 

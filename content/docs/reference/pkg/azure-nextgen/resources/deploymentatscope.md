@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.DeploymentAtScope reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Deployment information.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var deploymentAtScope = new AzureNextGen.Resources.Latest.DeploymentAtScope("deploymentAtScope", new AzureNextGen.Resources.Latest.DeploymentAtScopeArgs
+        var deploymentAtScope = new AzureNextGen.Resources.DeploymentAtScope("deploymentAtScope", new AzureNextGen.Resources.DeploymentAtScopeArgs
         {
             DeploymentName = "my-deployment",
             Location = "eastus",
-            Properties = new AzureNextGen.Resources.Latest.Inputs.DeploymentPropertiesArgs
+            Properties = new AzureNextGen.Resources.Inputs.DeploymentPropertiesArgs
             {
                 Mode = "Incremental",
                 Parameters = ,
-                TemplateLink = new AzureNextGen.Resources.Latest.Inputs.TemplateLinkArgs
+                TemplateLink = new AzureNextGen.Resources.Inputs.TemplateLinkArgs
                 {
                     Uri = "https://example.com/exampleTemplate.json",
                 },
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,13 +100,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-deployment_at_scope = azure_nextgen.resources.latest.DeploymentAtScope("deploymentAtScope",
+deployment_at_scope = azure_nextgen.resources.DeploymentAtScope("deploymentAtScope",
     deployment_name="my-deployment",
     location="eastus",
-    properties=azure_nextgen.resources.latest.DeploymentPropertiesArgs(
+    properties=azure_nextgen.resources.DeploymentPropertiesArgs(
         mode="Incremental",
         parameters={},
-        template_link=azure_nextgen.resources.latest.TemplateLinkArgs(
+        template_link=azure_nextgen.resources.TemplateLinkArgs(
             uri="https://example.com/exampleTemplate.json",
         ),
     ),
@@ -126,7 +126,7 @@ deployment_at_scope = azure_nextgen.resources.latest.DeploymentAtScope("deployme
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const deploymentAtScope = new azure_nextgen.resources.latest.DeploymentAtScope("deploymentAtScope", {
+const deploymentAtScope = new azure_nextgen.resources.DeploymentAtScope("deploymentAtScope", {
     deploymentName: "my-deployment",
     location: "eastus",
     properties: {
@@ -155,7 +155,7 @@ const deploymentAtScope = new azure_nextgen.resources.latest.DeploymentAtScope("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DeploymentAtScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -163,11 +163,11 @@ const deploymentAtScope = new azure_nextgen.resources.latest.DeploymentAtScope("
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeploymentAtScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DeploymentAtScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentAtScope</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeploymentAtScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentAtScope</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DeploymentAtScopeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -188,7 +188,7 @@ const deploymentAtScope = new azure_nextgen.resources.latest.DeploymentAtScope("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DeploymentAtScopeArgs</span>
+        <span class="property-type"><a href="#inputs">DeploymentAtScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -257,7 +257,7 @@ const deploymentAtScope = new azure_nextgen.resources.latest.DeploymentAtScope("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DeploymentAtScopeArgs</span>
+        <span class="property-type"><a href="#inputs">DeploymentAtScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -296,7 +296,7 @@ const deploymentAtScope = new azure_nextgen.resources.latest.DeploymentAtScope("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DeploymentAtScopeArgs</span>
+        <span class="property-type"><a href="#inputs">DeploymentAtScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -319,11 +319,11 @@ const deploymentAtScope = new azure_nextgen.resources.latest.DeploymentAtScope("
 
 ## DeploymentAtScope Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4887,7 +4887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:resources/latest:DeploymentAtScope my-deployment /providers/Microsoft.Management/managementGroups/my-management-group-id/providers/Microsoft.Resources/deployments/my-deployment 
+$ pulumi import azure-nextgen:resources:DeploymentAtScope my-deployment /providers/Microsoft.Management/managementGroups/my-management-group-id/providers/Microsoft.Resources/deployments/my-deployment 
 ```
 
 

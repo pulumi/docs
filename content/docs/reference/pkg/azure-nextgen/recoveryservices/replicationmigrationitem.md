@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationMigr
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Migration item.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationMigrationItem = new AzureNextGen.RecoveryServices.Latest.ReplicationMigrationItem("replicationMigrationItem", new AzureNextGen.RecoveryServices.Latest.ReplicationMigrationItemArgs
+        var replicationMigrationItem = new AzureNextGen.RecoveryServices.ReplicationMigrationItem("replicationMigrationItem", new AzureNextGen.RecoveryServices.ReplicationMigrationItemArgs
         {
             FabricName = "vmwarefabric1",
             MigrationItemName = "virtualmachine1",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.EnableMigrationInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices.Inputs.EnableMigrationInputPropertiesArgs
             {
                 PolicyId = "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationPolicies/vmwarepolicy1",
-                ProviderSpecificDetails = new AzureNextGen.RecoveryServices.Latest.Inputs.VMwareCbtEnableMigrationInputArgs
+                ProviderSpecificDetails = new AzureNextGen.RecoveryServices.Inputs.VMwareCbtEnableMigrationInputArgs
                 {
                     DataMoverRunAsAccountId = "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1",
                     DisksToInclude = 
                     {
-                        new AzureNextGen.RecoveryServices.Latest.Inputs.VMwareCbtDiskInputArgs
+                        new AzureNextGen.RecoveryServices.Inputs.VMwareCbtDiskInputArgs
                         {
                             DiskId = "disk1",
                             IsOSDisk = "true",
@@ -72,7 +72,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -121,14 +121,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_migration_item = azure_nextgen.recoveryservices.latest.ReplicationMigrationItem("replicationMigrationItem",
+replication_migration_item = azure_nextgen.recoveryservices.ReplicationMigrationItem("replicationMigrationItem",
     fabric_name="vmwarefabric1",
     migration_item_name="virtualmachine1",
-    properties=azure_nextgen.recoveryservices.latest.EnableMigrationInputPropertiesArgs(
+    properties=azure_nextgen.recoveryservices.EnableMigrationInputPropertiesArgs(
         policy_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationPolicies/vmwarepolicy1",
-        provider_specific_details=azure_nextgen.recoveryservices.latest.VMwareCbtEnableMigrationInputArgs(
+        provider_specific_details=azure_nextgen.recoveryservices.VMwareCbtEnableMigrationInputArgs(
             data_mover_run_as_account_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1",
-            disks_to_include=[azure_nextgen.recoveryservices.latest.VMwareCbtDiskInputArgs(
+            disks_to_include=[azure_nextgen.recoveryservices.VMwareCbtDiskInputArgs(
                 disk_id="disk1",
                 is_os_disk="true",
                 log_storage_account_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Storage/storageAccounts/logStorageAccount1",
@@ -155,7 +155,7 @@ replication_migration_item = azure_nextgen.recoveryservices.latest.ReplicationMi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationMigrationItem = new azure_nextgen.recoveryservices.latest.ReplicationMigrationItem("replicationMigrationItem", {
+const replicationMigrationItem = new azure_nextgen.recoveryservices.ReplicationMigrationItem("replicationMigrationItem", {
     fabricName: "vmwarefabric1",
     migrationItemName: "virtualmachine1",
     properties: {
@@ -192,7 +192,7 @@ const replicationMigrationItem = new azure_nextgen.recoveryservices.latest.Repli
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationMigrationItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReplicationMigrationItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationMigrationItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationMigrationItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -200,11 +200,11 @@ const replicationMigrationItem = new azure_nextgen.recoveryservices.latest.Repli
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationMigrationItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReplicationMigrationItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationMigrationItem</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationMigrationItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationMigrationItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationMigrationItem</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationMigrationItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReplicationMigrationItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationMigrationItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationMigrationItemArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -225,7 +225,7 @@ const replicationMigrationItem = new azure_nextgen.recoveryservices.latest.Repli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationMigrationItemArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationMigrationItemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -294,7 +294,7 @@ const replicationMigrationItem = new azure_nextgen.recoveryservices.latest.Repli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationMigrationItemArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationMigrationItemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -333,7 +333,7 @@ const replicationMigrationItem = new azure_nextgen.recoveryservices.latest.Repli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationMigrationItemArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationMigrationItemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -356,11 +356,11 @@ const replicationMigrationItem = new azure_nextgen.recoveryservices.latest.Repli
 
 ## ReplicationMigrationItem Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ReplicationMigrationItem resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ReplicationMigrationItem resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4638,7 +4638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationMigrationItem virtualmachine1 /Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationFabrics/vmwarefabric1/replicationProtectionContainers/vmwareContainer1/replicationMigrationItems/virtualmachine1 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationMigrationItem virtualmachine1 /Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationFabrics/vmwarefabric1/replicationProtectionContainers/vmwareContainer1/replicationMigrationItems/virtualmachine1 
 ```
 
 

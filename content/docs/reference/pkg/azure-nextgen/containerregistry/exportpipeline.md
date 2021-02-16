@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.ExportPipeline
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents an export pipeline for a container registry.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var exportPipeline = new AzureNextGen.ContainerRegistry.V20201101Preview.ExportPipeline("exportPipeline", new AzureNextGen.ContainerRegistry.V20201101Preview.ExportPipelineArgs
+        var exportPipeline = new AzureNextGen.ContainerRegistry.ExportPipeline("exportPipeline", new AzureNextGen.ContainerRegistry.ExportPipelineArgs
         {
             ExportPipelineName = "myExportPipeline",
-            Identity = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry.Inputs.IdentityPropertiesArgs
             {
                 Type = "SystemAssigned",
             },
@@ -40,7 +41,7 @@ class MyStack : Stack
             },
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
-            Target = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.ExportPipelineTargetPropertiesArgs
+            Target = new AzureNextGen.ContainerRegistry.Inputs.ExportPipelineTargetPropertiesArgs
             {
                 KeyVaultUri = "https://myvault.vault.azure.net/secrets/acrexportsas",
                 Type = "AzureStorageBlobContainer",
@@ -61,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,16 +102,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-export_pipeline = azure_nextgen.containerregistry.v20201101preview.ExportPipeline("exportPipeline",
+export_pipeline = azure_nextgen.containerregistry.ExportPipeline("exportPipeline",
     export_pipeline_name="myExportPipeline",
-    identity=azure_nextgen.containerregistry.v20201101preview.IdentityPropertiesArgs(
+    identity=azure_nextgen.containerregistry.IdentityPropertiesArgs(
         type="SystemAssigned",
     ),
     location="westus",
     options=["OverwriteBlobs"],
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
-    target=azure_nextgen.containerregistry.v20201101preview.ExportPipelineTargetPropertiesArgs(
+    target=azure_nextgen.containerregistry.ExportPipelineTargetPropertiesArgs(
         key_vault_uri="https://myvault.vault.azure.net/secrets/acrexportsas",
         type="AzureStorageBlobContainer",
         uri="https://accountname.blob.core.windows.net/containername",
@@ -126,7 +127,7 @@ export_pipeline = azure_nextgen.containerregistry.v20201101preview.ExportPipelin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const exportPipeline = new azure_nextgen.containerregistry.v20201101preview.ExportPipeline("exportPipeline", {
+const exportPipeline = new azure_nextgen.containerregistry.ExportPipeline("exportPipeline", {
     exportPipelineName: "myExportPipeline",
     identity: {
         type: "SystemAssigned",
@@ -154,7 +155,7 @@ const exportPipeline = new azure_nextgen.containerregistry.v20201101preview.Expo
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExportPipeline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ExportPipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExportPipeline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExportPipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -162,11 +163,11 @@ const exportPipeline = new azure_nextgen.containerregistry.v20201101preview.Expo
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExportPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ExportPipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExportPipeline</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExportPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExportPipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExportPipeline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExportPipeline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ExportPipelineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExportPipeline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExportPipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -187,7 +188,7 @@ const exportPipeline = new azure_nextgen.containerregistry.v20201101preview.Expo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExportPipelineArgs</span>
+        <span class="property-type"><a href="#inputs">ExportPipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -256,7 +257,7 @@ const exportPipeline = new azure_nextgen.containerregistry.v20201101preview.Expo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExportPipelineArgs</span>
+        <span class="property-type"><a href="#inputs">ExportPipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -295,7 +296,7 @@ const exportPipeline = new azure_nextgen.containerregistry.v20201101preview.Expo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExportPipelineArgs</span>
+        <span class="property-type"><a href="#inputs">ExportPipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -318,11 +319,11 @@ const exportPipeline = new azure_nextgen.containerregistry.v20201101preview.Expo
 
 ## ExportPipeline Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ExportPipeline resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ExportPipeline resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2022,7 +2023,7 @@ dictionary key references will be ARM resource ids in the form:
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20201101preview:ExportPipeline myExportPipeline /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline 
+$ pulumi import azure-nextgen:containerregistry:ExportPipeline myExportPipeline /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline 
 ```
 
 

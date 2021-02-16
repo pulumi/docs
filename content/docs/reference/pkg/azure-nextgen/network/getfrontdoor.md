@@ -19,7 +19,7 @@ meta_desc: "Explore the GetFrontDoor function of the network module, including e
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFrontDoor<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFrontDoorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetFrontDoorResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFrontDoor<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFrontDoorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFrontDoorResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetFrontDoor function of the network module, including e
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFrontDoor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFrontDoorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupFrontDoorResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFrontDoor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFrontDoorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFrontDoorResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupFrontDoor` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetFrontDoor function of the network module, including e
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFrontDoor </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetFrontDoorResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetFrontDoorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFrontDoorResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFrontDoorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -834,9 +834,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1117,9 +1114,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1217,9 +1211,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="backendresponse">Backend<wbr>Response</h4>
-
-
-
 
 
 
@@ -1683,9 +1674,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1855,9 +1843,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="customhttpsconfigurationresponse">Custom<wbr>Https<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 
@@ -2141,9 +2126,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2313,9 +2295,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="frontendendpointresponse">Frontend<wbr>Endpoint<wbr>Response</h4>
-
-
-
 
 
 
@@ -2743,9 +2722,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2807,9 +2783,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="headeractionresponse">Header<wbr>Action<wbr>Response</h4>
-
-
-
 
 
 
@@ -2946,9 +2919,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="healthprobesettingsmodelresponse">Health<wbr>Probe<wbr>Settings<wbr>Model<wbr>Response</h4>
-
-
-
 
 
 
@@ -3304,9 +3274,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3368,9 +3335,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="loadbalancingsettingsmodelresponse">Load<wbr>Balancing<wbr>Settings<wbr>Model<wbr>Response</h4>
-
-
-
 
 
 
@@ -3654,9 +3618,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3898,9 +3859,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="routingruleresponse">Routing<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 
@@ -4328,9 +4286,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4392,9 +4347,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="rulesengineactionresponse">Rules<wbr>Engine<wbr>Action<wbr>Response</h4>
-
-
-
 
 
 
@@ -4531,9 +4483,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="rulesenginematchconditionresponse">Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 
@@ -4781,9 +4730,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4992,9 +4938,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5200,9 +5143,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
-
-
-
 
 
 

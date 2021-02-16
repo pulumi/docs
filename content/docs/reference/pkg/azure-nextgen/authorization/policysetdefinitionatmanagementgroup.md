@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.authorization.PolicySetDefinitio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The policy set definition.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policySetDefinitionAtManagementGroup = new AzureNextGen.Authorization.Latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", new AzureNextGen.Authorization.Latest.PolicySetDefinitionAtManagementGroupArgs
+        var policySetDefinitionAtManagementGroup = new AzureNextGen.Authorization.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", new AzureNextGen.Authorization.PolicySetDefinitionAtManagementGroupArgs
         {
             Description = "Policies to enforce low cost storage SKUs",
             DisplayName = "Cost Management",
@@ -38,11 +38,11 @@ class MyStack : Stack
             },
             PolicyDefinitions = 
             {
-                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Authorization.Inputs.PolicyDefinitionReferenceArgs
                 {
                     Parameters = 
                     {
-                        { "listOfAllowedSKUs", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
+                        { "listOfAllowedSKUs", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
                         {
                             Value = 
                             {
@@ -54,15 +54,15 @@ class MyStack : Stack
                     PolicyDefinitionId = "/providers/Microsoft.Management/managementgroups/MyManagementGroup/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
                     PolicyDefinitionReferenceId = "Limit_Skus",
                 },
-                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Authorization.Inputs.PolicyDefinitionReferenceArgs
                 {
                     Parameters = 
                     {
-                        { "prefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
+                        { "prefix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
                         {
                             Value = "DeptA",
                         } },
-                        { "suffix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
+                        { "suffix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
                         {
                             Value = "-LC",
                         } },
@@ -91,7 +91,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_set_definition_at_management_group = azure_nextgen.authorization.latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup",
+policy_set_definition_at_management_group = azure_nextgen.authorization.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup",
     description="Policies to enforce low cost storage SKUs",
     display_name="Cost Management",
     management_group_id="MyManagementGroup",
@@ -99,9 +99,9 @@ policy_set_definition_at_management_group = azure_nextgen.authorization.latest.P
         "category": "Cost Management",
     },
     policy_definitions=[
-        azure_nextgen.authorization.latest.PolicyDefinitionReferenceArgs(
+        azure_nextgen.authorization.PolicyDefinitionReferenceArgs(
             parameters={
-                "listOfAllowedSKUs": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                "listOfAllowedSKUs": azure_nextgen.authorization.ParameterValuesValueArgs(
                     value=[
                         "Standard_GRS",
                         "Standard_LRS",
@@ -111,12 +111,12 @@ policy_set_definition_at_management_group = azure_nextgen.authorization.latest.P
             policy_definition_id="/providers/Microsoft.Management/managementgroups/MyManagementGroup/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
             policy_definition_reference_id="Limit_Skus",
         ),
-        azure_nextgen.authorization.latest.PolicyDefinitionReferenceArgs(
+        azure_nextgen.authorization.PolicyDefinitionReferenceArgs(
             parameters={
-                "prefix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                "prefix": azure_nextgen.authorization.ParameterValuesValueArgs(
                     value="DeptA",
                 ),
-                "suffix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                "suffix": azure_nextgen.authorization.ParameterValuesValueArgs(
                     value="-LC",
                 ),
             },
@@ -136,7 +136,7 @@ policy_set_definition_at_management_group = azure_nextgen.authorization.latest.P
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const policySetDefinitionAtManagementGroup = new azure_nextgen.authorization.latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", {
+const policySetDefinitionAtManagementGroup = new azure_nextgen.authorization.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", {
     description: "Policies to enforce low cost storage SKUs",
     displayName: "Cost Management",
     managementGroupId: "MyManagementGroup",
@@ -186,7 +186,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policySetDefinitionAtManagementGroup = new AzureNextGen.Authorization.Latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", new AzureNextGen.Authorization.Latest.PolicySetDefinitionAtManagementGroupArgs
+        var policySetDefinitionAtManagementGroup = new AzureNextGen.Authorization.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", new AzureNextGen.Authorization.PolicySetDefinitionAtManagementGroupArgs
         {
             Description = "Policies to enforce low cost storage SKUs",
             DisplayName = "Cost Management",
@@ -197,13 +197,13 @@ class MyStack : Stack
             },
             PolicyDefinitionGroups = 
             {
-                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionGroupArgs
+                new AzureNextGen.Authorization.Inputs.PolicyDefinitionGroupArgs
                 {
                     Description = "Policies designed to control spend within a subscription.",
                     DisplayName = "Cost Management Policies",
                     Name = "CostSaving",
                 },
-                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionGroupArgs
+                new AzureNextGen.Authorization.Inputs.PolicyDefinitionGroupArgs
                 {
                     Description = "Policies that help enforce resource organization standards within a subscription.",
                     DisplayName = "Organizational Policies",
@@ -212,7 +212,7 @@ class MyStack : Stack
             },
             PolicyDefinitions = 
             {
-                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Authorization.Inputs.PolicyDefinitionReferenceArgs
                 {
                     GroupNames = 
                     {
@@ -220,7 +220,7 @@ class MyStack : Stack
                     },
                     Parameters = 
                     {
-                        { "listOfAllowedSKUs", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
+                        { "listOfAllowedSKUs", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
                         {
                             Value = 
                             {
@@ -232,7 +232,7 @@ class MyStack : Stack
                     PolicyDefinitionId = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
                     PolicyDefinitionReferenceId = "Limit_Skus",
                 },
-                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Authorization.Inputs.PolicyDefinitionReferenceArgs
                 {
                     GroupNames = 
                     {
@@ -240,11 +240,11 @@ class MyStack : Stack
                     },
                     Parameters = 
                     {
-                        { "prefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
+                        { "prefix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
                         {
                             Value = "DeptA",
                         } },
-                        { "suffix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
+                        { "suffix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
                         {
                             Value = "-LC",
                         } },
@@ -273,7 +273,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_set_definition_at_management_group = azure_nextgen.authorization.latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup",
+policy_set_definition_at_management_group = azure_nextgen.authorization.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup",
     description="Policies to enforce low cost storage SKUs",
     display_name="Cost Management",
     management_group_id="MyManagementGroup",
@@ -281,22 +281,22 @@ policy_set_definition_at_management_group = azure_nextgen.authorization.latest.P
         "category": "Cost Management",
     },
     policy_definition_groups=[
-        azure_nextgen.authorization.latest.PolicyDefinitionGroupArgs(
+        azure_nextgen.authorization.PolicyDefinitionGroupArgs(
             description="Policies designed to control spend within a subscription.",
             display_name="Cost Management Policies",
             name="CostSaving",
         ),
-        azure_nextgen.authorization.latest.PolicyDefinitionGroupArgs(
+        azure_nextgen.authorization.PolicyDefinitionGroupArgs(
             description="Policies that help enforce resource organization standards within a subscription.",
             display_name="Organizational Policies",
             name="Organizational",
         ),
     ],
     policy_definitions=[
-        azure_nextgen.authorization.latest.PolicyDefinitionReferenceArgs(
+        azure_nextgen.authorization.PolicyDefinitionReferenceArgs(
             group_names=["CostSaving"],
             parameters={
-                "listOfAllowedSKUs": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                "listOfAllowedSKUs": azure_nextgen.authorization.ParameterValuesValueArgs(
                     value=[
                         "Standard_GRS",
                         "Standard_LRS",
@@ -306,13 +306,13 @@ policy_set_definition_at_management_group = azure_nextgen.authorization.latest.P
             policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
             policy_definition_reference_id="Limit_Skus",
         ),
-        azure_nextgen.authorization.latest.PolicyDefinitionReferenceArgs(
+        azure_nextgen.authorization.PolicyDefinitionReferenceArgs(
             group_names=["Organizational"],
             parameters={
-                "prefix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                "prefix": azure_nextgen.authorization.ParameterValuesValueArgs(
                     value="DeptA",
                 ),
-                "suffix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                "suffix": azure_nextgen.authorization.ParameterValuesValueArgs(
                     value="-LC",
                 ),
             },
@@ -332,7 +332,7 @@ policy_set_definition_at_management_group = azure_nextgen.authorization.latest.P
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const policySetDefinitionAtManagementGroup = new azure_nextgen.authorization.latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", {
+const policySetDefinitionAtManagementGroup = new azure_nextgen.authorization.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", {
     description: "Policies to enforce low cost storage SKUs",
     displayName: "Cost Management",
     managementGroupId: "MyManagementGroup",
@@ -394,7 +394,7 @@ const policySetDefinitionAtManagementGroup = new azure_nextgen.authorization.lat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicySetDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PolicySetDefinitionAtManagementGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicySetDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicySetDefinitionAtManagementGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -402,11 +402,11 @@ const policySetDefinitionAtManagementGroup = new azure_nextgen.authorization.lat
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicySetDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PolicySetDefinitionAtManagementGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicySetDefinitionAtManagementGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicySetDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicySetDefinitionAtManagementGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicySetDefinitionAtManagementGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicySetDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PolicySetDefinitionAtManagementGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicySetDefinitionAtManagementGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicySetDefinitionAtManagementGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -427,7 +427,7 @@ const policySetDefinitionAtManagementGroup = new azure_nextgen.authorization.lat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PolicySetDefinitionAtManagementGroupArgs</span>
+        <span class="property-type"><a href="#inputs">PolicySetDefinitionAtManagementGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -496,7 +496,7 @@ const policySetDefinitionAtManagementGroup = new azure_nextgen.authorization.lat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PolicySetDefinitionAtManagementGroupArgs</span>
+        <span class="property-type"><a href="#inputs">PolicySetDefinitionAtManagementGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -535,7 +535,7 @@ const policySetDefinitionAtManagementGroup = new azure_nextgen.authorization.lat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PolicySetDefinitionAtManagementGroupArgs</span>
+        <span class="property-type"><a href="#inputs">PolicySetDefinitionAtManagementGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -558,11 +558,11 @@ const policySetDefinitionAtManagementGroup = new azure_nextgen.authorization.lat
 
 ## PolicySetDefinitionAtManagementGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PolicySetDefinitionAtManagementGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PolicySetDefinitionAtManagementGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2756,7 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:authorization/latest:PolicySetDefinitionAtManagementGroup CostManagement /providers/Microsoft.Management/managementgroups/MyManagementGroup/providers/Microsoft.Authorization/policySetDefinitions/CostManagement 
+$ pulumi import azure-nextgen:authorization:PolicySetDefinitionAtManagementGroup CostManagement /providers/Microsoft.Management/managementgroups/MyManagementGroup/providers/Microsoft.Authorization/policySetDefinitions/CostManagement 
 ```
 
 

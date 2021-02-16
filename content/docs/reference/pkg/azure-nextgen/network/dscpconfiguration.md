@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.DscpConfiguration resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 DSCP Configuration in a resource group.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dscpConfiguration = new AzureNextGen.Network.Latest.DscpConfiguration("dscpConfiguration", new AzureNextGen.Network.Latest.DscpConfigurationArgs
+        var dscpConfiguration = new AzureNextGen.Network.DscpConfiguration("dscpConfiguration", new AzureNextGen.Network.DscpConfigurationArgs
         {
             DestinationIpRanges = 
             {
-                new AzureNextGen.Network.Latest.Inputs.QosIpRangeArgs
+                new AzureNextGen.Network.Inputs.QosIpRangeArgs
                 {
                     EndIP = "127.0.10.2",
                     StartIP = "127.0.10.1",
                 },
-                new AzureNextGen.Network.Latest.Inputs.QosIpRangeArgs
+                new AzureNextGen.Network.Inputs.QosIpRangeArgs
                 {
                     EndIP = "127.0.11.2",
                     StartIP = "127.0.11.1",
@@ -44,12 +44,12 @@ class MyStack : Stack
             },
             DestinationPortRanges = 
             {
-                new AzureNextGen.Network.Latest.Inputs.QosPortRangeArgs
+                new AzureNextGen.Network.Inputs.QosPortRangeArgs
                 {
                     End = 15,
                     Start = 15,
                 },
-                new AzureNextGen.Network.Latest.Inputs.QosPortRangeArgs
+                new AzureNextGen.Network.Inputs.QosPortRangeArgs
                 {
                     End = 27,
                     Start = 26,
@@ -66,12 +66,12 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             SourceIpRanges = 
             {
-                new AzureNextGen.Network.Latest.Inputs.QosIpRangeArgs
+                new AzureNextGen.Network.Inputs.QosIpRangeArgs
                 {
                     EndIP = "127.0.0.2",
                     StartIP = "127.0.0.1",
                 },
-                new AzureNextGen.Network.Latest.Inputs.QosIpRangeArgs
+                new AzureNextGen.Network.Inputs.QosIpRangeArgs
                 {
                     EndIP = "127.0.1.2",
                     StartIP = "127.0.1.1",
@@ -79,12 +79,12 @@ class MyStack : Stack
             },
             SourcePortRanges = 
             {
-                new AzureNextGen.Network.Latest.Inputs.QosPortRangeArgs
+                new AzureNextGen.Network.Inputs.QosPortRangeArgs
                 {
                     End = 11,
                     Start = 10,
                 },
-                new AzureNextGen.Network.Latest.Inputs.QosPortRangeArgs
+                new AzureNextGen.Network.Inputs.QosPortRangeArgs
                 {
                     End = 21,
                     Start = 20,
@@ -109,23 +109,23 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dscp_configuration = azure_nextgen.network.latest.DscpConfiguration("dscpConfiguration",
+dscp_configuration = azure_nextgen.network.DscpConfiguration("dscpConfiguration",
     destination_ip_ranges=[
-        azure_nextgen.network.latest.QosIpRangeArgs(
+        azure_nextgen.network.QosIpRangeArgs(
             end_ip="127.0.10.2",
             start_ip="127.0.10.1",
         ),
-        azure_nextgen.network.latest.QosIpRangeArgs(
+        azure_nextgen.network.QosIpRangeArgs(
             end_ip="127.0.11.2",
             start_ip="127.0.11.1",
         ),
     ],
     destination_port_ranges=[
-        azure_nextgen.network.latest.QosPortRangeArgs(
+        azure_nextgen.network.QosPortRangeArgs(
             end=15,
             start=15,
         ),
-        azure_nextgen.network.latest.QosPortRangeArgs(
+        azure_nextgen.network.QosPortRangeArgs(
             end=27,
             start=26,
         ),
@@ -139,21 +139,21 @@ dscp_configuration = azure_nextgen.network.latest.DscpConfiguration("dscpConfigu
     protocol="Tcp",
     resource_group_name="rg1",
     source_ip_ranges=[
-        azure_nextgen.network.latest.QosIpRangeArgs(
+        azure_nextgen.network.QosIpRangeArgs(
             end_ip="127.0.0.2",
             start_ip="127.0.0.1",
         ),
-        azure_nextgen.network.latest.QosIpRangeArgs(
+        azure_nextgen.network.QosIpRangeArgs(
             end_ip="127.0.1.2",
             start_ip="127.0.1.1",
         ),
     ],
     source_port_ranges=[
-        azure_nextgen.network.latest.QosPortRangeArgs(
+        azure_nextgen.network.QosPortRangeArgs(
             end=11,
             start=10,
         ),
-        azure_nextgen.network.latest.QosPortRangeArgs(
+        azure_nextgen.network.QosPortRangeArgs(
             end=21,
             start=20,
         ),
@@ -169,7 +169,7 @@ dscp_configuration = azure_nextgen.network.latest.DscpConfiguration("dscpConfigu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dscpConfiguration = new azure_nextgen.network.latest.DscpConfiguration("dscpConfiguration", {
+const dscpConfiguration = new azure_nextgen.network.DscpConfiguration("dscpConfiguration", {
     destinationIpRanges: [
         {
             endIP: "127.0.10.2",
@@ -232,7 +232,7 @@ const dscpConfiguration = new azure_nextgen.network.latest.DscpConfiguration("ds
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DscpConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DscpConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DscpConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DscpConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -240,11 +240,11 @@ const dscpConfiguration = new azure_nextgen.network.latest.DscpConfiguration("ds
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDscpConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DscpConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DscpConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDscpConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DscpConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DscpConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DscpConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DscpConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DscpConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DscpConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -265,7 +265,7 @@ const dscpConfiguration = new azure_nextgen.network.latest.DscpConfiguration("ds
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DscpConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">DscpConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -334,7 +334,7 @@ const dscpConfiguration = new azure_nextgen.network.latest.DscpConfiguration("ds
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DscpConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">DscpConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -373,7 +373,7 @@ const dscpConfiguration = new azure_nextgen.network.latest.DscpConfiguration("ds
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DscpConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">DscpConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -396,11 +396,11 @@ const dscpConfiguration = new azure_nextgen.network.latest.DscpConfiguration("ds
 
 ## DscpConfiguration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DscpConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DscpConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -14940,7 +14940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:DscpConfiguration mydscpConfig /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/dscpConfiguration/mydscpConfig 
+$ pulumi import azure-nextgen:network:DscpConfiguration mydscpConfig /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/dscpConfiguration/mydscpConfig 
 ```
 
 

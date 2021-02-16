@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.ImportPipeline
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents an import pipeline for a container registry.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var importPipeline = new AzureNextGen.ContainerRegistry.V20201101Preview.ImportPipeline("importPipeline", new AzureNextGen.ContainerRegistry.V20201101Preview.ImportPipelineArgs
+        var importPipeline = new AzureNextGen.ContainerRegistry.ImportPipeline("importPipeline", new AzureNextGen.ContainerRegistry.ImportPipelineArgs
         {
-            Identity = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry.Inputs.IdentityPropertiesArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -46,7 +47,7 @@ class MyStack : Stack
             },
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
-            Source = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.ImportPipelineSourcePropertiesArgs
+            Source = new AzureNextGen.ContainerRegistry.Inputs.ImportPipelineSourcePropertiesArgs
             {
                 KeyVaultUri = "https://myvault.vault.azure.net/secrets/acrimportsas",
                 Type = "AzureStorageBlobContainer",
@@ -71,11 +72,11 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-import_pipeline = azure_nextgen.containerregistry.v20201101preview.ImportPipeline("importPipeline",
-    identity=azure_nextgen.containerregistry.v20201101preview.IdentityPropertiesArgs(
+import_pipeline = azure_nextgen.containerregistry.ImportPipeline("importPipeline",
+    identity=azure_nextgen.containerregistry.IdentityPropertiesArgs(
         type="UserAssigned",
         user_assigned_identities={
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_nextgen.containerregistry.v20201101preview.UserIdentityPropertiesArgs(),
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_nextgen.containerregistry.UserIdentityPropertiesArgs(),
         },
     ),
     import_pipeline_name="myImportPipeline",
@@ -87,7 +88,7 @@ import_pipeline = azure_nextgen.containerregistry.v20201101preview.ImportPipelin
     ],
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
-    source=azure_nextgen.containerregistry.v20201101preview.ImportPipelineSourcePropertiesArgs(
+    source=azure_nextgen.containerregistry.ImportPipelineSourcePropertiesArgs(
         key_vault_uri="https://myvault.vault.azure.net/secrets/acrimportsas",
         type="AzureStorageBlobContainer",
         uri="https://accountname.blob.core.windows.net/containername",
@@ -103,7 +104,7 @@ import_pipeline = azure_nextgen.containerregistry.v20201101preview.ImportPipelin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const importPipeline = new azure_nextgen.containerregistry.v20201101preview.ImportPipeline("importPipeline", {
+const importPipeline = new azure_nextgen.containerregistry.ImportPipeline("importPipeline", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {
@@ -138,7 +139,7 @@ const importPipeline = new azure_nextgen.containerregistry.v20201101preview.Impo
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ImportPipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImportPipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -146,11 +147,11 @@ const importPipeline = new azure_nextgen.containerregistry.v20201101preview.Impo
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImportPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ImportPipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ImportPipeline</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImportPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImportPipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ImportPipeline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ImportPipelineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ImportPipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -171,7 +172,7 @@ const importPipeline = new azure_nextgen.containerregistry.v20201101preview.Impo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ImportPipelineArgs</span>
+        <span class="property-type"><a href="#inputs">ImportPipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -240,7 +241,7 @@ const importPipeline = new azure_nextgen.containerregistry.v20201101preview.Impo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ImportPipelineArgs</span>
+        <span class="property-type"><a href="#inputs">ImportPipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -279,7 +280,7 @@ const importPipeline = new azure_nextgen.containerregistry.v20201101preview.Impo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ImportPipelineArgs</span>
+        <span class="property-type"><a href="#inputs">ImportPipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -302,11 +303,11 @@ const importPipeline = new azure_nextgen.containerregistry.v20201101preview.Impo
 
 ## ImportPipeline Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ImportPipeline resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ImportPipeline resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2123,37 +2124,37 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 
 {{% choosable language csharp %}}
 <dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
     <dt>Disabled</dt>
     <dd>Disabled</dd>
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular">
-    <dt>Trigger<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
     <dt>Trigger<wbr>Status<wbr>Disabled</dt>
     <dd>Disabled</dd>
+    <dt>Trigger<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
     <dt>Disabled</dt>
     <dd>Disabled</dd>
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
     <dt>DISABLED</dt>
     <dd>Disabled</dd>
+    <dt>ENABLED</dt>
+    <dd>Enabled</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2358,7 +2359,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20201101preview:ImportPipeline myImportPipeline /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline 
+$ pulumi import azure-nextgen:containerregistry:ImportPipeline myImportPipeline /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline 
 ```
 
 

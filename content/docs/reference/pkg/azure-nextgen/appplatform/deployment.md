@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.appplatform.Deployment resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Deployment resource payload
-Latest API Version: 2020-07-01.
+API Version: 2020-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var deployment = new AzureNextGen.AppPlatform.Latest.Deployment("deployment", new AzureNextGen.AppPlatform.Latest.DeploymentArgs
+        var deployment = new AzureNextGen.AppPlatform.Deployment("deployment", new AzureNextGen.AppPlatform.DeploymentArgs
         {
             AppName = "myapp",
             DeploymentName = "mydeployment",
-            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.DeploymentResourcePropertiesArgs
+            Properties = new AzureNextGen.AppPlatform.Inputs.DeploymentResourcePropertiesArgs
             {
-                DeploymentSettings = new AzureNextGen.AppPlatform.Latest.Inputs.DeploymentSettingsArgs
+                DeploymentSettings = new AzureNextGen.AppPlatform.Inputs.DeploymentSettingsArgs
                 {
                     Cpu = 1,
                     EnvironmentVariables = 
@@ -44,7 +44,7 @@ class MyStack : Stack
                     MemoryInGB = 3,
                     RuntimeVersion = "Java_8",
                 },
-                Source = new AzureNextGen.AppPlatform.Latest.Inputs.UserSourceInfoArgs
+                Source = new AzureNextGen.AppPlatform.Inputs.UserSourceInfoArgs
                 {
                     ArtifactSelector = "sub-module-1",
                     RelativePath = "resources/a172cedcae47474b615c54d510a5d84a8dea3032e958587430b413538be3f333-2019082605-e3095339-1723-44b7-8b5e-31b1003978bc",
@@ -69,7 +69,7 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -115,11 +115,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-deployment = azure_nextgen.appplatform.latest.Deployment("deployment",
+deployment = azure_nextgen.appplatform.Deployment("deployment",
     app_name="myapp",
     deployment_name="mydeployment",
-    properties=azure_nextgen.appplatform.latest.DeploymentResourcePropertiesArgs(
-        deployment_settings=azure_nextgen.appplatform.latest.DeploymentSettingsArgs(
+    properties=azure_nextgen.appplatform.DeploymentResourcePropertiesArgs(
+        deployment_settings=azure_nextgen.appplatform.DeploymentSettingsArgs(
             cpu=1,
             environment_variables={
                 "env": "test",
@@ -128,7 +128,7 @@ deployment = azure_nextgen.appplatform.latest.Deployment("deployment",
             memory_in_gb=3,
             runtime_version="Java_8",
         ),
-        source=azure_nextgen.appplatform.latest.UserSourceInfoArgs(
+        source=azure_nextgen.appplatform.UserSourceInfoArgs(
             artifact_selector="sub-module-1",
             relative_path="resources/a172cedcae47474b615c54d510a5d84a8dea3032e958587430b413538be3f333-2019082605-e3095339-1723-44b7-8b5e-31b1003978bc",
             type="Source",
@@ -148,7 +148,7 @@ deployment = azure_nextgen.appplatform.latest.Deployment("deployment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const deployment = new azure_nextgen.appplatform.latest.Deployment("deployment", {
+const deployment = new azure_nextgen.appplatform.Deployment("deployment", {
     appName: "myapp",
     deploymentName: "mydeployment",
     properties: {
@@ -184,7 +184,7 @@ const deployment = new azure_nextgen.appplatform.latest.Deployment("deployment",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DeploymentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -192,11 +192,11 @@ const deployment = new azure_nextgen.appplatform.latest.Deployment("deployment",
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DeploymentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Deployment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Deployment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DeploymentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -217,7 +217,7 @@ const deployment = new azure_nextgen.appplatform.latest.Deployment("deployment",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DeploymentArgs</span>
+        <span class="property-type"><a href="#inputs">DeploymentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -286,7 +286,7 @@ const deployment = new azure_nextgen.appplatform.latest.Deployment("deployment",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DeploymentArgs</span>
+        <span class="property-type"><a href="#inputs">DeploymentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -325,7 +325,7 @@ const deployment = new azure_nextgen.appplatform.latest.Deployment("deployment",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DeploymentArgs</span>
+        <span class="property-type"><a href="#inputs">DeploymentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -348,11 +348,11 @@ const deployment = new azure_nextgen.appplatform.latest.Deployment("deployment",
 
 ## Deployment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Deployment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Deployment resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2560,7 +2560,7 @@ the relative path to the target module/project.{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:appplatform/latest:Deployment mydeployment /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp/deployments/mydeployment 
+$ pulumi import azure-nextgen:appplatform:Deployment mydeployment /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp/deployments/mydeployment 
 ```
 
 

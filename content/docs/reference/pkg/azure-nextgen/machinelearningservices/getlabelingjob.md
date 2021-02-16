@@ -19,7 +19,7 @@ meta_desc: "Explore the GetLabelingJob function of the machinelearningservices m
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLabelingJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLabelingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetLabelingJobResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLabelingJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLabelingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLabelingJobResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetLabelingJob function of the machinelearningservices m
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLabelingJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLabelingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupLabelingJobResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLabelingJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLabelingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLabelingJobResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupLabelingJob` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetLabelingJob function of the machinelearningservices m
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLabelingJob </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetLabelingJobResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetLabelingJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLabelingJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLabelingJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -474,9 +474,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -574,9 +571,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="labelcategoryresponse">Label<wbr>Category<wbr>Response</h4>
-
-
-
 
 
 
@@ -716,9 +710,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -816,9 +807,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="labelingdatasetconfigurationresponse">Labeling<wbr>Dataset<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 
@@ -958,9 +946,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1061,9 +1046,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1125,9 +1107,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="labelingjobpropertiesresponse">Labeling<wbr>Job<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1591,9 +1570,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1802,9 +1778,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1974,9 +1947,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="statusmessageresponse">Status<wbr>Message<wbr>Response</h4>
-
-
-
 
 
 
@@ -2152,9 +2122,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2166,7 +2133,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
@@ -2175,7 +2142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
@@ -2184,7 +2151,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
@@ -2202,7 +2169,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
@@ -2211,7 +2178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2226,7 +2193,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
@@ -2235,7 +2202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
@@ -2244,7 +2211,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
@@ -2262,7 +2229,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
@@ -2271,7 +2238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2286,7 +2253,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
@@ -2295,7 +2262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
@@ -2304,7 +2271,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
@@ -2322,7 +2289,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
@@ -2331,7 +2298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2346,7 +2313,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
@@ -2355,7 +2322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
@@ -2364,7 +2331,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
@@ -2382,7 +2349,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
@@ -2391,7 +2358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

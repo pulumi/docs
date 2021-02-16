@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRoutePort resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 ExpressRoutePort resource definition.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRoutePort = new AzureNextGen.Network.Latest.ExpressRoutePort("expressRoutePort", new AzureNextGen.Network.Latest.ExpressRoutePortArgs
+        var expressRoutePort = new AzureNextGen.Network.ExpressRoutePort("expressRoutePort", new AzureNextGen.Network.ExpressRoutePortArgs
         {
             BandwidthInGbps = 100,
             Encapsulation = "QinQ",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort",
+express_route_port = azure_nextgen.network.ExpressRoutePort("expressRoutePort",
     bandwidth_in_gbps=100,
     encapsulation="QinQ",
     express_route_port_name="portName",
@@ -99,7 +99,7 @@ express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoute
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort", {
+const expressRoutePort = new azure_nextgen.network.ExpressRoutePort("expressRoutePort", {
     bandwidthInGbps: 100,
     encapsulation: "QinQ",
     expressRoutePortName: "portName",
@@ -122,14 +122,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRoutePort = new AzureNextGen.Network.Latest.ExpressRoutePort("expressRoutePort", new AzureNextGen.Network.Latest.ExpressRoutePortArgs
+        var expressRoutePort = new AzureNextGen.Network.ExpressRoutePort("expressRoutePort", new AzureNextGen.Network.ExpressRoutePortArgs
         {
             BandwidthInGbps = 100,
             Encapsulation = "QinQ",
             ExpressRoutePortName = "portName",
             Links = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ExpressRouteLinkArgs
+                new AzureNextGen.Network.Inputs.ExpressRouteLinkArgs
                 {
                     AdminState = "Enabled",
                     Name = "link1",
@@ -153,7 +153,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -190,11 +190,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort",
+express_route_port = azure_nextgen.network.ExpressRoutePort("expressRoutePort",
     bandwidth_in_gbps=100,
     encapsulation="QinQ",
     express_route_port_name="portName",
-    links=[azure_nextgen.network.latest.ExpressRouteLinkArgs(
+    links=[azure_nextgen.network.ExpressRouteLinkArgs(
         admin_state="Enabled",
         name="link1",
     )],
@@ -212,7 +212,7 @@ express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoute
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort", {
+const expressRoutePort = new azure_nextgen.network.ExpressRoutePort("expressRoutePort", {
     bandwidthInGbps: 100,
     encapsulation: "QinQ",
     expressRoutePortName: "portName",
@@ -237,7 +237,7 @@ const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expr
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ExpressRoutePortArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRoutePortArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -245,11 +245,11 @@ const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRoutePort</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ExpressRoutePortArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRoutePort</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRoutePort</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRoutePortArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRoutePort</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ExpressRoutePortArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExpressRoutePortArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -270,7 +270,7 @@ const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExpressRoutePortArgs</span>
+        <span class="property-type"><a href="#inputs">ExpressRoutePortArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -339,7 +339,7 @@ const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExpressRoutePortArgs</span>
+        <span class="property-type"><a href="#inputs">ExpressRoutePortArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -378,7 +378,7 @@ const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExpressRoutePortArgs</span>
+        <span class="property-type"><a href="#inputs">ExpressRoutePortArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -401,11 +401,11 @@ const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expr
 
 ## ExpressRoutePort Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2817,7 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ExpressRoutePort portName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName 
+$ pulumi import azure-nextgen:network:ExpressRoutePort portName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName 
 ```
 
 

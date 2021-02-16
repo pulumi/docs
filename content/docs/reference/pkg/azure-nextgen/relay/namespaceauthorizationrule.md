@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.relay.NamespaceAuthorizationRule
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a namespace authorization rule.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceAuthorizationRule = new AzureNextGen.Relay.Latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.Relay.Latest.NamespaceAuthorizationRuleArgs
+        var namespaceAuthorizationRule = new AzureNextGen.Relay.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.Relay.NamespaceAuthorizationRuleArgs
         {
             AuthorizationRuleName = "example-RelayAuthRules-01",
             NamespaceName = "example-RelayNamespace-01",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_authorization_rule = azure_nextgen.relay.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
+namespace_authorization_rule = azure_nextgen.relay.NamespaceAuthorizationRule("namespaceAuthorizationRule",
     authorization_rule_name="example-RelayAuthRules-01",
     namespace_name="example-RelayNamespace-01",
     resource_group_name="resourcegroup",
@@ -75,7 +75,7 @@ namespace_authorization_rule = azure_nextgen.relay.latest.NamespaceAuthorization
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespaceAuthorizationRule = new azure_nextgen.relay.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
+const namespaceAuthorizationRule = new azure_nextgen.relay.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
     authorizationRuleName: "example-RelayAuthRules-01",
     namespaceName: "example-RelayNamespace-01",
     resourceGroupName: "resourcegroup",
@@ -97,7 +97,7 @@ const namespaceAuthorizationRule = new azure_nextgen.relay.latest.NamespaceAutho
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NamespaceAuthorizationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">NamespaceAuthorizationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NamespaceAuthorizationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NamespaceAuthorizationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -105,11 +105,11 @@ const namespaceAuthorizationRule = new azure_nextgen.relay.latest.NamespaceAutho
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNamespaceAuthorizationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">NamespaceAuthorizationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NamespaceAuthorizationRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNamespaceAuthorizationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NamespaceAuthorizationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NamespaceAuthorizationRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NamespaceAuthorizationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">NamespaceAuthorizationRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NamespaceAuthorizationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NamespaceAuthorizationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -130,7 +130,7 @@ const namespaceAuthorizationRule = new azure_nextgen.relay.latest.NamespaceAutho
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NamespaceAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">NamespaceAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -199,7 +199,7 @@ const namespaceAuthorizationRule = new azure_nextgen.relay.latest.NamespaceAutho
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NamespaceAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">NamespaceAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -238,7 +238,7 @@ const namespaceAuthorizationRule = new azure_nextgen.relay.latest.NamespaceAutho
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NamespaceAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">NamespaceAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -261,11 +261,11 @@ const namespaceAuthorizationRule = new azure_nextgen.relay.latest.NamespaceAutho
 
 ## NamespaceAuthorizationRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NamespaceAuthorizationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NamespaceAuthorizationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -637,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:relay/latest:NamespaceAuthorizationRule example-RelayAuthRules-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/AuthorizationRules/example-RelayAuthRules-01 
+$ pulumi import azure-nextgen:relay:NamespaceAuthorizationRule example-RelayAuthRules-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/AuthorizationRules/example-RelayAuthRules-01 
 ```
 
 

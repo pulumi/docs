@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationsmanagement.ManagementC
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The container for solution.
+API Version: 2015-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementConfiguration = new AzureNextGen.OperationsManagement.V20151101Preview.ManagementConfiguration("managementConfiguration", new AzureNextGen.OperationsManagement.V20151101Preview.ManagementConfigurationArgs
+        var managementConfiguration = new AzureNextGen.OperationsManagement.ManagementConfiguration("managementConfiguration", new AzureNextGen.OperationsManagement.ManagementConfigurationArgs
         {
             Location = "East US",
             ManagementConfigurationName = "managementConfiguration1",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement/v20151101preview"
+	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_configuration = azure_nextgen.operationsmanagement.v20151101preview.ManagementConfiguration("managementConfiguration",
+management_configuration = azure_nextgen.operationsmanagement.ManagementConfiguration("managementConfiguration",
     location="East US",
     management_configuration_name="managementConfiguration1",
     resource_group_name="rg1")
@@ -89,7 +90,7 @@ management_configuration = azure_nextgen.operationsmanagement.v20151101preview.M
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managementConfiguration = new azure_nextgen.operationsmanagement.v20151101preview.ManagementConfiguration("managementConfiguration", {
+const managementConfiguration = new azure_nextgen.operationsmanagement.ManagementConfiguration("managementConfiguration", {
     location: "East US",
     managementConfigurationName: "managementConfiguration1",
     resourceGroupName: "rg1",
@@ -107,7 +108,7 @@ const managementConfiguration = new azure_nextgen.operationsmanagement.v20151101
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagementConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagementConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagementConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagementConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -115,11 +116,11 @@ const managementConfiguration = new azure_nextgen.operationsmanagement.v20151101
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagementConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagementConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagementConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagementConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagementConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagementConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagementConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagementConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagementConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagementConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -140,7 +141,7 @@ const managementConfiguration = new azure_nextgen.operationsmanagement.v20151101
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagementConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">ManagementConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -209,7 +210,7 @@ const managementConfiguration = new azure_nextgen.operationsmanagement.v20151101
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagementConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">ManagementConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -248,7 +249,7 @@ const managementConfiguration = new azure_nextgen.operationsmanagement.v20151101
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagementConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">ManagementConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -271,11 +272,11 @@ const managementConfiguration = new azure_nextgen.operationsmanagement.v20151101
 
 ## ManagementConfiguration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ManagementConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ManagementConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1173,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationsmanagement/v20151101preview:ManagementConfiguration managementConfiguration1 subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationsManagement/ManagementConfigurations/managementConfiguration1 
+$ pulumi import azure-nextgen:operationsmanagement:ManagementConfiguration managementConfiguration1 subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationsManagement/ManagementConfigurations/managementConfiguration1 
 ```
 
 

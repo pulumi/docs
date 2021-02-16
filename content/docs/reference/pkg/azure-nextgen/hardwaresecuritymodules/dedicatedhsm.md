@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hardwaresecuritymodules.Dedicate
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource information with extended details.
+API Version: 2018-10-31-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,26 +27,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dedicatedHsm = new AzureNextGen.HardwareSecurityModules.V20181031Preview.DedicatedHsm("dedicatedHsm", new AzureNextGen.HardwareSecurityModules.V20181031Preview.DedicatedHsmArgs
+        var dedicatedHsm = new AzureNextGen.HardwareSecurityModules.DedicatedHsm("dedicatedHsm", new AzureNextGen.HardwareSecurityModules.DedicatedHsmArgs
         {
             Location = "westus",
             Name = "hsm1",
-            NetworkProfile = new AzureNextGen.HardwareSecurityModules.V20181031Preview.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.HardwareSecurityModules.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.HardwareSecurityModules.V20181031Preview.Inputs.NetworkInterfaceArgs
+                    new AzureNextGen.HardwareSecurityModules.Inputs.NetworkInterfaceArgs
                     {
                         PrivateIpAddress = "1.0.0.1",
                     },
                 },
-                Subnet = new AzureNextGen.HardwareSecurityModules.V20181031Preview.Inputs.ApiEntityReferenceArgs
+                Subnet = new AzureNextGen.HardwareSecurityModules.Inputs.ApiEntityReferenceArgs
                 {
                     Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
                 },
             },
             ResourceGroupName = "hsm-group",
-            Sku = new AzureNextGen.HardwareSecurityModules.V20181031Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.HardwareSecurityModules.Inputs.SkuArgs
             {
                 Name = "SafeNet Luna Network HSM A790",
             },
@@ -70,7 +71,7 @@ class MyStack : Stack
 package main
 
 import (
-	hardwaresecuritymodules "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hardwaresecuritymodules/v20181031preview"
+	hardwaresecuritymodules "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hardwaresecuritymodules"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -116,19 +117,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dedicated_hsm = azure_nextgen.hardwaresecuritymodules.v20181031preview.DedicatedHsm("dedicatedHsm",
+dedicated_hsm = azure_nextgen.hardwaresecuritymodules.DedicatedHsm("dedicatedHsm",
     location="westus",
     name="hsm1",
-    network_profile=azure_nextgen.hardwaresecuritymodules.v20181031preview.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.hardwaresecuritymodules.v20181031preview.NetworkInterfaceArgs(
+    network_profile=azure_nextgen.hardwaresecuritymodules.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.hardwaresecuritymodules.NetworkInterfaceArgs(
             private_ip_address="1.0.0.1",
         )],
-        subnet=azure_nextgen.hardwaresecuritymodules.v20181031preview.ApiEntityReferenceArgs(
+        subnet=azure_nextgen.hardwaresecuritymodules.ApiEntityReferenceArgs(
             id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
         ),
     ),
     resource_group_name="hsm-group",
-    sku=azure_nextgen.hardwaresecuritymodules.v20181031preview.SkuArgs(
+    sku=azure_nextgen.hardwaresecuritymodules.SkuArgs(
         name="SafeNet Luna Network HSM A790",
     ),
     stamp_id="stamp01",
@@ -147,7 +148,7 @@ dedicated_hsm = azure_nextgen.hardwaresecuritymodules.v20181031preview.Dedicated
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.v20181031preview.DedicatedHsm("dedicatedHsm", {
+const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.DedicatedHsm("dedicatedHsm", {
     location: "westus",
     name: "hsm1",
     networkProfile: {
@@ -181,7 +182,7 @@ const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.v20181031preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DedicatedHsm</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DedicatedHsmArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DedicatedHsm</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DedicatedHsmArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -189,11 +190,11 @@ const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.v20181031preview.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDedicatedHsm</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DedicatedHsmArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DedicatedHsm</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDedicatedHsm</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DedicatedHsmArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DedicatedHsm</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DedicatedHsm</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DedicatedHsmArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DedicatedHsm</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DedicatedHsmArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -214,7 +215,7 @@ const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.v20181031preview.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DedicatedHsmArgs</span>
+        <span class="property-type"><a href="#inputs">DedicatedHsmArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,7 +284,7 @@ const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.v20181031preview.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DedicatedHsmArgs</span>
+        <span class="property-type"><a href="#inputs">DedicatedHsmArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -322,7 +323,7 @@ const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.v20181031preview.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DedicatedHsmArgs</span>
+        <span class="property-type"><a href="#inputs">DedicatedHsmArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -345,11 +346,11 @@ const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.v20181031preview.
 
 ## DedicatedHsm Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DedicatedHsm resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DedicatedHsm resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1459,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hardwaresecuritymodules/v20181031preview:DedicatedHsm hsm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.HardwareSecurityModules/dedicatedHSMs/hsm1 
+$ pulumi import azure-nextgen:hardwaresecuritymodules:DedicatedHsm hsm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.HardwareSecurityModules/dedicatedHSMs/hsm1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.ScheduledQueryRule reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Log Search Rule resource.
-Latest API Version: 2018-04-16.
+API Version: 2018-04-16.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scheduledQueryRule = new AzureNextGen.Insights.Latest.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.Latest.ScheduledQueryRuleArgs
+        var scheduledQueryRule = new AzureNextGen.Insights.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.ScheduledQueryRuleArgs
         {
-            Action = 
+            Action = new AzureNextGen.Insights.Inputs.AlertingActionArgs
             {
-                { "aznsAction", new AzureNextGen.Insights.Latest.Inputs.AzNsActionGroupArgs
+                AznsAction = new AzureNextGen.Insights.Inputs.AzNsActionGroupArgs
                 {
                     ActionGroup = {},
                     CustomWebhookPayload = "{}",
                     EmailSubject = "Email Header",
-                } },
-                { "odataType", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
-                { "severity", "1" },
-                { "trigger", new AzureNextGen.Insights.Latest.Inputs.TriggerConditionArgs
+                },
+                OdataType = "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+                Severity = "1",
+                Trigger = new AzureNextGen.Insights.Inputs.TriggerConditionArgs
                 {
-                    MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.LogMetricTriggerArgs
+                    MetricTrigger = new AzureNextGen.Insights.Inputs.LogMetricTriggerArgs
                     {
                         MetricColumn = "Computer",
                         MetricTriggerType = "Consecutive",
@@ -50,19 +50,19 @@ class MyStack : Stack
                     },
                     Threshold = 3,
                     ThresholdOperator = "GreaterThan",
-                } },
+                },
             },
             Description = "log alert description",
             Enabled = "true",
             Location = "eastus",
             ResourceGroupName = "Rac46PostSwapRG",
             RuleName = "logalertfoo",
-            Schedule = new AzureNextGen.Insights.Latest.Inputs.ScheduleArgs
+            Schedule = new AzureNextGen.Insights.Inputs.ScheduleArgs
             {
                 FrequencyInMinutes = 15,
                 TimeWindowInMinutes = 15,
             },
-            Source = new AzureNextGen.Insights.Latest.Inputs.SourceArgs
+            Source = new AzureNextGen.Insights.Inputs.SourceArgs
             {
                 DataSourceId = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
                 Query = "Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
@@ -79,7 +79,62 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewScheduledQueryRule(ctx, "scheduledQueryRule", &insights.ScheduledQueryRuleArgs{
+			Action: &insights.AlertingActionArgs{
+				AznsAction: &insights.AzNsActionGroupArgs{
+					ActionGroup:          []interface{}{},
+					CustomWebhookPayload: pulumi.String("{}"),
+					EmailSubject:         pulumi.String("Email Header"),
+				},
+				OdataType: pulumi.String("Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction"),
+				Severity:  pulumi.String("1"),
+				Trigger: &insights.TriggerConditionArgs{
+					MetricTrigger: &insights.LogMetricTriggerArgs{
+						MetricColumn:      pulumi.String("Computer"),
+						MetricTriggerType: pulumi.String("Consecutive"),
+						Threshold:         pulumi.Float64(5),
+						ThresholdOperator: pulumi.String("GreaterThan"),
+					},
+					Threshold:         pulumi.Float64(3),
+					ThresholdOperator: pulumi.String("GreaterThan"),
+				},
+			},
+			Description:       pulumi.String("log alert description"),
+			Enabled:           pulumi.String("true"),
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("Rac46PostSwapRG"),
+			RuleName:          pulumi.String("logalertfoo"),
+			Schedule: &insights.ScheduleArgs{
+				FrequencyInMinutes:  pulumi.Int(15),
+				TimeWindowInMinutes: pulumi.Int(15),
+			},
+			Source: &insights.SourceArgs{
+				DataSourceId: pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace"),
+				Query:        pulumi.String("Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)"),
+				QueryType:    pulumi.String("ResultCount"),
+			},
+			Tags: nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,17 +143,17 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule",
-    action={
-        "aznsAction": azure_nextgen.insights.latest.AzNsActionGroupArgs(
+scheduled_query_rule = azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule",
+    action=azure_nextgen.insights.AlertingActionArgs(
+        azns_action=azure_nextgen.insights.AzNsActionGroupArgs(
             action_group=[],
             custom_webhook_payload="{}",
             email_subject="Email Header",
         ),
-        "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-        "severity": "1",
-        "trigger": azure_nextgen.insights.latest.TriggerConditionArgs(
-            metric_trigger=azure_nextgen.insights.latest.LogMetricTriggerArgs(
+        odata_type="Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+        severity="1",
+        trigger=azure_nextgen.insights.TriggerConditionArgs(
+            metric_trigger=azure_nextgen.insights.LogMetricTriggerArgs(
                 metric_column="Computer",
                 metric_trigger_type="Consecutive",
                 threshold=5,
@@ -107,17 +162,17 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
             threshold=3,
             threshold_operator="GreaterThan",
         ),
-    },
+    ),
     description="log alert description",
     enabled="true",
     location="eastus",
     resource_group_name="Rac46PostSwapRG",
     rule_name="logalertfoo",
-    schedule=azure_nextgen.insights.latest.ScheduleArgs(
+    schedule=azure_nextgen.insights.ScheduleArgs(
         frequency_in_minutes=15,
         time_window_in_minutes=15,
     ),
-    source=azure_nextgen.insights.latest.SourceArgs(
+    source=azure_nextgen.insights.SourceArgs(
         data_source_id="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
         query="Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
         query_type="ResultCount",
@@ -134,7 +189,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
+const scheduledQueryRule = new azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule", {
     action: {
         aznsAction: {
             actionGroup: [],
@@ -185,37 +240,37 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scheduledQueryRule = new AzureNextGen.Insights.Latest.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.Latest.ScheduledQueryRuleArgs
+        var scheduledQueryRule = new AzureNextGen.Insights.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.ScheduledQueryRuleArgs
         {
-            Action = 
+            Action = new AzureNextGen.Insights.Inputs.AlertingActionArgs
             {
-                { "aznsAction", new AzureNextGen.Insights.Latest.Inputs.AzNsActionGroupArgs
+                AznsAction = new AzureNextGen.Insights.Inputs.AzNsActionGroupArgs
                 {
                     ActionGroup = 
                     {
                         "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag",
                     },
                     EmailSubject = "Cross Resource Mail!!",
-                } },
-                { "odataType", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
-                { "severity", "3" },
-                { "trigger", new AzureNextGen.Insights.Latest.Inputs.TriggerConditionArgs
+                },
+                OdataType = "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+                Severity = "3",
+                Trigger = new AzureNextGen.Insights.Inputs.TriggerConditionArgs
                 {
                     Threshold = 5000,
                     ThresholdOperator = "GreaterThan",
-                } },
+                },
             },
             Description = "Sample Cross Resource alert",
             Enabled = "true",
             Location = "eastus",
             ResourceGroupName = "Rac46PostSwapRG",
             RuleName = "SampleCrossResourceAlert",
-            Schedule = new AzureNextGen.Insights.Latest.Inputs.ScheduleArgs
+            Schedule = new AzureNextGen.Insights.Inputs.ScheduleArgs
             {
                 FrequencyInMinutes = 60,
                 TimeWindowInMinutes = 60,
             },
-            Source = new AzureNextGen.Insights.Latest.Inputs.SourceArgs
+            Source = new AzureNextGen.Insights.Inputs.SourceArgs
             {
                 AuthorizedResources = 
                 {
@@ -237,7 +292,61 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewScheduledQueryRule(ctx, "scheduledQueryRule", &insights.ScheduledQueryRuleArgs{
+			Action: &insights.AlertingActionArgs{
+				AznsAction: &insights.AzNsActionGroupArgs{
+					ActionGroup: pulumi.StringArray{
+						pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"),
+					},
+					EmailSubject: pulumi.String("Cross Resource Mail!!"),
+				},
+				OdataType: pulumi.String("Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction"),
+				Severity:  pulumi.String("3"),
+				Trigger: &insights.TriggerConditionArgs{
+					Threshold:         pulumi.Float64(5000),
+					ThresholdOperator: pulumi.String("GreaterThan"),
+				},
+			},
+			Description:       pulumi.String("Sample Cross Resource alert"),
+			Enabled:           pulumi.String("true"),
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("Rac46PostSwapRG"),
+			RuleName:          pulumi.String("SampleCrossResourceAlert"),
+			Schedule: &insights.ScheduleArgs{
+				FrequencyInMinutes:  pulumi.Int(60),
+				TimeWindowInMinutes: pulumi.Int(60),
+			},
+			Source: &insights.SourceArgs{
+				AuthorizedResources: pulumi.StringArray{
+					pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace"),
+					pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI"),
+				},
+				DataSourceId: pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI"),
+				Query:        pulumi.String("union requests, workspace(\"sampleWorkspace\").Update"),
+				QueryType:    pulumi.String("ResultCount"),
+			},
+			Tags: nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -246,29 +355,29 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule",
-    action={
-        "aznsAction": azure_nextgen.insights.latest.AzNsActionGroupArgs(
+scheduled_query_rule = azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule",
+    action=azure_nextgen.insights.AlertingActionArgs(
+        azns_action=azure_nextgen.insights.AzNsActionGroupArgs(
             action_group=["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
             email_subject="Cross Resource Mail!!",
         ),
-        "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-        "severity": "3",
-        "trigger": azure_nextgen.insights.latest.TriggerConditionArgs(
+        odata_type="Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+        severity="3",
+        trigger=azure_nextgen.insights.TriggerConditionArgs(
             threshold=5000,
             threshold_operator="GreaterThan",
         ),
-    },
+    ),
     description="Sample Cross Resource alert",
     enabled="true",
     location="eastus",
     resource_group_name="Rac46PostSwapRG",
     rule_name="SampleCrossResourceAlert",
-    schedule=azure_nextgen.insights.latest.ScheduleArgs(
+    schedule=azure_nextgen.insights.ScheduleArgs(
         frequency_in_minutes=60,
         time_window_in_minutes=60,
     ),
-    source=azure_nextgen.insights.latest.SourceArgs(
+    source=azure_nextgen.insights.SourceArgs(
         authorized_resources=[
             "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
             "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
@@ -289,7 +398,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
+const scheduledQueryRule = new azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule", {
     action: {
         aznsAction: {
             actionGroup: ["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
@@ -337,26 +446,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scheduledQueryRule = new AzureNextGen.Insights.Latest.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.Latest.ScheduledQueryRuleArgs
+        var scheduledQueryRule = new AzureNextGen.Insights.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.ScheduledQueryRuleArgs
         {
-            Action = 
+            Action = new AzureNextGen.Insights.Inputs.LogToMetricActionArgs
             {
-                { "criteria", 
+                Criteria = 
                 {
-                    new AzureNextGen.Insights.Latest.Inputs.CriteriaArgs
+                    new AzureNextGen.Insights.Inputs.CriteriaArgs
                     {
                         Dimensions = {},
                         MetricName = "Average_% Idle Time",
                     },
-                } },
-                { "odataType", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction" },
+                },
+                OdataType = "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
             },
             Description = "log to metric description",
             Enabled = "true",
             Location = "West Europe",
             ResourceGroupName = "alertsweu",
             RuleName = "logtometricfoo",
-            Source = new AzureNextGen.Insights.Latest.Inputs.SourceArgs
+            Source = new AzureNextGen.Insights.Inputs.SourceArgs
             {
                 DataSourceId = "/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
             },
@@ -371,7 +480,48 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	"fmt"
+
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewScheduledQueryRule(ctx, "scheduledQueryRule", &insights.ScheduledQueryRuleArgs{
+			Action: &insights.LogToMetricActionArgs{
+				Criteria: insights.CriteriaArray{
+					&insights.CriteriaArgs{
+						Dimensions: insights.DimensionArray{},
+						MetricName: pulumi.String(fmt.Sprintf("%v%v%v", "Average_", "%", " Idle Time")),
+					},
+				},
+				OdataType: pulumi.String("Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction"),
+			},
+			Description:       pulumi.String("log to metric description"),
+			Enabled:           pulumi.String("true"),
+			Location:          pulumi.String("West Europe"),
+			ResourceGroupName: pulumi.String("alertsweu"),
+			RuleName:          pulumi.String("logtometricfoo"),
+			Source: &insights.SourceArgs{
+				DataSourceId: pulumi.String("/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu"),
+			},
+			Tags: nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -380,20 +530,20 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule",
-    action={
-        "criteria": [azure_nextgen.insights.latest.CriteriaArgs(
+scheduled_query_rule = azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule",
+    action=azure_nextgen.insights.LogToMetricActionArgs(
+        criteria=[azure_nextgen.insights.CriteriaArgs(
             dimensions=[],
             metric_name="Average_% Idle Time",
         )],
-        "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
-    },
+        odata_type="Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
+    ),
     description="log to metric description",
     enabled="true",
     location="West Europe",
     resource_group_name="alertsweu",
     rule_name="logtometricfoo",
-    source=azure_nextgen.insights.latest.SourceArgs(
+    source=azure_nextgen.insights.SourceArgs(
         data_source_id="/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
     ),
     tags={})
@@ -408,7 +558,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
+const scheduledQueryRule = new azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule", {
     action: {
         criteria: [{
             dimensions: [],
@@ -439,7 +589,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ScheduledQueryRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -447,11 +597,11 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScheduledQueryRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ScheduledQueryRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScheduledQueryRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScheduledQueryRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScheduledQueryRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ScheduledQueryRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -472,7 +622,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ScheduledQueryRuleArgs</span>
+        <span class="property-type"><a href="#inputs">ScheduledQueryRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -541,7 +691,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ScheduledQueryRuleArgs</span>
+        <span class="property-type"><a href="#inputs">ScheduledQueryRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -580,7 +730,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ScheduledQueryRuleArgs</span>
+        <span class="property-type"><a href="#inputs">ScheduledQueryRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -603,11 +753,11 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
 
 ## ScheduledQueryRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3965,7 +4115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:ScheduledQueryRule logtometricfoo /subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/microsoft.insights/scheduledqueryrules/logtometricfoo 
+$ pulumi import azure-nextgen:insights:ScheduledQueryRule logtometricfoo /subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/microsoft.insights/scheduledqueryrules/logtometricfoo 
 ```
 
 

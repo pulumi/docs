@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sqlvirtualmachine.AvailabilityGr
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SQL Server availability group listener.
+API Version: 2017-03-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var availabilityGroupListener = new AzureNextGen.SqlVirtualMachine.V20170301Preview.AvailabilityGroupListener("availabilityGroupListener", new AzureNextGen.SqlVirtualMachine.V20170301Preview.AvailabilityGroupListenerArgs
+        var availabilityGroupListener = new AzureNextGen.SqlVirtualMachine.AvailabilityGroupListener("availabilityGroupListener", new AzureNextGen.SqlVirtualMachine.AvailabilityGroupListenerArgs
         {
             AvailabilityGroupListenerName = "agl-test",
             AvailabilityGroupName = "ag-test",
             LoadBalancerConfigurations = 
             {
-                new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.LoadBalancerConfigurationArgs
+                new AzureNextGen.SqlVirtualMachine.Inputs.LoadBalancerConfigurationArgs
                 {
                     LoadBalancerResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb-test",
-                    PrivateIpAddress = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.PrivateIPAddressArgs
+                    PrivateIpAddress = new AzureNextGen.SqlVirtualMachine.Inputs.PrivateIPAddressArgs
                     {
                         IpAddress = "10.1.0.112",
                         SubnetResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default",
@@ -66,7 +67,7 @@ class MyStack : Stack
 package main
 
 import (
-	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine/v20170301preview"
+	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -110,12 +111,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-availability_group_listener = azure_nextgen.sqlvirtualmachine.v20170301preview.AvailabilityGroupListener("availabilityGroupListener",
+availability_group_listener = azure_nextgen.sqlvirtualmachine.AvailabilityGroupListener("availabilityGroupListener",
     availability_group_listener_name="agl-test",
     availability_group_name="ag-test",
-    load_balancer_configurations=[azure_nextgen.sqlvirtualmachine.v20170301preview.LoadBalancerConfigurationArgs(
+    load_balancer_configurations=[azure_nextgen.sqlvirtualmachine.LoadBalancerConfigurationArgs(
         load_balancer_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb-test",
-        private_ip_address=azure_nextgen.sqlvirtualmachine.v20170301preview.PrivateIPAddressArgs(
+        private_ip_address=azure_nextgen.sqlvirtualmachine.PrivateIPAddressArgs(
             ip_address="10.1.0.112",
             subnet_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default",
         ),
@@ -139,7 +140,7 @@ availability_group_listener = azure_nextgen.sqlvirtualmachine.v20170301preview.A
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.v20170301preview.AvailabilityGroupListener("availabilityGroupListener", {
+const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.AvailabilityGroupListener("availabilityGroupListener", {
     availabilityGroupListenerName: "agl-test",
     availabilityGroupName: "ag-test",
     loadBalancerConfigurations: [{
@@ -171,7 +172,7 @@ const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.v20170301p
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AvailabilityGroupListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AvailabilityGroupListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -179,11 +180,11 @@ const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.v20170301p
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAvailabilityGroupListener</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AvailabilityGroupListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AvailabilityGroupListener</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAvailabilityGroupListener</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AvailabilityGroupListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AvailabilityGroupListener</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AvailabilityGroupListenerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AvailabilityGroupListenerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -204,7 +205,7 @@ const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.v20170301p
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AvailabilityGroupListenerArgs</span>
+        <span class="property-type"><a href="#inputs">AvailabilityGroupListenerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -273,7 +274,7 @@ const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.v20170301p
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AvailabilityGroupListenerArgs</span>
+        <span class="property-type"><a href="#inputs">AvailabilityGroupListenerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -312,7 +313,7 @@ const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.v20170301p
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AvailabilityGroupListenerArgs</span>
+        <span class="property-type"><a href="#inputs">AvailabilityGroupListenerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -335,11 +336,11 @@ const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.v20170301p
 
 ## AvailabilityGroupListener Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AvailabilityGroupListener resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AvailabilityGroupListener resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1417,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sqlvirtualmachine/v20170301preview:AvailabilityGroupListener agl-test /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup/availabilityGroupListeners/agl-test 
+$ pulumi import azure-nextgen:sqlvirtualmachine:AvailabilityGroupListener agl-test /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup/availabilityGroupListeners/agl-test 
 ```
 
 

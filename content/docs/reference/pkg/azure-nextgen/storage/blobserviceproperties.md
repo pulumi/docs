@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.BlobServiceProperties re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The properties of a storage account’s Blob service.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blobServiceProperties = new AzureNextGen.Storage.Latest.BlobServiceProperties("blobServiceProperties", new AzureNextGen.Storage.Latest.BlobServicePropertiesArgs
+        var blobServiceProperties = new AzureNextGen.Storage.BlobServiceProperties("blobServiceProperties", new AzureNextGen.Storage.BlobServicePropertiesArgs
         {
             AccountName = "sto8607",
             BlobServicesName = "default",
-            LastAccessTimeTrackingPolicy = new AzureNextGen.Storage.Latest.Inputs.LastAccessTimeTrackingPolicyArgs
+            LastAccessTimeTrackingPolicy = new AzureNextGen.Storage.Inputs.LastAccessTimeTrackingPolicyArgs
             {
                 BlobType = 
                 {
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,10 +93,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blob_service_properties = azure_nextgen.storage.latest.BlobServiceProperties("blobServiceProperties",
+blob_service_properties = azure_nextgen.storage.BlobServiceProperties("blobServiceProperties",
     account_name="sto8607",
     blob_services_name="default",
-    last_access_time_tracking_policy=azure_nextgen.storage.latest.LastAccessTimeTrackingPolicyArgs(
+    last_access_time_tracking_policy=azure_nextgen.storage.LastAccessTimeTrackingPolicyArgs(
         blob_type=["blockBlob"],
         enable=True,
         name="AccessTimeTracking",
@@ -114,7 +114,7 @@ blob_service_properties = azure_nextgen.storage.latest.BlobServiceProperties("bl
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blobServiceProperties = new azure_nextgen.storage.latest.BlobServiceProperties("blobServiceProperties", {
+const blobServiceProperties = new azure_nextgen.storage.BlobServiceProperties("blobServiceProperties", {
     accountName: "sto8607",
     blobServicesName: "default",
     lastAccessTimeTrackingPolicy: {
@@ -140,20 +140,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blobServiceProperties = new AzureNextGen.Storage.Latest.BlobServiceProperties("blobServiceProperties", new AzureNextGen.Storage.Latest.BlobServicePropertiesArgs
+        var blobServiceProperties = new AzureNextGen.Storage.BlobServiceProperties("blobServiceProperties", new AzureNextGen.Storage.BlobServicePropertiesArgs
         {
             AccountName = "sto8607",
             BlobServicesName = "default",
-            ChangeFeed = new AzureNextGen.Storage.Latest.Inputs.ChangeFeedArgs
+            ChangeFeed = new AzureNextGen.Storage.Inputs.ChangeFeedArgs
             {
                 Enabled = true,
                 RetentionInDays = 7,
             },
-            Cors = new AzureNextGen.Storage.Latest.Inputs.CorsRulesArgs
+            Cors = new AzureNextGen.Storage.Inputs.CorsRulesArgs
             {
                 CorsRules = 
                 {
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage.Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -181,7 +181,7 @@ class MyStack : Stack
                         },
                         MaxAgeInSeconds = 100,
                     },
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage.Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -201,7 +201,7 @@ class MyStack : Stack
                         },
                         MaxAgeInSeconds = 2,
                     },
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage.Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -228,7 +228,7 @@ class MyStack : Stack
                 },
             },
             DefaultServiceVersion = "2017-07-29",
-            DeleteRetentionPolicy = new AzureNextGen.Storage.Latest.Inputs.DeleteRetentionPolicyArgs
+            DeleteRetentionPolicy = new AzureNextGen.Storage.Inputs.DeleteRetentionPolicyArgs
             {
                 Days = 300,
                 Enabled = true,
@@ -250,7 +250,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -349,16 +349,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blob_service_properties = azure_nextgen.storage.latest.BlobServiceProperties("blobServiceProperties",
+blob_service_properties = azure_nextgen.storage.BlobServiceProperties("blobServiceProperties",
     account_name="sto8607",
     blob_services_name="default",
-    change_feed=azure_nextgen.storage.latest.ChangeFeedArgs(
+    change_feed=azure_nextgen.storage.ChangeFeedArgs(
         enabled=True,
         retention_in_days=7,
     ),
-    cors=azure_nextgen.storage.latest.CorsRulesArgs(
+    cors=azure_nextgen.storage.CorsRulesArgs(
         cors_rules=[
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=[
                     "x-ms-meta-abc",
                     "x-ms-meta-data*",
@@ -379,14 +379,14 @@ blob_service_properties = azure_nextgen.storage.latest.BlobServiceProperties("bl
                 exposed_headers=["x-ms-meta-*"],
                 max_age_in_seconds=100,
             ),
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=["*"],
                 allowed_methods=["GET"],
                 allowed_origins=["*"],
                 exposed_headers=["*"],
                 max_age_in_seconds=2,
             ),
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=["x-ms-meta-12345675754564*"],
                 allowed_methods=[
                     "GET",
@@ -406,7 +406,7 @@ blob_service_properties = azure_nextgen.storage.latest.BlobServiceProperties("bl
         ],
     ),
     default_service_version="2017-07-29",
-    delete_retention_policy=azure_nextgen.storage.latest.DeleteRetentionPolicyArgs(
+    delete_retention_policy=azure_nextgen.storage.DeleteRetentionPolicyArgs(
         days=300,
         enabled=True,
     ),
@@ -423,7 +423,7 @@ blob_service_properties = azure_nextgen.storage.latest.BlobServiceProperties("bl
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blobServiceProperties = new azure_nextgen.storage.latest.BlobServiceProperties("blobServiceProperties", {
+const blobServiceProperties = new azure_nextgen.storage.BlobServiceProperties("blobServiceProperties", {
     accountName: "sto8607",
     blobServicesName: "default",
     changeFeed: {
@@ -500,7 +500,7 @@ const blobServiceProperties = new azure_nextgen.storage.latest.BlobServiceProper
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BlobServicePropertiesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlobServicePropertiesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -508,11 +508,11 @@ const blobServiceProperties = new azure_nextgen.storage.latest.BlobServiceProper
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBlobServiceProperties</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BlobServicePropertiesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BlobServiceProperties</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBlobServiceProperties</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BlobServicePropertiesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BlobServiceProperties</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BlobServicePropertiesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BlobServicePropertiesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -533,7 +533,7 @@ const blobServiceProperties = new azure_nextgen.storage.latest.BlobServiceProper
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BlobServicePropertiesArgs</span>
+        <span class="property-type"><a href="#inputs">BlobServicePropertiesArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -602,7 +602,7 @@ const blobServiceProperties = new azure_nextgen.storage.latest.BlobServiceProper
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BlobServicePropertiesArgs</span>
+        <span class="property-type"><a href="#inputs">BlobServicePropertiesArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -641,7 +641,7 @@ const blobServiceProperties = new azure_nextgen.storage.latest.BlobServiceProper
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BlobServicePropertiesArgs</span>
+        <span class="property-type"><a href="#inputs">BlobServicePropertiesArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -664,11 +664,11 @@ const blobServiceProperties = new azure_nextgen.storage.latest.BlobServiceProper
 
 ## BlobServiceProperties Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The BlobServiceProperties resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The BlobServiceProperties resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2982,7 +2982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:BlobServiceProperties default /subscriptions/{subscription-id}/resourceGroups/res4410/providers/Microsoft.Storage/storageAccounts/sto8607/blobServices/default 
+$ pulumi import azure-nextgen:storage:BlobServiceProperties default /subscriptions/{subscription-id}/resourceGroups/res4410/providers/Microsoft.Storage/storageAccounts/sto8607/blobServices/default 
 ```
 
 

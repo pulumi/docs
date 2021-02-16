@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.SystemTopicEventSubscr
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Event Subscription
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var systemTopicEventSubscription = new AzureNextGen.EventGrid.V20200401Preview.SystemTopicEventSubscription("systemTopicEventSubscription", new AzureNextGen.EventGrid.V20200401Preview.SystemTopicEventSubscriptionArgs
+        var systemTopicEventSubscription = new AzureNextGen.EventGrid.SystemTopicEventSubscription("systemTopicEventSubscription", new AzureNextGen.EventGrid.SystemTopicEventSubscriptionArgs
         {
-            Destination = 
+            Destination = new AzureNextGen.EventGrid.Inputs.WebHookEventSubscriptionDestinationArgs
             {
-                { "endpointType", "WebHook" },
-                { "endpointUrl", "https://requestb.in/15ksip71" },
+                EndpointType = "WebHook",
+                EndpointUrl = "https://requestb.in/15ksip71",
             },
             EventSubscriptionName = "exampleEventSubscriptionName1",
-            Filter = new AzureNextGen.EventGrid.V20200401Preview.Inputs.EventSubscriptionFilterArgs
+            Filter = new AzureNextGen.EventGrid.Inputs.EventSubscriptionFilterArgs
             {
                 IsSubjectCaseSensitive = false,
                 SubjectBeginsWith = "ExamplePrefix",
@@ -52,7 +53,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := eventgrid.NewSystemTopicEventSubscription(ctx, "systemTopicEventSubscription", &eventgrid.SystemTopicEventSubscriptionArgs{
+			Destination: &eventgrid.WebHookEventSubscriptionDestinationArgs{
+				EndpointType: pulumi.String("WebHook"),
+				EndpointUrl:  pulumi.String("https://requestb.in/15ksip71"),
+			},
+			EventSubscriptionName: pulumi.String("exampleEventSubscriptionName1"),
+			Filter: &eventgrid.EventSubscriptionFilterArgs{
+				IsSubjectCaseSensitive: pulumi.Bool(false),
+				SubjectBeginsWith:      pulumi.String("ExamplePrefix"),
+				SubjectEndsWith:        pulumi.String("ExampleSuffix"),
+			},
+			ResourceGroupName: pulumi.String("examplerg"),
+			SystemTopicName:   pulumi.String("exampleSystemTopic1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -61,13 +95,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-system_topic_event_subscription = azure_nextgen.eventgrid.v20200401preview.SystemTopicEventSubscription("systemTopicEventSubscription",
-    destination={
-        "endpointType": "WebHook",
-        "endpointUrl": "https://requestb.in/15ksip71",
-    },
+system_topic_event_subscription = azure_nextgen.eventgrid.SystemTopicEventSubscription("systemTopicEventSubscription",
+    destination=azure_nextgen.eventgrid.WebHookEventSubscriptionDestinationArgs(
+        endpoint_type="WebHook",
+        endpoint_url="https://requestb.in/15ksip71",
+    ),
     event_subscription_name="exampleEventSubscriptionName1",
-    filter=azure_nextgen.eventgrid.v20200401preview.EventSubscriptionFilterArgs(
+    filter=azure_nextgen.eventgrid.EventSubscriptionFilterArgs(
         is_subject_case_sensitive=False,
         subject_begins_with="ExamplePrefix",
         subject_ends_with="ExampleSuffix",
@@ -85,7 +119,7 @@ system_topic_event_subscription = azure_nextgen.eventgrid.v20200401preview.Syste
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const systemTopicEventSubscription = new azure_nextgen.eventgrid.v20200401preview.SystemTopicEventSubscription("systemTopicEventSubscription", {
+const systemTopicEventSubscription = new azure_nextgen.eventgrid.SystemTopicEventSubscription("systemTopicEventSubscription", {
     destination: {
         endpointType: "WebHook",
         endpointUrl: "https://requestb.in/15ksip71",
@@ -112,7 +146,7 @@ const systemTopicEventSubscription = new azure_nextgen.eventgrid.v20200401previe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SystemTopicEventSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SystemTopicEventSubscriptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SystemTopicEventSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -120,11 +154,11 @@ const systemTopicEventSubscription = new azure_nextgen.eventgrid.v20200401previe
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSystemTopicEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SystemTopicEventSubscriptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SystemTopicEventSubscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSystemTopicEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SystemTopicEventSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SystemTopicEventSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SystemTopicEventSubscriptionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SystemTopicEventSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -145,7 +179,7 @@ const systemTopicEventSubscription = new azure_nextgen.eventgrid.v20200401previe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SystemTopicEventSubscriptionArgs</span>
+        <span class="property-type"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -214,7 +248,7 @@ const systemTopicEventSubscription = new azure_nextgen.eventgrid.v20200401previe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SystemTopicEventSubscriptionArgs</span>
+        <span class="property-type"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -253,7 +287,7 @@ const systemTopicEventSubscription = new azure_nextgen.eventgrid.v20200401previe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SystemTopicEventSubscriptionArgs</span>
+        <span class="property-type"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -276,11 +310,11 @@ const systemTopicEventSubscription = new azure_nextgen.eventgrid.v20200401previe
 
 ## SystemTopicEventSubscription Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SystemTopicEventSubscription resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SystemTopicEventSubscription resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -6266,7 +6300,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventgrid/v20200401preview:SystemTopicEventSubscription exampleEventSubscriptionName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/systemTopics/exampleSystemTopic1/eventSubscriptions/exampleEventSubscriptionName1 
+$ pulumi import azure-nextgen:eventgrid:SystemTopicEventSubscription exampleEventSubscriptionName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/systemTopics/exampleSystemTopic1/eventSubscriptions/exampleEventSubscriptionName1 
 ```
 
 

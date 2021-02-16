@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.SoftwareUpdateConfigu
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Software update configuration properties.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var softwareUpdateConfigurationByName = new AzureNextGen.Automation.Latest.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", new AzureNextGen.Automation.Latest.SoftwareUpdateConfigurationByNameArgs
+        var softwareUpdateConfigurationByName = new AzureNextGen.Automation.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", new AzureNextGen.Automation.SoftwareUpdateConfigurationByNameArgs
         {
             AutomationAccountName = "myaccount",
             ResourceGroupName = "mygroup",
-            ScheduleInfo = new AzureNextGen.Automation.Latest.Inputs.SUCSchedulePropertiesArgs
+            ScheduleInfo = new AzureNextGen.Automation.Inputs.SUCSchedulePropertiesArgs
             {
-                AdvancedSchedule = new AzureNextGen.Automation.Latest.Inputs.AdvancedScheduleArgs
+                AdvancedSchedule = new AzureNextGen.Automation.Inputs.AdvancedScheduleArgs
                 {
                     WeekDays = 
                     {
@@ -48,13 +48,13 @@ class MyStack : Stack
                 TimeZone = "America/Los_Angeles",
             },
             SoftwareUpdateConfigurationName = "testpatch",
-            Tasks = new AzureNextGen.Automation.Latest.Inputs.SoftwareUpdateConfigurationTasksArgs
+            Tasks = new AzureNextGen.Automation.Inputs.SoftwareUpdateConfigurationTasksArgs
             {
-                PostTask = new AzureNextGen.Automation.Latest.Inputs.TaskPropertiesArgs
+                PostTask = new AzureNextGen.Automation.Inputs.TaskPropertiesArgs
                 {
                     Source = "GetCache",
                 },
-                PreTask = new AzureNextGen.Automation.Latest.Inputs.TaskPropertiesArgs
+                PreTask = new AzureNextGen.Automation.Inputs.TaskPropertiesArgs
                 {
                     Parameters = 
                     {
@@ -63,7 +63,7 @@ class MyStack : Stack
                     Source = "HelloWorld",
                 },
             },
-            UpdateConfiguration = new AzureNextGen.Automation.Latest.Inputs.UpdateConfigurationArgs
+            UpdateConfiguration = new AzureNextGen.Automation.Inputs.UpdateConfigurationArgs
             {
                 AzureVirtualMachines = 
                 {
@@ -78,11 +78,11 @@ class MyStack : Stack
                     "box2.contoso.com",
                 },
                 OperatingSystem = "Windows",
-                Targets = new AzureNextGen.Automation.Latest.Inputs.TargetPropertiesArgs
+                Targets = new AzureNextGen.Automation.Inputs.TargetPropertiesArgs
                 {
                     AzureQueries = 
                     {
-                        new AzureNextGen.Automation.Latest.Inputs.AzureQueryPropertiesArgs
+                        new AzureNextGen.Automation.Inputs.AzureQueryPropertiesArgs
                         {
                             Locations = 
                             {
@@ -94,7 +94,7 @@ class MyStack : Stack
                                 "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
                                 "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
                             },
-                            TagSettings = new AzureNextGen.Automation.Latest.Inputs.TagSettingsPropertiesArgs
+                            TagSettings = new AzureNextGen.Automation.Inputs.TagSettingsPropertiesArgs
                             {
                                 FilterOperator = "All",
                                 Tags = 
@@ -117,19 +117,19 @@ class MyStack : Stack
                     },
                     NonAzureQueries = 
                     {
-                        new AzureNextGen.Automation.Latest.Inputs.NonAzureQueryPropertiesArgs
+                        new AzureNextGen.Automation.Inputs.NonAzureQueryPropertiesArgs
                         {
                             FunctionAlias = "SavedSearch1",
                             WorkspaceId = "WorkspaceId1",
                         },
-                        new AzureNextGen.Automation.Latest.Inputs.NonAzureQueryPropertiesArgs
+                        new AzureNextGen.Automation.Inputs.NonAzureQueryPropertiesArgs
                         {
                             FunctionAlias = "SavedSearch2",
                             WorkspaceId = "WorkspaceId2",
                         },
                     },
                 },
-                Windows = new AzureNextGen.Automation.Latest.Inputs.WindowsPropertiesArgs
+                Windows = new AzureNextGen.Automation.Inputs.WindowsPropertiesArgs
                 {
                     ExcludedKbNumbers = 
                     {
@@ -155,7 +155,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -267,11 +267,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-software_update_configuration_by_name = azure_nextgen.automation.latest.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName",
+software_update_configuration_by_name = azure_nextgen.automation.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName",
     automation_account_name="myaccount",
     resource_group_name="mygroup",
-    schedule_info=azure_nextgen.automation.latest.SUCSchedulePropertiesArgs(
-        advanced_schedule=azure_nextgen.automation.latest.AdvancedScheduleArgs(
+    schedule_info=azure_nextgen.automation.SUCSchedulePropertiesArgs(
+        advanced_schedule=azure_nextgen.automation.AdvancedScheduleArgs(
             week_days=[
                 "Monday",
                 "Thursday",
@@ -284,18 +284,18 @@ software_update_configuration_by_name = azure_nextgen.automation.latest.Software
         time_zone="America/Los_Angeles",
     ),
     software_update_configuration_name="testpatch",
-    tasks=azure_nextgen.automation.latest.SoftwareUpdateConfigurationTasksArgs(
-        post_task=azure_nextgen.automation.latest.TaskPropertiesArgs(
+    tasks=azure_nextgen.automation.SoftwareUpdateConfigurationTasksArgs(
+        post_task=azure_nextgen.automation.TaskPropertiesArgs(
             source="GetCache",
         ),
-        pre_task=azure_nextgen.automation.latest.TaskPropertiesArgs(
+        pre_task=azure_nextgen.automation.TaskPropertiesArgs(
             parameters={
                 "COMPUTERNAME": "Computer1",
             },
             source="HelloWorld",
         ),
     ),
-    update_configuration=azure_nextgen.automation.latest.UpdateConfigurationArgs(
+    update_configuration=azure_nextgen.automation.UpdateConfigurationArgs(
         azure_virtual_machines=[
             "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01",
             "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02",
@@ -307,8 +307,8 @@ software_update_configuration_by_name = azure_nextgen.automation.latest.Software
             "box2.contoso.com",
         ],
         operating_system="Windows",
-        targets=azure_nextgen.automation.latest.TargetPropertiesArgs(
-            azure_queries=[azure_nextgen.automation.latest.AzureQueryPropertiesArgs(
+        targets=azure_nextgen.automation.TargetPropertiesArgs(
+            azure_queries=[azure_nextgen.automation.AzureQueryPropertiesArgs(
                 locations=[
                     "Japan East",
                     "UK South",
@@ -317,7 +317,7 @@ software_update_configuration_by_name = azure_nextgen.automation.latest.Software
                     "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
                     "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
                 ],
-                tag_settings=azure_nextgen.automation.latest.TagSettingsPropertiesArgs(
+                tag_settings=azure_nextgen.automation.TagSettingsPropertiesArgs(
                     filter_operator="All",
                     tags={
                         "tag1": [
@@ -334,17 +334,17 @@ software_update_configuration_by_name = azure_nextgen.automation.latest.Software
                 ),
             )],
             non_azure_queries=[
-                azure_nextgen.automation.latest.NonAzureQueryPropertiesArgs(
+                azure_nextgen.automation.NonAzureQueryPropertiesArgs(
                     function_alias="SavedSearch1",
                     workspace_id="WorkspaceId1",
                 ),
-                azure_nextgen.automation.latest.NonAzureQueryPropertiesArgs(
+                azure_nextgen.automation.NonAzureQueryPropertiesArgs(
                     function_alias="SavedSearch2",
                     workspace_id="WorkspaceId2",
                 ),
             ],
         ),
-        windows=azure_nextgen.automation.latest.WindowsPropertiesArgs(
+        windows=azure_nextgen.automation.WindowsPropertiesArgs(
             excluded_kb_numbers=[
                 "168934",
                 "168973",
@@ -364,7 +364,7 @@ software_update_configuration_by_name = azure_nextgen.automation.latest.Software
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const softwareUpdateConfigurationByName = new azure_nextgen.automation.latest.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", {
+const softwareUpdateConfigurationByName = new azure_nextgen.automation.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", {
     automationAccountName: "myaccount",
     resourceGroupName: "mygroup",
     scheduleInfo: {
@@ -464,7 +464,7 @@ const softwareUpdateConfigurationByName = new azure_nextgen.automation.latest.So
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SoftwareUpdateConfigurationByNameArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -472,11 +472,11 @@ const softwareUpdateConfigurationByName = new azure_nextgen.automation.latest.So
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SoftwareUpdateConfigurationByNameArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SoftwareUpdateConfigurationByName</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SoftwareUpdateConfigurationByName</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SoftwareUpdateConfigurationByNameArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -497,7 +497,7 @@ const softwareUpdateConfigurationByName = new azure_nextgen.automation.latest.So
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SoftwareUpdateConfigurationByNameArgs</span>
+        <span class="property-type"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -566,7 +566,7 @@ const softwareUpdateConfigurationByName = new azure_nextgen.automation.latest.So
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SoftwareUpdateConfigurationByNameArgs</span>
+        <span class="property-type"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -605,7 +605,7 @@ const softwareUpdateConfigurationByName = new azure_nextgen.automation.latest.So
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SoftwareUpdateConfigurationByNameArgs</span>
+        <span class="property-type"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -628,11 +628,11 @@ const softwareUpdateConfigurationByName = new azure_nextgen.automation.latest.So
 
 ## SoftwareUpdateConfigurationByName Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SoftwareUpdateConfigurationByName resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SoftwareUpdateConfigurationByName resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -5786,7 +5786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:SoftwareUpdateConfigurationByName testpatch /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Automation/automationAccounts/myaccount/softwareUpdateConfigurations/testpatch 
+$ pulumi import azure-nextgen:automation:SoftwareUpdateConfigurationByName testpatch /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Automation/automationAccounts/myaccount/softwareUpdateConfigurations/testpatch 
 ```
 
 

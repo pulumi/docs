@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.LinkedWo
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Linked workspace.
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedWorkspace = new AzureNextGen.MachineLearningServices.Latest.LinkedWorkspace("linkedWorkspace", new AzureNextGen.MachineLearningServices.Latest.LinkedWorkspaceArgs
+        var linkedWorkspace = new AzureNextGen.MachineLearningServices.LinkedWorkspace("linkedWorkspace", new AzureNextGen.MachineLearningServices.LinkedWorkspaceArgs
         {
             LinkName = "link-1",
             Name = "link-1",
-            Properties = new AzureNextGen.MachineLearningServices.Latest.Inputs.LinkedWorkspacePropsArgs
+            Properties = new AzureNextGen.MachineLearningServices.Inputs.LinkedWorkspacePropsArgs
             {
                 LinkedWorkspaceResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1",
                 UserAssignedIdentityResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/latest"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,10 +86,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_workspace = azure_nextgen.machinelearningservices.latest.LinkedWorkspace("linkedWorkspace",
+linked_workspace = azure_nextgen.machinelearningservices.LinkedWorkspace("linkedWorkspace",
     link_name="link-1",
     name="link-1",
-    properties=azure_nextgen.machinelearningservices.latest.LinkedWorkspacePropsArgs(
+    properties=azure_nextgen.machinelearningservices.LinkedWorkspacePropsArgs(
         linked_workspace_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1",
         user_assigned_identity_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1",
     ),
@@ -106,7 +106,7 @@ linked_workspace = azure_nextgen.machinelearningservices.latest.LinkedWorkspace(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const linkedWorkspace = new azure_nextgen.machinelearningservices.latest.LinkedWorkspace("linkedWorkspace", {
+const linkedWorkspace = new azure_nextgen.machinelearningservices.LinkedWorkspace("linkedWorkspace", {
     linkName: "link-1",
     name: "link-1",
     properties: {
@@ -129,7 +129,7 @@ const linkedWorkspace = new azure_nextgen.machinelearningservices.latest.LinkedW
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LinkedWorkspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">LinkedWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LinkedWorkspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LinkedWorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -137,11 +137,11 @@ const linkedWorkspace = new azure_nextgen.machinelearningservices.latest.LinkedW
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLinkedWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">LinkedWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LinkedWorkspace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLinkedWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LinkedWorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LinkedWorkspace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LinkedWorkspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">LinkedWorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LinkedWorkspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LinkedWorkspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -162,7 +162,7 @@ const linkedWorkspace = new azure_nextgen.machinelearningservices.latest.LinkedW
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkedWorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">LinkedWorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -231,7 +231,7 @@ const linkedWorkspace = new azure_nextgen.machinelearningservices.latest.LinkedW
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkedWorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">LinkedWorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -270,7 +270,7 @@ const linkedWorkspace = new azure_nextgen.machinelearningservices.latest.LinkedW
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LinkedWorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">LinkedWorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -293,11 +293,11 @@ const linkedWorkspace = new azure_nextgen.machinelearningservices.latest.LinkedW
 
 ## LinkedWorkspace Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LinkedWorkspace resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The LinkedWorkspace resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -819,7 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningservices/latest:LinkedWorkspace link-1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.MachineLearningServices/workspaces/workspace-1/linkedWorkspaces/link-1 
+$ pulumi import azure-nextgen:machinelearningservices:LinkedWorkspace link-1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.MachineLearningServices/workspaces/workspace-1/linkedWorkspaces/link-1 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.azuredata.SqlServerRegistration 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SQL server registration.
+API Version: 2019-07-24-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlServerRegistration = new AzureNextGen.AzureData.V20190724Preview.SqlServerRegistration("sqlServerRegistration", new AzureNextGen.AzureData.V20190724Preview.SqlServerRegistrationArgs
+        var sqlServerRegistration = new AzureNextGen.AzureData.SqlServerRegistration("sqlServerRegistration", new AzureNextGen.AzureData.SqlServerRegistrationArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
@@ -50,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata/v20190724preview"
+	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +82,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_server_registration = azure_nextgen.azuredata.v20190724preview.SqlServerRegistration("sqlServerRegistration",
+sql_server_registration = azure_nextgen.azuredata.SqlServerRegistration("sqlServerRegistration",
     location="northeurope",
     resource_group_name="testrg",
     sql_server_registration_name="testsqlregistration",
@@ -99,7 +100,7 @@ sql_server_registration = azure_nextgen.azuredata.v20190724preview.SqlServerRegi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlServerRegistration = new azure_nextgen.azuredata.v20190724preview.SqlServerRegistration("sqlServerRegistration", {
+const sqlServerRegistration = new azure_nextgen.azuredata.SqlServerRegistration("sqlServerRegistration", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlServerRegistrationName: "testsqlregistration",
@@ -120,7 +121,7 @@ const sqlServerRegistration = new azure_nextgen.azuredata.v20190724preview.SqlSe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlServerRegistration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SqlServerRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlServerRegistration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlServerRegistrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -128,11 +129,11 @@ const sqlServerRegistration = new azure_nextgen.azuredata.v20190724preview.SqlSe
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlServerRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SqlServerRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlServerRegistration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlServerRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlServerRegistrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlServerRegistration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlServerRegistration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SqlServerRegistrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlServerRegistration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SqlServerRegistrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -153,7 +154,7 @@ const sqlServerRegistration = new azure_nextgen.azuredata.v20190724preview.SqlSe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlServerRegistrationArgs</span>
+        <span class="property-type"><a href="#inputs">SqlServerRegistrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -222,7 +223,7 @@ const sqlServerRegistration = new azure_nextgen.azuredata.v20190724preview.SqlSe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlServerRegistrationArgs</span>
+        <span class="property-type"><a href="#inputs">SqlServerRegistrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -261,7 +262,7 @@ const sqlServerRegistration = new azure_nextgen.azuredata.v20190724preview.SqlSe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlServerRegistrationArgs</span>
+        <span class="property-type"><a href="#inputs">SqlServerRegistrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -284,11 +285,11 @@ const sqlServerRegistration = new azure_nextgen.azuredata.v20190724preview.SqlSe
 
 ## SqlServerRegistration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SqlServerRegistration resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SqlServerRegistration resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1000,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:azuredata/v20190724preview:SqlServerRegistration testsqlregistration /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration 
+$ pulumi import azure-nextgen:azuredata:SqlServerRegistration testsqlregistration /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration 
 ```
 
 

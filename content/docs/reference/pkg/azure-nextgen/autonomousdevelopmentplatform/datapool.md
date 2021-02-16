@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.autonomousdevelopmentplatform.Da
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An ADP Data Pool.
+API Version: 2020-07-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataPool = new AzureNextGen.AutonomousDevelopmentPlatform.V20200701Preview.DataPool("dataPool", new AzureNextGen.AutonomousDevelopmentPlatform.V20200701Preview.DataPoolArgs
+        var dataPool = new AzureNextGen.AutonomousDevelopmentPlatform.DataPool("dataPool", new AzureNextGen.AutonomousDevelopmentPlatform.DataPoolArgs
         {
             AccountName = "sampleacct",
             DataPoolName = "sampledp",
             Locations = 
             {
-                new AzureNextGen.AutonomousDevelopmentPlatform.V20200701Preview.Inputs.DataPoolLocationArgs
+                new AzureNextGen.AutonomousDevelopmentPlatform.Inputs.DataPoolLocationArgs
                 {
                     Name = "westus",
                 },
@@ -53,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	autonomousdevelopmentplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/autonomousdevelopmentplatform/v20200701preview"
+	autonomousdevelopmentplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/autonomousdevelopmentplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,10 +87,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_pool = azure_nextgen.autonomousdevelopmentplatform.v20200701preview.DataPool("dataPool",
+data_pool = azure_nextgen.autonomousdevelopmentplatform.DataPool("dataPool",
     account_name="sampleacct",
     data_pool_name="sampledp",
-    locations=[azure_nextgen.autonomousdevelopmentplatform.v20200701preview.DataPoolLocationArgs(
+    locations=[azure_nextgen.autonomousdevelopmentplatform.DataPoolLocationArgs(
         name="westus",
     )],
     resource_group_name="adpClient")
@@ -104,7 +105,7 @@ data_pool = azure_nextgen.autonomousdevelopmentplatform.v20200701preview.DataPoo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataPool = new azure_nextgen.autonomousdevelopmentplatform.v20200701preview.DataPool("dataPool", {
+const dataPool = new azure_nextgen.autonomousdevelopmentplatform.DataPool("dataPool", {
     accountName: "sampleacct",
     dataPoolName: "sampledp",
     locations: [{
@@ -125,7 +126,7 @@ const dataPool = new azure_nextgen.autonomousdevelopmentplatform.v20200701previe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DataPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -133,11 +134,11 @@ const dataPool = new azure_nextgen.autonomousdevelopmentplatform.v20200701previe
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DataPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataPool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataPool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DataPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -158,7 +159,7 @@ const dataPool = new azure_nextgen.autonomousdevelopmentplatform.v20200701previe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataPoolArgs</span>
+        <span class="property-type"><a href="#inputs">DataPoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -227,7 +228,7 @@ const dataPool = new azure_nextgen.autonomousdevelopmentplatform.v20200701previe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataPoolArgs</span>
+        <span class="property-type"><a href="#inputs">DataPoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -266,7 +267,7 @@ const dataPool = new azure_nextgen.autonomousdevelopmentplatform.v20200701previe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataPoolArgs</span>
+        <span class="property-type"><a href="#inputs">DataPoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -289,11 +290,11 @@ const dataPool = new azure_nextgen.autonomousdevelopmentplatform.v20200701previe
 
 ## DataPool Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DataPool resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DataPool resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1093,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:autonomousdevelopmentplatform/v20200701preview:DataPool dp1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.AutonomousDevelopmentPlatform/accounts/adp1/dataPools/dp1 
+$ pulumi import azure-nextgen:autonomousdevelopmentplatform:DataPool dp1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.AutonomousDevelopmentPlatform/accounts/adp1/dataPools/dp1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.Disk resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Disk resource.
-Latest API Version: 2020-09-30.
+API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
             },
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,8 +88,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Empty",
     ),
     disk_access_id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/{existing-diskAccess-name}",
@@ -109,7 +109,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Empty",
     },
@@ -135,15 +135,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
             },
             DiskName = "myDisk",
             DiskSizeGB = 200,
-            Encryption = new AzureNextGen.Compute.Latest.Inputs.EncryptionArgs
+            Encryption = new AzureNextGen.Compute.Inputs.EncryptionArgs
             {
                 DiskEncryptionSetId = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
             },
@@ -164,7 +164,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -199,13 +199,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Empty",
     ),
     disk_name="myDisk",
     disk_size_gb=200,
-    encryption=azure_nextgen.compute.latest.EncryptionArgs(
+    encryption=azure_nextgen.compute.EncryptionArgs(
         disk_encryption_set_id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
     ),
     location="West US",
@@ -221,7 +221,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Empty",
     },
@@ -248,9 +248,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
             {
                 CreateOption = "Copy",
                 SourceResourceId = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
@@ -273,7 +273,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -305,8 +305,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Copy",
         source_resource_id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
     ),
@@ -324,7 +324,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Copy",
         sourceResourceId: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
@@ -348,9 +348,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
             {
                 CreateOption = "Import",
                 SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -374,7 +374,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -407,8 +407,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Import",
         source_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
         storage_account_id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
@@ -427,7 +427,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Import",
         sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -452,9 +452,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
             {
                 CreateOption = "Import",
                 SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -477,7 +477,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -509,8 +509,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Import",
         source_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
     ),
@@ -528,7 +528,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Import",
         sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -552,12 +552,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
             {
                 CreateOption = "FromImage",
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageDiskReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageDiskReferenceArgs
                 {
                     Id = "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/westus/Publishers/{publisher}/ArtifactTypes/VMImage/Offers/{offer}/Skus/{sku}/Versions/1.0.0",
                 },
@@ -581,7 +581,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -616,10 +616,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="FromImage",
-        image_reference=azure_nextgen.compute.latest.ImageDiskReferenceArgs(
+        image_reference=azure_nextgen.compute.ImageDiskReferenceArgs(
             id="/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/westus/Publishers/{publisher}/ArtifactTypes/VMImage/Offers/{offer}/Skus/{sku}/Versions/1.0.0",
         ),
     ),
@@ -638,7 +638,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "FromImage",
         imageReference: {
@@ -665,9 +665,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
             {
                 CreateOption = "Copy",
                 SourceResourceId = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
@@ -690,7 +690,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -722,8 +722,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Copy",
         source_resource_id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
     ),
@@ -741,7 +741,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Copy",
         sourceResourceId: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
@@ -765,9 +765,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
             {
                 CreateOption = "Upload",
                 UploadSizeBytes = 10737418752,
@@ -790,7 +790,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -822,8 +822,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Upload",
         upload_size_bytes=10737418752,
     ),
@@ -841,7 +841,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Upload",
         uploadSizeBytes: 10737418752,
@@ -865,15 +865,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
             },
             DiskName = "myDisk",
             DiskSizeGB = 200,
-            ExtendedLocation = new AzureNextGen.Compute.Latest.Inputs.ExtendedLocationArgs
+            ExtendedLocation = new AzureNextGen.Compute.Inputs.ExtendedLocationArgs
             {
                 Name = "{edge-zone-id}",
                 Type = "EdgeZone",
@@ -895,7 +895,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -931,13 +931,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Empty",
     ),
     disk_name="myDisk",
     disk_size_gb=200,
-    extended_location=azure_nextgen.compute.latest.ExtendedLocationArgs(
+    extended_location=azure_nextgen.compute.ExtendedLocationArgs(
         name="{edge-zone-id}",
         type="EdgeZone",
     ),
@@ -954,7 +954,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Empty",
     },
@@ -982,9 +982,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
             },
@@ -1007,7 +1007,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1039,8 +1039,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Empty",
     ),
     disk_name="myDisk",
@@ -1058,7 +1058,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Empty",
     },
@@ -1082,9 +1082,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
+        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
                 LogicalSectorSize = 512,
@@ -1093,7 +1093,7 @@ class MyStack : Stack
             DiskSizeGB = 200,
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Latest.Inputs.DiskSkuArgs
+            Sku = new AzureNextGen.Compute.Inputs.DiskSkuArgs
             {
                 Name = "UltraSSD_LRS",
             },
@@ -1112,7 +1112,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1148,8 +1148,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+disk = azure_nextgen.compute.Disk("disk",
+    creation_data=azure_nextgen.compute.CreationDataArgs(
         create_option="Empty",
         logical_sector_size=512,
     ),
@@ -1157,7 +1157,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
     disk_size_gb=200,
     location="West US",
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.compute.latest.DiskSkuArgs(
+    sku=azure_nextgen.compute.DiskSkuArgs(
         name="UltraSSD_LRS",
     ))
 
@@ -1171,7 +1171,7 @@ disk = azure_nextgen.compute.latest.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const disk = new azure_nextgen.compute.latest.Disk("disk", {
+const disk = new azure_nextgen.compute.Disk("disk", {
     creationData: {
         createOption: "Empty",
         logicalSectorSize: 512,
@@ -1197,7 +1197,7 @@ const disk = new azure_nextgen.compute.latest.Disk("disk", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DiskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1205,11 +1205,11 @@ const disk = new azure_nextgen.compute.latest.Disk("disk", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDisk</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DiskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Disk</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDisk</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Disk</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DiskArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1230,7 +1230,7 @@ const disk = new azure_nextgen.compute.latest.Disk("disk", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DiskArgs</span>
+        <span class="property-type"><a href="#inputs">DiskArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1299,7 +1299,7 @@ const disk = new azure_nextgen.compute.latest.Disk("disk", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DiskArgs</span>
+        <span class="property-type"><a href="#inputs">DiskArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1338,7 +1338,7 @@ const disk = new azure_nextgen.compute.latest.Disk("disk", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DiskArgs</span>
+        <span class="property-type"><a href="#inputs">DiskArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1361,11 +1361,11 @@ const disk = new azure_nextgen.compute.latest.Disk("disk", {
 
 ## Disk Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -5787,7 +5787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:Disk myDisk /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName} 
+$ pulumi import azure-nextgen:compute:Disk myDisk /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName} 
 ```
 
 

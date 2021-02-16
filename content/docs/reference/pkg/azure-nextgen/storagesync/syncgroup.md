@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.SyncGroup resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Sync Group object.
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncGroup = new AzureNextGen.StorageSync.Latest.SyncGroup("syncGroup", new AzureNextGen.StorageSync.Latest.SyncGroupArgs
+        var syncGroup = new AzureNextGen.StorageSync.SyncGroup("syncGroup", new AzureNextGen.StorageSync.SyncGroupArgs
         {
             ResourceGroupName = "SampleResourceGroup_1",
             StorageSyncServiceName = "SampleStorageSyncService_1",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync/latest"
+	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_group = azure_nextgen.storagesync.latest.SyncGroup("syncGroup",
+sync_group = azure_nextgen.storagesync.SyncGroup("syncGroup",
     resource_group_name="SampleResourceGroup_1",
     storage_sync_service_name="SampleStorageSyncService_1",
     sync_group_name="SampleSyncGroup_1")
@@ -90,7 +90,7 @@ sync_group = azure_nextgen.storagesync.latest.SyncGroup("syncGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const syncGroup = new azure_nextgen.storagesync.latest.SyncGroup("syncGroup", {
+const syncGroup = new azure_nextgen.storagesync.SyncGroup("syncGroup", {
     resourceGroupName: "SampleResourceGroup_1",
     storageSyncServiceName: "SampleStorageSyncService_1",
     syncGroupName: "SampleSyncGroup_1",
@@ -108,7 +108,7 @@ const syncGroup = new azure_nextgen.storagesync.latest.SyncGroup("syncGroup", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SyncGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -116,11 +116,11 @@ const syncGroup = new azure_nextgen.storagesync.latest.SyncGroup("syncGroup", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyncGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SyncGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyncGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyncGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyncGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SyncGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyncGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SyncGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -141,7 +141,7 @@ const syncGroup = new azure_nextgen.storagesync.latest.SyncGroup("syncGroup", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SyncGroupArgs</span>
+        <span class="property-type"><a href="#inputs">SyncGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -210,7 +210,7 @@ const syncGroup = new azure_nextgen.storagesync.latest.SyncGroup("syncGroup", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SyncGroupArgs</span>
+        <span class="property-type"><a href="#inputs">SyncGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -249,7 +249,7 @@ const syncGroup = new azure_nextgen.storagesync.latest.SyncGroup("syncGroup", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SyncGroupArgs</span>
+        <span class="property-type"><a href="#inputs">SyncGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -272,11 +272,11 @@ const syncGroup = new azure_nextgen.storagesync.latest.SyncGroup("syncGroup", {
 
 ## SyncGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -634,7 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storagesync/latest:SyncGroup SampleSyncGroup_1 /subscriptions/3a048283-338f-4002-a9dd-a50fdadcb392/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/syncGroups/SampleSyncGroup_1 
+$ pulumi import azure-nextgen:storagesync:SyncGroup SampleSyncGroup_1 /subscriptions/3a048283-338f-4002-a9dd-a50fdadcb392/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/syncGroups/SampleSyncGroup_1 
 ```
 
 

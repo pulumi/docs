@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datafactory.DataFlow resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data flow resource type.
-Latest API Version: 2018-06-01.
+API Version: 2018-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataFlow = new AzureNextGen.DataFactory.Latest.DataFlow("dataFlow", new AzureNextGen.DataFactory.Latest.DataFlowArgs
+        var dataFlow = new AzureNextGen.DataFactory.DataFlow("dataFlow", new AzureNextGen.DataFactory.DataFlowArgs
         {
             DataFlowName = "exampleDataFlow",
             FactoryName = "exampleFactoryName",
-            Properties = new AzureNextGen.DataFactory.Latest.Inputs.MappingDataFlowArgs
+            Properties = new AzureNextGen.DataFactory.Inputs.MappingDataFlowArgs
             {
                 Description = "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
                 Script = @"source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
@@ -43,18 +43,18 @@ ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
 ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
                 Sinks = 
                 {
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSinkArgs
+                    new AzureNextGen.DataFactory.Inputs.DataFlowSinkArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory.Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "USDOutput",
                             Type = "DatasetReference",
                         },
                         Name = "USDSink",
                     },
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSinkArgs
+                    new AzureNextGen.DataFactory.Inputs.DataFlowSinkArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory.Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "CADOutput",
                             Type = "DatasetReference",
@@ -64,18 +64,18 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
                 },
                 Sources = 
                 {
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSourceArgs
+                    new AzureNextGen.DataFactory.Inputs.DataFlowSourceArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory.Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "CurrencyDatasetUSD",
                             Type = "DatasetReference",
                         },
                         Name = "USDCurrency",
                     },
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSourceArgs
+                    new AzureNextGen.DataFactory.Inputs.DataFlowSourceArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory.Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "CurrencyDatasetCAD",
                             Type = "DatasetReference",
@@ -101,7 +101,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
 package main
 
 import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory/latest"
+	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -166,10 +166,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_flow = azure_nextgen.datafactory.latest.DataFlow("dataFlow",
+data_flow = azure_nextgen.datafactory.DataFlow("dataFlow",
     data_flow_name="exampleDataFlow",
     factory_name="exampleFactoryName",
-    properties=azure_nextgen.datafactory.latest.MappingDataFlowArgs(
+    properties=azure_nextgen.datafactory.MappingDataFlowArgs(
         description="Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
         script="""source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
 source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource
@@ -179,15 +179,15 @@ NewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> Co
 ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
 ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
         sinks=[
-            azure_nextgen.datafactory.latest.DataFlowSinkArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSinkArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="USDOutput",
                     type="DatasetReference",
                 ),
                 name="USDSink",
             ),
-            azure_nextgen.datafactory.latest.DataFlowSinkArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSinkArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="CADOutput",
                     type="DatasetReference",
                 ),
@@ -195,15 +195,15 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
             ),
         ],
         sources=[
-            azure_nextgen.datafactory.latest.DataFlowSourceArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSourceArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="CurrencyDatasetUSD",
                     type="DatasetReference",
                 ),
                 name="USDCurrency",
             ),
-            azure_nextgen.datafactory.latest.DataFlowSourceArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSourceArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="CurrencyDatasetCAD",
                     type="DatasetReference",
                 ),
@@ -224,7 +224,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataFlow = new azure_nextgen.datafactory.latest.DataFlow("dataFlow", {
+const dataFlow = new azure_nextgen.datafactory.DataFlow("dataFlow", {
     dataFlowName: "exampleDataFlow",
     factoryName: "exampleFactoryName",
     properties: {
@@ -287,11 +287,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataFlow = new AzureNextGen.DataFactory.Latest.DataFlow("dataFlow", new AzureNextGen.DataFactory.Latest.DataFlowArgs
+        var dataFlow = new AzureNextGen.DataFactory.DataFlow("dataFlow", new AzureNextGen.DataFactory.DataFlowArgs
         {
             DataFlowName = "exampleDataFlow",
             FactoryName = "exampleFactoryName",
-            Properties = new AzureNextGen.DataFactory.Latest.Inputs.MappingDataFlowArgs
+            Properties = new AzureNextGen.DataFactory.Inputs.MappingDataFlowArgs
             {
                 Description = "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
                 Script = @"source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
@@ -303,18 +303,18 @@ ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
 ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
                 Sinks = 
                 {
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSinkArgs
+                    new AzureNextGen.DataFactory.Inputs.DataFlowSinkArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory.Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "USDOutput",
                             Type = "DatasetReference",
                         },
                         Name = "USDSink",
                     },
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSinkArgs
+                    new AzureNextGen.DataFactory.Inputs.DataFlowSinkArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory.Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "CADOutput",
                             Type = "DatasetReference",
@@ -324,18 +324,18 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
                 },
                 Sources = 
                 {
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSourceArgs
+                    new AzureNextGen.DataFactory.Inputs.DataFlowSourceArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory.Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "CurrencyDatasetUSD",
                             Type = "DatasetReference",
                         },
                         Name = "USDCurrency",
                     },
-                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSourceArgs
+                    new AzureNextGen.DataFactory.Inputs.DataFlowSourceArgs
                     {
-                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        Dataset = new AzureNextGen.DataFactory.Inputs.DatasetReferenceArgs
                         {
                             ReferenceName = "CurrencyDatasetCAD",
                             Type = "DatasetReference",
@@ -361,7 +361,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
 package main
 
 import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory/latest"
+	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -426,10 +426,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_flow = azure_nextgen.datafactory.latest.DataFlow("dataFlow",
+data_flow = azure_nextgen.datafactory.DataFlow("dataFlow",
     data_flow_name="exampleDataFlow",
     factory_name="exampleFactoryName",
-    properties=azure_nextgen.datafactory.latest.MappingDataFlowArgs(
+    properties=azure_nextgen.datafactory.MappingDataFlowArgs(
         description="Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
         script="""source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
 source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource
@@ -439,15 +439,15 @@ NewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> Co
 ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
 ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
         sinks=[
-            azure_nextgen.datafactory.latest.DataFlowSinkArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSinkArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="USDOutput",
                     type="DatasetReference",
                 ),
                 name="USDSink",
             ),
-            azure_nextgen.datafactory.latest.DataFlowSinkArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSinkArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="CADOutput",
                     type="DatasetReference",
                 ),
@@ -455,15 +455,15 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
             ),
         ],
         sources=[
-            azure_nextgen.datafactory.latest.DataFlowSourceArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSourceArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="CurrencyDatasetUSD",
                     type="DatasetReference",
                 ),
                 name="USDCurrency",
             ),
-            azure_nextgen.datafactory.latest.DataFlowSourceArgs(
-                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+            azure_nextgen.datafactory.DataFlowSourceArgs(
+                dataset=azure_nextgen.datafactory.DatasetReferenceArgs(
                     reference_name="CurrencyDatasetCAD",
                     type="DatasetReference",
                 ),
@@ -484,7 +484,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataFlow = new azure_nextgen.datafactory.latest.DataFlow("dataFlow", {
+const dataFlow = new azure_nextgen.datafactory.DataFlow("dataFlow", {
     dataFlowName: "exampleDataFlow",
     factoryName: "exampleFactoryName",
     properties: {
@@ -545,7 +545,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink`,
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataFlow</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DataFlowArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataFlow</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataFlowArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -553,11 +553,11 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink`,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataFlow</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DataFlowArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataFlow</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataFlow</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataFlowArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataFlow</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataFlow</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DataFlowArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataFlow</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataFlowArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -578,7 +578,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink`,
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataFlowArgs</span>
+        <span class="property-type"><a href="#inputs">DataFlowArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -647,7 +647,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink`,
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataFlowArgs</span>
+        <span class="property-type"><a href="#inputs">DataFlowArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -686,7 +686,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink`,
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataFlowArgs</span>
+        <span class="property-type"><a href="#inputs">DataFlowArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -709,11 +709,11 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink`,
 
 ## DataFlow Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DataFlow resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DataFlow resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3311,7 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datafactory/latest:DataFlow exampleDataFlow /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/datasets/exampleDataset 
+$ pulumi import azure-nextgen:datafactory:DataFlow exampleDataFlow /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/datasets/exampleDataset 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.PartnerNamespace resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 EventGrid Partner Namespace.
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var partnerNamespace = new AzureNextGen.EventGrid.V20200401Preview.PartnerNamespace("partnerNamespace", new AzureNextGen.EventGrid.V20200401Preview.PartnerNamespaceArgs
+        var partnerNamespace = new AzureNextGen.EventGrid.PartnerNamespace("partnerNamespace", new AzureNextGen.EventGrid.PartnerNamespaceArgs
         {
             Location = "westus",
             PartnerNamespaceName = "examplePartnerNamespaceName1",
@@ -52,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid/v20200401preview"
+	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-partner_namespace = azure_nextgen.eventgrid.v20200401preview.PartnerNamespace("partnerNamespace",
+partner_namespace = azure_nextgen.eventgrid.PartnerNamespace("partnerNamespace",
     location="westus",
     partner_namespace_name="examplePartnerNamespaceName1",
     partner_registration_fully_qualified_id="/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/ContosoCorpAccount1",
@@ -105,7 +106,7 @@ partner_namespace = azure_nextgen.eventgrid.v20200401preview.PartnerNamespace("p
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const partnerNamespace = new azure_nextgen.eventgrid.v20200401preview.PartnerNamespace("partnerNamespace", {
+const partnerNamespace = new azure_nextgen.eventgrid.PartnerNamespace("partnerNamespace", {
     location: "westus",
     partnerNamespaceName: "examplePartnerNamespaceName1",
     partnerRegistrationFullyQualifiedId: "/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/ContosoCorpAccount1",
@@ -128,7 +129,7 @@ const partnerNamespace = new azure_nextgen.eventgrid.v20200401preview.PartnerNam
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PartnerNamespace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PartnerNamespaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PartnerNamespace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PartnerNamespaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -136,11 +137,11 @@ const partnerNamespace = new azure_nextgen.eventgrid.v20200401preview.PartnerNam
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPartnerNamespace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PartnerNamespaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PartnerNamespace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPartnerNamespace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PartnerNamespaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PartnerNamespace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PartnerNamespace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PartnerNamespaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PartnerNamespace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PartnerNamespaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -161,7 +162,7 @@ const partnerNamespace = new azure_nextgen.eventgrid.v20200401preview.PartnerNam
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PartnerNamespaceArgs</span>
+        <span class="property-type"><a href="#inputs">PartnerNamespaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -230,7 +231,7 @@ const partnerNamespace = new azure_nextgen.eventgrid.v20200401preview.PartnerNam
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PartnerNamespaceArgs</span>
+        <span class="property-type"><a href="#inputs">PartnerNamespaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -269,7 +270,7 @@ const partnerNamespace = new azure_nextgen.eventgrid.v20200401preview.PartnerNam
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PartnerNamespaceArgs</span>
+        <span class="property-type"><a href="#inputs">PartnerNamespaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -292,11 +293,11 @@ const partnerNamespace = new azure_nextgen.eventgrid.v20200401preview.PartnerNam
 
 ## PartnerNamespace Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PartnerNamespace resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PartnerNamespace resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -730,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventgrid/v20200401preview:PartnerNamespace examplePartnerNamespaceName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerNamespaces/examplePartnerNamespaceName1 
+$ pulumi import azure-nextgen:eventgrid:PartnerNamespace examplePartnerNamespaceName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerNamespaces/examplePartnerNamespaceName1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.NetworkInterface resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A network interface in a resource group.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var networkInterface = new AzureNextGen.Network.Latest.NetworkInterface("networkInterface", new AzureNextGen.Network.Latest.NetworkInterfaceArgs
+        var networkInterface = new AzureNextGen.Network.NetworkInterface("networkInterface", new AzureNextGen.Network.NetworkInterfaceArgs
         {
             EnableAcceleratedNetworking = true,
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.NetworkInterfaceIPConfigurationArgs
+                new AzureNextGen.Network.Inputs.NetworkInterfaceIPConfigurationArgs
                 {
                     Name = "ipconfig1",
-                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.PublicIPAddressArgs
+                    PublicIPAddress = new AzureNextGen.Network.Inputs.PublicIPAddressArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/test-ip",
                     },
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.Network.Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default",
                     },
@@ -58,43 +58,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewNetworkInterface(ctx, "networkInterface", &network.NetworkInterfaceArgs{
-			EnableAcceleratedNetworking: pulumi.Bool(true),
-			IpConfigurations: network.NetworkInterfaceIPConfigurationArray{
-				&network.NetworkInterfaceIPConfigurationArgs{
-					Name: pulumi.String("ipconfig1"),
-					PublicIPAddress: &network.PublicIPAddressArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/test-ip"),
-					},
-					Subnet: &network.SubnetArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default"),
-					},
-				},
-			},
-			Location:             pulumi.String("eastus"),
-			NetworkInterfaceName: pulumi.String("test-nic"),
-			ResourceGroupName:    pulumi.String("rg1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -103,14 +67,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network_interface = azure_nextgen.network.latest.NetworkInterface("networkInterface",
+network_interface = azure_nextgen.network.NetworkInterface("networkInterface",
     enable_accelerated_networking=True,
-    ip_configurations=[azure_nextgen.network.latest.NetworkInterfaceIPConfigurationArgs(
+    ip_configurations=[azure_nextgen.network.NetworkInterfaceIPConfigurationArgs(
         name="ipconfig1",
-        public_ip_address=azure_nextgen.network.latest.PublicIPAddressArgs(
+        public_ip_address=azure_nextgen.network.PublicIPAddressArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/test-ip",
         ),
-        subnet=azure_nextgen.network.latest.SubnetArgs(
+        subnet=azure_nextgen.network.SubnetArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default",
         ),
     )],
@@ -128,7 +92,7 @@ network_interface = azure_nextgen.network.latest.NetworkInterface("networkInterf
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const networkInterface = new azure_nextgen.network.latest.NetworkInterface("networkInterface", {
+const networkInterface = new azure_nextgen.network.NetworkInterface("networkInterface", {
     enableAcceleratedNetworking: true,
     ipConfigurations: [{
         name: "ipconfig1",
@@ -156,7 +120,7 @@ const networkInterface = new azure_nextgen.network.latest.NetworkInterface("netw
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkInterface</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">NetworkInterfaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkInterface</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -164,11 +128,11 @@ const networkInterface = new azure_nextgen.network.latest.NetworkInterface("netw
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkInterface</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">NetworkInterfaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkInterface</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkInterface</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkInterface</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkInterface</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">NetworkInterfaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkInterface</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NetworkInterfaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -189,7 +153,7 @@ const networkInterface = new azure_nextgen.network.latest.NetworkInterface("netw
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkInterfaceArgs</span>
+        <span class="property-type"><a href="#inputs">NetworkInterfaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -258,7 +222,7 @@ const networkInterface = new azure_nextgen.network.latest.NetworkInterface("netw
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkInterfaceArgs</span>
+        <span class="property-type"><a href="#inputs">NetworkInterfaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -297,7 +261,7 @@ const networkInterface = new azure_nextgen.network.latest.NetworkInterface("netw
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkInterfaceArgs</span>
+        <span class="property-type"><a href="#inputs">NetworkInterfaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -320,11 +284,11 @@ const networkInterface = new azure_nextgen.network.latest.NetworkInterface("netw
 
 ## NetworkInterface Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NetworkInterface resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NetworkInterface resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -20856,7 +20820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:NetworkInterface test-nic /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkInterfaces/test-nic 
+$ pulumi import azure-nextgen:network:NetworkInterface test-nic /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkInterfaces/test-nic 
 ```
 
 

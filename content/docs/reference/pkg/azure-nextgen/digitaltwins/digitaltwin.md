@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.digitaltwins.DigitalTwin resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The description of the DigitalTwins service.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var digitalTwin = new AzureNextGen.DigitalTwins.Latest.DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins.Latest.DigitalTwinArgs
+        var digitalTwin = new AzureNextGen.DigitalTwins.DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins.DigitalTwinArgs
         {
             Location = "WestUS2",
             ResourceGroupName = "resRg",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins/latest"
+	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
+digital_twin = azure_nextgen.digitaltwins.DigitalTwin("digitalTwin",
     location="WestUS2",
     resource_group_name="resRg",
     resource_name="myDigitalTwinsService")
@@ -90,7 +90,7 @@ digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin", {
+const digitalTwin = new azure_nextgen.digitaltwins.DigitalTwin("digitalTwin", {
     location: "WestUS2",
     resourceGroupName: "resRg",
     resourceName: "myDigitalTwinsService",
@@ -110,9 +110,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var digitalTwin = new AzureNextGen.DigitalTwins.Latest.DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins.Latest.DigitalTwinArgs
+        var digitalTwin = new AzureNextGen.DigitalTwins.DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins.DigitalTwinArgs
         {
-            Identity = new AzureNextGen.DigitalTwins.Latest.Inputs.DigitalTwinsIdentityArgs
+            Identity = new AzureNextGen.DigitalTwins.Inputs.DigitalTwinsIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -134,7 +134,7 @@ class MyStack : Stack
 package main
 
 import (
-	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins/latest"
+	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -165,8 +165,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
-    identity=azure_nextgen.digitaltwins.latest.DigitalTwinsIdentityArgs(
+digital_twin = azure_nextgen.digitaltwins.DigitalTwin("digitalTwin",
+    identity=azure_nextgen.digitaltwins.DigitalTwinsIdentityArgs(
         type="SystemAssigned",
     ),
     location="WestUS2",
@@ -183,7 +183,7 @@ digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin", {
+const digitalTwin = new azure_nextgen.digitaltwins.DigitalTwin("digitalTwin", {
     identity: {
         type: "SystemAssigned",
     },
@@ -206,7 +206,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var digitalTwin = new AzureNextGen.DigitalTwins.Latest.DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins.Latest.DigitalTwinArgs
+        var digitalTwin = new AzureNextGen.DigitalTwins.DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins.DigitalTwinArgs
         {
             Location = "WestUS2",
             PublicNetworkAccess = "Enabled",
@@ -227,7 +227,7 @@ class MyStack : Stack
 package main
 
 import (
-	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins/latest"
+	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -256,7 +256,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
+digital_twin = azure_nextgen.digitaltwins.DigitalTwin("digitalTwin",
     location="WestUS2",
     public_network_access="Enabled",
     resource_group_name="resRg",
@@ -272,7 +272,7 @@ digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin", {
+const digitalTwin = new azure_nextgen.digitaltwins.DigitalTwin("digitalTwin", {
     location: "WestUS2",
     publicNetworkAccess: "Enabled",
     resourceGroupName: "resRg",
@@ -291,7 +291,7 @@ const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTw
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DigitalTwin</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DigitalTwinArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DigitalTwin</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DigitalTwinArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -299,11 +299,11 @@ const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTw
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDigitalTwin</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DigitalTwinArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DigitalTwin</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDigitalTwin</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DigitalTwinArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DigitalTwin</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DigitalTwin</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DigitalTwinArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DigitalTwin</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DigitalTwinArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -324,7 +324,7 @@ const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTw
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DigitalTwinArgs</span>
+        <span class="property-type"><a href="#inputs">DigitalTwinArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -393,7 +393,7 @@ const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTw
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DigitalTwinArgs</span>
+        <span class="property-type"><a href="#inputs">DigitalTwinArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -432,7 +432,7 @@ const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTw
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DigitalTwinArgs</span>
+        <span class="property-type"><a href="#inputs">DigitalTwinArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -455,11 +455,11 @@ const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTw
 
 ## DigitalTwin Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2193,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:digitaltwins/latest:DigitalTwin myDigitalTwinsService /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService 
+$ pulumi import azure-nextgen:digitaltwins:DigitalTwin myDigitalTwinsService /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService 
 ```
 
 

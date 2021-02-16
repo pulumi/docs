@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.costmanagement.ReportByBillingAc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A report resource.
+API Version: 2018-08-01-preview.
 
 
 
@@ -20,7 +21,7 @@ A report resource.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReportByBillingAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReportByBillingAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReportByBillingAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReportByBillingAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -28,11 +29,11 @@ A report resource.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReportByBillingAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReportByBillingAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReportByBillingAccount</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReportByBillingAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReportByBillingAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReportByBillingAccount</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReportByBillingAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReportByBillingAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReportByBillingAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReportByBillingAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -53,7 +54,7 @@ A report resource.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReportByBillingAccountArgs</span>
+        <span class="property-type"><a href="#inputs">ReportByBillingAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -122,7 +123,7 @@ A report resource.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReportByBillingAccountArgs</span>
+        <span class="property-type"><a href="#inputs">ReportByBillingAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -161,7 +162,7 @@ A report resource.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReportByBillingAccountArgs</span>
+        <span class="property-type"><a href="#inputs">ReportByBillingAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -184,11 +185,11 @@ A report resource.
 
 ## ReportByBillingAccount Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ReportByBillingAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ReportByBillingAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -683,8 +684,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>Daily</dt>
     <dd>Daily</dd>
-    <dt>Hourly</dt>
-    <dd>Hourly</dd>
 </dl>
 {{% /choosable %}}
 
@@ -692,8 +691,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>Granularity<wbr>Type<wbr>Daily</dt>
     <dd>Daily</dd>
-    <dt>Granularity<wbr>Type<wbr>Hourly</dt>
-    <dd>Hourly</dd>
 </dl>
 {{% /choosable %}}
 
@@ -701,8 +698,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>Daily</dt>
     <dd>Daily</dd>
-    <dt>Hourly</dt>
-    <dd>Hourly</dd>
 </dl>
 {{% /choosable %}}
 
@@ -710,8 +705,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>DAILY</dt>
     <dd>Daily</dd>
-    <dt>HOURLY</dt>
-    <dd>Hourly</dd>
 </dl>
 {{% /choosable %}}
 
@@ -721,6 +714,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>In</dt>
     <dd>In</dd>
+    <dt>Contains</dt>
+    <dd>Contains</dd>
 </dl>
 {{% /choosable %}}
 
@@ -728,6 +723,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>Operator<wbr>Type<wbr>In</dt>
     <dd>In</dd>
+    <dt>Operator<wbr>Type<wbr>Contains</dt>
+    <dd>Contains</dd>
 </dl>
 {{% /choosable %}}
 
@@ -735,6 +732,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>In</dt>
     <dd>In</dd>
+    <dt>Contains</dt>
+    <dd>Contains</dd>
 </dl>
 {{% /choosable %}}
 
@@ -742,6 +741,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>IN_</dt>
     <dd>In</dd>
+    <dt>CONTAINS</dt>
+    <dd>Contains</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3913,6 +3914,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>WeekToDate</dd>
     <dt>Month<wbr>To<wbr>Date</dt>
     <dd>MonthToDate</dd>
+    <dt>Year<wbr>To<wbr>Date</dt>
+    <dd>YearToDate</dd>
     <dt>Custom</dt>
     <dd>Custom</dd>
 </dl>
@@ -3924,6 +3927,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>WeekToDate</dd>
     <dt>Timeframe<wbr>Type<wbr>Month<wbr>To<wbr>Date</dt>
     <dd>MonthToDate</dd>
+    <dt>Timeframe<wbr>Type<wbr>Year<wbr>To<wbr>Date</dt>
+    <dd>YearToDate</dd>
     <dt>Timeframe<wbr>Type<wbr>Custom</dt>
     <dd>Custom</dd>
 </dl>
@@ -3935,6 +3940,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>WeekToDate</dd>
     <dt>Month<wbr>To<wbr>Date</dt>
     <dd>MonthToDate</dd>
+    <dt>Year<wbr>To<wbr>Date</dt>
+    <dd>YearToDate</dd>
     <dt>Custom</dt>
     <dd>Custom</dd>
 </dl>
@@ -3946,6 +3953,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>WeekToDate</dd>
     <dt>MONTH_TO_DATE</dt>
     <dd>MonthToDate</dd>
+    <dt>YEAR_TO_DATE</dt>
+    <dd>YearToDate</dd>
     <dt>CUSTOM</dt>
     <dd>Custom</dd>
 </dl>

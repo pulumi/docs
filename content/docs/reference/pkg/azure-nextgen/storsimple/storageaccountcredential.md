@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.StorageAccountCredent
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The storage account credential.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageAccountCredential = new AzureNextGen.StorSimple.Latest.StorageAccountCredential("storageAccountCredential", new AzureNextGen.StorSimple.Latest.StorageAccountCredentialArgs
+        var storageAccountCredential = new AzureNextGen.StorSimple.StorageAccountCredential("storageAccountCredential", new AzureNextGen.StorSimple.StorageAccountCredentialArgs
         {
-            AccessKey = new AzureNextGen.StorSimple.Latest.Inputs.AsymmetricEncryptedSecretArgs
+            AccessKey = new AzureNextGen.StorSimple.Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "RSAES_PKCS1_v_1_5",
                 EncryptionCertThumbprint = "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,8 +90,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_account_credential = azure_nextgen.storsimple.latest.StorageAccountCredential("storageAccountCredential",
-    access_key=azure_nextgen.storsimple.latest.AsymmetricEncryptedSecretArgs(
+storage_account_credential = azure_nextgen.storsimple.StorageAccountCredential("storageAccountCredential",
+    access_key=azure_nextgen.storsimple.AsymmetricEncryptedSecretArgs(
         encryption_algorithm="RSAES_PKCS1_v_1_5",
         encryption_cert_thumbprint="A872A2DF196AC7682EE24791E7DE2E2A360F5926",
         value="ATuJSkmrFk4h8r1jrZ4nd3nthLSddcguEO5QLO/NECUtTuB9kL4dNv3/jC4WOvFkeVr3x1UvfhlIeMmJBF1SMr6hR1JzD0xNU/TtQqUeXN7V3jk7I+2l67P9StuHWR6OMd3XOLwvznxOEQtEWpweDiobZU1ZiY03WafcGZFpV5j6tEoHeopoZ1J/GhPtkYmx+TqxzUN6qnir5rP3NSYiZciImP/qu8U9yUV/xpVRv39KvFc2Yr5SpKpMMRUj55XW10UnPer63M6KovF8X9Wi/fNnrZAs1Esl5XddZETGrW/e5B++VMJ6w0Q/uvPR+UBwrOU0804l0SzwdIe3qVVd0Q==",
@@ -112,7 +112,7 @@ storage_account_credential = azure_nextgen.storsimple.latest.StorageAccountCrede
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageAccountCredential = new azure_nextgen.storsimple.latest.StorageAccountCredential("storageAccountCredential", {
+const storageAccountCredential = new azure_nextgen.storsimple.StorageAccountCredential("storageAccountCredential", {
     accessKey: {
         encryptionAlgorithm: "RSAES_PKCS1_v_1_5",
         encryptionCertThumbprint: "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
@@ -137,7 +137,7 @@ const storageAccountCredential = new azure_nextgen.storsimple.latest.StorageAcco
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageAccountCredential</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">StorageAccountCredentialArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageAccountCredential</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StorageAccountCredentialArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -145,11 +145,11 @@ const storageAccountCredential = new azure_nextgen.storsimple.latest.StorageAcco
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageAccountCredential</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">StorageAccountCredentialArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageAccountCredential</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageAccountCredential</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StorageAccountCredentialArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageAccountCredential</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageAccountCredential</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">StorageAccountCredentialArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageAccountCredential</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StorageAccountCredentialArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,7 +170,7 @@ const storageAccountCredential = new azure_nextgen.storsimple.latest.StorageAcco
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageAccountCredentialArgs</span>
+        <span class="property-type"><a href="#inputs">StorageAccountCredentialArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -239,7 +239,7 @@ const storageAccountCredential = new azure_nextgen.storsimple.latest.StorageAcco
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageAccountCredentialArgs</span>
+        <span class="property-type"><a href="#inputs">StorageAccountCredentialArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -278,7 +278,7 @@ const storageAccountCredential = new azure_nextgen.storsimple.latest.StorageAcco
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageAccountCredentialArgs</span>
+        <span class="property-type"><a href="#inputs">StorageAccountCredentialArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,11 +301,11 @@ const storageAccountCredential = new azure_nextgen.storsimple.latest.StorageAcco
 
 ## StorageAccountCredential Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The StorageAccountCredential resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The StorageAccountCredential resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1157,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:StorageAccountCredential SACForTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/storageAccountCredentials/SACForTest 
+$ pulumi import azure-nextgen:storsimple:StorageAccountCredential SACForTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/storageAccountCredentials/SACForTest 
 ```
 
 

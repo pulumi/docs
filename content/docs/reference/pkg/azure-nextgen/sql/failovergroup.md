@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.FailoverGroup resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A failover group.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var failoverGroup = new AzureNextGen.Sql.V20200801Preview.FailoverGroup("failoverGroup", new AzureNextGen.Sql.V20200801Preview.FailoverGroupArgs
+        var failoverGroup = new AzureNextGen.Sql.FailoverGroup("failoverGroup", new AzureNextGen.Sql.FailoverGroupArgs
         {
             Databases = 
             {
@@ -36,16 +37,16 @@ class MyStack : Stack
             FailoverGroupName = "failover-group-test-3",
             PartnerServers = 
             {
-                new AzureNextGen.Sql.V20200801Preview.Inputs.PartnerInfoArgs
+                new AzureNextGen.Sql.Inputs.PartnerInfoArgs
                 {
                     Id = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server",
                 },
             },
-            ReadOnlyEndpoint = new AzureNextGen.Sql.V20200801Preview.Inputs.FailoverGroupReadOnlyEndpointArgs
+            ReadOnlyEndpoint = new AzureNextGen.Sql.Inputs.FailoverGroupReadOnlyEndpointArgs
             {
                 FailoverPolicy = "Disabled",
             },
-            ReadWriteEndpoint = new AzureNextGen.Sql.V20200801Preview.Inputs.FailoverGroupReadWriteEndpointArgs
+            ReadWriteEndpoint = new AzureNextGen.Sql.Inputs.FailoverGroupReadWriteEndpointArgs
             {
                 FailoverPolicy = "Automatic",
                 FailoverWithDataLossGracePeriodMinutes = 480,
@@ -67,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -111,19 +112,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-failover_group = azure_nextgen.sql.v20200801preview.FailoverGroup("failoverGroup",
+failover_group = azure_nextgen.sql.FailoverGroup("failoverGroup",
     databases=[
         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1",
         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2",
     ],
     failover_group_name="failover-group-test-3",
-    partner_servers=[azure_nextgen.sql.v20200801preview.PartnerInfoArgs(
+    partner_servers=[azure_nextgen.sql.PartnerInfoArgs(
         id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server",
     )],
-    read_only_endpoint=azure_nextgen.sql.v20200801preview.FailoverGroupReadOnlyEndpointArgs(
+    read_only_endpoint=azure_nextgen.sql.FailoverGroupReadOnlyEndpointArgs(
         failover_policy="Disabled",
     ),
-    read_write_endpoint=azure_nextgen.sql.v20200801preview.FailoverGroupReadWriteEndpointArgs(
+    read_write_endpoint=azure_nextgen.sql.FailoverGroupReadWriteEndpointArgs(
         failover_policy="Automatic",
         failover_with_data_loss_grace_period_minutes=480,
     ),
@@ -140,7 +141,7 @@ failover_group = azure_nextgen.sql.v20200801preview.FailoverGroup("failoverGroup
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const failoverGroup = new azure_nextgen.sql.v20200801preview.FailoverGroup("failoverGroup", {
+const failoverGroup = new azure_nextgen.sql.FailoverGroup("failoverGroup", {
     databases: [
         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1",
         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2",
@@ -172,7 +173,7 @@ const failoverGroup = new azure_nextgen.sql.v20200801preview.FailoverGroup("fail
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FailoverGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FailoverGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FailoverGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FailoverGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -180,11 +181,11 @@ const failoverGroup = new azure_nextgen.sql.v20200801preview.FailoverGroup("fail
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFailoverGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FailoverGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FailoverGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFailoverGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FailoverGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FailoverGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FailoverGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FailoverGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FailoverGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FailoverGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -205,7 +206,7 @@ const failoverGroup = new azure_nextgen.sql.v20200801preview.FailoverGroup("fail
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FailoverGroupArgs</span>
+        <span class="property-type"><a href="#inputs">FailoverGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,7 +275,7 @@ const failoverGroup = new azure_nextgen.sql.v20200801preview.FailoverGroup("fail
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FailoverGroupArgs</span>
+        <span class="property-type"><a href="#inputs">FailoverGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -313,7 +314,7 @@ const failoverGroup = new azure_nextgen.sql.v20200801preview.FailoverGroup("fail
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FailoverGroupArgs</span>
+        <span class="property-type"><a href="#inputs">FailoverGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -336,11 +337,11 @@ const failoverGroup = new azure_nextgen.sql.v20200801preview.FailoverGroup("fail
 
 ## FailoverGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1510,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:FailoverGroup failover-group-test-3 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/failoverGroups/failover-group-test-3 
+$ pulumi import azure-nextgen:sql:FailoverGroup failover-group-test-3 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/failoverGroups/failover-group-test-3 
 ```
 
 

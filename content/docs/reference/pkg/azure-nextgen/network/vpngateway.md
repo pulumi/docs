@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VpnGateway resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 VpnGateway Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vpnGateway = new AzureNextGen.Network.Latest.VpnGateway("vpnGateway", new AzureNextGen.Network.Latest.VpnGatewayArgs
+        var vpnGateway = new AzureNextGen.Network.VpnGateway("vpnGateway", new AzureNextGen.Network.VpnGatewayArgs
         {
-            BgpSettings = new AzureNextGen.Network.Latest.Inputs.BgpSettingsArgs
+            BgpSettings = new AzureNextGen.Network.Inputs.BgpSettingsArgs
             {
                 Asn = 65515,
                 BgpPeeringAddresses = 
                 {
-                    new AzureNextGen.Network.Latest.Inputs.IPConfigurationBgpPeeringAddressArgs
+                    new AzureNextGen.Network.Inputs.IPConfigurationBgpPeeringAddressArgs
                     {
                         CustomBgpIpAddresses = 
                         {
@@ -42,7 +42,7 @@ class MyStack : Stack
                         },
                         IpconfigurationId = "Instance0",
                     },
-                    new AzureNextGen.Network.Latest.Inputs.IPConfigurationBgpPeeringAddressArgs
+                    new AzureNextGen.Network.Inputs.IPConfigurationBgpPeeringAddressArgs
                     {
                         CustomBgpIpAddresses = 
                         {
@@ -55,21 +55,21 @@ class MyStack : Stack
             },
             Connections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.VpnConnectionArgs
+                new AzureNextGen.Network.Inputs.VpnConnectionArgs
                 {
                     Name = "vpnConnection1",
-                    RemoteVpnSite = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    RemoteVpnSite = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
                     },
                     VpnLinkConnections = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.VpnSiteLinkConnectionArgs
+                        new AzureNextGen.Network.Inputs.VpnSiteLinkConnectionArgs
                         {
                             ConnectionBandwidth = 200,
                             EgressNatRules = 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                                new AzureNextGen.Network.Inputs.SubResourceArgs
                                 {
                                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03",
                                 },
@@ -77,7 +77,7 @@ class MyStack : Stack
                             Name = "Connection-Link1",
                             SharedKey = "key",
                             VpnConnectionProtocolType = "IKEv2",
-                            VpnSiteLink = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                            VpnSiteLink = new AzureNextGen.Network.Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1",
                             },
@@ -90,18 +90,18 @@ class MyStack : Stack
             Location = "westcentralus",
             NatRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.VpnGatewayNatRuleArgs
+                new AzureNextGen.Network.Inputs.VpnGatewayNatRuleArgs
                 {
                     ExternalMappings = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.VpnNatRuleMappingArgs
+                        new AzureNextGen.Network.Inputs.VpnNatRuleMappingArgs
                         {
                             AddressSpace = "192.168.0.0/26",
                         },
                     },
                     InternalMappings = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.VpnNatRuleMappingArgs
+                        new AzureNextGen.Network.Inputs.VpnNatRuleMappingArgs
                         {
                             AddressSpace = "0.0.0.0/26",
                         },
@@ -117,7 +117,7 @@ class MyStack : Stack
             {
                 { "key1", "value1" },
             },
-            VirtualHub = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            VirtualHub = new AzureNextGen.Network.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
             },
@@ -136,7 +136,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -231,35 +231,35 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vpn_gateway = azure_nextgen.network.latest.VpnGateway("vpnGateway",
-    bgp_settings=azure_nextgen.network.latest.BgpSettingsArgs(
+vpn_gateway = azure_nextgen.network.VpnGateway("vpnGateway",
+    bgp_settings=azure_nextgen.network.BgpSettingsArgs(
         asn=65515,
         bgp_peering_addresses=[
-            azure_nextgen.network.latest.IPConfigurationBgpPeeringAddressArgs(
+            azure_nextgen.network.IPConfigurationBgpPeeringAddressArgs(
                 custom_bgp_ip_addresses=["169.254.21.5"],
                 ipconfiguration_id="Instance0",
             ),
-            azure_nextgen.network.latest.IPConfigurationBgpPeeringAddressArgs(
+            azure_nextgen.network.IPConfigurationBgpPeeringAddressArgs(
                 custom_bgp_ip_addresses=["169.254.21.10"],
                 ipconfiguration_id="Instance1",
             ),
         ],
         peer_weight=0,
     ),
-    connections=[azure_nextgen.network.latest.VpnConnectionArgs(
+    connections=[azure_nextgen.network.VpnConnectionArgs(
         name="vpnConnection1",
-        remote_vpn_site=azure_nextgen.network.latest.SubResourceArgs(
+        remote_vpn_site=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
         ),
-        vpn_link_connections=[azure_nextgen.network.latest.VpnSiteLinkConnectionArgs(
+        vpn_link_connections=[azure_nextgen.network.VpnSiteLinkConnectionArgs(
             connection_bandwidth=200,
-            egress_nat_rules=[azure_nextgen.network.latest.SubResourceArgs(
+            egress_nat_rules=[azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03",
             )],
             name="Connection-Link1",
             shared_key="key",
             vpn_connection_protocol_type="IKEv2",
-            vpn_site_link=azure_nextgen.network.latest.SubResourceArgs(
+            vpn_site_link=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1",
             ),
         )],
@@ -267,11 +267,11 @@ vpn_gateway = azure_nextgen.network.latest.VpnGateway("vpnGateway",
     gateway_name="gateway1",
     is_routing_preference_internet=False,
     location="westcentralus",
-    nat_rules=[azure_nextgen.network.latest.VpnGatewayNatRuleArgs(
-        external_mappings=[azure_nextgen.network.latest.VpnNatRuleMappingArgs(
+    nat_rules=[azure_nextgen.network.VpnGatewayNatRuleArgs(
+        external_mappings=[azure_nextgen.network.VpnNatRuleMappingArgs(
             address_space="192.168.0.0/26",
         )],
-        internal_mappings=[azure_nextgen.network.latest.VpnNatRuleMappingArgs(
+        internal_mappings=[azure_nextgen.network.VpnNatRuleMappingArgs(
             address_space="0.0.0.0/26",
         )],
         ip_configuration_id="",
@@ -283,7 +283,7 @@ vpn_gateway = azure_nextgen.network.latest.VpnGateway("vpnGateway",
     tags={
         "key1": "value1",
     },
-    virtual_hub=azure_nextgen.network.latest.SubResourceArgs(
+    virtual_hub=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
     ))
 
@@ -297,7 +297,7 @@ vpn_gateway = azure_nextgen.network.latest.VpnGateway("vpnGateway",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vpnGateway = new azure_nextgen.network.latest.VpnGateway("vpnGateway", {
+const vpnGateway = new azure_nextgen.network.VpnGateway("vpnGateway", {
     bgpSettings: {
         asn: 65515,
         bgpPeeringAddresses: [
@@ -366,7 +366,7 @@ const vpnGateway = new azure_nextgen.network.latest.VpnGateway("vpnGateway", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VpnGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -374,11 +374,11 @@ const vpnGateway = new azure_nextgen.network.latest.VpnGateway("vpnGateway", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VpnGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VpnGatewayArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VpnGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -399,7 +399,7 @@ const vpnGateway = new azure_nextgen.network.latest.VpnGateway("vpnGateway", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VpnGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">VpnGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -468,7 +468,7 @@ const vpnGateway = new azure_nextgen.network.latest.VpnGateway("vpnGateway", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VpnGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">VpnGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -507,7 +507,7 @@ const vpnGateway = new azure_nextgen.network.latest.VpnGateway("vpnGateway", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VpnGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">VpnGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -530,11 +530,11 @@ const vpnGateway = new azure_nextgen.network.latest.VpnGateway("vpnGateway", {
 
 ## VpnGateway Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -7778,7 +7778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VpnGateway gateway1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1 
+$ pulumi import azure-nextgen:network:VpnGateway gateway1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.Vault resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource information, as returned by the resource provider.
-Latest API Version: 2020-02-02.
+API Version: 2020-02-02.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vault = new AzureNextGen.RecoveryServices.Latest.Vault("vault", new AzureNextGen.RecoveryServices.Latest.VaultArgs
+        var vault = new AzureNextGen.RecoveryServices.Vault("vault", new AzureNextGen.RecoveryServices.VaultArgs
         {
-            Identity = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityDataArgs
+            Identity = new AzureNextGen.RecoveryServices.Inputs.IdentityDataArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "West US",
             Properties = ,
             ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
-            Sku = new AzureNextGen.RecoveryServices.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.RecoveryServices.Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,14 +91,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vault = azure_nextgen.recoveryservices.latest.Vault("vault",
-    identity=azure_nextgen.recoveryservices.latest.IdentityDataArgs(
+vault = azure_nextgen.recoveryservices.Vault("vault",
+    identity=azure_nextgen.recoveryservices.IdentityDataArgs(
         type="SystemAssigned",
     ),
     location="West US",
-    properties=azure_nextgen.recoveryservices.latest.VaultPropertiesArgs(),
+    properties=azure_nextgen.recoveryservices.VaultPropertiesArgs(),
     resource_group_name="Default-RecoveryServices-ResourceGroup",
-    sku=azure_nextgen.recoveryservices.latest.SkuArgs(
+    sku=azure_nextgen.recoveryservices.SkuArgs(
         name="Standard",
     ),
     vault_name="swaggerExample")
@@ -113,7 +113,7 @@ vault = azure_nextgen.recoveryservices.latest.Vault("vault",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
+const vault = new azure_nextgen.recoveryservices.Vault("vault", {
     identity: {
         type: "SystemAssigned",
     },
@@ -140,9 +140,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vault = new AzureNextGen.RecoveryServices.Latest.Vault("vault", new AzureNextGen.RecoveryServices.Latest.VaultArgs
+        var vault = new AzureNextGen.RecoveryServices.Vault("vault", new AzureNextGen.RecoveryServices.VaultArgs
         {
-            Identity = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityDataArgs
+            Identity = new AzureNextGen.RecoveryServices.Inputs.IdentityDataArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -151,23 +151,23 @@ class MyStack : Stack
                 },
             },
             Location = "West US",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.VaultPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices.Inputs.VaultPropertiesArgs
             {
-                Encryption = new AzureNextGen.RecoveryServices.Latest.Inputs.VaultPropertiesEncryptionArgs
+                Encryption = new AzureNextGen.RecoveryServices.Inputs.VaultPropertiesEncryptionArgs
                 {
                     InfrastructureEncryption = "Enabled",
-                    KekIdentity = new AzureNextGen.RecoveryServices.Latest.Inputs.CmkKekIdentityArgs
+                    KekIdentity = new AzureNextGen.RecoveryServices.Inputs.CmkKekIdentityArgs
                     {
                         UserAssignedIdentity = "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",
                     },
-                    KeyVaultProperties = new AzureNextGen.RecoveryServices.Latest.Inputs.CmkKeyVaultPropertiesArgs
+                    KeyVaultProperties = new AzureNextGen.RecoveryServices.Inputs.CmkKeyVaultPropertiesArgs
                     {
                         KeyUri = "https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3",
                     },
                 },
             },
             ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
-            Sku = new AzureNextGen.RecoveryServices.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.RecoveryServices.Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -187,7 +187,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -235,27 +235,27 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vault = azure_nextgen.recoveryservices.latest.Vault("vault",
-    identity=azure_nextgen.recoveryservices.latest.IdentityDataArgs(
+vault = azure_nextgen.recoveryservices.Vault("vault",
+    identity=azure_nextgen.recoveryservices.IdentityDataArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": {},
         },
     ),
     location="West US",
-    properties=azure_nextgen.recoveryservices.latest.VaultPropertiesArgs(
-        encryption=azure_nextgen.recoveryservices.latest.VaultPropertiesEncryptionArgs(
+    properties=azure_nextgen.recoveryservices.VaultPropertiesArgs(
+        encryption=azure_nextgen.recoveryservices.VaultPropertiesEncryptionArgs(
             infrastructure_encryption="Enabled",
-            kek_identity=azure_nextgen.recoveryservices.latest.CmkKekIdentityArgs(
+            kek_identity=azure_nextgen.recoveryservices.CmkKekIdentityArgs(
                 user_assigned_identity="/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",
             ),
-            key_vault_properties=azure_nextgen.recoveryservices.latest.CmkKeyVaultPropertiesArgs(
+            key_vault_properties=azure_nextgen.recoveryservices.CmkKeyVaultPropertiesArgs(
                 key_uri="https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3",
             ),
         ),
     ),
     resource_group_name="Default-RecoveryServices-ResourceGroup",
-    sku=azure_nextgen.recoveryservices.latest.SkuArgs(
+    sku=azure_nextgen.recoveryservices.SkuArgs(
         name="Standard",
     ),
     vault_name="swaggerExample")
@@ -270,7 +270,7 @@ vault = azure_nextgen.recoveryservices.latest.Vault("vault",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
+const vault = new azure_nextgen.recoveryservices.Vault("vault", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {
@@ -310,9 +310,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vault = new AzureNextGen.RecoveryServices.Latest.Vault("vault", new AzureNextGen.RecoveryServices.Latest.VaultArgs
+        var vault = new AzureNextGen.RecoveryServices.Vault("vault", new AzureNextGen.RecoveryServices.VaultArgs
         {
-            Identity = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityDataArgs
+            Identity = new AzureNextGen.RecoveryServices.Inputs.IdentityDataArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -323,7 +323,7 @@ class MyStack : Stack
             Location = "West US",
             Properties = ,
             ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
-            Sku = new AzureNextGen.RecoveryServices.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.RecoveryServices.Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -343,7 +343,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -381,17 +381,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vault = azure_nextgen.recoveryservices.latest.Vault("vault",
-    identity=azure_nextgen.recoveryservices.latest.IdentityDataArgs(
+vault = azure_nextgen.recoveryservices.Vault("vault",
+    identity=azure_nextgen.recoveryservices.IdentityDataArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": {},
         },
     ),
     location="West US",
-    properties=azure_nextgen.recoveryservices.latest.VaultPropertiesArgs(),
+    properties=azure_nextgen.recoveryservices.VaultPropertiesArgs(),
     resource_group_name="Default-RecoveryServices-ResourceGroup",
-    sku=azure_nextgen.recoveryservices.latest.SkuArgs(
+    sku=azure_nextgen.recoveryservices.SkuArgs(
         name="Standard",
     ),
     vault_name="swaggerExample")
@@ -406,7 +406,7 @@ vault = azure_nextgen.recoveryservices.latest.Vault("vault",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
+const vault = new azure_nextgen.recoveryservices.Vault("vault", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {
@@ -434,7 +434,7 @@ const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VaultArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -442,11 +442,11 @@ const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VaultArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vault</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vault</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VaultArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -467,7 +467,7 @@ const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VaultArgs</span>
+        <span class="property-type"><a href="#inputs">VaultArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -536,7 +536,7 @@ const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VaultArgs</span>
+        <span class="property-type"><a href="#inputs">VaultArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -575,7 +575,7 @@ const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VaultArgs</span>
+        <span class="property-type"><a href="#inputs">VaultArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -598,11 +598,11 @@ const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
 
 ## Vault Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Vault resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Vault resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3362,7 +3362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:Vault swaggerExample /subscriptions/77777777-b0c6-47a2-b37c-d8e65a629c18/resourceGroups/Default-RecoveryServices-ResourceGroup/providers/Microsoft.RecoveryServices/vaults/swaggerExample 
+$ pulumi import azure-nextgen:recoveryservices:Vault swaggerExample /subscriptions/77777777-b0c6-47a2-b37c-d8e65a629c18/resourceGroups/Default-RecoveryServices-ResourceGroup/providers/Microsoft.RecoveryServices/vaults/swaggerExample 
 ```
 
 

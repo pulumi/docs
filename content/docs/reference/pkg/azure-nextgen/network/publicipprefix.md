@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.PublicIPPrefix resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Public IP prefix resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publicIPPrefix = new AzureNextGen.Network.Latest.PublicIPPrefix("publicIPPrefix", new AzureNextGen.Network.Latest.PublicIPPrefixArgs
+        var publicIPPrefix = new AzureNextGen.Network.PublicIPPrefix("publicIPPrefix", new AzureNextGen.Network.PublicIPPrefixArgs
         {
             Location = "westus",
             PrefixLength = 30,
             PublicIPAddressVersion = "IPv4",
             PublicIpPrefixName = "test-ipprefix",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.PublicIPPrefixSkuArgs
+            Sku = new AzureNextGen.Network.Inputs.PublicIPPrefixSkuArgs
             {
                 Name = "Standard",
                 Tier = "Regional",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,13 +88,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-public_ip_prefix = azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix",
+public_ip_prefix = azure_nextgen.network.PublicIPPrefix("publicIPPrefix",
     location="westus",
     prefix_length=30,
     public_ip_address_version="IPv4",
     public_ip_prefix_name="test-ipprefix",
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.PublicIPPrefixSkuArgs(
+    sku=azure_nextgen.network.PublicIPPrefixSkuArgs(
         name="Standard",
         tier="Regional",
     ))
@@ -109,7 +109,7 @@ public_ip_prefix = azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix", {
+const publicIPPrefix = new azure_nextgen.network.PublicIPPrefix("publicIPPrefix", {
     location: "westus",
     prefixLength: 30,
     publicIPAddressVersion: "IPv4",
@@ -135,13 +135,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publicIPPrefix = new AzureNextGen.Network.Latest.PublicIPPrefix("publicIPPrefix", new AzureNextGen.Network.Latest.PublicIPPrefixArgs
+        var publicIPPrefix = new AzureNextGen.Network.PublicIPPrefix("publicIPPrefix", new AzureNextGen.Network.PublicIPPrefixArgs
         {
             Location = "westus",
             PrefixLength = 30,
             PublicIpPrefixName = "test-ipprefix",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.PublicIPPrefixSkuArgs
+            Sku = new AzureNextGen.Network.Inputs.PublicIPPrefixSkuArgs
             {
                 Name = "Standard",
             },
@@ -160,7 +160,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -192,12 +192,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-public_ip_prefix = azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix",
+public_ip_prefix = azure_nextgen.network.PublicIPPrefix("publicIPPrefix",
     location="westus",
     prefix_length=30,
     public_ip_prefix_name="test-ipprefix",
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.PublicIPPrefixSkuArgs(
+    sku=azure_nextgen.network.PublicIPPrefixSkuArgs(
         name="Standard",
     ))
 
@@ -211,7 +211,7 @@ public_ip_prefix = azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix", {
+const publicIPPrefix = new azure_nextgen.network.PublicIPPrefix("publicIPPrefix", {
     location: "westus",
     prefixLength: 30,
     publicIpPrefixName: "test-ipprefix",
@@ -233,7 +233,7 @@ const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIP
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PublicIPPrefix</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PublicIPPrefixArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PublicIPPrefix</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PublicIPPrefixArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -241,11 +241,11 @@ const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIP
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPublicIPPrefix</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PublicIPPrefixArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PublicIPPrefix</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPublicIPPrefix</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PublicIPPrefixArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PublicIPPrefix</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PublicIPPrefix</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PublicIPPrefixArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PublicIPPrefix</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PublicIPPrefixArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -266,7 +266,7 @@ const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIP
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PublicIPPrefixArgs</span>
+        <span class="property-type"><a href="#inputs">PublicIPPrefixArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -335,7 +335,7 @@ const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIP
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PublicIPPrefixArgs</span>
+        <span class="property-type"><a href="#inputs">PublicIPPrefixArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -374,7 +374,7 @@ const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIP
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PublicIPPrefixArgs</span>
+        <span class="property-type"><a href="#inputs">PublicIPPrefixArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -397,11 +397,11 @@ const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIP
 
 ## PublicIPPrefix Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PublicIPPrefix resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PublicIPPrefix resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2141,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:PublicIPPrefix test-ipprefix /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/test-ipprefix 
+$ pulumi import azure-nextgen:network:PublicIPPrefix test-ipprefix /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/test-ipprefix 
 ```
 
 

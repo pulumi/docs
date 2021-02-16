@@ -19,7 +19,7 @@ meta_desc: "Explore the GetDataset function of the datafactory module, including
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDataset<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDatasetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetDatasetResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDataset<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDatasetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDatasetResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetDataset function of the datafactory module, including
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDataset<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDatasetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupDatasetResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDataset<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDatasetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDatasetResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDataset` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetDataset function of the datafactory module, including
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDataset </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetDatasetResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetDatasetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDatasetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDatasetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -718,9 +715,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="amazonredshifttabledatasetresponse">Amazon<wbr>Redshift<wbr>Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -1073,9 +1067,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="amazons3datasetresponse">Amazon<wbr>S3Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -1647,9 +1638,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1819,9 +1807,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="avrodatasetresponse">Avro<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -2213,9 +2198,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2313,9 +2295,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azureblobdatasetresponse">Azure<wbr>Blob<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -2851,9 +2830,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3278,9 +3254,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3417,9 +3390,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3553,9 +3523,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuredataexplorertabledatasetresponse">Azure<wbr>Data<wbr>Explorer<wbr>Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -3872,9 +3839,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuredatalakestoredatasetresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -4302,9 +4266,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4402,9 +4363,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuredatabricksdeltalakedatasetresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -4760,9 +4718,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4860,9 +4815,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuremariadbtabledatasetresponse">Azure<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -5179,9 +5131,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuremysqltabledatasetresponse">Azure<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -5537,9 +5486,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5892,9 +5838,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6208,9 +6151,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuresqldwtabledatasetresponse">Azure<wbr>Sql<wbr>DWTable<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -6566,9 +6506,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6918,9 +6855,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuresqltabledatasetresponse">Azure<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -7276,9 +7210,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7592,9 +7523,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="binarydatasetresponse">Binary<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -7950,9 +7878,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8305,9 +8230,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8621,9 +8543,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="concurobjectdatasetresponse">Concur<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -8943,9 +8862,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9259,9 +9175,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="cosmosdbsqlapicollectiondatasetresponse">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -9581,9 +9494,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9900,9 +9810,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10183,9 +10090,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10211,9 +10115,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</h4>
-
-
-
 
 
 
@@ -10281,9 +10182,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10345,9 +10243,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</h4>
-
-
-
 
 
 
@@ -10415,9 +10310,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10443,9 +10335,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</h4>
-
-
-
 
 
 
@@ -10513,9 +10402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10577,9 +10463,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="db2tabledatasetresponse">Db2Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -10932,9 +10815,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="delimitedtextdatasetresponse">Delimited<wbr>Text<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -11578,9 +11458,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -11894,9 +11771,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="drilltabledatasetresponse">Drill<wbr>Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -12252,9 +12126,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12568,9 +12439,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dynamicscrmentitydatasetresponse">Dynamics<wbr>Crm<wbr>Entity<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -12890,9 +12758,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13209,9 +13074,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13525,9 +13387,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="exceldatasetresponse">Excel<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -14027,9 +13886,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -14127,9 +13983,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="filesharedatasetresponse">File<wbr>Share<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -14665,9 +14518,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -14765,9 +14615,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="googleadwordsobjectdatasetresponse">Google<wbr>Ad<wbr>Words<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -15084,9 +14931,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="googlebigqueryobjectdatasetresponse">Google<wbr>Big<wbr>Query<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -15478,9 +15322,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15650,9 +15491,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="greenplumtabledatasetresponse">Greenplum<wbr>Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -16008,9 +15846,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -16327,9 +16162,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -16427,9 +16259,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hiveobjectdatasetresponse">Hive<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -16782,9 +16611,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="httpdatasetresponse">Http<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -17292,9 +17118,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -17428,9 +17251,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="hubspotobjectdatasetresponse">Hubspot<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -17747,9 +17567,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="impalaobjectdatasetresponse">Impala<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -18105,9 +17922,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -18424,9 +18238,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -18740,9 +18551,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="jsondatasetresponse">Json<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -19134,9 +18942,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -19417,9 +19222,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -19553,9 +19355,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="magentoobjectdatasetresponse">Magento<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -19875,9 +19674,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -20191,9 +19987,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="marketoobjectdatasetresponse">Marketo<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -20513,9 +20306,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -20829,9 +20619,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="mongodbatlascollectiondatasetresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Collection<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -21151,9 +20938,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -21467,9 +21251,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="mongodbv2collectiondatasetresponse">Mongo<wbr>Db<wbr>V2Collection<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -21789,9 +21570,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -22105,9 +21883,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="netezzatabledatasetresponse">Netezza<wbr>Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -22463,9 +22238,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -22782,9 +22554,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -23098,9 +22867,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="office365datasetresponse">Office365Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -23456,9 +23222,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -23772,9 +23535,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="oracletabledatasetresponse">Oracle<wbr>Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -24130,9 +23890,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -24485,9 +24242,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -24588,9 +24342,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -24688,9 +24439,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="parquetdatasetresponse">Parquet<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -25046,9 +24794,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -25146,9 +24891,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="paypalobjectdatasetresponse">Paypal<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -25465,9 +25207,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="phoenixobjectdatasetresponse">Phoenix<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -25823,9 +25562,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -26175,9 +25911,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="prestoobjectdatasetresponse">Presto<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -26533,9 +26266,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -26849,9 +26579,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="relationaltabledatasetresponse">Relational<wbr>Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -27171,9 +26898,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -27487,9 +27211,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="restresourcedatasetresponse">Rest<wbr>Resource<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -27953,9 +27674,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -28269,9 +27987,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="salesforceobjectdatasetresponse">Salesforce<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -28591,9 +28306,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -28910,9 +28622,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -29190,9 +28899,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="sapcloudforcustomerresourcedatasetresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Resource<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -29512,9 +29218,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -29831,9 +29534,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -30147,9 +29847,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="sapopenhubtabledatasetresponse">Sap<wbr>Open<wbr>Hub<wbr>Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -30541,9 +30238,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -30857,9 +30551,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="servicenowobjectdatasetresponse">Service<wbr>Now<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -31179,9 +30870,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -31279,9 +30967,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="sharepointonlinelistresourcedatasetresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Resource<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -31601,9 +31286,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -31920,9 +31602,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -32236,9 +31915,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="sparkobjectdatasetresponse">Spark<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -32594,9 +32270,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -32949,9 +32622,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -33268,9 +32938,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -33584,9 +33251,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="teradatatabledatasetresponse">Teradata<wbr>Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -33939,9 +33603,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="textformatresponse">Text<wbr>Format<wbr>Response</h4>
-
-
-
 
 
 
@@ -34369,9 +34030,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -34721,9 +34379,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="webtabledatasetresponse">Web<wbr>Table<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -35079,9 +34734,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -35395,9 +35047,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="xmldatasetresponse">Xml<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 
@@ -35822,9 +35471,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 {{% /choosable %}}
 
 <h4 id="zohoobjectdatasetresponse">Zoho<wbr>Object<wbr>Dataset<wbr>Response</h4>
-
-
-
 
 
 

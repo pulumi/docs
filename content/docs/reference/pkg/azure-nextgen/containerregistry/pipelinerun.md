@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.PipelineRun re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a pipeline run for a container registry.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipelineRun = new AzureNextGen.ContainerRegistry.V20201101Preview.PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry.V20201101Preview.PipelineRunArgs
+        var pipelineRun = new AzureNextGen.ContainerRegistry.PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry.PipelineRunArgs
         {
             PipelineRunName = "myPipelineRun",
             RegistryName = "myRegistry",
-            Request = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PipelineRunRequestArgs
+            Request = new AzureNextGen.ContainerRegistry.Inputs.PipelineRunRequestArgs
             {
                 Artifacts = 
                 {
@@ -38,7 +39,7 @@ class MyStack : Stack
                     "sourceRepository2@sha256:00000000000000000000000000000000000",
                 },
                 PipelineResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
-                Target = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PipelineRunTargetPropertiesArgs
+                Target = new AzureNextGen.ContainerRegistry.Inputs.PipelineRunTargetPropertiesArgs
                 {
                     Name = "myblob.tar.gz",
                     Type = "AzureStorageBlob",
@@ -60,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -99,16 +100,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline_run = azure_nextgen.containerregistry.v20201101preview.PipelineRun("pipelineRun",
+pipeline_run = azure_nextgen.containerregistry.PipelineRun("pipelineRun",
     pipeline_run_name="myPipelineRun",
     registry_name="myRegistry",
-    request=azure_nextgen.containerregistry.v20201101preview.PipelineRunRequestArgs(
+    request=azure_nextgen.containerregistry.PipelineRunRequestArgs(
         artifacts=[
             "sourceRepository/hello-world",
             "sourceRepository2@sha256:00000000000000000000000000000000000",
         ],
         pipeline_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
-        target=azure_nextgen.containerregistry.v20201101preview.PipelineRunTargetPropertiesArgs(
+        target=azure_nextgen.containerregistry.PipelineRunTargetPropertiesArgs(
             name="myblob.tar.gz",
             type="AzureStorageBlob",
         ),
@@ -125,7 +126,7 @@ pipeline_run = azure_nextgen.containerregistry.v20201101preview.PipelineRun("pip
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pipelineRun = new azure_nextgen.containerregistry.v20201101preview.PipelineRun("pipelineRun", {
+const pipelineRun = new azure_nextgen.containerregistry.PipelineRun("pipelineRun", {
     pipelineRunName: "myPipelineRun",
     registryName: "myRegistry",
     request: {
@@ -156,16 +157,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipelineRun = new AzureNextGen.ContainerRegistry.V20201101Preview.PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry.V20201101Preview.PipelineRunArgs
+        var pipelineRun = new AzureNextGen.ContainerRegistry.PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry.PipelineRunArgs
         {
             ForceUpdateTag = "2020-03-04T17:23:21.9261521+00:00",
             PipelineRunName = "myPipelineRun",
             RegistryName = "myRegistry",
-            Request = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PipelineRunRequestArgs
+            Request = new AzureNextGen.ContainerRegistry.Inputs.PipelineRunRequestArgs
             {
                 CatalogDigest = "sha256@",
                 PipelineResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
-                Source = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.PipelineRunSourcePropertiesArgs
+                Source = new AzureNextGen.ContainerRegistry.Inputs.PipelineRunSourcePropertiesArgs
                 {
                     Name = "myblob.tar.gz",
                     Type = "AzureStorageBlob",
@@ -187,7 +188,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -224,14 +225,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline_run = azure_nextgen.containerregistry.v20201101preview.PipelineRun("pipelineRun",
+pipeline_run = azure_nextgen.containerregistry.PipelineRun("pipelineRun",
     force_update_tag="2020-03-04T17:23:21.9261521+00:00",
     pipeline_run_name="myPipelineRun",
     registry_name="myRegistry",
-    request=azure_nextgen.containerregistry.v20201101preview.PipelineRunRequestArgs(
+    request=azure_nextgen.containerregistry.PipelineRunRequestArgs(
         catalog_digest="sha256@",
         pipeline_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
-        source=azure_nextgen.containerregistry.v20201101preview.PipelineRunSourcePropertiesArgs(
+        source=azure_nextgen.containerregistry.PipelineRunSourcePropertiesArgs(
             name="myblob.tar.gz",
             type="AzureStorageBlob",
         ),
@@ -248,7 +249,7 @@ pipeline_run = azure_nextgen.containerregistry.v20201101preview.PipelineRun("pip
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pipelineRun = new azure_nextgen.containerregistry.v20201101preview.PipelineRun("pipelineRun", {
+const pipelineRun = new azure_nextgen.containerregistry.PipelineRun("pipelineRun", {
     forceUpdateTag: "2020-03-04T17:23:21.9261521+00:00",
     pipelineRunName: "myPipelineRun",
     registryName: "myRegistry",
@@ -275,7 +276,7 @@ const pipelineRun = new azure_nextgen.containerregistry.v20201101preview.Pipelin
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PipelineRunArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PipelineRunArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -283,11 +284,11 @@ const pipelineRun = new azure_nextgen.containerregistry.v20201101preview.Pipelin
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipelineRun</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PipelineRunArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PipelineRun</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipelineRun</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PipelineRunArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PipelineRun</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PipelineRunArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PipelineRunArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -308,7 +309,7 @@ const pipelineRun = new azure_nextgen.containerregistry.v20201101preview.Pipelin
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PipelineRunArgs</span>
+        <span class="property-type"><a href="#inputs">PipelineRunArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -377,7 +378,7 @@ const pipelineRun = new azure_nextgen.containerregistry.v20201101preview.Pipelin
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PipelineRunArgs</span>
+        <span class="property-type"><a href="#inputs">PipelineRunArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -416,7 +417,7 @@ const pipelineRun = new azure_nextgen.containerregistry.v20201101preview.Pipelin
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PipelineRunArgs</span>
+        <span class="property-type"><a href="#inputs">PipelineRunArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -439,11 +440,11 @@ const pipelineRun = new azure_nextgen.containerregistry.v20201101preview.Pipelin
 
 ## PipelineRun Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2899,7 +2900,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20201101preview:PipelineRun myPipelineRun /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/pipelineRuns/myPipelineRun 
+$ pulumi import azure-nextgen:containerregistry:PipelineRun myPipelineRun /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/pipelineRuns/myPipelineRun 
 ```
 
 

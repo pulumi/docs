@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.iotsecurity.DefenderSetting reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 IoT Defender settings
+API Version: 2021-02-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var defenderSetting = new AzureNextGen.IoTSecurity.V20210201Preview.DefenderSetting("defenderSetting", new AzureNextGen.IoTSecurity.V20210201Preview.DefenderSettingArgs
+        var defenderSetting = new AzureNextGen.IoTSecurity.DefenderSetting("defenderSetting", new AzureNextGen.IoTSecurity.DefenderSettingArgs
         {
             DeviceQuota = 2000,
             SentinelWorkspaceResourceIds = 
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	iotsecurity "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotsecurity/v20210201preview"
+	iotsecurity "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotsecurity"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +78,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-defender_setting = azure_nextgen.iotsecurity.v20210201preview.DefenderSetting("defenderSetting",
+defender_setting = azure_nextgen.iotsecurity.DefenderSetting("defenderSetting",
     device_quota=2000,
     sentinel_workspace_resource_ids=["/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1"])
 
@@ -91,7 +92,7 @@ defender_setting = azure_nextgen.iotsecurity.v20210201preview.DefenderSetting("d
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const defenderSetting = new azure_nextgen.iotsecurity.v20210201preview.DefenderSetting("defenderSetting", {
+const defenderSetting = new azure_nextgen.iotsecurity.DefenderSetting("defenderSetting", {
     deviceQuota: 2000,
     sentinelWorkspaceResourceIds: ["/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1"],
 });
@@ -108,7 +109,7 @@ const defenderSetting = new azure_nextgen.iotsecurity.v20210201preview.DefenderS
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DefenderSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DefenderSettingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DefenderSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DefenderSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -116,11 +117,11 @@ const defenderSetting = new azure_nextgen.iotsecurity.v20210201preview.DefenderS
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDefenderSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DefenderSettingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DefenderSetting</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDefenderSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DefenderSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DefenderSetting</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DefenderSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DefenderSettingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DefenderSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DefenderSettingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -141,7 +142,7 @@ const defenderSetting = new azure_nextgen.iotsecurity.v20210201preview.DefenderS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DefenderSettingArgs</span>
+        <span class="property-type"><a href="#inputs">DefenderSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -210,7 +211,7 @@ const defenderSetting = new azure_nextgen.iotsecurity.v20210201preview.DefenderS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DefenderSettingArgs</span>
+        <span class="property-type"><a href="#inputs">DefenderSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -249,7 +250,7 @@ const defenderSetting = new azure_nextgen.iotsecurity.v20210201preview.DefenderS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DefenderSettingArgs</span>
+        <span class="property-type"><a href="#inputs">DefenderSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -272,11 +273,11 @@ const defenderSetting = new azure_nextgen.iotsecurity.v20210201preview.DefenderS
 
 ## DefenderSetting Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DefenderSetting resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DefenderSetting resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -526,7 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:iotsecurity/v20210201preview:DefenderSetting default /subscriptions/{subscriptionId}/providers/Microsoft.IoTSecurity/defenderSettings/default 
+$ pulumi import azure-nextgen:iotsecurity:DefenderSetting default /subscriptions/{subscriptionId}/providers/Microsoft.IoTSecurity/defenderSettings/default 
 ```
 
 

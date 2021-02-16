@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datashare.Share resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A share data transfer object.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var share = new AzureNextGen.DataShare.Latest.Share("share", new AzureNextGen.DataShare.Latest.ShareArgs
+        var share = new AzureNextGen.DataShare.Share("share", new AzureNextGen.DataShare.ShareArgs
         {
             AccountName = "Account1",
             Description = "share description",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-share = azure_nextgen.datashare.latest.Share("share",
+share = azure_nextgen.datashare.Share("share",
     account_name="Account1",
     description="share description",
     resource_group_name="SampleResourceGroup",
@@ -99,7 +99,7 @@ share = azure_nextgen.datashare.latest.Share("share",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const share = new azure_nextgen.datashare.latest.Share("share", {
+const share = new azure_nextgen.datashare.Share("share", {
     accountName: "Account1",
     description: "share description",
     resourceGroupName: "SampleResourceGroup",
@@ -120,7 +120,7 @@ const share = new azure_nextgen.datashare.latest.Share("share", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Share</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ShareArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Share</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -128,11 +128,11 @@ const share = new azure_nextgen.datashare.latest.Share("share", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewShare</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ShareArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Share</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewShare</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Share</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Share</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ShareArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Share</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ShareArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -153,7 +153,7 @@ const share = new azure_nextgen.datashare.latest.Share("share", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ShareArgs</span>
+        <span class="property-type"><a href="#inputs">ShareArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -222,7 +222,7 @@ const share = new azure_nextgen.datashare.latest.Share("share", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ShareArgs</span>
+        <span class="property-type"><a href="#inputs">ShareArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -261,7 +261,7 @@ const share = new azure_nextgen.datashare.latest.Share("share", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ShareArgs</span>
+        <span class="property-type"><a href="#inputs">ShareArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -284,11 +284,11 @@ const share = new azure_nextgen.datashare.latest.Share("share", {
 
 ## Share Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Share resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Share resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -584,7 +584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydtoresponsesystemdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Outputs.<wbr>Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -662,7 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -740,7 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -818,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -861,7 +861,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</h4>
+<h4 id="sharekind">Share<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Copy<wbr>Based</dt>
+    <dd>CopyBased</dd>
+    <dt>In<wbr>Place</dt>
+    <dd>InPlace</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Share<wbr>Kind<wbr>Copy<wbr>Based</dt>
+    <dd>CopyBased</dd>
+    <dt>Share<wbr>Kind<wbr>In<wbr>Place</dt>
+    <dd>InPlace</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Copy<wbr>Based</dt>
+    <dd>CopyBased</dd>
+    <dt>In<wbr>Place</dt>
+    <dd>InPlace</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>COPY_BASED</dt>
+    <dd>CopyBased</dd>
+    <dt>IN_PLACE</dt>
+    <dd>InPlace</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1102,51 +1140,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-<h4 id="sharekind">Share<wbr>Kind</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Copy<wbr>Based</dt>
-    <dd>CopyBased</dd>
-    <dt>In<wbr>Place</dt>
-    <dd>InPlace</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Share<wbr>Kind<wbr>Copy<wbr>Based</dt>
-    <dd>CopyBased</dd>
-    <dt>Share<wbr>Kind<wbr>In<wbr>Place</dt>
-    <dd>InPlace</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Copy<wbr>Based</dt>
-    <dd>CopyBased</dd>
-    <dt>In<wbr>Place</dt>
-    <dd>InPlace</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>COPY_BASED</dt>
-    <dd>CopyBased</dd>
-    <dt>IN_PLACE</dt>
-    <dd>InPlace</dd>
-</dl>
-{{% /choosable %}}
 ## Import
 
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datashare/latest:Share Share1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1 
+$ pulumi import azure-nextgen:datashare:Share Share1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1 
 ```
 
 

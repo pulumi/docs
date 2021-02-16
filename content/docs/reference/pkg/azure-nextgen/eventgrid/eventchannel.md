@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.EventChannel resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Event Channel.
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventChannel = new AzureNextGen.EventGrid.V20200401Preview.EventChannel("eventChannel", new AzureNextGen.EventGrid.V20200401Preview.EventChannelArgs
+        var eventChannel = new AzureNextGen.EventGrid.EventChannel("eventChannel", new AzureNextGen.EventGrid.EventChannelArgs
         {
-            Destination = new AzureNextGen.EventGrid.V20200401Preview.Inputs.EventChannelDestinationArgs
+            Destination = new AzureNextGen.EventGrid.Inputs.EventChannelDestinationArgs
             {
                 AzureSubscriptionId = "5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
                 PartnerTopicName = "examplePartnerTopic1",
@@ -37,7 +38,7 @@ class MyStack : Stack
             EventChannelName = "exampleEventChannelName1",
             PartnerNamespaceName = "examplePartnerNamespaceName1",
             ResourceGroupName = "examplerg",
-            Source = new AzureNextGen.EventGrid.V20200401Preview.Inputs.EventChannelSourceArgs
+            Source = new AzureNextGen.EventGrid.Inputs.EventChannelSourceArgs
             {
                 Source = "ContosoCorp.Accounts.User1",
             },
@@ -56,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid/v20200401preview"
+	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,8 +93,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_channel = azure_nextgen.eventgrid.v20200401preview.EventChannel("eventChannel",
-    destination=azure_nextgen.eventgrid.v20200401preview.EventChannelDestinationArgs(
+event_channel = azure_nextgen.eventgrid.EventChannel("eventChannel",
+    destination=azure_nextgen.eventgrid.EventChannelDestinationArgs(
         azure_subscription_id="5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
         partner_topic_name="examplePartnerTopic1",
         resource_group="examplerg2",
@@ -101,7 +102,7 @@ event_channel = azure_nextgen.eventgrid.v20200401preview.EventChannel("eventChan
     event_channel_name="exampleEventChannelName1",
     partner_namespace_name="examplePartnerNamespaceName1",
     resource_group_name="examplerg",
-    source=azure_nextgen.eventgrid.v20200401preview.EventChannelSourceArgs(
+    source=azure_nextgen.eventgrid.EventChannelSourceArgs(
         source="ContosoCorp.Accounts.User1",
     ))
 
@@ -115,7 +116,7 @@ event_channel = azure_nextgen.eventgrid.v20200401preview.EventChannel("eventChan
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const eventChannel = new azure_nextgen.eventgrid.v20200401preview.EventChannel("eventChannel", {
+const eventChannel = new azure_nextgen.eventgrid.EventChannel("eventChannel", {
     destination: {
         azureSubscriptionId: "5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
         partnerTopicName: "examplePartnerTopic1",
@@ -141,7 +142,7 @@ const eventChannel = new azure_nextgen.eventgrid.v20200401preview.EventChannel("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">EventChannelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -149,11 +150,11 @@ const eventChannel = new azure_nextgen.eventgrid.v20200401preview.EventChannel("
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">EventChannelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventChannel</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventChannel</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">EventChannelArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EventChannelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -174,7 +175,7 @@ const eventChannel = new azure_nextgen.eventgrid.v20200401preview.EventChannel("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EventChannelArgs</span>
+        <span class="property-type"><a href="#inputs">EventChannelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -243,7 +244,7 @@ const eventChannel = new azure_nextgen.eventgrid.v20200401preview.EventChannel("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EventChannelArgs</span>
+        <span class="property-type"><a href="#inputs">EventChannelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -282,7 +283,7 @@ const eventChannel = new azure_nextgen.eventgrid.v20200401preview.EventChannel("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EventChannelArgs</span>
+        <span class="property-type"><a href="#inputs">EventChannelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -305,11 +306,11 @@ const eventChannel = new azure_nextgen.eventgrid.v20200401preview.EventChannel("
 
 ## EventChannel Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The EventChannel resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The EventChannel resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3751,7 +3752,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventgrid/v20200401preview:EventChannel exampleEventChannelName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerNamespaces/partnerNamespace123/eventChannels/exampleEventChannelName1 
+$ pulumi import azure-nextgen:eventgrid:EventChannel exampleEventChannelName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerNamespaces/partnerNamespace123/eventChannels/exampleEventChannelName1 
 ```
 
 

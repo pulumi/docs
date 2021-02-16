@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.MetricAlert resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The metric alert resource.
-Latest API Version: 2018-03-01.
+API Version: 2018-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -42,28 +42,28 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = false,
-            Criteria = 
+            Criteria = new AzureNextGen.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
-                    
+                    new AzureNextGen.Insights.Inputs.DynamicMetricCriteriaArgs
                     {
-                        { "alertSensitivity", "Medium" },
-                        { "criterionType", "DynamicThresholdCriterion" },
-                        { "dimensions", {} },
-                        { "failingPeriods", new AzureNextGen.Insights.Latest.Inputs.DynamicThresholdFailingPeriodsArgs
+                        AlertSensitivity = "Medium",
+                        CriterionType = "DynamicThresholdCriterion",
+                        Dimensions = {},
+                        FailingPeriods = new AzureNextGen.Insights.Inputs.DynamicThresholdFailingPeriodsArgs
                         {
                             MinFailingPeriodsToAlert = 4,
                             NumberOfEvaluationPeriods = 4,
-                        } },
-                        { "metricName", "Percentage CPU" },
-                        { "metricNamespace", "microsoft.compute/virtualmachines" },
-                        { "name", "High_CPU_80" },
-                        { "operator", "GreaterOrLessThan" },
-                        { "timeAggregation", "Average" },
+                        },
+                        MetricName = "Percentage CPU",
+                        MetricNamespace = "microsoft.compute/virtualmachines",
+                        Name = "High_CPU_80",
+                        Operator = "GreaterOrLessThan",
+                        TimeAggregation = "Average",
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -100,8 +100,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -109,23 +109,23 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=False,
-    criteria={
-        "allOf": [{
-            "alertSensitivity": "Medium",
-            "criterionType": "DynamicThresholdCriterion",
-            "dimensions": [],
-            "failingPeriods": azure_nextgen.insights.latest.DynamicThresholdFailingPeriodsArgs(
+    criteria=azure_nextgen.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
+        all_of=[azure_nextgen.insights.DynamicMetricCriteriaArgs(
+            alert_sensitivity="Medium",
+            criterion_type="DynamicThresholdCriterion",
+            dimensions=[],
+            failing_periods=azure_nextgen.insights.DynamicThresholdFailingPeriodsArgs(
                 min_failing_periods_to_alert=4,
                 number_of_evaluation_periods=4,
             ),
-            "metricName": "Percentage CPU",
-            "metricNamespace": "microsoft.compute/virtualmachines",
-            "name": "High_CPU_80",
-            "operator": "GreaterOrLessThan",
-            "timeAggregation": "Average",
-        }],
-        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
-    },
+            metric_name="Percentage CPU",
+            metric_namespace="microsoft.compute/virtualmachines",
+            name="High_CPU_80",
+            operator="GreaterOrLessThan",
+            time_aggregation="Average",
+        )],
+        odata_type="Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="PT1M",
@@ -152,7 +152,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -209,11 +209,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -224,29 +224,29 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = false,
-            Criteria = 
+            Criteria = new AzureNextGen.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
-                    
+                    new AzureNextGen.Insights.Inputs.DynamicMetricCriteriaArgs
                     {
-                        { "alertSensitivity", "Medium" },
-                        { "criterionType", "DynamicThresholdCriterion" },
-                        { "dimensions", {} },
-                        { "failingPeriods", new AzureNextGen.Insights.Latest.Inputs.DynamicThresholdFailingPeriodsArgs
+                        AlertSensitivity = "Medium",
+                        CriterionType = "DynamicThresholdCriterion",
+                        Dimensions = {},
+                        FailingPeriods = new AzureNextGen.Insights.Inputs.DynamicThresholdFailingPeriodsArgs
                         {
                             MinFailingPeriodsToAlert = 4,
                             NumberOfEvaluationPeriods = 4,
-                        } },
-                        { "ignoreDataBefore", "2019-04-04T21:00:00.000Z" },
-                        { "metricName", "Percentage CPU" },
-                        { "metricNamespace", "microsoft.compute/virtualmachines" },
-                        { "name", "High_CPU_80" },
-                        { "operator", "GreaterOrLessThan" },
-                        { "timeAggregation", "Average" },
+                        },
+                        IgnoreDataBefore = "2019-04-04T21:00:00.000Z",
+                        MetricName = "Percentage CPU",
+                        MetricNamespace = "microsoft.compute/virtualmachines",
+                        Name = "High_CPU_80",
+                        Operator = "GreaterOrLessThan",
+                        TimeAggregation = "Average",
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -280,8 +280,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -289,24 +289,24 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=False,
-    criteria={
-        "allOf": [{
-            "alertSensitivity": "Medium",
-            "criterionType": "DynamicThresholdCriterion",
-            "dimensions": [],
-            "failingPeriods": azure_nextgen.insights.latest.DynamicThresholdFailingPeriodsArgs(
+    criteria=azure_nextgen.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
+        all_of=[azure_nextgen.insights.DynamicMetricCriteriaArgs(
+            alert_sensitivity="Medium",
+            criterion_type="DynamicThresholdCriterion",
+            dimensions=[],
+            failing_periods=azure_nextgen.insights.DynamicThresholdFailingPeriodsArgs(
                 min_failing_periods_to_alert=4,
                 number_of_evaluation_periods=4,
             ),
-            "ignoreDataBefore": "2019-04-04T21:00:00.000Z",
-            "metricName": "Percentage CPU",
-            "metricNamespace": "microsoft.compute/virtualmachines",
-            "name": "High_CPU_80",
-            "operator": "GreaterOrLessThan",
-            "timeAggregation": "Average",
-        }],
-        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
-    },
+            ignore_data_before="2019-04-04T21:00:00.000Z",
+            metric_name="Percentage CPU",
+            metric_namespace="microsoft.compute/virtualmachines",
+            name="High_CPU_80",
+            operator="GreaterOrLessThan",
+            time_aggregation="Average",
+        )],
+        odata_type="Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="PT1M",
@@ -328,7 +328,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -381,15 +381,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
         {
             Actions = {},
-            Criteria = 
+            Criteria = new AzureNextGen.Insights.Inputs.WebtestLocationAvailabilityCriteriaArgs
             {
-                { "componentId", "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example" },
-                { "failedLocationCount", 2 },
-                { "odataType", "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria" },
-                { "webTestId", "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example" },
+                ComponentId = "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
+                FailedLocationCount = 2,
+                OdataType = "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria",
+                WebTestId = "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example",
             },
             Description = "Automatically created alert rule for availability test \"component-example\" a",
             Enabled = true,
@@ -419,7 +419,51 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewMetricAlert(ctx, "metricAlert", &insights.MetricAlertArgs{
+			Actions: insights.MetricAlertActionArray{},
+			Criteria: &insights.WebtestLocationAvailabilityCriteriaArgs{
+				ComponentId:         pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example"),
+				FailedLocationCount: pulumi.Float64(2),
+				OdataType:           pulumi.String("Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria"),
+				WebTestId:           pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example"),
+			},
+			Description:         pulumi.String("Automatically created alert rule for availability test \"component-example\" a"),
+			Enabled:             pulumi.Bool(true),
+			EvaluationFrequency: pulumi.String("PT1M"),
+			Location:            pulumi.String("global"),
+			ResourceGroupName:   pulumi.String("rg-example"),
+			RuleName:            pulumi.String("webtest-name-example"),
+			Scopes: pulumi.StringArray{
+				pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example"),
+				pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example"),
+			},
+			Severity: pulumi.Int(4),
+			Tags: pulumi.StringMap{
+				"hidden-link:/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example": pulumi.String("Resource"),
+				"hidden-link:/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example":      pulumi.String("Resource"),
+			},
+			WindowSize: pulumi.String("PT15M"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -428,14 +472,14 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
     actions=[],
-    criteria={
-        "componentId": "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
-        "failedLocationCount": 2,
-        "odataType": "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria",
-        "webTestId": "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example",
-    },
+    criteria=azure_nextgen.insights.WebtestLocationAvailabilityCriteriaArgs(
+        component_id="/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
+        failed_location_count=2,
+        odata_type="Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria",
+        web_test_id="/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example",
+    ),
     description="Automatically created alert rule for availability test \"component-example\" a",
     enabled=True,
     evaluation_frequency="PT1M",
@@ -463,7 +507,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [],
     criteria: {
         componentId: "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
@@ -503,11 +547,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -518,23 +562,23 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = false,
-            Criteria = 
+            Criteria = new AzureNextGen.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
-                    
+                    new AzureNextGen.Insights.Inputs.MetricCriteriaArgs
                     {
-                        { "criterionType", "StaticThresholdCriterion" },
-                        { "dimensions", {} },
-                        { "metricName", "Percentage CPU" },
-                        { "metricNamespace", "microsoft.compute/virtualmachines" },
-                        { "name", "High_CPU_80" },
-                        { "operator", "GreaterThan" },
-                        { "threshold", 80.5 },
-                        { "timeAggregation", "Average" },
+                        CriterionType = "StaticThresholdCriterion",
+                        Dimensions = {},
+                        MetricName = "Percentage CPU",
+                        MetricNamespace = "microsoft.compute/virtualmachines",
+                        Name = "High_CPU_80",
+                        Operator = "GreaterThan",
+                        Threshold = 80.5,
+                        TimeAggregation = "Average",
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -571,8 +615,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -580,19 +624,19 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=False,
-    criteria={
-        "allOf": [{
-            "criterionType": "StaticThresholdCriterion",
-            "dimensions": [],
-            "metricName": "Percentage CPU",
-            "metricNamespace": "microsoft.compute/virtualmachines",
-            "name": "High_CPU_80",
-            "operator": "GreaterThan",
-            "threshold": 80.5,
-            "timeAggregation": "Average",
-        }],
-        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
-    },
+    criteria=azure_nextgen.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
+        all_of=[azure_nextgen.insights.MetricCriteriaArgs(
+            criterion_type="StaticThresholdCriterion",
+            dimensions=[],
+            metric_name="Percentage CPU",
+            metric_namespace="microsoft.compute/virtualmachines",
+            name="High_CPU_80",
+            operator="GreaterThan",
+            threshold=80.5,
+            time_aggregation="Average",
+        )],
+        odata_type="Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="PT1M",
@@ -619,7 +663,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -672,11 +716,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -687,22 +731,22 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = false,
-            Criteria = 
+            Criteria = new AzureNextGen.Insights.Inputs.MetricAlertSingleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
-                    
+                    new AzureNextGen.Insights.Inputs.MetricCriteriaArgs
                     {
-                        { "criterionType", "StaticThresholdCriterion" },
-                        { "dimensions", {} },
-                        { "metricName", "\\Processor(_Total)\\% Processor Time" },
-                        { "name", "High_CPU_80" },
-                        { "operator", "GreaterThan" },
-                        { "threshold", 80.5 },
-                        { "timeAggregation", "Average" },
+                        CriterionType = "StaticThresholdCriterion",
+                        Dimensions = {},
+                        MetricName = "\\Processor(_Total)\\% Processor Time",
+                        Name = "High_CPU_80",
+                        Operator = "GreaterThan",
+                        Threshold = 80.5,
+                        TimeAggregation = "Average",
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -727,7 +771,66 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	"fmt"
+
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewMetricAlert(ctx, "metricAlert", &insights.MetricAlertArgs{
+			Actions: insights.MetricAlertActionArray{
+				&insights.MetricAlertActionArgs{
+					ActionGroupId: pulumi.String("/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2"),
+					WebHookProperties: pulumi.StringMap{
+						"key11": pulumi.String("value11"),
+						"key12": pulumi.String("value12"),
+					},
+				},
+			},
+			AutoMitigate: pulumi.Bool(false),
+			Criteria: &insights.MetricAlertSingleResourceMultipleMetricCriteriaArgs{
+				AllOf: insights.MetricCriteriaArray{
+					&insights.MetricCriteriaArgs{
+						CriterionType:   pulumi.String("StaticThresholdCriterion"),
+						Dimensions:      insights.MetricDimensionArray{},
+						MetricName:      pulumi.String(fmt.Sprintf("%v%v%v", "\\Processor(_Total)\\", "%", " Processor Time")),
+						Name:            pulumi.String("High_CPU_80"),
+						Operator:        pulumi.String("GreaterThan"),
+						Threshold:       pulumi.Float64(80.5),
+						TimeAggregation: pulumi.String("Average"),
+					},
+				},
+				OdataType: pulumi.String("Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"),
+			},
+			Description:         pulumi.String("This is the description of the rule1"),
+			Enabled:             pulumi.Bool(true),
+			EvaluationFrequency: pulumi.String("Pt1m"),
+			Location:            pulumi.String("global"),
+			ResourceGroupName:   pulumi.String("gigtest"),
+			RuleName:            pulumi.String("chiricutin"),
+			Scopes: pulumi.StringArray{
+				pulumi.String("/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme"),
+			},
+			Severity:   pulumi.Int(3),
+			Tags:       nil,
+			WindowSize: pulumi.String("Pt15m"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -736,8 +839,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -745,18 +848,18 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=False,
-    criteria={
-        "allOf": [{
-            "criterionType": "StaticThresholdCriterion",
-            "dimensions": [],
-            "metricName": "\\Processor(_Total)\\% Processor Time",
-            "name": "High_CPU_80",
-            "operator": "GreaterThan",
-            "threshold": 80.5,
-            "timeAggregation": "Average",
-        }],
-        "odataType": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
-    },
+    criteria=azure_nextgen.insights.MetricAlertSingleResourceMultipleMetricCriteriaArgs(
+        all_of=[azure_nextgen.insights.MetricCriteriaArgs(
+            criterion_type="StaticThresholdCriterion",
+            dimensions=[],
+            metric_name="\\Processor(_Total)\\% Processor Time",
+            name="High_CPU_80",
+            operator="GreaterThan",
+            threshold=80.5,
+            time_aggregation="Average",
+        )],
+        odata_type="Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="Pt1m",
@@ -778,7 +881,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -825,11 +928,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -840,23 +943,23 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = false,
-            Criteria = 
+            Criteria = new AzureNextGen.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
-                    
+                    new AzureNextGen.Insights.Inputs.MetricCriteriaArgs
                     {
-                        { "criterionType", "StaticThresholdCriterion" },
-                        { "dimensions", {} },
-                        { "metricName", "Percentage CPU" },
-                        { "metricNamespace", "microsoft.compute/virtualmachines" },
-                        { "name", "High_CPU_80" },
-                        { "operator", "GreaterThan" },
-                        { "threshold", 80.5 },
-                        { "timeAggregation", "Average" },
+                        CriterionType = "StaticThresholdCriterion",
+                        Dimensions = {},
+                        MetricName = "Percentage CPU",
+                        MetricNamespace = "microsoft.compute/virtualmachines",
+                        Name = "High_CPU_80",
+                        Operator = "GreaterThan",
+                        Threshold = 80.5,
+                        TimeAggregation = "Average",
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -893,8 +996,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -902,19 +1005,19 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=False,
-    criteria={
-        "allOf": [{
-            "criterionType": "StaticThresholdCriterion",
-            "dimensions": [],
-            "metricName": "Percentage CPU",
-            "metricNamespace": "microsoft.compute/virtualmachines",
-            "name": "High_CPU_80",
-            "operator": "GreaterThan",
-            "threshold": 80.5,
-            "timeAggregation": "Average",
-        }],
-        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
-    },
+    criteria=azure_nextgen.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
+        all_of=[azure_nextgen.insights.MetricCriteriaArgs(
+            criterion_type="StaticThresholdCriterion",
+            dimensions=[],
+            metric_name="Percentage CPU",
+            metric_namespace="microsoft.compute/virtualmachines",
+            name="High_CPU_80",
+            operator="GreaterThan",
+            threshold=80.5,
+            time_aggregation="Average",
+        )],
+        odata_type="Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="PT1M",
@@ -941,7 +1044,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -994,11 +1097,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -1009,23 +1112,23 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = false,
-            Criteria = 
+            Criteria = new AzureNextGen.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
-                    
+                    new AzureNextGen.Insights.Inputs.MetricCriteriaArgs
                     {
-                        { "criterionType", "StaticThresholdCriterion" },
-                        { "dimensions", {} },
-                        { "metricName", "Percentage CPU" },
-                        { "metricNamespace", "microsoft.compute/virtualmachines" },
-                        { "name", "High_CPU_80" },
-                        { "operator", "GreaterThan" },
-                        { "threshold", 80.5 },
-                        { "timeAggregation", "Average" },
+                        CriterionType = "StaticThresholdCriterion",
+                        Dimensions = {},
+                        MetricName = "Percentage CPU",
+                        MetricNamespace = "microsoft.compute/virtualmachines",
+                        Name = "High_CPU_80",
+                        Operator = "GreaterThan",
+                        Threshold = 80.5,
+                        TimeAggregation = "Average",
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -1061,8 +1164,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -1070,19 +1173,19 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=False,
-    criteria={
-        "allOf": [{
-            "criterionType": "StaticThresholdCriterion",
-            "dimensions": [],
-            "metricName": "Percentage CPU",
-            "metricNamespace": "microsoft.compute/virtualmachines",
-            "name": "High_CPU_80",
-            "operator": "GreaterThan",
-            "threshold": 80.5,
-            "timeAggregation": "Average",
-        }],
-        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
-    },
+    criteria=azure_nextgen.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
+        all_of=[azure_nextgen.insights.MetricCriteriaArgs(
+            criterion_type="StaticThresholdCriterion",
+            dimensions=[],
+            metric_name="Percentage CPU",
+            metric_namespace="microsoft.compute/virtualmachines",
+            name="High_CPU_80",
+            operator="GreaterThan",
+            threshold=80.5,
+            time_aggregation="Average",
+        )],
+        odata_type="Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="PT1M",
@@ -1106,7 +1209,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -1156,11 +1259,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
@@ -1171,16 +1274,16 @@ class MyStack : Stack
                 },
             },
             AutoMitigate = true,
-            Criteria = 
+            Criteria = new AzureNextGen.Insights.Inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs
             {
-                { "allOf", 
+                AllOf = 
                 {
-                    
+                    new AzureNextGen.Insights.Inputs.MetricCriteriaArgs
                     {
-                        { "criterionType", "StaticThresholdCriterion" },
-                        { "dimensions", 
+                        CriterionType = "StaticThresholdCriterion",
+                        Dimensions = 
                         {
-                            new AzureNextGen.Insights.Latest.Inputs.MetricDimensionArgs
+                            new AzureNextGen.Insights.Inputs.MetricDimensionArgs
                             {
                                 Name = "ActivityName",
                                 Operator = "Include",
@@ -1189,7 +1292,7 @@ class MyStack : Stack
                                     "*",
                                 },
                             },
-                            new AzureNextGen.Insights.Latest.Inputs.MetricDimensionArgs
+                            new AzureNextGen.Insights.Inputs.MetricDimensionArgs
                             {
                                 Name = "StatusCode",
                                 Operator = "Include",
@@ -1198,16 +1301,16 @@ class MyStack : Stack
                                     "200",
                                 },
                             },
-                        } },
-                        { "metricName", "Availability" },
-                        { "metricNamespace", "Microsoft.KeyVault/vaults" },
-                        { "name", "Metric1" },
-                        { "operator", "GreaterThan" },
-                        { "threshold", 55 },
-                        { "timeAggregation", "Average" },
+                        },
+                        MetricName = "Availability",
+                        MetricNamespace = "Microsoft.KeyVault/vaults",
+                        Name = "Metric1",
+                        Operator = "GreaterThan",
+                        Threshold = 55,
+                        TimeAggregation = "Average",
                     },
-                } },
-                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                },
+                OdataType = "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -1241,8 +1344,8 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
-    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.MetricAlertActionArgs(
         action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
@@ -1250,30 +1353,30 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
         },
     )],
     auto_mitigate=True,
-    criteria={
-        "allOf": [{
-            "criterionType": "StaticThresholdCriterion",
-            "dimensions": [
-                azure_nextgen.insights.latest.MetricDimensionArgs(
+    criteria=azure_nextgen.insights.MetricAlertMultipleResourceMultipleMetricCriteriaArgs(
+        all_of=[azure_nextgen.insights.MetricCriteriaArgs(
+            criterion_type="StaticThresholdCriterion",
+            dimensions=[
+                azure_nextgen.insights.MetricDimensionArgs(
                     name="ActivityName",
                     operator="Include",
                     values=["*"],
                 ),
-                azure_nextgen.insights.latest.MetricDimensionArgs(
+                azure_nextgen.insights.MetricDimensionArgs(
                     name="StatusCode",
                     operator="Include",
                     values=["200"],
                 ),
             ],
-            "metricName": "Availability",
-            "metricNamespace": "Microsoft.KeyVault/vaults",
-            "name": "Metric1",
-            "operator": "GreaterThan",
-            "threshold": 55,
-            "timeAggregation": "Average",
-        }],
-        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
-    },
+            metric_name="Availability",
+            metric_namespace="Microsoft.KeyVault/vaults",
+            name="Metric1",
+            operator="GreaterThan",
+            threshold=55,
+            time_aggregation="Average",
+        )],
+        odata_type="Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    ),
     description="This is the description of the rule1",
     enabled=True,
     evaluation_frequency="PT1H",
@@ -1295,7 +1398,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
@@ -1352,7 +1455,7 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">MetricAlertArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MetricAlertArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1360,11 +1463,11 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMetricAlert</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">MetricAlertArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MetricAlert</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMetricAlert</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MetricAlertArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MetricAlert</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">MetricAlertArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MetricAlertArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1385,7 +1488,7 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MetricAlertArgs</span>
+        <span class="property-type"><a href="#inputs">MetricAlertArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1454,7 +1557,7 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MetricAlertArgs</span>
+        <span class="property-type"><a href="#inputs">MetricAlertArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1493,7 +1596,7 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MetricAlertArgs</span>
+        <span class="property-type"><a href="#inputs">MetricAlertArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1516,11 +1619,11 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
 
 ## MetricAlert Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -5074,7 +5177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:MetricAlert webtest-name-example /subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/providers/microsoft.insights/metricalerts/MetricAlertWithDimensions 
+$ pulumi import azure-nextgen:insights:MetricAlert webtest-name-example /subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/providers/microsoft.insights/metricalerts/MetricAlertWithDimensions 
 ```
 
 

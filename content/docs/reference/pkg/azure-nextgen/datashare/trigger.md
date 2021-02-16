@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datashare.Trigger resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Trigger data transfer object.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trigger = new AzureNextGen.DataShare.Latest.Trigger("trigger", new AzureNextGen.DataShare.Latest.TriggerArgs
+        var trigger = new AzureNextGen.DataShare.Trigger("trigger", new AzureNextGen.DataShare.TriggerArgs
         {
             AccountName = "Account1",
             Kind = "ScheduleBased",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-trigger = azure_nextgen.datashare.latest.Trigger("trigger",
+trigger = azure_nextgen.datashare.Trigger("trigger",
     account_name="Account1",
     kind="ScheduleBased",
     resource_group_name="SampleResourceGroup",
@@ -96,7 +96,7 @@ trigger = azure_nextgen.datashare.latest.Trigger("trigger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const trigger = new azure_nextgen.datashare.latest.Trigger("trigger", {
+const trigger = new azure_nextgen.datashare.Trigger("trigger", {
     accountName: "Account1",
     kind: "ScheduleBased",
     resourceGroupName: "SampleResourceGroup",
@@ -116,7 +116,7 @@ const trigger = new azure_nextgen.datashare.latest.Trigger("trigger", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">TriggerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -124,11 +124,11 @@ const trigger = new azure_nextgen.datashare.latest.Trigger("trigger", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">TriggerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">TriggerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -149,7 +149,7 @@ const trigger = new azure_nextgen.datashare.latest.Trigger("trigger", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TriggerArgs</span>
+        <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -218,7 +218,7 @@ const trigger = new azure_nextgen.datashare.latest.Trigger("trigger", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TriggerArgs</span>
+        <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -257,7 +257,7 @@ const trigger = new azure_nextgen.datashare.latest.Trigger("trigger", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TriggerArgs</span>
+        <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -280,11 +280,11 @@ const trigger = new azure_nextgen.datashare.latest.Trigger("trigger", {
 
 ## Trigger Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Trigger resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Trigger resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -526,7 +526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydtoresponsesystemdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Outputs.<wbr>Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -568,7 +568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -610,7 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -652,7 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -707,7 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
-<h4 id="proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</h4>
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -954,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datashare/latest:Trigger Trigger1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shareSubscriptions/ShareSubscription1/triggers/Trigger1 
+$ pulumi import azure-nextgen:datashare:Trigger Trigger1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shareSubscriptions/ShareSubscription1/triggers/Trigger1 
 ```
 
 

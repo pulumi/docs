@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.Endpoint resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a Traffic Manager endpoint.
-Latest API Version: 2018-04-01.
+API Version: 2018-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var endpoint = new AzureNextGen.Network.Latest.Endpoint("endpoint", new AzureNextGen.Network.Latest.EndpointArgs
+        var endpoint = new AzureNextGen.Network.Endpoint("endpoint", new AzureNextGen.Network.EndpointArgs
         {
             CustomHeaders = 
             {
-                new AzureNextGen.Network.Latest.Inputs.EndpointPropertiesCustomHeadersArgs
+                new AzureNextGen.Network.Inputs.EndpointPropertiesCustomHeadersArgs
                 {
                     Name = "header-1",
                     Value = "value-1",
                 },
-                new AzureNextGen.Network.Latest.Inputs.EndpointPropertiesCustomHeadersArgs
+                new AzureNextGen.Network.Inputs.EndpointPropertiesCustomHeadersArgs
                 {
                     Name = "header-2",
                     Value = "value-2",
@@ -66,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -110,13 +110,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
+endpoint = azure_nextgen.network.Endpoint("endpoint",
     custom_headers=[
-        azure_nextgen.network.latest.EndpointPropertiesCustomHeadersArgs(
+        azure_nextgen.network.EndpointPropertiesCustomHeadersArgs(
             name="header-1",
             value="value-1",
         ),
-        azure_nextgen.network.latest.EndpointPropertiesCustomHeadersArgs(
+        azure_nextgen.network.EndpointPropertiesCustomHeadersArgs(
             name="header-2",
             value="value-2",
         ),
@@ -141,7 +141,7 @@ endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
+const endpoint = new azure_nextgen.network.Endpoint("endpoint", {
     customHeaders: [
         {
             name: "header-1",
@@ -177,7 +177,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var endpoint = new AzureNextGen.Network.Latest.Endpoint("endpoint", new AzureNextGen.Network.Latest.EndpointArgs
+        var endpoint = new AzureNextGen.Network.Endpoint("endpoint", new AzureNextGen.Network.EndpointArgs
         {
             EndpointName = "My%20external%20endpoint",
             EndpointStatus = "Enabled",
@@ -209,7 +209,7 @@ package main
 import (
 	"fmt"
 
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -246,7 +246,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
+endpoint = azure_nextgen.network.Endpoint("endpoint",
     endpoint_name="My%20external%20endpoint",
     endpoint_status="Enabled",
     endpoint_type="ExternalEndpoints",
@@ -270,7 +270,7 @@ endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
+const endpoint = new azure_nextgen.network.Endpoint("endpoint", {
     endpointName: `My%20external%20endpoint`,
     endpointStatus: "Enabled",
     endpointType: "ExternalEndpoints",
@@ -299,7 +299,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var endpoint = new AzureNextGen.Network.Latest.Endpoint("endpoint", new AzureNextGen.Network.Latest.EndpointArgs
+        var endpoint = new AzureNextGen.Network.Endpoint("endpoint", new AzureNextGen.Network.EndpointArgs
         {
             EndpointLocation = "North Europe",
             EndpointName = "azsmnet7187",
@@ -325,7 +325,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -359,7 +359,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
+endpoint = azure_nextgen.network.Endpoint("endpoint",
     endpoint_location="North Europe",
     endpoint_name="azsmnet7187",
     endpoint_status="Enabled",
@@ -380,7 +380,7 @@ endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
+const endpoint = new azure_nextgen.network.Endpoint("endpoint", {
     endpointLocation: "North Europe",
     endpointName: "azsmnet7187",
     endpointStatus: "Enabled",
@@ -406,7 +406,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var endpoint = new AzureNextGen.Network.Latest.Endpoint("endpoint", new AzureNextGen.Network.Latest.EndpointArgs
+        var endpoint = new AzureNextGen.Network.Endpoint("endpoint", new AzureNextGen.Network.EndpointArgs
         {
             EndpointName = "My%20external%20endpoint",
             EndpointStatus = "Enabled",
@@ -416,12 +416,12 @@ class MyStack : Stack
             ResourceGroupName = "azuresdkfornetautoresttrafficmanager2191",
             Subnets = 
             {
-                new AzureNextGen.Network.Latest.Inputs.EndpointPropertiesSubnetsArgs
+                new AzureNextGen.Network.Inputs.EndpointPropertiesSubnetsArgs
                 {
                     First = "1.2.3.0",
                     Scope = 24,
                 },
-                new AzureNextGen.Network.Latest.Inputs.EndpointPropertiesSubnetsArgs
+                new AzureNextGen.Network.Inputs.EndpointPropertiesSubnetsArgs
                 {
                     First = "25.26.27.28",
                     Last = "29.30.31.32",
@@ -446,7 +446,7 @@ package main
 import (
 	"fmt"
 
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -489,7 +489,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
+endpoint = azure_nextgen.network.Endpoint("endpoint",
     endpoint_name="My%20external%20endpoint",
     endpoint_status="Enabled",
     endpoint_type="ExternalEndpoints",
@@ -497,11 +497,11 @@ endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
     profile_name="azuresdkfornetautoresttrafficmanager8224",
     resource_group_name="azuresdkfornetautoresttrafficmanager2191",
     subnets=[
-        azure_nextgen.network.latest.EndpointPropertiesSubnetsArgs(
+        azure_nextgen.network.EndpointPropertiesSubnetsArgs(
             first="1.2.3.0",
             scope=24,
         ),
-        azure_nextgen.network.latest.EndpointPropertiesSubnetsArgs(
+        azure_nextgen.network.EndpointPropertiesSubnetsArgs(
             first="25.26.27.28",
             last="29.30.31.32",
         ),
@@ -519,7 +519,7 @@ endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
+const endpoint = new azure_nextgen.network.Endpoint("endpoint", {
     endpointName: `My%20external%20endpoint`,
     endpointStatus: "Enabled",
     endpointType: "ExternalEndpoints",
@@ -552,7 +552,7 @@ const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">EndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -560,11 +560,11 @@ const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">EndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">EndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -585,7 +585,7 @@ const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EndpointArgs</span>
+        <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -654,7 +654,7 @@ const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EndpointArgs</span>
+        <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -693,7 +693,7 @@ const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EndpointArgs</span>
+        <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -716,11 +716,11 @@ const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
 
 ## Endpoint Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Endpoint resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Endpoint resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2050,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:Endpoint My external endpoint /subscriptions/{subscription-id}/resourceGroups/azuresdkfornetautoresttrafficmanager2191/providers/Microsoft.Network/trafficManagerProfiles/azuresdkfornetautoresttrafficmanager8224/externalEndpoints/My external endpoint 
+$ pulumi import azure-nextgen:network:Endpoint My external endpoint /subscriptions/{subscription-id}/resourceGroups/azuresdkfornetautoresttrafficmanager2191/providers/Microsoft.Network/trafficManagerProfiles/azuresdkfornetautoresttrafficmanager8224/externalEndpoints/My external endpoint 
 ```
 
 

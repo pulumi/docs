@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.offazure.HyperVSite resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Site REST Resource.
-Latest API Version: 2020-07-07.
+API Version: 2020-07-07.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hyperVSite = new AzureNextGen.OffAzure.Latest.HyperVSite("hyperVSite", new AzureNextGen.OffAzure.Latest.HyperVSiteArgs
+        var hyperVSite = new AzureNextGen.OffAzure.HyperVSite("hyperVSite", new AzureNextGen.OffAzure.HyperVSiteArgs
         {
             Location = "eastus",
-            Properties = new AzureNextGen.OffAzure.Latest.Inputs.SitePropertiesArgs
+            Properties = new AzureNextGen.OffAzure.Inputs.SitePropertiesArgs
             {
-                ServicePrincipalIdentityDetails = new AzureNextGen.OffAzure.Latest.Inputs.SiteSpnPropertiesArgs
+                ServicePrincipalIdentityDetails = new AzureNextGen.OffAzure.Inputs.SiteSpnPropertiesArgs
                 {
                     AadAuthority = "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
                     ApplicationId = "e9f013df-2a2a-4871-b766-e79867f30348",
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	offazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/offazure/latest"
+	offazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/offazure"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,10 +95,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hyper_v_site = azure_nextgen.offazure.latest.HyperVSite("hyperVSite",
+hyper_v_site = azure_nextgen.offazure.HyperVSite("hyperVSite",
     location="eastus",
-    properties=azure_nextgen.offazure.latest.SitePropertiesArgs(
-        service_principal_identity_details=azure_nextgen.offazure.latest.SiteSpnPropertiesArgs(
+    properties=azure_nextgen.offazure.SitePropertiesArgs(
+        service_principal_identity_details=azure_nextgen.offazure.SiteSpnPropertiesArgs(
             aad_authority="https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
             application_id="e9f013df-2a2a-4871-b766-e79867f30348",
             audience="https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp",
@@ -119,7 +119,7 @@ hyper_v_site = azure_nextgen.offazure.latest.HyperVSite("hyperVSite",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hyperVSite = new azure_nextgen.offazure.latest.HyperVSite("hyperVSite", {
+const hyperVSite = new azure_nextgen.offazure.HyperVSite("hyperVSite", {
     location: "eastus",
     properties: {
         servicePrincipalIdentityDetails: {
@@ -146,7 +146,7 @@ const hyperVSite = new azure_nextgen.offazure.latest.HyperVSite("hyperVSite", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HyperVSite</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">HyperVSiteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HyperVSite</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HyperVSiteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -154,11 +154,11 @@ const hyperVSite = new azure_nextgen.offazure.latest.HyperVSite("hyperVSite", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHyperVSite</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">HyperVSiteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HyperVSite</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHyperVSite</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HyperVSiteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HyperVSite</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HyperVSite</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">HyperVSiteArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HyperVSite</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HyperVSiteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -179,7 +179,7 @@ const hyperVSite = new azure_nextgen.offazure.latest.HyperVSite("hyperVSite", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HyperVSiteArgs</span>
+        <span class="property-type"><a href="#inputs">HyperVSiteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -248,7 +248,7 @@ const hyperVSite = new azure_nextgen.offazure.latest.HyperVSite("hyperVSite", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HyperVSiteArgs</span>
+        <span class="property-type"><a href="#inputs">HyperVSiteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -287,7 +287,7 @@ const hyperVSite = new azure_nextgen.offazure.latest.HyperVSite("hyperVSite", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HyperVSiteArgs</span>
+        <span class="property-type"><a href="#inputs">HyperVSiteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -310,11 +310,11 @@ const hyperVSite = new azure_nextgen.offazure.latest.HyperVSite("hyperVSite", {
 
 ## HyperVSite Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The HyperVSite resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The HyperVSite resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1876,7 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:offazure/latest:HyperVSite appliance1e39site /subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/HyperVSites/appliance1e39site 
+$ pulumi import azure-nextgen:offazure:HyperVSite appliance1e39site /subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/HyperVSites/appliance1e39site 
 ```
 
 

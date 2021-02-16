@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.ObjectReplicationPolicy 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The replication policy between two storage accounts. Multiple rules can be defined in one policy.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var objectReplicationPolicy = new AzureNextGen.Storage.Latest.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.Latest.ObjectReplicationPolicyArgs
+        var objectReplicationPolicy = new AzureNextGen.Storage.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.ObjectReplicationPolicyArgs
         {
             AccountName = "dst112",
             DestinationAccount = "dst112",
@@ -35,10 +35,10 @@ class MyStack : Stack
             ResourceGroupName = "res7687",
             Rules = 
             {
-                new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
+                new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyRuleArgs
                 {
                     DestinationContainer = "dcont139",
-                    Filters = new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyFilterArgs
+                    Filters = new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyFilterArgs
                     {
                         PrefixMatch = 
                         {
@@ -65,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -107,14 +107,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy",
+object_replication_policy = azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy",
     account_name="dst112",
     destination_account="dst112",
     object_replication_policy_id="default",
     resource_group_name="res7687",
-    rules=[azure_nextgen.storage.latest.ObjectReplicationPolicyRuleArgs(
+    rules=[azure_nextgen.storage.ObjectReplicationPolicyRuleArgs(
         destination_container="dcont139",
-        filters=azure_nextgen.storage.latest.ObjectReplicationPolicyFilterArgs(
+        filters=azure_nextgen.storage.ObjectReplicationPolicyFilterArgs(
             prefix_match=[
                 "blobA",
                 "blobB",
@@ -134,7 +134,7 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
+const objectReplicationPolicy = new azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy", {
     accountName: "dst112",
     destinationAccount: "dst112",
     objectReplicationPolicyId: "default",
@@ -166,7 +166,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var objectReplicationPolicy = new AzureNextGen.Storage.Latest.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.Latest.ObjectReplicationPolicyArgs
+        var objectReplicationPolicy = new AzureNextGen.Storage.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.ObjectReplicationPolicyArgs
         {
             AccountName = "src1122",
             DestinationAccount = "dst112",
@@ -174,10 +174,10 @@ class MyStack : Stack
             ResourceGroupName = "res7687",
             Rules = 
             {
-                new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
+                new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyRuleArgs
                 {
                     DestinationContainer = "dcont139",
-                    Filters = new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyFilterArgs
+                    Filters = new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyFilterArgs
                     {
                         MinCreationTime = "2020-02-19T16:05:00Z",
                         PrefixMatch = 
@@ -206,7 +206,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -250,14 +250,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy",
+object_replication_policy = azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy",
     account_name="src1122",
     destination_account="dst112",
     object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
     resource_group_name="res7687",
-    rules=[azure_nextgen.storage.latest.ObjectReplicationPolicyRuleArgs(
+    rules=[azure_nextgen.storage.ObjectReplicationPolicyRuleArgs(
         destination_container="dcont139",
-        filters=azure_nextgen.storage.latest.ObjectReplicationPolicyFilterArgs(
+        filters=azure_nextgen.storage.ObjectReplicationPolicyFilterArgs(
             min_creation_time="2020-02-19T16:05:00Z",
             prefix_match=[
                 "blobA",
@@ -279,7 +279,7 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
+const objectReplicationPolicy = new azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy", {
     accountName: "src1122",
     destinationAccount: "dst112",
     objectReplicationPolicyId: "2a20bb73-5717-4635-985a-5d4cf777438f",
@@ -313,7 +313,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var objectReplicationPolicy = new AzureNextGen.Storage.Latest.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.Latest.ObjectReplicationPolicyArgs
+        var objectReplicationPolicy = new AzureNextGen.Storage.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.ObjectReplicationPolicyArgs
         {
             AccountName = "dst112",
             DestinationAccount = "dst112",
@@ -321,10 +321,10 @@ class MyStack : Stack
             ResourceGroupName = "res7687",
             Rules = 
             {
-                new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
+                new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyRuleArgs
                 {
                     DestinationContainer = "dcont139",
-                    Filters = new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyFilterArgs
+                    Filters = new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyFilterArgs
                     {
                         PrefixMatch = 
                         {
@@ -335,7 +335,7 @@ class MyStack : Stack
                     RuleId = "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
                     SourceContainer = "scont139",
                 },
-                new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
+                new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyRuleArgs
                 {
                     DestinationContainer = "dcont179",
                     SourceContainer = "scont179",
@@ -357,7 +357,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -404,15 +404,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy",
+object_replication_policy = azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy",
     account_name="dst112",
     destination_account="dst112",
     object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
     resource_group_name="res7687",
     rules=[
-        azure_nextgen.storage.latest.ObjectReplicationPolicyRuleArgs(
+        azure_nextgen.storage.ObjectReplicationPolicyRuleArgs(
             destination_container="dcont139",
-            filters=azure_nextgen.storage.latest.ObjectReplicationPolicyFilterArgs(
+            filters=azure_nextgen.storage.ObjectReplicationPolicyFilterArgs(
                 prefix_match=[
                     "blobA",
                     "blobB",
@@ -421,7 +421,7 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
             rule_id="d5d18a48-8801-4554-aeaa-74faf65f5ef9",
             source_container="scont139",
         ),
-        azure_nextgen.storage.latest.ObjectReplicationPolicyRuleArgs(
+        azure_nextgen.storage.ObjectReplicationPolicyRuleArgs(
             destination_container="dcont179",
             source_container="scont179",
         ),
@@ -438,7 +438,7 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
+const objectReplicationPolicy = new azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy", {
     accountName: "dst112",
     destinationAccount: "dst112",
     objectReplicationPolicyId: "2a20bb73-5717-4635-985a-5d4cf777438f",
@@ -477,7 +477,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var objectReplicationPolicy = new AzureNextGen.Storage.Latest.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.Latest.ObjectReplicationPolicyArgs
+        var objectReplicationPolicy = new AzureNextGen.Storage.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.ObjectReplicationPolicyArgs
         {
             AccountName = "src1122",
             DestinationAccount = "dst112",
@@ -485,10 +485,10 @@ class MyStack : Stack
             ResourceGroupName = "res7687",
             Rules = 
             {
-                new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
+                new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyRuleArgs
                 {
                     DestinationContainer = "dcont139",
-                    Filters = new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyFilterArgs
+                    Filters = new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyFilterArgs
                     {
                         PrefixMatch = 
                         {
@@ -499,7 +499,7 @@ class MyStack : Stack
                     RuleId = "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
                     SourceContainer = "scont139",
                 },
-                new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
+                new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyRuleArgs
                 {
                     DestinationContainer = "dcont179",
                     RuleId = "cfbb4bc2-8b60-429f-b05a-d1e0942b33b2",
@@ -522,7 +522,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -570,15 +570,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy",
+object_replication_policy = azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy",
     account_name="src1122",
     destination_account="dst112",
     object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
     resource_group_name="res7687",
     rules=[
-        azure_nextgen.storage.latest.ObjectReplicationPolicyRuleArgs(
+        azure_nextgen.storage.ObjectReplicationPolicyRuleArgs(
             destination_container="dcont139",
-            filters=azure_nextgen.storage.latest.ObjectReplicationPolicyFilterArgs(
+            filters=azure_nextgen.storage.ObjectReplicationPolicyFilterArgs(
                 prefix_match=[
                     "blobA",
                     "blobB",
@@ -587,7 +587,7 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
             rule_id="d5d18a48-8801-4554-aeaa-74faf65f5ef9",
             source_container="scont139",
         ),
-        azure_nextgen.storage.latest.ObjectReplicationPolicyRuleArgs(
+        azure_nextgen.storage.ObjectReplicationPolicyRuleArgs(
             destination_container="dcont179",
             rule_id="cfbb4bc2-8b60-429f-b05a-d1e0942b33b2",
             source_container="scont179",
@@ -605,7 +605,7 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
+const objectReplicationPolicy = new azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy", {
     accountName: "src1122",
     destinationAccount: "dst112",
     objectReplicationPolicyId: "2a20bb73-5717-4635-985a-5d4cf777438f",
@@ -643,7 +643,7 @@ const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicati
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ObjectReplicationPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ObjectReplicationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -651,11 +651,11 @@ const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicati
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewObjectReplicationPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ObjectReplicationPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ObjectReplicationPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewObjectReplicationPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ObjectReplicationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ObjectReplicationPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ObjectReplicationPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ObjectReplicationPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -676,7 +676,7 @@ const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicati
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ObjectReplicationPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">ObjectReplicationPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -745,7 +745,7 @@ const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicati
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ObjectReplicationPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">ObjectReplicationPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -784,7 +784,7 @@ const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicati
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ObjectReplicationPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">ObjectReplicationPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -807,11 +807,11 @@ const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicati
 
 ## ObjectReplicationPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1817,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:ObjectReplicationPolicy 2a20bb73-5717-4635-985a-5d4cf777438f /subscriptions/{subscription-id}/resourceGroups/res7687/providers/Microsoft.Storage/storageAccounts/src1122/objectReplicationPolicies/2a20bb73-5717-4635-985a-5d4cf777438f 
+$ pulumi import azure-nextgen:storage:ObjectReplicationPolicy 2a20bb73-5717-4635-985a-5d4cf777438f /subscriptions/{subscription-id}/resourceGroups/res7687/providers/Microsoft.Storage/storageAccounts/src1122/objectReplicationPolicies/2a20bb73-5717-4635-985a-5d4cf777438f 
 ```
 
 

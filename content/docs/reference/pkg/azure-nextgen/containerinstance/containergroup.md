@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerinstance.ContainerGroup
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A container group.
-Latest API Version: 2020-11-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var containerGroup = new AzureNextGen.ContainerInstance.Latest.ContainerGroup("containerGroup", new AzureNextGen.ContainerInstance.Latest.ContainerGroupArgs
+        var containerGroup = new AzureNextGen.ContainerInstance.ContainerGroup("containerGroup", new AzureNextGen.ContainerInstance.ContainerGroupArgs
         {
             ContainerGroupName = "demo1",
             Containers = 
             {
-                new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerArgs
+                new AzureNextGen.ContainerInstance.Inputs.ContainerArgs
                 {
                     Command = {},
                     EnvironmentVariables = {},
@@ -40,17 +40,17 @@ class MyStack : Stack
                     Name = "demo1",
                     Ports = 
                     {
-                        new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerPortArgs
+                        new AzureNextGen.ContainerInstance.Inputs.ContainerPortArgs
                         {
                             Port = 80,
                         },
                     },
-                    Resources = new AzureNextGen.ContainerInstance.Latest.Inputs.ResourceRequirementsArgs
+                    Resources = new AzureNextGen.ContainerInstance.Inputs.ResourceRequirementsArgs
                     {
-                        Requests = new AzureNextGen.ContainerInstance.Latest.Inputs.ResourceRequestsArgs
+                        Requests = new AzureNextGen.ContainerInstance.Inputs.ResourceRequestsArgs
                         {
                             Cpu = 1,
-                            Gpu = new AzureNextGen.ContainerInstance.Latest.Inputs.GpuResourceArgs
+                            Gpu = new AzureNextGen.ContainerInstance.Inputs.GpuResourceArgs
                             {
                                 Count = 1,
                                 Sku = "K80",
@@ -60,19 +60,19 @@ class MyStack : Stack
                     },
                     VolumeMounts = 
                     {
-                        new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeMountArgs
+                        new AzureNextGen.ContainerInstance.Inputs.VolumeMountArgs
                         {
                             MountPath = "/mnt/volume1",
                             Name = "volume1",
                             ReadOnly = false,
                         },
-                        new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeMountArgs
+                        new AzureNextGen.ContainerInstance.Inputs.VolumeMountArgs
                         {
                             MountPath = "/mnt/volume2",
                             Name = "volume2",
                             ReadOnly = false,
                         },
-                        new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeMountArgs
+                        new AzureNextGen.ContainerInstance.Inputs.VolumeMountArgs
                         {
                             MountPath = "/mnt/volume3",
                             Name = "volume3",
@@ -81,9 +81,9 @@ class MyStack : Stack
                     },
                 },
             },
-            Diagnostics = new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerGroupDiagnosticsArgs
+            Diagnostics = new AzureNextGen.ContainerInstance.Inputs.ContainerGroupDiagnosticsArgs
             {
-                LogAnalytics = new AzureNextGen.ContainerInstance.Latest.Inputs.LogAnalyticsArgs
+                LogAnalytics = new AzureNextGen.ContainerInstance.Inputs.LogAnalyticsArgs
                 {
                     LogType = "ContainerInsights",
                     Metadata = 
@@ -94,7 +94,7 @@ class MyStack : Stack
                     WorkspaceKey = "workspaceKey",
                 },
             },
-            DnsConfig = new AzureNextGen.ContainerInstance.Latest.Inputs.DnsConfigurationArgs
+            DnsConfig = new AzureNextGen.ContainerInstance.Inputs.DnsConfigurationArgs
             {
                 NameServers = 
                 {
@@ -103,7 +103,7 @@ class MyStack : Stack
                 Options = "ndots:2",
                 SearchDomains = "cluster.local svc.cluster.local",
             },
-            Identity = new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerGroupIdentityArgs
+            Identity = new AzureNextGen.ContainerInstance.Inputs.ContainerGroupIdentityArgs
             {
                 Type = "SystemAssigned, UserAssigned",
                 UserAssignedIdentities = 
@@ -112,12 +112,12 @@ class MyStack : Stack
                 },
             },
             ImageRegistryCredentials = {},
-            IpAddress = new AzureNextGen.ContainerInstance.Latest.Inputs.IpAddressArgs
+            IpAddress = new AzureNextGen.ContainerInstance.Inputs.IpAddressArgs
             {
                 DnsNameLabel = "dnsnamelabel1",
                 Ports = 
                 {
-                    new AzureNextGen.ContainerInstance.Latest.Inputs.PortArgs
+                    new AzureNextGen.ContainerInstance.Inputs.PortArgs
                     {
                         Port = 80,
                         Protocol = "TCP",
@@ -126,7 +126,7 @@ class MyStack : Stack
                 Type = "Public",
             },
             Location = "west us",
-            NetworkProfile = new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerGroupNetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerInstance.Inputs.ContainerGroupNetworkProfileArgs
             {
                 Id = "test-network-profile-id",
             },
@@ -134,9 +134,9 @@ class MyStack : Stack
             ResourceGroupName = "demo",
             Volumes = 
             {
-                new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeArgs
+                new AzureNextGen.ContainerInstance.Inputs.VolumeArgs
                 {
-                    AzureFile = new AzureNextGen.ContainerInstance.Latest.Inputs.AzureFileVolumeArgs
+                    AzureFile = new AzureNextGen.ContainerInstance.Inputs.AzureFileVolumeArgs
                     {
                         ShareName = "shareName",
                         StorageAccountKey = "accountKey",
@@ -144,12 +144,12 @@ class MyStack : Stack
                     },
                     Name = "volume1",
                 },
-                new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeArgs
+                new AzureNextGen.ContainerInstance.Inputs.VolumeArgs
                 {
                     EmptyDir = ,
                     Name = "volume2",
                 },
-                new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeArgs
+                new AzureNextGen.ContainerInstance.Inputs.VolumeArgs
                 {
                     Name = "volume3",
                     Secret = 
@@ -174,7 +174,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerinstance "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerinstance/latest"
+	containerinstance "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerinstance"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -301,20 +301,20 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-container_group = azure_nextgen.containerinstance.latest.ContainerGroup("containerGroup",
+container_group = azure_nextgen.containerinstance.ContainerGroup("containerGroup",
     container_group_name="demo1",
-    containers=[azure_nextgen.containerinstance.latest.ContainerArgs(
+    containers=[azure_nextgen.containerinstance.ContainerArgs(
         command=[],
         environment_variables=[],
         image="nginx",
         name="demo1",
-        ports=[azure_nextgen.containerinstance.latest.ContainerPortArgs(
+        ports=[azure_nextgen.containerinstance.ContainerPortArgs(
             port=80,
         )],
-        resources=azure_nextgen.containerinstance.latest.ResourceRequirementsArgs(
-            requests=azure_nextgen.containerinstance.latest.ResourceRequestsArgs(
+        resources=azure_nextgen.containerinstance.ResourceRequirementsArgs(
+            requests=azure_nextgen.containerinstance.ResourceRequestsArgs(
                 cpu=1,
-                gpu=azure_nextgen.containerinstance.latest.GpuResourceArgs(
+                gpu=azure_nextgen.containerinstance.GpuResourceArgs(
                     count=1,
                     sku="K80",
                 ),
@@ -322,25 +322,25 @@ container_group = azure_nextgen.containerinstance.latest.ContainerGroup("contain
             ),
         ),
         volume_mounts=[
-            azure_nextgen.containerinstance.latest.VolumeMountArgs(
+            azure_nextgen.containerinstance.VolumeMountArgs(
                 mount_path="/mnt/volume1",
                 name="volume1",
                 read_only=False,
             ),
-            azure_nextgen.containerinstance.latest.VolumeMountArgs(
+            azure_nextgen.containerinstance.VolumeMountArgs(
                 mount_path="/mnt/volume2",
                 name="volume2",
                 read_only=False,
             ),
-            azure_nextgen.containerinstance.latest.VolumeMountArgs(
+            azure_nextgen.containerinstance.VolumeMountArgs(
                 mount_path="/mnt/volume3",
                 name="volume3",
                 read_only=True,
             ),
         ],
     )],
-    diagnostics=azure_nextgen.containerinstance.latest.ContainerGroupDiagnosticsArgs(
-        log_analytics=azure_nextgen.containerinstance.latest.LogAnalyticsArgs(
+    diagnostics=azure_nextgen.containerinstance.ContainerGroupDiagnosticsArgs(
+        log_analytics=azure_nextgen.containerinstance.LogAnalyticsArgs(
             log_type="ContainerInsights",
             metadata={
                 "test-key": "test-metadata-value",
@@ -349,46 +349,46 @@ container_group = azure_nextgen.containerinstance.latest.ContainerGroup("contain
             workspace_key="workspaceKey",
         ),
     ),
-    dns_config=azure_nextgen.containerinstance.latest.DnsConfigurationArgs(
+    dns_config=azure_nextgen.containerinstance.DnsConfigurationArgs(
         name_servers=["1.1.1.1"],
         options="ndots:2",
         search_domains="cluster.local svc.cluster.local",
     ),
-    identity=azure_nextgen.containerinstance.latest.ContainerGroupIdentityArgs(
+    identity=azure_nextgen.containerinstance.ContainerGroupIdentityArgs(
         type="SystemAssigned, UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": {},
         },
     ),
     image_registry_credentials=[],
-    ip_address=azure_nextgen.containerinstance.latest.IpAddressArgs(
+    ip_address=azure_nextgen.containerinstance.IpAddressArgs(
         dns_name_label="dnsnamelabel1",
-        ports=[azure_nextgen.containerinstance.latest.PortArgs(
+        ports=[azure_nextgen.containerinstance.PortArgs(
             port=80,
             protocol="TCP",
         )],
         type="Public",
     ),
     location="west us",
-    network_profile=azure_nextgen.containerinstance.latest.ContainerGroupNetworkProfileArgs(
+    network_profile=azure_nextgen.containerinstance.ContainerGroupNetworkProfileArgs(
         id="test-network-profile-id",
     ),
     os_type="Linux",
     resource_group_name="demo",
     volumes=[
-        azure_nextgen.containerinstance.latest.VolumeArgs(
-            azure_file=azure_nextgen.containerinstance.latest.AzureFileVolumeArgs(
+        azure_nextgen.containerinstance.VolumeArgs(
+            azure_file=azure_nextgen.containerinstance.AzureFileVolumeArgs(
                 share_name="shareName",
                 storage_account_key="accountKey",
                 storage_account_name="accountName",
             ),
             name="volume1",
         ),
-        azure_nextgen.containerinstance.latest.VolumeArgs(
+        azure_nextgen.containerinstance.VolumeArgs(
             empty_dir={},
             name="volume2",
         ),
-        azure_nextgen.containerinstance.latest.VolumeArgs(
+        azure_nextgen.containerinstance.VolumeArgs(
             name="volume3",
             secret={
                 "secretKey1": "SecretValue1InBase64",
@@ -407,7 +407,7 @@ container_group = azure_nextgen.containerinstance.latest.ContainerGroup("contain
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const containerGroup = new azure_nextgen.containerinstance.latest.ContainerGroup("containerGroup", {
+const containerGroup = new azure_nextgen.containerinstance.ContainerGroup("containerGroup", {
     containerGroupName: "demo1",
     containers: [{
         command: [],
@@ -516,7 +516,7 @@ const containerGroup = new azure_nextgen.containerinstance.latest.ContainerGroup
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ContainerGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -524,11 +524,11 @@ const containerGroup = new azure_nextgen.containerinstance.latest.ContainerGroup
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainerGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ContainerGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainerGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ContainerGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -549,7 +549,7 @@ const containerGroup = new azure_nextgen.containerinstance.latest.ContainerGroup
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ContainerGroupArgs</span>
+        <span class="property-type"><a href="#inputs">ContainerGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -618,7 +618,7 @@ const containerGroup = new azure_nextgen.containerinstance.latest.ContainerGroup
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ContainerGroupArgs</span>
+        <span class="property-type"><a href="#inputs">ContainerGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -657,7 +657,7 @@ const containerGroup = new azure_nextgen.containerinstance.latest.ContainerGroup
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ContainerGroupArgs</span>
+        <span class="property-type"><a href="#inputs">ContainerGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -680,11 +680,11 @@ const containerGroup = new azure_nextgen.containerinstance.latest.ContainerGroup
 
 ## ContainerGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ContainerGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ContainerGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -10346,7 +10346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerinstance/latest:ContainerGroup demo1 /subscriptions/subid/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/demo1 
+$ pulumi import azure-nextgen:containerinstance:ContainerGroup demo1 /subscriptions/subid/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/demo1 
 ```
 
 

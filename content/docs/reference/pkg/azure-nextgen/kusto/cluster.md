@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kusto.Cluster resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a Kusto cluster.
-Latest API Version: 2020-09-18.
+API Version: 2020-09-18.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Kusto.Latest.Cluster("cluster", new AzureNextGen.Kusto.Latest.ClusterArgs
+        var cluster = new AzureNextGen.Kusto.Cluster("cluster", new AzureNextGen.Kusto.ClusterArgs
         {
             ClusterName = "kustoclusterrptest4",
             EnableDoubleEncryption = false,
             EnablePurge = true,
             EnableStreamingIngest = true,
-            Identity = new AzureNextGen.Kusto.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.Kusto.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "westus",
             ResourceGroupName = "kustorptest",
-            Sku = new AzureNextGen.Kusto.Latest.Inputs.AzureSkuArgs
+            Sku = new AzureNextGen.Kusto.Inputs.AzureSkuArgs
             {
                 Capacity = 2,
                 Name = "Standard_L8s",
@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto/latest"
+	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -99,17 +99,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.kusto.latest.Cluster("cluster",
+cluster = azure_nextgen.kusto.Cluster("cluster",
     cluster_name="kustoclusterrptest4",
     enable_double_encryption=False,
     enable_purge=True,
     enable_streaming_ingest=True,
-    identity=azure_nextgen.kusto.latest.IdentityArgs(
+    identity=azure_nextgen.kusto.IdentityArgs(
         type="SystemAssigned",
     ),
     location="westus",
     resource_group_name="kustorptest",
-    sku=azure_nextgen.kusto.latest.AzureSkuArgs(
+    sku=azure_nextgen.kusto.AzureSkuArgs(
         capacity=2,
         name="Standard_L8s",
         tier="Standard",
@@ -125,7 +125,7 @@ cluster = azure_nextgen.kusto.latest.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.kusto.latest.Cluster("cluster", {
+const cluster = new azure_nextgen.kusto.Cluster("cluster", {
     clusterName: "kustoclusterrptest4",
     enableDoubleEncryption: false,
     enablePurge: true,
@@ -154,7 +154,7 @@ const cluster = new azure_nextgen.kusto.latest.Cluster("cluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -162,11 +162,11 @@ const cluster = new azure_nextgen.kusto.latest.Cluster("cluster", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -187,7 +187,7 @@ const cluster = new azure_nextgen.kusto.latest.Cluster("cluster", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -256,7 +256,7 @@ const cluster = new azure_nextgen.kusto.latest.Cluster("cluster", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -295,7 +295,7 @@ const cluster = new azure_nextgen.kusto.latest.Cluster("cluster", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -318,11 +318,11 @@ const cluster = new azure_nextgen.kusto.latest.Cluster("cluster", {
 
 ## Cluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Cluster resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Cluster resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3454,7 +3454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kusto/latest:Cluster KustoClusterRPTest4 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4 
+$ pulumi import azure-nextgen:kusto:Cluster KustoClusterRPTest4 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4 
 ```
 
 

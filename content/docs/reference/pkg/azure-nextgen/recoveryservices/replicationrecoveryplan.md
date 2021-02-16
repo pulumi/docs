@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationReco
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Recovery plan details.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationRecoveryPlan = new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryPlan("replicationRecoveryPlan", new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryPlanArgs
+        var replicationRecoveryPlan = new AzureNextGen.RecoveryServices.ReplicationRecoveryPlan("replicationRecoveryPlan", new AzureNextGen.RecoveryServices.ReplicationRecoveryPlanArgs
         {
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.CreateRecoveryPlanInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices.Inputs.CreateRecoveryPlanInputPropertiesArgs
             {
                 FailoverDeploymentModel = "ResourceManager",
                 Groups = 
                 {
-                    new AzureNextGen.RecoveryServices.Latest.Inputs.RecoveryPlanGroupArgs
+                    new AzureNextGen.RecoveryServices.Inputs.RecoveryPlanGroupArgs
                     {
                         EndGroupActions = {},
                         GroupType = "Boot",
                         ReplicationProtectedItems = 
                         {
-                            new AzureNextGen.RecoveryServices.Latest.Inputs.RecoveryPlanProtectedItemArgs
+                            new AzureNextGen.RecoveryServices.Inputs.RecoveryPlanProtectedItemArgs
                             {
                                 Id = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b",
                                 VirtualMachineId = "f8491e4f-817a-40dd-a90c-af773978c75b",
@@ -70,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -116,13 +116,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_recovery_plan = azure_nextgen.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan",
-    properties=azure_nextgen.recoveryservices.latest.CreateRecoveryPlanInputPropertiesArgs(
+replication_recovery_plan = azure_nextgen.recoveryservices.ReplicationRecoveryPlan("replicationRecoveryPlan",
+    properties=azure_nextgen.recoveryservices.CreateRecoveryPlanInputPropertiesArgs(
         failover_deployment_model="ResourceManager",
-        groups=[azure_nextgen.recoveryservices.latest.RecoveryPlanGroupArgs(
+        groups=[azure_nextgen.recoveryservices.RecoveryPlanGroupArgs(
             end_group_actions=[],
             group_type="Boot",
-            replication_protected_items=[azure_nextgen.recoveryservices.latest.RecoveryPlanProtectedItemArgs(
+            replication_protected_items=[azure_nextgen.recoveryservices.RecoveryPlanProtectedItemArgs(
                 id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b",
                 virtual_machine_id="f8491e4f-817a-40dd-a90c-af773978c75b",
             )],
@@ -145,7 +145,7 @@ replication_recovery_plan = azure_nextgen.recoveryservices.latest.ReplicationRec
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationRecoveryPlan = new azure_nextgen.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan", {
+const replicationRecoveryPlan = new azure_nextgen.recoveryservices.ReplicationRecoveryPlan("replicationRecoveryPlan", {
     properties: {
         failoverDeploymentModel: "ResourceManager",
         groups: [{
@@ -177,7 +177,7 @@ const replicationRecoveryPlan = new azure_nextgen.recoveryservices.latest.Replic
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReplicationRecoveryPlanArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -185,11 +185,11 @@ const replicationRecoveryPlan = new azure_nextgen.recoveryservices.latest.Replic
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReplicationRecoveryPlanArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationRecoveryPlan</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationRecoveryPlan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReplicationRecoveryPlanArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -210,7 +210,7 @@ const replicationRecoveryPlan = new azure_nextgen.recoveryservices.latest.Replic
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationRecoveryPlanArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -279,7 +279,7 @@ const replicationRecoveryPlan = new azure_nextgen.recoveryservices.latest.Replic
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationRecoveryPlanArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -318,7 +318,7 @@ const replicationRecoveryPlan = new azure_nextgen.recoveryservices.latest.Replic
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationRecoveryPlanArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -341,11 +341,11 @@ const replicationRecoveryPlan = new azure_nextgen.recoveryservices.latest.Replic
 
 ## ReplicationRecoveryPlan Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3271,7 +3271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationRecoveryPlan RPtest1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationRecoveryPlans/RPtest1 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationRecoveryPlan RPtest1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationRecoveryPlans/RPtest1 
 ```
 
 

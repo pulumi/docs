@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cache.RedisEnterprise resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes the RedisEnterprise cluster
+API Version: 2020-10-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var redisEnterprise = new AzureNextGen.Cache.V20201001Preview.RedisEnterprise("redisEnterprise", new AzureNextGen.Cache.V20201001Preview.RedisEnterpriseArgs
+        var redisEnterprise = new AzureNextGen.Cache.RedisEnterprise("redisEnterprise", new AzureNextGen.Cache.RedisEnterpriseArgs
         {
             ClusterName = "cache1",
             Location = "West US",
             MinimumTlsVersion = "1.2",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Cache.V20201001Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.Cache.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "EnterpriseFlash_F300",
@@ -62,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache/v20201001preview"
+	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,12 +104,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-redis_enterprise = azure_nextgen.cache.v20201001preview.RedisEnterprise("redisEnterprise",
+redis_enterprise = azure_nextgen.cache.RedisEnterprise("redisEnterprise",
     cluster_name="cache1",
     location="West US",
     minimum_tls_version="1.2",
     resource_group_name="rg1",
-    sku=azure_nextgen.cache.v20201001preview.SkuArgs(
+    sku=azure_nextgen.cache.SkuArgs(
         capacity=3,
         name="EnterpriseFlash_F300",
     ),
@@ -131,7 +132,7 @@ redis_enterprise = azure_nextgen.cache.v20201001preview.RedisEnterprise("redisEn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const redisEnterprise = new azure_nextgen.cache.v20201001preview.RedisEnterprise("redisEnterprise", {
+const redisEnterprise = new azure_nextgen.cache.RedisEnterprise("redisEnterprise", {
     clusterName: "cache1",
     location: "West US",
     minimumTlsVersion: "1.2",
@@ -162,7 +163,7 @@ const redisEnterprise = new azure_nextgen.cache.v20201001preview.RedisEnterprise
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RedisEnterprise</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RedisEnterpriseArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RedisEnterprise</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RedisEnterpriseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -170,11 +171,11 @@ const redisEnterprise = new azure_nextgen.cache.v20201001preview.RedisEnterprise
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRedisEnterprise</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RedisEnterpriseArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RedisEnterprise</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRedisEnterprise</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RedisEnterpriseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RedisEnterprise</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RedisEnterprise</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RedisEnterpriseArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RedisEnterprise</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RedisEnterpriseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -195,7 +196,7 @@ const redisEnterprise = new azure_nextgen.cache.v20201001preview.RedisEnterprise
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RedisEnterpriseArgs</span>
+        <span class="property-type"><a href="#inputs">RedisEnterpriseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -264,7 +265,7 @@ const redisEnterprise = new azure_nextgen.cache.v20201001preview.RedisEnterprise
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RedisEnterpriseArgs</span>
+        <span class="property-type"><a href="#inputs">RedisEnterpriseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -303,7 +304,7 @@ const redisEnterprise = new azure_nextgen.cache.v20201001preview.RedisEnterprise
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RedisEnterpriseArgs</span>
+        <span class="property-type"><a href="#inputs">RedisEnterpriseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -326,11 +327,11 @@ const redisEnterprise = new azure_nextgen.cache.v20201001preview.RedisEnterprise
 
 ## RedisEnterprise Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RedisEnterprise resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RedisEnterprise resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1656,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cache/v20201001preview:RedisEnterprise cache1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1 
+$ pulumi import azure-nextgen:cache:RedisEnterprise cache1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1 
 ```
 
 

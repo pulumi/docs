@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.botservice.Channel resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Bot channel resource definition
-Latest API Version: 2020-06-02.
+API Version: 2020-06-02.
 
 {{% examples %}}
 ## Example Usage
@@ -27,18 +27,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.BotService.Latest.Channel("channel", new AzureNextGen.BotService.Latest.ChannelArgs
+        var channel = new AzureNextGen.BotService.Channel("channel", new AzureNextGen.BotService.ChannelArgs
         {
             ChannelName = "AlexaChannel",
             Location = "global",
-            Properties = 
+            Properties = new AzureNextGen.BotService.Inputs.AlexaChannelArgs
             {
-                { "channelName", "AlexaChannel" },
-                { "properties", 
+                ChannelName = "AlexaChannel",
+                Properties = new AzureNextGen.BotService.Inputs.AlexaChannelPropertiesArgs
                 {
-                    { "alexaSkillId", "XAlexaSkillIdX" },
-                    { "isEnabled", true },
-                } },
+                    AlexaSkillId = "XAlexaSkillIdX",
+                    IsEnabled = true,
+                },
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -52,7 +52,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
+			ChannelName: pulumi.String("AlexaChannel"),
+			Location:    pulumi.String("global"),
+			Properties: &botservice.AlexaChannelArgs{
+				ChannelName: pulumi.String("AlexaChannel"),
+				Properties: &botservice.AlexaChannelPropertiesArgs{
+					AlexaSkillId: pulumi.String("XAlexaSkillIdX"),
+					IsEnabled:    pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -61,16 +93,16 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.botservice.latest.Channel("channel",
+channel = azure_nextgen.botservice.Channel("channel",
     channel_name="AlexaChannel",
     location="global",
-    properties={
-        "channelName": "AlexaChannel",
-        "properties": {
-            "alexaSkillId": "XAlexaSkillIdX",
-            "isEnabled": True,
-        },
-    },
+    properties=azure_nextgen.botservice.AlexaChannelArgs(
+        channel_name="AlexaChannel",
+        properties=azure_nextgen.botservice.AlexaChannelPropertiesArgs(
+            alexa_skill_id="XAlexaSkillIdX",
+            is_enabled=True,
+        ),
+    ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
 
@@ -84,7 +116,7 @@ channel = azure_nextgen.botservice.latest.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const channel = new azure_nextgen.botservice.latest.Channel("channel", {
+const channel = new azure_nextgen.botservice.Channel("channel", {
     channelName: "AlexaChannel",
     location: "global",
     properties: {
@@ -112,19 +144,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.BotService.Latest.Channel("channel", new AzureNextGen.BotService.Latest.ChannelArgs
+        var channel = new AzureNextGen.BotService.Channel("channel", new AzureNextGen.BotService.ChannelArgs
         {
             ChannelName = "EmailChannel",
             Location = "global",
-            Properties = 
+            Properties = new AzureNextGen.BotService.Inputs.EmailChannelArgs
             {
-                { "channelName", "EmailChannel" },
-                { "properties", 
+                ChannelName = "EmailChannel",
+                Properties = new AzureNextGen.BotService.Inputs.EmailChannelPropertiesArgs
                 {
-                    { "emailAddress", "a@b.com" },
-                    { "isEnabled", true },
-                    { "password", "pwd" },
-                } },
+                    EmailAddress = "a@b.com",
+                    IsEnabled = true,
+                    Password = "pwd",
+                },
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -138,7 +170,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
+			ChannelName: pulumi.String("EmailChannel"),
+			Location:    pulumi.String("global"),
+			Properties: &botservice.EmailChannelArgs{
+				ChannelName: pulumi.String("EmailChannel"),
+				Properties: &botservice.EmailChannelPropertiesArgs{
+					EmailAddress: pulumi.String("a@b.com"),
+					IsEnabled:    pulumi.Bool(true),
+					Password:     pulumi.String("pwd"),
+				},
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -147,17 +212,17 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.botservice.latest.Channel("channel",
+channel = azure_nextgen.botservice.Channel("channel",
     channel_name="EmailChannel",
     location="global",
-    properties={
-        "channelName": "EmailChannel",
-        "properties": {
-            "emailAddress": "a@b.com",
-            "isEnabled": True,
-            "password": "pwd",
-        },
-    },
+    properties=azure_nextgen.botservice.EmailChannelArgs(
+        channel_name="EmailChannel",
+        properties=azure_nextgen.botservice.EmailChannelPropertiesArgs(
+            email_address="a@b.com",
+            is_enabled=True,
+            password="pwd",
+        ),
+    ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
 
@@ -171,7 +236,7 @@ channel = azure_nextgen.botservice.latest.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const channel = new azure_nextgen.botservice.latest.Channel("channel", {
+const channel = new azure_nextgen.botservice.Channel("channel", {
     channelName: "EmailChannel",
     location: "global",
     properties: {
@@ -200,18 +265,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.BotService.Latest.Channel("channel", new AzureNextGen.BotService.Latest.ChannelArgs
+        var channel = new AzureNextGen.BotService.Channel("channel", new AzureNextGen.BotService.ChannelArgs
         {
             ChannelName = "DirectLineSpeechChannel",
             Location = "global",
-            Properties = 
+            Properties = new AzureNextGen.BotService.Inputs.DirectLineSpeechChannelArgs
             {
-                { "channelName", "DirectLineSpeechChannel" },
-                { "properties", 
+                ChannelName = "DirectLineSpeechChannel",
+                Properties = new AzureNextGen.BotService.Inputs.DirectLineSpeechChannelPropertiesArgs
                 {
-                    { "cognitiveServicesSubscriptionId", "XcognitiveServicesSubscriptionIdX" },
-                    { "isEnabled", true },
-                } },
+                    CognitiveServicesSubscriptionId = "XcognitiveServicesSubscriptionIdX",
+                    IsEnabled = true,
+                },
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -225,7 +290,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
+			ChannelName: pulumi.String("DirectLineSpeechChannel"),
+			Location:    pulumi.String("global"),
+			Properties: &botservice.DirectLineSpeechChannelArgs{
+				ChannelName: pulumi.String("DirectLineSpeechChannel"),
+				Properties: &botservice.DirectLineSpeechChannelPropertiesArgs{
+					CognitiveServicesSubscriptionId: pulumi.String("XcognitiveServicesSubscriptionIdX"),
+					IsEnabled:                       pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -234,16 +331,16 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.botservice.latest.Channel("channel",
+channel = azure_nextgen.botservice.Channel("channel",
     channel_name="DirectLineSpeechChannel",
     location="global",
-    properties={
-        "channelName": "DirectLineSpeechChannel",
-        "properties": {
-            "cognitiveServicesSubscriptionId": "XcognitiveServicesSubscriptionIdX",
-            "isEnabled": True,
-        },
-    },
+    properties=azure_nextgen.botservice.DirectLineSpeechChannelArgs(
+        channel_name="DirectLineSpeechChannel",
+        properties=azure_nextgen.botservice.DirectLineSpeechChannelPropertiesArgs(
+            cognitive_services_subscription_id="XcognitiveServicesSubscriptionIdX",
+            is_enabled=True,
+        ),
+    ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
 
@@ -257,7 +354,7 @@ channel = azure_nextgen.botservice.latest.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const channel = new azure_nextgen.botservice.latest.Channel("channel", {
+const channel = new azure_nextgen.botservice.Channel("channel", {
     channelName: "DirectLineSpeechChannel",
     location: "global",
     properties: {
@@ -285,24 +382,24 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.BotService.Latest.Channel("channel", new AzureNextGen.BotService.Latest.ChannelArgs
+        var channel = new AzureNextGen.BotService.Channel("channel", new AzureNextGen.BotService.ChannelArgs
         {
             ChannelName = "LineChannel",
             Location = "global",
-            Properties = 
+            Properties = new AzureNextGen.BotService.Inputs.LineChannelArgs
             {
-                { "channelName", "LineChannel" },
-                { "properties", 
+                ChannelName = "LineChannel",
+                Properties = new AzureNextGen.BotService.Inputs.LineChannelPropertiesArgs
                 {
-                    { "lineRegistrations", 
+                    LineRegistrations = 
                     {
-                        new AzureNextGen.BotService.Latest.Inputs.LineRegistrationArgs
+                        new AzureNextGen.BotService.Inputs.LineRegistrationArgs
                         {
                             ChannelAccessToken = "channelAccessToken",
                             ChannelSecret = "channelSecret",
                         },
-                    } },
-                } },
+                    },
+                },
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -316,7 +413,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
+			ChannelName: pulumi.String("LineChannel"),
+			Location:    pulumi.String("global"),
+			Properties: &botservice.LineChannelArgs{
+				ChannelName: pulumi.String("LineChannel"),
+				Properties: &botservice.LineChannelPropertiesArgs{
+					LineRegistrations: botservice.LineRegistrationArray{
+						&botservice.LineRegistrationArgs{
+							ChannelAccessToken: pulumi.String("channelAccessToken"),
+							ChannelSecret:      pulumi.String("channelSecret"),
+						},
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -325,18 +458,18 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.botservice.latest.Channel("channel",
+channel = azure_nextgen.botservice.Channel("channel",
     channel_name="LineChannel",
     location="global",
-    properties={
-        "channelName": "LineChannel",
-        "properties": {
-            "lineRegistrations": [azure_nextgen.botservice.latest.LineRegistrationArgs(
+    properties=azure_nextgen.botservice.LineChannelArgs(
+        channel_name="LineChannel",
+        properties=azure_nextgen.botservice.LineChannelPropertiesArgs(
+            line_registrations=[azure_nextgen.botservice.LineRegistrationArgs(
                 channel_access_token="channelAccessToken",
                 channel_secret="channelSecret",
             )],
-        },
-    },
+        ),
+    ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
 
@@ -350,7 +483,7 @@ channel = azure_nextgen.botservice.latest.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const channel = new azure_nextgen.botservice.latest.Channel("channel", {
+const channel = new azure_nextgen.botservice.Channel("channel", {
     channelName: "LineChannel",
     location: "global",
     properties: {
@@ -378,7 +511,7 @@ const channel = new azure_nextgen.botservice.latest.Channel("channel", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ChannelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -386,11 +519,11 @@ const channel = new azure_nextgen.botservice.latest.Channel("channel", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ChannelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Channel</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Channel</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ChannelArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Channel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ChannelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -411,7 +544,7 @@ const channel = new azure_nextgen.botservice.latest.Channel("channel", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ChannelArgs</span>
+        <span class="property-type"><a href="#inputs">ChannelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -480,7 +613,7 @@ const channel = new azure_nextgen.botservice.latest.Channel("channel", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ChannelArgs</span>
+        <span class="property-type"><a href="#inputs">ChannelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -519,7 +652,7 @@ const channel = new azure_nextgen.botservice.latest.Channel("channel", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ChannelArgs</span>
+        <span class="property-type"><a href="#inputs">ChannelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -542,11 +675,11 @@ const channel = new azure_nextgen.botservice.latest.Channel("channel", {
 
 ## Channel Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Channel resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Channel resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -8768,7 +8901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:botservice/latest:Channel myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BotService/botServices/{resourceName}/channels/{channelName} 
+$ pulumi import azure-nextgen:botservice:Channel myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BotService/botServices/{resourceName}/channels/{channelName} 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.relay.PrivateEndpointConnection 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Private endpoint connection resource.
+API Version: 2018-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Relay.V20180101Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Relay.V20180101Preview.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.Relay.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Relay.PrivateEndpointConnectionArgs
         {
             Location = "South Central US",
             NamespaceName = "example-RelayNamespace-5849",
-            PrivateEndpoint = new AzureNextGen.Relay.V20180101Preview.Inputs.PrivateEndpointArgs
+            PrivateEndpoint = new AzureNextGen.Relay.Inputs.PrivateEndpointArgs
             {
                 Id = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
             },
             PrivateEndpointConnectionName = "{privateEndpointConnection name}",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Relay.V20180101Preview.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Relay.Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Description = "You may pass",
                 Status = "Approved",
@@ -56,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay/v20180101preview"
+	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,14 +93,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.relay.v20180101preview.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.relay.PrivateEndpointConnection("privateEndpointConnection",
     location="South Central US",
     namespace_name="example-RelayNamespace-5849",
-    private_endpoint=azure_nextgen.relay.v20180101preview.PrivateEndpointArgs(
+    private_endpoint=azure_nextgen.relay.PrivateEndpointArgs(
         id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
     ),
     private_endpoint_connection_name="{privateEndpointConnection name}",
-    private_link_service_connection_state=azure_nextgen.relay.v20180101preview.PrivateLinkServiceConnectionStateArgs(
+    private_link_service_connection_state=azure_nextgen.relay.PrivateLinkServiceConnectionStateArgs(
         description="You may pass",
         status="Approved",
     ),
@@ -115,7 +116,7 @@ private_endpoint_connection = azure_nextgen.relay.v20180101preview.PrivateEndpoi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.relay.v20180101preview.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.relay.PrivateEndpointConnection("privateEndpointConnection", {
     location: "South Central US",
     namespaceName: "example-RelayNamespace-5849",
     privateEndpoint: {
@@ -141,7 +142,7 @@ const privateEndpointConnection = new azure_nextgen.relay.v20180101preview.Priva
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PrivateEndpointConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateEndpointConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -149,11 +150,11 @@ const privateEndpointConnection = new azure_nextgen.relay.v20180101preview.Priva
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateEndpointConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PrivateEndpointConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateEndpointConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateEndpointConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateEndpointConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateEndpointConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PrivateEndpointConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateEndpointConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -174,7 +175,7 @@ const privateEndpointConnection = new azure_nextgen.relay.v20180101preview.Priva
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateEndpointConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateEndpointConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -243,7 +244,7 @@ const privateEndpointConnection = new azure_nextgen.relay.v20180101preview.Priva
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateEndpointConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateEndpointConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -282,7 +283,7 @@ const privateEndpointConnection = new azure_nextgen.relay.v20180101preview.Priva
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateEndpointConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateEndpointConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -305,11 +306,11 @@ const privateEndpointConnection = new azure_nextgen.relay.v20180101preview.Priva
 
 ## PrivateEndpointConnection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PrivateEndpointConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PrivateEndpointConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1225,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:relay/v20180101preview:PrivateEndpointConnection {privateEndpointConnection name} /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/alitest/providers/Microsoft.Relay/namespaces/relay-private-endpoint-test/privateEndpointConnections/{privateEndpointConnection name} 
+$ pulumi import azure-nextgen:relay:PrivateEndpointConnection {privateEndpointConnection name} /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/alitest/providers/Microsoft.Relay/namespaces/relay-private-endpoint-test/privateEndpointConnections/{privateEndpointConnection name} 
 ```
 
 

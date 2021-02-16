@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.Workspac
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a machine learning workspace.
-Latest API Version: 2021-01-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,18 +27,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.MachineLearningServices.Latest.Workspace("workspace", new AzureNextGen.MachineLearningServices.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.MachineLearningServices.Workspace("workspace", new AzureNextGen.MachineLearningServices.WorkspaceArgs
         {
             ApplicationInsights = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
             ContainerRegistry = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
             Description = "test description",
-            Encryption = new AzureNextGen.MachineLearningServices.Latest.Inputs.EncryptionPropertyArgs
+            Encryption = new AzureNextGen.MachineLearningServices.Inputs.EncryptionPropertyArgs
             {
-                Identity = new AzureNextGen.MachineLearningServices.Latest.Inputs.IdentityForCmkArgs
+                Identity = new AzureNextGen.MachineLearningServices.Inputs.IdentityForCmkArgs
                 {
                     UserAssignedIdentity = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai",
                 },
-                KeyVaultProperties = new AzureNextGen.MachineLearningServices.Latest.Inputs.KeyVaultPropertiesArgs
+                KeyVaultProperties = new AzureNextGen.MachineLearningServices.Inputs.KeyVaultPropertiesArgs
                 {
                     IdentityClientId = "",
                     KeyIdentifier = "https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
@@ -48,7 +48,7 @@ class MyStack : Stack
             },
             FriendlyName = "HelloName",
             HbiWorkspace = false,
-            Identity = new AzureNextGen.MachineLearningServices.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.MachineLearningServices.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned,UserAssigned",
                 UserAssignedIdentities = 
@@ -61,7 +61,7 @@ class MyStack : Stack
             ResourceGroupName = "workspace-1234",
             SharedPrivateLinkResources = 
             {
-                new AzureNextGen.MachineLearningServices.Latest.Inputs.SharedPrivateLinkResourceArgs
+                new AzureNextGen.MachineLearningServices.Inputs.SharedPrivateLinkResourceArgs
                 {
                     GroupId = "Sql",
                     Name = "testdbresource",
@@ -70,7 +70,7 @@ class MyStack : Stack
                     Status = "Approved",
                 },
             },
-            Sku = new AzureNextGen.MachineLearningServices.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.MachineLearningServices.Inputs.SkuArgs
             {
                 Name = "Basic",
                 Tier = "Basic",
@@ -92,7 +92,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/latest"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -157,15 +157,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.machinelearningservices.latest.Workspace("workspace",
+workspace = azure_nextgen.machinelearningservices.Workspace("workspace",
     application_insights="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
     container_registry="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
     description="test description",
-    encryption=azure_nextgen.machinelearningservices.latest.EncryptionPropertyArgs(
-        identity=azure_nextgen.machinelearningservices.latest.IdentityForCmkArgs(
+    encryption=azure_nextgen.machinelearningservices.EncryptionPropertyArgs(
+        identity=azure_nextgen.machinelearningservices.IdentityForCmkArgs(
             user_assigned_identity="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai",
         ),
-        key_vault_properties=azure_nextgen.machinelearningservices.latest.KeyVaultPropertiesArgs(
+        key_vault_properties=azure_nextgen.machinelearningservices.KeyVaultPropertiesArgs(
             identity_client_id="",
             key_identifier="https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
             key_vault_arm_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
@@ -174,7 +174,7 @@ workspace = azure_nextgen.machinelearningservices.latest.Workspace("workspace",
     ),
     friendly_name="HelloName",
     hbi_workspace=False,
-    identity=azure_nextgen.machinelearningservices.latest.IdentityArgs(
+    identity=azure_nextgen.machinelearningservices.IdentityArgs(
         type="SystemAssigned,UserAssigned",
         user_assigned_identities={
             "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai": {},
@@ -183,14 +183,14 @@ workspace = azure_nextgen.machinelearningservices.latest.Workspace("workspace",
     key_vault="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
     location="eastus2euap",
     resource_group_name="workspace-1234",
-    shared_private_link_resources=[azure_nextgen.machinelearningservices.latest.SharedPrivateLinkResourceArgs(
+    shared_private_link_resources=[azure_nextgen.machinelearningservices.SharedPrivateLinkResourceArgs(
         group_id="Sql",
         name="testdbresource",
         private_link_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.DocumentDB/databaseAccounts/testdbresource/privateLinkResources/Sql",
         request_message="Please approve",
         status="Approved",
     )],
-    sku=azure_nextgen.machinelearningservices.latest.SkuArgs(
+    sku=azure_nextgen.machinelearningservices.SkuArgs(
         name="Basic",
         tier="Basic",
     ),
@@ -207,7 +207,7 @@ workspace = azure_nextgen.machinelearningservices.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.machinelearningservices.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.machinelearningservices.Workspace("workspace", {
     applicationInsights: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
     containerRegistry: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
     description: "test description",
@@ -260,7 +260,7 @@ const workspace = new azure_nextgen.machinelearningservices.latest.Workspace("wo
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -268,11 +268,11 @@ const workspace = new azure_nextgen.machinelearningservices.latest.Workspace("wo
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -293,7 +293,7 @@ const workspace = new azure_nextgen.machinelearningservices.latest.Workspace("wo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -362,7 +362,7 @@ const workspace = new azure_nextgen.machinelearningservices.latest.Workspace("wo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -401,7 +401,7 @@ const workspace = new azure_nextgen.machinelearningservices.latest.Workspace("wo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -424,11 +424,11 @@ const workspace = new azure_nextgen.machinelearningservices.latest.Workspace("wo
 
 ## Workspace Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Workspace resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Workspace resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4782,7 +4782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningservices/latest:Workspace testworkspace /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace 
+$ pulumi import azure-nextgen:machinelearningservices:Workspace testworkspace /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace 
 ```
 
 

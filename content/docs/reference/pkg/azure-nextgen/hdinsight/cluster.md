@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hdinsight.Cluster resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The HDInsight cluster.
+API Version: 2018-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.Cluster("cluster", new AzureNextGen.HDInsight.ClusterArgs
         {
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ClusterCreatePropertiesArgs
             {
-                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                ClusterDefinition = new AzureNextGen.HDInsight.Inputs.ClusterDefinitionArgs
                 {
                     ComponentVersion = 
                     {
@@ -49,19 +50,19 @@ class MyStack : Stack
                     Kind = "hadoop",
                 },
                 ClusterVersion = "3.6",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            AutoscaleConfiguration = new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleArgs
+                            AutoscaleConfiguration = new AzureNextGen.HDInsight.Inputs.AutoscaleArgs
                             {
-                                Recurrence = new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleRecurrenceArgs
+                                Recurrence = new AzureNextGen.HDInsight.Inputs.AutoscaleRecurrenceArgs
                                 {
                                     Schedule = 
                                     {
-                                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleScheduleArgs
+                                        new AzureNextGen.HDInsight.Inputs.AutoscaleScheduleArgs
                                         {
                                             Days = 
                                             {
@@ -71,14 +72,14 @@ class MyStack : Stack
                                                 "Thursday",
                                                 "Friday",
                                             },
-                                            TimeAndCapacity = new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleTimeAndCapacityArgs
+                                            TimeAndCapacity = new AzureNextGen.HDInsight.Inputs.AutoscaleTimeAndCapacityArgs
                                             {
                                                 MaxInstanceCount = 3,
                                                 MinInstanceCount = 3,
                                                 Time = "09:00",
                                             },
                                         },
-                                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleScheduleArgs
+                                        new AzureNextGen.HDInsight.Inputs.AutoscaleScheduleArgs
                                         {
                                             Days = 
                                             {
@@ -88,35 +89,35 @@ class MyStack : Stack
                                                 "Thursday",
                                                 "Friday",
                                             },
-                                            TimeAndCapacity = new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleTimeAndCapacityArgs
+                                            TimeAndCapacity = new AzureNextGen.HDInsight.Inputs.AutoscaleTimeAndCapacityArgs
                                             {
                                                 MaxInstanceCount = 6,
                                                 MinInstanceCount = 6,
                                                 Time = "18:00",
                                             },
                                         },
-                                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleScheduleArgs
+                                        new AzureNextGen.HDInsight.Inputs.AutoscaleScheduleArgs
                                         {
                                             Days = 
                                             {
                                                 "Saturday",
                                                 "Sunday",
                                             },
-                                            TimeAndCapacity = new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleTimeAndCapacityArgs
+                                            TimeAndCapacity = new AzureNextGen.HDInsight.Inputs.AutoscaleTimeAndCapacityArgs
                                             {
                                                 MaxInstanceCount = 2,
                                                 MinInstanceCount = 2,
                                                 Time = "09:00",
                                             },
                                         },
-                                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleScheduleArgs
+                                        new AzureNextGen.HDInsight.Inputs.AutoscaleScheduleArgs
                                         {
                                             Days = 
                                             {
                                                 "Saturday",
                                                 "Sunday",
                                             },
-                                            TimeAndCapacity = new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleTimeAndCapacityArgs
+                                            TimeAndCapacity = new AzureNextGen.HDInsight.Inputs.AutoscaleTimeAndCapacityArgs
                                             {
                                                 MaxInstanceCount = 4,
                                                 MinInstanceCount = 4,
@@ -127,14 +128,14 @@ class MyStack : Stack
                                     TimeZone = "China Standard Time",
                                 },
                             },
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D4_V2",
                             },
                             Name = "workernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -146,11 +147,11 @@ class MyStack : Stack
                     },
                 },
                 OsType = "Linux",
-                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.HDInsight.Inputs.StorageProfileArgs
                 {
                     Storageaccounts = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        new AzureNextGen.HDInsight.Inputs.StorageAccountArgs
                         {
                             Container = "hdinsight-autoscale-tes-2019-06-18t05-49-16-591z",
                             IsDefault = true,
@@ -181,10 +182,10 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.Cluster("cluster",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ClusterCreatePropertiesArgs(
-        cluster_definition=azure_nextgen.hdinsight.v20180601preview.ClusterDefinitionArgs(
+    properties=azure_nextgen.hdinsight.ClusterCreatePropertiesArgs(
+        cluster_definition=azure_nextgen.hdinsight.ClusterDefinitionArgs(
             component_version={
                 "Hadoop": "2.7",
             },
@@ -198,12 +199,12 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             kind="hadoop",
         ),
         cluster_version="3.6",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
-            roles=[azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                autoscale_configuration=azure_nextgen.hdinsight.v20180601preview.AutoscaleArgs(
-                    recurrence=azure_nextgen.hdinsight.v20180601preview.AutoscaleRecurrenceArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
+            roles=[azure_nextgen.hdinsight.RoleArgs(
+                autoscale_configuration=azure_nextgen.hdinsight.AutoscaleArgs(
+                    recurrence=azure_nextgen.hdinsight.AutoscaleRecurrenceArgs(
                         schedule=[
-                            azure_nextgen.hdinsight.v20180601preview.AutoscaleScheduleArgs(
+                            azure_nextgen.hdinsight.AutoscaleScheduleArgs(
                                 days=[
                                     "Monday",
                                     "Tuesday",
@@ -211,13 +212,13 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                                     "Thursday",
                                     "Friday",
                                 ],
-                                time_and_capacity=azure_nextgen.hdinsight.v20180601preview.AutoscaleTimeAndCapacityArgs(
+                                time_and_capacity=azure_nextgen.hdinsight.AutoscaleTimeAndCapacityArgs(
                                     max_instance_count=3,
                                     min_instance_count=3,
                                     time="09:00",
                                 ),
                             ),
-                            azure_nextgen.hdinsight.v20180601preview.AutoscaleScheduleArgs(
+                            azure_nextgen.hdinsight.AutoscaleScheduleArgs(
                                 days=[
                                     "Monday",
                                     "Tuesday",
@@ -225,29 +226,29 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                                     "Thursday",
                                     "Friday",
                                 ],
-                                time_and_capacity=azure_nextgen.hdinsight.v20180601preview.AutoscaleTimeAndCapacityArgs(
+                                time_and_capacity=azure_nextgen.hdinsight.AutoscaleTimeAndCapacityArgs(
                                     max_instance_count=6,
                                     min_instance_count=6,
                                     time="18:00",
                                 ),
                             ),
-                            azure_nextgen.hdinsight.v20180601preview.AutoscaleScheduleArgs(
+                            azure_nextgen.hdinsight.AutoscaleScheduleArgs(
                                 days=[
                                     "Saturday",
                                     "Sunday",
                                 ],
-                                time_and_capacity=azure_nextgen.hdinsight.v20180601preview.AutoscaleTimeAndCapacityArgs(
+                                time_and_capacity=azure_nextgen.hdinsight.AutoscaleTimeAndCapacityArgs(
                                     max_instance_count=2,
                                     min_instance_count=2,
                                     time="09:00",
                                 ),
                             ),
-                            azure_nextgen.hdinsight.v20180601preview.AutoscaleScheduleArgs(
+                            azure_nextgen.hdinsight.AutoscaleScheduleArgs(
                                 days=[
                                     "Saturday",
                                     "Sunday",
                                 ],
-                                time_and_capacity=azure_nextgen.hdinsight.v20180601preview.AutoscaleTimeAndCapacityArgs(
+                                time_and_capacity=azure_nextgen.hdinsight.AutoscaleTimeAndCapacityArgs(
                                     max_instance_count=4,
                                     min_instance_count=4,
                                     time="18:00",
@@ -257,12 +258,12 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                         time_zone="China Standard Time",
                     ),
                 ),
-                hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                     vm_size="Standard_D4_V2",
                 ),
                 name="workernode",
-                os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                    linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                    linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                         password="**********",
                         username="sshuser",
                     ),
@@ -272,8 +273,8 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             )],
         ),
         os_type="Linux",
-        storage_profile=azure_nextgen.hdinsight.v20180601preview.StorageProfileArgs(
-            storageaccounts=[azure_nextgen.hdinsight.v20180601preview.StorageAccountArgs(
+        storage_profile=azure_nextgen.hdinsight.StorageProfileArgs(
+            storageaccounts=[azure_nextgen.hdinsight.StorageAccountArgs(
                 container="hdinsight-autoscale-tes-2019-06-18t05-49-16-591z",
                 is_default=True,
                 key="storagekey",
@@ -294,7 +295,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
     clusterName: "cluster1",
     properties: {
         clusterDefinition: {
@@ -412,12 +413,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.Cluster("cluster", new AzureNextGen.HDInsight.ClusterArgs
         {
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ClusterCreatePropertiesArgs
             {
-                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                ClusterDefinition = new AzureNextGen.HDInsight.Inputs.ClusterDefinitionArgs
                 {
                     Configurations = 
                     {
@@ -431,21 +432,21 @@ class MyStack : Stack
                     Kind = "Hadoop",
                 },
                 ClusterVersion = "3.6",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D3_V2",
                             },
                             MinInstanceCount = 1,
                             Name = "headnode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -453,17 +454,17 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 2,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D3_V2",
                             },
                             MinInstanceCount = 1,
                             Name = "workernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -471,17 +472,17 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 4,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Small",
                             },
                             MinInstanceCount = 1,
                             Name = "zookeepernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -492,11 +493,11 @@ class MyStack : Stack
                     },
                 },
                 OsType = "Linux",
-                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.HDInsight.Inputs.StorageProfileArgs
                 {
                     Storageaccounts = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        new AzureNextGen.HDInsight.Inputs.StorageAccountArgs
                         {
                             FileSystem = "default",
                             IsDefault = true,
@@ -527,7 +528,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -628,10 +629,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.Cluster("cluster",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ClusterCreatePropertiesArgs(
-        cluster_definition=azure_nextgen.hdinsight.v20180601preview.ClusterDefinitionArgs(
+    properties=azure_nextgen.hdinsight.ClusterCreatePropertiesArgs(
+        cluster_definition=azure_nextgen.hdinsight.ClusterDefinitionArgs(
             configurations={
                 "gateway": {
                     "restAuthCredential.isEnabled": "true",
@@ -642,44 +643,44 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             kind="Hadoop",
         ),
         cluster_version="3.6",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
             roles=[
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_D3_V2",
                     ),
                     min_instance_count=1,
                     name="headnode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=2,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_D3_V2",
                     ),
                     min_instance_count=1,
                     name="workernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=4,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Small",
                     ),
                     min_instance_count=1,
                     name="zookeepernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
@@ -689,8 +690,8 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             ],
         ),
         os_type="Linux",
-        storage_profile=azure_nextgen.hdinsight.v20180601preview.StorageProfileArgs(
-            storageaccounts=[azure_nextgen.hdinsight.v20180601preview.StorageAccountArgs(
+        storage_profile=azure_nextgen.hdinsight.StorageProfileArgs(
+            storageaccounts=[azure_nextgen.hdinsight.StorageAccountArgs(
                 file_system="default",
                 is_default=True,
                 key="storagekey",
@@ -714,7 +715,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
     clusterName: "cluster1",
     properties: {
         clusterDefinition: {
@@ -805,12 +806,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.Cluster("cluster", new AzureNextGen.HDInsight.ClusterArgs
         {
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ClusterCreatePropertiesArgs
             {
-                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                ClusterDefinition = new AzureNextGen.HDInsight.Inputs.ClusterDefinitionArgs
                 {
                     Configurations = 
                     {
@@ -824,21 +825,21 @@ class MyStack : Stack
                     Kind = "Hadoop",
                 },
                 ClusterVersion = "3.5",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D3_V2",
                             },
                             MinInstanceCount = 1,
                             Name = "headnode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -846,17 +847,17 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 2,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D3_V2",
                             },
                             MinInstanceCount = 1,
                             Name = "workernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -864,17 +865,17 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 4,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Small",
                             },
                             MinInstanceCount = 1,
                             Name = "zookeepernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -885,11 +886,11 @@ class MyStack : Stack
                     },
                 },
                 OsType = "Linux",
-                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.HDInsight.Inputs.StorageProfileArgs
                 {
                     Storageaccounts = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        new AzureNextGen.HDInsight.Inputs.StorageAccountArgs
                         {
                             Container = "containername",
                             IsDefault = true,
@@ -920,7 +921,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1021,10 +1022,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.Cluster("cluster",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ClusterCreatePropertiesArgs(
-        cluster_definition=azure_nextgen.hdinsight.v20180601preview.ClusterDefinitionArgs(
+    properties=azure_nextgen.hdinsight.ClusterCreatePropertiesArgs(
+        cluster_definition=azure_nextgen.hdinsight.ClusterDefinitionArgs(
             configurations={
                 "gateway": {
                     "restAuthCredential.isEnabled": "true",
@@ -1035,44 +1036,44 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             kind="Hadoop",
         ),
         cluster_version="3.5",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
             roles=[
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_D3_V2",
                     ),
                     min_instance_count=1,
                     name="headnode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=2,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_D3_V2",
                     ),
                     min_instance_count=1,
                     name="workernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=4,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Small",
                     ),
                     min_instance_count=1,
                     name="zookeepernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
@@ -1082,8 +1083,8 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             ],
         ),
         os_type="Linux",
-        storage_profile=azure_nextgen.hdinsight.v20180601preview.StorageProfileArgs(
-            storageaccounts=[azure_nextgen.hdinsight.v20180601preview.StorageAccountArgs(
+        storage_profile=azure_nextgen.hdinsight.StorageProfileArgs(
+            storageaccounts=[azure_nextgen.hdinsight.StorageAccountArgs(
                 container="containername",
                 is_default=True,
                 key="storagekey",
@@ -1107,7 +1108,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
     clusterName: "cluster1",
     properties: {
         clusterDefinition: {
@@ -1198,12 +1199,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.Cluster("cluster", new AzureNextGen.HDInsight.ClusterArgs
         {
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ClusterCreatePropertiesArgs
             {
-                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                ClusterDefinition = new AzureNextGen.HDInsight.Inputs.ClusterDefinitionArgs
                 {
                     Configurations = 
                     {
@@ -1217,27 +1218,27 @@ class MyStack : Stack
                     Kind = "Hadoop",
                 },
                 ClusterVersion = "3.5",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D3_V2",
                             },
                             MinInstanceCount = 1,
                             Name = "headnode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
-                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    SshProfile = new AzureNextGen.HDInsight.Inputs.SshProfileArgs
                                     {
                                         PublicKeys = 
                                         {
-                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            new AzureNextGen.HDInsight.Inputs.SshPublicKeyArgs
                                             {
                                                 CertificateData = "**********",
                                             },
@@ -1248,17 +1249,17 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 2,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D3_V2",
                             },
                             MinInstanceCount = 1,
                             Name = "workernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -1266,17 +1267,17 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 4,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Small",
                             },
                             MinInstanceCount = 1,
                             Name = "zookeepernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -1287,11 +1288,11 @@ class MyStack : Stack
                     },
                 },
                 OsType = "Linux",
-                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.HDInsight.Inputs.StorageProfileArgs
                 {
                     Storageaccounts = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        new AzureNextGen.HDInsight.Inputs.StorageAccountArgs
                         {
                             Container = "containername",
                             IsDefault = true,
@@ -1322,7 +1323,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1429,10 +1430,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.Cluster("cluster",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ClusterCreatePropertiesArgs(
-        cluster_definition=azure_nextgen.hdinsight.v20180601preview.ClusterDefinitionArgs(
+    properties=azure_nextgen.hdinsight.ClusterCreatePropertiesArgs(
+        cluster_definition=azure_nextgen.hdinsight.ClusterDefinitionArgs(
             configurations={
                 "gateway": {
                     "restAuthCredential.isEnabled": True,
@@ -1443,18 +1444,18 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             kind="Hadoop",
         ),
         cluster_version="3.5",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
             roles=[
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_D3_V2",
                     ),
                     min_instance_count=1,
                     name="headnode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
-                            ssh_profile=azure_nextgen.hdinsight.v20180601preview.SshProfileArgs(
-                                public_keys=[azure_nextgen.hdinsight.v20180601preview.SshPublicKeyArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
+                            ssh_profile=azure_nextgen.hdinsight.SshProfileArgs(
+                                public_keys=[azure_nextgen.hdinsight.SshPublicKeyArgs(
                                     certificate_data="**********",
                                 )],
                             ),
@@ -1463,28 +1464,28 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                     ),
                     target_instance_count=2,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_D3_V2",
                     ),
                     min_instance_count=1,
                     name="workernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=4,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Small",
                     ),
                     min_instance_count=1,
                     name="zookeepernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
@@ -1494,8 +1495,8 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             ],
         ),
         os_type="Linux",
-        storage_profile=azure_nextgen.hdinsight.v20180601preview.StorageProfileArgs(
-            storageaccounts=[azure_nextgen.hdinsight.v20180601preview.StorageAccountArgs(
+        storage_profile=azure_nextgen.hdinsight.StorageProfileArgs(
+            storageaccounts=[azure_nextgen.hdinsight.StorageAccountArgs(
                 container="containername",
                 is_default=True,
                 key="storagekey",
@@ -1519,7 +1520,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
     clusterName: "cluster1",
     properties: {
         clusterDefinition: {
@@ -1614,12 +1615,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.Cluster("cluster", new AzureNextGen.HDInsight.ClusterArgs
         {
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ClusterCreatePropertiesArgs
             {
-                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                ClusterDefinition = new AzureNextGen.HDInsight.Inputs.ClusterDefinitionArgs
                 {
                     ComponentVersion = 
                     {
@@ -1637,20 +1638,20 @@ class MyStack : Stack
                     Kind = "kafka",
                 },
                 ClusterVersion = "4.0",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Large",
                             },
                             Name = "headnode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -1658,23 +1659,23 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 2,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
                             DataDisksGroups = 
                             {
-                                new AzureNextGen.HDInsight.V20180601Preview.Inputs.DataDisksGroupsArgs
+                                new AzureNextGen.HDInsight.Inputs.DataDisksGroupsArgs
                                 {
                                     DisksPerNode = 8,
                                 },
                             },
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Large",
                             },
                             Name = "workernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -1682,16 +1683,16 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 3,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Small",
                             },
                             Name = "zookeepernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -1699,16 +1700,16 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 3,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D4_v2",
                             },
                             Name = "kafkamanagementnode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "kafkauser",
@@ -1718,20 +1719,20 @@ class MyStack : Stack
                         },
                     },
                 },
-                KafkaRestProperties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.KafkaRestPropertiesArgs
+                KafkaRestProperties = new AzureNextGen.HDInsight.Inputs.KafkaRestPropertiesArgs
                 {
-                    ClientGroupInfo = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClientGroupInfoArgs
+                    ClientGroupInfo = new AzureNextGen.HDInsight.Inputs.ClientGroupInfoArgs
                     {
                         GroupId = "00000000-0000-0000-0000-111111111111",
                         GroupName = "Kafka security group name",
                     },
                 },
                 OsType = "Linux",
-                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.HDInsight.Inputs.StorageProfileArgs
                 {
                     Storageaccounts = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        new AzureNextGen.HDInsight.Inputs.StorageAccountArgs
                         {
                             Container = "containername",
                             IsDefault = true,
@@ -1758,7 +1759,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1880,10 +1881,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.Cluster("cluster",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ClusterCreatePropertiesArgs(
-        cluster_definition=azure_nextgen.hdinsight.v20180601preview.ClusterDefinitionArgs(
+    properties=azure_nextgen.hdinsight.ClusterCreatePropertiesArgs(
+        cluster_definition=azure_nextgen.hdinsight.ClusterDefinitionArgs(
             component_version={
                 "Kafka": "2.1",
             },
@@ -1897,57 +1898,57 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             kind="kafka",
         ),
         cluster_version="4.0",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
             roles=[
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Large",
                     ),
                     name="headnode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=2,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    data_disks_groups=[azure_nextgen.hdinsight.v20180601preview.DataDisksGroupsArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    data_disks_groups=[azure_nextgen.hdinsight.DataDisksGroupsArgs(
                         disks_per_node=8,
                     )],
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Large",
                     ),
                     name="workernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=3,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Small",
                     ),
                     name="zookeepernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=3,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_D4_v2",
                     ),
                     name="kafkamanagementnode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="kafkauser",
                         ),
@@ -1956,15 +1957,15 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                 ),
             ],
         ),
-        kafka_rest_properties=azure_nextgen.hdinsight.v20180601preview.KafkaRestPropertiesArgs(
-            client_group_info=azure_nextgen.hdinsight.v20180601preview.ClientGroupInfoArgs(
+        kafka_rest_properties=azure_nextgen.hdinsight.KafkaRestPropertiesArgs(
+            client_group_info=azure_nextgen.hdinsight.ClientGroupInfoArgs(
                 group_id="00000000-0000-0000-0000-111111111111",
                 group_name="Kafka security group name",
             ),
         ),
         os_type="Linux",
-        storage_profile=azure_nextgen.hdinsight.v20180601preview.StorageProfileArgs(
-            storageaccounts=[azure_nextgen.hdinsight.v20180601preview.StorageAccountArgs(
+        storage_profile=azure_nextgen.hdinsight.StorageProfileArgs(
+            storageaccounts=[azure_nextgen.hdinsight.StorageAccountArgs(
                 container="containername",
                 is_default=True,
                 key="storagekey",
@@ -1985,7 +1986,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
     clusterName: "cluster1",
     properties: {
         clusterDefinition: {
@@ -2095,12 +2096,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.Cluster("cluster", new AzureNextGen.HDInsight.ClusterArgs
         {
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ClusterCreatePropertiesArgs
             {
-                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                ClusterDefinition = new AzureNextGen.HDInsight.Inputs.ClusterDefinitionArgs
                 {
                     Configurations = 
                     {
@@ -2114,28 +2115,28 @@ class MyStack : Stack
                     Kind = "Hadoop",
                 },
                 ClusterVersion = "3.5",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D3_V2",
                             },
                             MinInstanceCount = 1,
                             Name = "headnode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
-                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    SshProfile = new AzureNextGen.HDInsight.Inputs.SshProfileArgs
                                     {
                                         PublicKeys = 
                                         {
-                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            new AzureNextGen.HDInsight.Inputs.SshPublicKeyArgs
                                             {
                                                 CertificateData = "**********",
                                             },
@@ -2146,30 +2147,30 @@ class MyStack : Stack
                             },
                             ScriptActions = {},
                             TargetInstanceCount = 2,
-                            VirtualNetworkProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.VirtualNetworkProfileArgs
+                            VirtualNetworkProfile = new AzureNextGen.HDInsight.Inputs.VirtualNetworkProfileArgs
                             {
                                 Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
                                 Subnet = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
                             },
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D3_V2",
                             },
                             MinInstanceCount = 1,
                             Name = "workernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
-                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    SshProfile = new AzureNextGen.HDInsight.Inputs.SshProfileArgs
                                     {
                                         PublicKeys = 
                                         {
-                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            new AzureNextGen.HDInsight.Inputs.SshPublicKeyArgs
                                             {
                                                 CertificateData = "**********",
                                             },
@@ -2180,30 +2181,30 @@ class MyStack : Stack
                             },
                             ScriptActions = {},
                             TargetInstanceCount = 4,
-                            VirtualNetworkProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.VirtualNetworkProfileArgs
+                            VirtualNetworkProfile = new AzureNextGen.HDInsight.Inputs.VirtualNetworkProfileArgs
                             {
                                 Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
                                 Subnet = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
                             },
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Small",
                             },
                             MinInstanceCount = 1,
                             Name = "zookeepernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
-                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    SshProfile = new AzureNextGen.HDInsight.Inputs.SshProfileArgs
                                     {
                                         PublicKeys = 
                                         {
-                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            new AzureNextGen.HDInsight.Inputs.SshPublicKeyArgs
                                             {
                                                 CertificateData = "**********",
                                             },
@@ -2214,7 +2215,7 @@ class MyStack : Stack
                             },
                             ScriptActions = {},
                             TargetInstanceCount = 3,
-                            VirtualNetworkProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.VirtualNetworkProfileArgs
+                            VirtualNetworkProfile = new AzureNextGen.HDInsight.Inputs.VirtualNetworkProfileArgs
                             {
                                 Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
                                 Subnet = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
@@ -2223,7 +2224,7 @@ class MyStack : Stack
                     },
                 },
                 OsType = "Linux",
-                SecurityProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SecurityProfileArgs
+                SecurityProfile = new AzureNextGen.HDInsight.Inputs.SecurityProfileArgs
                 {
                     ClusterUsersGroupDNs = 
                     {
@@ -2239,11 +2240,11 @@ class MyStack : Stack
                     },
                     OrganizationalUnitDN = "OU=Hadoop,DC=hdinsight,DC=test",
                 },
-                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.HDInsight.Inputs.StorageProfileArgs
                 {
                     Storageaccounts = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        new AzureNextGen.HDInsight.Inputs.StorageAccountArgs
                         {
                             Container = "containername",
                             IsDefault = true,
@@ -2274,7 +2275,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2424,10 +2425,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.Cluster("cluster",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ClusterCreatePropertiesArgs(
-        cluster_definition=azure_nextgen.hdinsight.v20180601preview.ClusterDefinitionArgs(
+    properties=azure_nextgen.hdinsight.ClusterCreatePropertiesArgs(
+        cluster_definition=azure_nextgen.hdinsight.ClusterDefinitionArgs(
             configurations={
                 "gateway": {
                     "restAuthCredential.isEnabled": True,
@@ -2438,19 +2439,19 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             kind="Hadoop",
         ),
         cluster_version="3.5",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
             roles=[
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_D3_V2",
                     ),
                     min_instance_count=1,
                     name="headnode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
-                            ssh_profile=azure_nextgen.hdinsight.v20180601preview.SshProfileArgs(
-                                public_keys=[azure_nextgen.hdinsight.v20180601preview.SshPublicKeyArgs(
+                            ssh_profile=azure_nextgen.hdinsight.SshProfileArgs(
+                                public_keys=[azure_nextgen.hdinsight.SshPublicKeyArgs(
                                     certificate_data="**********",
                                 )],
                             ),
@@ -2459,22 +2460,22 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                     ),
                     script_actions=[],
                     target_instance_count=2,
-                    virtual_network_profile=azure_nextgen.hdinsight.v20180601preview.VirtualNetworkProfileArgs(
+                    virtual_network_profile=azure_nextgen.hdinsight.VirtualNetworkProfileArgs(
                         id="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
                         subnet="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
                     ),
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_D3_V2",
                     ),
                     min_instance_count=1,
                     name="workernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
-                            ssh_profile=azure_nextgen.hdinsight.v20180601preview.SshProfileArgs(
-                                public_keys=[azure_nextgen.hdinsight.v20180601preview.SshPublicKeyArgs(
+                            ssh_profile=azure_nextgen.hdinsight.SshProfileArgs(
+                                public_keys=[azure_nextgen.hdinsight.SshPublicKeyArgs(
                                     certificate_data="**********",
                                 )],
                             ),
@@ -2483,22 +2484,22 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                     ),
                     script_actions=[],
                     target_instance_count=4,
-                    virtual_network_profile=azure_nextgen.hdinsight.v20180601preview.VirtualNetworkProfileArgs(
+                    virtual_network_profile=azure_nextgen.hdinsight.VirtualNetworkProfileArgs(
                         id="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
                         subnet="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
                     ),
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Small",
                     ),
                     min_instance_count=1,
                     name="zookeepernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
-                            ssh_profile=azure_nextgen.hdinsight.v20180601preview.SshProfileArgs(
-                                public_keys=[azure_nextgen.hdinsight.v20180601preview.SshPublicKeyArgs(
+                            ssh_profile=azure_nextgen.hdinsight.SshProfileArgs(
+                                public_keys=[azure_nextgen.hdinsight.SshPublicKeyArgs(
                                     certificate_data="**********",
                                 )],
                             ),
@@ -2507,7 +2508,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                     ),
                     script_actions=[],
                     target_instance_count=3,
-                    virtual_network_profile=azure_nextgen.hdinsight.v20180601preview.VirtualNetworkProfileArgs(
+                    virtual_network_profile=azure_nextgen.hdinsight.VirtualNetworkProfileArgs(
                         id="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
                         subnet="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
                     ),
@@ -2515,7 +2516,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             ],
         ),
         os_type="Linux",
-        security_profile=azure_nextgen.hdinsight.v20180601preview.SecurityProfileArgs(
+        security_profile=azure_nextgen.hdinsight.SecurityProfileArgs(
             cluster_users_group_dns=["hdiusers"],
             directory_type="ActiveDirectory",
             domain="DomainName",
@@ -2524,8 +2525,8 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             ldaps_urls=["ldaps://10.10.0.4:636"],
             organizational_unit_dn="OU=Hadoop,DC=hdinsight,DC=test",
         ),
-        storage_profile=azure_nextgen.hdinsight.v20180601preview.StorageProfileArgs(
-            storageaccounts=[azure_nextgen.hdinsight.v20180601preview.StorageAccountArgs(
+        storage_profile=azure_nextgen.hdinsight.StorageProfileArgs(
+            storageaccounts=[azure_nextgen.hdinsight.StorageAccountArgs(
                 container="containername",
                 is_default=True,
                 key="storage account key",
@@ -2549,7 +2550,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
     clusterName: "cluster1",
     properties: {
         clusterDefinition: {
@@ -2679,12 +2680,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.Cluster("cluster", new AzureNextGen.HDInsight.ClusterArgs
         {
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ClusterCreatePropertiesArgs
             {
-                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                ClusterDefinition = new AzureNextGen.HDInsight.Inputs.ClusterDefinitionArgs
                 {
                     ComponentVersion = 
                     {
@@ -2702,21 +2703,21 @@ class MyStack : Stack
                     Kind = "Spark",
                 },
                 ClusterVersion = "3.5",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D12_V2",
                             },
                             MinInstanceCount = 1,
                             Name = "headnode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -2724,17 +2725,17 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 2,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D4_V2",
                             },
                             MinInstanceCount = 1,
                             Name = "workernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -2745,11 +2746,11 @@ class MyStack : Stack
                     },
                 },
                 OsType = "Linux",
-                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.HDInsight.Inputs.StorageProfileArgs
                 {
                     Storageaccounts = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        new AzureNextGen.HDInsight.Inputs.StorageAccountArgs
                         {
                             Container = "containername",
                             IsDefault = true,
@@ -2780,7 +2781,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2870,10 +2871,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.Cluster("cluster",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ClusterCreatePropertiesArgs(
-        cluster_definition=azure_nextgen.hdinsight.v20180601preview.ClusterDefinitionArgs(
+    properties=azure_nextgen.hdinsight.ClusterCreatePropertiesArgs(
+        cluster_definition=azure_nextgen.hdinsight.ClusterDefinitionArgs(
             component_version={
                 "Spark": "2.0",
             },
@@ -2887,30 +2888,30 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             kind="Spark",
         ),
         cluster_version="3.5",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
             roles=[
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_D12_V2",
                     ),
                     min_instance_count=1,
                     name="headnode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=2,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_D4_V2",
                     ),
                     min_instance_count=1,
                     name="workernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
@@ -2920,8 +2921,8 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             ],
         ),
         os_type="Linux",
-        storage_profile=azure_nextgen.hdinsight.v20180601preview.StorageProfileArgs(
-            storageaccounts=[azure_nextgen.hdinsight.v20180601preview.StorageAccountArgs(
+        storage_profile=azure_nextgen.hdinsight.StorageProfileArgs(
+            storageaccounts=[azure_nextgen.hdinsight.StorageAccountArgs(
                 container="containername",
                 is_default=True,
                 key="storageapikey*",
@@ -2945,7 +2946,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
     clusterName: "cluster1",
     properties: {
         clusterDefinition: {
@@ -3025,12 +3026,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.Cluster("cluster", new AzureNextGen.HDInsight.ClusterArgs
         {
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ClusterCreatePropertiesArgs
             {
-                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                ClusterDefinition = new AzureNextGen.HDInsight.Inputs.ClusterDefinitionArgs
                 {
                     Configurations = 
                     {
@@ -3044,20 +3045,20 @@ class MyStack : Stack
                     Kind = "Hadoop",
                 },
                 ClusterVersion = "3.6",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Large",
                             },
                             Name = "headnode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -3065,16 +3066,16 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 2,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Large",
                             },
                             Name = "workernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -3082,16 +3083,16 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 3,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Small",
                             },
                             Name = "zookeepernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -3103,11 +3104,11 @@ class MyStack : Stack
                 },
                 MinSupportedTlsVersion = "1.2",
                 OsType = "Linux",
-                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.HDInsight.Inputs.StorageProfileArgs
                 {
                     Storageaccounts = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        new AzureNextGen.HDInsight.Inputs.StorageAccountArgs
                         {
                             Container = "default8525",
                             IsDefault = true,
@@ -3134,7 +3135,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3230,10 +3231,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.Cluster("cluster",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ClusterCreatePropertiesArgs(
-        cluster_definition=azure_nextgen.hdinsight.v20180601preview.ClusterDefinitionArgs(
+    properties=azure_nextgen.hdinsight.ClusterCreatePropertiesArgs(
+        cluster_definition=azure_nextgen.hdinsight.ClusterDefinitionArgs(
             configurations={
                 "gateway": {
                     "restAuthCredential.isEnabled": True,
@@ -3244,41 +3245,41 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             kind="Hadoop",
         ),
         cluster_version="3.6",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
             roles=[
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Large",
                     ),
                     name="headnode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=2,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Large",
                     ),
                     name="workernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=3,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Small",
                     ),
                     name="zookeepernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
@@ -3289,8 +3290,8 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
         ),
         min_supported_tls_version="1.2",
         os_type="Linux",
-        storage_profile=azure_nextgen.hdinsight.v20180601preview.StorageProfileArgs(
-            storageaccounts=[azure_nextgen.hdinsight.v20180601preview.StorageAccountArgs(
+        storage_profile=azure_nextgen.hdinsight.StorageProfileArgs(
+            storageaccounts=[azure_nextgen.hdinsight.StorageAccountArgs(
                 container="default8525",
                 is_default=True,
                 key="storagekey",
@@ -3311,7 +3312,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
     clusterName: "cluster1",
     properties: {
         clusterDefinition: {
@@ -3397,12 +3398,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.Cluster("cluster", new AzureNextGen.HDInsight.ClusterArgs
         {
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ClusterCreatePropertiesArgs
             {
-                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                ClusterDefinition = new AzureNextGen.HDInsight.Inputs.ClusterDefinitionArgs
                 {
                     Configurations = 
                     {
@@ -3416,31 +3417,31 @@ class MyStack : Stack
                     Kind = "hadoop",
                 },
                 ClusterVersion = "3.6",
-                ComputeIsolationProperties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeIsolationPropertiesArgs
+                ComputeIsolationProperties = new AzureNextGen.HDInsight.Inputs.ComputeIsolationPropertiesArgs
                 {
                     EnableComputeIsolation = true,
                 },
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "standard_d3",
                             },
                             Name = "headnode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
-                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    SshProfile = new AzureNextGen.HDInsight.Inputs.SshProfileArgs
                                     {
                                         PublicKeys = 
                                         {
-                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            new AzureNextGen.HDInsight.Inputs.SshPublicKeyArgs
                                             {
                                                 CertificateData = "**********",
                                             },
@@ -3451,23 +3452,23 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 2,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "standard_d3",
                             },
                             Name = "workernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
-                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    SshProfile = new AzureNextGen.HDInsight.Inputs.SshProfileArgs
                                     {
                                         PublicKeys = 
                                         {
-                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            new AzureNextGen.HDInsight.Inputs.SshPublicKeyArgs
                                             {
                                                 CertificateData = "**********",
                                             },
@@ -3481,11 +3482,11 @@ class MyStack : Stack
                     },
                 },
                 OsType = "Linux",
-                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.HDInsight.Inputs.StorageProfileArgs
                 {
                     Storageaccounts = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        new AzureNextGen.HDInsight.Inputs.StorageAccountArgs
                         {
                             Container = "containername",
                             IsDefault = true,
@@ -3511,7 +3512,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3609,10 +3610,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.Cluster("cluster",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ClusterCreatePropertiesArgs(
-        cluster_definition=azure_nextgen.hdinsight.v20180601preview.ClusterDefinitionArgs(
+    properties=azure_nextgen.hdinsight.ClusterCreatePropertiesArgs(
+        cluster_definition=azure_nextgen.hdinsight.ClusterDefinitionArgs(
             configurations={
                 "gateway": {
                     "restAuthCredential.isEnabled": True,
@@ -3623,21 +3624,21 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             kind="hadoop",
         ),
         cluster_version="3.6",
-        compute_isolation_properties=azure_nextgen.hdinsight.v20180601preview.ComputeIsolationPropertiesArgs(
+        compute_isolation_properties=azure_nextgen.hdinsight.ComputeIsolationPropertiesArgs(
             enable_compute_isolation=True,
         ),
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
             roles=[
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="standard_d3",
                     ),
                     name="headnode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
-                            ssh_profile=azure_nextgen.hdinsight.v20180601preview.SshProfileArgs(
-                                public_keys=[azure_nextgen.hdinsight.v20180601preview.SshPublicKeyArgs(
+                            ssh_profile=azure_nextgen.hdinsight.SshProfileArgs(
+                                public_keys=[azure_nextgen.hdinsight.SshPublicKeyArgs(
                                     certificate_data="**********",
                                 )],
                             ),
@@ -3646,16 +3647,16 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                     ),
                     target_instance_count=2,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="standard_d3",
                     ),
                     name="workernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
-                            ssh_profile=azure_nextgen.hdinsight.v20180601preview.SshProfileArgs(
-                                public_keys=[azure_nextgen.hdinsight.v20180601preview.SshPublicKeyArgs(
+                            ssh_profile=azure_nextgen.hdinsight.SshProfileArgs(
+                                public_keys=[azure_nextgen.hdinsight.SshPublicKeyArgs(
                                     certificate_data="**********",
                                 )],
                             ),
@@ -3667,8 +3668,8 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             ],
         ),
         os_type="Linux",
-        storage_profile=azure_nextgen.hdinsight.v20180601preview.StorageProfileArgs(
-            storageaccounts=[azure_nextgen.hdinsight.v20180601preview.StorageAccountArgs(
+        storage_profile=azure_nextgen.hdinsight.StorageProfileArgs(
+            storageaccounts=[azure_nextgen.hdinsight.StorageAccountArgs(
                 container="containername",
                 is_default=True,
                 key="storage account key",
@@ -3688,7 +3689,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
     clusterName: "cluster1",
     properties: {
         clusterDefinition: {
@@ -3772,12 +3773,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.Cluster("cluster", new AzureNextGen.HDInsight.ClusterArgs
         {
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ClusterCreatePropertiesArgs
             {
-                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                ClusterDefinition = new AzureNextGen.HDInsight.Inputs.ClusterDefinitionArgs
                 {
                     Configurations = 
                     {
@@ -3791,20 +3792,20 @@ class MyStack : Stack
                     Kind = "Hadoop",
                 },
                 ClusterVersion = "3.6",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_DS14_v2",
                             },
                             Name = "headnode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -3812,16 +3813,16 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 2,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_DS14_v2",
                             },
                             Name = "workernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -3829,16 +3830,16 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 3,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_DS14_v2",
                             },
                             Name = "zookeepernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -3848,16 +3849,16 @@ class MyStack : Stack
                         },
                     },
                 },
-                DiskEncryptionProperties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.DiskEncryptionPropertiesArgs
+                DiskEncryptionProperties = new AzureNextGen.HDInsight.Inputs.DiskEncryptionPropertiesArgs
                 {
                     EncryptionAtHost = true,
                 },
                 OsType = "Linux",
-                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.HDInsight.Inputs.StorageProfileArgs
                 {
                     Storageaccounts = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        new AzureNextGen.HDInsight.Inputs.StorageAccountArgs
                         {
                             Container = "default8525",
                             IsDefault = true,
@@ -3884,7 +3885,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3982,10 +3983,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.Cluster("cluster",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ClusterCreatePropertiesArgs(
-        cluster_definition=azure_nextgen.hdinsight.v20180601preview.ClusterDefinitionArgs(
+    properties=azure_nextgen.hdinsight.ClusterCreatePropertiesArgs(
+        cluster_definition=azure_nextgen.hdinsight.ClusterDefinitionArgs(
             configurations={
                 "gateway": {
                     "restAuthCredential.isEnabled": True,
@@ -3996,41 +3997,41 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             kind="Hadoop",
         ),
         cluster_version="3.6",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
             roles=[
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_DS14_v2",
                     ),
                     name="headnode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=2,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_DS14_v2",
                     ),
                     name="workernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=3,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Standard_DS14_v2",
                     ),
                     name="zookeepernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
@@ -4039,12 +4040,12 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                 ),
             ],
         ),
-        disk_encryption_properties=azure_nextgen.hdinsight.v20180601preview.DiskEncryptionPropertiesArgs(
+        disk_encryption_properties=azure_nextgen.hdinsight.DiskEncryptionPropertiesArgs(
             encryption_at_host=True,
         ),
         os_type="Linux",
-        storage_profile=azure_nextgen.hdinsight.v20180601preview.StorageProfileArgs(
-            storageaccounts=[azure_nextgen.hdinsight.v20180601preview.StorageAccountArgs(
+        storage_profile=azure_nextgen.hdinsight.StorageProfileArgs(
+            storageaccounts=[azure_nextgen.hdinsight.StorageAccountArgs(
                 container="default8525",
                 is_default=True,
                 key="storagekey",
@@ -4065,7 +4066,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
     clusterName: "cluster1",
     properties: {
         clusterDefinition: {
@@ -4153,12 +4154,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.Cluster("cluster", new AzureNextGen.HDInsight.ClusterArgs
         {
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ClusterCreatePropertiesArgs
             {
-                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                ClusterDefinition = new AzureNextGen.HDInsight.Inputs.ClusterDefinitionArgs
                 {
                     Configurations = 
                     {
@@ -4172,20 +4173,20 @@ class MyStack : Stack
                     Kind = "Hadoop",
                 },
                 ClusterVersion = "3.6",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Large",
                             },
                             Name = "headnode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -4193,16 +4194,16 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 2,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Large",
                             },
                             Name = "workernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -4210,16 +4211,16 @@ class MyStack : Stack
                             },
                             TargetInstanceCount = 3,
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Small",
                             },
                             Name = "zookeepernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
                                     Username = "sshuser",
@@ -4229,16 +4230,16 @@ class MyStack : Stack
                         },
                     },
                 },
-                EncryptionInTransitProperties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.EncryptionInTransitPropertiesArgs
+                EncryptionInTransitProperties = new AzureNextGen.HDInsight.Inputs.EncryptionInTransitPropertiesArgs
                 {
                     IsEncryptionInTransitEnabled = true,
                 },
                 OsType = "Linux",
-                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.HDInsight.Inputs.StorageProfileArgs
                 {
                     Storageaccounts = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        new AzureNextGen.HDInsight.Inputs.StorageAccountArgs
                         {
                             Container = "default8525",
                             IsDefault = true,
@@ -4265,7 +4266,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4363,10 +4364,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.Cluster("cluster",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ClusterCreatePropertiesArgs(
-        cluster_definition=azure_nextgen.hdinsight.v20180601preview.ClusterDefinitionArgs(
+    properties=azure_nextgen.hdinsight.ClusterCreatePropertiesArgs(
+        cluster_definition=azure_nextgen.hdinsight.ClusterDefinitionArgs(
             configurations={
                 "gateway": {
                     "restAuthCredential.isEnabled": True,
@@ -4377,41 +4378,41 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             kind="Hadoop",
         ),
         cluster_version="3.6",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
             roles=[
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Large",
                     ),
                     name="headnode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=2,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Large",
                     ),
                     name="workernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
                     ),
                     target_instance_count=3,
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="Small",
                     ),
                     name="zookeepernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
                             username="sshuser",
                         ),
@@ -4420,12 +4421,12 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                 ),
             ],
         ),
-        encryption_in_transit_properties=azure_nextgen.hdinsight.v20180601preview.EncryptionInTransitPropertiesArgs(
+        encryption_in_transit_properties=azure_nextgen.hdinsight.EncryptionInTransitPropertiesArgs(
             is_encryption_in_transit_enabled=True,
         ),
         os_type="Linux",
-        storage_profile=azure_nextgen.hdinsight.v20180601preview.StorageProfileArgs(
-            storageaccounts=[azure_nextgen.hdinsight.v20180601preview.StorageAccountArgs(
+        storage_profile=azure_nextgen.hdinsight.StorageProfileArgs(
+            storageaccounts=[azure_nextgen.hdinsight.StorageAccountArgs(
                 container="default8525",
                 is_default=True,
                 key="storagekey",
@@ -4446,7 +4447,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
     clusterName: "cluster1",
     properties: {
         clusterDefinition: {
@@ -4534,12 +4535,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.Cluster("cluster", new AzureNextGen.HDInsight.ClusterArgs
         {
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ClusterCreatePropertiesArgs
             {
-                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                ClusterDefinition = new AzureNextGen.HDInsight.Inputs.ClusterDefinitionArgs
                 {
                     Configurations = 
                     {
@@ -4553,27 +4554,27 @@ class MyStack : Stack
                     Kind = "hadoop",
                 },
                 ClusterVersion = "3.6",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "standard_d3",
                             },
                             Name = "headnode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
-                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    SshProfile = new AzureNextGen.HDInsight.Inputs.SshProfileArgs
                                     {
                                         PublicKeys = 
                                         {
-                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            new AzureNextGen.HDInsight.Inputs.SshPublicKeyArgs
                                             {
                                                 CertificateData = "**********",
                                             },
@@ -4583,29 +4584,29 @@ class MyStack : Stack
                                 },
                             },
                             TargetInstanceCount = 2,
-                            VirtualNetworkProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.VirtualNetworkProfileArgs
+                            VirtualNetworkProfile = new AzureNextGen.HDInsight.Inputs.VirtualNetworkProfileArgs
                             {
                                 Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
                                 Subnet = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
                             },
                         },
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "standard_d3",
                             },
                             Name = "workernode",
-                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            OsProfile = new AzureNextGen.HDInsight.Inputs.OsProfileArgs
                             {
-                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.Inputs.LinuxOperatingSystemProfileArgs
                                 {
                                     Password = "**********",
-                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    SshProfile = new AzureNextGen.HDInsight.Inputs.SshProfileArgs
                                     {
                                         PublicKeys = 
                                         {
-                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            new AzureNextGen.HDInsight.Inputs.SshPublicKeyArgs
                                             {
                                                 CertificateData = "**********",
                                             },
@@ -4615,7 +4616,7 @@ class MyStack : Stack
                                 },
                             },
                             TargetInstanceCount = 2,
-                            VirtualNetworkProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.VirtualNetworkProfileArgs
+                            VirtualNetworkProfile = new AzureNextGen.HDInsight.Inputs.VirtualNetworkProfileArgs
                             {
                                 Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
                                 Subnet = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
@@ -4623,17 +4624,17 @@ class MyStack : Stack
                         },
                     },
                 },
-                NetworkProperties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.NetworkPropertiesArgs
+                NetworkProperties = new AzureNextGen.HDInsight.Inputs.NetworkPropertiesArgs
                 {
                     PrivateLink = "Enabled",
                     ResourceProviderConnection = "Outbound",
                 },
                 OsType = "Linux",
-                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.HDInsight.Inputs.StorageProfileArgs
                 {
                     Storageaccounts = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        new AzureNextGen.HDInsight.Inputs.StorageAccountArgs
                         {
                             Container = "containername",
                             IsDefault = true,
@@ -4659,7 +4660,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4766,10 +4767,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.Cluster("cluster",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ClusterCreatePropertiesArgs(
-        cluster_definition=azure_nextgen.hdinsight.v20180601preview.ClusterDefinitionArgs(
+    properties=azure_nextgen.hdinsight.ClusterCreatePropertiesArgs(
+        cluster_definition=azure_nextgen.hdinsight.ClusterDefinitionArgs(
             configurations={
                 "gateway": {
                     "restAuthCredential.isEnabled": True,
@@ -4780,18 +4781,18 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
             kind="hadoop",
         ),
         cluster_version="3.6",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
             roles=[
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="standard_d3",
                     ),
                     name="headnode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
-                            ssh_profile=azure_nextgen.hdinsight.v20180601preview.SshProfileArgs(
-                                public_keys=[azure_nextgen.hdinsight.v20180601preview.SshPublicKeyArgs(
+                            ssh_profile=azure_nextgen.hdinsight.SshProfileArgs(
+                                public_keys=[azure_nextgen.hdinsight.SshPublicKeyArgs(
                                     certificate_data="**********",
                                 )],
                             ),
@@ -4799,21 +4800,21 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                         ),
                     ),
                     target_instance_count=2,
-                    virtual_network_profile=azure_nextgen.hdinsight.v20180601preview.VirtualNetworkProfileArgs(
+                    virtual_network_profile=azure_nextgen.hdinsight.VirtualNetworkProfileArgs(
                         id="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
                         subnet="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
                     ),
                 ),
-                azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                    hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+                azure_nextgen.hdinsight.RoleArgs(
+                    hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                         vm_size="standard_d3",
                     ),
                     name="workernode",
-                    os_profile=azure_nextgen.hdinsight.v20180601preview.OsProfileArgs(
-                        linux_operating_system_profile=azure_nextgen.hdinsight.v20180601preview.LinuxOperatingSystemProfileArgs(
+                    os_profile=azure_nextgen.hdinsight.OsProfileArgs(
+                        linux_operating_system_profile=azure_nextgen.hdinsight.LinuxOperatingSystemProfileArgs(
                             password="**********",
-                            ssh_profile=azure_nextgen.hdinsight.v20180601preview.SshProfileArgs(
-                                public_keys=[azure_nextgen.hdinsight.v20180601preview.SshPublicKeyArgs(
+                            ssh_profile=azure_nextgen.hdinsight.SshProfileArgs(
+                                public_keys=[azure_nextgen.hdinsight.SshPublicKeyArgs(
                                     certificate_data="**********",
                                 )],
                             ),
@@ -4821,20 +4822,20 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
                         ),
                     ),
                     target_instance_count=2,
-                    virtual_network_profile=azure_nextgen.hdinsight.v20180601preview.VirtualNetworkProfileArgs(
+                    virtual_network_profile=azure_nextgen.hdinsight.VirtualNetworkProfileArgs(
                         id="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
                         subnet="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
                     ),
                 ),
             ],
         ),
-        network_properties=azure_nextgen.hdinsight.v20180601preview.NetworkPropertiesArgs(
+        network_properties=azure_nextgen.hdinsight.NetworkPropertiesArgs(
             private_link="Enabled",
             resource_provider_connection="Outbound",
         ),
         os_type="Linux",
-        storage_profile=azure_nextgen.hdinsight.v20180601preview.StorageProfileArgs(
-            storageaccounts=[azure_nextgen.hdinsight.v20180601preview.StorageAccountArgs(
+        storage_profile=azure_nextgen.hdinsight.StorageProfileArgs(
+            storageaccounts=[azure_nextgen.hdinsight.StorageAccountArgs(
                 container="containername",
                 is_default=True,
                 key="storage account key",
@@ -4854,7 +4855,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
     clusterName: "cluster1",
     properties: {
         clusterDefinition: {
@@ -4945,7 +4946,7 @@ const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4953,11 +4954,11 @@ const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4978,7 +4979,7 @@ const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -5047,7 +5048,7 @@ const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -5086,7 +5087,7 @@ const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -5109,11 +5110,11 @@ const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", 
 
 ## Cluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Cluster resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Cluster resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -14775,7 +14776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hdinsight/v20180601preview:Cluster cluster1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.HDInsight/clusters/cluster1 
+$ pulumi import azure-nextgen:hdinsight:Cluster cluster1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.HDInsight/clusters/cluster1 
 ```
 
 

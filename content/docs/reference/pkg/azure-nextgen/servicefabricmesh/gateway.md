@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.Gateway resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 This type describes a gateway resource.
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,45 +27,45 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gateway = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Gateway("gateway", new AzureNextGen.ServiceFabricMesh.V20180901Preview.GatewayArgs
+        var gateway = new AzureNextGen.ServiceFabricMesh.Gateway("gateway", new AzureNextGen.ServiceFabricMesh.GatewayArgs
         {
             Description = "Service Fabric Mesh sample gateway.",
-            DestinationNetwork = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.NetworkRefArgs
+            DestinationNetwork = new AzureNextGen.ServiceFabricMesh.Inputs.NetworkRefArgs
             {
                 Name = "helloWorldNetwork",
             },
             GatewayResourceName = "sampleGateway",
             Http = 
             {
-                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpConfigArgs
+                new AzureNextGen.ServiceFabricMesh.Inputs.HttpConfigArgs
                 {
                     Hosts = 
                     {
-                        new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpHostConfigArgs
+                        new AzureNextGen.ServiceFabricMesh.Inputs.HttpHostConfigArgs
                         {
                             Name = "contoso.com",
                             Routes = 
                             {
-                                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteConfigArgs
+                                new AzureNextGen.ServiceFabricMesh.Inputs.HttpRouteConfigArgs
                                 {
-                                    Destination = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.GatewayDestinationArgs
+                                    Destination = new AzureNextGen.ServiceFabricMesh.Inputs.GatewayDestinationArgs
                                     {
                                         ApplicationName = "httpHelloWorldApp",
                                         EndpointName = "indexHttpEndpoint",
                                         ServiceName = "indexService",
                                     },
-                                    Match = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteMatchRuleArgs
+                                    Match = new AzureNextGen.ServiceFabricMesh.Inputs.HttpRouteMatchRuleArgs
                                     {
                                         Headers = 
                                         {
-                                            new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteMatchHeaderArgs
+                                            new AzureNextGen.ServiceFabricMesh.Inputs.HttpRouteMatchHeaderArgs
                                             {
                                                 Name = "accept",
                                                 Type = "exact",
                                                 Value = "application/json",
                                             },
                                         },
-                                        Path = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteMatchPathArgs
+                                        Path = new AzureNextGen.ServiceFabricMesh.Inputs.HttpRouteMatchPathArgs
                                         {
                                             Rewrite = "/",
                                             Type = "prefix",
@@ -82,16 +83,16 @@ class MyStack : Stack
             },
             Location = "EastUS",
             ResourceGroupName = "sbz_demo",
-            SourceNetwork = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.NetworkRefArgs
+            SourceNetwork = new AzureNextGen.ServiceFabricMesh.Inputs.NetworkRefArgs
             {
                 Name = "Open",
             },
             Tags = ,
             Tcp = 
             {
-                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.TcpConfigArgs
+                new AzureNextGen.ServiceFabricMesh.Inputs.TcpConfigArgs
                 {
-                    Destination = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.GatewayDestinationArgs
+                    Destination = new AzureNextGen.ServiceFabricMesh.Inputs.GatewayDestinationArgs
                     {
                         ApplicationName = "helloWorldApp",
                         EndpointName = "helloWorldListener",
@@ -116,7 +117,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh/v20180901preview"
+	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -198,28 +199,28 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gateway = azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway",
+gateway = azure_nextgen.servicefabricmesh.Gateway("gateway",
     description="Service Fabric Mesh sample gateway.",
-    destination_network=azure_nextgen.servicefabricmesh.v20180901preview.NetworkRefArgs(
+    destination_network=azure_nextgen.servicefabricmesh.NetworkRefArgs(
         name="helloWorldNetwork",
     ),
     gateway_resource_name="sampleGateway",
-    http=[azure_nextgen.servicefabricmesh.v20180901preview.HttpConfigArgs(
-        hosts=[azure_nextgen.servicefabricmesh.v20180901preview.HttpHostConfigArgs(
+    http=[azure_nextgen.servicefabricmesh.HttpConfigArgs(
+        hosts=[azure_nextgen.servicefabricmesh.HttpHostConfigArgs(
             name="contoso.com",
-            routes=[azure_nextgen.servicefabricmesh.v20180901preview.HttpRouteConfigArgs(
-                destination=azure_nextgen.servicefabricmesh.v20180901preview.GatewayDestinationArgs(
+            routes=[azure_nextgen.servicefabricmesh.HttpRouteConfigArgs(
+                destination=azure_nextgen.servicefabricmesh.GatewayDestinationArgs(
                     application_name="httpHelloWorldApp",
                     endpoint_name="indexHttpEndpoint",
                     service_name="indexService",
                 ),
-                match=azure_nextgen.servicefabricmesh.v20180901preview.HttpRouteMatchRuleArgs(
-                    headers=[azure_nextgen.servicefabricmesh.v20180901preview.HttpRouteMatchHeaderArgs(
+                match=azure_nextgen.servicefabricmesh.HttpRouteMatchRuleArgs(
+                    headers=[azure_nextgen.servicefabricmesh.HttpRouteMatchHeaderArgs(
                         name="accept",
                         type="exact",
                         value="application/json",
                     )],
-                    path=azure_nextgen.servicefabricmesh.v20180901preview.HttpRouteMatchPathArgs(
+                    path=azure_nextgen.servicefabricmesh.HttpRouteMatchPathArgs(
                         rewrite="/",
                         type="prefix",
                         value="/index",
@@ -233,12 +234,12 @@ gateway = azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway",
     )],
     location="EastUS",
     resource_group_name="sbz_demo",
-    source_network=azure_nextgen.servicefabricmesh.v20180901preview.NetworkRefArgs(
+    source_network=azure_nextgen.servicefabricmesh.NetworkRefArgs(
         name="Open",
     ),
     tags={},
-    tcp=[azure_nextgen.servicefabricmesh.v20180901preview.TcpConfigArgs(
-        destination=azure_nextgen.servicefabricmesh.v20180901preview.GatewayDestinationArgs(
+    tcp=[azure_nextgen.servicefabricmesh.TcpConfigArgs(
+        destination=azure_nextgen.servicefabricmesh.GatewayDestinationArgs(
             application_name="helloWorldApp",
             endpoint_name="helloWorldListener",
             service_name="helloWorldService",
@@ -257,7 +258,7 @@ gateway = azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const gateway = new azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway", {
+const gateway = new azure_nextgen.servicefabricmesh.Gateway("gateway", {
     description: "Service Fabric Mesh sample gateway.",
     destinationNetwork: {
         name: "helloWorldNetwork",
@@ -319,7 +320,7 @@ const gateway = new azure_nextgen.servicefabricmesh.v20180901preview.Gateway("ga
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">GatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -327,11 +328,11 @@ const gateway = new azure_nextgen.servicefabricmesh.v20180901preview.Gateway("ga
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">GatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Gateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Gateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">GatewayArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -352,7 +353,7 @@ const gateway = new azure_nextgen.servicefabricmesh.v20180901preview.Gateway("ga
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GatewayArgs</span>
+        <span class="property-type"><a href="#inputs">GatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -421,7 +422,7 @@ const gateway = new azure_nextgen.servicefabricmesh.v20180901preview.Gateway("ga
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GatewayArgs</span>
+        <span class="property-type"><a href="#inputs">GatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -460,7 +461,7 @@ const gateway = new azure_nextgen.servicefabricmesh.v20180901preview.Gateway("ga
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GatewayArgs</span>
+        <span class="property-type"><a href="#inputs">GatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -483,11 +484,11 @@ const gateway = new azure_nextgen.servicefabricmesh.v20180901preview.Gateway("ga
 
 ## Gateway Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Gateway resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Gateway resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3517,7 +3518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:Gateway sampleGateway /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/gateways/sampleGateway 
+$ pulumi import azure-nextgen:servicefabricmesh:Gateway sampleGateway /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/gateways/sampleGateway 
 ```
 
 

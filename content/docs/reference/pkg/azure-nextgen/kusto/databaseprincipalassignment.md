@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kusto.DatabasePrincipalAssignmen
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a database principal assignment.
-Latest API Version: 2020-09-18.
+API Version: 2020-09-18.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databasePrincipalAssignment = new AzureNextGen.Kusto.Latest.DatabasePrincipalAssignment("databasePrincipalAssignment", new AzureNextGen.Kusto.Latest.DatabasePrincipalAssignmentArgs
+        var databasePrincipalAssignment = new AzureNextGen.Kusto.DatabasePrincipalAssignment("databasePrincipalAssignment", new AzureNextGen.Kusto.DatabasePrincipalAssignmentArgs
         {
             ClusterName = "kustoclusterrptest4",
             DatabaseName = "Kustodatabase8",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto/latest"
+	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_principal_assignment = azure_nextgen.kusto.latest.DatabasePrincipalAssignment("databasePrincipalAssignment",
+database_principal_assignment = azure_nextgen.kusto.DatabasePrincipalAssignment("databasePrincipalAssignment",
     cluster_name="kustoclusterrptest4",
     database_name="Kustodatabase8",
     principal_assignment_name="kustoprincipal1",
@@ -105,7 +105,7 @@ database_principal_assignment = azure_nextgen.kusto.latest.DatabasePrincipalAssi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databasePrincipalAssignment = new azure_nextgen.kusto.latest.DatabasePrincipalAssignment("databasePrincipalAssignment", {
+const databasePrincipalAssignment = new azure_nextgen.kusto.DatabasePrincipalAssignment("databasePrincipalAssignment", {
     clusterName: "kustoclusterrptest4",
     databaseName: "Kustodatabase8",
     principalAssignmentName: "kustoprincipal1",
@@ -128,7 +128,7 @@ const databasePrincipalAssignment = new azure_nextgen.kusto.latest.DatabasePrinc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DatabasePrincipalAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -136,11 +136,11 @@ const databasePrincipalAssignment = new azure_nextgen.kusto.latest.DatabasePrinc
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DatabasePrincipalAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabasePrincipalAssignment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabasePrincipalAssignment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DatabasePrincipalAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -161,7 +161,7 @@ const databasePrincipalAssignment = new azure_nextgen.kusto.latest.DatabasePrinc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DatabasePrincipalAssignmentArgs</span>
+        <span class="property-type"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -230,7 +230,7 @@ const databasePrincipalAssignment = new azure_nextgen.kusto.latest.DatabasePrinc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DatabasePrincipalAssignmentArgs</span>
+        <span class="property-type"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -269,7 +269,7 @@ const databasePrincipalAssignment = new azure_nextgen.kusto.latest.DatabasePrinc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DatabasePrincipalAssignmentArgs</span>
+        <span class="property-type"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -292,11 +292,11 @@ const databasePrincipalAssignment = new azure_nextgen.kusto.latest.DatabasePrinc
 
 ## DatabasePrincipalAssignment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DatabasePrincipalAssignment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DatabasePrincipalAssignment resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -990,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kusto/latest:DatabasePrincipalAssignment kustoclusterrptest4/Kustodatabase8/kustoprincipal1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/kustoclusterrptest4/Databases/Kustodatabase8/PrincipalAssignments/kustoprincipal1 
+$ pulumi import azure-nextgen:kusto:DatabasePrincipalAssignment kustoclusterrptest4/Kustodatabase8/kustoprincipal1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/kustoclusterrptest4/Databases/Kustodatabase8/PrincipalAssignments/kustoprincipal1 
 ```
 
 

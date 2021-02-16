@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.ComponentLinkedStorageA
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Application Insights component linked storage accounts
+API Version: 2020-03-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var componentLinkedStorageAccount = new AzureNextGen.Insights.V20200301Preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount", new AzureNextGen.Insights.V20200301Preview.ComponentLinkedStorageAccountArgs
+        var componentLinkedStorageAccount = new AzureNextGen.Insights.ComponentLinkedStorageAccount("componentLinkedStorageAccount", new AzureNextGen.Insights.ComponentLinkedStorageAccountArgs
         {
             LinkedStorageAccount = "/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
             ResourceGroupName = "someResourceGroupName",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20200301preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-component_linked_storage_account = azure_nextgen.insights.v20200301preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount",
+component_linked_storage_account = azure_nextgen.insights.ComponentLinkedStorageAccount("componentLinkedStorageAccount",
     linked_storage_account="/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
     resource_group_name="someResourceGroupName",
     resource_name="myComponent",
@@ -92,7 +93,7 @@ component_linked_storage_account = azure_nextgen.insights.v20200301preview.Compo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const componentLinkedStorageAccount = new azure_nextgen.insights.v20200301preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount", {
+const componentLinkedStorageAccount = new azure_nextgen.insights.ComponentLinkedStorageAccount("componentLinkedStorageAccount", {
     linkedStorageAccount: "/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
     resourceGroupName: "someResourceGroupName",
     resourceName: "myComponent",
@@ -111,7 +112,7 @@ const componentLinkedStorageAccount = new azure_nextgen.insights.v20200301previe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ComponentLinkedStorageAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ComponentLinkedStorageAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ComponentLinkedStorageAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ComponentLinkedStorageAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -119,11 +120,11 @@ const componentLinkedStorageAccount = new azure_nextgen.insights.v20200301previe
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewComponentLinkedStorageAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ComponentLinkedStorageAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ComponentLinkedStorageAccount</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewComponentLinkedStorageAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ComponentLinkedStorageAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ComponentLinkedStorageAccount</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ComponentLinkedStorageAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ComponentLinkedStorageAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ComponentLinkedStorageAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ComponentLinkedStorageAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -144,7 +145,7 @@ const componentLinkedStorageAccount = new azure_nextgen.insights.v20200301previe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ComponentLinkedStorageAccountArgs</span>
+        <span class="property-type"><a href="#inputs">ComponentLinkedStorageAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -213,7 +214,7 @@ const componentLinkedStorageAccount = new azure_nextgen.insights.v20200301previe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ComponentLinkedStorageAccountArgs</span>
+        <span class="property-type"><a href="#inputs">ComponentLinkedStorageAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -252,7 +253,7 @@ const componentLinkedStorageAccount = new azure_nextgen.insights.v20200301previe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ComponentLinkedStorageAccountArgs</span>
+        <span class="property-type"><a href="#inputs">ComponentLinkedStorageAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -275,11 +276,11 @@ const componentLinkedStorageAccount = new azure_nextgen.insights.v20200301previe
 
 ## ComponentLinkedStorageAccount Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ComponentLinkedStorageAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ComponentLinkedStorageAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -601,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20200301preview:ComponentLinkedStorageAccount serviceprofile /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupNameproviders/microsoft.insights/components/myComponent/linkedStorageAccounts/serviceprofiler 
+$ pulumi import azure-nextgen:insights:ComponentLinkedStorageAccount serviceprofile /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupNameproviders/microsoft.insights/components/myComponent/linkedStorageAccounts/serviceprofiler 
 ```
 
 

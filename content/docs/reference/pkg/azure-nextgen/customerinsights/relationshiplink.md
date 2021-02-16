@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.RelationshipLin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The relationship link resource format.
-Latest API Version: 2017-04-26.
+API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var relationshipLink = new AzureNextGen.CustomerInsights.Latest.RelationshipLink("relationshipLink", new AzureNextGen.CustomerInsights.Latest.RelationshipLinkArgs
+        var relationshipLink = new AzureNextGen.CustomerInsights.RelationshipLink("relationshipLink", new AzureNextGen.CustomerInsights.RelationshipLinkArgs
         {
             Description = 
             {
@@ -41,7 +41,7 @@ class MyStack : Stack
             InteractionType = "testInteraction4332",
             ProfilePropertyReferences = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.ParticipantProfilePropertyReferenceArgs
+                new AzureNextGen.CustomerInsights.Inputs.ParticipantProfilePropertyReferenceArgs
                 {
                     InteractionPropertyName = "profile1",
                     ProfilePropertyName = "ProfileId",
@@ -49,7 +49,7 @@ class MyStack : Stack
             },
             RelatedProfilePropertyReferences = 
             {
-                new AzureNextGen.CustomerInsights.Latest.Inputs.ParticipantProfilePropertyReferenceArgs
+                new AzureNextGen.CustomerInsights.Inputs.ParticipantProfilePropertyReferenceArgs
                 {
                     InteractionPropertyName = "profile1",
                     ProfilePropertyName = "ProfileId",
@@ -73,7 +73,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -121,7 +121,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-relationship_link = azure_nextgen.customerinsights.latest.RelationshipLink("relationshipLink",
+relationship_link = azure_nextgen.customerinsights.RelationshipLink("relationshipLink",
     description={
         "en-us": "Link Description",
     },
@@ -130,11 +130,11 @@ relationship_link = azure_nextgen.customerinsights.latest.RelationshipLink("rela
     },
     hub_name="sdkTestHub",
     interaction_type="testInteraction4332",
-    profile_property_references=[azure_nextgen.customerinsights.latest.ParticipantProfilePropertyReferenceArgs(
+    profile_property_references=[azure_nextgen.customerinsights.ParticipantProfilePropertyReferenceArgs(
         interaction_property_name="profile1",
         profile_property_name="ProfileId",
     )],
-    related_profile_property_references=[azure_nextgen.customerinsights.latest.ParticipantProfilePropertyReferenceArgs(
+    related_profile_property_references=[azure_nextgen.customerinsights.ParticipantProfilePropertyReferenceArgs(
         interaction_property_name="profile1",
         profile_property_name="ProfileId",
     )],
@@ -152,7 +152,7 @@ relationship_link = azure_nextgen.customerinsights.latest.RelationshipLink("rela
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const relationshipLink = new azure_nextgen.customerinsights.latest.RelationshipLink("relationshipLink", {
+const relationshipLink = new azure_nextgen.customerinsights.RelationshipLink("relationshipLink", {
     description: {
         "en-us": "Link Description",
     },
@@ -186,7 +186,7 @@ const relationshipLink = new azure_nextgen.customerinsights.latest.RelationshipL
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RelationshipLinkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RelationshipLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -194,11 +194,11 @@ const relationshipLink = new azure_nextgen.customerinsights.latest.RelationshipL
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRelationshipLink</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RelationshipLinkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RelationshipLink</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRelationshipLink</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RelationshipLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RelationshipLink</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RelationshipLinkArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RelationshipLinkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -219,7 +219,7 @@ const relationshipLink = new azure_nextgen.customerinsights.latest.RelationshipL
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RelationshipLinkArgs</span>
+        <span class="property-type"><a href="#inputs">RelationshipLinkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -288,7 +288,7 @@ const relationshipLink = new azure_nextgen.customerinsights.latest.RelationshipL
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RelationshipLinkArgs</span>
+        <span class="property-type"><a href="#inputs">RelationshipLinkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -327,7 +327,7 @@ const relationshipLink = new azure_nextgen.customerinsights.latest.RelationshipL
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RelationshipLinkArgs</span>
+        <span class="property-type"><a href="#inputs">RelationshipLinkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -350,11 +350,11 @@ const relationshipLink = new azure_nextgen.customerinsights.latest.RelationshipL
 
 ## RelationshipLink Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RelationshipLink resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RelationshipLink resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1542,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:customerinsights/latest:RelationshipLink sdkTestHub/Somelink /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/relationshipLinks/Somelink 
+$ pulumi import azure-nextgen:customerinsights:RelationshipLink sdkTestHub/Somelink /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/relationshipLinks/Somelink 
 ```
 
 

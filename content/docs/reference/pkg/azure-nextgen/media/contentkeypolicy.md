@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.ContentKeyPolicy resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Content Key Policy resource.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,31 +27,31 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentKeyPolicy = new AzureNextGen.Media.Latest.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.Latest.ContentKeyPolicyArgs
+        var contentKeyPolicy = new AzureNextGen.Media.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.ContentKeyPolicyArgs
         {
             AccountName = "contosomedia",
             ContentKeyPolicyName = "PolicyWithClearKeyOptionAndSwtTokenRestriction",
             Description = "ArmPolicyDescription",
             Options = 
             {
-                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNextGen.Media.Inputs.ContentKeyPolicyClearKeyConfigurationArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
                     },
                     Name = "ClearKeyOption",
-                    Restriction = 
+                    Restriction = new AzureNextGen.Media.Inputs.ContentKeyPolicyTokenRestrictionArgs
                     {
-                        { "audience", "urn:audience" },
-                        { "issuer", "urn:issuer" },
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
-                        { "primaryVerificationKey", 
+                        Audience = "urn:audience",
+                        Issuer = "urn:issuer",
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+                        PrimaryVerificationKey = new AzureNextGen.Media.Inputs.ContentKeyPolicySymmetricTokenKeyArgs
                         {
-                            { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
-                            { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
-                        } },
-                        { "restrictionTokenType", "Swt" },
+                            KeyValue = "AAAAAAAAAAAAAAAAAAAAAA==",
+                            OdataType = "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
+                        },
+                        RestrictionTokenType = "Swt",
                     },
                 },
             },
@@ -66,7 +66,50 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewContentKeyPolicy(ctx, "contentKeyPolicy", &media.ContentKeyPolicyArgs{
+			AccountName:          pulumi.String("contosomedia"),
+			ContentKeyPolicyName: pulumi.String("PolicyWithClearKeyOptionAndSwtTokenRestriction"),
+			Description:          pulumi.String("ArmPolicyDescription"),
+			Options: media.ContentKeyPolicyOptionArray{
+				&media.ContentKeyPolicyOptionArgs{
+					Configuration: &media.ContentKeyPolicyClearKeyConfigurationArgs{
+						OdataType: pulumi.String("#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration"),
+					},
+					Name: pulumi.String("ClearKeyOption"),
+					Restriction: &media.ContentKeyPolicyTokenRestrictionArgs{
+						Audience:  pulumi.String("urn:audience"),
+						Issuer:    pulumi.String("urn:issuer"),
+						OdataType: pulumi.String("#Microsoft.Media.ContentKeyPolicyTokenRestriction"),
+						PrimaryVerificationKey: &media.ContentKeyPolicySymmetricTokenKeyArgs{
+							KeyValue:  pulumi.String("AAAAAAAAAAAAAAAAAAAAAA=="),
+							OdataType: pulumi.String("#Microsoft.Media.ContentKeyPolicySymmetricTokenKey"),
+						},
+						RestrictionTokenType: pulumi.String("Swt"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("contoso"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -75,25 +118,25 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy",
+content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
     account_name="contosomedia",
     content_key_policy_name="PolicyWithClearKeyOptionAndSwtTokenRestriction",
     description="ArmPolicyDescription",
-    options=[azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
-        configuration={
-            "odataType": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
-        },
+    options=[azure_nextgen.media.ContentKeyPolicyOptionArgs(
+        configuration=azure_nextgen.media.ContentKeyPolicyClearKeyConfigurationArgs(
+            odata_type="#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
+        ),
         name="ClearKeyOption",
-        restriction={
-            "audience": "urn:audience",
-            "issuer": "urn:issuer",
-            "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-            "primaryVerificationKey": {
-                "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
-                "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
-            },
-            "restrictionTokenType": "Swt",
-        },
+        restriction=azure_nextgen.media.ContentKeyPolicyTokenRestrictionArgs(
+            audience="urn:audience",
+            issuer="urn:issuer",
+            odata_type="#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+            primary_verification_key=azure_nextgen.media.ContentKeyPolicySymmetricTokenKeyArgs(
+                key_value="AAAAAAAAAAAAAAAAAAAAAA==",
+                odata_type="#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
+            ),
+            restriction_token_type="Swt",
+        ),
     )],
     resource_group_name="contoso")
 
@@ -107,7 +150,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
+const contentKeyPolicy = new azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
     contentKeyPolicyName: "PolicyWithClearKeyOptionAndSwtTokenRestriction",
     description: "ArmPolicyDescription",
@@ -144,30 +187,30 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentKeyPolicy = new AzureNextGen.Media.Latest.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.Latest.ContentKeyPolicyArgs
+        var contentKeyPolicy = new AzureNextGen.Media.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.ContentKeyPolicyArgs
         {
             AccountName = "contosomedia",
             ContentKeyPolicyName = "PolicyWithPlayReadyOptionAndOpenRestriction",
             Description = "ArmPolicyDescription",
             Options = 
             {
-                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNextGen.Media.Inputs.ContentKeyPolicyPlayReadyConfigurationArgs
                     {
-                        { "licenses", 
+                        Licenses = 
                         {
-                            new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyPlayReadyLicenseArgs
+                            new AzureNextGen.Media.Inputs.ContentKeyPolicyPlayReadyLicenseArgs
                             {
                                 AllowTestDevices = true,
                                 BeginDate = "2017-10-16T18:22:53.46Z",
-                                ContentKeyLocation = 
+                                ContentKeyLocation = new AzureNextGen.Media.Inputs.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs
                                 {
-                                    { "odataType", "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader" },
+                                    OdataType = "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader",
                                 },
                                 ContentType = "UltraVioletDownload",
                                 LicenseType = "Persistent",
-                                PlayRight = new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyPlayReadyPlayRightArgs
+                                PlayRight = new AzureNextGen.Media.Inputs.ContentKeyPolicyPlayReadyPlayRightArgs
                                 {
                                     AllowPassingVideoContentToUnknownOutput = "NotAllowed",
                                     DigitalVideoOnlyContentRestriction = false,
@@ -176,13 +219,13 @@ class MyStack : Stack
                                     ScmsRestriction = 2,
                                 },
                             },
-                        } },
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration" },
+                        },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
                     },
                     Name = "ArmPolicyOptionName",
-                    Restriction = 
+                    Restriction = new AzureNextGen.Media.Inputs.ContentKeyPolicyOpenRestrictionArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyOpenRestriction" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
                     },
                 },
             },
@@ -197,7 +240,61 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewContentKeyPolicy(ctx, "contentKeyPolicy", &media.ContentKeyPolicyArgs{
+			AccountName:          pulumi.String("contosomedia"),
+			ContentKeyPolicyName: pulumi.String("PolicyWithPlayReadyOptionAndOpenRestriction"),
+			Description:          pulumi.String("ArmPolicyDescription"),
+			Options: media.ContentKeyPolicyOptionArray{
+				&media.ContentKeyPolicyOptionArgs{
+					Configuration: &media.ContentKeyPolicyPlayReadyConfigurationArgs{
+						Licenses: media.ContentKeyPolicyPlayReadyLicenseArray{
+							&media.ContentKeyPolicyPlayReadyLicenseArgs{
+								AllowTestDevices: pulumi.Bool(true),
+								BeginDate:        pulumi.String("2017-10-16T18:22:53.46Z"),
+								ContentKeyLocation: &media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs{
+									OdataType: pulumi.String("#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader"),
+								},
+								ContentType: pulumi.String("UltraVioletDownload"),
+								LicenseType: pulumi.String("Persistent"),
+								PlayRight: &media.ContentKeyPolicyPlayReadyPlayRightArgs{
+									AllowPassingVideoContentToUnknownOutput:            pulumi.String("NotAllowed"),
+									DigitalVideoOnlyContentRestriction:                 pulumi.Bool(false),
+									ImageConstraintForAnalogComponentVideoRestriction:  pulumi.Bool(true),
+									ImageConstraintForAnalogComputerMonitorRestriction: pulumi.Bool(false),
+									ScmsRestriction: pulumi.Int(2),
+								},
+							},
+						},
+						OdataType: pulumi.String("#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration"),
+					},
+					Name: pulumi.String("ArmPolicyOptionName"),
+					Restriction: &media.ContentKeyPolicyOpenRestrictionArgs{
+						OdataType: pulumi.String("#Microsoft.Media.ContentKeyPolicyOpenRestriction"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("contoso"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -206,21 +303,21 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy",
+content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
     account_name="contosomedia",
     content_key_policy_name="PolicyWithPlayReadyOptionAndOpenRestriction",
     description="ArmPolicyDescription",
-    options=[azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
-        configuration={
-            "licenses": [azure_nextgen.media.latest.ContentKeyPolicyPlayReadyLicenseArgs(
+    options=[azure_nextgen.media.ContentKeyPolicyOptionArgs(
+        configuration=azure_nextgen.media.ContentKeyPolicyPlayReadyConfigurationArgs(
+            licenses=[azure_nextgen.media.ContentKeyPolicyPlayReadyLicenseArgs(
                 allow_test_devices=True,
                 begin_date="2017-10-16T18:22:53.46Z",
-                content_key_location={
-                    "odataType": "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader",
-                },
+                content_key_location=azure_nextgen.media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs(
+                    odata_type="#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader",
+                ),
                 content_type="UltraVioletDownload",
                 license_type="Persistent",
-                play_right=azure_nextgen.media.latest.ContentKeyPolicyPlayReadyPlayRightArgs(
+                play_right=azure_nextgen.media.ContentKeyPolicyPlayReadyPlayRightArgs(
                     allow_passing_video_content_to_unknown_output="NotAllowed",
                     digital_video_only_content_restriction=False,
                     image_constraint_for_analog_component_video_restriction=True,
@@ -228,12 +325,12 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
                     scms_restriction=2,
                 ),
             )],
-            "odataType": "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
-        },
+            odata_type="#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
+        ),
         name="ArmPolicyOptionName",
-        restriction={
-            "odataType": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
-        },
+        restriction=azure_nextgen.media.ContentKeyPolicyOpenRestrictionArgs(
+            odata_type="#Microsoft.Media.ContentKeyPolicyOpenRestriction",
+        ),
     )],
     resource_group_name="contoso")
 
@@ -247,7 +344,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
+const contentKeyPolicy = new azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
     contentKeyPolicyName: "PolicyWithPlayReadyOptionAndOpenRestriction",
     description: "ArmPolicyDescription",
@@ -293,41 +390,41 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentKeyPolicy = new AzureNextGen.Media.Latest.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.Latest.ContentKeyPolicyArgs
+        var contentKeyPolicy = new AzureNextGen.Media.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.ContentKeyPolicyArgs
         {
             AccountName = "contosomedia",
             ContentKeyPolicyName = "PolicyWithWidevineOptionAndJwtTokenRestriction",
             Description = "ArmPolicyDescription",
             Options = 
             {
-                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNextGen.Media.Inputs.ContentKeyPolicyWidevineConfigurationArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration" },
-                        { "widevineTemplate", "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+                        WidevineTemplate = "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
                     },
                     Name = "widevineoption",
-                    Restriction = 
+                    Restriction = new AzureNextGen.Media.Inputs.ContentKeyPolicyTokenRestrictionArgs
                     {
-                        { "alternateVerificationKeys", 
+                        AlternateVerificationKeys = 
                         {
-                            
+                            new AzureNextGen.Media.Inputs.ContentKeyPolicySymmetricTokenKeyArgs
                             {
-                                { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
-                                { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
+                                KeyValue = "AAAAAAAAAAAAAAAAAAAAAA==",
+                                OdataType = "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                             },
-                        } },
-                        { "audience", "urn:audience" },
-                        { "issuer", "urn:issuer" },
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
-                        { "primaryVerificationKey", 
+                        },
+                        Audience = "urn:audience",
+                        Issuer = "urn:issuer",
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+                        PrimaryVerificationKey = new AzureNextGen.Media.Inputs.ContentKeyPolicyRsaTokenKeyArgs
                         {
-                            { "exponent", "AQAB" },
-                            { "modulus", "AQAD" },
-                            { "odataType", "#Microsoft.Media.ContentKeyPolicyRsaTokenKey" },
-                        } },
-                        { "restrictionTokenType", "Jwt" },
+                            Exponent = "AQAB",
+                            Modulus = "AQAD",
+                            OdataType = "#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
+                        },
+                        RestrictionTokenType = "Jwt",
                     },
                 },
             },
@@ -351,31 +448,31 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy",
+content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
     account_name="contosomedia",
     content_key_policy_name="PolicyWithWidevineOptionAndJwtTokenRestriction",
     description="ArmPolicyDescription",
-    options=[azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
-        configuration={
-            "odataType": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
-            "widevineTemplate": "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
-        },
+    options=[azure_nextgen.media.ContentKeyPolicyOptionArgs(
+        configuration=azure_nextgen.media.ContentKeyPolicyWidevineConfigurationArgs(
+            odata_type="#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+            widevine_template="{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
+        ),
         name="widevineoption",
-        restriction={
-            "alternateVerificationKeys": [{
-                "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
-                "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
-            }],
-            "audience": "urn:audience",
-            "issuer": "urn:issuer",
-            "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-            "primaryVerificationKey": {
-                "exponent": "AQAB",
-                "modulus": "AQAD",
-                "odataType": "#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
-            },
-            "restrictionTokenType": "Jwt",
-        },
+        restriction=azure_nextgen.media.ContentKeyPolicyTokenRestrictionArgs(
+            alternate_verification_keys=[azure_nextgen.media.ContentKeyPolicySymmetricTokenKeyArgs(
+                key_value="AAAAAAAAAAAAAAAAAAAAAA==",
+                odata_type="#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
+            )],
+            audience="urn:audience",
+            issuer="urn:issuer",
+            odata_type="#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+            primary_verification_key=azure_nextgen.media.ContentKeyPolicyRsaTokenKeyArgs(
+                exponent="AQAB",
+                modulus="AQAD",
+                odata_type="#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
+            ),
+            restriction_token_type="Jwt",
+        ),
     )],
     resource_group_name="contoso")
 
@@ -389,7 +486,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
+const contentKeyPolicy = new azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
     contentKeyPolicyName: "PolicyWithWidevineOptionAndJwtTokenRestriction",
     description: "ArmPolicyDescription",
@@ -432,44 +529,44 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentKeyPolicy = new AzureNextGen.Media.Latest.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.Latest.ContentKeyPolicyArgs
+        var contentKeyPolicy = new AzureNextGen.Media.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.ContentKeyPolicyArgs
         {
             AccountName = "contosomedia",
             ContentKeyPolicyName = "PolicyCreatedWithMultipleOptions",
             Description = "ArmPolicyDescription",
             Options = 
             {
-                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNextGen.Media.Inputs.ContentKeyPolicyClearKeyConfigurationArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
                     },
                     Name = "ClearKeyOption",
-                    Restriction = 
+                    Restriction = new AzureNextGen.Media.Inputs.ContentKeyPolicyTokenRestrictionArgs
                     {
-                        { "audience", "urn:audience" },
-                        { "issuer", "urn:issuer" },
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
-                        { "primaryVerificationKey", 
+                        Audience = "urn:audience",
+                        Issuer = "urn:issuer",
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+                        PrimaryVerificationKey = new AzureNextGen.Media.Inputs.ContentKeyPolicySymmetricTokenKeyArgs
                         {
-                            { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
-                            { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
-                        } },
-                        { "restrictionTokenType", "Swt" },
+                            KeyValue = "AAAAAAAAAAAAAAAAAAAAAA==",
+                            OdataType = "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
+                        },
+                        RestrictionTokenType = "Swt",
                     },
                 },
-                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNextGen.Media.Inputs.ContentKeyPolicyWidevineConfigurationArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration" },
-                        { "widevineTemplate", "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+                        WidevineTemplate = "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
                     },
                     Name = "widevineoption",
-                    Restriction = 
+                    Restriction = new AzureNextGen.Media.Inputs.ContentKeyPolicyOpenRestrictionArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyOpenRestriction" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
                     },
                 },
             },
@@ -484,7 +581,60 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewContentKeyPolicy(ctx, "contentKeyPolicy", &media.ContentKeyPolicyArgs{
+			AccountName:          pulumi.String("contosomedia"),
+			ContentKeyPolicyName: pulumi.String("PolicyCreatedWithMultipleOptions"),
+			Description:          pulumi.String("ArmPolicyDescription"),
+			Options: media.ContentKeyPolicyOptionArray{
+				&media.ContentKeyPolicyOptionArgs{
+					Configuration: &media.ContentKeyPolicyClearKeyConfigurationArgs{
+						OdataType: pulumi.String("#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration"),
+					},
+					Name: pulumi.String("ClearKeyOption"),
+					Restriction: &media.ContentKeyPolicyTokenRestrictionArgs{
+						Audience:  pulumi.String("urn:audience"),
+						Issuer:    pulumi.String("urn:issuer"),
+						OdataType: pulumi.String("#Microsoft.Media.ContentKeyPolicyTokenRestriction"),
+						PrimaryVerificationKey: &media.ContentKeyPolicySymmetricTokenKeyArgs{
+							KeyValue:  pulumi.String("AAAAAAAAAAAAAAAAAAAAAA=="),
+							OdataType: pulumi.String("#Microsoft.Media.ContentKeyPolicySymmetricTokenKey"),
+						},
+						RestrictionTokenType: pulumi.String("Swt"),
+					},
+				},
+				&media.ContentKeyPolicyOptionArgs{
+					Configuration: &media.ContentKeyPolicyWidevineConfigurationArgs{
+						OdataType:        pulumi.String("#Microsoft.Media.ContentKeyPolicyWidevineConfiguration"),
+						WidevineTemplate: pulumi.String("{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}"),
+					},
+					Name: pulumi.String("widevineoption"),
+					Restriction: &media.ContentKeyPolicyOpenRestrictionArgs{
+						OdataType: pulumi.String("#Microsoft.Media.ContentKeyPolicyOpenRestriction"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("contoso"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -493,36 +643,36 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy",
+content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
     account_name="contosomedia",
     content_key_policy_name="PolicyCreatedWithMultipleOptions",
     description="ArmPolicyDescription",
     options=[
-        azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
-            configuration={
-                "odataType": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
-            },
+        azure_nextgen.media.ContentKeyPolicyOptionArgs(
+            configuration=azure_nextgen.media.ContentKeyPolicyClearKeyConfigurationArgs(
+                odata_type="#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
+            ),
             name="ClearKeyOption",
-            restriction={
-                "audience": "urn:audience",
-                "issuer": "urn:issuer",
-                "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-                "primaryVerificationKey": {
-                    "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
-                    "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
-                },
-                "restrictionTokenType": "Swt",
-            },
+            restriction=azure_nextgen.media.ContentKeyPolicyTokenRestrictionArgs(
+                audience="urn:audience",
+                issuer="urn:issuer",
+                odata_type="#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+                primary_verification_key=azure_nextgen.media.ContentKeyPolicySymmetricTokenKeyArgs(
+                    key_value="AAAAAAAAAAAAAAAAAAAAAA==",
+                    odata_type="#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
+                ),
+                restriction_token_type="Swt",
+            ),
         ),
-        azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
-            configuration={
-                "odataType": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
-                "widevineTemplate": "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
-            },
+        azure_nextgen.media.ContentKeyPolicyOptionArgs(
+            configuration=azure_nextgen.media.ContentKeyPolicyWidevineConfigurationArgs(
+                odata_type="#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+                widevine_template="{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
+            ),
             name="widevineoption",
-            restriction={
-                "odataType": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
-            },
+            restriction=azure_nextgen.media.ContentKeyPolicyOpenRestrictionArgs(
+                odata_type="#Microsoft.Media.ContentKeyPolicyOpenRestriction",
+            ),
         ),
     ],
     resource_group_name="contoso")
@@ -537,7 +687,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
+const contentKeyPolicy = new azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
     contentKeyPolicyName: "PolicyCreatedWithMultipleOptions",
     description: "ArmPolicyDescription",
@@ -584,7 +734,7 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ContentKeyPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -592,11 +742,11 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContentKeyPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ContentKeyPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContentKeyPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContentKeyPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContentKeyPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ContentKeyPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -617,7 +767,7 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ContentKeyPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -686,7 +836,7 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ContentKeyPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -725,7 +875,7 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ContentKeyPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -748,11 +898,11 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
 
 ## ContentKeyPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -6602,7 +6752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:ContentKeyPolicy PolicyCreatedWithMultipleOptions /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/contentKeyPolicies/PolicyCreatedWithMultipleOptions 
+$ pulumi import azure-nextgen:media:ContentKeyPolicy PolicyCreatedWithMultipleOptions /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/contentKeyPolicies/PolicyCreatedWithMultipleOptions 
 ```
 
 

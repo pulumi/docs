@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.NodeType resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a node type in the cluster, each node type represents sub set of nodes in the cluster.
+API Version: 2020-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var nodeType = new AzureNextGen.ServiceFabric.V20200101Preview.NodeType("nodeType", new AzureNextGen.ServiceFabric.V20200101Preview.NodeTypeArgs
+        var nodeType = new AzureNextGen.ServiceFabric.NodeType("nodeType", new AzureNextGen.ServiceFabric.NodeTypeArgs
         {
             Capacities = 
             {
@@ -45,7 +46,7 @@ class MyStack : Stack
             ResourceGroupName = "resRg",
             VmExtensions = 
             {
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.VMSSExtensionArgs
+                new AzureNextGen.ServiceFabric.Inputs.VMSSExtensionArgs
                 {
                     AutoUpgradeMinorVersion = true,
                     Name = "Microsoft.Azure.Geneva.GenevaMonitoring",
@@ -62,15 +63,15 @@ class MyStack : Stack
             VmInstanceCount = 10,
             VmSecrets = 
             {
-                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.VaultSecretGroupArgs
+                new AzureNextGen.ServiceFabric.Inputs.VaultSecretGroupArgs
                 {
-                    SourceVault = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SubResourceArgs
+                    SourceVault = new AzureNextGen.ServiceFabric.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.KeyVault/vaults/myVault",
                     },
                     VaultCertificates = 
                     {
-                        new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.VaultCertificateArgs
+                        new AzureNextGen.ServiceFabric.Inputs.VaultCertificateArgs
                         {
                             CertificateStore = "My",
                             CertificateUrl = "https://myVault.vault.azure.net:443/secrets/myCert/ef1a31d39e1f46bca33def54b6cda54c",
@@ -94,7 +95,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/v20200101preview"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -161,7 +162,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
+node_type = azure_nextgen.servicefabric.NodeType("nodeType",
     capacities={
         "ClientConnections": "65536",
     },
@@ -175,7 +176,7 @@ node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
         "SomeProperty": "5",
     },
     resource_group_name="resRg",
-    vm_extensions=[azure_nextgen.servicefabric.v20200101preview.VMSSExtensionArgs(
+    vm_extensions=[azure_nextgen.servicefabric.VMSSExtensionArgs(
         auto_upgrade_minor_version=True,
         name="Microsoft.Azure.Geneva.GenevaMonitoring",
         publisher="Microsoft.Azure.Geneva",
@@ -188,11 +189,11 @@ node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
     vm_image_sku="2016-Datacenter-Server-Core",
     vm_image_version="latest",
     vm_instance_count=10,
-    vm_secrets=[azure_nextgen.servicefabric.v20200101preview.VaultSecretGroupArgs(
-        source_vault=azure_nextgen.servicefabric.v20200101preview.SubResourceArgs(
+    vm_secrets=[azure_nextgen.servicefabric.VaultSecretGroupArgs(
+        source_vault=azure_nextgen.servicefabric.SubResourceArgs(
             id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.KeyVault/vaults/myVault",
         ),
-        vault_certificates=[azure_nextgen.servicefabric.v20200101preview.VaultCertificateArgs(
+        vault_certificates=[azure_nextgen.servicefabric.VaultCertificateArgs(
             certificate_store="My",
             certificate_url="https://myVault.vault.azure.net:443/secrets/myCert/ef1a31d39e1f46bca33def54b6cda54c",
         )],
@@ -209,7 +210,7 @@ node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType", {
+const nodeType = new azure_nextgen.servicefabric.NodeType("nodeType", {
     capacities: {
         ClientConnections: "65536",
     },
@@ -262,7 +263,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var nodeType = new AzureNextGen.ServiceFabric.V20200101Preview.NodeType("nodeType", new AzureNextGen.ServiceFabric.V20200101Preview.NodeTypeArgs
+        var nodeType = new AzureNextGen.ServiceFabric.NodeType("nodeType", new AzureNextGen.ServiceFabric.NodeTypeArgs
         {
             ClusterName = "myCluster",
             DataDiskSizeGB = 200,
@@ -290,7 +291,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/v20200101preview"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -326,7 +327,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
+node_type = azure_nextgen.servicefabric.NodeType("nodeType",
     cluster_name="myCluster",
     data_disk_size_gb=200,
     is_primary=False,
@@ -349,7 +350,7 @@ node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType", {
+const nodeType = new azure_nextgen.servicefabric.NodeType("nodeType", {
     clusterName: "myCluster",
     dataDiskSizeGB: 200,
     isPrimary: false,
@@ -375,7 +376,7 @@ const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("node
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">NodeTypeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -383,11 +384,11 @@ const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("node
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeType</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">NodeTypeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeType</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeType</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeType</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">NodeTypeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NodeTypeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -408,7 +409,7 @@ const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("node
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NodeTypeArgs</span>
+        <span class="property-type"><a href="#inputs">NodeTypeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -477,7 +478,7 @@ const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("node
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NodeTypeArgs</span>
+        <span class="property-type"><a href="#inputs">NodeTypeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -516,7 +517,7 @@ const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("node
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NodeTypeArgs</span>
+        <span class="property-type"><a href="#inputs">NodeTypeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -539,11 +540,11 @@ const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("node
 
 ## NodeType Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NodeType resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NodeType resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2857,7 +2858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabric/v20200101preview:NodeType BE /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedClusters/myCluster/nodeTypes/BE 
+$ pulumi import azure-nextgen:servicefabric:NodeType BE /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedClusters/myCluster/nodeTypes/BE 
 ```
 
 

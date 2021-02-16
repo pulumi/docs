@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.azuredata.SqlServerInstance reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SqlServerInstance.
+API Version: 2020-09-08-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlServerInstance = new AzureNextGen.AzureData.V20200908Preview.SqlServerInstance("sqlServerInstance", new AzureNextGen.AzureData.V20200908Preview.SqlServerInstanceArgs
+        var sqlServerInstance = new AzureNextGen.AzureData.SqlServerInstance("sqlServerInstance", new AzureNextGen.AzureData.SqlServerInstanceArgs
         {
             ContainerResourceId = "Arc Machine Name",
             Edition = "Developer",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata/v20200908preview"
+	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +92,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_server_instance = azure_nextgen.azuredata.v20200908preview.SqlServerInstance("sqlServerInstance",
+sql_server_instance = azure_nextgen.azuredata.SqlServerInstance("sqlServerInstance",
     container_resource_id="Arc Machine Name",
     edition="Developer",
     location="northeurope",
@@ -114,7 +115,7 @@ sql_server_instance = azure_nextgen.azuredata.v20200908preview.SqlServerInstance
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlServerInstance = new azure_nextgen.azuredata.v20200908preview.SqlServerInstance("sqlServerInstance", {
+const sqlServerInstance = new azure_nextgen.azuredata.SqlServerInstance("sqlServerInstance", {
     containerResourceId: "Arc Machine Name",
     edition: "Developer",
     location: "northeurope",
@@ -140,7 +141,7 @@ const sqlServerInstance = new azure_nextgen.azuredata.v20200908preview.SqlServer
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlServerInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SqlServerInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlServerInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlServerInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -148,11 +149,11 @@ const sqlServerInstance = new azure_nextgen.azuredata.v20200908preview.SqlServer
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlServerInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SqlServerInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlServerInstance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlServerInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlServerInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlServerInstance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlServerInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SqlServerInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlServerInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SqlServerInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -173,7 +174,7 @@ const sqlServerInstance = new azure_nextgen.azuredata.v20200908preview.SqlServer
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlServerInstanceArgs</span>
+        <span class="property-type"><a href="#inputs">SqlServerInstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -242,7 +243,7 @@ const sqlServerInstance = new azure_nextgen.azuredata.v20200908preview.SqlServer
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlServerInstanceArgs</span>
+        <span class="property-type"><a href="#inputs">SqlServerInstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,7 +282,7 @@ const sqlServerInstance = new azure_nextgen.azuredata.v20200908preview.SqlServer
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlServerInstanceArgs</span>
+        <span class="property-type"><a href="#inputs">SqlServerInstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -304,11 +305,11 @@ const sqlServerInstance = new azure_nextgen.azuredata.v20200908preview.SqlServer
 
 ## SqlServerInstance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SqlServerInstance resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SqlServerInstance resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1164,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:azuredata/v20200908preview:SqlServerInstance testsqlServerInstance /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerInstances/testsqlServerInstance 
+$ pulumi import azure-nextgen:azuredata:SqlServerInstance testsqlServerInstance /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerInstances/testsqlServerInstance 
 ```
 
 

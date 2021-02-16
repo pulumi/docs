@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.BandwidthSetting reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The bandwidth setting.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bandwidthSetting = new AzureNextGen.StorSimple.Latest.BandwidthSetting("bandwidthSetting", new AzureNextGen.StorSimple.Latest.BandwidthSettingArgs
+        var bandwidthSetting = new AzureNextGen.StorSimple.BandwidthSetting("bandwidthSetting", new AzureNextGen.StorSimple.BandwidthSettingArgs
         {
             BandwidthSettingName = "BWSForTest",
             ManagerName = "ManagerForSDKTest1",
             ResourceGroupName = "ResourceGroupForSDKTest",
             Schedules = 
             {
-                new AzureNextGen.StorSimple.Latest.Inputs.BandwidthScheduleArgs
+                new AzureNextGen.StorSimple.Inputs.BandwidthScheduleArgs
                 {
                     Days = 
                     {
@@ -42,13 +42,13 @@ class MyStack : Stack
                         "Sunday",
                     },
                     RateInMbps = 10,
-                    Start = new AzureNextGen.StorSimple.Latest.Inputs.TimeArgs
+                    Start = new AzureNextGen.StorSimple.Inputs.TimeArgs
                     {
                         Hours = 10,
                         Minutes = 0,
                         Seconds = 0,
                     },
-                    Stop = new AzureNextGen.StorSimple.Latest.Inputs.TimeArgs
+                    Stop = new AzureNextGen.StorSimple.Inputs.TimeArgs
                     {
                         Hours = 20,
                         Minutes = 0,
@@ -75,22 +75,22 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bandwidth_setting = azure_nextgen.storsimple.latest.BandwidthSetting("bandwidthSetting",
+bandwidth_setting = azure_nextgen.storsimple.BandwidthSetting("bandwidthSetting",
     bandwidth_setting_name="BWSForTest",
     manager_name="ManagerForSDKTest1",
     resource_group_name="ResourceGroupForSDKTest",
-    schedules=[azure_nextgen.storsimple.latest.BandwidthScheduleArgs(
+    schedules=[azure_nextgen.storsimple.BandwidthScheduleArgs(
         days=[
             "Saturday",
             "Sunday",
         ],
         rate_in_mbps=10,
-        start=azure_nextgen.storsimple.latest.TimeArgs(
+        start=azure_nextgen.storsimple.TimeArgs(
             hours=10,
             minutes=0,
             seconds=0,
         ),
-        stop=azure_nextgen.storsimple.latest.TimeArgs(
+        stop=azure_nextgen.storsimple.TimeArgs(
             hours=20,
             minutes=0,
             seconds=0,
@@ -107,7 +107,7 @@ bandwidth_setting = azure_nextgen.storsimple.latest.BandwidthSetting("bandwidthS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const bandwidthSetting = new azure_nextgen.storsimple.latest.BandwidthSetting("bandwidthSetting", {
+const bandwidthSetting = new azure_nextgen.storsimple.BandwidthSetting("bandwidthSetting", {
     bandwidthSettingName: "BWSForTest",
     managerName: "ManagerForSDKTest1",
     resourceGroupName: "ResourceGroupForSDKTest",
@@ -142,7 +142,7 @@ const bandwidthSetting = new azure_nextgen.storsimple.latest.BandwidthSetting("b
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BandwidthSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BandwidthSettingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BandwidthSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BandwidthSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -150,11 +150,11 @@ const bandwidthSetting = new azure_nextgen.storsimple.latest.BandwidthSetting("b
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBandwidthSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BandwidthSettingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BandwidthSetting</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBandwidthSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BandwidthSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BandwidthSetting</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BandwidthSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BandwidthSettingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BandwidthSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BandwidthSettingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -175,7 +175,7 @@ const bandwidthSetting = new azure_nextgen.storsimple.latest.BandwidthSetting("b
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BandwidthSettingArgs</span>
+        <span class="property-type"><a href="#inputs">BandwidthSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -244,7 +244,7 @@ const bandwidthSetting = new azure_nextgen.storsimple.latest.BandwidthSetting("b
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BandwidthSettingArgs</span>
+        <span class="property-type"><a href="#inputs">BandwidthSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,7 +283,7 @@ const bandwidthSetting = new azure_nextgen.storsimple.latest.BandwidthSetting("b
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BandwidthSettingArgs</span>
+        <span class="property-type"><a href="#inputs">BandwidthSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -306,11 +306,11 @@ const bandwidthSetting = new azure_nextgen.storsimple.latest.BandwidthSetting("b
 
 ## BandwidthSetting Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The BandwidthSetting resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The BandwidthSetting resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1424,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:BandwidthSetting BWSForTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/BWSForTest 
+$ pulumi import azure-nextgen:storsimple:BandwidthSetting BWSForTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/BWSForTest 
 ```
 
 

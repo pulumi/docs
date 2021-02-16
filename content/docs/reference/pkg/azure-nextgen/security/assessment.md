@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.Assessment resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Security assessment on a resource
-Latest API Version: 2020-01-01.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assessment = new AzureNextGen.Security.Latest.Assessment("assessment", new AzureNextGen.Security.Latest.AssessmentArgs
+        var assessment = new AzureNextGen.Security.Assessment("assessment", new AzureNextGen.Security.AssessmentArgs
         {
             AssessmentName = "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
-            ResourceDetails = 
+            ResourceDetails = new AzureNextGen.Security.Inputs.AzureResourceDetailsArgs
             {
-                { "source", "Azure" },
+                Source = "Azure",
             },
             ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
-            Status = new AzureNextGen.Security.Latest.Inputs.AssessmentStatusArgs
+            Status = new AzureNextGen.Security.Inputs.AssessmentStatusArgs
             {
                 Code = "Healthy",
             },
@@ -49,7 +49,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := security.NewAssessment(ctx, "assessment", &security.AssessmentArgs{
+			AssessmentName: pulumi.String("8bb8be0a-6010-4789-812f-e4d661c4ed0e"),
+			ResourceDetails: &security.AzureResourceDetailsArgs{
+				Source: pulumi.String("Azure"),
+			},
+			ResourceId: pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2"),
+			Status: &security.AssessmentStatusArgs{
+				Code: pulumi.String("Healthy"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -58,13 +87,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assessment = azure_nextgen.security.latest.Assessment("assessment",
+assessment = azure_nextgen.security.Assessment("assessment",
     assessment_name="8bb8be0a-6010-4789-812f-e4d661c4ed0e",
-    resource_details={
-        "source": "Azure",
-    },
+    resource_details=azure_nextgen.security.AzureResourceDetailsArgs(
+        source="Azure",
+    ),
     resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
-    status=azure_nextgen.security.latest.AssessmentStatusArgs(
+    status=azure_nextgen.security.AssessmentStatusArgs(
         code="Healthy",
     ))
 
@@ -78,7 +107,7 @@ assessment = azure_nextgen.security.latest.Assessment("assessment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const assessment = new azure_nextgen.security.latest.Assessment("assessment", {
+const assessment = new azure_nextgen.security.Assessment("assessment", {
     assessmentName: "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
     resourceDetails: {
         source: "Azure",
@@ -101,7 +130,7 @@ const assessment = new azure_nextgen.security.latest.Assessment("assessment", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AssessmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -109,11 +138,11 @@ const assessment = new azure_nextgen.security.latest.Assessment("assessment", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AssessmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assessment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assessment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AssessmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -134,7 +163,7 @@ const assessment = new azure_nextgen.security.latest.Assessment("assessment", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AssessmentArgs</span>
+        <span class="property-type"><a href="#inputs">AssessmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -203,7 +232,7 @@ const assessment = new azure_nextgen.security.latest.Assessment("assessment", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AssessmentArgs</span>
+        <span class="property-type"><a href="#inputs">AssessmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -242,7 +271,7 @@ const assessment = new azure_nextgen.security.latest.Assessment("assessment", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AssessmentArgs</span>
+        <span class="property-type"><a href="#inputs">AssessmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -265,11 +294,11 @@ const assessment = new azure_nextgen.security.latest.Assessment("assessment", {
 
 ## Assessment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Assessment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Assessment resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3747,7 +3776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/latest:Assessment 8bb8be0a-6010-4789-812f-e4d661c4ed0e /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss1/providers/Microsoft.Security/assessments/8bb8be0a-6010-4789-812f-e4d661c4ed0e 
+$ pulumi import azure-nextgen:security:Assessment 8bb8be0a-6010-4789-812f-e4d661c4ed0e /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss1/providers/Microsoft.Security/assessments/8bb8be0a-6010-4789-812f-e4d661c4ed0e 
 ```
 
 

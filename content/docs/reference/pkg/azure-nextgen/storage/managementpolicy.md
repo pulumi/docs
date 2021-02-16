@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.ManagementPolicy resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Get Storage Account ManagementPolicies operation response.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,44 +27,44 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementPolicy = new AzureNextGen.Storage.Latest.ManagementPolicy("managementPolicy", new AzureNextGen.Storage.Latest.ManagementPolicyArgs
+        var managementPolicy = new AzureNextGen.Storage.ManagementPolicy("managementPolicy", new AzureNextGen.Storage.ManagementPolicyArgs
         {
             AccountName = "sto9699",
             ManagementPolicyName = "default",
-            Policy = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySchemaArgs
+            Policy = new AzureNextGen.Storage.Inputs.ManagementPolicySchemaArgs
             {
                 Rules = 
                 {
-                    new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyRuleArgs
+                    new AzureNextGen.Storage.Inputs.ManagementPolicyRuleArgs
                     {
-                        Definition = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyDefinitionArgs
+                        Definition = new AzureNextGen.Storage.Inputs.ManagementPolicyDefinitionArgs
                         {
-                            Actions = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyActionArgs
+                            Actions = new AzureNextGen.Storage.Inputs.ManagementPolicyActionArgs
                             {
-                                BaseBlob = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyBaseBlobArgs
+                                BaseBlob = new AzureNextGen.Storage.Inputs.ManagementPolicyBaseBlobArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    Delete = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 1000,
                                     },
-                                    TierToArchive = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    TierToArchive = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 90,
                                     },
-                                    TierToCool = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    TierToCool = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 30,
                                     },
                                 },
-                                Snapshot = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySnapShotArgs
+                                Snapshot = new AzureNextGen.Storage.Inputs.ManagementPolicySnapShotArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    Delete = new AzureNextGen.Storage.Inputs.DateAfterCreationArgs
                                     {
                                         DaysAfterCreationGreaterThan = 30,
                                     },
                                 },
                             },
-                            Filters = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyFilterArgs
+                            Filters = new AzureNextGen.Storage.Inputs.ManagementPolicyFilterArgs
                             {
                                 BlobTypes = 
                                 {
@@ -80,39 +80,39 @@ class MyStack : Stack
                         Name = "olcmtest1",
                         Type = "Lifecycle",
                     },
-                    new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyRuleArgs
+                    new AzureNextGen.Storage.Inputs.ManagementPolicyRuleArgs
                     {
-                        Definition = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyDefinitionArgs
+                        Definition = new AzureNextGen.Storage.Inputs.ManagementPolicyDefinitionArgs
                         {
-                            Actions = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyActionArgs
+                            Actions = new AzureNextGen.Storage.Inputs.ManagementPolicyActionArgs
                             {
-                                BaseBlob = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyBaseBlobArgs
+                                BaseBlob = new AzureNextGen.Storage.Inputs.ManagementPolicyBaseBlobArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    Delete = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 1000,
                                     },
-                                    TierToArchive = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    TierToArchive = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 90,
                                     },
-                                    TierToCool = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    TierToCool = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 30,
                                     },
                                 },
                             },
-                            Filters = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyFilterArgs
+                            Filters = new AzureNextGen.Storage.Inputs.ManagementPolicyFilterArgs
                             {
                                 BlobIndexMatch = 
                                 {
-                                    new AzureNextGen.Storage.Latest.Inputs.TagFilterArgs
+                                    new AzureNextGen.Storage.Inputs.TagFilterArgs
                                     {
                                         Name = "tag1",
                                         Op = "==",
                                         Value = "val1",
                                     },
-                                    new AzureNextGen.Storage.Latest.Inputs.TagFilterArgs
+                                    new AzureNextGen.Storage.Inputs.TagFilterArgs
                                     {
                                         Name = "tag2",
                                         Op = "==",
@@ -151,7 +151,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -256,32 +256,32 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPolicy",
+management_policy = azure_nextgen.storage.ManagementPolicy("managementPolicy",
     account_name="sto9699",
     management_policy_name="default",
-    policy=azure_nextgen.storage.latest.ManagementPolicySchemaArgs(
+    policy=azure_nextgen.storage.ManagementPolicySchemaArgs(
         rules=[
-            azure_nextgen.storage.latest.ManagementPolicyRuleArgs(
-                definition=azure_nextgen.storage.latest.ManagementPolicyDefinitionArgs(
-                    actions=azure_nextgen.storage.latest.ManagementPolicyActionArgs(
-                        base_blob=azure_nextgen.storage.latest.ManagementPolicyBaseBlobArgs(
-                            delete=azure_nextgen.storage.latest.DateAfterModificationArgs(
+            azure_nextgen.storage.ManagementPolicyRuleArgs(
+                definition=azure_nextgen.storage.ManagementPolicyDefinitionArgs(
+                    actions=azure_nextgen.storage.ManagementPolicyActionArgs(
+                        base_blob=azure_nextgen.storage.ManagementPolicyBaseBlobArgs(
+                            delete=azure_nextgen.storage.DateAfterModificationArgs(
                                 days_after_modification_greater_than=1000,
                             ),
-                            tier_to_archive=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            tier_to_archive=azure_nextgen.storage.DateAfterModificationArgs(
                                 days_after_modification_greater_than=90,
                             ),
-                            tier_to_cool=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            tier_to_cool=azure_nextgen.storage.DateAfterModificationArgs(
                                 days_after_modification_greater_than=30,
                             ),
                         ),
-                        snapshot=azure_nextgen.storage.latest.ManagementPolicySnapShotArgs(
-                            delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                        snapshot=azure_nextgen.storage.ManagementPolicySnapShotArgs(
+                            delete=azure_nextgen.storage.DateAfterCreationArgs(
                                 days_after_creation_greater_than=30,
                             ),
                         ),
                     ),
-                    filters=azure_nextgen.storage.latest.ManagementPolicyFilterArgs(
+                    filters=azure_nextgen.storage.ManagementPolicyFilterArgs(
                         blob_types=["blockBlob"],
                         prefix_match=["olcmtestcontainer1"],
                     ),
@@ -290,29 +290,29 @@ management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPol
                 name="olcmtest1",
                 type="Lifecycle",
             ),
-            azure_nextgen.storage.latest.ManagementPolicyRuleArgs(
-                definition=azure_nextgen.storage.latest.ManagementPolicyDefinitionArgs(
-                    actions=azure_nextgen.storage.latest.ManagementPolicyActionArgs(
-                        base_blob=azure_nextgen.storage.latest.ManagementPolicyBaseBlobArgs(
-                            delete=azure_nextgen.storage.latest.DateAfterModificationArgs(
+            azure_nextgen.storage.ManagementPolicyRuleArgs(
+                definition=azure_nextgen.storage.ManagementPolicyDefinitionArgs(
+                    actions=azure_nextgen.storage.ManagementPolicyActionArgs(
+                        base_blob=azure_nextgen.storage.ManagementPolicyBaseBlobArgs(
+                            delete=azure_nextgen.storage.DateAfterModificationArgs(
                                 days_after_modification_greater_than=1000,
                             ),
-                            tier_to_archive=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            tier_to_archive=azure_nextgen.storage.DateAfterModificationArgs(
                                 days_after_modification_greater_than=90,
                             ),
-                            tier_to_cool=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            tier_to_cool=azure_nextgen.storage.DateAfterModificationArgs(
                                 days_after_modification_greater_than=30,
                             ),
                         ),
                     ),
-                    filters=azure_nextgen.storage.latest.ManagementPolicyFilterArgs(
+                    filters=azure_nextgen.storage.ManagementPolicyFilterArgs(
                         blob_index_match=[
-                            azure_nextgen.storage.latest.TagFilterArgs(
+                            azure_nextgen.storage.TagFilterArgs(
                                 name="tag1",
                                 op="==",
                                 value="val1",
                             ),
-                            azure_nextgen.storage.latest.TagFilterArgs(
+                            azure_nextgen.storage.TagFilterArgs(
                                 name="tag2",
                                 op="==",
                                 value="val2",
@@ -340,7 +340,7 @@ management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("managementPolicy", {
+const managementPolicy = new azure_nextgen.storage.ManagementPolicy("managementPolicy", {
     accountName: "sto9699",
     managementPolicyName: "default",
     policy: {
@@ -429,43 +429,43 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementPolicy = new AzureNextGen.Storage.Latest.ManagementPolicy("managementPolicy", new AzureNextGen.Storage.Latest.ManagementPolicyArgs
+        var managementPolicy = new AzureNextGen.Storage.ManagementPolicy("managementPolicy", new AzureNextGen.Storage.ManagementPolicyArgs
         {
             AccountName = "sto9699",
             ManagementPolicyName = "default",
-            Policy = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySchemaArgs
+            Policy = new AzureNextGen.Storage.Inputs.ManagementPolicySchemaArgs
             {
                 Rules = 
                 {
-                    new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyRuleArgs
+                    new AzureNextGen.Storage.Inputs.ManagementPolicyRuleArgs
                     {
-                        Definition = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyDefinitionArgs
+                        Definition = new AzureNextGen.Storage.Inputs.ManagementPolicyDefinitionArgs
                         {
-                            Actions = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyActionArgs
+                            Actions = new AzureNextGen.Storage.Inputs.ManagementPolicyActionArgs
                             {
-                                BaseBlob = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyBaseBlobArgs
+                                BaseBlob = new AzureNextGen.Storage.Inputs.ManagementPolicyBaseBlobArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    Delete = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 90,
                                     },
                                 },
-                                Snapshot = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySnapShotArgs
+                                Snapshot = new AzureNextGen.Storage.Inputs.ManagementPolicySnapShotArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    Delete = new AzureNextGen.Storage.Inputs.DateAfterCreationArgs
                                     {
                                         DaysAfterCreationGreaterThan = 90,
                                     },
                                 },
-                                Version = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyVersionArgs
+                                Version = new AzureNextGen.Storage.Inputs.ManagementPolicyVersionArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    Delete = new AzureNextGen.Storage.Inputs.DateAfterCreationArgs
                                     {
                                         DaysAfterCreationGreaterThan = 90,
                                     },
                                 },
                             },
-                            Filters = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyFilterArgs
+                            Filters = new AzureNextGen.Storage.Inputs.ManagementPolicyFilterArgs
                             {
                                 BlobTypes = 
                                 {
@@ -500,7 +500,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -565,30 +565,30 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPolicy",
+management_policy = azure_nextgen.storage.ManagementPolicy("managementPolicy",
     account_name="sto9699",
     management_policy_name="default",
-    policy=azure_nextgen.storage.latest.ManagementPolicySchemaArgs(
-        rules=[azure_nextgen.storage.latest.ManagementPolicyRuleArgs(
-            definition=azure_nextgen.storage.latest.ManagementPolicyDefinitionArgs(
-                actions=azure_nextgen.storage.latest.ManagementPolicyActionArgs(
-                    base_blob=azure_nextgen.storage.latest.ManagementPolicyBaseBlobArgs(
-                        delete=azure_nextgen.storage.latest.DateAfterModificationArgs(
+    policy=azure_nextgen.storage.ManagementPolicySchemaArgs(
+        rules=[azure_nextgen.storage.ManagementPolicyRuleArgs(
+            definition=azure_nextgen.storage.ManagementPolicyDefinitionArgs(
+                actions=azure_nextgen.storage.ManagementPolicyActionArgs(
+                    base_blob=azure_nextgen.storage.ManagementPolicyBaseBlobArgs(
+                        delete=azure_nextgen.storage.DateAfterModificationArgs(
                             days_after_modification_greater_than=90,
                         ),
                     ),
-                    snapshot=azure_nextgen.storage.latest.ManagementPolicySnapShotArgs(
-                        delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                    snapshot=azure_nextgen.storage.ManagementPolicySnapShotArgs(
+                        delete=azure_nextgen.storage.DateAfterCreationArgs(
                             days_after_creation_greater_than=90,
                         ),
                     ),
-                    version=azure_nextgen.storage.latest.ManagementPolicyVersionArgs(
-                        delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                    version=azure_nextgen.storage.ManagementPolicyVersionArgs(
+                        delete=azure_nextgen.storage.DateAfterCreationArgs(
                             days_after_creation_greater_than=90,
                         ),
                     ),
                 ),
-                filters=azure_nextgen.storage.latest.ManagementPolicyFilterArgs(
+                filters=azure_nextgen.storage.ManagementPolicyFilterArgs(
                     blob_types=[
                         "blockBlob",
                         "appendBlob",
@@ -613,7 +613,7 @@ management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("managementPolicy", {
+const managementPolicy = new azure_nextgen.storage.ManagementPolicy("managementPolicy", {
     accountName: "sto9699",
     managementPolicyName: "default",
     policy: {
@@ -666,67 +666,67 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementPolicy = new AzureNextGen.Storage.Latest.ManagementPolicy("managementPolicy", new AzureNextGen.Storage.Latest.ManagementPolicyArgs
+        var managementPolicy = new AzureNextGen.Storage.ManagementPolicy("managementPolicy", new AzureNextGen.Storage.ManagementPolicyArgs
         {
             AccountName = "sto9699",
             ManagementPolicyName = "default",
-            Policy = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySchemaArgs
+            Policy = new AzureNextGen.Storage.Inputs.ManagementPolicySchemaArgs
             {
                 Rules = 
                 {
-                    new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyRuleArgs
+                    new AzureNextGen.Storage.Inputs.ManagementPolicyRuleArgs
                     {
-                        Definition = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyDefinitionArgs
+                        Definition = new AzureNextGen.Storage.Inputs.ManagementPolicyDefinitionArgs
                         {
-                            Actions = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyActionArgs
+                            Actions = new AzureNextGen.Storage.Inputs.ManagementPolicyActionArgs
                             {
-                                BaseBlob = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyBaseBlobArgs
+                                BaseBlob = new AzureNextGen.Storage.Inputs.ManagementPolicyBaseBlobArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    Delete = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 1000,
                                     },
-                                    TierToArchive = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    TierToArchive = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 90,
                                     },
-                                    TierToCool = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    TierToCool = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterModificationGreaterThan = 30,
                                     },
                                 },
-                                Snapshot = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySnapShotArgs
+                                Snapshot = new AzureNextGen.Storage.Inputs.ManagementPolicySnapShotArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    Delete = new AzureNextGen.Storage.Inputs.DateAfterCreationArgs
                                     {
                                         DaysAfterCreationGreaterThan = 1000,
                                     },
-                                    TierToArchive = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    TierToArchive = new AzureNextGen.Storage.Inputs.DateAfterCreationArgs
                                     {
                                         DaysAfterCreationGreaterThan = 90,
                                     },
-                                    TierToCool = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    TierToCool = new AzureNextGen.Storage.Inputs.DateAfterCreationArgs
                                     {
                                         DaysAfterCreationGreaterThan = 30,
                                     },
                                 },
-                                Version = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyVersionArgs
+                                Version = new AzureNextGen.Storage.Inputs.ManagementPolicyVersionArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    Delete = new AzureNextGen.Storage.Inputs.DateAfterCreationArgs
                                     {
                                         DaysAfterCreationGreaterThan = 1000,
                                     },
-                                    TierToArchive = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    TierToArchive = new AzureNextGen.Storage.Inputs.DateAfterCreationArgs
                                     {
                                         DaysAfterCreationGreaterThan = 90,
                                     },
-                                    TierToCool = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    TierToCool = new AzureNextGen.Storage.Inputs.DateAfterCreationArgs
                                     {
                                         DaysAfterCreationGreaterThan = 30,
                                     },
                                 },
                             },
-                            Filters = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyFilterArgs
+                            Filters = new AzureNextGen.Storage.Inputs.ManagementPolicyFilterArgs
                             {
                                 BlobTypes = 
                                 {
@@ -760,7 +760,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -842,48 +842,48 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPolicy",
+management_policy = azure_nextgen.storage.ManagementPolicy("managementPolicy",
     account_name="sto9699",
     management_policy_name="default",
-    policy=azure_nextgen.storage.latest.ManagementPolicySchemaArgs(
-        rules=[azure_nextgen.storage.latest.ManagementPolicyRuleArgs(
-            definition=azure_nextgen.storage.latest.ManagementPolicyDefinitionArgs(
-                actions=azure_nextgen.storage.latest.ManagementPolicyActionArgs(
-                    base_blob=azure_nextgen.storage.latest.ManagementPolicyBaseBlobArgs(
-                        delete=azure_nextgen.storage.latest.DateAfterModificationArgs(
+    policy=azure_nextgen.storage.ManagementPolicySchemaArgs(
+        rules=[azure_nextgen.storage.ManagementPolicyRuleArgs(
+            definition=azure_nextgen.storage.ManagementPolicyDefinitionArgs(
+                actions=azure_nextgen.storage.ManagementPolicyActionArgs(
+                    base_blob=azure_nextgen.storage.ManagementPolicyBaseBlobArgs(
+                        delete=azure_nextgen.storage.DateAfterModificationArgs(
                             days_after_modification_greater_than=1000,
                         ),
-                        tier_to_archive=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                        tier_to_archive=azure_nextgen.storage.DateAfterModificationArgs(
                             days_after_modification_greater_than=90,
                         ),
-                        tier_to_cool=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                        tier_to_cool=azure_nextgen.storage.DateAfterModificationArgs(
                             days_after_modification_greater_than=30,
                         ),
                     ),
-                    snapshot=azure_nextgen.storage.latest.ManagementPolicySnapShotArgs(
-                        delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                    snapshot=azure_nextgen.storage.ManagementPolicySnapShotArgs(
+                        delete=azure_nextgen.storage.DateAfterCreationArgs(
                             days_after_creation_greater_than=1000,
                         ),
-                        tier_to_archive=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                        tier_to_archive=azure_nextgen.storage.DateAfterCreationArgs(
                             days_after_creation_greater_than=90,
                         ),
-                        tier_to_cool=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                        tier_to_cool=azure_nextgen.storage.DateAfterCreationArgs(
                             days_after_creation_greater_than=30,
                         ),
                     ),
-                    version=azure_nextgen.storage.latest.ManagementPolicyVersionArgs(
-                        delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                    version=azure_nextgen.storage.ManagementPolicyVersionArgs(
+                        delete=azure_nextgen.storage.DateAfterCreationArgs(
                             days_after_creation_greater_than=1000,
                         ),
-                        tier_to_archive=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                        tier_to_archive=azure_nextgen.storage.DateAfterCreationArgs(
                             days_after_creation_greater_than=90,
                         ),
-                        tier_to_cool=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                        tier_to_cool=azure_nextgen.storage.DateAfterCreationArgs(
                             days_after_creation_greater_than=30,
                         ),
                     ),
                 ),
-                filters=azure_nextgen.storage.latest.ManagementPolicyFilterArgs(
+                filters=azure_nextgen.storage.ManagementPolicyFilterArgs(
                     blob_types=["blockBlob"],
                     prefix_match=["olcmtestcontainer1"],
                 ),
@@ -905,7 +905,7 @@ management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("managementPolicy", {
+const managementPolicy = new azure_nextgen.storage.ManagementPolicy("managementPolicy", {
     accountName: "sto9699",
     managementPolicyName: "default",
     policy: {
@@ -973,45 +973,45 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementPolicy = new AzureNextGen.Storage.Latest.ManagementPolicy("managementPolicy", new AzureNextGen.Storage.Latest.ManagementPolicyArgs
+        var managementPolicy = new AzureNextGen.Storage.ManagementPolicy("managementPolicy", new AzureNextGen.Storage.ManagementPolicyArgs
         {
             AccountName = "sto9699",
             ManagementPolicyName = "default",
-            Policy = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySchemaArgs
+            Policy = new AzureNextGen.Storage.Inputs.ManagementPolicySchemaArgs
             {
                 Rules = 
                 {
-                    new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyRuleArgs
+                    new AzureNextGen.Storage.Inputs.ManagementPolicyRuleArgs
                     {
-                        Definition = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyDefinitionArgs
+                        Definition = new AzureNextGen.Storage.Inputs.ManagementPolicyDefinitionArgs
                         {
-                            Actions = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyActionArgs
+                            Actions = new AzureNextGen.Storage.Inputs.ManagementPolicyActionArgs
                             {
-                                BaseBlob = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyBaseBlobArgs
+                                BaseBlob = new AzureNextGen.Storage.Inputs.ManagementPolicyBaseBlobArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    Delete = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterLastAccessTimeGreaterThan = 1000,
                                     },
                                     EnableAutoTierToHotFromCool = true,
-                                    TierToArchive = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    TierToArchive = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterLastAccessTimeGreaterThan = 90,
                                     },
-                                    TierToCool = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    TierToCool = new AzureNextGen.Storage.Inputs.DateAfterModificationArgs
                                     {
                                         DaysAfterLastAccessTimeGreaterThan = 30,
                                     },
                                 },
-                                Snapshot = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySnapShotArgs
+                                Snapshot = new AzureNextGen.Storage.Inputs.ManagementPolicySnapShotArgs
                                 {
-                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    Delete = new AzureNextGen.Storage.Inputs.DateAfterCreationArgs
                                     {
                                         DaysAfterCreationGreaterThan = 30,
                                     },
                                 },
                             },
-                            Filters = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyFilterArgs
+                            Filters = new AzureNextGen.Storage.Inputs.ManagementPolicyFilterArgs
                             {
                                 BlobTypes = 
                                 {
@@ -1045,7 +1045,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1111,32 +1111,32 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPolicy",
+management_policy = azure_nextgen.storage.ManagementPolicy("managementPolicy",
     account_name="sto9699",
     management_policy_name="default",
-    policy=azure_nextgen.storage.latest.ManagementPolicySchemaArgs(
-        rules=[azure_nextgen.storage.latest.ManagementPolicyRuleArgs(
-            definition=azure_nextgen.storage.latest.ManagementPolicyDefinitionArgs(
-                actions=azure_nextgen.storage.latest.ManagementPolicyActionArgs(
-                    base_blob=azure_nextgen.storage.latest.ManagementPolicyBaseBlobArgs(
-                        delete=azure_nextgen.storage.latest.DateAfterModificationArgs(
+    policy=azure_nextgen.storage.ManagementPolicySchemaArgs(
+        rules=[azure_nextgen.storage.ManagementPolicyRuleArgs(
+            definition=azure_nextgen.storage.ManagementPolicyDefinitionArgs(
+                actions=azure_nextgen.storage.ManagementPolicyActionArgs(
+                    base_blob=azure_nextgen.storage.ManagementPolicyBaseBlobArgs(
+                        delete=azure_nextgen.storage.DateAfterModificationArgs(
                             days_after_last_access_time_greater_than=1000,
                         ),
                         enable_auto_tier_to_hot_from_cool=True,
-                        tier_to_archive=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                        tier_to_archive=azure_nextgen.storage.DateAfterModificationArgs(
                             days_after_last_access_time_greater_than=90,
                         ),
-                        tier_to_cool=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                        tier_to_cool=azure_nextgen.storage.DateAfterModificationArgs(
                             days_after_last_access_time_greater_than=30,
                         ),
                     ),
-                    snapshot=azure_nextgen.storage.latest.ManagementPolicySnapShotArgs(
-                        delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                    snapshot=azure_nextgen.storage.ManagementPolicySnapShotArgs(
+                        delete=azure_nextgen.storage.DateAfterCreationArgs(
                             days_after_creation_greater_than=30,
                         ),
                     ),
                 ),
-                filters=azure_nextgen.storage.latest.ManagementPolicyFilterArgs(
+                filters=azure_nextgen.storage.ManagementPolicyFilterArgs(
                     blob_types=["blockBlob"],
                     prefix_match=["olcmtestcontainer"],
                 ),
@@ -1158,7 +1158,7 @@ management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("managementPolicy", {
+const managementPolicy = new azure_nextgen.storage.ManagementPolicy("managementPolicy", {
     accountName: "sto9699",
     managementPolicyName: "default",
     policy: {
@@ -1208,7 +1208,7 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagementPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagementPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagementPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagementPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1216,11 +1216,11 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagementPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagementPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagementPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagementPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagementPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagementPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagementPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagementPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagementPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagementPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1241,7 +1241,7 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagementPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">ManagementPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1310,7 +1310,7 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagementPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">ManagementPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1349,7 +1349,7 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagementPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">ManagementPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1372,11 +1372,11 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
 
 ## ManagementPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ManagementPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ManagementPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4428,7 +4428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:ManagementPolicy DefaultManagementPolicy /subscriptions/{subscription-id}/resourceGroups/res7231/providers/Microsoft.Storage/storageAccounts/sto288/managementPolicies/default 
+$ pulumi import azure-nextgen:storage:ManagementPolicy DefaultManagementPolicy /subscriptions/{subscription-id}/resourceGroups/res7231/providers/Microsoft.Storage/storageAccounts/sto288/managementPolicies/default 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.JobSchedule resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the job schedule.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobSchedule = new AzureNextGen.Automation.Latest.JobSchedule("jobSchedule", new AzureNextGen.Automation.Latest.JobScheduleArgs
+        var jobSchedule = new AzureNextGen.Automation.JobSchedule("jobSchedule", new AzureNextGen.Automation.JobScheduleArgs
         {
             AutomationAccountName = "ContoseAutomationAccount",
             JobScheduleId = "0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc",
@@ -37,11 +37,11 @@ class MyStack : Stack
                 { "jobscheduletag02", "jobschedulevalue02" },
             },
             ResourceGroupName = "rg",
-            Runbook = new AzureNextGen.Automation.Latest.Inputs.RunbookAssociationPropertyArgs
+            Runbook = new AzureNextGen.Automation.Inputs.RunbookAssociationPropertyArgs
             {
                 Name = "TestRunbook",
             },
-            Schedule = new AzureNextGen.Automation.Latest.Inputs.ScheduleAssociationPropertyArgs
+            Schedule = new AzureNextGen.Automation.Inputs.ScheduleAssociationPropertyArgs
             {
                 Name = "ScheduleNameGoesHere332204b5-debe-4348-a5c7-6357457189f2",
             },
@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,7 +98,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_schedule = azure_nextgen.automation.latest.JobSchedule("jobSchedule",
+job_schedule = azure_nextgen.automation.JobSchedule("jobSchedule",
     automation_account_name="ContoseAutomationAccount",
     job_schedule_id="0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc",
     parameters={
@@ -106,10 +106,10 @@ job_schedule = azure_nextgen.automation.latest.JobSchedule("jobSchedule",
         "jobscheduletag02": "jobschedulevalue02",
     },
     resource_group_name="rg",
-    runbook=azure_nextgen.automation.latest.RunbookAssociationPropertyArgs(
+    runbook=azure_nextgen.automation.RunbookAssociationPropertyArgs(
         name="TestRunbook",
     ),
-    schedule=azure_nextgen.automation.latest.ScheduleAssociationPropertyArgs(
+    schedule=azure_nextgen.automation.ScheduleAssociationPropertyArgs(
         name="ScheduleNameGoesHere332204b5-debe-4348-a5c7-6357457189f2",
     ))
 
@@ -123,7 +123,7 @@ job_schedule = azure_nextgen.automation.latest.JobSchedule("jobSchedule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobSchedule = new azure_nextgen.automation.latest.JobSchedule("jobSchedule", {
+const jobSchedule = new azure_nextgen.automation.JobSchedule("jobSchedule", {
     automationAccountName: "ContoseAutomationAccount",
     jobScheduleId: "0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc",
     parameters: {
@@ -151,7 +151,7 @@ const jobSchedule = new azure_nextgen.automation.latest.JobSchedule("jobSchedule
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JobSchedule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">JobScheduleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JobSchedule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -159,11 +159,11 @@ const jobSchedule = new azure_nextgen.automation.latest.JobSchedule("jobSchedule
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJobSchedule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">JobScheduleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JobSchedule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJobSchedule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JobSchedule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JobSchedule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">JobScheduleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JobSchedule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobScheduleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -184,7 +184,7 @@ const jobSchedule = new azure_nextgen.automation.latest.JobSchedule("jobSchedule
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobScheduleArgs</span>
+        <span class="property-type"><a href="#inputs">JobScheduleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -253,7 +253,7 @@ const jobSchedule = new azure_nextgen.automation.latest.JobSchedule("jobSchedule
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobScheduleArgs</span>
+        <span class="property-type"><a href="#inputs">JobScheduleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -292,7 +292,7 @@ const jobSchedule = new azure_nextgen.automation.latest.JobSchedule("jobSchedule
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobScheduleArgs</span>
+        <span class="property-type"><a href="#inputs">JobScheduleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -315,11 +315,11 @@ const jobSchedule = new azure_nextgen.automation.latest.JobSchedule("jobSchedule
 
 ## JobSchedule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The JobSchedule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The JobSchedule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1001,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:JobSchedule myresource1 /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/ContoseAutomationAccount/jobSchedules/0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc 
+$ pulumi import azure-nextgen:automation:JobSchedule myresource1 /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/ContoseAutomationAccount/jobSchedules/0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc 
 ```
 
 

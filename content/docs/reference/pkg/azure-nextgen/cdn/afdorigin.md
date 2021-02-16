@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.AFDOrigin resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var afdOrigin = new AzureNextGen.Cdn.Latest.AFDOrigin("afdOrigin", new AzureNextGen.Cdn.Latest.AFDOriginArgs
+        var afdOrigin = new AzureNextGen.Cdn.AFDOrigin("afdOrigin", new AzureNextGen.Cdn.AFDOriginArgs
         {
             EnabledState = "Enabled",
             HostName = "host1.blob.core.windows.net",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,7 +87,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-afd_origin = azure_nextgen.cdn.latest.AFDOrigin("afdOrigin",
+afd_origin = azure_nextgen.cdn.AFDOrigin("afdOrigin",
     enabled_state="Enabled",
     host_name="host1.blob.core.windows.net",
     http_port=80,
@@ -108,7 +108,7 @@ afd_origin = azure_nextgen.cdn.latest.AFDOrigin("afdOrigin",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const afdOrigin = new azure_nextgen.cdn.latest.AFDOrigin("afdOrigin", {
+const afdOrigin = new azure_nextgen.cdn.AFDOrigin("afdOrigin", {
     enabledState: "Enabled",
     hostName: "host1.blob.core.windows.net",
     httpPort: 80,
@@ -132,7 +132,7 @@ const afdOrigin = new azure_nextgen.cdn.latest.AFDOrigin("afdOrigin", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AFDOrigin</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AFDOriginArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AFDOrigin</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AFDOriginArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -140,11 +140,11 @@ const afdOrigin = new azure_nextgen.cdn.latest.AFDOrigin("afdOrigin", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAFDOrigin</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AFDOriginArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AFDOrigin</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAFDOrigin</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AFDOriginArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AFDOrigin</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AFDOrigin</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AFDOriginArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AFDOrigin</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AFDOriginArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -165,7 +165,7 @@ const afdOrigin = new azure_nextgen.cdn.latest.AFDOrigin("afdOrigin", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AFDOriginArgs</span>
+        <span class="property-type"><a href="#inputs">AFDOriginArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -234,7 +234,7 @@ const afdOrigin = new azure_nextgen.cdn.latest.AFDOrigin("afdOrigin", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AFDOriginArgs</span>
+        <span class="property-type"><a href="#inputs">AFDOriginArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -273,7 +273,7 @@ const afdOrigin = new azure_nextgen.cdn.latest.AFDOrigin("afdOrigin", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AFDOriginArgs</span>
+        <span class="property-type"><a href="#inputs">AFDOriginArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -296,11 +296,11 @@ const afdOrigin = new azure_nextgen.cdn.latest.AFDOrigin("afdOrigin", {
 
 ## AFDOrigin Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AFDOrigin resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AFDOrigin resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1936,7 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:AFDOrigin origin1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/origingroups/origingroup1/origins/origin1 
+$ pulumi import azure-nextgen:cdn:AFDOrigin origin1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/origingroups/origingroup1/origins/origin1 
 ```
 
 

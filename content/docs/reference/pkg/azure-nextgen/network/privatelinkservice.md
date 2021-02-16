@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.PrivateLinkService resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Private link service resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkService = new AzureNextGen.Network.Latest.PrivateLinkService("privateLinkService", new AzureNextGen.Network.Latest.PrivateLinkServiceArgs
+        var privateLinkService = new AzureNextGen.Network.PrivateLinkService("privateLinkService", new AzureNextGen.Network.PrivateLinkServiceArgs
         {
-            AutoApproval = new AzureNextGen.Network.Latest.Inputs.PrivateLinkServicePropertiesAutoApprovalArgs
+            AutoApproval = new AzureNextGen.Network.Inputs.PrivateLinkServicePropertiesAutoApprovalArgs
             {
                 Subscriptions = 
                 {
@@ -45,13 +45,13 @@ class MyStack : Stack
             },
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.PrivateLinkServiceIpConfigurationArgs
+                new AzureNextGen.Network.Inputs.PrivateLinkServiceIpConfigurationArgs
                 {
                     Name = "fe-lb",
                     PrivateIPAddress = "10.0.1.4",
                     PrivateIPAddressVersion = "IPv4",
                     PrivateIPAllocationMethod = "Static",
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.Network.Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
                     },
@@ -59,7 +59,7 @@ class MyStack : Stack
             },
             LoadBalancerFrontendIpConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FrontendIPConfigurationArgs
+                new AzureNextGen.Network.Inputs.FrontendIPConfigurationArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
                 },
@@ -67,7 +67,7 @@ class MyStack : Stack
             Location = "eastus",
             ResourceGroupName = "rg1",
             ServiceName = "testPls",
-            Visibility = new AzureNextGen.Network.Latest.Inputs.PrivateLinkServicePropertiesVisibilityArgs
+            Visibility = new AzureNextGen.Network.Inputs.PrivateLinkServicePropertiesVisibilityArgs
             {
                 Subscriptions = 
                 {
@@ -91,7 +91,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -153,8 +153,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_service = azure_nextgen.network.latest.PrivateLinkService("privateLinkService",
-    auto_approval=azure_nextgen.network.latest.PrivateLinkServicePropertiesAutoApprovalArgs(
+private_link_service = azure_nextgen.network.PrivateLinkService("privateLinkService",
+    auto_approval=azure_nextgen.network.PrivateLinkServicePropertiesAutoApprovalArgs(
         subscriptions=[
             "subscription1",
             "subscription2",
@@ -165,22 +165,22 @@ private_link_service = azure_nextgen.network.latest.PrivateLinkService("privateL
         "fqdn2",
         "fqdn3",
     ],
-    ip_configurations=[azure_nextgen.network.latest.PrivateLinkServiceIpConfigurationArgs(
+    ip_configurations=[azure_nextgen.network.PrivateLinkServiceIpConfigurationArgs(
         name="fe-lb",
         private_ip_address="10.0.1.4",
         private_ip_address_version="IPv4",
         private_ip_allocation_method="Static",
-        subnet=azure_nextgen.network.latest.SubnetArgs(
+        subnet=azure_nextgen.network.SubnetArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
         ),
     )],
-    load_balancer_frontend_ip_configurations=[azure_nextgen.network.latest.FrontendIPConfigurationArgs(
+    load_balancer_frontend_ip_configurations=[azure_nextgen.network.FrontendIPConfigurationArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
     )],
     location="eastus",
     resource_group_name="rg1",
     service_name="testPls",
-    visibility=azure_nextgen.network.latest.PrivateLinkServicePropertiesVisibilityArgs(
+    visibility=azure_nextgen.network.PrivateLinkServicePropertiesVisibilityArgs(
         subscriptions=[
             "subscription1",
             "subscription2",
@@ -198,7 +198,7 @@ private_link_service = azure_nextgen.network.latest.PrivateLinkService("privateL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkService = new azure_nextgen.network.latest.PrivateLinkService("privateLinkService", {
+const privateLinkService = new azure_nextgen.network.PrivateLinkService("privateLinkService", {
     autoApproval: {
         subscriptions: [
             "subscription1",
@@ -246,7 +246,7 @@ const privateLinkService = new azure_nextgen.network.latest.PrivateLinkService("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateLinkService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PrivateLinkServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateLinkService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateLinkServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -254,11 +254,11 @@ const privateLinkService = new azure_nextgen.network.latest.PrivateLinkService("
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateLinkService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PrivateLinkServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateLinkService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateLinkService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateLinkServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateLinkService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateLinkService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PrivateLinkServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateLinkService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateLinkServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -279,7 +279,7 @@ const privateLinkService = new azure_nextgen.network.latest.PrivateLinkService("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateLinkServiceArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateLinkServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -348,7 +348,7 @@ const privateLinkService = new azure_nextgen.network.latest.PrivateLinkService("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateLinkServiceArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateLinkServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -387,7 +387,7 @@ const privateLinkService = new azure_nextgen.network.latest.PrivateLinkService("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateLinkServiceArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateLinkServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -410,11 +410,11 @@ const privateLinkService = new azure_nextgen.network.latest.PrivateLinkService("
 
 ## PrivateLinkService Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PrivateLinkService resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PrivateLinkService resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -20226,7 +20226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:PrivateLinkService testPls /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls 
+$ pulumi import azure-nextgen:network:PrivateLinkService testPls /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls 
 ```
 
 

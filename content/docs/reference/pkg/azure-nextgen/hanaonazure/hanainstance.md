@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hanaonazure.HanaInstance resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 HANA instance info on Azure (ARM properties and HANA properties)
+API Version: 2017-11-03-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,29 +27,29 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hanaInstance = new AzureNextGen.HanaOnAzure.V20171103Preview.HanaInstance("hanaInstance", new AzureNextGen.HanaOnAzure.V20171103Preview.HanaInstanceArgs
+        var hanaInstance = new AzureNextGen.HanaOnAzure.HanaInstance("hanaInstance", new AzureNextGen.HanaOnAzure.HanaInstanceArgs
         {
             HanaInstanceId = "00000000-0000-0000-0000-000000000000",
             HanaInstanceName = "myHanaInstance",
-            HardwareProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.HanaOnAzure.Inputs.HardwareProfileArgs
             {
                 HanaInstanceSize = "S72",
                 HardwareType = "Cisco_UCS",
             },
             HwRevision = "Rev 3",
             Location = "westus",
-            NetworkProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.HanaOnAzure.Inputs.NetworkProfileArgs
             {
                 CircuitId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/expressRouteCircuit",
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.IpAddressArgs
+                    new AzureNextGen.HanaOnAzure.Inputs.IpAddressArgs
                     {
                         IpAddress = "100.100.100.100",
                     },
                 },
             },
-            OsProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.HanaOnAzure.Inputs.OSProfileArgs
             {
                 ComputerName = "myComputerName",
                 OsType = "SUSE",
@@ -60,7 +61,7 @@ class MyStack : Stack
             ProvisioningState = "Succeeded",
             ProximityPlacementGroup = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/proximityPlacementGroups/myplacementgroup",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.HanaOnAzure.Inputs.StorageProfileArgs
             {
                 NfsIpAddress = "200.200.200.200",
             },
@@ -83,7 +84,7 @@ class MyStack : Stack
 package main
 
 import (
-	hanaonazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure/v20171103preview"
+	hanaonazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -141,22 +142,22 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hana_instance = azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaInstance",
+hana_instance = azure_nextgen.hanaonazure.HanaInstance("hanaInstance",
     hana_instance_id="00000000-0000-0000-0000-000000000000",
     hana_instance_name="myHanaInstance",
-    hardware_profile=azure_nextgen.hanaonazure.v20171103preview.HardwareProfileArgs(
+    hardware_profile=azure_nextgen.hanaonazure.HardwareProfileArgs(
         hana_instance_size="S72",
         hardware_type="Cisco_UCS",
     ),
     hw_revision="Rev 3",
     location="westus",
-    network_profile=azure_nextgen.hanaonazure.v20171103preview.NetworkProfileArgs(
+    network_profile=azure_nextgen.hanaonazure.NetworkProfileArgs(
         circuit_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/expressRouteCircuit",
-        network_interfaces=[azure_nextgen.hanaonazure.v20171103preview.IpAddressArgs(
+        network_interfaces=[azure_nextgen.hanaonazure.IpAddressArgs(
             ip_address="100.100.100.100",
         )],
     ),
-    os_profile=azure_nextgen.hanaonazure.v20171103preview.OSProfileArgs(
+    os_profile=azure_nextgen.hanaonazure.OSProfileArgs(
         computer_name="myComputerName",
         os_type="SUSE",
         ssh_public_key="AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L",
@@ -167,7 +168,7 @@ hana_instance = azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaIns
     provisioning_state="Succeeded",
     proximity_placement_group="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/proximityPlacementGroups/myplacementgroup",
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.hanaonazure.v20171103preview.StorageProfileArgs(
+    storage_profile=azure_nextgen.hanaonazure.StorageProfileArgs(
         nfs_ip_address="200.200.200.200",
     ),
     tags={
@@ -184,7 +185,7 @@ hana_instance = azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaIns
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaInstance", {
+const hanaInstance = new azure_nextgen.hanaonazure.HanaInstance("hanaInstance", {
     hanaInstanceId: "00000000-0000-0000-0000-000000000000",
     hanaInstanceName: "myHanaInstance",
     hardwareProfile: {
@@ -230,7 +231,7 @@ const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">HanaInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HanaInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -238,11 +239,11 @@ const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHanaInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">HanaInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HanaInstance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHanaInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HanaInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HanaInstance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">HanaInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HanaInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -263,7 +264,7 @@ const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HanaInstanceArgs</span>
+        <span class="property-type"><a href="#inputs">HanaInstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -332,7 +333,7 @@ const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HanaInstanceArgs</span>
+        <span class="property-type"><a href="#inputs">HanaInstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -371,7 +372,7 @@ const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HanaInstanceArgs</span>
+        <span class="property-type"><a href="#inputs">HanaInstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -394,11 +395,11 @@ const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance
 
 ## HanaInstance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2920,7 +2921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hanaonazure/v20171103preview:HanaInstance myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
+$ pulumi import azure-nextgen:hanaonazure:HanaInstance myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
 ```
 
 

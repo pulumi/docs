@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ConnectionMonitor resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about the connection monitor.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectionMonitor = new AzureNextGen.Network.Latest.ConnectionMonitor("connectionMonitor", new AzureNextGen.Network.Latest.ConnectionMonitorArgs
+        var connectionMonitor = new AzureNextGen.Network.ConnectionMonitor("connectionMonitor", new AzureNextGen.Network.ConnectionMonitorArgs
         {
             ConnectionMonitorName = "cm1",
             Endpoints = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
+                new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointArgs
                 {
                     Name = "source",
                     ResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1",
                 },
-                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
+                new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointArgs
                 {
                     Address = "bing.com",
                     Name = "destination",
@@ -48,11 +48,11 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             TestConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorTestConfigurationArgs
+                new AzureNextGen.Network.Inputs.ConnectionMonitorTestConfigurationArgs
                 {
                     Name = "tcp",
                     Protocol = "Tcp",
-                    TcpConfiguration = new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorTcpConfigurationArgs
+                    TcpConfiguration = new AzureNextGen.Network.Inputs.ConnectionMonitorTcpConfigurationArgs
                     {
                         Port = 80,
                     },
@@ -61,7 +61,7 @@ class MyStack : Stack
             },
             TestGroups = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorTestGroupArgs
+                new AzureNextGen.Network.Inputs.ConnectionMonitorTestGroupArgs
                 {
                     Destinations = 
                     {
@@ -93,7 +93,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -156,14 +156,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection_monitor = azure_nextgen.network.latest.ConnectionMonitor("connectionMonitor",
+connection_monitor = azure_nextgen.network.ConnectionMonitor("connectionMonitor",
     connection_monitor_name="cm1",
     endpoints=[
-        azure_nextgen.network.latest.ConnectionMonitorEndpointArgs(
+        azure_nextgen.network.ConnectionMonitorEndpointArgs(
             name="source",
             resource_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1",
         ),
-        azure_nextgen.network.latest.ConnectionMonitorEndpointArgs(
+        azure_nextgen.network.ConnectionMonitorEndpointArgs(
             address="bing.com",
             name="destination",
         ),
@@ -171,15 +171,15 @@ connection_monitor = azure_nextgen.network.latest.ConnectionMonitor("connectionM
     location="eastus",
     network_watcher_name="nw1",
     resource_group_name="rg1",
-    test_configurations=[azure_nextgen.network.latest.ConnectionMonitorTestConfigurationArgs(
+    test_configurations=[azure_nextgen.network.ConnectionMonitorTestConfigurationArgs(
         name="tcp",
         protocol="Tcp",
-        tcp_configuration=azure_nextgen.network.latest.ConnectionMonitorTcpConfigurationArgs(
+        tcp_configuration=azure_nextgen.network.ConnectionMonitorTcpConfigurationArgs(
             port=80,
         ),
         test_frequency_sec=60,
     )],
-    test_groups=[azure_nextgen.network.latest.ConnectionMonitorTestGroupArgs(
+    test_groups=[azure_nextgen.network.ConnectionMonitorTestGroupArgs(
         destinations=["destination"],
         name="tg",
         sources=["source"],
@@ -196,7 +196,7 @@ connection_monitor = azure_nextgen.network.latest.ConnectionMonitor("connectionM
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connectionMonitor = new azure_nextgen.network.latest.ConnectionMonitor("connectionMonitor", {
+const connectionMonitor = new azure_nextgen.network.ConnectionMonitor("connectionMonitor", {
     connectionMonitorName: "cm1",
     endpoints: [
         {
@@ -241,23 +241,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectionMonitor = new AzureNextGen.Network.Latest.ConnectionMonitor("connectionMonitor", new AzureNextGen.Network.Latest.ConnectionMonitorArgs
+        var connectionMonitor = new AzureNextGen.Network.ConnectionMonitor("connectionMonitor", new AzureNextGen.Network.ConnectionMonitorArgs
         {
             ConnectionMonitorName = "cm1",
             Endpoints = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
+                new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointArgs
                 {
                     Name = "vm1",
                     ResourceId = "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1",
                 },
-                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
+                new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointArgs
                 {
-                    Filter = new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointFilterArgs
+                    Filter = new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointFilterArgs
                     {
                         Items = 
                         {
-                            new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointFilterItemArgs
+                            new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointFilterItemArgs
                             {
                                 Address = "npmuser",
                                 Type = "AgentAddress",
@@ -268,12 +268,12 @@ class MyStack : Stack
                     Name = "CanaryWorkspaceVamshi",
                     ResourceId = "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace",
                 },
-                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
+                new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointArgs
                 {
                     Address = "bing.com",
                     Name = "bing",
                 },
-                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
+                new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointArgs
                 {
                     Address = "google.com",
                     Name = "google",
@@ -284,11 +284,11 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             TestConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorTestConfigurationArgs
+                new AzureNextGen.Network.Inputs.ConnectionMonitorTestConfigurationArgs
                 {
                     Name = "testConfig1",
                     Protocol = "Tcp",
-                    TcpConfiguration = new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorTcpConfigurationArgs
+                    TcpConfiguration = new AzureNextGen.Network.Inputs.ConnectionMonitorTcpConfigurationArgs
                     {
                         DisableTraceRoute = false,
                         Port = 80,
@@ -298,7 +298,7 @@ class MyStack : Stack
             },
             TestGroups = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorTestGroupArgs
+                new AzureNextGen.Network.Inputs.ConnectionMonitorTestGroupArgs
                 {
                     Destinations = 
                     {
@@ -333,7 +333,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -417,16 +417,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection_monitor = azure_nextgen.network.latest.ConnectionMonitor("connectionMonitor",
+connection_monitor = azure_nextgen.network.ConnectionMonitor("connectionMonitor",
     connection_monitor_name="cm1",
     endpoints=[
-        azure_nextgen.network.latest.ConnectionMonitorEndpointArgs(
+        azure_nextgen.network.ConnectionMonitorEndpointArgs(
             name="vm1",
             resource_id="/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1",
         ),
-        azure_nextgen.network.latest.ConnectionMonitorEndpointArgs(
-            filter=azure_nextgen.network.latest.ConnectionMonitorEndpointFilterArgs(
-                items=[azure_nextgen.network.latest.ConnectionMonitorEndpointFilterItemArgs(
+        azure_nextgen.network.ConnectionMonitorEndpointArgs(
+            filter=azure_nextgen.network.ConnectionMonitorEndpointFilterArgs(
+                items=[azure_nextgen.network.ConnectionMonitorEndpointFilterItemArgs(
                     address="npmuser",
                     type="AgentAddress",
                 )],
@@ -435,11 +435,11 @@ connection_monitor = azure_nextgen.network.latest.ConnectionMonitor("connectionM
             name="CanaryWorkspaceVamshi",
             resource_id="/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace",
         ),
-        azure_nextgen.network.latest.ConnectionMonitorEndpointArgs(
+        azure_nextgen.network.ConnectionMonitorEndpointArgs(
             address="bing.com",
             name="bing",
         ),
-        azure_nextgen.network.latest.ConnectionMonitorEndpointArgs(
+        azure_nextgen.network.ConnectionMonitorEndpointArgs(
             address="google.com",
             name="google",
         ),
@@ -447,16 +447,16 @@ connection_monitor = azure_nextgen.network.latest.ConnectionMonitor("connectionM
     network_watcher_name="nw1",
     outputs=[],
     resource_group_name="rg1",
-    test_configurations=[azure_nextgen.network.latest.ConnectionMonitorTestConfigurationArgs(
+    test_configurations=[azure_nextgen.network.ConnectionMonitorTestConfigurationArgs(
         name="testConfig1",
         protocol="Tcp",
-        tcp_configuration=azure_nextgen.network.latest.ConnectionMonitorTcpConfigurationArgs(
+        tcp_configuration=azure_nextgen.network.ConnectionMonitorTcpConfigurationArgs(
             disable_trace_route=False,
             port=80,
         ),
         test_frequency_sec=60,
     )],
-    test_groups=[azure_nextgen.network.latest.ConnectionMonitorTestGroupArgs(
+    test_groups=[azure_nextgen.network.ConnectionMonitorTestGroupArgs(
         destinations=[
             "bing",
             "google",
@@ -480,7 +480,7 @@ connection_monitor = azure_nextgen.network.latest.ConnectionMonitor("connectionM
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connectionMonitor = new azure_nextgen.network.latest.ConnectionMonitor("connectionMonitor", {
+const connectionMonitor = new azure_nextgen.network.ConnectionMonitor("connectionMonitor", {
     connectionMonitorName: "cm1",
     endpoints: [
         {
@@ -546,7 +546,7 @@ const connectionMonitor = new azure_nextgen.network.latest.ConnectionMonitor("co
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ConnectionMonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -554,11 +554,11 @@ const connectionMonitor = new azure_nextgen.network.latest.ConnectionMonitor("co
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectionMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ConnectionMonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectionMonitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectionMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectionMonitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ConnectionMonitorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectionMonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -579,7 +579,7 @@ const connectionMonitor = new azure_nextgen.network.latest.ConnectionMonitor("co
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectionMonitorArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectionMonitorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -648,7 +648,7 @@ const connectionMonitor = new azure_nextgen.network.latest.ConnectionMonitor("co
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectionMonitorArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectionMonitorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -687,7 +687,7 @@ const connectionMonitor = new azure_nextgen.network.latest.ConnectionMonitor("co
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectionMonitorArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectionMonitorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -710,11 +710,11 @@ const connectionMonitor = new azure_nextgen.network.latest.ConnectionMonitor("co
 
 ## ConnectionMonitor Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -6366,7 +6366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ConnectionMonitor cm1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkWatchers/nw1/connectionMonitors/cm1 
+$ pulumi import azure-nextgen:network:ConnectionMonitor cm1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkWatchers/nw1/connectionMonitors/cm1 
 ```
 
 

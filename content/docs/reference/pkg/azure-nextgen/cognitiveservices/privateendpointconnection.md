@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cognitiveservices.PrivateEndpoin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Private Endpoint Connection resource.
-Latest API Version: 2017-04-18.
+API Version: 2017-04-18.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.CognitiveServices.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.CognitiveServices.Latest.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.CognitiveServices.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.CognitiveServices.PrivateEndpointConnectionArgs
         {
             AccountName = "sto9699",
             PrivateEndpointConnectionName = "{privateEndpointConnectionName}",
-            Properties = new AzureNextGen.CognitiveServices.Latest.Inputs.PrivateEndpointConnectionPropertiesArgs
+            Properties = new AzureNextGen.CognitiveServices.Inputs.PrivateEndpointConnectionPropertiesArgs
             {
-                PrivateLinkServiceConnectionState = new AzureNextGen.CognitiveServices.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+                PrivateLinkServiceConnectionState = new AzureNextGen.CognitiveServices.Inputs.PrivateLinkServiceConnectionStateArgs
                 {
                     Description = "Auto-Approved",
                     Status = "Approved",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices/latest"
+	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,11 +89,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.cognitiveservices.latest.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.cognitiveservices.PrivateEndpointConnection("privateEndpointConnection",
     account_name="sto9699",
     private_endpoint_connection_name="{privateEndpointConnectionName}",
-    properties=azure_nextgen.cognitiveservices.latest.PrivateEndpointConnectionPropertiesArgs(
-        private_link_service_connection_state=azure_nextgen.cognitiveservices.latest.PrivateLinkServiceConnectionStateArgs(
+    properties=azure_nextgen.cognitiveservices.PrivateEndpointConnectionPropertiesArgs(
+        private_link_service_connection_state=azure_nextgen.cognitiveservices.PrivateLinkServiceConnectionStateArgs(
             description="Auto-Approved",
             status="Approved",
         ),
@@ -110,7 +110,7 @@ private_endpoint_connection = azure_nextgen.cognitiveservices.latest.PrivateEndp
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.cognitiveservices.latest.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.cognitiveservices.PrivateEndpointConnection("privateEndpointConnection", {
     accountName: "sto9699",
     privateEndpointConnectionName: "{privateEndpointConnectionName}",
     properties: {
@@ -134,7 +134,7 @@ const privateEndpointConnection = new azure_nextgen.cognitiveservices.latest.Pri
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PrivateEndpointConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateEndpointConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -142,11 +142,11 @@ const privateEndpointConnection = new azure_nextgen.cognitiveservices.latest.Pri
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateEndpointConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PrivateEndpointConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateEndpointConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateEndpointConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateEndpointConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateEndpointConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PrivateEndpointConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateEndpointConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -167,7 +167,7 @@ const privateEndpointConnection = new azure_nextgen.cognitiveservices.latest.Pri
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateEndpointConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateEndpointConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -236,7 +236,7 @@ const privateEndpointConnection = new azure_nextgen.cognitiveservices.latest.Pri
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateEndpointConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateEndpointConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -275,7 +275,7 @@ const privateEndpointConnection = new azure_nextgen.cognitiveservices.latest.Pri
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateEndpointConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateEndpointConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -298,11 +298,11 @@ const privateEndpointConnection = new azure_nextgen.cognitiveservices.latest.Pri
 
 ## PrivateEndpointConnection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PrivateEndpointConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PrivateEndpointConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1244,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cognitiveservices/latest:PrivateEndpointConnection {privateEndpointConnectionName} /subscriptions/{subscription-id}/resourceGroups/res7231/providers/Microsoft.CognitiveServices/accounts/sto288/privateEndpointConnections/{privateEndpointConnectionName} 
+$ pulumi import azure-nextgen:cognitiveservices:PrivateEndpointConnection {privateEndpointConnectionName} /subscriptions/{subscription-id}/resourceGroups/res7231/providers/Microsoft.CognitiveServices/accounts/sto288/privateEndpointConnections/{privateEndpointConnectionName} 
 ```
 
 

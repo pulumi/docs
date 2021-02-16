@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devices.IotHubResourceEventHubCo
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The properties of the EventHubConsumerGroupInfo object.
-Latest API Version: 2020-08-31.
+API Version: 2020-08-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotHubResourceEventHubConsumerGroup = new AzureNextGen.Devices.Latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", new AzureNextGen.Devices.Latest.IotHubResourceEventHubConsumerGroupArgs
+        var iotHubResourceEventHubConsumerGroup = new AzureNextGen.Devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", new AzureNextGen.Devices.IotHubResourceEventHubConsumerGroupArgs
         {
             EventHubEndpointName = "events",
             Name = "test",
-            Properties = new AzureNextGen.Devices.Latest.Inputs.EventHubConsumerGroupNameArgs
+            Properties = new AzureNextGen.Devices.Inputs.EventHubConsumerGroupNameArgs
             {
                 Name = "test",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,10 +84,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_hub_resource_event_hub_consumer_group = azure_nextgen.devices.latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup",
+iot_hub_resource_event_hub_consumer_group = azure_nextgen.devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup",
     event_hub_endpoint_name="events",
     name="test",
-    properties=azure_nextgen.devices.latest.EventHubConsumerGroupNameArgs(
+    properties=azure_nextgen.devices.EventHubConsumerGroupNameArgs(
         name="test",
     ),
     resource_group_name="myResourceGroup",
@@ -103,7 +103,7 @@ iot_hub_resource_event_hub_consumer_group = azure_nextgen.devices.latest.IotHubR
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", {
+const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", {
     eventHubEndpointName: "events",
     name: "test",
     properties: {
@@ -125,7 +125,7 @@ const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.latest.Iot
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotHubResourceEventHubConsumerGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IotHubResourceEventHubConsumerGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotHubResourceEventHubConsumerGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IotHubResourceEventHubConsumerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -133,11 +133,11 @@ const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.latest.Iot
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotHubResourceEventHubConsumerGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IotHubResourceEventHubConsumerGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotHubResourceEventHubConsumerGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotHubResourceEventHubConsumerGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IotHubResourceEventHubConsumerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotHubResourceEventHubConsumerGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotHubResourceEventHubConsumerGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IotHubResourceEventHubConsumerGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotHubResourceEventHubConsumerGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IotHubResourceEventHubConsumerGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -158,7 +158,7 @@ const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.latest.Iot
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotHubResourceEventHubConsumerGroupArgs</span>
+        <span class="property-type"><a href="#inputs">IotHubResourceEventHubConsumerGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -227,7 +227,7 @@ const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.latest.Iot
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotHubResourceEventHubConsumerGroupArgs</span>
+        <span class="property-type"><a href="#inputs">IotHubResourceEventHubConsumerGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -266,7 +266,7 @@ const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.latest.Iot
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotHubResourceEventHubConsumerGroupArgs</span>
+        <span class="property-type"><a href="#inputs">IotHubResourceEventHubConsumerGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -289,11 +289,11 @@ const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.latest.Iot
 
 ## IotHubResourceEventHubConsumerGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IotHubResourceEventHubConsumerGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IotHubResourceEventHubConsumerGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -717,7 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devices/latest:IotHubResourceEventHubConsumerGroup test /subscriptions/cmd-sub-1/resourceGroups/cmd-rg-1/providers/Microsoft.Devices/IotHubs/test-hub-2/eventHubEndpoints/events/ConsumerGroups/%24Default 
+$ pulumi import azure-nextgen:devices:IotHubResourceEventHubConsumerGroup test /subscriptions/cmd-sub-1/resourceGroups/cmd-rg-1/providers/Microsoft.Devices/IotHubs/test-hub-2/eventHubEndpoints/events/ConsumerGroups/%24Default 
 ```
 
 

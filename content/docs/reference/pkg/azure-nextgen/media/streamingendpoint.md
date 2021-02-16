@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.StreamingEndpoint resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The streaming endpoint.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingEndpoint = new AzureNextGen.Media.Latest.StreamingEndpoint("streamingEndpoint", new AzureNextGen.Media.Latest.StreamingEndpointArgs
+        var streamingEndpoint = new AzureNextGen.Media.StreamingEndpoint("streamingEndpoint", new AzureNextGen.Media.StreamingEndpointArgs
         {
-            AccessControl = new AzureNextGen.Media.Latest.Inputs.StreamingEndpointAccessControlArgs
+            AccessControl = new AzureNextGen.Media.Inputs.StreamingEndpointAccessControlArgs
             {
-                Akamai = new AzureNextGen.Media.Latest.Inputs.AkamaiAccessControlArgs
+                Akamai = new AzureNextGen.Media.Inputs.AkamaiAccessControlArgs
                 {
                     AkamaiSignatureHeaderAuthenticationKeyList = 
                     {
-                        new AzureNextGen.Media.Latest.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
+                        new AzureNextGen.Media.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
                         {
                             Base64Key = "dGVzdGlkMQ==",
                             Expiration = "2029-12-31T16:00:00-08:00",
                             Identifier = "id1",
                         },
-                        new AzureNextGen.Media.Latest.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
+                        new AzureNextGen.Media.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
                         {
                             Base64Key = "dGVzdGlkMQ==",
                             Expiration = "2030-12-31T16:00:00-08:00",
@@ -49,11 +49,11 @@ class MyStack : Stack
                         },
                     },
                 },
-                Ip = new AzureNextGen.Media.Latest.Inputs.IPAccessControlArgs
+                Ip = new AzureNextGen.Media.Inputs.IPAccessControlArgs
                 {
                     Allow = 
                     {
-                        new AzureNextGen.Media.Latest.Inputs.IPRangeArgs
+                        new AzureNextGen.Media.Inputs.IPRangeArgs
                         {
                             Address = "192.168.1.1",
                             Name = "AllowedIp",
@@ -89,7 +89,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -150,24 +150,24 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_endpoint = azure_nextgen.media.latest.StreamingEndpoint("streamingEndpoint",
-    access_control=azure_nextgen.media.latest.StreamingEndpointAccessControlArgs(
-        akamai=azure_nextgen.media.latest.AkamaiAccessControlArgs(
+streaming_endpoint = azure_nextgen.media.StreamingEndpoint("streamingEndpoint",
+    access_control=azure_nextgen.media.StreamingEndpointAccessControlArgs(
+        akamai=azure_nextgen.media.AkamaiAccessControlArgs(
             akamai_signature_header_authentication_key_list=[
-                azure_nextgen.media.latest.AkamaiSignatureHeaderAuthenticationKeyArgs(
+                azure_nextgen.media.AkamaiSignatureHeaderAuthenticationKeyArgs(
                     base64_key="dGVzdGlkMQ==",
                     expiration="2029-12-31T16:00:00-08:00",
                     identifier="id1",
                 ),
-                azure_nextgen.media.latest.AkamaiSignatureHeaderAuthenticationKeyArgs(
+                azure_nextgen.media.AkamaiSignatureHeaderAuthenticationKeyArgs(
                     base64_key="dGVzdGlkMQ==",
                     expiration="2030-12-31T16:00:00-08:00",
                     identifier="id2",
                 ),
             ],
         ),
-        ip=azure_nextgen.media.latest.IPAccessControlArgs(
-            allow=[azure_nextgen.media.latest.IPRangeArgs(
+        ip=azure_nextgen.media.IPAccessControlArgs(
+            allow=[azure_nextgen.media.IPRangeArgs(
                 address="192.168.1.1",
                 name="AllowedIp",
             )],
@@ -196,7 +196,7 @@ streaming_endpoint = azure_nextgen.media.latest.StreamingEndpoint("streamingEndp
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const streamingEndpoint = new azure_nextgen.media.latest.StreamingEndpoint("streamingEndpoint", {
+const streamingEndpoint = new azure_nextgen.media.StreamingEndpoint("streamingEndpoint", {
     accessControl: {
         akamai: {
             akamaiSignatureHeaderAuthenticationKeyList: [
@@ -245,7 +245,7 @@ const streamingEndpoint = new azure_nextgen.media.latest.StreamingEndpoint("stre
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">StreamingEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -253,11 +253,11 @@ const streamingEndpoint = new azure_nextgen.media.latest.StreamingEndpoint("stre
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">StreamingEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingEndpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingEndpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">StreamingEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -278,7 +278,7 @@ const streamingEndpoint = new azure_nextgen.media.latest.StreamingEndpoint("stre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StreamingEndpointArgs</span>
+        <span class="property-type"><a href="#inputs">StreamingEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -347,7 +347,7 @@ const streamingEndpoint = new azure_nextgen.media.latest.StreamingEndpoint("stre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StreamingEndpointArgs</span>
+        <span class="property-type"><a href="#inputs">StreamingEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -386,7 +386,7 @@ const streamingEndpoint = new azure_nextgen.media.latest.StreamingEndpoint("stre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StreamingEndpointArgs</span>
+        <span class="property-type"><a href="#inputs">StreamingEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -409,11 +409,11 @@ const streamingEndpoint = new azure_nextgen.media.latest.StreamingEndpoint("stre
 
 ## StreamingEndpoint Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2841,7 +2841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:StreamingEndpoint myStreamingEndpoint1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/streamingendpoints/myStreamingEndpoint1 
+$ pulumi import azure-nextgen:media:StreamingEndpoint myStreamingEndpoint1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/streamingendpoints/myStreamingEndpoint1 
 ```
 
 

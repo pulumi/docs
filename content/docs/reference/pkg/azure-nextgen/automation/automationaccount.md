@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.AutomationAccount res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the automation account type.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var automationAccount = new AzureNextGen.Automation.Latest.AutomationAccount("automationAccount", new AzureNextGen.Automation.Latest.AutomationAccountArgs
+        var automationAccount = new AzureNextGen.Automation.AutomationAccount("automationAccount", new AzureNextGen.Automation.AutomationAccountArgs
         {
             AutomationAccountName = "myAutomationAccount9",
             Location = "East US 2",
             Name = "myAutomationAccount9",
             ResourceGroupName = "rg",
-            Sku = new AzureNextGen.Automation.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Automation.Inputs.SkuArgs
             {
                 Name = "Free",
             },
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,12 +84,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-automation_account = azure_nextgen.automation.latest.AutomationAccount("automationAccount",
+automation_account = azure_nextgen.automation.AutomationAccount("automationAccount",
     automation_account_name="myAutomationAccount9",
     location="East US 2",
     name="myAutomationAccount9",
     resource_group_name="rg",
-    sku=azure_nextgen.automation.latest.SkuArgs(
+    sku=azure_nextgen.automation.SkuArgs(
         name="Free",
     ))
 
@@ -103,7 +103,7 @@ automation_account = azure_nextgen.automation.latest.AutomationAccount("automati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const automationAccount = new azure_nextgen.automation.latest.AutomationAccount("automationAccount", {
+const automationAccount = new azure_nextgen.automation.AutomationAccount("automationAccount", {
     automationAccountName: "myAutomationAccount9",
     location: "East US 2",
     name: "myAutomationAccount9",
@@ -125,7 +125,7 @@ const automationAccount = new azure_nextgen.automation.latest.AutomationAccount(
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutomationAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AutomationAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutomationAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutomationAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -133,11 +133,11 @@ const automationAccount = new azure_nextgen.automation.latest.AutomationAccount(
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutomationAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AutomationAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutomationAccount</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutomationAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutomationAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutomationAccount</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutomationAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AutomationAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutomationAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AutomationAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -158,7 +158,7 @@ const automationAccount = new azure_nextgen.automation.latest.AutomationAccount(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AutomationAccountArgs</span>
+        <span class="property-type"><a href="#inputs">AutomationAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -227,7 +227,7 @@ const automationAccount = new azure_nextgen.automation.latest.AutomationAccount(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AutomationAccountArgs</span>
+        <span class="property-type"><a href="#inputs">AutomationAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -266,7 +266,7 @@ const automationAccount = new azure_nextgen.automation.latest.AutomationAccount(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AutomationAccountArgs</span>
+        <span class="property-type"><a href="#inputs">AutomationAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -289,11 +289,11 @@ const automationAccount = new azure_nextgen.automation.latest.AutomationAccount(
 
 ## AutomationAccount Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AutomationAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AutomationAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1177,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:AutomationAccount ContoseAutomationAccount /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount9 
+$ pulumi import azure-nextgen:automation:AutomationAccount ContoseAutomationAccount /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount9 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.LocalNetworkGateway reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A common class for general resource information.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var localNetworkGateway = new AzureNextGen.Network.Latest.LocalNetworkGateway("localNetworkGateway", new AzureNextGen.Network.Latest.LocalNetworkGatewayArgs
+        var localNetworkGateway = new AzureNextGen.Network.LocalNetworkGateway("localNetworkGateway", new AzureNextGen.Network.LocalNetworkGatewayArgs
         {
             Fqdn = "site1.contoso.com",
             GatewayIpAddress = "11.12.13.14",
-            LocalNetworkAddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            LocalNetworkAddressSpace = new AzureNextGen.Network.Inputs.AddressSpaceArgs
             {
                 AddressPrefixes = 
                 {
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,10 +91,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-local_network_gateway = azure_nextgen.network.latest.LocalNetworkGateway("localNetworkGateway",
+local_network_gateway = azure_nextgen.network.LocalNetworkGateway("localNetworkGateway",
     fqdn="site1.contoso.com",
     gateway_ip_address="11.12.13.14",
-    local_network_address_space=azure_nextgen.network.latest.AddressSpaceArgs(
+    local_network_address_space=azure_nextgen.network.AddressSpaceArgs(
         address_prefixes=["10.1.0.0/16"],
     ),
     local_network_gateway_name="localgw",
@@ -111,7 +111,7 @@ local_network_gateway = azure_nextgen.network.latest.LocalNetworkGateway("localN
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const localNetworkGateway = new azure_nextgen.network.latest.LocalNetworkGateway("localNetworkGateway", {
+const localNetworkGateway = new azure_nextgen.network.LocalNetworkGateway("localNetworkGateway", {
     fqdn: "site1.contoso.com",
     gatewayIpAddress: "11.12.13.14",
     localNetworkAddressSpace: {
@@ -134,7 +134,7 @@ const localNetworkGateway = new azure_nextgen.network.latest.LocalNetworkGateway
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LocalNetworkGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">LocalNetworkGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LocalNetworkGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LocalNetworkGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -142,11 +142,11 @@ const localNetworkGateway = new azure_nextgen.network.latest.LocalNetworkGateway
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLocalNetworkGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">LocalNetworkGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LocalNetworkGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLocalNetworkGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LocalNetworkGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LocalNetworkGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LocalNetworkGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">LocalNetworkGatewayArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LocalNetworkGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LocalNetworkGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -167,7 +167,7 @@ const localNetworkGateway = new azure_nextgen.network.latest.LocalNetworkGateway
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LocalNetworkGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">LocalNetworkGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -236,7 +236,7 @@ const localNetworkGateway = new azure_nextgen.network.latest.LocalNetworkGateway
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LocalNetworkGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">LocalNetworkGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -275,7 +275,7 @@ const localNetworkGateway = new azure_nextgen.network.latest.LocalNetworkGateway
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LocalNetworkGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">LocalNetworkGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -298,11 +298,11 @@ const localNetworkGateway = new azure_nextgen.network.latest.LocalNetworkGateway
 
 ## LocalNetworkGateway Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1648,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:LocalNetworkGateway localgw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw 
+$ pulumi import azure-nextgen:network:LocalNetworkGateway localgw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw 
 ```
 
 

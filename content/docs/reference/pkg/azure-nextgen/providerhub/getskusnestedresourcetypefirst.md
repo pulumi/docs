@@ -19,7 +19,7 @@ meta_desc: "Explore the GetSkusNestedResourceTypeFirst function of the providerh
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSkusNestedResourceTypeFirst<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSkusNestedResourceTypeFirstArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetSkusNestedResourceTypeFirstResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSkusNestedResourceTypeFirst<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSkusNestedResourceTypeFirstArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSkusNestedResourceTypeFirstResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetSkusNestedResourceTypeFirst function of the providerh
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSkusNestedResourceTypeFirst<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSkusNestedResourceTypeFirstArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupSkusNestedResourceTypeFirstResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSkusNestedResourceTypeFirst<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSkusNestedResourceTypeFirstArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSkusNestedResourceTypeFirstResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSkusNestedResourceTypeFirst` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetSkusNestedResourceTypeFirst function of the providerh
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSkusNestedResourceTypeFirst </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetSkusNestedResourceTypeFirstResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetSkusNestedResourceTypeFirstArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSkusNestedResourceTypeFirstResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSkusNestedResourceTypeFirstArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -502,9 +499,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="skucostresponse">Sku<wbr>Cost<wbr>Response</h4>
-
-
-
 
 
 
@@ -641,9 +635,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="skulocationinforesponse">Sku<wbr>Location<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -855,9 +846,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -919,9 +907,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="skusettingresponse">Sku<wbr>Setting<wbr>Response</h4>
-
-
-
 
 
 
@@ -1385,9 +1370,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1557,9 +1539,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="skuzonedetailresponse">Sku<wbr>Zone<wbr>Detail<wbr>Response</h4>
-
-
-
 
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.Policy resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Defines web application firewall policy for Azure CDN.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policy = new AzureNextGen.Cdn.Latest.Policy("policy", new AzureNextGen.Cdn.Latest.PolicyArgs
+        var policy = new AzureNextGen.Cdn.Policy("policy", new AzureNextGen.Cdn.PolicyArgs
         {
-            CustomRules = new AzureNextGen.Cdn.Latest.Inputs.CustomRuleListArgs
+            CustomRules = new AzureNextGen.Cdn.Inputs.CustomRuleListArgs
             {
                 Rules = 
                 {
-                    new AzureNextGen.Cdn.Latest.Inputs.CustomRuleArgs
+                    new AzureNextGen.Cdn.Inputs.CustomRuleArgs
                     {
                         Action = "Block",
                         EnabledState = "Enabled",
                         MatchConditions = 
                         {
-                            new AzureNextGen.Cdn.Latest.Inputs.MatchConditionArgs
+                            new AzureNextGen.Cdn.Inputs.MatchConditionArgs
                             {
                                 MatchValue = 
                                 {
@@ -50,7 +50,7 @@ class MyStack : Stack
                                 Operator = "GeoMatch",
                                 Transforms = {},
                             },
-                            new AzureNextGen.Cdn.Latest.Inputs.MatchConditionArgs
+                            new AzureNextGen.Cdn.Inputs.MatchConditionArgs
                             {
                                 MatchValue = 
                                 {
@@ -62,7 +62,7 @@ class MyStack : Stack
                                 Selector = "UserAgent",
                                 Transforms = {},
                             },
-                            new AzureNextGen.Cdn.Latest.Inputs.MatchConditionArgs
+                            new AzureNextGen.Cdn.Inputs.MatchConditionArgs
                             {
                                 MatchValue = 
                                 {
@@ -86,26 +86,26 @@ class MyStack : Stack
                 },
             },
             Location = "WestUs",
-            ManagedRules = new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleSetListArgs
+            ManagedRules = new AzureNextGen.Cdn.Inputs.ManagedRuleSetListArgs
             {
                 ManagedRuleSets = 
                 {
-                    new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleSetArgs
+                    new AzureNextGen.Cdn.Inputs.ManagedRuleSetArgs
                     {
                         RuleGroupOverrides = 
                         {
-                            new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleGroupOverrideArgs
+                            new AzureNextGen.Cdn.Inputs.ManagedRuleGroupOverrideArgs
                             {
                                 RuleGroupName = "Group1",
                                 Rules = 
                                 {
-                                    new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleOverrideArgs
+                                    new AzureNextGen.Cdn.Inputs.ManagedRuleOverrideArgs
                                     {
                                         Action = "Redirect",
                                         EnabledState = "Enabled",
                                         RuleId = "GROUP1-0001",
                                     },
-                                    new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleOverrideArgs
+                                    new AzureNextGen.Cdn.Inputs.ManagedRuleOverrideArgs
                                     {
                                         EnabledState = "Disabled",
                                         RuleId = "GROUP1-0002",
@@ -119,23 +119,23 @@ class MyStack : Stack
                 },
             },
             PolicyName = "MicrosoftCdnWafPolicy",
-            PolicySettings = new AzureNextGen.Cdn.Latest.Inputs.PolicySettingsArgs
+            PolicySettings = new AzureNextGen.Cdn.Inputs.PolicySettingsArgs
             {
                 DefaultCustomBlockResponseBody = "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
                 DefaultCustomBlockResponseStatusCode = 200,
                 DefaultRedirectUrl = "http://www.bing.com",
             },
-            RateLimitRules = new AzureNextGen.Cdn.Latest.Inputs.RateLimitRuleListArgs
+            RateLimitRules = new AzureNextGen.Cdn.Inputs.RateLimitRuleListArgs
             {
                 Rules = 
                 {
-                    new AzureNextGen.Cdn.Latest.Inputs.RateLimitRuleArgs
+                    new AzureNextGen.Cdn.Inputs.RateLimitRuleArgs
                     {
                         Action = "Block",
                         EnabledState = "Enabled",
                         MatchConditions = 
                         {
-                            new AzureNextGen.Cdn.Latest.Inputs.MatchConditionArgs
+                            new AzureNextGen.Cdn.Inputs.MatchConditionArgs
                             {
                                 MatchValue = 
                                 {
@@ -156,7 +156,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Cdn.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Cdn.Inputs.SkuArgs
             {
                 Name = "Standard_Microsoft",
             },
@@ -175,7 +175,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -304,20 +304,20 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy = azure_nextgen.cdn.latest.Policy("policy",
-    custom_rules=azure_nextgen.cdn.latest.CustomRuleListArgs(
-        rules=[azure_nextgen.cdn.latest.CustomRuleArgs(
+policy = azure_nextgen.cdn.Policy("policy",
+    custom_rules=azure_nextgen.cdn.CustomRuleListArgs(
+        rules=[azure_nextgen.cdn.CustomRuleArgs(
             action="Block",
             enabled_state="Enabled",
             match_conditions=[
-                azure_nextgen.cdn.latest.MatchConditionArgs(
+                azure_nextgen.cdn.MatchConditionArgs(
                     match_value=["CH"],
                     match_variable="RemoteAddr",
                     negate_condition=False,
                     operator="GeoMatch",
                     transforms=[],
                 ),
-                azure_nextgen.cdn.latest.MatchConditionArgs(
+                azure_nextgen.cdn.MatchConditionArgs(
                     match_value=["windows"],
                     match_variable="RequestHeader",
                     negate_condition=False,
@@ -325,7 +325,7 @@ policy = azure_nextgen.cdn.latest.Policy("policy",
                     selector="UserAgent",
                     transforms=[],
                 ),
-                azure_nextgen.cdn.latest.MatchConditionArgs(
+                azure_nextgen.cdn.MatchConditionArgs(
                     match_value=[
                         "<?php",
                         "?>",
@@ -345,17 +345,17 @@ policy = azure_nextgen.cdn.latest.Policy("policy",
         )],
     ),
     location="WestUs",
-    managed_rules=azure_nextgen.cdn.latest.ManagedRuleSetListArgs(
-        managed_rule_sets=[azure_nextgen.cdn.latest.ManagedRuleSetArgs(
-            rule_group_overrides=[azure_nextgen.cdn.latest.ManagedRuleGroupOverrideArgs(
+    managed_rules=azure_nextgen.cdn.ManagedRuleSetListArgs(
+        managed_rule_sets=[azure_nextgen.cdn.ManagedRuleSetArgs(
+            rule_group_overrides=[azure_nextgen.cdn.ManagedRuleGroupOverrideArgs(
                 rule_group_name="Group1",
                 rules=[
-                    azure_nextgen.cdn.latest.ManagedRuleOverrideArgs(
+                    azure_nextgen.cdn.ManagedRuleOverrideArgs(
                         action="Redirect",
                         enabled_state="Enabled",
                         rule_id="GROUP1-0001",
                     ),
-                    azure_nextgen.cdn.latest.ManagedRuleOverrideArgs(
+                    azure_nextgen.cdn.ManagedRuleOverrideArgs(
                         enabled_state="Disabled",
                         rule_id="GROUP1-0002",
                     ),
@@ -366,16 +366,16 @@ policy = azure_nextgen.cdn.latest.Policy("policy",
         )],
     ),
     policy_name="MicrosoftCdnWafPolicy",
-    policy_settings=azure_nextgen.cdn.latest.PolicySettingsArgs(
+    policy_settings=azure_nextgen.cdn.PolicySettingsArgs(
         default_custom_block_response_body="PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
         default_custom_block_response_status_code=200,
         default_redirect_url="http://www.bing.com",
     ),
-    rate_limit_rules=azure_nextgen.cdn.latest.RateLimitRuleListArgs(
-        rules=[azure_nextgen.cdn.latest.RateLimitRuleArgs(
+    rate_limit_rules=azure_nextgen.cdn.RateLimitRuleListArgs(
+        rules=[azure_nextgen.cdn.RateLimitRuleArgs(
             action="Block",
             enabled_state="Enabled",
-            match_conditions=[azure_nextgen.cdn.latest.MatchConditionArgs(
+            match_conditions=[azure_nextgen.cdn.MatchConditionArgs(
                 match_value=[
                     "192.168.1.0/24",
                     "10.0.0.0/24",
@@ -392,7 +392,7 @@ policy = azure_nextgen.cdn.latest.Policy("policy",
         )],
     ),
     resource_group_name="rg1",
-    sku=azure_nextgen.cdn.latest.SkuArgs(
+    sku=azure_nextgen.cdn.SkuArgs(
         name="Standard_Microsoft",
     ))
 
@@ -406,7 +406,7 @@ policy = azure_nextgen.cdn.latest.Policy("policy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const policy = new azure_nextgen.cdn.latest.Policy("policy", {
+const policy = new azure_nextgen.cdn.Policy("policy", {
     customRules: {
         rules: [{
             action: "Block",
@@ -511,7 +511,7 @@ const policy = new azure_nextgen.cdn.latest.Policy("policy", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -519,11 +519,11 @@ const policy = new azure_nextgen.cdn.latest.Policy("policy", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Policy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Policy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -544,7 +544,7 @@ const policy = new azure_nextgen.cdn.latest.Policy("policy", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PolicyArgs</span>
+        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -613,7 +613,7 @@ const policy = new azure_nextgen.cdn.latest.Policy("policy", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PolicyArgs</span>
+        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -652,7 +652,7 @@ const policy = new azure_nextgen.cdn.latest.Policy("policy", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PolicyArgs</span>
+        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -675,11 +675,11 @@ const policy = new azure_nextgen.cdn.latest.Policy("policy", {
 
 ## Policy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Policy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Policy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -5495,7 +5495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:Policy MicrosoftCdnWafPolicy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cdn/CdnWebApplicationFirewallPolicies/MicrosoftCdnWafPolicy 
+$ pulumi import azure-nextgen:cdn:Policy MicrosoftCdnWafPolicy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cdn/CdnWebApplicationFirewallPolicies/MicrosoftCdnWafPolicy 
 ```
 
 

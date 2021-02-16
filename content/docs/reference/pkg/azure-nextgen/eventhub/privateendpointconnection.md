@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.PrivateEndpointConnecti
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Properties of the PrivateEndpointConnection.
+API Version: 2018-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.EventHub.V20180101Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.EventHub.V20180101Preview.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.EventHub.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.EventHub.PrivateEndpointConnectionArgs
         {
             NamespaceName = "sdk-Namespace-2924",
-            PrivateEndpoint = new AzureNextGen.EventHub.V20180101Preview.Inputs.PrivateEndpointArgs
+            PrivateEndpoint = new AzureNextGen.EventHub.Inputs.PrivateEndpointArgs
             {
                 Id = "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-EventHub-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
             },
             PrivateEndpointConnectionName = "privateEndpointConnectionName",
-            PrivateLinkServiceConnectionState = new AzureNextGen.EventHub.V20180101Preview.Inputs.ConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.EventHub.Inputs.ConnectionStateArgs
             {
                 Description = "testing",
                 Status = "Rejected",
@@ -56,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/v20180101preview"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,13 +93,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.eventhub.v20180101preview.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.eventhub.PrivateEndpointConnection("privateEndpointConnection",
     namespace_name="sdk-Namespace-2924",
-    private_endpoint=azure_nextgen.eventhub.v20180101preview.PrivateEndpointArgs(
+    private_endpoint=azure_nextgen.eventhub.PrivateEndpointArgs(
         id="/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-EventHub-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
     ),
     private_endpoint_connection_name="privateEndpointConnectionName",
-    private_link_service_connection_state=azure_nextgen.eventhub.v20180101preview.ConnectionStateArgs(
+    private_link_service_connection_state=azure_nextgen.eventhub.ConnectionStateArgs(
         description="testing",
         status="Rejected",
     ),
@@ -115,7 +116,7 @@ private_endpoint_connection = azure_nextgen.eventhub.v20180101preview.PrivateEnd
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.eventhub.v20180101preview.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.eventhub.PrivateEndpointConnection("privateEndpointConnection", {
     namespaceName: "sdk-Namespace-2924",
     privateEndpoint: {
         id: "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-EventHub-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
@@ -141,7 +142,7 @@ const privateEndpointConnection = new azure_nextgen.eventhub.v20180101preview.Pr
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PrivateEndpointConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateEndpointConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -149,11 +150,11 @@ const privateEndpointConnection = new azure_nextgen.eventhub.v20180101preview.Pr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateEndpointConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PrivateEndpointConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateEndpointConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateEndpointConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateEndpointConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateEndpointConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PrivateEndpointConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateEndpointConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateEndpointConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -174,7 +175,7 @@ const privateEndpointConnection = new azure_nextgen.eventhub.v20180101preview.Pr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateEndpointConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateEndpointConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -243,7 +244,7 @@ const privateEndpointConnection = new azure_nextgen.eventhub.v20180101preview.Pr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateEndpointConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateEndpointConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -282,7 +283,7 @@ const privateEndpointConnection = new azure_nextgen.eventhub.v20180101preview.Pr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateEndpointConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateEndpointConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -305,11 +306,11 @@ const privateEndpointConnection = new azure_nextgen.eventhub.v20180101preview.Pr
 
 ## PrivateEndpointConnection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PrivateEndpointConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PrivateEndpointConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1151,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/v20180101preview:PrivateEndpointConnection 928c44d5-b7c6-423b-b6fa-811e0c27b3e0 /subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-EventHub-4794/providers/Microsoft.EventHub/namespaces/sdk-Namespace-5828/privateEndpointConnections/928c44d5-b7c6-423b-b6fa-811e0c27b3e0 
+$ pulumi import azure-nextgen:eventhub:PrivateEndpointConnection 928c44d5-b7c6-423b-b6fa-811e0c27b3e0 /subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-EventHub-4794/providers/Microsoft.EventHub/namespaces/sdk-Namespace-5828/privateEndpointConnections/928c44d5-b7c6-423b-b6fa-811e0c27b3e0 
 ```
 
 

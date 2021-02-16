@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationNetw
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Network Mapping model. Ideally it should have been possible to inherit this class from prev version in InheritedModels as long as there is no difference in structure or method signature. Since there were no base Models for certain fields and methods viz NetworkMappingProperties and Load with required return type, the class has been introduced in its entirety with references to base models to facilitate extensions in subsequent versions.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationNetworkMapping = new AzureNextGen.RecoveryServices.Latest.ReplicationNetworkMapping("replicationNetworkMapping", new AzureNextGen.RecoveryServices.Latest.ReplicationNetworkMappingArgs
+        var replicationNetworkMapping = new AzureNextGen.RecoveryServices.ReplicationNetworkMapping("replicationNetworkMapping", new AzureNextGen.RecoveryServices.ReplicationNetworkMappingArgs
         {
             FabricName = "b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
             NetworkMappingName = "corpe2amap",
             NetworkName = "e2267b5c-2650-49bd-ab3f-d66aae694c06",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.CreateNetworkMappingInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices.Inputs.CreateNetworkMappingInputPropertiesArgs
             {
-                FabricSpecificDetails = 
+                FabricSpecificDetails = new AzureNextGen.RecoveryServices.Inputs.VmmToAzureCreateNetworkMappingInputArgs
                 {
-                    { "instanceType", "VmmToAzure" },
+                    InstanceType = "VmmToAzure",
                 },
                 RecoveryFabricName = "Microsoft Azure",
                 RecoveryNetworkId = "/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai",
@@ -53,7 +53,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewReplicationNetworkMapping(ctx, "replicationNetworkMapping", &recoveryservices.ReplicationNetworkMappingArgs{
+			FabricName:         pulumi.String("b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac"),
+			NetworkMappingName: pulumi.String("corpe2amap"),
+			NetworkName:        pulumi.String("e2267b5c-2650-49bd-ab3f-d66aae694c06"),
+			Properties: &recoveryservices.CreateNetworkMappingInputPropertiesArgs{
+				FabricSpecificDetails: &recoveryservices.VmmToAzureCreateNetworkMappingInputArgs{
+					InstanceType: pulumi.String("VmmToAzure"),
+				},
+				RecoveryFabricName: pulumi.String("Microsoft Azure"),
+				RecoveryNetworkId:  pulumi.String("/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai"),
+			},
+			ResourceGroupName: pulumi.String("srcBvte2a14C27"),
+			ResourceName:      pulumi.String("srce2avaultbvtaC27"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -62,14 +95,14 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_network_mapping = azure_nextgen.recoveryservices.latest.ReplicationNetworkMapping("replicationNetworkMapping",
+replication_network_mapping = azure_nextgen.recoveryservices.ReplicationNetworkMapping("replicationNetworkMapping",
     fabric_name="b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
     network_mapping_name="corpe2amap",
     network_name="e2267b5c-2650-49bd-ab3f-d66aae694c06",
-    properties=azure_nextgen.recoveryservices.latest.CreateNetworkMappingInputPropertiesArgs(
-        fabric_specific_details={
-            "instanceType": "VmmToAzure",
-        },
+    properties=azure_nextgen.recoveryservices.CreateNetworkMappingInputPropertiesArgs(
+        fabric_specific_details=azure_nextgen.recoveryservices.VmmToAzureCreateNetworkMappingInputArgs(
+            instance_type="VmmToAzure",
+        ),
         recovery_fabric_name="Microsoft Azure",
         recovery_network_id="/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai",
     ),
@@ -86,7 +119,7 @@ replication_network_mapping = azure_nextgen.recoveryservices.latest.ReplicationN
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationNetworkMapping = new azure_nextgen.recoveryservices.latest.ReplicationNetworkMapping("replicationNetworkMapping", {
+const replicationNetworkMapping = new azure_nextgen.recoveryservices.ReplicationNetworkMapping("replicationNetworkMapping", {
     fabricName: "b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
     networkMappingName: "corpe2amap",
     networkName: "e2267b5c-2650-49bd-ab3f-d66aae694c06",
@@ -113,7 +146,7 @@ const replicationNetworkMapping = new azure_nextgen.recoveryservices.latest.Repl
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReplicationNetworkMappingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationNetworkMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -121,11 +154,11 @@ const replicationNetworkMapping = new azure_nextgen.recoveryservices.latest.Repl
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationNetworkMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReplicationNetworkMappingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationNetworkMapping</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationNetworkMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationNetworkMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationNetworkMapping</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReplicationNetworkMappingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationNetworkMappingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -146,7 +179,7 @@ const replicationNetworkMapping = new azure_nextgen.recoveryservices.latest.Repl
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationNetworkMappingArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationNetworkMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -215,7 +248,7 @@ const replicationNetworkMapping = new azure_nextgen.recoveryservices.latest.Repl
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationNetworkMappingArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationNetworkMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -254,7 +287,7 @@ const replicationNetworkMapping = new azure_nextgen.recoveryservices.latest.Repl
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationNetworkMappingArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationNetworkMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -277,11 +310,11 @@ const replicationNetworkMapping = new azure_nextgen.recoveryservices.latest.Repl
 
 ## ReplicationNetworkMapping Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ReplicationNetworkMapping resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ReplicationNetworkMapping resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1463,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationNetworkMapping corpe2amap /Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/srcBvte2a14C27/providers/Microsoft.RecoveryServices/vaults/srce2avaultbvtaC27/replicationFabrics/b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac/replicationNetworks/e2267b5c-2650-49bd-ab3f-d66aae694c06/replicationNetworkMappings/corpe2amap 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationNetworkMapping corpe2amap /Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/srcBvte2a14C27/providers/Microsoft.RecoveryServices/vaults/srce2avaultbvtaC27/replicationFabrics/b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac/replicationNetworks/e2267b5c-2650-49bd-ab3f-d66aae694c06/replicationNetworkMappings/corpe2amap 
 ```
 
 

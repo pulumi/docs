@@ -19,7 +19,7 @@ meta_desc: "Explore the GetRollout function of the deploymentmanager module, inc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRollout<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRolloutArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetRolloutResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRollout<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRolloutArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRolloutResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetRollout function of the deploymentmanager module, inc
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRollout<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRolloutArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupRolloutResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRollout<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRolloutArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRolloutResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRollout` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetRollout function of the deploymentmanager module, inc
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRollout </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetRolloutResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetRolloutArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRolloutResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRolloutArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -726,9 +726,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -901,9 +898,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1001,9 +995,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="messageresponse">Message<wbr>Response</h4>
-
-
-
 
 
 
@@ -1107,9 +1098,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1171,9 +1159,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourceoperationresponse">Resource<wbr>Operation<wbr>Response</h4>
-
-
-
 
 
 
@@ -1421,9 +1406,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1629,9 +1611,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="rolloutstepresponse">Rollout<wbr>Step<wbr>Response</h4>
-
-
-
 
 
 
@@ -1879,9 +1858,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2054,9 +2030,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2226,9 +2199,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="serviceunitresponse">Service<wbr>Unit<wbr>Response</h4>
-
-
-
 
 
 
@@ -2440,9 +2410,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2648,9 +2615,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="stepoperationinforesponse">Step<wbr>Operation<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 

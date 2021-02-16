@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.SourceControl resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the source control.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sourceControl = new AzureNextGen.Automation.Latest.SourceControl("sourceControl", new AzureNextGen.Automation.Latest.SourceControlArgs
+        var sourceControl = new AzureNextGen.Automation.SourceControl("sourceControl", new AzureNextGen.Automation.SourceControlArgs
         {
             AutoSync = true,
             AutomationAccountName = "sampleAccount9",
@@ -37,7 +37,7 @@ class MyStack : Stack
             PublishRunbook = true,
             RepoUrl = "https://sampleUser.visualstudio.com/myProject/_git/myRepository",
             ResourceGroupName = "rg",
-            SecurityToken = new AzureNextGen.Automation.Latest.Inputs.SourceControlSecurityTokenPropertiesArgs
+            SecurityToken = new AzureNextGen.Automation.Inputs.SourceControlSecurityTokenPropertiesArgs
             {
                 AccessToken = "3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
                 TokenType = "PersonalAccessToken",
@@ -59,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,7 +98,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-source_control = azure_nextgen.automation.latest.SourceControl("sourceControl",
+source_control = azure_nextgen.automation.SourceControl("sourceControl",
     auto_sync=True,
     automation_account_name="sampleAccount9",
     branch="master",
@@ -107,7 +107,7 @@ source_control = azure_nextgen.automation.latest.SourceControl("sourceControl",
     publish_runbook=True,
     repo_url="https://sampleUser.visualstudio.com/myProject/_git/myRepository",
     resource_group_name="rg",
-    security_token=azure_nextgen.automation.latest.SourceControlSecurityTokenPropertiesArgs(
+    security_token=azure_nextgen.automation.SourceControlSecurityTokenPropertiesArgs(
         access_token="3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
         token_type="PersonalAccessToken",
     ),
@@ -124,7 +124,7 @@ source_control = azure_nextgen.automation.latest.SourceControl("sourceControl",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sourceControl = new azure_nextgen.automation.latest.SourceControl("sourceControl", {
+const sourceControl = new azure_nextgen.automation.SourceControl("sourceControl", {
     autoSync: true,
     automationAccountName: "sampleAccount9",
     branch: "master",
@@ -153,7 +153,7 @@ const sourceControl = new azure_nextgen.automation.latest.SourceControl("sourceC
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SourceControl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SourceControlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SourceControl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SourceControlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -161,11 +161,11 @@ const sourceControl = new azure_nextgen.automation.latest.SourceControl("sourceC
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSourceControl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SourceControlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SourceControl</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSourceControl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SourceControlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SourceControl</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SourceControl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SourceControlArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SourceControl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SourceControlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,7 +186,7 @@ const sourceControl = new azure_nextgen.automation.latest.SourceControl("sourceC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SourceControlArgs</span>
+        <span class="property-type"><a href="#inputs">SourceControlArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -255,7 +255,7 @@ const sourceControl = new azure_nextgen.automation.latest.SourceControl("sourceC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SourceControlArgs</span>
+        <span class="property-type"><a href="#inputs">SourceControlArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -294,7 +294,7 @@ const sourceControl = new azure_nextgen.automation.latest.SourceControl("sourceC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SourceControlArgs</span>
+        <span class="property-type"><a href="#inputs">SourceControlArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -317,11 +317,11 @@ const sourceControl = new azure_nextgen.automation.latest.SourceControl("sourceC
 
 ## SourceControl Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SourceControl resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SourceControl resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1189,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/latest:SourceControl sampleSourceControl /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/sampleAccount9/sourcecontrols/sampleSourceControl 
+$ pulumi import azure-nextgen:automation:SourceControl sampleSourceControl /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/sampleAccount9/sourcecontrols/sampleSourceControl 
 ```
 
 

@@ -19,7 +19,7 @@ meta_desc: "Explore the GetStreamingPolicy function of the media module, includi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getStreamingPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetStreamingPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetStreamingPolicyResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getStreamingPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetStreamingPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetStreamingPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetStreamingPolicy function of the media module, includi
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStreamingPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupStreamingPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupStreamingPolicyResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStreamingPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupStreamingPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupStreamingPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupStreamingPolicy` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetStreamingPolicy function of the media module, includi
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetStreamingPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetStreamingPolicyResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetStreamingPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetStreamingPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetStreamingPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -582,9 +582,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -721,9 +718,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -821,9 +815,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="commonencryptioncbcsresponse">Common<wbr>Encryption<wbr>Cbcs<wbr>Response</h4>
-
-
-
 
 
 
@@ -999,9 +990,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1174,9 +1162,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1274,9 +1259,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</h4>
-
-
-
 
 
 
@@ -1452,9 +1434,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1627,9 +1606,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1691,9 +1667,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="streamingpolicycontentkeyresponse">Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response</h4>
-
-
-
 
 
 
@@ -1833,9 +1806,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1933,9 +1903,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 
@@ -2039,9 +2006,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2142,9 +2106,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2206,9 +2167,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 
@@ -2456,9 +2414,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2592,9 +2547,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="trackselectionresponse">Track<wbr>Selection<wbr>Response</h4>
-
-
-
 
 
 

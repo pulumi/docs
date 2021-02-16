@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.relay.WCFRelayAuthorizationRule 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a namespace authorization rule.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var wcfRelayAuthorizationRule = new AzureNextGen.Relay.Latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", new AzureNextGen.Relay.Latest.WCFRelayAuthorizationRuleArgs
+        var wcfRelayAuthorizationRule = new AzureNextGen.Relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", new AzureNextGen.Relay.WCFRelayAuthorizationRuleArgs
         {
             AuthorizationRuleName = "example-RelayAuthRules-01",
             NamespaceName = "example-RelayNamespace-01",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-wcf_relay_authorization_rule = azure_nextgen.relay.latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule",
+wcf_relay_authorization_rule = azure_nextgen.relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule",
     authorization_rule_name="example-RelayAuthRules-01",
     namespace_name="example-RelayNamespace-01",
     relay_name="example-Relay-wcf-01",
@@ -77,7 +77,7 @@ wcf_relay_authorization_rule = azure_nextgen.relay.latest.WCFRelayAuthorizationR
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const wcfRelayAuthorizationRule = new azure_nextgen.relay.latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", {
+const wcfRelayAuthorizationRule = new azure_nextgen.relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", {
     authorizationRuleName: "example-RelayAuthRules-01",
     namespaceName: "example-RelayNamespace-01",
     relayName: "example-Relay-wcf-01",
@@ -100,7 +100,7 @@ const wcfRelayAuthorizationRule = new azure_nextgen.relay.latest.WCFRelayAuthori
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WCFRelayAuthorizationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WCFRelayAuthorizationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WCFRelayAuthorizationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WCFRelayAuthorizationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -108,11 +108,11 @@ const wcfRelayAuthorizationRule = new azure_nextgen.relay.latest.WCFRelayAuthori
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWCFRelayAuthorizationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WCFRelayAuthorizationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WCFRelayAuthorizationRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWCFRelayAuthorizationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WCFRelayAuthorizationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WCFRelayAuthorizationRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WCFRelayAuthorizationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WCFRelayAuthorizationRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WCFRelayAuthorizationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WCFRelayAuthorizationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -133,7 +133,7 @@ const wcfRelayAuthorizationRule = new azure_nextgen.relay.latest.WCFRelayAuthori
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WCFRelayAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">WCFRelayAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -202,7 +202,7 @@ const wcfRelayAuthorizationRule = new azure_nextgen.relay.latest.WCFRelayAuthori
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WCFRelayAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">WCFRelayAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -241,7 +241,7 @@ const wcfRelayAuthorizationRule = new azure_nextgen.relay.latest.WCFRelayAuthori
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WCFRelayAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">WCFRelayAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -264,11 +264,11 @@ const wcfRelayAuthorizationRule = new azure_nextgen.relay.latest.WCFRelayAuthori
 
 ## WCFRelayAuthorizationRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The WCFRelayAuthorizationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The WCFRelayAuthorizationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:relay/latest:WCFRelayAuthorizationRule example-RelayAuthRules-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/WcfRelays/example-Relay-Wcf-01/AuthorizationRules/example-RelayAuthRules-01 
+$ pulumi import azure-nextgen:relay:WCFRelayAuthorizationRule example-RelayAuthRules-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/WcfRelays/example-Relay-Wcf-01/AuthorizationRules/example-RelayAuthRules-01 
 ```
 
 

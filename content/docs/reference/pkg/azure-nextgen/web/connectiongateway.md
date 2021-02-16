@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.web.ConnectionGateway resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The gateway definition
-Latest API Version: 2016-06-01.
+API Version: 2016-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectionGateway = new AzureNextGen.Web.Latest.ConnectionGateway("connectionGateway", new AzureNextGen.Web.Latest.ConnectionGatewayArgs
+        var connectionGateway = new AzureNextGen.Web.ConnectionGateway("connectionGateway", new AzureNextGen.Web.ConnectionGatewayArgs
         {
             ConnectionGatewayName = "test123",
-            Properties = new AzureNextGen.Web.Latest.Inputs.ConnectionGatewayDefinitionPropertiesArgs
+            Properties = new AzureNextGen.Web.Inputs.ConnectionGatewayDefinitionPropertiesArgs
             {
                 BackendUri = "https://WABI-WEST-US-redirect.analysis.windows.net",
-                ConnectionGatewayInstallation = new AzureNextGen.Web.Latest.Inputs.ConnectionGatewayReferenceArgs
+                ConnectionGatewayInstallation = new AzureNextGen.Web.Inputs.ConnectionGatewayReferenceArgs
                 {
                     Id = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c",
                 },
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web/latest"
+	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,11 +100,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection_gateway = azure_nextgen.web.latest.ConnectionGateway("connectionGateway",
+connection_gateway = azure_nextgen.web.ConnectionGateway("connectionGateway",
     connection_gateway_name="test123",
-    properties=azure_nextgen.web.latest.ConnectionGatewayDefinitionPropertiesArgs(
+    properties=azure_nextgen.web.ConnectionGatewayDefinitionPropertiesArgs(
         backend_uri="https://WABI-WEST-US-redirect.analysis.windows.net",
-        connection_gateway_installation=azure_nextgen.web.latest.ConnectionGatewayReferenceArgs(
+        connection_gateway_installation=azure_nextgen.web.ConnectionGatewayReferenceArgs(
             id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c",
         ),
         contact_information=["test123@microsoft.com"],
@@ -124,7 +124,7 @@ connection_gateway = azure_nextgen.web.latest.ConnectionGateway("connectionGatew
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connectionGateway = new azure_nextgen.web.latest.ConnectionGateway("connectionGateway", {
+const connectionGateway = new azure_nextgen.web.ConnectionGateway("connectionGateway", {
     connectionGatewayName: "test123",
     properties: {
         backendUri: "https://WABI-WEST-US-redirect.analysis.windows.net",
@@ -151,7 +151,7 @@ const connectionGateway = new azure_nextgen.web.latest.ConnectionGateway("connec
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectionGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ConnectionGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectionGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -159,11 +159,11 @@ const connectionGateway = new azure_nextgen.web.latest.ConnectionGateway("connec
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectionGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ConnectionGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectionGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectionGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectionGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectionGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ConnectionGatewayArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectionGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectionGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -184,7 +184,7 @@ const connectionGateway = new azure_nextgen.web.latest.ConnectionGateway("connec
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectionGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectionGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -253,7 +253,7 @@ const connectionGateway = new azure_nextgen.web.latest.ConnectionGateway("connec
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectionGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectionGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -292,7 +292,7 @@ const connectionGateway = new azure_nextgen.web.latest.ConnectionGateway("connec
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectionGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectionGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -315,11 +315,11 @@ const connectionGateway = new azure_nextgen.web.latest.ConnectionGateway("connec
 
 ## ConnectionGateway Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ConnectionGateway resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ConnectionGateway resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1649,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:web/latest:ConnectionGateway test123 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Web/connectionGateways/test123 
+$ pulumi import azure-nextgen:web:ConnectionGateway test123 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Web/connectionGateways/test123 
 ```
 
 

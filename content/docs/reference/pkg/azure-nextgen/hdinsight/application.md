@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hdinsight.Application resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The HDInsight cluster application
+API Version: 2018-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.HDInsight.V20180601Preview.Application("application", new AzureNextGen.HDInsight.V20180601Preview.ApplicationArgs
+        var application = new AzureNextGen.HDInsight.Application("application", new AzureNextGen.HDInsight.ApplicationArgs
         {
             ApplicationName = "hue",
             ClusterName = "cluster1",
-            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ApplicationPropertiesArgs
+            Properties = new AzureNextGen.HDInsight.Inputs.ApplicationPropertiesArgs
             {
                 ApplicationType = "CustomApplication",
-                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                ComputeProfile = new AzureNextGen.HDInsight.Inputs.ComputeProfileArgs
                 {
                     Roles = 
                     {
-                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        new AzureNextGen.HDInsight.Inputs.RoleArgs
                         {
-                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            HardwareProfile = new AzureNextGen.HDInsight.Inputs.HardwareProfileArgs
                             {
                                 VmSize = "Standard_D12_v2",
                             },
@@ -51,7 +52,7 @@ class MyStack : Stack
                 Errors = {},
                 HttpsEndpoints = 
                 {
-                    new AzureNextGen.HDInsight.V20180601Preview.Inputs.ApplicationGetHttpsEndpointArgs
+                    new AzureNextGen.HDInsight.Inputs.ApplicationGetHttpsEndpointArgs
                     {
                         AccessModes = 
                         {
@@ -63,7 +64,7 @@ class MyStack : Stack
                 },
                 InstallScriptActions = 
                 {
-                    new AzureNextGen.HDInsight.V20180601Preview.Inputs.RuntimeScriptActionArgs
+                    new AzureNextGen.HDInsight.Inputs.RuntimeScriptActionArgs
                     {
                         Name = "app-install-app1",
                         Parameters = "-version latest -port 20000",
@@ -92,7 +93,7 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -155,14 +156,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.hdinsight.v20180601preview.Application("application",
+application = azure_nextgen.hdinsight.Application("application",
     application_name="hue",
     cluster_name="cluster1",
-    properties=azure_nextgen.hdinsight.v20180601preview.ApplicationPropertiesArgs(
+    properties=azure_nextgen.hdinsight.ApplicationPropertiesArgs(
         application_type="CustomApplication",
-        compute_profile=azure_nextgen.hdinsight.v20180601preview.ComputeProfileArgs(
-            roles=[azure_nextgen.hdinsight.v20180601preview.RoleArgs(
-                hardware_profile=azure_nextgen.hdinsight.v20180601preview.HardwareProfileArgs(
+        compute_profile=azure_nextgen.hdinsight.ComputeProfileArgs(
+            roles=[azure_nextgen.hdinsight.RoleArgs(
+                hardware_profile=azure_nextgen.hdinsight.HardwareProfileArgs(
                     vm_size="Standard_D12_v2",
                 ),
                 name="edgenode",
@@ -170,12 +171,12 @@ application = azure_nextgen.hdinsight.v20180601preview.Application("application"
             )],
         ),
         errors=[],
-        https_endpoints=[azure_nextgen.hdinsight.v20180601preview.ApplicationGetHttpsEndpointArgs(
+        https_endpoints=[azure_nextgen.hdinsight.ApplicationGetHttpsEndpointArgs(
             access_modes=["WebPage"],
             destination_port=20000,
             sub_domain_suffix="dss",
         )],
-        install_script_actions=[azure_nextgen.hdinsight.v20180601preview.RuntimeScriptActionArgs(
+        install_script_actions=[azure_nextgen.hdinsight.RuntimeScriptActionArgs(
             name="app-install-app1",
             parameters="-version latest -port 20000",
             roles=["edgenode"],
@@ -195,7 +196,7 @@ application = azure_nextgen.hdinsight.v20180601preview.Application("application"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.hdinsight.v20180601preview.Application("application", {
+const application = new azure_nextgen.hdinsight.Application("application", {
     applicationName: "hue",
     clusterName: "cluster1",
     properties: {
@@ -238,7 +239,7 @@ const application = new azure_nextgen.hdinsight.v20180601preview.Application("ap
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -246,11 +247,11 @@ const application = new azure_nextgen.hdinsight.v20180601preview.Application("ap
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ApplicationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -271,7 +272,7 @@ const application = new azure_nextgen.hdinsight.v20180601preview.Application("ap
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -340,7 +341,7 @@ const application = new azure_nextgen.hdinsight.v20180601preview.Application("ap
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -379,7 +380,7 @@ const application = new azure_nextgen.hdinsight.v20180601preview.Application("ap
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -402,11 +403,11 @@ const application = new azure_nextgen.hdinsight.v20180601preview.Application("ap
 
 ## Application Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Application resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Application resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -6494,7 +6495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hdinsight/v20180601preview:Application hue /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HDInsight/clusters/cluster1/applications/hue 
+$ pulumi import azure-nextgen:hdinsight:Application hue /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HDInsight/clusters/cluster1/applications/hue 
 ```
 
 

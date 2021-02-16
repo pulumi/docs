@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.powerbidedicated.CapacityDetails
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of a Dedicated Capacity resource.
-Latest API Version: 2017-10-01.
+API Version: 2017-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var capacityDetails = new AzureNextGen.PowerBIDedicated.Latest.CapacityDetails("capacityDetails", new AzureNextGen.PowerBIDedicated.Latest.CapacityDetailsArgs
+        var capacityDetails = new AzureNextGen.PowerBIDedicated.CapacityDetails("capacityDetails", new AzureNextGen.PowerBIDedicated.CapacityDetailsArgs
         {
-            Administration = new AzureNextGen.PowerBIDedicated.Latest.Inputs.DedicatedCapacityAdministratorsArgs
+            Administration = new AzureNextGen.PowerBIDedicated.Inputs.DedicatedCapacityAdministratorsArgs
             {
                 Members = 
                 {
@@ -40,7 +40,7 @@ class MyStack : Stack
             DedicatedCapacityName = "azsdktest",
             Location = "West US",
             ResourceGroupName = "TestRG",
-            Sku = new AzureNextGen.PowerBIDedicated.Latest.Inputs.ResourceSkuArgs
+            Sku = new AzureNextGen.PowerBIDedicated.Inputs.ResourceSkuArgs
             {
                 Name = "A1",
                 Tier = "PBIE_Azure",
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	powerbidedicated "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/powerbidedicated/latest"
+	powerbidedicated "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/powerbidedicated"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -105,8 +105,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-capacity_details = azure_nextgen.powerbidedicated.latest.CapacityDetails("capacityDetails",
-    administration=azure_nextgen.powerbidedicated.latest.DedicatedCapacityAdministratorsArgs(
+capacity_details = azure_nextgen.powerbidedicated.CapacityDetails("capacityDetails",
+    administration=azure_nextgen.powerbidedicated.DedicatedCapacityAdministratorsArgs(
         members=[
             "azsdktest@microsoft.com",
             "azsdktest2@microsoft.com",
@@ -115,7 +115,7 @@ capacity_details = azure_nextgen.powerbidedicated.latest.CapacityDetails("capaci
     dedicated_capacity_name="azsdktest",
     location="West US",
     resource_group_name="TestRG",
-    sku=azure_nextgen.powerbidedicated.latest.ResourceSkuArgs(
+    sku=azure_nextgen.powerbidedicated.ResourceSkuArgs(
         name="A1",
         tier="PBIE_Azure",
     ),
@@ -133,7 +133,7 @@ capacity_details = azure_nextgen.powerbidedicated.latest.CapacityDetails("capaci
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const capacityDetails = new azure_nextgen.powerbidedicated.latest.CapacityDetails("capacityDetails", {
+const capacityDetails = new azure_nextgen.powerbidedicated.CapacityDetails("capacityDetails", {
     administration: {
         members: [
             "azsdktest@microsoft.com",
@@ -164,7 +164,7 @@ const capacityDetails = new azure_nextgen.powerbidedicated.latest.CapacityDetail
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CapacityDetails</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">CapacityDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CapacityDetails</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CapacityDetailsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -172,11 +172,11 @@ const capacityDetails = new azure_nextgen.powerbidedicated.latest.CapacityDetail
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCapacityDetails</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">CapacityDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CapacityDetails</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCapacityDetails</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CapacityDetailsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CapacityDetails</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CapacityDetails</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">CapacityDetailsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CapacityDetails</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CapacityDetailsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -197,7 +197,7 @@ const capacityDetails = new azure_nextgen.powerbidedicated.latest.CapacityDetail
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CapacityDetailsArgs</span>
+        <span class="property-type"><a href="#inputs">CapacityDetailsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -266,7 +266,7 @@ const capacityDetails = new azure_nextgen.powerbidedicated.latest.CapacityDetail
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CapacityDetailsArgs</span>
+        <span class="property-type"><a href="#inputs">CapacityDetailsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -305,7 +305,7 @@ const capacityDetails = new azure_nextgen.powerbidedicated.latest.CapacityDetail
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CapacityDetailsArgs</span>
+        <span class="property-type"><a href="#inputs">CapacityDetailsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -328,11 +328,11 @@ const capacityDetails = new azure_nextgen.powerbidedicated.latest.CapacityDetail
 
 ## CapacityDetails Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The CapacityDetails resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The CapacityDetails resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1152,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:powerbidedicated/latest:CapacityDetails azsdktest /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.PowerBIDedicated/servers/azsdktest 
+$ pulumi import azure-nextgen:powerbidedicated:CapacityDetails azsdktest /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.PowerBIDedicated/servers/azsdktest 
 ```
 
 

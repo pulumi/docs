@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datalakeanalytics.FirewallRule r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data Lake Analytics firewall rule information.
-Latest API Version: 2016-11-01.
+API Version: 2016-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallRule = new AzureNextGen.DataLakeAnalytics.Latest.FirewallRule("firewallRule", new AzureNextGen.DataLakeAnalytics.Latest.FirewallRuleArgs
+        var firewallRule = new AzureNextGen.DataLakeAnalytics.FirewallRule("firewallRule", new AzureNextGen.DataLakeAnalytics.FirewallRuleArgs
         {
             AccountName = "contosoadla",
             EndIpAddress = "2.2.2.2",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakeanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakeanalytics/latest"
+	datalakeanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakeanalytics"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_rule = azure_nextgen.datalakeanalytics.latest.FirewallRule("firewallRule",
+firewall_rule = azure_nextgen.datalakeanalytics.FirewallRule("firewallRule",
     account_name="contosoadla",
     end_ip_address="2.2.2.2",
     firewall_rule_name="test_rule",
@@ -96,7 +96,7 @@ firewall_rule = azure_nextgen.datalakeanalytics.latest.FirewallRule("firewallRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallRule = new azure_nextgen.datalakeanalytics.latest.FirewallRule("firewallRule", {
+const firewallRule = new azure_nextgen.datalakeanalytics.FirewallRule("firewallRule", {
     accountName: "contosoadla",
     endIpAddress: "2.2.2.2",
     firewallRuleName: "test_rule",
@@ -116,7 +116,7 @@ const firewallRule = new azure_nextgen.datalakeanalytics.latest.FirewallRule("fi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FirewallRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -124,11 +124,11 @@ const firewallRule = new azure_nextgen.datalakeanalytics.latest.FirewallRule("fi
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FirewallRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FirewallRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FirewallRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -149,7 +149,7 @@ const firewallRule = new azure_nextgen.datalakeanalytics.latest.FirewallRule("fi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FirewallRuleArgs</span>
+        <span class="property-type"><a href="#inputs">FirewallRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -218,7 +218,7 @@ const firewallRule = new azure_nextgen.datalakeanalytics.latest.FirewallRule("fi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FirewallRuleArgs</span>
+        <span class="property-type"><a href="#inputs">FirewallRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -257,7 +257,7 @@ const firewallRule = new azure_nextgen.datalakeanalytics.latest.FirewallRule("fi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FirewallRuleArgs</span>
+        <span class="property-type"><a href="#inputs">FirewallRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -280,11 +280,11 @@ const firewallRule = new azure_nextgen.datalakeanalytics.latest.FirewallRule("fi
 
 ## FirewallRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -642,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datalakeanalytics/latest:FirewallRule test_rule 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
+$ pulumi import azure-nextgen:datalakeanalytics:FirewallRule test_rule 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
 ```
 
 

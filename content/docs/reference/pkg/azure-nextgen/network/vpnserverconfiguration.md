@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VpnServerConfiguration r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 VpnServerConfiguration Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vpnServerConfiguration = new AzureNextGen.Network.Latest.VpnServerConfiguration("vpnServerConfiguration", new AzureNextGen.Network.Latest.VpnServerConfigurationArgs
+        var vpnServerConfiguration = new AzureNextGen.Network.VpnServerConfiguration("vpnServerConfiguration", new AzureNextGen.Network.VpnServerConfigurationArgs
         {
             Location = "West US",
             RadiusClientRootCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.VpnServerConfigRadiusClientRootCertificateArgs
+                new AzureNextGen.Network.Inputs.VpnServerConfigRadiusClientRootCertificateArgs
                 {
                     Name = "vpnServerConfigRadiusClientRootCert1",
                     Thumbprint = "83FFBFC8848B5A5836C94D0112367E16148A286F",
@@ -40,7 +40,7 @@ class MyStack : Stack
             },
             RadiusServerRootCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.VpnServerConfigRadiusServerRootCertificateArgs
+                new AzureNextGen.Network.Inputs.VpnServerConfigRadiusServerRootCertificateArgs
                 {
                     Name = "vpnServerConfigRadiusServerRootCer1",
                     PublicCertData = "MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuM",
@@ -48,7 +48,7 @@ class MyStack : Stack
             },
             RadiusServers = 
             {
-                new AzureNextGen.Network.Latest.Inputs.RadiusServerArgs
+                new AzureNextGen.Network.Inputs.RadiusServerArgs
                 {
                     RadiusServerAddress = "10.0.0.0",
                     RadiusServerScore = 25,
@@ -62,7 +62,7 @@ class MyStack : Stack
             },
             VpnClientIpsecPolicies = 
             {
-                new AzureNextGen.Network.Latest.Inputs.IpsecPolicyArgs
+                new AzureNextGen.Network.Inputs.IpsecPolicyArgs
                 {
                     DhGroup = "DHGroup14",
                     IkeEncryption = "AES256",
@@ -76,7 +76,7 @@ class MyStack : Stack
             },
             VpnClientRevokedCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.VpnServerConfigVpnClientRevokedCertificateArgs
+                new AzureNextGen.Network.Inputs.VpnServerConfigVpnClientRevokedCertificateArgs
                 {
                     Name = "vpnServerConfigVpnClientRevokedCert1",
                     Thumbprint = "83FFBFC8848B5A5836C94D0112367E16148A286F",
@@ -84,7 +84,7 @@ class MyStack : Stack
             },
             VpnClientRootCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.VpnServerConfigVpnClientRootCertificateArgs
+                new AzureNextGen.Network.Inputs.VpnServerConfigVpnClientRootCertificateArgs
                 {
                     Name = "vpnServerConfigVpnClientRootCert1",
                     PublicCertData = "MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuN",
@@ -110,7 +110,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -187,17 +187,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vpn_server_configuration = azure_nextgen.network.latest.VpnServerConfiguration("vpnServerConfiguration",
+vpn_server_configuration = azure_nextgen.network.VpnServerConfiguration("vpnServerConfiguration",
     location="West US",
-    radius_client_root_certificates=[azure_nextgen.network.latest.VpnServerConfigRadiusClientRootCertificateArgs(
+    radius_client_root_certificates=[azure_nextgen.network.VpnServerConfigRadiusClientRootCertificateArgs(
         name="vpnServerConfigRadiusClientRootCert1",
         thumbprint="83FFBFC8848B5A5836C94D0112367E16148A286F",
     )],
-    radius_server_root_certificates=[azure_nextgen.network.latest.VpnServerConfigRadiusServerRootCertificateArgs(
+    radius_server_root_certificates=[azure_nextgen.network.VpnServerConfigRadiusServerRootCertificateArgs(
         name="vpnServerConfigRadiusServerRootCer1",
         public_cert_data="MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuM",
     )],
-    radius_servers=[azure_nextgen.network.latest.RadiusServerArgs(
+    radius_servers=[azure_nextgen.network.RadiusServerArgs(
         radius_server_address="10.0.0.0",
         radius_server_score=25,
         radius_server_secret="radiusServerSecret",
@@ -206,7 +206,7 @@ vpn_server_configuration = azure_nextgen.network.latest.VpnServerConfiguration("
     tags={
         "key1": "value1",
     },
-    vpn_client_ipsec_policies=[azure_nextgen.network.latest.IpsecPolicyArgs(
+    vpn_client_ipsec_policies=[azure_nextgen.network.IpsecPolicyArgs(
         dh_group="DHGroup14",
         ike_encryption="AES256",
         ike_integrity="SHA384",
@@ -216,11 +216,11 @@ vpn_server_configuration = azure_nextgen.network.latest.VpnServerConfiguration("
         sa_data_size_kilobytes=429497,
         sa_life_time_seconds=86472,
     )],
-    vpn_client_revoked_certificates=[azure_nextgen.network.latest.VpnServerConfigVpnClientRevokedCertificateArgs(
+    vpn_client_revoked_certificates=[azure_nextgen.network.VpnServerConfigVpnClientRevokedCertificateArgs(
         name="vpnServerConfigVpnClientRevokedCert1",
         thumbprint="83FFBFC8848B5A5836C94D0112367E16148A286F",
     )],
-    vpn_client_root_certificates=[azure_nextgen.network.latest.VpnServerConfigVpnClientRootCertificateArgs(
+    vpn_client_root_certificates=[azure_nextgen.network.VpnServerConfigVpnClientRootCertificateArgs(
         name="vpnServerConfigVpnClientRootCert1",
         public_cert_data="MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuN",
     )],
@@ -237,7 +237,7 @@ vpn_server_configuration = azure_nextgen.network.latest.VpnServerConfiguration("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vpnServerConfiguration = new azure_nextgen.network.latest.VpnServerConfiguration("vpnServerConfiguration", {
+const vpnServerConfiguration = new azure_nextgen.network.VpnServerConfiguration("vpnServerConfiguration", {
     location: "West US",
     radiusClientRootCertificates: [{
         name: "vpnServerConfigRadiusClientRootCert1",
@@ -290,7 +290,7 @@ const vpnServerConfiguration = new azure_nextgen.network.latest.VpnServerConfigu
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VpnServerConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -298,11 +298,11 @@ const vpnServerConfiguration = new azure_nextgen.network.latest.VpnServerConfigu
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnServerConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VpnServerConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnServerConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnServerConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnServerConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VpnServerConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -323,7 +323,7 @@ const vpnServerConfiguration = new azure_nextgen.network.latest.VpnServerConfigu
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VpnServerConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">VpnServerConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -392,7 +392,7 @@ const vpnServerConfiguration = new azure_nextgen.network.latest.VpnServerConfigu
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VpnServerConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">VpnServerConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -431,7 +431,7 @@ const vpnServerConfiguration = new azure_nextgen.network.latest.VpnServerConfigu
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VpnServerConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">VpnServerConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -454,11 +454,11 @@ const vpnServerConfiguration = new azure_nextgen.network.latest.VpnServerConfigu
 
 ## VpnServerConfiguration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VpnServerConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VpnServerConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -5378,7 +5378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VpnServerConfiguration vpnServerConfiguration1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1 
+$ pulumi import azure-nextgen:network:VpnServerConfiguration vpnServerConfiguration1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1 
 ```
 
 

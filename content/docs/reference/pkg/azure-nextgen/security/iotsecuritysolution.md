@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.IotSecuritySolution res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 IoT Security solution configuration and resource information.
-Latest API Version: 2019-08-01.
+API Version: 2019-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotSecuritySolution = new AzureNextGen.Security.Latest.IotSecuritySolution("iotSecuritySolution", new AzureNextGen.Security.Latest.IotSecuritySolutionArgs
+        var iotSecuritySolution = new AzureNextGen.Security.IotSecuritySolution("iotSecuritySolution", new AzureNextGen.Security.IotSecuritySolutionArgs
         {
             DisabledDataSources = {},
             DisplayName = "Solution Default",
@@ -39,12 +39,12 @@ class MyStack : Stack
             Location = "East Us",
             RecommendationsConfiguration = 
             {
-                new AzureNextGen.Security.Latest.Inputs.RecommendationConfigurationPropertiesArgs
+                new AzureNextGen.Security.Inputs.RecommendationConfigurationPropertiesArgs
                 {
                     RecommendationType = "IoT_OpenPorts",
                     Status = "Disabled",
                 },
-                new AzureNextGen.Security.Latest.Inputs.RecommendationConfigurationPropertiesArgs
+                new AzureNextGen.Security.Inputs.RecommendationConfigurationPropertiesArgs
                 {
                     RecommendationType = "IoT_SharedCredentials",
                     Status = "Disabled",
@@ -55,7 +55,7 @@ class MyStack : Stack
             Status = "Enabled",
             Tags = ,
             UnmaskedIpLoggingStatus = "Enabled",
-            UserDefinedResources = new AzureNextGen.Security.Latest.Inputs.UserDefinedResourcesPropertiesArgs
+            UserDefinedResources = new AzureNextGen.Security.Inputs.UserDefinedResourcesPropertiesArgs
             {
                 Query = "where type != \"microsoft.devices/iothubs\" | where name contains \"iot\"",
                 QuerySubscriptions = 
@@ -79,7 +79,7 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/latest"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -133,18 +133,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_security_solution = azure_nextgen.security.latest.IotSecuritySolution("iotSecuritySolution",
+iot_security_solution = azure_nextgen.security.IotSecuritySolution("iotSecuritySolution",
     disabled_data_sources=[],
     display_name="Solution Default",
     export=[],
     iot_hubs=["/subscriptions/075423e9-7d33-4166-8bdf-3920b04e3735/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/FirstIotHub"],
     location="East Us",
     recommendations_configuration=[
-        azure_nextgen.security.latest.RecommendationConfigurationPropertiesArgs(
+        azure_nextgen.security.RecommendationConfigurationPropertiesArgs(
             recommendation_type="IoT_OpenPorts",
             status="Disabled",
         ),
-        azure_nextgen.security.latest.RecommendationConfigurationPropertiesArgs(
+        azure_nextgen.security.RecommendationConfigurationPropertiesArgs(
             recommendation_type="IoT_SharedCredentials",
             status="Disabled",
         ),
@@ -154,7 +154,7 @@ iot_security_solution = azure_nextgen.security.latest.IotSecuritySolution("iotSe
     status="Enabled",
     tags={},
     unmasked_ip_logging_status="Enabled",
-    user_defined_resources=azure_nextgen.security.latest.UserDefinedResourcesPropertiesArgs(
+    user_defined_resources=azure_nextgen.security.UserDefinedResourcesPropertiesArgs(
         query="where type != \"microsoft.devices/iothubs\" | where name contains \"iot\"",
         query_subscriptions=["075423e9-7d33-4166-8bdf-3920b04e3735"],
     ),
@@ -170,7 +170,7 @@ iot_security_solution = azure_nextgen.security.latest.IotSecuritySolution("iotSe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolution("iotSecuritySolution", {
+const iotSecuritySolution = new azure_nextgen.security.IotSecuritySolution("iotSecuritySolution", {
     disabledDataSources: [],
     displayName: "Solution Default",
     "export": [],
@@ -210,7 +210,7 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IotSecuritySolutionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IotSecuritySolutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -218,11 +218,11 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotSecuritySolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IotSecuritySolutionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotSecuritySolution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotSecuritySolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IotSecuritySolutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotSecuritySolution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IotSecuritySolutionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IotSecuritySolutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -243,7 +243,7 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotSecuritySolutionArgs</span>
+        <span class="property-type"><a href="#inputs">IotSecuritySolutionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -312,7 +312,7 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotSecuritySolutionArgs</span>
+        <span class="property-type"><a href="#inputs">IotSecuritySolutionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -351,7 +351,7 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotSecuritySolutionArgs</span>
+        <span class="property-type"><a href="#inputs">IotSecuritySolutionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -374,11 +374,11 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
 
 ## IotSecuritySolution Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IotSecuritySolution resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IotSecuritySolution resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2466,7 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/latest:IotSecuritySolution default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/MyGroup/providers/Microsoft.Security/Locations/eastus/IoTSecuritySolutions/default 
+$ pulumi import azure-nextgen:security:IotSecuritySolution default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/MyGroup/providers/Microsoft.Security/Locations/eastus/IoTSecuritySolutions/default 
 ```
 
 

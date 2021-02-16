@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.GatewayCertificate
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Gateway certificate authority details.
+API Version: 2020-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gatewayCertificateAuthority = new AzureNextGen.ApiManagement.V20200601Preview.GatewayCertificateAuthority("gatewayCertificateAuthority", new AzureNextGen.ApiManagement.V20200601Preview.GatewayCertificateAuthorityArgs
+        var gatewayCertificateAuthority = new AzureNextGen.ApiManagement.GatewayCertificateAuthority("gatewayCertificateAuthority", new AzureNextGen.ApiManagement.GatewayCertificateAuthorityArgs
         {
             CertificateId = "cert1",
             GatewayId = "gw1",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement/v20200601preview"
+	apimanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gateway_certificate_authority = azure_nextgen.apimanagement.v20200601preview.GatewayCertificateAuthority("gatewayCertificateAuthority",
+gateway_certificate_authority = azure_nextgen.apimanagement.GatewayCertificateAuthority("gatewayCertificateAuthority",
     certificate_id="cert1",
     gateway_id="gw1",
     is_trusted=False,
@@ -95,7 +96,7 @@ gateway_certificate_authority = azure_nextgen.apimanagement.v20200601preview.Gat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const gatewayCertificateAuthority = new azure_nextgen.apimanagement.v20200601preview.GatewayCertificateAuthority("gatewayCertificateAuthority", {
+const gatewayCertificateAuthority = new azure_nextgen.apimanagement.GatewayCertificateAuthority("gatewayCertificateAuthority", {
     certificateId: "cert1",
     gatewayId: "gw1",
     isTrusted: false,
@@ -115,7 +116,7 @@ const gatewayCertificateAuthority = new azure_nextgen.apimanagement.v20200601pre
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GatewayCertificateAuthority</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">GatewayCertificateAuthorityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GatewayCertificateAuthority</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GatewayCertificateAuthorityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -123,11 +124,11 @@ const gatewayCertificateAuthority = new azure_nextgen.apimanagement.v20200601pre
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGatewayCertificateAuthority</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">GatewayCertificateAuthorityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GatewayCertificateAuthority</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGatewayCertificateAuthority</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GatewayCertificateAuthorityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GatewayCertificateAuthority</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GatewayCertificateAuthority</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">GatewayCertificateAuthorityArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GatewayCertificateAuthority</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GatewayCertificateAuthorityArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,7 +149,7 @@ const gatewayCertificateAuthority = new azure_nextgen.apimanagement.v20200601pre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GatewayCertificateAuthorityArgs</span>
+        <span class="property-type"><a href="#inputs">GatewayCertificateAuthorityArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -217,7 +218,7 @@ const gatewayCertificateAuthority = new azure_nextgen.apimanagement.v20200601pre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GatewayCertificateAuthorityArgs</span>
+        <span class="property-type"><a href="#inputs">GatewayCertificateAuthorityArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -256,7 +257,7 @@ const gatewayCertificateAuthority = new azure_nextgen.apimanagement.v20200601pre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GatewayCertificateAuthorityArgs</span>
+        <span class="property-type"><a href="#inputs">GatewayCertificateAuthorityArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -279,11 +280,11 @@ const gatewayCertificateAuthority = new azure_nextgen.apimanagement.v20200601pre
 
 ## GatewayCertificateAuthority Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The GatewayCertificateAuthority resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The GatewayCertificateAuthority resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -641,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:apimanagement/v20200601preview:GatewayCertificateAuthority cert1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/gateways/gw1/certificateAuthorities/cert1 
+$ pulumi import azure-nextgen:apimanagement:GatewayCertificateAuthority cert1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/gateways/gw1/certificateAuthorities/cert1 
 ```
 
 

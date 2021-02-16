@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hybridnetwork.VendorSkus resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Sku sub resource.
+API Version: 2020-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,27 +27,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vendorSkus = new AzureNextGen.HybridNetwork.V20200101Preview.VendorSkus("vendorSkus", new AzureNextGen.HybridNetwork.V20200101Preview.VendorSkusArgs
+        var vendorSkus = new AzureNextGen.HybridNetwork.VendorSkus("vendorSkus", new AzureNextGen.HybridNetwork.VendorSkusArgs
         {
             DeploymentMode = "PrivateEdgeZone",
             ManagedApplicationTemplate = ,
-            NetworkFunctionTemplate = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkFunctionTemplateArgs
+            NetworkFunctionTemplate = new AzureNextGen.HybridNetwork.Inputs.NetworkFunctionTemplateArgs
             {
                 NetworkFunctionRoleConfigurations = 
                 {
-                    new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkFunctionRoleConfigurationArgs
+                    new AzureNextGen.HybridNetwork.Inputs.NetworkFunctionRoleConfigurationArgs
                     {
-                        CustomProfile = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.CustomProfileArgs
+                        CustomProfile = new AzureNextGen.HybridNetwork.Inputs.CustomProfileArgs
                         {
                             MetadataConfigurationPath = "/var/logs/network.cfg",
                         },
                         NetworkInterfaces = 
                         {
-                            new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
+                            new AzureNextGen.HybridNetwork.Inputs.NetworkInterfaceArgs
                             {
                                 IpConfigurations = 
                                 {
-                                    new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
+                                    new AzureNextGen.HybridNetwork.Inputs.NetworkInterfaceIPConfigurationArgs
                                     {
                                         Gateway = "",
                                         IpAddress = "",
@@ -59,11 +60,11 @@ class MyStack : Stack
                                 NetworkInterfaceName = "nic1",
                                 VmSwitchType = "Wan",
                             },
-                            new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
+                            new AzureNextGen.HybridNetwork.Inputs.NetworkInterfaceArgs
                             {
                                 IpConfigurations = 
                                 {
-                                    new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
+                                    new AzureNextGen.HybridNetwork.Inputs.NetworkInterfaceIPConfigurationArgs
                                     {
                                         Gateway = "",
                                         IpAddress = "",
@@ -77,17 +78,17 @@ class MyStack : Stack
                                 VmSwitchType = "Management",
                             },
                         },
-                        OsProfile = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.OsProfileArgs
+                        OsProfile = new AzureNextGen.HybridNetwork.Inputs.OsProfileArgs
                         {
                             AdminUsername = "dummyuser",
                             CustomData = "base-64 encoded string of custom data",
-                            LinuxConfiguration = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.LinuxConfigurationArgs
+                            LinuxConfiguration = new AzureNextGen.HybridNetwork.Inputs.LinuxConfigurationArgs
                             {
-                                Ssh = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.SshConfigurationArgs
+                                Ssh = new AzureNextGen.HybridNetwork.Inputs.SshConfigurationArgs
                                 {
                                     PublicKeys = 
                                     {
-                                        new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.SshPublicKeyArgs
+                                        new AzureNextGen.HybridNetwork.Inputs.SshPublicKeyArgs
                                         {
                                             KeyData = "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH",
                                             Path = "home/user/.ssh/authorized_keys",
@@ -98,30 +99,30 @@ class MyStack : Stack
                         },
                         RoleName = "test",
                         RoleType = "VirtualMachine",
-                        StorageProfile = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.StorageProfileArgs
+                        StorageProfile = new AzureNextGen.HybridNetwork.Inputs.StorageProfileArgs
                         {
                             DataDisks = 
                             {
-                                new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.DataDiskArgs
+                                new AzureNextGen.HybridNetwork.Inputs.DataDiskArgs
                                 {
                                     CreateOption = "Empty",
                                     DiskSizeGB = 10,
                                     Name = "DataDisk1",
                                 },
                             },
-                            ImageReference = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.ImageReferenceArgs
+                            ImageReference = new AzureNextGen.HybridNetwork.Inputs.ImageReferenceArgs
                             {
                                 Offer = "UbuntuServer",
                                 Publisher = "Canonical",
                                 Sku = "18.04-LTS",
                                 Version = "18.04.201804262",
                             },
-                            OsDisk = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.OsDiskArgs
+                            OsDisk = new AzureNextGen.HybridNetwork.Inputs.OsDiskArgs
                             {
                                 DiskSizeGB = 30,
                                 Name = "vhdName",
                                 OsType = "Linux",
-                                Vhd = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.VirtualHardDiskArgs
+                                Vhd = new AzureNextGen.HybridNetwork.Inputs.VirtualHardDiskArgs
                                 {
                                     Uri = "https://contoso.net/link/vnd.vhd?sp=rl&st=2020-10-08T20:38:19Z&se=2020-12-09T19:38:00Z&sv=2019-12-12&sr=b&sig=7BM2f4yOw%3D",
                                 },
@@ -151,7 +152,7 @@ package main
 import (
 	"fmt"
 
-	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork/v20200101preview"
+	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -260,17 +261,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vendor_skus = azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSkus",
+vendor_skus = azure_nextgen.hybridnetwork.VendorSkus("vendorSkus",
     deployment_mode="PrivateEdgeZone",
     managed_application_template={},
-    network_function_template=azure_nextgen.hybridnetwork.v20200101preview.NetworkFunctionTemplateArgs(
-        network_function_role_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkFunctionRoleConfigurationArgs(
-            custom_profile=azure_nextgen.hybridnetwork.v20200101preview.CustomProfileArgs(
+    network_function_template=azure_nextgen.hybridnetwork.NetworkFunctionTemplateArgs(
+        network_function_role_configurations=[azure_nextgen.hybridnetwork.NetworkFunctionRoleConfigurationArgs(
+            custom_profile=azure_nextgen.hybridnetwork.CustomProfileArgs(
                 metadata_configuration_path="/var/logs/network.cfg",
             ),
             network_interfaces=[
-                azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceArgs(
-                    ip_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceIPConfigurationArgs(
+                azure_nextgen.hybridnetwork.NetworkInterfaceArgs(
+                    ip_configurations=[azure_nextgen.hybridnetwork.NetworkInterfaceIPConfigurationArgs(
                         gateway="",
                         ip_address="",
                         ip_allocation_method="Dynamic",
@@ -281,8 +282,8 @@ vendor_skus = azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSku
                     network_interface_name="nic1",
                     vm_switch_type="Wan",
                 ),
-                azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceArgs(
-                    ip_configurations=[azure_nextgen.hybridnetwork.v20200101preview.NetworkInterfaceIPConfigurationArgs(
+                azure_nextgen.hybridnetwork.NetworkInterfaceArgs(
+                    ip_configurations=[azure_nextgen.hybridnetwork.NetworkInterfaceIPConfigurationArgs(
                         gateway="",
                         ip_address="",
                         ip_allocation_method="Dynamic",
@@ -294,12 +295,12 @@ vendor_skus = azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSku
                     vm_switch_type="Management",
                 ),
             ],
-            os_profile=azure_nextgen.hybridnetwork.v20200101preview.OsProfileArgs(
+            os_profile=azure_nextgen.hybridnetwork.OsProfileArgs(
                 admin_username="dummyuser",
                 custom_data="base-64 encoded string of custom data",
-                linux_configuration=azure_nextgen.hybridnetwork.v20200101preview.LinuxConfigurationArgs(
-                    ssh=azure_nextgen.hybridnetwork.v20200101preview.SshConfigurationArgs(
-                        public_keys=[azure_nextgen.hybridnetwork.v20200101preview.SshPublicKeyArgs(
+                linux_configuration=azure_nextgen.hybridnetwork.LinuxConfigurationArgs(
+                    ssh=azure_nextgen.hybridnetwork.SshConfigurationArgs(
+                        public_keys=[azure_nextgen.hybridnetwork.SshPublicKeyArgs(
                             key_data="ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH",
                             path="home/user/.ssh/authorized_keys",
                         )],
@@ -308,23 +309,23 @@ vendor_skus = azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSku
             ),
             role_name="test",
             role_type="VirtualMachine",
-            storage_profile=azure_nextgen.hybridnetwork.v20200101preview.StorageProfileArgs(
-                data_disks=[azure_nextgen.hybridnetwork.v20200101preview.DataDiskArgs(
+            storage_profile=azure_nextgen.hybridnetwork.StorageProfileArgs(
+                data_disks=[azure_nextgen.hybridnetwork.DataDiskArgs(
                     create_option="Empty",
                     disk_size_gb=10,
                     name="DataDisk1",
                 )],
-                image_reference=azure_nextgen.hybridnetwork.v20200101preview.ImageReferenceArgs(
+                image_reference=azure_nextgen.hybridnetwork.ImageReferenceArgs(
                     offer="UbuntuServer",
                     publisher="Canonical",
                     sku="18.04-LTS",
                     version="18.04.201804262",
                 ),
-                os_disk=azure_nextgen.hybridnetwork.v20200101preview.OsDiskArgs(
+                os_disk=azure_nextgen.hybridnetwork.OsDiskArgs(
                     disk_size_gb=30,
                     name="vhdName",
                     os_type="Linux",
-                    vhd=azure_nextgen.hybridnetwork.v20200101preview.VirtualHardDiskArgs(
+                    vhd=azure_nextgen.hybridnetwork.VirtualHardDiskArgs(
                         uri="https://contoso.net/link/vnd.vhd?sp=rl&st=2020-10-08T20:38:19Z&se=2020-12-09T19:38:00Z&sv=2019-12-12&sr=b&sig=7BM2f4yOw%3D",
                     ),
                 ),
@@ -346,7 +347,7 @@ vendor_skus = azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSku
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vendorSkus = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSkus", {
+const vendorSkus = new azure_nextgen.hybridnetwork.VendorSkus("vendorSkus", {
     deploymentMode: "PrivateEdgeZone",
     managedApplicationTemplate: {},
     networkFunctionTemplate: {
@@ -435,7 +436,7 @@ const vendorSkus = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VendorSkus</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VendorSkusArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VendorSkus</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VendorSkusArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -443,11 +444,11 @@ const vendorSkus = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVendorSkus</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VendorSkusArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VendorSkus</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVendorSkus</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VendorSkusArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VendorSkus</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VendorSkus</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VendorSkusArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VendorSkus</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VendorSkusArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -468,7 +469,7 @@ const vendorSkus = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VendorSkusArgs</span>
+        <span class="property-type"><a href="#inputs">VendorSkusArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -537,7 +538,7 @@ const vendorSkus = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VendorSkusArgs</span>
+        <span class="property-type"><a href="#inputs">VendorSkusArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -576,7 +577,7 @@ const vendorSkus = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VendorSkusArgs</span>
+        <span class="property-type"><a href="#inputs">VendorSkusArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -599,11 +600,11 @@ const vendorSkus = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("
 
 ## VendorSkus Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -5675,7 +5676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hybridnetwork/v20200101preview:VendorSkus TestSku /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor/vendorskus/TestSku 
+$ pulumi import azure-nextgen:hybridnetwork:VendorSkus TestSku /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor/vendorskus/TestSku 
 ```
 
 

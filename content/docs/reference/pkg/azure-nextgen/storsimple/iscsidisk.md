@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.IscsiDisk resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The iSCSI disk.
-Latest API Version: 2016-10-01.
+API Version: 2016-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iscsiDisk = new AzureNextGen.StorSimple.Latest.IscsiDisk("iscsiDisk", new AzureNextGen.StorSimple.Latest.IscsiDiskArgs
+        var iscsiDisk = new AzureNextGen.StorSimple.IscsiDisk("iscsiDisk", new AzureNextGen.StorSimple.IscsiDiskArgs
         {
             AccessControlRecords = {},
             DataPolicy = "Tiered",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iscsi_disk = azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk",
+iscsi_disk = azure_nextgen.storsimple.IscsiDisk("iscsiDisk",
     access_control_records=[],
     data_policy="Tiered",
     description="Demo IscsiDisk for SDK Test Tiered",
@@ -114,7 +114,7 @@ iscsi_disk = azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iscsiDisk = new azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk", {
+const iscsiDisk = new azure_nextgen.storsimple.IscsiDisk("iscsiDisk", {
     accessControlRecords: [],
     dataPolicy: "Tiered",
     description: "Demo IscsiDisk for SDK Test Tiered",
@@ -140,7 +140,7 @@ const iscsiDisk = new azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IscsiDisk</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IscsiDiskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IscsiDisk</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IscsiDiskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -148,11 +148,11 @@ const iscsiDisk = new azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIscsiDisk</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IscsiDiskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IscsiDisk</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIscsiDisk</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IscsiDiskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IscsiDisk</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IscsiDisk</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IscsiDiskArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IscsiDisk</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IscsiDiskArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -173,7 +173,7 @@ const iscsiDisk = new azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IscsiDiskArgs</span>
+        <span class="property-type"><a href="#inputs">IscsiDiskArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -242,7 +242,7 @@ const iscsiDisk = new azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IscsiDiskArgs</span>
+        <span class="property-type"><a href="#inputs">IscsiDiskArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,7 +281,7 @@ const iscsiDisk = new azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IscsiDiskArgs</span>
+        <span class="property-type"><a href="#inputs">IscsiDiskArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -304,11 +304,11 @@ const iscsiDisk = new azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk", {
 
 ## IscsiDisk Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IscsiDisk resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IscsiDisk resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1088,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:IscsiDisk Auto-TestIscsiDisk1 /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-0NZI14MDTF/iscsiServers/HSDK-0NZI14MDTF/disks/Auto-TestIscsiDisk1 
+$ pulumi import azure-nextgen:storsimple:IscsiDisk Auto-TestIscsiDisk1 /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-0NZI14MDTF/iscsiServers/HSDK-0NZI14MDTF/disks/Auto-TestIscsiDisk1 
 ```
 
 

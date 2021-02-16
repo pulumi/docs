@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.SecurityPolicy resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 SecurityPolicy association for AzureFrontDoor profile
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var securityPolicy = new AzureNextGen.Cdn.Latest.SecurityPolicy("securityPolicy", new AzureNextGen.Cdn.Latest.SecurityPolicyArgs
+        var securityPolicy = new AzureNextGen.Cdn.SecurityPolicy("securityPolicy", new AzureNextGen.Cdn.SecurityPolicyArgs
         {
-            Parameters = new AzureNextGen.Cdn.Latest.Inputs.SecurityPolicyWebApplicationFirewallParametersArgs
+            Parameters = new AzureNextGen.Cdn.Inputs.SecurityPolicyWebApplicationFirewallParametersArgs
             {
                 Associations = 
                 {
-                    new AzureNextGen.Cdn.Latest.Inputs.SecurityPolicyWebApplicationFirewallAssociationArgs
+                    new AzureNextGen.Cdn.Inputs.SecurityPolicyWebApplicationFirewallAssociationArgs
                     {
                         Domains = 
                         {
-                            new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                            new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
                             {
                                 Id = "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain1",
                             },
-                            new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                            new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
                             {
                                 Id = "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain2",
                             },
@@ -54,7 +54,7 @@ class MyStack : Stack
                     },
                 },
                 Type = "WebApplicationFirewall",
-                WafPolicy = new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                WafPolicy = new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/wafTest",
                 },
@@ -77,7 +77,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -127,14 +127,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-security_policy = azure_nextgen.cdn.latest.SecurityPolicy("securityPolicy",
-    parameters=azure_nextgen.cdn.latest.SecurityPolicyWebApplicationFirewallParametersArgs(
-        associations=[azure_nextgen.cdn.latest.SecurityPolicyWebApplicationFirewallAssociationArgs(
+security_policy = azure_nextgen.cdn.SecurityPolicy("securityPolicy",
+    parameters=azure_nextgen.cdn.SecurityPolicyWebApplicationFirewallParametersArgs(
+        associations=[azure_nextgen.cdn.SecurityPolicyWebApplicationFirewallAssociationArgs(
             domains=[
-                azure_nextgen.cdn.latest.ResourceReferenceArgs(
+                azure_nextgen.cdn.ResourceReferenceArgs(
                     id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain1",
                 ),
-                azure_nextgen.cdn.latest.ResourceReferenceArgs(
+                azure_nextgen.cdn.ResourceReferenceArgs(
                     id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain2",
                 ),
             ],
@@ -144,7 +144,7 @@ security_policy = azure_nextgen.cdn.latest.SecurityPolicy("securityPolicy",
             ],
         )],
         type="WebApplicationFirewall",
-        waf_policy=azure_nextgen.cdn.latest.ResourceReferenceArgs(
+        waf_policy=azure_nextgen.cdn.ResourceReferenceArgs(
             id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/wafTest",
         ),
     ),
@@ -162,7 +162,7 @@ security_policy = azure_nextgen.cdn.latest.SecurityPolicy("securityPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const securityPolicy = new azure_nextgen.cdn.latest.SecurityPolicy("securityPolicy", {
+const securityPolicy = new azure_nextgen.cdn.SecurityPolicy("securityPolicy", {
     parameters: {
         associations: [{
             domains: [
@@ -200,7 +200,7 @@ const securityPolicy = new azure_nextgen.cdn.latest.SecurityPolicy("securityPoli
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SecurityPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -208,11 +208,11 @@ const securityPolicy = new azure_nextgen.cdn.latest.SecurityPolicy("securityPoli
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SecurityPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SecurityPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -233,7 +233,7 @@ const securityPolicy = new azure_nextgen.cdn.latest.SecurityPolicy("securityPoli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SecurityPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">SecurityPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -302,7 +302,7 @@ const securityPolicy = new azure_nextgen.cdn.latest.SecurityPolicy("securityPoli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SecurityPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">SecurityPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -341,7 +341,7 @@ const securityPolicy = new azure_nextgen.cdn.latest.SecurityPolicy("securityPoli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SecurityPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">SecurityPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -364,11 +364,11 @@ const securityPolicy = new azure_nextgen.cdn.latest.SecurityPolicy("securityPoli
 
 ## SecurityPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1560,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:SecurityPolicy securityPolicy1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/securityPolicies/securityPolicy1 
+$ pulumi import azure-nextgen:cdn:SecurityPolicy securityPolicy1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/securityPolicies/securityPolicy1 
 ```
 
 

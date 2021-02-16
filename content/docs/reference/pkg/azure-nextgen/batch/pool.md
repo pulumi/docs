@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batch.Pool resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contains information about a pool.
-Latest API Version: 2021-01-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch.Pool("pool", new AzureNextGen.Batch.PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch.Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Inputs.VirtualMachineConfigurationArgs
                 {
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch.Inputs.ImageReferenceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
                     },
@@ -59,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -96,11 +96,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 id="/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
             ),
             node_agent_sku_id="batch.node.ubuntu 18.04",
@@ -120,7 +120,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -149,7 +149,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch.Pool("pool", new AzureNextGen.Batch.PoolArgs
         {
             AccountName = "sampleacct",
             ApplicationLicenses = 
@@ -159,7 +159,7 @@ class MyStack : Stack
             },
             ApplicationPackages = 
             {
-                new AzureNextGen.Batch.Latest.Inputs.ApplicationPackageReferenceArgs
+                new AzureNextGen.Batch.Inputs.ApplicationPackageReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234",
                     Version = "asdf",
@@ -167,7 +167,7 @@ class MyStack : Stack
             },
             Certificates = 
             {
-                new AzureNextGen.Batch.Latest.Inputs.CertificateReferenceArgs
+                new AzureNextGen.Batch.Inputs.CertificateReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567",
                     StoreLocation = "LocalMachine",
@@ -178,9 +178,9 @@ class MyStack : Stack
                     },
                 },
             },
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch.Inputs.DeploymentConfigurationArgs
             {
-                CloudServiceConfiguration = new AzureNextGen.Batch.Latest.Inputs.CloudServiceConfigurationArgs
+                CloudServiceConfiguration = new AzureNextGen.Batch.Inputs.CloudServiceConfigurationArgs
                 {
                     OsFamily = "4",
                     OsVersion = "WA-GUEST-OS-4.45_201708-01",
@@ -190,20 +190,20 @@ class MyStack : Stack
             InterNodeCommunication = "Enabled",
             Metadata = 
             {
-                new AzureNextGen.Batch.Latest.Inputs.MetadataItemArgs
+                new AzureNextGen.Batch.Inputs.MetadataItemArgs
                 {
                     Name = "metadata-1",
                     Value = "value-1",
                 },
-                new AzureNextGen.Batch.Latest.Inputs.MetadataItemArgs
+                new AzureNextGen.Batch.Inputs.MetadataItemArgs
                 {
                     Name = "metadata-2",
                     Value = "value-2",
                 },
             },
-            NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
+            NetworkConfiguration = new AzureNextGen.Batch.Inputs.NetworkConfigurationArgs
             {
-                PublicIPAddressConfiguration = new AzureNextGen.Batch.Latest.Inputs.PublicIPAddressConfigurationArgs
+                PublicIPAddressConfiguration = new AzureNextGen.Batch.Inputs.PublicIPAddressConfigurationArgs
                 {
                     IpAddressIds = 
                     {
@@ -216,9 +216,9 @@ class MyStack : Stack
             },
             PoolName = "testpool",
             ResourceGroupName = "default-azurebatch-japaneast",
-            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.Batch.Inputs.ScaleSettingsArgs
             {
-                FixedScale = new AzureNextGen.Batch.Latest.Inputs.FixedScaleSettingsArgs
+                FixedScale = new AzureNextGen.Batch.Inputs.FixedScaleSettingsArgs
                 {
                     NodeDeallocationOption = "TaskCompletion",
                     ResizeTimeout = "PT8M",
@@ -226,12 +226,12 @@ class MyStack : Stack
                     TargetLowPriorityNodes = 28,
                 },
             },
-            StartTask = new AzureNextGen.Batch.Latest.Inputs.StartTaskArgs
+            StartTask = new AzureNextGen.Batch.Inputs.StartTaskArgs
             {
                 CommandLine = "cmd /c SET",
                 EnvironmentSettings = 
                 {
-                    new AzureNextGen.Batch.Latest.Inputs.EnvironmentSettingArgs
+                    new AzureNextGen.Batch.Inputs.EnvironmentSettingArgs
                     {
                         Name = "MYSET",
                         Value = "1234",
@@ -240,16 +240,16 @@ class MyStack : Stack
                 MaxTaskRetryCount = 6,
                 ResourceFiles = 
                 {
-                    new AzureNextGen.Batch.Latest.Inputs.ResourceFileArgs
+                    new AzureNextGen.Batch.Inputs.ResourceFileArgs
                     {
                         FileMode = "777",
                         FilePath = "c:\\temp\\gohere",
                         HttpUrl = "https://testaccount.blob.core.windows.net/example-blob-file",
                     },
                 },
-                UserIdentity = new AzureNextGen.Batch.Latest.Inputs.UserIdentityArgs
+                UserIdentity = new AzureNextGen.Batch.Inputs.UserIdentityArgs
                 {
-                    AutoUser = new AzureNextGen.Batch.Latest.Inputs.AutoUserSpecificationArgs
+                    AutoUser = new AzureNextGen.Batch.Inputs.AutoUserSpecificationArgs
                     {
                         ElevationLevel = "Admin",
                         Scope = "Pool",
@@ -257,17 +257,17 @@ class MyStack : Stack
                 },
                 WaitForSuccess = true,
             },
-            TaskSchedulingPolicy = new AzureNextGen.Batch.Latest.Inputs.TaskSchedulingPolicyArgs
+            TaskSchedulingPolicy = new AzureNextGen.Batch.Inputs.TaskSchedulingPolicyArgs
             {
                 NodeFillType = "Pack",
             },
             TaskSlotsPerNode = 13,
             UserAccounts = 
             {
-                new AzureNextGen.Batch.Latest.Inputs.UserAccountArgs
+                new AzureNextGen.Batch.Inputs.UserAccountArgs
                 {
                     ElevationLevel = "Admin",
-                    LinuxUserConfiguration = new AzureNextGen.Batch.Latest.Inputs.LinuxUserConfigurationArgs
+                    LinuxUserConfiguration = new AzureNextGen.Batch.Inputs.LinuxUserConfigurationArgs
                     {
                         Gid = 4567,
                         SshPrivateKey = "sshprivatekeyvalue",
@@ -297,24 +297,24 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
     application_licenses=[
         "app-license0",
         "app-license1",
     ],
-    application_packages=[azure_nextgen.batch.latest.ApplicationPackageReferenceArgs(
+    application_packages=[azure_nextgen.batch.ApplicationPackageReferenceArgs(
         id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234",
         version="asdf",
     )],
-    certificates=[azure_nextgen.batch.latest.CertificateReferenceArgs(
+    certificates=[azure_nextgen.batch.CertificateReferenceArgs(
         id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567",
         store_location="LocalMachine",
         store_name="MY",
         visibility=["RemoteUser"],
     )],
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        cloud_service_configuration=azure_nextgen.batch.latest.CloudServiceConfigurationArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        cloud_service_configuration=azure_nextgen.batch.CloudServiceConfigurationArgs(
             os_family="4",
             os_version="WA-GUEST-OS-4.45_201708-01",
         ),
@@ -322,17 +322,17 @@ pool = azure_nextgen.batch.latest.Pool("pool",
     display_name="my-pool-name",
     inter_node_communication="Enabled",
     metadata=[
-        azure_nextgen.batch.latest.MetadataItemArgs(
+        azure_nextgen.batch.MetadataItemArgs(
             name="metadata-1",
             value="value-1",
         ),
-        azure_nextgen.batch.latest.MetadataItemArgs(
+        azure_nextgen.batch.MetadataItemArgs(
             name="metadata-2",
             value="value-2",
         ),
     ],
-    network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
-        public_ip_address_configuration=azure_nextgen.batch.latest.PublicIPAddressConfigurationArgs(
+    network_configuration=azure_nextgen.batch.NetworkConfigurationArgs(
+        public_ip_address_configuration=azure_nextgen.batch.PublicIPAddressConfigurationArgs(
             ip_address_ids=[
                 "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
                 "/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268",
@@ -343,41 +343,41 @@ pool = azure_nextgen.batch.latest.Pool("pool",
     ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
-        fixed_scale=azure_nextgen.batch.latest.FixedScaleSettingsArgs(
+    scale_settings=azure_nextgen.batch.ScaleSettingsArgs(
+        fixed_scale=azure_nextgen.batch.FixedScaleSettingsArgs(
             node_deallocation_option="TaskCompletion",
             resize_timeout="PT8M",
             target_dedicated_nodes=6,
             target_low_priority_nodes=28,
         ),
     ),
-    start_task=azure_nextgen.batch.latest.StartTaskArgs(
+    start_task=azure_nextgen.batch.StartTaskArgs(
         command_line="cmd /c SET",
-        environment_settings=[azure_nextgen.batch.latest.EnvironmentSettingArgs(
+        environment_settings=[azure_nextgen.batch.EnvironmentSettingArgs(
             name="MYSET",
             value="1234",
         )],
         max_task_retry_count=6,
-        resource_files=[azure_nextgen.batch.latest.ResourceFileArgs(
+        resource_files=[azure_nextgen.batch.ResourceFileArgs(
             file_mode="777",
             file_path="c:\\temp\\gohere",
             http_url="https://testaccount.blob.core.windows.net/example-blob-file",
         )],
-        user_identity=azure_nextgen.batch.latest.UserIdentityArgs(
-            auto_user=azure_nextgen.batch.latest.AutoUserSpecificationArgs(
+        user_identity=azure_nextgen.batch.UserIdentityArgs(
+            auto_user=azure_nextgen.batch.AutoUserSpecificationArgs(
                 elevation_level="Admin",
                 scope="Pool",
             ),
         ),
         wait_for_success=True,
     ),
-    task_scheduling_policy=azure_nextgen.batch.latest.TaskSchedulingPolicyArgs(
+    task_scheduling_policy=azure_nextgen.batch.TaskSchedulingPolicyArgs(
         node_fill_type="Pack",
     ),
     task_slots_per_node=13,
-    user_accounts=[azure_nextgen.batch.latest.UserAccountArgs(
+    user_accounts=[azure_nextgen.batch.UserAccountArgs(
         elevation_level="Admin",
-        linux_user_configuration=azure_nextgen.batch.latest.LinuxUserConfigurationArgs(
+        linux_user_configuration=azure_nextgen.batch.LinuxUserConfigurationArgs(
             gid=4567,
             ssh_private_key="sshprivatekeyvalue",
             uid=1234,
@@ -397,7 +397,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     applicationLicenses: [
         "app-license0",
@@ -502,23 +502,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch.Pool("pool", new AzureNextGen.Batch.PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch.Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Inputs.VirtualMachineConfigurationArgs
                 {
                     DataDisks = 
                     {
-                        new AzureNextGen.Batch.Latest.Inputs.DataDiskArgs
+                        new AzureNextGen.Batch.Inputs.DataDiskArgs
                         {
                             Caching = "ReadWrite",
                             DiskSizeGB = 30,
                             Lun = 0,
                             StorageAccountType = "Premium_LRS",
                         },
-                        new AzureNextGen.Batch.Latest.Inputs.DataDiskArgs
+                        new AzureNextGen.Batch.Inputs.DataDiskArgs
                         {
                             Caching = "None",
                             DiskSizeGB = 200,
@@ -526,7 +526,7 @@ class MyStack : Stack
                             StorageAccountType = "Standard_LRS",
                         },
                     },
-                    DiskEncryptionConfiguration = new AzureNextGen.Batch.Latest.Inputs.DiskEncryptionConfigurationArgs
+                    DiskEncryptionConfiguration = new AzureNextGen.Batch.Inputs.DiskEncryptionConfigurationArgs
                     {
                         Targets = 
                         {
@@ -534,7 +534,7 @@ class MyStack : Stack
                             "TemporaryDisk",
                         },
                     },
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
@@ -543,23 +543,23 @@ class MyStack : Stack
                     },
                     LicenseType = "Windows_Server",
                     NodeAgentSkuId = "batch.node.windows amd64",
-                    NodePlacementConfiguration = new AzureNextGen.Batch.Latest.Inputs.NodePlacementConfigurationArgs
+                    NodePlacementConfiguration = new AzureNextGen.Batch.Inputs.NodePlacementConfigurationArgs
                     {
                         Policy = "Zonal",
                     },
-                    WindowsConfiguration = new AzureNextGen.Batch.Latest.Inputs.WindowsConfigurationArgs
+                    WindowsConfiguration = new AzureNextGen.Batch.Inputs.WindowsConfigurationArgs
                     {
                         EnableAutomaticUpdates = false,
                     },
                 },
             },
-            NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
+            NetworkConfiguration = new AzureNextGen.Batch.Inputs.NetworkConfigurationArgs
             {
-                EndpointConfiguration = new AzureNextGen.Batch.Latest.Inputs.PoolEndpointConfigurationArgs
+                EndpointConfiguration = new AzureNextGen.Batch.Inputs.PoolEndpointConfigurationArgs
                 {
                     InboundNatPools = 
                     {
-                        new AzureNextGen.Batch.Latest.Inputs.InboundNatPoolArgs
+                        new AzureNextGen.Batch.Inputs.InboundNatPoolArgs
                         {
                             BackendPort = 12001,
                             FrontendPortRangeEnd = 15100,
@@ -567,7 +567,7 @@ class MyStack : Stack
                             Name = "testnat",
                             NetworkSecurityGroupRules = 
                             {
-                                new AzureNextGen.Batch.Latest.Inputs.NetworkSecurityGroupRuleArgs
+                                new AzureNextGen.Batch.Inputs.NetworkSecurityGroupRuleArgs
                                 {
                                     Access = "Allow",
                                     Priority = 150,
@@ -578,7 +578,7 @@ class MyStack : Stack
                                         "2",
                                     },
                                 },
-                                new AzureNextGen.Batch.Latest.Inputs.NetworkSecurityGroupRuleArgs
+                                new AzureNextGen.Batch.Inputs.NetworkSecurityGroupRuleArgs
                                 {
                                     Access = "Deny",
                                     Priority = 3500,
@@ -596,9 +596,9 @@ class MyStack : Stack
             },
             PoolName = "testpool",
             ResourceGroupName = "default-azurebatch-japaneast",
-            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.Batch.Inputs.ScaleSettingsArgs
             {
-                AutoScale = new AzureNextGen.Batch.Latest.Inputs.AutoScaleSettingsArgs
+                AutoScale = new AzureNextGen.Batch.Inputs.AutoScaleSettingsArgs
                 {
                     EvaluationInterval = "PT5M",
                     Formula = "$TargetDedicatedNodes=1",
@@ -624,31 +624,31 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
             data_disks=[
-                azure_nextgen.batch.latest.DataDiskArgs(
+                azure_nextgen.batch.DataDiskArgs(
                     caching="ReadWrite",
                     disk_size_gb=30,
                     lun=0,
                     storage_account_type="Premium_LRS",
                 ),
-                azure_nextgen.batch.latest.DataDiskArgs(
+                azure_nextgen.batch.DataDiskArgs(
                     caching="None",
                     disk_size_gb=200,
                     lun=1,
                     storage_account_type="Standard_LRS",
                 ),
             ],
-            disk_encryption_configuration=azure_nextgen.batch.latest.DiskEncryptionConfigurationArgs(
+            disk_encryption_configuration=azure_nextgen.batch.DiskEncryptionConfigurationArgs(
                 targets=[
                     "OsDisk",
                     "TemporaryDisk",
                 ],
             ),
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 offer="WindowsServer",
                 publisher="MicrosoftWindowsServer",
                 sku="2016-Datacenter-SmallDisk",
@@ -656,23 +656,23 @@ pool = azure_nextgen.batch.latest.Pool("pool",
             ),
             license_type="Windows_Server",
             node_agent_sku_id="batch.node.windows amd64",
-            node_placement_configuration=azure_nextgen.batch.latest.NodePlacementConfigurationArgs(
+            node_placement_configuration=azure_nextgen.batch.NodePlacementConfigurationArgs(
                 policy="Zonal",
             ),
-            windows_configuration=azure_nextgen.batch.latest.WindowsConfigurationArgs(
+            windows_configuration=azure_nextgen.batch.WindowsConfigurationArgs(
                 enable_automatic_updates=False,
             ),
         ),
     ),
-    network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
-        endpoint_configuration=azure_nextgen.batch.latest.PoolEndpointConfigurationArgs(
-            inbound_nat_pools=[azure_nextgen.batch.latest.InboundNatPoolArgs(
+    network_configuration=azure_nextgen.batch.NetworkConfigurationArgs(
+        endpoint_configuration=azure_nextgen.batch.PoolEndpointConfigurationArgs(
+            inbound_nat_pools=[azure_nextgen.batch.InboundNatPoolArgs(
                 backend_port=12001,
                 frontend_port_range_end=15100,
                 frontend_port_range_start=15000,
                 name="testnat",
                 network_security_group_rules=[
-                    azure_nextgen.batch.latest.NetworkSecurityGroupRuleArgs(
+                    azure_nextgen.batch.NetworkSecurityGroupRuleArgs(
                         access="Allow",
                         priority=150,
                         source_address_prefix="192.100.12.45",
@@ -681,7 +681,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
                             "2",
                         ],
                     ),
-                    azure_nextgen.batch.latest.NetworkSecurityGroupRuleArgs(
+                    azure_nextgen.batch.NetworkSecurityGroupRuleArgs(
                         access="Deny",
                         priority=3500,
                         source_address_prefix="*",
@@ -694,8 +694,8 @@ pool = azure_nextgen.batch.latest.Pool("pool",
     ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
-        auto_scale=azure_nextgen.batch.latest.AutoScaleSettingsArgs(
+    scale_settings=azure_nextgen.batch.ScaleSettingsArgs(
+        auto_scale=azure_nextgen.batch.AutoScaleSettingsArgs(
             evaluation_interval="PT5M",
             formula="$TargetDedicatedNodes=1",
         ),
@@ -712,7 +712,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -805,21 +805,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch.Pool("pool", new AzureNextGen.Batch.PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch.Inputs.DeploymentConfigurationArgs
             {
-                CloudServiceConfiguration = new AzureNextGen.Batch.Latest.Inputs.CloudServiceConfigurationArgs
+                CloudServiceConfiguration = new AzureNextGen.Batch.Inputs.CloudServiceConfigurationArgs
                 {
                     OsFamily = "5",
                 },
             },
             PoolName = "testpool",
             ResourceGroupName = "default-azurebatch-japaneast",
-            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.Batch.Inputs.ScaleSettingsArgs
             {
-                FixedScale = new AzureNextGen.Batch.Latest.Inputs.FixedScaleSettingsArgs
+                FixedScale = new AzureNextGen.Batch.Inputs.FixedScaleSettingsArgs
                 {
                     TargetDedicatedNodes = 3,
                 },
@@ -840,7 +840,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -879,17 +879,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        cloud_service_configuration=azure_nextgen.batch.latest.CloudServiceConfigurationArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        cloud_service_configuration=azure_nextgen.batch.CloudServiceConfigurationArgs(
             os_family="5",
         ),
     ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
-        fixed_scale=azure_nextgen.batch.latest.FixedScaleSettingsArgs(
+    scale_settings=azure_nextgen.batch.ScaleSettingsArgs(
+        fixed_scale=azure_nextgen.batch.FixedScaleSettingsArgs(
             target_dedicated_nodes=3,
         ),
     ),
@@ -905,7 +905,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         cloudServiceConfiguration: {
@@ -936,14 +936,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch.Pool("pool", new AzureNextGen.Batch.PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch.Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Inputs.VirtualMachineConfigurationArgs
                 {
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch.Inputs.ImageReferenceArgs
                     {
                         Offer = "UbuntuServer",
                         Publisher = "Canonical",
@@ -955,9 +955,9 @@ class MyStack : Stack
             },
             PoolName = "testpool",
             ResourceGroupName = "default-azurebatch-japaneast",
-            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.Batch.Inputs.ScaleSettingsArgs
             {
-                AutoScale = new AzureNextGen.Batch.Latest.Inputs.AutoScaleSettingsArgs
+                AutoScale = new AzureNextGen.Batch.Inputs.AutoScaleSettingsArgs
                 {
                     EvaluationInterval = "PT5M",
                     Formula = "$TargetDedicatedNodes=1",
@@ -981,7 +981,7 @@ package main
 import (
 	"fmt"
 
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1027,11 +1027,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 offer="UbuntuServer",
                 publisher="Canonical",
                 sku="18.04-LTS",
@@ -1042,8 +1042,8 @@ pool = azure_nextgen.batch.latest.Pool("pool",
     ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
-        auto_scale=azure_nextgen.batch.latest.AutoScaleSettingsArgs(
+    scale_settings=azure_nextgen.batch.ScaleSettingsArgs(
+        auto_scale=azure_nextgen.batch.AutoScaleSettingsArgs(
             evaluation_interval="PT5M",
             formula="$TargetDedicatedNodes=1",
         ),
@@ -1060,7 +1060,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -1098,23 +1098,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch.Pool("pool", new AzureNextGen.Batch.PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch.Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Inputs.VirtualMachineConfigurationArgs
                 {
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch.Inputs.ImageReferenceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
                     },
                     NodeAgentSkuId = "batch.node.ubuntu 18.04",
                 },
             },
-            NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
+            NetworkConfiguration = new AzureNextGen.Batch.Inputs.NetworkConfigurationArgs
             {
-                PublicIPAddressConfiguration = new AzureNextGen.Batch.Latest.Inputs.PublicIPAddressConfigurationArgs
+                PublicIPAddressConfiguration = new AzureNextGen.Batch.Inputs.PublicIPAddressConfigurationArgs
                 {
                     Provision = "NoPublicIPAddresses",
                 },
@@ -1138,7 +1138,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1181,18 +1181,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 id="/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
             ),
             node_agent_sku_id="batch.node.ubuntu 18.04",
         ),
     ),
-    network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
-        public_ip_address_configuration=azure_nextgen.batch.latest.PublicIPAddressConfigurationArgs(
+    network_configuration=azure_nextgen.batch.NetworkConfigurationArgs(
+        public_ip_address_configuration=azure_nextgen.batch.PublicIPAddressConfigurationArgs(
             provision="NoPublicIPAddresses",
         ),
         subnet_id="/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
@@ -1211,7 +1211,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -1246,23 +1246,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch.Pool("pool", new AzureNextGen.Batch.PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch.Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Inputs.VirtualMachineConfigurationArgs
                 {
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch.Inputs.ImageReferenceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
                     },
                     NodeAgentSkuId = "batch.node.ubuntu 18.04",
                 },
             },
-            NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
+            NetworkConfiguration = new AzureNextGen.Batch.Inputs.NetworkConfigurationArgs
             {
-                PublicIPAddressConfiguration = new AzureNextGen.Batch.Latest.Inputs.PublicIPAddressConfigurationArgs
+                PublicIPAddressConfiguration = new AzureNextGen.Batch.Inputs.PublicIPAddressConfigurationArgs
                 {
                     IpAddressIds = 
                     {
@@ -1290,7 +1290,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1336,18 +1336,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 id="/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
             ),
             node_agent_sku_id="batch.node.ubuntu 18.04",
         ),
     ),
-    network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
-        public_ip_address_configuration=azure_nextgen.batch.latest.PublicIPAddressConfigurationArgs(
+    network_configuration=azure_nextgen.batch.NetworkConfigurationArgs(
+        public_ip_address_configuration=azure_nextgen.batch.PublicIPAddressConfigurationArgs(
             ip_address_ids=["/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"],
             provision="UserManaged",
         ),
@@ -1367,7 +1367,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -1403,14 +1403,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch.Pool("pool", new AzureNextGen.Batch.PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch.Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Inputs.VirtualMachineConfigurationArgs
                 {
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch.Inputs.ImageReferenceArgs
                     {
                         Offer = "UbuntuServer",
                         Publisher = "Canonical",
@@ -1420,7 +1420,7 @@ class MyStack : Stack
                     NodeAgentSkuId = "batch.node.ubuntu 18.04",
                 },
             },
-            Identity = new AzureNextGen.Batch.Latest.Inputs.BatchPoolIdentityArgs
+            Identity = new AzureNextGen.Batch.Inputs.BatchPoolIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -1431,9 +1431,9 @@ class MyStack : Stack
             },
             PoolName = "testpool",
             ResourceGroupName = "default-azurebatch-japaneast",
-            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.Batch.Inputs.ScaleSettingsArgs
             {
-                AutoScale = new AzureNextGen.Batch.Latest.Inputs.AutoScaleSettingsArgs
+                AutoScale = new AzureNextGen.Batch.Inputs.AutoScaleSettingsArgs
                 {
                     EvaluationInterval = "PT5M",
                     Formula = "$TargetDedicatedNodes=1",
@@ -1457,7 +1457,7 @@ package main
 import (
 	"fmt"
 
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1510,11 +1510,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 offer="UbuntuServer",
                 publisher="Canonical",
                 sku="18.04-LTS",
@@ -1523,7 +1523,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
             node_agent_sku_id="batch.node.ubuntu 18.04",
         ),
     ),
-    identity=azure_nextgen.batch.latest.BatchPoolIdentityArgs(
+    identity=azure_nextgen.batch.BatchPoolIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
@@ -1532,8 +1532,8 @@ pool = azure_nextgen.batch.latest.Pool("pool",
     ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
-        auto_scale=azure_nextgen.batch.latest.AutoScaleSettingsArgs(
+    scale_settings=azure_nextgen.batch.ScaleSettingsArgs(
+        auto_scale=azure_nextgen.batch.AutoScaleSettingsArgs(
             evaluation_interval="PT5M",
             formula="$TargetDedicatedNodes=1",
         ),
@@ -1550,7 +1550,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -1595,16 +1595,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        var pool = new AzureNextGen.Batch.Pool("pool", new AzureNextGen.Batch.PoolArgs
         {
             AccountName = "sampleacct",
-            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            DeploymentConfiguration = new AzureNextGen.Batch.Inputs.DeploymentConfigurationArgs
             {
-                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Inputs.VirtualMachineConfigurationArgs
                 {
                     Extensions = 
                     {
-                        new AzureNextGen.Batch.Latest.Inputs.VMExtensionArgs
+                        new AzureNextGen.Batch.Inputs.VMExtensionArgs
                         {
                             AutoUpgradeMinorVersion = true,
                             Name = "batchextension1",
@@ -1621,7 +1621,7 @@ class MyStack : Stack
                             TypeHandlerVersion = "1.0",
                         },
                     },
-                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Batch.Inputs.ImageReferenceArgs
                     {
                         Offer = "UbuntuServer",
                         Publisher = "Canonical",
@@ -1632,9 +1632,9 @@ class MyStack : Stack
             },
             PoolName = "testpool",
             ResourceGroupName = "default-azurebatch-japaneast",
-            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.Batch.Inputs.ScaleSettingsArgs
             {
-                AutoScale = new AzureNextGen.Batch.Latest.Inputs.AutoScaleSettingsArgs
+                AutoScale = new AzureNextGen.Batch.Inputs.AutoScaleSettingsArgs
                 {
                     EvaluationInterval = "PT5M",
                     Formula = "$TargetDedicatedNodes=1",
@@ -1658,7 +1658,7 @@ package main
 import (
 	"fmt"
 
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1718,11 +1718,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.batch.latest.Pool("pool",
+pool = azure_nextgen.batch.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
-        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
-            extensions=[azure_nextgen.batch.latest.VMExtensionArgs(
+    deployment_configuration=azure_nextgen.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.VirtualMachineConfigurationArgs(
+            extensions=[azure_nextgen.batch.VMExtensionArgs(
                 auto_upgrade_minor_version=True,
                 name="batchextension1",
                 protected_settings={
@@ -1735,7 +1735,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
                 type="SecurityMonitoringForLinux",
                 type_handler_version="1.0",
             )],
-            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+            image_reference=azure_nextgen.batch.ImageReferenceArgs(
                 offer="UbuntuServer",
                 publisher="Canonical",
                 sku="16.04.0-LTS",
@@ -1745,8 +1745,8 @@ pool = azure_nextgen.batch.latest.Pool("pool",
     ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
-        auto_scale=azure_nextgen.batch.latest.AutoScaleSettingsArgs(
+    scale_settings=azure_nextgen.batch.ScaleSettingsArgs(
+        auto_scale=azure_nextgen.batch.AutoScaleSettingsArgs(
             evaluation_interval="PT5M",
             formula="$TargetDedicatedNodes=1",
         ),
@@ -1763,7 +1763,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const pool = new azure_nextgen.batch.latest.Pool("pool", {
+const pool = new azure_nextgen.batch.Pool("pool", {
     accountName: "sampleacct",
     deploymentConfiguration: {
         virtualMachineConfiguration: {
@@ -1811,7 +1811,7 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1819,11 +1819,11 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1844,7 +1844,7 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PoolArgs</span>
+        <span class="property-type"><a href="#inputs">PoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1913,7 +1913,7 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PoolArgs</span>
+        <span class="property-type"><a href="#inputs">PoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1952,7 +1952,7 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PoolArgs</span>
+        <span class="property-type"><a href="#inputs">PoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1975,11 +1975,11 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
 
 ## Pool Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -16067,7 +16067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:batch/latest:Pool testpool /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool 
+$ pulumi import azure-nextgen:batch:Pool testpool /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool 
 ```
 
 

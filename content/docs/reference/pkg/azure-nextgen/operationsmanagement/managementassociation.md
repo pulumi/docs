@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationsmanagement.ManagementA
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The container for solution.
+API Version: 2015-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementAssociation = new AzureNextGen.OperationsManagement.V20151101Preview.ManagementAssociation("managementAssociation", new AzureNextGen.OperationsManagement.V20151101Preview.ManagementAssociationArgs
+        var managementAssociation = new AzureNextGen.OperationsManagement.ManagementAssociation("managementAssociation", new AzureNextGen.OperationsManagement.ManagementAssociationArgs
         {
             Location = "East US",
             ManagementAssociationName = "managementAssociation1",
-            Properties = new AzureNextGen.OperationsManagement.V20151101Preview.Inputs.ManagementAssociationPropertiesArgs
+            Properties = new AzureNextGen.OperationsManagement.Inputs.ManagementAssociationPropertiesArgs
             {
                 ApplicationId = "/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1",
             },
@@ -53,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement/v20151101preview"
+	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,10 +88,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_association = azure_nextgen.operationsmanagement.v20151101preview.ManagementAssociation("managementAssociation",
+management_association = azure_nextgen.operationsmanagement.ManagementAssociation("managementAssociation",
     location="East US",
     management_association_name="managementAssociation1",
-    properties=azure_nextgen.operationsmanagement.v20151101preview.ManagementAssociationPropertiesArgs(
+    properties=azure_nextgen.operationsmanagement.ManagementAssociationPropertiesArgs(
         application_id="/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1",
     ),
     provider_name="providerName",
@@ -108,7 +109,7 @@ management_association = azure_nextgen.operationsmanagement.v20151101preview.Man
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managementAssociation = new azure_nextgen.operationsmanagement.v20151101preview.ManagementAssociation("managementAssociation", {
+const managementAssociation = new azure_nextgen.operationsmanagement.ManagementAssociation("managementAssociation", {
     location: "East US",
     managementAssociationName: "managementAssociation1",
     properties: {
@@ -132,7 +133,7 @@ const managementAssociation = new azure_nextgen.operationsmanagement.v20151101pr
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagementAssociation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagementAssociationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagementAssociation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagementAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -140,11 +141,11 @@ const managementAssociation = new azure_nextgen.operationsmanagement.v20151101pr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagementAssociation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagementAssociationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagementAssociation</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagementAssociation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagementAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagementAssociation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagementAssociation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagementAssociationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagementAssociation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagementAssociationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -165,7 +166,7 @@ const managementAssociation = new azure_nextgen.operationsmanagement.v20151101pr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagementAssociationArgs</span>
+        <span class="property-type"><a href="#inputs">ManagementAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -234,7 +235,7 @@ const managementAssociation = new azure_nextgen.operationsmanagement.v20151101pr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagementAssociationArgs</span>
+        <span class="property-type"><a href="#inputs">ManagementAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -273,7 +274,7 @@ const managementAssociation = new azure_nextgen.operationsmanagement.v20151101pr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagementAssociationArgs</span>
+        <span class="property-type"><a href="#inputs">ManagementAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -296,11 +297,11 @@ const managementAssociation = new azure_nextgen.operationsmanagement.v20151101pr
 
 ## ManagementAssociation Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ManagementAssociation resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ManagementAssociation resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -858,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationsmanagement/v20151101preview:ManagementAssociation managementAssociation1 /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationalInsights/workspaces/ws1/Microsoft.OperationsManagement/ManagementAssociations/managementAssociation1 
+$ pulumi import azure-nextgen:operationsmanagement:ManagementAssociation managementAssociation1 /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationalInsights/workspaces/ws1/Microsoft.OperationsManagement/ManagementAssociations/managementAssociation1 
 ```
 
 

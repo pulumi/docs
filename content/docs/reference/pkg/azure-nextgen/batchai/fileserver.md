@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batchai.FileServer resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 File Server information.
-Latest API Version: 2018-05-01.
+API Version: 2018-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileServer = new AzureNextGen.BatchAI.Latest.FileServer("fileServer", new AzureNextGen.BatchAI.Latest.FileServerArgs
+        var fileServer = new AzureNextGen.BatchAI.FileServer("fileServer", new AzureNextGen.BatchAI.FileServerArgs
         {
-            DataDisks = new AzureNextGen.BatchAI.Latest.Inputs.DataDisksArgs
+            DataDisks = new AzureNextGen.BatchAI.Inputs.DataDisksArgs
             {
                 DiskCount = 2,
                 DiskSizeInGB = 10,
@@ -37,9 +37,9 @@ class MyStack : Stack
             },
             FileServerName = "demo_nfs",
             ResourceGroupName = "demo_resource_group",
-            SshConfiguration = new AzureNextGen.BatchAI.Latest.Inputs.SshConfigurationArgs
+            SshConfiguration = new AzureNextGen.BatchAI.Inputs.SshConfigurationArgs
             {
-                UserAccountSettings = new AzureNextGen.BatchAI.Latest.Inputs.UserAccountSettingsArgs
+                UserAccountSettings = new AzureNextGen.BatchAI.Inputs.UserAccountSettingsArgs
                 {
                     AdminUserName = "admin_user_name",
                     AdminUserPassword = "admin_user_password",
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai/latest"
+	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -102,16 +102,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_server = azure_nextgen.batchai.latest.FileServer("fileServer",
-    data_disks=azure_nextgen.batchai.latest.DataDisksArgs(
+file_server = azure_nextgen.batchai.FileServer("fileServer",
+    data_disks=azure_nextgen.batchai.DataDisksArgs(
         disk_count=2,
         disk_size_in_gb=10,
         storage_account_type="Standard_LRS",
     ),
     file_server_name="demo_nfs",
     resource_group_name="demo_resource_group",
-    ssh_configuration=azure_nextgen.batchai.latest.SshConfigurationArgs(
-        user_account_settings=azure_nextgen.batchai.latest.UserAccountSettingsArgs(
+    ssh_configuration=azure_nextgen.batchai.SshConfigurationArgs(
+        user_account_settings=azure_nextgen.batchai.UserAccountSettingsArgs(
             admin_user_name="admin_user_name",
             admin_user_password="admin_user_password",
         ),
@@ -129,7 +129,7 @@ file_server = azure_nextgen.batchai.latest.FileServer("fileServer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const fileServer = new azure_nextgen.batchai.latest.FileServer("fileServer", {
+const fileServer = new azure_nextgen.batchai.FileServer("fileServer", {
     dataDisks: {
         diskCount: 2,
         diskSizeInGB: 10,
@@ -159,7 +159,7 @@ const fileServer = new azure_nextgen.batchai.latest.FileServer("fileServer", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FileServerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FileServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -167,11 +167,11 @@ const fileServer = new azure_nextgen.batchai.latest.FileServer("fileServer", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFileServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FileServerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FileServer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFileServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FileServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FileServer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FileServerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FileServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FileServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -192,7 +192,7 @@ const fileServer = new azure_nextgen.batchai.latest.FileServer("fileServer", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FileServerArgs</span>
+        <span class="property-type"><a href="#inputs">FileServerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -261,7 +261,7 @@ const fileServer = new azure_nextgen.batchai.latest.FileServer("fileServer", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FileServerArgs</span>
+        <span class="property-type"><a href="#inputs">FileServerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -300,7 +300,7 @@ const fileServer = new azure_nextgen.batchai.latest.FileServer("fileServer", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FileServerArgs</span>
+        <span class="property-type"><a href="#inputs">FileServerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -323,11 +323,11 @@ const fileServer = new azure_nextgen.batchai.latest.FileServer("fileServer", {
 
 ## FileServer Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The FileServer resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The FileServer resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2051,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:batchai/latest:FileServer demo_nfs /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/fileservers/fileservercedd134b 
+$ pulumi import azure-nextgen:batchai:FileServer demo_nfs /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/fileservers/fileservercedd134b 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.DatabaseAccount resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB database account.
-Latest API Version: 2020-09-01.
+API Version: 2021-01-15.
 
 {{% examples %}}
 ## Example Usage
@@ -27,23 +27,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccount = new AzureNextGen.DocumentDB.Latest.DatabaseAccount("databaseAccount", new AzureNextGen.DocumentDB.Latest.DatabaseAccountArgs
+        var databaseAccount = new AzureNextGen.DocumentDB.DatabaseAccount("databaseAccount", new AzureNextGen.DocumentDB.DatabaseAccountArgs
         {
             AccountName = "ddb1",
-            ApiProperties = new AzureNextGen.DocumentDB.Latest.Inputs.ApiPropertiesArgs
+            ApiProperties = new AzureNextGen.DocumentDB.Inputs.ApiPropertiesArgs
             {
                 ServerVersion = "3.2",
             },
-            BackupPolicy = 
+            BackupPolicy = new AzureNextGen.DocumentDB.Inputs.PeriodicModeBackupPolicyArgs
             {
-                { "periodicModeProperties", new AzureNextGen.DocumentDB.Latest.Inputs.PeriodicModePropertiesArgs
+                PeriodicModeProperties = new AzureNextGen.DocumentDB.Inputs.PeriodicModePropertiesArgs
                 {
                     BackupIntervalInMinutes = 240,
                     BackupRetentionIntervalInHours = 8,
-                } },
-                { "type", "Periodic" },
+                },
+                Type = "Periodic",
             },
-            ConsistencyPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.ConsistencyPolicyArgs
+            ConsistencyPolicy = new AzureNextGen.DocumentDB.Inputs.ConsistencyPolicyArgs
             {
                 DefaultConsistencyLevel = "BoundedStaleness",
                 MaxIntervalInSeconds = 10,
@@ -51,7 +51,7 @@ class MyStack : Stack
             },
             Cors = 
             {
-                new AzureNextGen.DocumentDB.Latest.Inputs.CorsPolicyArgs
+                new AzureNextGen.DocumentDB.Inputs.CorsPolicyArgs
                 {
                     AllowedOrigins = "https://test",
                 },
@@ -59,13 +59,21 @@ class MyStack : Stack
             DatabaseAccountOfferType = "Standard",
             EnableAnalyticalStorage = true,
             EnableFreeTier = false,
+            Identity = new AzureNextGen.DocumentDB.Inputs.ManagedServiceIdentityArgs
+            {
+                Type = "SystemAssigned,UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1",  },
+                },
+            },
             IpRules = 
             {
-                new AzureNextGen.DocumentDB.Latest.Inputs.IpAddressOrRangeArgs
+                new AzureNextGen.DocumentDB.Inputs.IpAddressOrRangeArgs
                 {
                     IpAddressOrRange = "23.43.230.120",
                 },
-                new AzureNextGen.DocumentDB.Latest.Inputs.IpAddressOrRangeArgs
+                new AzureNextGen.DocumentDB.Inputs.IpAddressOrRangeArgs
                 {
                     IpAddressOrRange = "110.12.240.0/12",
                 },
@@ -76,24 +84,29 @@ class MyStack : Stack
             Location = "westus",
             Locations = 
             {
-                new AzureNextGen.DocumentDB.Latest.Inputs.LocationArgs
+                new AzureNextGen.DocumentDB.Inputs.LocationArgs
                 {
                     FailoverPriority = 0,
                     IsZoneRedundant = false,
                     LocationName = "southcentralus",
                 },
-                new AzureNextGen.DocumentDB.Latest.Inputs.LocationArgs
+                new AzureNextGen.DocumentDB.Inputs.LocationArgs
                 {
                     FailoverPriority = 1,
                     IsZoneRedundant = false,
                     LocationName = "eastus",
                 },
             },
+            NetworkAclBypass = "AzureServices",
+            NetworkAclBypassResourceIds = 
+            {
+                "/subscriptions/subId/resourcegroups/rgName/providers/Microsoft.Synapse/workspaces/workspaceName",
+            },
             ResourceGroupName = "rg1",
             Tags = ,
             VirtualNetworkRules = 
             {
-                new AzureNextGen.DocumentDB.Latest.Inputs.VirtualNetworkRuleArgs
+                new AzureNextGen.DocumentDB.Inputs.VirtualNetworkRuleArgs
                 {
                     Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
                     IgnoreMissingVNetServiceEndpoint = false,
@@ -109,7 +122,94 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := documentdb.NewDatabaseAccount(ctx, "databaseAccount", &documentdb.DatabaseAccountArgs{
+			AccountName: pulumi.String("ddb1"),
+			ApiProperties: &documentdb.ApiPropertiesArgs{
+				ServerVersion: pulumi.String("3.2"),
+			},
+			BackupPolicy: &documentdb.PeriodicModeBackupPolicyArgs{
+				PeriodicModeProperties: &documentdb.PeriodicModePropertiesArgs{
+					BackupIntervalInMinutes:        pulumi.Int(240),
+					BackupRetentionIntervalInHours: pulumi.Int(8),
+				},
+				Type: pulumi.String("Periodic"),
+			},
+			ConsistencyPolicy: &documentdb.ConsistencyPolicyArgs{
+				DefaultConsistencyLevel: "BoundedStaleness",
+				MaxIntervalInSeconds:    pulumi.Int(10),
+				MaxStalenessPrefix:      pulumi.Float64(200),
+			},
+			Cors: documentdb.CorsPolicyArray{
+				&documentdb.CorsPolicyArgs{
+					AllowedOrigins: pulumi.String("https://test"),
+				},
+			},
+			DatabaseAccountOfferType: "Standard",
+			EnableAnalyticalStorage:  pulumi.Bool(true),
+			EnableFreeTier:           pulumi.Bool(false),
+			Identity: &documentdb.ManagedServiceIdentityArgs{
+				Type: "SystemAssigned,UserAssigned",
+				UserAssignedIdentities: pulumi.MapMap{
+					"/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": nil,
+				},
+			},
+			IpRules: documentdb.IpAddressOrRangeArray{
+				&documentdb.IpAddressOrRangeArgs{
+					IpAddressOrRange: pulumi.String("23.43.230.120"),
+				},
+				&documentdb.IpAddressOrRangeArgs{
+					IpAddressOrRange: pulumi.String("110.12.240.0/12"),
+				},
+			},
+			IsVirtualNetworkFilterEnabled: pulumi.Bool(true),
+			KeyVaultKeyUri:                pulumi.String("https://myKeyVault.vault.azure.net"),
+			Kind:                          pulumi.String("MongoDB"),
+			Location:                      pulumi.String("westus"),
+			Locations: documentdb.LocationArray{
+				&documentdb.LocationArgs{
+					FailoverPriority: pulumi.Int(0),
+					IsZoneRedundant:  pulumi.Bool(false),
+					LocationName:     pulumi.String("southcentralus"),
+				},
+				&documentdb.LocationArgs{
+					FailoverPriority: pulumi.Int(1),
+					IsZoneRedundant:  pulumi.Bool(false),
+					LocationName:     pulumi.String("eastus"),
+				},
+			},
+			NetworkAclBypass: "AzureServices",
+			NetworkAclBypassResourceIds: pulumi.StringArray{
+				pulumi.String("/subscriptions/subId/resourcegroups/rgName/providers/Microsoft.Synapse/workspaces/workspaceName"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Tags:              nil,
+			VirtualNetworkRules: documentdb.VirtualNetworkRuleArray{
+				&documentdb.VirtualNetworkRuleArgs{
+					Id:                               pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1"),
+					IgnoreMissingVNetServiceEndpoint: pulumi.Bool(false),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -118,34 +218,40 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount",
+database_account = azure_nextgen.documentdb.DatabaseAccount("databaseAccount",
     account_name="ddb1",
-    api_properties=azure_nextgen.documentdb.latest.ApiPropertiesArgs(
+    api_properties=azure_nextgen.documentdb.ApiPropertiesArgs(
         server_version="3.2",
     ),
-    backup_policy={
-        "periodicModeProperties": azure_nextgen.documentdb.latest.PeriodicModePropertiesArgs(
+    backup_policy=azure_nextgen.documentdb.PeriodicModeBackupPolicyArgs(
+        periodic_mode_properties=azure_nextgen.documentdb.PeriodicModePropertiesArgs(
             backup_interval_in_minutes=240,
             backup_retention_interval_in_hours=8,
         ),
-        "type": "Periodic",
-    },
-    consistency_policy=azure_nextgen.documentdb.latest.ConsistencyPolicyArgs(
+        type="Periodic",
+    ),
+    consistency_policy=azure_nextgen.documentdb.ConsistencyPolicyArgs(
         default_consistency_level="BoundedStaleness",
         max_interval_in_seconds=10,
         max_staleness_prefix=200,
     ),
-    cors=[azure_nextgen.documentdb.latest.CorsPolicyArgs(
+    cors=[azure_nextgen.documentdb.CorsPolicyArgs(
         allowed_origins="https://test",
     )],
     database_account_offer_type="Standard",
     enable_analytical_storage=True,
     enable_free_tier=False,
+    identity=azure_nextgen.documentdb.ManagedServiceIdentityArgs(
+        type="SystemAssigned,UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+        },
+    ),
     ip_rules=[
-        azure_nextgen.documentdb.latest.IpAddressOrRangeArgs(
+        azure_nextgen.documentdb.IpAddressOrRangeArgs(
             ip_address_or_range="23.43.230.120",
         ),
-        azure_nextgen.documentdb.latest.IpAddressOrRangeArgs(
+        azure_nextgen.documentdb.IpAddressOrRangeArgs(
             ip_address_or_range="110.12.240.0/12",
         ),
     ],
@@ -154,20 +260,22 @@ database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAcco
     kind="MongoDB",
     location="westus",
     locations=[
-        azure_nextgen.documentdb.latest.LocationArgs(
+        azure_nextgen.documentdb.LocationArgs(
             failover_priority=0,
             is_zone_redundant=False,
             location_name="southcentralus",
         ),
-        azure_nextgen.documentdb.latest.LocationArgs(
+        azure_nextgen.documentdb.LocationArgs(
             failover_priority=1,
             is_zone_redundant=False,
             location_name="eastus",
         ),
     ],
+    network_acl_bypass="AzureServices",
+    network_acl_bypass_resource_ids=["/subscriptions/subId/resourcegroups/rgName/providers/Microsoft.Synapse/workspaces/workspaceName"],
     resource_group_name="rg1",
     tags={},
-    virtual_network_rules=[azure_nextgen.documentdb.latest.VirtualNetworkRuleArgs(
+    virtual_network_rules=[azure_nextgen.documentdb.VirtualNetworkRuleArgs(
         id="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
         ignore_missing_v_net_service_endpoint=False,
     )])
@@ -182,7 +290,7 @@ database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAcco
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount", {
+const databaseAccount = new azure_nextgen.documentdb.DatabaseAccount("databaseAccount", {
     accountName: "ddb1",
     apiProperties: {
         serverVersion: "3.2",
@@ -205,6 +313,12 @@ const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("dat
     databaseAccountOfferType: "Standard",
     enableAnalyticalStorage: true,
     enableFreeTier: false,
+    identity: {
+        type: "SystemAssigned,UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+        },
+    },
     ipRules: [
         {
             ipAddressOrRange: "23.43.230.120",
@@ -229,6 +343,8 @@ const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("dat
             locationName: "eastus",
         },
     ],
+    networkAclBypass: "AzureServices",
+    networkAclBypassResourceIds: ["/subscriptions/subId/resourcegroups/rgName/providers/Microsoft.Synapse/workspaces/workspaceName"],
     resourceGroupName: "rg1",
     tags: {},
     virtualNetworkRules: [{
@@ -251,14 +367,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccount = new AzureNextGen.DocumentDB.Latest.DatabaseAccount("databaseAccount", new AzureNextGen.DocumentDB.Latest.DatabaseAccountArgs
+        var databaseAccount = new AzureNextGen.DocumentDB.DatabaseAccount("databaseAccount", new AzureNextGen.DocumentDB.DatabaseAccountArgs
         {
             AccountName = "ddb1",
             DatabaseAccountOfferType = "Standard",
             Location = "westus",
             Locations = 
             {
-                new AzureNextGen.DocumentDB.Latest.Inputs.LocationArgs
+                new AzureNextGen.DocumentDB.Inputs.LocationArgs
                 {
                     FailoverPriority = 0,
                     IsZoneRedundant = false,
@@ -281,7 +397,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -317,11 +433,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount",
+database_account = azure_nextgen.documentdb.DatabaseAccount("databaseAccount",
     account_name="ddb1",
     database_account_offer_type="Standard",
     location="westus",
-    locations=[azure_nextgen.documentdb.latest.LocationArgs(
+    locations=[azure_nextgen.documentdb.LocationArgs(
         failover_priority=0,
         is_zone_redundant=False,
         location_name="southcentralus",
@@ -338,7 +454,7 @@ database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAcco
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount", {
+const databaseAccount = new azure_nextgen.documentdb.DatabaseAccount("databaseAccount", {
     accountName: "ddb1",
     databaseAccountOfferType: "Standard",
     location: "westus",
@@ -362,19 +478,19 @@ const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("dat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DatabaseAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_properties</span><span class="p">:</span> <span class="nx">Optional[ApiPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">backup_policy</span><span class="p">:</span> <span class="nx">Optional[Union[ContinuousModeBackupPolicyArgs, PeriodicModeBackupPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[CapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">connector_offer</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectorOffer]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[ConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[CorsPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">database_account_offer_type</span><span class="p">:</span> <span class="nx">Optional[DatabaseAccountOfferType]</span> = None<span class="p">, </span><span class="nx">disable_key_based_metadata_write_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_analytical_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cassandra_connector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpAddressOrRangeArgs]]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseAccountKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[LocationArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_properties</span><span class="p">:</span> <span class="nx">Optional[ApiPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">backup_policy</span><span class="p">:</span> <span class="nx">Optional[Union[ContinuousModeBackupPolicyArgs, PeriodicModeBackupPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[CapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">connector_offer</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectorOffer]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[ConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[CorsPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">database_account_offer_type</span><span class="p">:</span> <span class="nx">Optional[DatabaseAccountOfferType]</span> = None<span class="p">, </span><span class="nx">disable_key_based_metadata_write_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_analytical_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cassandra_connector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpAddressOrRangeArgs]]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseAccountKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[LocationArgs]]</span> = None<span class="p">, </span><span class="nx">network_acl_bypass</span><span class="p">:</span> <span class="nx">Optional[NetworkAclBypass]</span> = None<span class="p">, </span><span class="nx">network_acl_bypass_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DatabaseAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseAccount</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseAccount</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DatabaseAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -395,7 +511,7 @@ const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("dat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DatabaseAccountArgs</span>
+        <span class="property-type"><a href="#inputs">DatabaseAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -464,7 +580,7 @@ const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("dat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DatabaseAccountArgs</span>
+        <span class="property-type"><a href="#inputs">DatabaseAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -503,7 +619,7 @@ const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("dat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DatabaseAccountArgs</span>
+        <span class="property-type"><a href="#inputs">DatabaseAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -526,11 +642,11 @@ const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("dat
 
 ## DatabaseAccount Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DatabaseAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DatabaseAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -683,6 +799,15 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Enables the account to write in multiple locations{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="iprules_csharp">
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
@@ -726,6 +851,24 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkaclbypass_csharp">
+<a href="#networkaclbypass_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclbypass">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Network<wbr>Acl<wbr>Bypass</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates what services are allowed to bypass firewall checks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkaclbypassresourceids_csharp">
+<a href="#networkaclbypassresourceids_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass<wbr>Resource<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -896,6 +1039,15 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Enables the account to write in multiple locations{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="iprules_go">
 <a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
@@ -939,6 +1091,24 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkaclbypass_go">
+<a href="#networkaclbypass_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclbypass">Network<wbr>Acl<wbr>Bypass</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates what services are allowed to bypass firewall checks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkaclbypassresourceids_go">
+<a href="#networkaclbypassresourceids_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass<wbr>Resource<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1109,6 +1279,15 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Enables the account to write in multiple locations{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="iprules_nodejs">
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
@@ -1152,6 +1331,24 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkaclbypass_nodejs">
+<a href="#networkaclbypass_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Bypass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclbypass">Network<wbr>Acl<wbr>Bypass</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates what services are allowed to bypass firewall checks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkaclbypassresourceids_nodejs">
+<a href="#networkaclbypassresourceids_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Bypass<wbr>Resource<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -1322,6 +1519,15 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Enables the account to write in multiple locations{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ip_rules_python">
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
@@ -1365,6 +1571,24 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_acl_bypass_python">
+<a href="#network_acl_bypass_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>bypass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclbypass">Network<wbr>Acl<wbr>Bypass</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates what services are allowed to bypass firewall checks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_acl_bypass_resource_ids_python">
+<a href="#network_acl_bypass_resource_ids_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>bypass_<wbr>resource_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -3569,6 +3793,410 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="managedserviceidentity">Managed<wbr>Service<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="managedserviceidentityresponseuserassignedidentities">Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="networkaclbypass">Network<wbr>Acl<wbr>Bypass</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>None</dt>
+    <dd>None</dd>
+    <dt>Azure<wbr>Services</dt>
+    <dd>AzureServices</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Network<wbr>Acl<wbr>Bypass<wbr>None</dt>
+    <dd>None</dd>
+    <dt>Network<wbr>Acl<wbr>Bypass<wbr>Azure<wbr>Services</dt>
+    <dd>AzureServices</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>None</dt>
+    <dd>None</dd>
+    <dt>Azure<wbr>Services</dt>
+    <dd>AzureServices</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>NONE</dt>
+    <dd>None</dd>
+    <dt>AZURE_SERVICES</dt>
+    <dd>AzureServices</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="periodicmodebackuppolicy">Periodic<wbr>Mode<wbr>Backup<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
@@ -3923,6 +4551,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group id of the private endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpoint_csharp">
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
@@ -3939,6 +4576,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the private endpoint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3974,6 +4620,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group id of the private endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpoint_go">
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
@@ -3990,6 +4645,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the private endpoint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4025,6 +4689,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group id of the private endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpoint_nodejs">
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
@@ -4041,6 +4714,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the private endpoint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4076,6 +4758,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Group id of the private endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="private_endpoint_python">
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
@@ -4092,6 +4783,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the private endpoint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4173,6 +4873,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -4195,6 +4904,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
@@ -4221,6 +4939,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -4245,6 +4972,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -4252,6 +4988,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="resourceidentitytype">Resource<wbr>Identity<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd>
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
+    <dt>System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned,UserAssigned</dd>
+    <dt>None</dt>
+    <dd>None</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Resource<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd>
+    <dt>Resource<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
+    <dt>Resource<wbr>Identity<wbr>Type_System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned,UserAssigned</dd>
+    <dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
+    <dd>None</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd>
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
+    <dt>System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned,UserAssigned</dd>
+    <dt>None</dt>
+    <dd>None</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SYSTEM_ASSIGNED</dt>
+    <dd>SystemAssigned</dd>
+    <dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned</dd>
+    <dt>SYSTEM_ASSIGNED_USER_ASSIGNED</dt>
+    <dd>SystemAssigned,UserAssigned</dd>
+    <dt>NONE</dt>
+    <dd>None</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4263,6 +5053,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>3.2</dd>
     <dt>Server<wbr>Version_3_6</dt>
     <dd>3.6</dd>
+    <dt>Server<wbr>Version_4_0</dt>
+    <dd>4.0</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4272,6 +5064,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>3.2</dd>
     <dt>Server<wbr>Version_3_6</dt>
     <dd>3.6</dd>
+    <dt>Server<wbr>Version_4_0</dt>
+    <dd>4.0</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4281,6 +5075,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>3.2</dd>
     <dt>Server<wbr>Version_3_6</dt>
     <dd>3.6</dd>
+    <dt>Server<wbr>Version_4_0</dt>
+    <dd>4.0</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4290,6 +5086,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>3.2</dd>
     <dt>SERVER_VERSION_3_6</dt>
     <dd>3.6</dd>
+    <dt>SERVER_VERSION_4_0</dt>
+    <dd>4.0</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4494,7 +5292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:DatabaseAccount ddb1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1 
+$ pulumi import azure-nextgen:documentdb:DatabaseAccount ddb1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1 
 ```
 
 

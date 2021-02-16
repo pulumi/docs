@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.digitaltwins.DigitalTwinsEndpoin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 DigitalTwinsInstance endpoint resource.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var digitalTwinsEndpoint = new AzureNextGen.DigitalTwins.Latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNextGen.DigitalTwins.Latest.DigitalTwinsEndpointArgs
+        var digitalTwinsEndpoint = new AzureNextGen.DigitalTwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNextGen.DigitalTwins.DigitalTwinsEndpointArgs
         {
             EndpointName = "myServiceBus",
-            Properties = 
+            Properties = new AzureNextGen.DigitalTwins.Inputs.ServiceBusArgs
             {
-                { "authenticationType", "KeyBased" },
-                { "endpointType", "ServiceBus" },
-                { "primaryConnectionString", "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc" },
-                { "secondaryConnectionString", "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc" },
+                AuthenticationType = "KeyBased",
+                EndpointType = "ServiceBus",
+                PrimaryConnectionString = "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+                SecondaryConnectionString = "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
             },
             ResourceGroupName = "resRg",
             ResourceName = "myDigitalTwinsService",
@@ -49,7 +49,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := digitaltwins.NewDigitalTwinsEndpoint(ctx, "digitalTwinsEndpoint", &digitaltwins.DigitalTwinsEndpointArgs{
+			EndpointName: pulumi.String("myServiceBus"),
+			Properties: &digitaltwins.ServiceBusArgs{
+				AuthenticationType:        pulumi.String("KeyBased"),
+				EndpointType:              pulumi.String("ServiceBus"),
+				PrimaryConnectionString:   pulumi.String("Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc"),
+				SecondaryConnectionString: pulumi.String("Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc"),
+			},
+			ResourceGroupName: pulumi.String("resRg"),
+			ResourceName:      pulumi.String("myDigitalTwinsService"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -58,14 +88,14 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-digital_twins_endpoint = azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint",
+digital_twins_endpoint = azure_nextgen.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint",
     endpoint_name="myServiceBus",
-    properties={
-        "authenticationType": "KeyBased",
-        "endpointType": "ServiceBus",
-        "primaryConnectionString": "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
-        "secondaryConnectionString": "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
-    },
+    properties=azure_nextgen.digitaltwins.ServiceBusArgs(
+        authentication_type="KeyBased",
+        endpoint_type="ServiceBus",
+        primary_connection_string="Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+        secondary_connection_string="Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+    ),
     resource_group_name="resRg",
     resource_name="myDigitalTwinsService")
 
@@ -79,7 +109,7 @@ digital_twins_endpoint = azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
+const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
     endpointName: "myServiceBus",
     properties: {
         authenticationType: "KeyBased",
@@ -105,15 +135,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var digitalTwinsEndpoint = new AzureNextGen.DigitalTwins.Latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNextGen.DigitalTwins.Latest.DigitalTwinsEndpointArgs
+        var digitalTwinsEndpoint = new AzureNextGen.DigitalTwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNextGen.DigitalTwins.DigitalTwinsEndpointArgs
         {
             EndpointName = "myServiceBus",
-            Properties = 
+            Properties = new AzureNextGen.DigitalTwins.Inputs.ServiceBusArgs
             {
-                { "authenticationType", "IdentityBased" },
-                { "endpointType", "ServiceBus" },
-                { "endpointUri", "sb://mysb.servicebus.windows.net/" },
-                { "entityPath", "mysbtopic" },
+                AuthenticationType = "IdentityBased",
+                EndpointType = "ServiceBus",
+                EndpointUri = "sb://mysb.servicebus.windows.net/",
+                EntityPath = "mysbtopic",
             },
             ResourceGroupName = "resRg",
             ResourceName = "myDigitalTwinsService",
@@ -127,7 +157,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := digitaltwins.NewDigitalTwinsEndpoint(ctx, "digitalTwinsEndpoint", &digitaltwins.DigitalTwinsEndpointArgs{
+			EndpointName: pulumi.String("myServiceBus"),
+			Properties: &digitaltwins.ServiceBusArgs{
+				AuthenticationType: pulumi.String("IdentityBased"),
+				EndpointType:       pulumi.String("ServiceBus"),
+				EndpointUri:        pulumi.String("sb://mysb.servicebus.windows.net/"),
+				EntityPath:         pulumi.String("mysbtopic"),
+			},
+			ResourceGroupName: pulumi.String("resRg"),
+			ResourceName:      pulumi.String("myDigitalTwinsService"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -136,14 +196,14 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-digital_twins_endpoint = azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint",
+digital_twins_endpoint = azure_nextgen.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint",
     endpoint_name="myServiceBus",
-    properties={
-        "authenticationType": "IdentityBased",
-        "endpointType": "ServiceBus",
-        "endpointUri": "sb://mysb.servicebus.windows.net/",
-        "entityPath": "mysbtopic",
-    },
+    properties=azure_nextgen.digitaltwins.ServiceBusArgs(
+        authentication_type="IdentityBased",
+        endpoint_type="ServiceBus",
+        endpoint_uri="sb://mysb.servicebus.windows.net/",
+        entity_path="mysbtopic",
+    ),
     resource_group_name="resRg",
     resource_name="myDigitalTwinsService")
 
@@ -157,7 +217,7 @@ digital_twins_endpoint = azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
+const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
     endpointName: "myServiceBus",
     properties: {
         authenticationType: "IdentityBased",
@@ -181,7 +241,7 @@ const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsE
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DigitalTwinsEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DigitalTwinsEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DigitalTwinsEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DigitalTwinsEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -189,11 +249,11 @@ const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsE
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDigitalTwinsEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DigitalTwinsEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DigitalTwinsEndpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDigitalTwinsEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DigitalTwinsEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DigitalTwinsEndpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DigitalTwinsEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DigitalTwinsEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DigitalTwinsEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DigitalTwinsEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -214,7 +274,7 @@ const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsE
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DigitalTwinsEndpointArgs</span>
+        <span class="property-type"><a href="#inputs">DigitalTwinsEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,7 +343,7 @@ const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsE
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DigitalTwinsEndpointArgs</span>
+        <span class="property-type"><a href="#inputs">DigitalTwinsEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -322,7 +382,7 @@ const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsE
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DigitalTwinsEndpointArgs</span>
+        <span class="property-type"><a href="#inputs">DigitalTwinsEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -345,11 +405,11 @@ const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsE
 
 ## DigitalTwinsEndpoint Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2525,7 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:digitaltwins/latest:DigitalTwinsEndpoint myServiceBus /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService/endpoints/myServiceBus 
+$ pulumi import azure-nextgen:digitaltwins:DigitalTwinsEndpoint myServiceBus /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService/endpoints/myServiceBus 
 ```
 
 

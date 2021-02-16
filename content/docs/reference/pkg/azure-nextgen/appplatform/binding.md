@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.appplatform.Binding resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Binding resource payload
-Latest API Version: 2020-07-01.
+API Version: 2020-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var binding = new AzureNextGen.AppPlatform.Latest.Binding("binding", new AzureNextGen.AppPlatform.Latest.BindingArgs
+        var binding = new AzureNextGen.AppPlatform.Binding("binding", new AzureNextGen.AppPlatform.BindingArgs
         {
             AppName = "myapp",
             BindingName = "mybinding",
-            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.BindingResourcePropertiesArgs
+            Properties = new AzureNextGen.AppPlatform.Inputs.BindingResourcePropertiesArgs
             {
                 BindingParameters = 
                 {
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,10 +95,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-binding = azure_nextgen.appplatform.latest.Binding("binding",
+binding = azure_nextgen.appplatform.Binding("binding",
     app_name="myapp",
     binding_name="mybinding",
-    properties=azure_nextgen.appplatform.latest.BindingResourcePropertiesArgs(
+    properties=azure_nextgen.appplatform.BindingResourcePropertiesArgs(
         binding_parameters={
             "apiType": "SQL",
             "databaseName": "db1",
@@ -119,7 +119,7 @@ binding = azure_nextgen.appplatform.latest.Binding("binding",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const binding = new azure_nextgen.appplatform.latest.Binding("binding", {
+const binding = new azure_nextgen.appplatform.Binding("binding", {
     appName: "myapp",
     bindingName: "mybinding",
     properties: {
@@ -146,7 +146,7 @@ const binding = new azure_nextgen.appplatform.latest.Binding("binding", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Binding</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BindingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Binding</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BindingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -154,11 +154,11 @@ const binding = new azure_nextgen.appplatform.latest.Binding("binding", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBinding</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BindingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Binding</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBinding</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BindingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Binding</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Binding</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BindingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Binding</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BindingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -179,7 +179,7 @@ const binding = new azure_nextgen.appplatform.latest.Binding("binding", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BindingArgs</span>
+        <span class="property-type"><a href="#inputs">BindingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -248,7 +248,7 @@ const binding = new azure_nextgen.appplatform.latest.Binding("binding", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BindingArgs</span>
+        <span class="property-type"><a href="#inputs">BindingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -287,7 +287,7 @@ const binding = new azure_nextgen.appplatform.latest.Binding("binding", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BindingArgs</span>
+        <span class="property-type"><a href="#inputs">BindingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -310,11 +310,11 @@ const binding = new azure_nextgen.appplatform.latest.Binding("binding", {
 
 ## Binding Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Binding resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Binding resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1124,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:appplatform/latest:Binding mybinding /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp/bindings/mybinding 
+$ pulumi import azure-nextgen:appplatform:Binding mybinding /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp/bindings/mybinding 
 ```
 
 

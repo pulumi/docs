@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.search.SharedPrivateLinkResource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sharedPrivateLinkResource = new AzureNextGen.Search.Latest.SharedPrivateLinkResource("sharedPrivateLinkResource", new AzureNextGen.Search.Latest.SharedPrivateLinkResourceArgs
+        var sharedPrivateLinkResource = new AzureNextGen.Search.SharedPrivateLinkResource("sharedPrivateLinkResource", new AzureNextGen.Search.SharedPrivateLinkResourceArgs
         {
-            Properties = new AzureNextGen.Search.Latest.Inputs.SharedPrivateLinkResourcePropertiesArgs
+            Properties = new AzureNextGen.Search.Inputs.SharedPrivateLinkResourcePropertiesArgs
             {
                 GroupId = "blob",
                 PrivateLinkResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search/latest"
+	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,8 +86,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-shared_private_link_resource = azure_nextgen.search.latest.SharedPrivateLinkResource("sharedPrivateLinkResource",
-    properties=azure_nextgen.search.latest.SharedPrivateLinkResourcePropertiesArgs(
+shared_private_link_resource = azure_nextgen.search.SharedPrivateLinkResource("sharedPrivateLinkResource",
+    properties=azure_nextgen.search.SharedPrivateLinkResourcePropertiesArgs(
         group_id="blob",
         private_link_resource_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
         request_message="please approve",
@@ -106,7 +106,7 @@ shared_private_link_resource = azure_nextgen.search.latest.SharedPrivateLinkReso
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sharedPrivateLinkResource = new azure_nextgen.search.latest.SharedPrivateLinkResource("sharedPrivateLinkResource", {
+const sharedPrivateLinkResource = new azure_nextgen.search.SharedPrivateLinkResource("sharedPrivateLinkResource", {
     properties: {
         groupId: "blob",
         privateLinkResourceId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
@@ -129,7 +129,7 @@ const sharedPrivateLinkResource = new azure_nextgen.search.latest.SharedPrivateL
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SharedPrivateLinkResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SharedPrivateLinkResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SharedPrivateLinkResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -137,11 +137,11 @@ const sharedPrivateLinkResource = new azure_nextgen.search.latest.SharedPrivateL
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSharedPrivateLinkResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SharedPrivateLinkResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SharedPrivateLinkResource</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSharedPrivateLinkResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SharedPrivateLinkResource</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SharedPrivateLinkResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SharedPrivateLinkResourceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SharedPrivateLinkResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -162,7 +162,7 @@ const sharedPrivateLinkResource = new azure_nextgen.search.latest.SharedPrivateL
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SharedPrivateLinkResourceArgs</span>
+        <span class="property-type"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -231,7 +231,7 @@ const sharedPrivateLinkResource = new azure_nextgen.search.latest.SharedPrivateL
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SharedPrivateLinkResourceArgs</span>
+        <span class="property-type"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -270,7 +270,7 @@ const sharedPrivateLinkResource = new azure_nextgen.search.latest.SharedPrivateL
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SharedPrivateLinkResourceArgs</span>
+        <span class="property-type"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -293,11 +293,11 @@ const sharedPrivateLinkResource = new azure_nextgen.search.latest.SharedPrivateL
 
 ## SharedPrivateLinkResource Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SharedPrivateLinkResource resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SharedPrivateLinkResource resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1223,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:search/latest:SharedPrivateLinkResource testResource /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Search/searchServices/mysearchservice/sharedPrivateLinkResources/testResource 
+$ pulumi import azure-nextgen:search:SharedPrivateLinkResource testResource /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Search/searchServices/mysearchservice/sharedPrivateLinkResources/testResource 
 ```
 
 

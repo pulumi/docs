@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.delegatednetwork.DelegatedSubnet
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of a orchestrator.
+API Version: 2020-08-08-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var delegatedSubnetServiceDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", new AzureNextGen.DelegatedNetwork.V20200808Preview.DelegatedSubnetServiceDetailsArgs
+        var delegatedSubnetServiceDetails = new AzureNextGen.DelegatedNetwork.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", new AzureNextGen.DelegatedNetwork.DelegatedSubnetServiceDetailsArgs
         {
-            ControllerDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.Inputs.ControllerDetailsArgs
+            ControllerDetails = new AzureNextGen.DelegatedNetwork.Inputs.ControllerDetailsArgs
             {
                 Id = "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
             },
             Location = "West US",
             ResourceGroupName = "TestRG",
             ResourceName = "delegated1",
-            SubnetDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.Inputs.SubnetDetailsArgs
+            SubnetDetails = new AzureNextGen.DelegatedNetwork.Inputs.SubnetDetailsArgs
             {
                 Id = "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
             },
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	delegatednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/delegatednetwork/v20200808preview"
+	delegatednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/delegatednetwork"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,14 +89,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-delegated_subnet_service_details = azure_nextgen.delegatednetwork.v20200808preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails",
-    controller_details=azure_nextgen.delegatednetwork.v20200808preview.ControllerDetailsArgs(
+delegated_subnet_service_details = azure_nextgen.delegatednetwork.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails",
+    controller_details=azure_nextgen.delegatednetwork.ControllerDetailsArgs(
         id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
     ),
     location="West US",
     resource_group_name="TestRG",
     resource_name="delegated1",
-    subnet_details=azure_nextgen.delegatednetwork.v20200808preview.SubnetDetailsArgs(
+    subnet_details=azure_nextgen.delegatednetwork.SubnetDetailsArgs(
         id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
     ))
 
@@ -109,7 +110,7 @@ delegated_subnet_service_details = azure_nextgen.delegatednetwork.v20200808previ
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const delegatedSubnetServiceDetails = new azure_nextgen.delegatednetwork.v20200808preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", {
+const delegatedSubnetServiceDetails = new azure_nextgen.delegatednetwork.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", {
     controllerDetails: {
         id: "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
     },
@@ -133,7 +134,7 @@ const delegatedSubnetServiceDetails = new azure_nextgen.delegatednetwork.v202008
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DelegatedSubnetServiceDetails</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DelegatedSubnetServiceDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DelegatedSubnetServiceDetails</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DelegatedSubnetServiceDetailsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -141,11 +142,11 @@ const delegatedSubnetServiceDetails = new azure_nextgen.delegatednetwork.v202008
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDelegatedSubnetServiceDetails</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DelegatedSubnetServiceDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DelegatedSubnetServiceDetails</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDelegatedSubnetServiceDetails</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DelegatedSubnetServiceDetailsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DelegatedSubnetServiceDetails</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DelegatedSubnetServiceDetails</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DelegatedSubnetServiceDetailsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DelegatedSubnetServiceDetails</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DelegatedSubnetServiceDetailsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -166,7 +167,7 @@ const delegatedSubnetServiceDetails = new azure_nextgen.delegatednetwork.v202008
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DelegatedSubnetServiceDetailsArgs</span>
+        <span class="property-type"><a href="#inputs">DelegatedSubnetServiceDetailsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -235,7 +236,7 @@ const delegatedSubnetServiceDetails = new azure_nextgen.delegatednetwork.v202008
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DelegatedSubnetServiceDetailsArgs</span>
+        <span class="property-type"><a href="#inputs">DelegatedSubnetServiceDetailsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,7 +275,7 @@ const delegatedSubnetServiceDetails = new azure_nextgen.delegatednetwork.v202008
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DelegatedSubnetServiceDetailsArgs</span>
+        <span class="property-type"><a href="#inputs">DelegatedSubnetServiceDetailsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -297,11 +298,11 @@ const delegatedSubnetServiceDetails = new azure_nextgen.delegatednetwork.v202008
 
 ## DelegatedSubnetServiceDetails Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DelegatedSubnetServiceDetails resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DelegatedSubnetServiceDetails resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1019,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:delegatednetwork/v20200808preview:DelegatedSubnetServiceDetails delegated1 /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/delegatedSubnets/delegated1 
+$ pulumi import azure-nextgen:delegatednetwork:DelegatedSubnetServiceDetails delegated1 /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/delegatedSubnets/delegated1 
 ```
 
 

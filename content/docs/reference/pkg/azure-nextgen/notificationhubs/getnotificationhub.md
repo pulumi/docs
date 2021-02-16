@@ -19,7 +19,7 @@ meta_desc: "Explore the GetNotificationHub function of the notificationhubs modu
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNotificationHub<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetNotificationHubArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetNotificationHubResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNotificationHub<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetNotificationHubArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetNotificationHubResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetNotificationHub function of the notificationhubs modu
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNotificationHub<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupNotificationHubArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupNotificationHubResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNotificationHub<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupNotificationHubArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupNotificationHubResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupNotificationHub` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetNotificationHub function of the notificationhubs modu
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetNotificationHub </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetNotificationHubResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetNotificationHubArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetNotificationHubResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetNotificationHubArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -726,9 +726,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -862,9 +859,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="apnscredentialresponse">Apns<wbr>Credential<wbr>Response</h4>
-
-
-
 
 
 
@@ -1184,9 +1178,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1323,9 +1314,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1423,9 +1411,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mpnscredentialresponse">Mpns<wbr>Credential<wbr>Response</h4>
-
-
-
 
 
 
@@ -1562,9 +1547,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sharedaccessauthorizationrulepropertiesresponse">Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1920,9 +1902,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2128,9 +2107,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="wnscredentialresponse">Wns<wbr>Credential<wbr>Response</h4>
-
-
-
 
 
 

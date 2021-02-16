@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automanage.ConfigurationProfileP
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the configuration profile preference.
+API Version: 2020-06-30-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationProfilePreference = new AzureNextGen.Automanage.V20200630Preview.ConfigurationProfilePreference("configurationProfilePreference", new AzureNextGen.Automanage.V20200630Preview.ConfigurationProfilePreferenceArgs
+        var configurationProfilePreference = new AzureNextGen.Automanage.ConfigurationProfilePreference("configurationProfilePreference", new AzureNextGen.Automanage.ConfigurationProfilePreferenceArgs
         {
             ConfigurationProfilePreferenceName = "defaultProfilePreference",
             Location = "East US",
-            Properties = new AzureNextGen.Automanage.V20200630Preview.Inputs.ConfigurationProfilePreferencePropertiesArgs
+            Properties = new AzureNextGen.Automanage.Inputs.ConfigurationProfilePreferencePropertiesArgs
             {
-                AntiMalware = new AzureNextGen.Automanage.V20200630Preview.Inputs.ConfigurationProfilePreferenceAntiMalwareArgs
+                AntiMalware = new AzureNextGen.Automanage.Inputs.ConfigurationProfilePreferenceAntiMalwareArgs
                 {
                     EnableRealTimeProtection = "True",
                 },
-                VmBackup = new AzureNextGen.Automanage.V20200630Preview.Inputs.ConfigurationProfilePreferenceVmBackupArgs
+                VmBackup = new AzureNextGen.Automanage.Inputs.ConfigurationProfilePreferenceVmBackupArgs
                 {
                     TimeZone = "Pacific Standard Time",
                 },
@@ -61,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	automanage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automanage/v20200630preview"
+	automanage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automanage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,14 +101,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_profile_preference = azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreference("configurationProfilePreference",
+configuration_profile_preference = azure_nextgen.automanage.ConfigurationProfilePreference("configurationProfilePreference",
     configuration_profile_preference_name="defaultProfilePreference",
     location="East US",
-    properties=azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreferencePropertiesArgs(
-        anti_malware=azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreferenceAntiMalwareArgs(
+    properties=azure_nextgen.automanage.ConfigurationProfilePreferencePropertiesArgs(
+        anti_malware=azure_nextgen.automanage.ConfigurationProfilePreferenceAntiMalwareArgs(
             enable_real_time_protection="True",
         ),
-        vm_backup=azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreferenceVmBackupArgs(
+        vm_backup=azure_nextgen.automanage.ConfigurationProfilePreferenceVmBackupArgs(
             time_zone="Pacific Standard Time",
         ),
     ),
@@ -126,7 +127,7 @@ configuration_profile_preference = azure_nextgen.automanage.v20200630preview.Con
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const configurationProfilePreference = new azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreference("configurationProfilePreference", {
+const configurationProfilePreference = new azure_nextgen.automanage.ConfigurationProfilePreference("configurationProfilePreference", {
     configurationProfilePreferenceName: "defaultProfilePreference",
     location: "East US",
     properties: {
@@ -155,7 +156,7 @@ const configurationProfilePreference = new azure_nextgen.automanage.v20200630pre
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ConfigurationProfilePreferenceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -163,11 +164,11 @@ const configurationProfilePreference = new azure_nextgen.automanage.v20200630pre
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigurationProfilePreference</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ConfigurationProfilePreferenceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigurationProfilePreference</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigurationProfilePreference</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigurationProfilePreference</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ConfigurationProfilePreferenceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -188,7 +189,7 @@ const configurationProfilePreference = new azure_nextgen.automanage.v20200630pre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConfigurationProfilePreferenceArgs</span>
+        <span class="property-type"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -257,7 +258,7 @@ const configurationProfilePreference = new azure_nextgen.automanage.v20200630pre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConfigurationProfilePreferenceArgs</span>
+        <span class="property-type"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -296,7 +297,7 @@ const configurationProfilePreference = new azure_nextgen.automanage.v20200630pre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConfigurationProfilePreferenceArgs</span>
+        <span class="property-type"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -319,11 +320,11 @@ const configurationProfilePreference = new azure_nextgen.automanage.v20200630pre
 
 ## ConfigurationProfilePreference Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ConfigurationProfilePreference resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ConfigurationProfilePreference resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1819,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automanage/v20200630preview:ConfigurationProfilePreference defaultProfilePreference /subscriptions/subscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.Automanage/configurationProfilePreferences/defaultProfilePreference 
+$ pulumi import azure-nextgen:automanage:ConfigurationProfilePreference defaultProfilePreference /subscriptions/subscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.Automanage/configurationProfilePreferences/defaultProfilePreference 
 ```
 
 

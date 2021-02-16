@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.timeseriesinsights.ReferenceData
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A reference data set provides metadata about the events in an environment. Metadata in the reference data set will be joined with events as they are read from event sources. The metadata that makes up the reference data set is uploaded or modified through the Time Series Insights data plane APIs.
-Latest API Version: 2020-05-15.
+API Version: 2020-05-15.
 
 {{% examples %}}
 ## Example Usage
@@ -27,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var referenceDataSet = new AzureNextGen.TimeSeriesInsights.Latest.ReferenceDataSet("referenceDataSet", new AzureNextGen.TimeSeriesInsights.Latest.ReferenceDataSetArgs
+        var referenceDataSet = new AzureNextGen.TimeSeriesInsights.ReferenceDataSet("referenceDataSet", new AzureNextGen.TimeSeriesInsights.ReferenceDataSetArgs
         {
             EnvironmentName = "env1",
             KeyProperties = 
             {
-                new AzureNextGen.TimeSeriesInsights.Latest.Inputs.ReferenceDataSetKeyPropertyArgs
+                new AzureNextGen.TimeSeriesInsights.Inputs.ReferenceDataSetKeyPropertyArgs
                 {
                     Name = "DeviceId1",
                     Type = "String",
                 },
-                new AzureNextGen.TimeSeriesInsights.Latest.Inputs.ReferenceDataSetKeyPropertyArgs
+                new AzureNextGen.TimeSeriesInsights.Inputs.ReferenceDataSetKeyPropertyArgs
                 {
                     Name = "DeviceFloor",
                     Type = "Double",
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	timeseriesinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/timeseriesinsights/latest"
+	timeseriesinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/timeseriesinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,14 +100,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-reference_data_set = azure_nextgen.timeseriesinsights.latest.ReferenceDataSet("referenceDataSet",
+reference_data_set = azure_nextgen.timeseriesinsights.ReferenceDataSet("referenceDataSet",
     environment_name="env1",
     key_properties=[
-        azure_nextgen.timeseriesinsights.latest.ReferenceDataSetKeyPropertyArgs(
+        azure_nextgen.timeseriesinsights.ReferenceDataSetKeyPropertyArgs(
             name="DeviceId1",
             type="String",
         ),
-        azure_nextgen.timeseriesinsights.latest.ReferenceDataSetKeyPropertyArgs(
+        azure_nextgen.timeseriesinsights.ReferenceDataSetKeyPropertyArgs(
             name="DeviceFloor",
             type="Double",
         ),
@@ -126,7 +126,7 @@ reference_data_set = azure_nextgen.timeseriesinsights.latest.ReferenceDataSet("r
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDataSet("referenceDataSet", {
+const referenceDataSet = new azure_nextgen.timeseriesinsights.ReferenceDataSet("referenceDataSet", {
     environmentName: "env1",
     keyProperties: [
         {
@@ -155,7 +155,7 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReferenceDataSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReferenceDataSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReferenceDataSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReferenceDataSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -163,11 +163,11 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReferenceDataSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReferenceDataSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReferenceDataSet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReferenceDataSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReferenceDataSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReferenceDataSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReferenceDataSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReferenceDataSetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReferenceDataSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReferenceDataSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -188,7 +188,7 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReferenceDataSetArgs</span>
+        <span class="property-type"><a href="#inputs">ReferenceDataSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -257,7 +257,7 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReferenceDataSetArgs</span>
+        <span class="property-type"><a href="#inputs">ReferenceDataSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -296,7 +296,7 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReferenceDataSetArgs</span>
+        <span class="property-type"><a href="#inputs">ReferenceDataSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -319,11 +319,11 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
 
 ## ReferenceDataSet Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1117,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:timeseriesinsights/latest:ReferenceDataSet rds1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/referenceDataSets/rds1 
+$ pulumi import azure-nextgen:timeseriesinsights:ReferenceDataSet rds1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/referenceDataSets/rds1 
 ```
 
 

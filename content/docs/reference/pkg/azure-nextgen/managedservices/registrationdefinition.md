@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.managedservices.RegistrationDefi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Registration definition.
-Latest API Version: 2019-09-01.
+API Version: 2019-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,26 +27,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registrationDefinition = new AzureNextGen.ManagedServices.Latest.RegistrationDefinition("registrationDefinition", new AzureNextGen.ManagedServices.Latest.RegistrationDefinitionArgs
+        var registrationDefinition = new AzureNextGen.ManagedServices.RegistrationDefinition("registrationDefinition", new AzureNextGen.ManagedServices.RegistrationDefinitionArgs
         {
-            Plan = new AzureNextGen.ManagedServices.Latest.Inputs.PlanArgs
+            Plan = new AzureNextGen.ManagedServices.Inputs.PlanArgs
             {
                 Name = "addesai-plan",
                 Product = "test",
                 Publisher = "marketplace-test",
                 Version = "1.0.0",
             },
-            Properties = new AzureNextGen.ManagedServices.Latest.Inputs.RegistrationDefinitionPropertiesArgs
+            Properties = new AzureNextGen.ManagedServices.Inputs.RegistrationDefinitionPropertiesArgs
             {
                 Authorizations = 
                 {
-                    new AzureNextGen.ManagedServices.Latest.Inputs.AuthorizationArgs
+                    new AzureNextGen.ManagedServices.Inputs.AuthorizationArgs
                     {
                         PrincipalId = "f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
                         PrincipalIdDisplayName = "Support User",
                         RoleDefinitionId = "acdd72a7-3385-48ef-bd42-f606fba81ae7",
                     },
-                    new AzureNextGen.ManagedServices.Latest.Inputs.AuthorizationArgs
+                    new AzureNextGen.ManagedServices.Inputs.AuthorizationArgs
                     {
                         DelegatedRoleDefinitionIds = 
                         {
@@ -78,7 +78,7 @@ class MyStack : Stack
 package main
 
 import (
-	managedservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedservices/latest"
+	managedservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -131,21 +131,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registration_definition = azure_nextgen.managedservices.latest.RegistrationDefinition("registrationDefinition",
-    plan=azure_nextgen.managedservices.latest.PlanArgs(
+registration_definition = azure_nextgen.managedservices.RegistrationDefinition("registrationDefinition",
+    plan=azure_nextgen.managedservices.PlanArgs(
         name="addesai-plan",
         product="test",
         publisher="marketplace-test",
         version="1.0.0",
     ),
-    properties=azure_nextgen.managedservices.latest.RegistrationDefinitionPropertiesArgs(
+    properties=azure_nextgen.managedservices.RegistrationDefinitionPropertiesArgs(
         authorizations=[
-            azure_nextgen.managedservices.latest.AuthorizationArgs(
+            azure_nextgen.managedservices.AuthorizationArgs(
                 principal_id="f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
                 principal_id_display_name="Support User",
                 role_definition_id="acdd72a7-3385-48ef-bd42-f606fba81ae7",
             ),
-            azure_nextgen.managedservices.latest.AuthorizationArgs(
+            azure_nextgen.managedservices.AuthorizationArgs(
                 delegated_role_definition_ids=["b24988ac-6180-42a0-ab88-20f7382dd24c"],
                 principal_id="f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
                 principal_id_display_name="User Access Administrator",
@@ -169,7 +169,7 @@ registration_definition = azure_nextgen.managedservices.latest.RegistrationDefin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const registrationDefinition = new azure_nextgen.managedservices.latest.RegistrationDefinition("registrationDefinition", {
+const registrationDefinition = new azure_nextgen.managedservices.RegistrationDefinition("registrationDefinition", {
     plan: {
         name: "addesai-plan",
         product: "test",
@@ -210,7 +210,7 @@ const registrationDefinition = new azure_nextgen.managedservices.latest.Registra
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RegistrationDefinitionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistrationDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -218,11 +218,11 @@ const registrationDefinition = new azure_nextgen.managedservices.latest.Registra
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistrationDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RegistrationDefinitionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegistrationDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistrationDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegistrationDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegistrationDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RegistrationDefinitionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegistrationDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -243,7 +243,7 @@ const registrationDefinition = new azure_nextgen.managedservices.latest.Registra
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RegistrationDefinitionArgs</span>
+        <span class="property-type"><a href="#inputs">RegistrationDefinitionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -312,7 +312,7 @@ const registrationDefinition = new azure_nextgen.managedservices.latest.Registra
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RegistrationDefinitionArgs</span>
+        <span class="property-type"><a href="#inputs">RegistrationDefinitionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -351,7 +351,7 @@ const registrationDefinition = new azure_nextgen.managedservices.latest.Registra
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RegistrationDefinitionArgs</span>
+        <span class="property-type"><a href="#inputs">RegistrationDefinitionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -374,11 +374,11 @@ const registrationDefinition = new azure_nextgen.managedservices.latest.Registra
 
 ## RegistrationDefinition Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RegistrationDefinition resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RegistrationDefinition resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1796,7 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:managedservices/latest:RegistrationDefinition 26c128c2-fefa-4340-9bb1-6e081c90ada2 /subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2 
+$ pulumi import azure-nextgen:managedservices:RegistrationDefinition 26c128c2-fefa-4340-9bb1-6e081c90ada2 /subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2 
 ```
 
 

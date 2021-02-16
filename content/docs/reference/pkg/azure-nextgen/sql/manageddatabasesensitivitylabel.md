@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.ManagedDatabaseSensitivityLa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A sensitivity label.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabaseSensitivityLabel = new AzureNextGen.Sql.V20200801Preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", new AzureNextGen.Sql.V20200801Preview.ManagedDatabaseSensitivityLabelArgs
+        var managedDatabaseSensitivityLabel = new AzureNextGen.Sql.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", new AzureNextGen.Sql.ManagedDatabaseSensitivityLabelArgs
         {
             ColumnName = "myColumn",
             DatabaseName = "myDatabase",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,7 +93,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database_sensitivity_label = azure_nextgen.sql.v20200801preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel",
+managed_database_sensitivity_label = azure_nextgen.sql.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel",
     column_name="myColumn",
     database_name="myDatabase",
     information_type="PhoneNumber",
@@ -116,7 +117,7 @@ managed_database_sensitivity_label = azure_nextgen.sql.v20200801preview.ManagedD
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20200801preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", {
+const managedDatabaseSensitivityLabel = new azure_nextgen.sql.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", {
     columnName: "myColumn",
     databaseName: "myDatabase",
     informationType: "PhoneNumber",
@@ -143,7 +144,7 @@ const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20200801preview.M
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedDatabaseSensitivityLabel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagedDatabaseSensitivityLabelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedDatabaseSensitivityLabel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedDatabaseSensitivityLabelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -151,11 +152,11 @@ const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20200801preview.M
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedDatabaseSensitivityLabel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagedDatabaseSensitivityLabelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedDatabaseSensitivityLabel</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedDatabaseSensitivityLabel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedDatabaseSensitivityLabelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedDatabaseSensitivityLabel</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedDatabaseSensitivityLabel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagedDatabaseSensitivityLabelArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedDatabaseSensitivityLabel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagedDatabaseSensitivityLabelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -176,7 +177,7 @@ const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20200801preview.M
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedDatabaseSensitivityLabelArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedDatabaseSensitivityLabelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -245,7 +246,7 @@ const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20200801preview.M
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedDatabaseSensitivityLabelArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedDatabaseSensitivityLabelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -284,7 +285,7 @@ const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20200801preview.M
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedDatabaseSensitivityLabelArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedDatabaseSensitivityLabelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -307,11 +308,11 @@ const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20200801preview.M
 
 ## ManagedDatabaseSensitivityLabel Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ManagedDatabaseSensitivityLabel resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ManagedDatabaseSensitivityLabel resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1059,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:ManagedDatabaseSensitivityLabel current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myRG/providers/Microsoft.Sql/managedInstances/myManagedInstanceName/databases/myDatabase/schemas/dbo/tables/myTable/columns/myColumn/sensitivityLabels/current 
+$ pulumi import azure-nextgen:sql:ManagedDatabaseSensitivityLabel current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myRG/providers/Microsoft.Sql/managedInstances/myManagedInstanceName/databases/myDatabase/schemas/dbo/tables/myTable/columns/myColumn/sensitivityLabels/current 
 ```
 
 

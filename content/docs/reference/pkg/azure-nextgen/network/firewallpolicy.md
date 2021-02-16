@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.FirewallPolicy resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 FirewallPolicy Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicy = new AzureNextGen.Network.Latest.FirewallPolicy("firewallPolicy", new AzureNextGen.Network.Latest.FirewallPolicyArgs
+        var firewallPolicy = new AzureNextGen.Network.FirewallPolicy("firewallPolicy", new AzureNextGen.Network.FirewallPolicyArgs
         {
-            DnsSettings = new AzureNextGen.Network.Latest.Inputs.DnsSettingsArgs
+            DnsSettings = new AzureNextGen.Network.Inputs.DnsSettingsArgs
             {
                 EnableProxy = true,
                 RequireProxyForNetworkRules = false,
@@ -39,13 +39,13 @@ class MyStack : Stack
                 },
             },
             FirewallPolicyName = "firewallPolicy",
-            IntrusionDetection = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyIntrusionDetectionArgs
+            IntrusionDetection = new AzureNextGen.Network.Inputs.FirewallPolicyIntrusionDetectionArgs
             {
-                Configuration = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyIntrusionDetectionConfigurationArgs
+                Configuration = new AzureNextGen.Network.Inputs.FirewallPolicyIntrusionDetectionConfigurationArgs
                 {
                     BypassTrafficSettings = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs
+                        new AzureNextGen.Network.Inputs.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs
                         {
                             Description = "Rule 1",
                             DestinationAddresses = 
@@ -66,7 +66,7 @@ class MyStack : Stack
                     },
                     SignatureOverrides = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs
+                        new AzureNextGen.Network.Inputs.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs
                         {
                             Id = "2525004",
                             Mode = "Deny",
@@ -77,7 +77,7 @@ class MyStack : Stack
             },
             Location = "West US",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.FirewallPolicySkuArgs
+            Sku = new AzureNextGen.Network.Inputs.FirewallPolicySkuArgs
             {
                 Tier = "Premium",
             },
@@ -86,7 +86,7 @@ class MyStack : Stack
                 { "key1", "value1" },
             },
             ThreatIntelMode = "Alert",
-            ThreatIntelWhitelist = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyThreatIntelWhitelistArgs
+            ThreatIntelWhitelist = new AzureNextGen.Network.Inputs.FirewallPolicyThreatIntelWhitelistArgs
             {
                 Fqdns = 
                 {
@@ -97,9 +97,9 @@ class MyStack : Stack
                     "20.3.4.5",
                 },
             },
-            TransportSecurity = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyTransportSecurityArgs
+            TransportSecurity = new AzureNextGen.Network.Inputs.FirewallPolicyTransportSecurityArgs
             {
-                CertificateAuthority = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyCertificateAuthorityArgs
+                CertificateAuthority = new AzureNextGen.Network.Inputs.FirewallPolicyCertificateAuthorityArgs
                 {
                     KeyVaultSecretId = "https://kv/secret",
                     Name = "clientcert",
@@ -120,7 +120,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -203,16 +203,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy = azure_nextgen.network.latest.FirewallPolicy("firewallPolicy",
-    dns_settings=azure_nextgen.network.latest.DnsSettingsArgs(
+firewall_policy = azure_nextgen.network.FirewallPolicy("firewallPolicy",
+    dns_settings=azure_nextgen.network.DnsSettingsArgs(
         enable_proxy=True,
         require_proxy_for_network_rules=False,
         servers=["30.3.4.5"],
     ),
     firewall_policy_name="firewallPolicy",
-    intrusion_detection=azure_nextgen.network.latest.FirewallPolicyIntrusionDetectionArgs(
-        configuration=azure_nextgen.network.latest.FirewallPolicyIntrusionDetectionConfigurationArgs(
-            bypass_traffic_settings=[azure_nextgen.network.latest.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs(
+    intrusion_detection=azure_nextgen.network.FirewallPolicyIntrusionDetectionArgs(
+        configuration=azure_nextgen.network.FirewallPolicyIntrusionDetectionConfigurationArgs(
+            bypass_traffic_settings=[azure_nextgen.network.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs(
                 description="Rule 1",
                 destination_addresses=["5.6.7.8"],
                 destination_ports=["*"],
@@ -220,7 +220,7 @@ firewall_policy = azure_nextgen.network.latest.FirewallPolicy("firewallPolicy",
                 protocol="TCP",
                 source_addresses=["1.2.3.4"],
             )],
-            signature_overrides=[azure_nextgen.network.latest.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs(
+            signature_overrides=[azure_nextgen.network.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs(
                 id="2525004",
                 mode="Deny",
             )],
@@ -229,19 +229,19 @@ firewall_policy = azure_nextgen.network.latest.FirewallPolicy("firewallPolicy",
     ),
     location="West US",
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.FirewallPolicySkuArgs(
+    sku=azure_nextgen.network.FirewallPolicySkuArgs(
         tier="Premium",
     ),
     tags={
         "key1": "value1",
     },
     threat_intel_mode="Alert",
-    threat_intel_whitelist=azure_nextgen.network.latest.FirewallPolicyThreatIntelWhitelistArgs(
+    threat_intel_whitelist=azure_nextgen.network.FirewallPolicyThreatIntelWhitelistArgs(
         fqdns=["*.microsoft.com"],
         ip_addresses=["20.3.4.5"],
     ),
-    transport_security=azure_nextgen.network.latest.FirewallPolicyTransportSecurityArgs(
-        certificate_authority=azure_nextgen.network.latest.FirewallPolicyCertificateAuthorityArgs(
+    transport_security=azure_nextgen.network.FirewallPolicyTransportSecurityArgs(
+        certificate_authority=azure_nextgen.network.FirewallPolicyCertificateAuthorityArgs(
             key_vault_secret_id="https://kv/secret",
             name="clientcert",
         ),
@@ -257,7 +257,7 @@ firewall_policy = azure_nextgen.network.latest.FirewallPolicy("firewallPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallPolicy = new azure_nextgen.network.latest.FirewallPolicy("firewallPolicy", {
+const firewallPolicy = new azure_nextgen.network.FirewallPolicy("firewallPolicy", {
     dnsSettings: {
         enableProxy: true,
         requireProxyForNetworkRules: false,
@@ -314,7 +314,7 @@ const firewallPolicy = new azure_nextgen.network.latest.FirewallPolicy("firewall
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FirewallPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -322,11 +322,11 @@ const firewallPolicy = new azure_nextgen.network.latest.FirewallPolicy("firewall
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FirewallPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FirewallPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -347,7 +347,7 @@ const firewallPolicy = new azure_nextgen.network.latest.FirewallPolicy("firewall
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FirewallPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">FirewallPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -416,7 +416,7 @@ const firewallPolicy = new azure_nextgen.network.latest.FirewallPolicy("firewall
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FirewallPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">FirewallPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -455,7 +455,7 @@ const firewallPolicy = new azure_nextgen.network.latest.FirewallPolicy("firewall
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FirewallPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">FirewallPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -478,11 +478,11 @@ const firewallPolicy = new azure_nextgen.network.latest.FirewallPolicy("firewall
 
 ## FirewallPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4164,7 +4164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:FirewallPolicy firewallPolicy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy 
+$ pulumi import azure-nextgen:network:FirewallPolicy firewallPolicy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy 
 ```
 
 

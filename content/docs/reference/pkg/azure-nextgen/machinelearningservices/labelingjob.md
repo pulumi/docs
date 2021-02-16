@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.Labeling
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Machine Learning labeling job object wrapped into ARM resource envelope.
+API Version: 2020-09-01-preview.
 
 
 
@@ -20,7 +21,7 @@ Machine Learning labeling job object wrapped into ARM resource envelope.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LabelingJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">LabelingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LabelingJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LabelingJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -28,11 +29,11 @@ Machine Learning labeling job object wrapped into ARM resource envelope.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLabelingJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">LabelingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LabelingJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLabelingJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LabelingJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LabelingJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LabelingJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">LabelingJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LabelingJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LabelingJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -53,7 +54,7 @@ Machine Learning labeling job object wrapped into ARM resource envelope.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LabelingJobArgs</span>
+        <span class="property-type"><a href="#inputs">LabelingJobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -122,7 +123,7 @@ Machine Learning labeling job object wrapped into ARM resource envelope.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LabelingJobArgs</span>
+        <span class="property-type"><a href="#inputs">LabelingJobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -161,7 +162,7 @@ Machine Learning labeling job object wrapped into ARM resource envelope.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LabelingJobArgs</span>
+        <span class="property-type"><a href="#inputs">LabelingJobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -184,11 +185,11 @@ Machine Learning labeling job object wrapped into ARM resource envelope.
 
 ## LabelingJob Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LabelingJob resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The LabelingJob resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3378,7 +3379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
@@ -3387,7 +3388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
@@ -3396,7 +3397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
@@ -3414,7 +3415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
@@ -3423,7 +3424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3438,7 +3439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
@@ -3447,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
@@ -3456,7 +3457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
@@ -3474,7 +3475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
@@ -3483,7 +3484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3498,7 +3499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
@@ -3507,7 +3508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
@@ -3516,7 +3517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
@@ -3534,7 +3535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
@@ -3543,7 +3544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3558,7 +3559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
@@ -3567,7 +3568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
@@ -3576,7 +3577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
@@ -3594,7 +3595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
@@ -3603,7 +3604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

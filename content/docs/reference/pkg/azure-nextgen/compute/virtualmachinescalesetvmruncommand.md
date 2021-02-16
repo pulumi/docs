@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.VirtualMachineScaleSetVM
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a Virtual Machine run command.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSetVMRunCommand = new AzureNextGen.Compute.Latest.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetVMRunCommandArgs
+        var virtualMachineScaleSetVMRunCommand = new AzureNextGen.Compute.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand", new AzureNextGen.Compute.VirtualMachineScaleSetVMRunCommandArgs
         {
             AsyncExecution = false,
             InstanceId = "0",
             Location = "West US",
             Parameters = 
             {
-                new AzureNextGen.Compute.Latest.Inputs.RunCommandInputParameterArgs
+                new AzureNextGen.Compute.Inputs.RunCommandInputParameterArgs
                 {
                     Name = "param1",
                     Value = "value1",
                 },
-                new AzureNextGen.Compute.Latest.Inputs.RunCommandInputParameterArgs
+                new AzureNextGen.Compute.Inputs.RunCommandInputParameterArgs
                 {
                     Name = "param2",
                     Value = "value2",
@@ -49,7 +49,7 @@ class MyStack : Stack
             RunAsPassword = "<runAsPassword>",
             RunAsUser = "user1",
             RunCommandName = "myRunCommand",
-            Source = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineRunCommandScriptSourceArgs
+            Source = new AzureNextGen.Compute.Inputs.VirtualMachineRunCommandScriptSourceArgs
             {
                 Script = "Write-Host Hello World!",
             },
@@ -70,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -117,16 +117,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set_vm_run_command = azure_nextgen.compute.latest.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand",
+virtual_machine_scale_set_vm_run_command = azure_nextgen.compute.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand",
     async_execution=False,
     instance_id="0",
     location="West US",
     parameters=[
-        azure_nextgen.compute.latest.RunCommandInputParameterArgs(
+        azure_nextgen.compute.RunCommandInputParameterArgs(
             name="param1",
             value="value1",
         ),
-        azure_nextgen.compute.latest.RunCommandInputParameterArgs(
+        azure_nextgen.compute.RunCommandInputParameterArgs(
             name="param2",
             value="value2",
         ),
@@ -135,7 +135,7 @@ virtual_machine_scale_set_vm_run_command = azure_nextgen.compute.latest.VirtualM
     run_as_password="<runAsPassword>",
     run_as_user="user1",
     run_command_name="myRunCommand",
-    source=azure_nextgen.compute.latest.VirtualMachineRunCommandScriptSourceArgs(
+    source=azure_nextgen.compute.VirtualMachineRunCommandScriptSourceArgs(
         script="Write-Host Hello World!",
     ),
     timeout_in_seconds=3600,
@@ -151,7 +151,7 @@ virtual_machine_scale_set_vm_run_command = azure_nextgen.compute.latest.VirtualM
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachineScaleSetVMRunCommand = new azure_nextgen.compute.latest.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand", {
+const virtualMachineScaleSetVMRunCommand = new azure_nextgen.compute.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand", {
     asyncExecution: false,
     instanceId: "0",
     location: "West US",
@@ -188,7 +188,7 @@ const virtualMachineScaleSetVMRunCommand = new azure_nextgen.compute.latest.Virt
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineScaleSetVMRunCommand</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualMachineScaleSetVMRunCommandArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineScaleSetVMRunCommand</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineScaleSetVMRunCommandArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -196,11 +196,11 @@ const virtualMachineScaleSetVMRunCommand = new azure_nextgen.compute.latest.Virt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineScaleSetVMRunCommand</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualMachineScaleSetVMRunCommandArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineScaleSetVMRunCommand</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineScaleSetVMRunCommand</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineScaleSetVMRunCommandArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineScaleSetVMRunCommand</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineScaleSetVMRunCommand</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualMachineScaleSetVMRunCommandArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineScaleSetVMRunCommand</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineScaleSetVMRunCommandArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -221,7 +221,7 @@ const virtualMachineScaleSetVMRunCommand = new azure_nextgen.compute.latest.Virt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineScaleSetVMRunCommandArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineScaleSetVMRunCommandArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -290,7 +290,7 @@ const virtualMachineScaleSetVMRunCommand = new azure_nextgen.compute.latest.Virt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineScaleSetVMRunCommandArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineScaleSetVMRunCommandArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -329,7 +329,7 @@ const virtualMachineScaleSetVMRunCommand = new azure_nextgen.compute.latest.Virt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineScaleSetVMRunCommandArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineScaleSetVMRunCommandArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -352,11 +352,11 @@ const virtualMachineScaleSetVMRunCommand = new azure_nextgen.compute.latest.Virt
 
 ## VirtualMachineScaleSetVMRunCommand Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualMachineScaleSetVMRunCommand resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualMachineScaleSetVMRunCommand resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2134,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:VirtualMachineScaleSetVMRunCommand myRunCommand /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myvmScaleSet/virtualMachines/0/runCommands/myRunCommand 
+$ pulumi import azure-nextgen:compute:VirtualMachineScaleSetVMRunCommand myRunCommand /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myvmScaleSet/virtualMachines/0/runCommands/myRunCommand 
 ```
 
 

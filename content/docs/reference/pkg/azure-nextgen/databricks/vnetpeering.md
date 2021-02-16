@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databricks.VNetPeering resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Peerings in a VirtualNetwork resource
-Latest API Version: 2018-04-01.
+API Version: 2018-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vNetPeering = new AzureNextGen.Databricks.Latest.VNetPeering("vNetPeering", new AzureNextGen.Databricks.Latest.VNetPeeringArgs
+        var vNetPeering = new AzureNextGen.Databricks.VNetPeering("vNetPeering", new AzureNextGen.Databricks.VNetPeeringArgs
         {
             AllowForwardedTraffic = false,
             AllowGatewayTransit = false,
             AllowVirtualNetworkAccess = true,
             PeeringName = "vNetPeeringTest",
-            RemoteVirtualNetwork = new AzureNextGen.Databricks.Latest.Inputs.VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs
+            RemoteVirtualNetwork = new AzureNextGen.Databricks.Inputs.VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs
             {
                 Id = "/subscriptions/0140911e-1040-48da-8bc9-b99fb3dd88a6/resourceGroups/subramantest/providers/Microsoft.Network/virtualNetworks/subramanvnet",
             },
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks/latest"
+	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,12 +90,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-v_net_peering = azure_nextgen.databricks.latest.VNetPeering("vNetPeering",
+v_net_peering = azure_nextgen.databricks.VNetPeering("vNetPeering",
     allow_forwarded_traffic=False,
     allow_gateway_transit=False,
     allow_virtual_network_access=True,
     peering_name="vNetPeeringTest",
-    remote_virtual_network=azure_nextgen.databricks.latest.VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs(
+    remote_virtual_network=azure_nextgen.databricks.VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs(
         id="/subscriptions/0140911e-1040-48da-8bc9-b99fb3dd88a6/resourceGroups/subramantest/providers/Microsoft.Network/virtualNetworks/subramanvnet",
     ),
     resource_group_name="rg",
@@ -112,7 +112,7 @@ v_net_peering = azure_nextgen.databricks.latest.VNetPeering("vNetPeering",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vNetPeering = new azure_nextgen.databricks.latest.VNetPeering("vNetPeering", {
+const vNetPeering = new azure_nextgen.databricks.VNetPeering("vNetPeering", {
     allowForwardedTraffic: false,
     allowGatewayTransit: false,
     allowVirtualNetworkAccess: true,
@@ -137,7 +137,7 @@ const vNetPeering = new azure_nextgen.databricks.latest.VNetPeering("vNetPeering
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VNetPeering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VNetPeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VNetPeering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VNetPeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -145,11 +145,11 @@ const vNetPeering = new azure_nextgen.databricks.latest.VNetPeering("vNetPeering
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVNetPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VNetPeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VNetPeering</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVNetPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VNetPeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VNetPeering</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VNetPeering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VNetPeeringArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VNetPeering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VNetPeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,7 +170,7 @@ const vNetPeering = new azure_nextgen.databricks.latest.VNetPeering("vNetPeering
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VNetPeeringArgs</span>
+        <span class="property-type"><a href="#inputs">VNetPeeringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -239,7 +239,7 @@ const vNetPeering = new azure_nextgen.databricks.latest.VNetPeering("vNetPeering
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VNetPeeringArgs</span>
+        <span class="property-type"><a href="#inputs">VNetPeeringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -278,7 +278,7 @@ const vNetPeering = new azure_nextgen.databricks.latest.VNetPeering("vNetPeering
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VNetPeeringArgs</span>
+        <span class="property-type"><a href="#inputs">VNetPeeringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,11 +301,11 @@ const vNetPeering = new azure_nextgen.databricks.latest.VNetPeering("vNetPeering
 
 ## VNetPeering Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VNetPeering resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VNetPeering resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1327,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databricks/latest:vNetPeering vNetPeeringTest /subscriptions/0140911e-1040-48da-8bc9-b99fb3dd88a6/resourceGroups/subramantest/providers/Microsoft.Databricks/workspaces/adbworkspace/virtualNetworkPeerings/vNetPeeringTest 
+$ pulumi import azure-nextgen:databricks:vNetPeering vNetPeeringTest /subscriptions/0140911e-1040-48da-8bc9-b99fb3dd88a6/resourceGroups/subramantest/providers/Microsoft.Databricks/workspaces/adbworkspace/virtualNetworkPeerings/vNetPeeringTest 
 ```
 
 

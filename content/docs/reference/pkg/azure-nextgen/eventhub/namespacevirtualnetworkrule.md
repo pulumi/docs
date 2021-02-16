@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.NamespaceVirtualNetwork
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single item in a List or Get VirtualNetworkRules operation
+API Version: 2018-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceVirtualNetworkRule = new AzureNextGen.EventHub.V20180101Preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", new AzureNextGen.EventHub.V20180101Preview.NamespaceVirtualNetworkRuleArgs
+        var namespaceVirtualNetworkRule = new AzureNextGen.EventHub.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", new AzureNextGen.EventHub.NamespaceVirtualNetworkRuleArgs
         {
             NamespaceName = "sdk-Namespace-6019",
             ResourceGroupName = "ResourceGroup",
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/v20180101preview"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_virtual_network_rule = azure_nextgen.eventhub.v20180101preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule",
+namespace_virtual_network_rule = azure_nextgen.eventhub.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule",
     namespace_name="sdk-Namespace-6019",
     resource_group_name="ResourceGroup",
     virtual_network_rule_name="sdk-VirtualNetworkRules-9191",
@@ -92,7 +93,7 @@ namespace_virtual_network_rule = azure_nextgen.eventhub.v20180101preview.Namespa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespaceVirtualNetworkRule = new azure_nextgen.eventhub.v20180101preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", {
+const namespaceVirtualNetworkRule = new azure_nextgen.eventhub.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", {
     namespaceName: "sdk-Namespace-6019",
     resourceGroupName: "ResourceGroup",
     virtualNetworkRuleName: "sdk-VirtualNetworkRules-9191",
@@ -111,7 +112,7 @@ const namespaceVirtualNetworkRule = new azure_nextgen.eventhub.v20180101preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NamespaceVirtualNetworkRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">NamespaceVirtualNetworkRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NamespaceVirtualNetworkRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NamespaceVirtualNetworkRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -119,11 +120,11 @@ const namespaceVirtualNetworkRule = new azure_nextgen.eventhub.v20180101preview.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNamespaceVirtualNetworkRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">NamespaceVirtualNetworkRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NamespaceVirtualNetworkRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNamespaceVirtualNetworkRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NamespaceVirtualNetworkRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NamespaceVirtualNetworkRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NamespaceVirtualNetworkRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">NamespaceVirtualNetworkRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NamespaceVirtualNetworkRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NamespaceVirtualNetworkRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -144,7 +145,7 @@ const namespaceVirtualNetworkRule = new azure_nextgen.eventhub.v20180101preview.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NamespaceVirtualNetworkRuleArgs</span>
+        <span class="property-type"><a href="#inputs">NamespaceVirtualNetworkRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -213,7 +214,7 @@ const namespaceVirtualNetworkRule = new azure_nextgen.eventhub.v20180101preview.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NamespaceVirtualNetworkRuleArgs</span>
+        <span class="property-type"><a href="#inputs">NamespaceVirtualNetworkRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -252,7 +253,7 @@ const namespaceVirtualNetworkRule = new azure_nextgen.eventhub.v20180101preview.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NamespaceVirtualNetworkRuleArgs</span>
+        <span class="property-type"><a href="#inputs">NamespaceVirtualNetworkRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -275,11 +276,11 @@ const namespaceVirtualNetworkRule = new azure_nextgen.eventhub.v20180101preview.
 
 ## NamespaceVirtualNetworkRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NamespaceVirtualNetworkRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NamespaceVirtualNetworkRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -601,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/v20180101preview:NamespaceVirtualNetworkRule sdk-VirtualNetworkRules-9191 /subscriptions/Subscription/resourceGroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-6019/virtualnetworkrules/sdk-VirtualNetworkRules-9191 
+$ pulumi import azure-nextgen:eventhub:NamespaceVirtualNetworkRule sdk-VirtualNetworkRules-9191 /subscriptions/Subscription/resourceGroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-6019/virtualnetworkrules/sdk-VirtualNetworkRules-9191 
 ```
 
 

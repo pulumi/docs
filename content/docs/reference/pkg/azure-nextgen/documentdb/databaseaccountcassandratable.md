@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.DatabaseAccountCassan
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB Cassandra table.
-Latest API Version: 2016-03-31.
+API Version: 2016-03-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountCassandraTable = new AzureNextGen.DocumentDB.Latest.DatabaseAccountCassandraTable("databaseAccountCassandraTable", new AzureNextGen.DocumentDB.Latest.DatabaseAccountCassandraTableArgs
+        var databaseAccountCassandraTable = new AzureNextGen.DocumentDB.DatabaseAccountCassandraTable("databaseAccountCassandraTable", new AzureNextGen.DocumentDB.DatabaseAccountCassandraTableArgs
         {
             AccountName = "ddb1",
             KeyspaceName = "tableName",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.CassandraTableResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Inputs.CassandraTableResourceArgs
             {
                 DefaultTtl = 100,
                 Id = "tableName",
-                Schema = new AzureNextGen.DocumentDB.Latest.Inputs.CassandraSchemaArgs
+                Schema = new AzureNextGen.DocumentDB.Inputs.CassandraSchemaArgs
                 {
                     ClusterKeys = 
                     {
-                        new AzureNextGen.DocumentDB.Latest.Inputs.ClusterKeyArgs
+                        new AzureNextGen.DocumentDB.Inputs.ClusterKeyArgs
                         {
                             Name = "columnA",
                             OrderBy = "Asc",
@@ -48,7 +48,7 @@ class MyStack : Stack
                     },
                     Columns = 
                     {
-                        new AzureNextGen.DocumentDB.Latest.Inputs.ColumnArgs
+                        new AzureNextGen.DocumentDB.Inputs.ColumnArgs
                         {
                             Name = "columnA",
                             Type = "Ascii",
@@ -56,7 +56,7 @@ class MyStack : Stack
                     },
                     PartitionKeys = 
                     {
-                        new AzureNextGen.DocumentDB.Latest.Inputs.CassandraPartitionKeyArgs
+                        new AzureNextGen.DocumentDB.Inputs.CassandraPartitionKeyArgs
                         {
                             Name = "columnA",
                         },
@@ -80,7 +80,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -133,23 +133,23 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_cassandra_table = azure_nextgen.documentdb.latest.DatabaseAccountCassandraTable("databaseAccountCassandraTable",
+database_account_cassandra_table = azure_nextgen.documentdb.DatabaseAccountCassandraTable("databaseAccountCassandraTable",
     account_name="ddb1",
     keyspace_name="tableName",
     options={},
-    resource=azure_nextgen.documentdb.latest.CassandraTableResourceArgs(
+    resource=azure_nextgen.documentdb.CassandraTableResourceArgs(
         default_ttl=100,
         id="tableName",
-        schema=azure_nextgen.documentdb.latest.CassandraSchemaArgs(
-            cluster_keys=[azure_nextgen.documentdb.latest.ClusterKeyArgs(
+        schema=azure_nextgen.documentdb.CassandraSchemaArgs(
+            cluster_keys=[azure_nextgen.documentdb.ClusterKeyArgs(
                 name="columnA",
                 order_by="Asc",
             )],
-            columns=[azure_nextgen.documentdb.latest.ColumnArgs(
+            columns=[azure_nextgen.documentdb.ColumnArgs(
                 name="columnA",
                 type="Ascii",
             )],
-            partition_keys=[azure_nextgen.documentdb.latest.CassandraPartitionKeyArgs(
+            partition_keys=[azure_nextgen.documentdb.CassandraPartitionKeyArgs(
                 name="columnA",
             )],
         ),
@@ -167,7 +167,7 @@ database_account_cassandra_table = azure_nextgen.documentdb.latest.DatabaseAccou
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const databaseAccountCassandraTable = new azure_nextgen.documentdb.latest.DatabaseAccountCassandraTable("databaseAccountCassandraTable", {
+const databaseAccountCassandraTable = new azure_nextgen.documentdb.DatabaseAccountCassandraTable("databaseAccountCassandraTable", {
     accountName: "ddb1",
     keyspaceName: "tableName",
     options: {},
@@ -204,7 +204,7 @@ const databaseAccountCassandraTable = new azure_nextgen.documentdb.latest.Databa
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseAccountCassandraTable</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DatabaseAccountCassandraTableArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseAccountCassandraTable</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseAccountCassandraTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -212,11 +212,11 @@ const databaseAccountCassandraTable = new azure_nextgen.documentdb.latest.Databa
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseAccountCassandraTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DatabaseAccountCassandraTableArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseAccountCassandraTable</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseAccountCassandraTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseAccountCassandraTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseAccountCassandraTable</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseAccountCassandraTable</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DatabaseAccountCassandraTableArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseAccountCassandraTable</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabaseAccountCassandraTableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -237,7 +237,7 @@ const databaseAccountCassandraTable = new azure_nextgen.documentdb.latest.Databa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DatabaseAccountCassandraTableArgs</span>
+        <span class="property-type"><a href="#inputs">DatabaseAccountCassandraTableArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -306,7 +306,7 @@ const databaseAccountCassandraTable = new azure_nextgen.documentdb.latest.Databa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DatabaseAccountCassandraTableArgs</span>
+        <span class="property-type"><a href="#inputs">DatabaseAccountCassandraTableArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -345,7 +345,7 @@ const databaseAccountCassandraTable = new azure_nextgen.documentdb.latest.Databa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DatabaseAccountCassandraTableArgs</span>
+        <span class="property-type"><a href="#inputs">DatabaseAccountCassandraTableArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -368,11 +368,11 @@ const databaseAccountCassandraTable = new azure_nextgen.documentdb.latest.Databa
 
 ## DatabaseAccountCassandraTable Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DatabaseAccountCassandraTable resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DatabaseAccountCassandraTable resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1832,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:DatabaseAccountCassandraTable tableName tableName 
+$ pulumi import azure-nextgen:documentdb:DatabaseAccountCassandraTable tableName tableName 
 ```
 
 

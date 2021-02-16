@@ -19,7 +19,7 @@ meta_desc: "Explore the GetProtectionContainer function of the recoveryservices 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProtectionContainer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProtectionContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetProtectionContainerResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProtectionContainer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProtectionContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProtectionContainerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetProtectionContainer function of the recoveryservices 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProtectionContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProtectionContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupProtectionContainerResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProtectionContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProtectionContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupProtectionContainerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupProtectionContainer` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetProtectionContainer function of the recoveryservices 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProtectionContainer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetProtectionContainerResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetProtectionContainerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetProtectionContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProtectionContainerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -510,9 +510,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -973,9 +970,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1256,9 +1250,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1536,9 +1527,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuresqlagworkloadcontainerprotectioncontainerresponse">Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container<wbr>Response</h4>
-
-
-
 
 
 
@@ -1894,9 +1882,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2066,9 +2051,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azurestoragecontainerresponse">Azure<wbr>Storage<wbr>Container<wbr>Response</h4>
-
-
-
 
 
 
@@ -2385,9 +2367,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azurevmappcontainerprotectioncontainerresponse">Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container<wbr>Response</h4>
-
-
-
 
 
 
@@ -2743,9 +2722,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2879,9 +2855,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azureworkloadcontainerresponse">Azure<wbr>Workload<wbr>Container<wbr>Response</h4>
-
-
-
 
 
 
@@ -3237,9 +3210,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3412,9 +3382,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3476,9 +3443,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="distributednodesinforesponse">Distributed<wbr>Nodes<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -3619,9 +3583,6 @@ Failed | Succeeded{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="dpmcontainerresponse">Dpm<wbr>Container<wbr>Response</h4>
-
-
-
 
 
 
@@ -4085,9 +4046,6 @@ Failed | Succeeded{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4224,9 +4182,6 @@ Failed | Succeeded{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4360,9 +4315,6 @@ Failed | Succeeded{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="genericcontainerresponse">Generic<wbr>Container<wbr>Response</h4>
-
-
-
 
 
 
@@ -4607,9 +4559,6 @@ Failed | Succeeded{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="iaasvmcontainerresponse">Iaa<wbr>SVMContainer<wbr>Response</h4>
-
-
-
 
 
 
@@ -4893,9 +4842,6 @@ Failed | Succeeded{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5040,9 +4986,6 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5176,9 +5119,6 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="mabcontainerhealthdetailsresponse">MABContainer<wbr>Health<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -5351,9 +5291,6 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="mabcontainerextendedinforesponse">Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -5562,9 +5499,6 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="mabcontainerresponse">Mab<wbr>Container<wbr>Response</h4>
-
-
-
 
 
 
@@ -5989,9 +5923,6 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="workloadinquirydetailsresponse">Workload<wbr>Inquiry<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 

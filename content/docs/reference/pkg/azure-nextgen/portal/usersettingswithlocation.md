@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.portal.UserSettingsWithLocation 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Response to get user settings
-Latest API Version: 2018-10-01.
+API Version: 2018-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var userSettingsWithLocation = new AzureNextGen.Portal.Latest.UserSettingsWithLocation("userSettingsWithLocation", new AzureNextGen.Portal.Latest.UserSettingsWithLocationArgs
+        var userSettingsWithLocation = new AzureNextGen.Portal.UserSettingsWithLocation("userSettingsWithLocation", new AzureNextGen.Portal.UserSettingsWithLocationArgs
         {
             Location = "eastus",
-            Properties = new AzureNextGen.Portal.Latest.Inputs.UserPropertiesArgs
+            Properties = new AzureNextGen.Portal.Inputs.UserPropertiesArgs
             {
                 PreferredLocation = "eastus",
                 PreferredOsType = "Linux",
                 PreferredShellType = "bash",
-                StorageProfile = new AzureNextGen.Portal.Latest.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.Portal.Inputs.StorageProfileArgs
                 {
                     DiskSizeInGB = 5,
                     FileShareName = "string",
                     StorageAccountResourceId = "string",
                 },
-                TerminalSettings = new AzureNextGen.Portal.Latest.Inputs.TerminalSettingsArgs
+                TerminalSettings = new AzureNextGen.Portal.Inputs.TerminalSettingsArgs
                 {
                     FontSize = "Medium",
                     FontStyle = "Monospace",
@@ -63,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal/latest"
+	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -104,18 +104,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-user_settings_with_location = azure_nextgen.portal.latest.UserSettingsWithLocation("userSettingsWithLocation",
+user_settings_with_location = azure_nextgen.portal.UserSettingsWithLocation("userSettingsWithLocation",
     location="eastus",
-    properties=azure_nextgen.portal.latest.UserPropertiesArgs(
+    properties=azure_nextgen.portal.UserPropertiesArgs(
         preferred_location="eastus",
         preferred_os_type="Linux",
         preferred_shell_type="bash",
-        storage_profile=azure_nextgen.portal.latest.StorageProfileArgs(
+        storage_profile=azure_nextgen.portal.StorageProfileArgs(
             disk_size_in_gb=5,
             file_share_name="string",
             storage_account_resource_id="string",
         ),
-        terminal_settings=azure_nextgen.portal.latest.TerminalSettingsArgs(
+        terminal_settings=azure_nextgen.portal.TerminalSettingsArgs(
             font_size="Medium",
             font_style="Monospace",
         ),
@@ -132,7 +132,7 @@ user_settings_with_location = azure_nextgen.portal.latest.UserSettingsWithLocati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const userSettingsWithLocation = new azure_nextgen.portal.latest.UserSettingsWithLocation("userSettingsWithLocation", {
+const userSettingsWithLocation = new azure_nextgen.portal.UserSettingsWithLocation("userSettingsWithLocation", {
     location: "eastus",
     properties: {
         preferredLocation: "eastus",
@@ -163,7 +163,7 @@ const userSettingsWithLocation = new azure_nextgen.portal.latest.UserSettingsWit
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserSettingsWithLocation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">UserSettingsWithLocationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserSettingsWithLocation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserSettingsWithLocationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -171,11 +171,11 @@ const userSettingsWithLocation = new azure_nextgen.portal.latest.UserSettingsWit
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserSettingsWithLocation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">UserSettingsWithLocationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserSettingsWithLocation</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserSettingsWithLocation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserSettingsWithLocationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserSettingsWithLocation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserSettingsWithLocation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">UserSettingsWithLocationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserSettingsWithLocation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserSettingsWithLocationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -196,7 +196,7 @@ const userSettingsWithLocation = new azure_nextgen.portal.latest.UserSettingsWit
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">UserSettingsWithLocationArgs</span>
+        <span class="property-type"><a href="#inputs">UserSettingsWithLocationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -265,7 +265,7 @@ const userSettingsWithLocation = new azure_nextgen.portal.latest.UserSettingsWit
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">UserSettingsWithLocationArgs</span>
+        <span class="property-type"><a href="#inputs">UserSettingsWithLocationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -304,7 +304,7 @@ const userSettingsWithLocation = new azure_nextgen.portal.latest.UserSettingsWit
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">UserSettingsWithLocationArgs</span>
+        <span class="property-type"><a href="#inputs">UserSettingsWithLocationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -327,11 +327,11 @@ const userSettingsWithLocation = new azure_nextgen.portal.latest.UserSettingsWit
 
 ## UserSettingsWithLocation Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The UserSettingsWithLocation resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The UserSettingsWithLocation resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1609,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:portal/latest:UserSettingsWithLocation myresource1 /providers/Microsoft.Portal/locations/{location}/userSettings/{userSettingsName} 
+$ pulumi import azure-nextgen:portal:UserSettingsWithLocation myresource1 /providers/Microsoft.Portal/locations/{location}/userSettings/{userSettingsName} 
 ```
 
 

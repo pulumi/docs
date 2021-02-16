@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.Service resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The service resource.
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,22 +27,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.ServiceFabric.Latest.Service("service", new AzureNextGen.ServiceFabric.Latest.ServiceArgs
+        var service = new AzureNextGen.ServiceFabric.Service("service", new AzureNextGen.ServiceFabric.ServiceArgs
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
             CorrelationScheme = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceCorrelationDescriptionArgs
+                new AzureNextGen.ServiceFabric.Inputs.ServiceCorrelationDescriptionArgs
                 {
                     Scheme = "Affinity",
                     ServiceName = "fabric:/app1/app1~svc1",
                 },
             },
             DefaultMoveCost = "Medium",
-            PartitionDescription = 
+            PartitionDescription = new AzureNextGen.ServiceFabric.Inputs.SingletonPartitionSchemeDescriptionArgs
             {
-                { "partitionScheme", "Singleton" },
+                PartitionScheme = "Singleton",
             },
             PlacementConstraints = "NodeType==frontend",
             ResourceGroupName = "resRg",
@@ -50,7 +50,7 @@ class MyStack : Stack
             ServiceKind = "Stateless",
             ServiceLoadMetrics = 
             {
-                new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceLoadMetricDescriptionArgs
+                new AzureNextGen.ServiceFabric.Inputs.ServiceLoadMetricDescriptionArgs
                 {
                     Name = "metric1",
                     Weight = "Low",
@@ -70,7 +70,54 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := servicefabric.NewService(ctx, "service", &servicefabric.ServiceArgs{
+			ApplicationName: pulumi.String("myApp"),
+			ClusterName:     pulumi.String("myCluster"),
+			CorrelationScheme: servicefabric.ServiceCorrelationDescriptionArray{
+				&servicefabric.ServiceCorrelationDescriptionArgs{
+					Scheme:      pulumi.String("Affinity"),
+					ServiceName: pulumi.String("fabric:/app1/app1~svc1"),
+				},
+			},
+			DefaultMoveCost: pulumi.String("Medium"),
+			PartitionDescription: &servicefabric.SingletonPartitionSchemeDescriptionArgs{
+				PartitionScheme: pulumi.String("Singleton"),
+			},
+			PlacementConstraints: pulumi.String("NodeType==frontend"),
+			ResourceGroupName:    pulumi.String("resRg"),
+			ServiceDnsName:       pulumi.String("my.service.dns"),
+			ServiceKind:          pulumi.String("Stateless"),
+			ServiceLoadMetrics: servicefabric.ServiceLoadMetricDescriptionArray{
+				&servicefabric.ServiceLoadMetricDescriptionArgs{
+					Name:   pulumi.String("metric1"),
+					Weight: pulumi.String("Low"),
+				},
+			},
+			ServiceName:                  pulumi.String("myService"),
+			ServicePackageActivationMode: pulumi.String("SharedProcess"),
+			ServicePlacementPolicies:     servicefabric.ServicePlacementPolicyDescriptionArray{},
+			ServiceTypeName:              pulumi.String("myServiceType"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,22 +126,22 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.servicefabric.latest.Service("service",
+service = azure_nextgen.servicefabric.Service("service",
     application_name="myApp",
     cluster_name="myCluster",
-    correlation_scheme=[azure_nextgen.servicefabric.latest.ServiceCorrelationDescriptionArgs(
+    correlation_scheme=[azure_nextgen.servicefabric.ServiceCorrelationDescriptionArgs(
         scheme="Affinity",
         service_name="fabric:/app1/app1~svc1",
     )],
     default_move_cost="Medium",
-    partition_description={
-        "partitionScheme": "Singleton",
-    },
+    partition_description=azure_nextgen.servicefabric.SingletonPartitionSchemeDescriptionArgs(
+        partition_scheme="Singleton",
+    ),
     placement_constraints="NodeType==frontend",
     resource_group_name="resRg",
     service_dns_name="my.service.dns",
     service_kind="Stateless",
-    service_load_metrics=[azure_nextgen.servicefabric.latest.ServiceLoadMetricDescriptionArgs(
+    service_load_metrics=[azure_nextgen.servicefabric.ServiceLoadMetricDescriptionArgs(
         name="metric1",
         weight="Low",
     )],
@@ -113,7 +160,7 @@ service = azure_nextgen.servicefabric.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.servicefabric.latest.Service("service", {
+const service = new azure_nextgen.servicefabric.Service("service", {
     applicationName: "myApp",
     clusterName: "myCluster",
     correlationScheme: [{
@@ -152,13 +199,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.ServiceFabric.Latest.Service("service", new AzureNextGen.ServiceFabric.Latest.ServiceArgs
+        var service = new AzureNextGen.ServiceFabric.Service("service", new AzureNextGen.ServiceFabric.ServiceArgs
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
-            PartitionDescription = 
+            PartitionDescription = new AzureNextGen.ServiceFabric.Inputs.SingletonPartitionSchemeDescriptionArgs
             {
-                { "partitionScheme", "Singleton" },
+                PartitionScheme = "Singleton",
             },
             ResourceGroupName = "resRg",
             ServiceKind = "Stateless",
@@ -174,7 +221,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := servicefabric.NewService(ctx, "service", &servicefabric.ServiceArgs{
+			ApplicationName: pulumi.String("myApp"),
+			ClusterName:     pulumi.String("myCluster"),
+			PartitionDescription: &servicefabric.SingletonPartitionSchemeDescriptionArgs{
+				PartitionScheme: pulumi.String("Singleton"),
+			},
+			ResourceGroupName: pulumi.String("resRg"),
+			ServiceKind:       pulumi.String("Stateless"),
+			ServiceName:       pulumi.String("myService"),
+			ServiceTypeName:   pulumi.String("myServiceType"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -183,12 +260,12 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.servicefabric.latest.Service("service",
+service = azure_nextgen.servicefabric.Service("service",
     application_name="myApp",
     cluster_name="myCluster",
-    partition_description={
-        "partitionScheme": "Singleton",
-    },
+    partition_description=azure_nextgen.servicefabric.SingletonPartitionSchemeDescriptionArgs(
+        partition_scheme="Singleton",
+    ),
     resource_group_name="resRg",
     service_kind="Stateless",
     service_name="myService",
@@ -204,7 +281,7 @@ service = azure_nextgen.servicefabric.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.servicefabric.latest.Service("service", {
+const service = new azure_nextgen.servicefabric.Service("service", {
     applicationName: "myApp",
     clusterName: "myCluster",
     partitionDescription: {
@@ -228,7 +305,7 @@ const service = new azure_nextgen.servicefabric.latest.Service("service", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -236,11 +313,11 @@ const service = new azure_nextgen.servicefabric.latest.Service("service", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -261,7 +338,7 @@ const service = new azure_nextgen.servicefabric.latest.Service("service", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServiceArgs</span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -330,7 +407,7 @@ const service = new azure_nextgen.servicefabric.latest.Service("service", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServiceArgs</span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -369,7 +446,7 @@ const service = new azure_nextgen.servicefabric.latest.Service("service", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServiceArgs</span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -392,11 +469,11 @@ const service = new azure_nextgen.servicefabric.latest.Service("service", {
 
 ## Service Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Service resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Service resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2822,7 +2899,7 @@ should be split between the partition ‘count’
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabric/latest:Service myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp/services/myService 
+$ pulumi import azure-nextgen:servicefabric:Service myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp/services/myService 
 ```
 
 

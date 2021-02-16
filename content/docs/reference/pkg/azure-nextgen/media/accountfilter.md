@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.AccountFilter resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Account Filter.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var accountFilter = new AzureNextGen.Media.Latest.AccountFilter("accountFilter", new AzureNextGen.Media.Latest.AccountFilterArgs
+        var accountFilter = new AzureNextGen.Media.AccountFilter("accountFilter", new AzureNextGen.Media.AccountFilterArgs
         {
             AccountName = "contosomedia",
             FilterName = "newAccountFilter",
-            FirstQuality = new AzureNextGen.Media.Latest.Inputs.FirstQualityArgs
+            FirstQuality = new AzureNextGen.Media.Inputs.FirstQualityArgs
             {
                 Bitrate = 128000,
             },
-            PresentationTimeRange = new AzureNextGen.Media.Latest.Inputs.PresentationTimeRangeArgs
+            PresentationTimeRange = new AzureNextGen.Media.Inputs.PresentationTimeRangeArgs
             {
                 EndTimestamp = 170000000,
                 ForceEndTimestamp = false,
@@ -47,23 +47,23 @@ class MyStack : Stack
             ResourceGroupName = "contoso",
             Tracks = 
             {
-                new AzureNextGen.Media.Latest.Inputs.FilterTrackSelectionArgs
+                new AzureNextGen.Media.Inputs.FilterTrackSelectionArgs
                 {
                     TrackSelections = 
                     {
-                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "Equal",
                             Property = "Type",
                             Value = "Audio",
                         },
-                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "NotEqual",
                             Property = "Language",
                             Value = "en",
                         },
-                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "NotEqual",
                             Property = "FourCC",
@@ -71,17 +71,17 @@ class MyStack : Stack
                         },
                     },
                 },
-                new AzureNextGen.Media.Latest.Inputs.FilterTrackSelectionArgs
+                new AzureNextGen.Media.Inputs.FilterTrackSelectionArgs
                 {
                     TrackSelections = 
                     {
-                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "Equal",
                             Property = "Type",
                             Value = "Video",
                         },
-                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "Equal",
                             Property = "Bitrate",
@@ -105,7 +105,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -179,13 +179,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account_filter = azure_nextgen.media.latest.AccountFilter("accountFilter",
+account_filter = azure_nextgen.media.AccountFilter("accountFilter",
     account_name="contosomedia",
     filter_name="newAccountFilter",
-    first_quality=azure_nextgen.media.latest.FirstQualityArgs(
+    first_quality=azure_nextgen.media.FirstQualityArgs(
         bitrate=128000,
     ),
-    presentation_time_range=azure_nextgen.media.latest.PresentationTimeRangeArgs(
+    presentation_time_range=azure_nextgen.media.PresentationTimeRangeArgs(
         end_timestamp=170000000,
         force_end_timestamp=False,
         live_backoff_duration=0,
@@ -195,33 +195,33 @@ account_filter = azure_nextgen.media.latest.AccountFilter("accountFilter",
     ),
     resource_group_name="contoso",
     tracks=[
-        azure_nextgen.media.latest.FilterTrackSelectionArgs(
+        azure_nextgen.media.FilterTrackSelectionArgs(
             track_selections=[
-                azure_nextgen.media.latest.FilterTrackPropertyConditionArgs(
+                azure_nextgen.media.FilterTrackPropertyConditionArgs(
                     operation="Equal",
                     property="Type",
                     value="Audio",
                 ),
-                azure_nextgen.media.latest.FilterTrackPropertyConditionArgs(
+                azure_nextgen.media.FilterTrackPropertyConditionArgs(
                     operation="NotEqual",
                     property="Language",
                     value="en",
                 ),
-                azure_nextgen.media.latest.FilterTrackPropertyConditionArgs(
+                azure_nextgen.media.FilterTrackPropertyConditionArgs(
                     operation="NotEqual",
                     property="FourCC",
                     value="EC-3",
                 ),
             ],
         ),
-        azure_nextgen.media.latest.FilterTrackSelectionArgs(
+        azure_nextgen.media.FilterTrackSelectionArgs(
             track_selections=[
-                azure_nextgen.media.latest.FilterTrackPropertyConditionArgs(
+                azure_nextgen.media.FilterTrackPropertyConditionArgs(
                     operation="Equal",
                     property="Type",
                     value="Video",
                 ),
-                azure_nextgen.media.latest.FilterTrackPropertyConditionArgs(
+                azure_nextgen.media.FilterTrackPropertyConditionArgs(
                     operation="Equal",
                     property="Bitrate",
                     value="3000000-5000000",
@@ -240,7 +240,7 @@ account_filter = azure_nextgen.media.latest.AccountFilter("accountFilter",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilter", {
+const accountFilter = new azure_nextgen.media.AccountFilter("accountFilter", {
     accountName: "contosomedia",
     filterName: "newAccountFilter",
     firstQuality: {
@@ -304,7 +304,7 @@ const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilte
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AccountFilterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountFilterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -312,11 +312,11 @@ const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilte
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountFilter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AccountFilterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountFilter</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountFilter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountFilterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountFilter</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AccountFilterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountFilterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -337,7 +337,7 @@ const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilte
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountFilterArgs</span>
+        <span class="property-type"><a href="#inputs">AccountFilterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -406,7 +406,7 @@ const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilte
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountFilterArgs</span>
+        <span class="property-type"><a href="#inputs">AccountFilterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -445,7 +445,7 @@ const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilte
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountFilterArgs</span>
+        <span class="property-type"><a href="#inputs">AccountFilterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -468,11 +468,11 @@ const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilte
 
 ## AccountFilter Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AccountFilter resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AccountFilter resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2256,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:AccountFilter newAccountFilter /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/accountFilters/newAccountFilter 
+$ pulumi import azure-nextgen:media:AccountFilter newAccountFilter /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/accountFilters/newAccountFilter 
 ```
 
 

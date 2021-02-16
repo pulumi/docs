@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.enterpriseknowledgegraph.Enterpr
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 EnterpriseKnowledgeGraph resource definition
-Latest API Version: 2018-12-03.
+API Version: 2018-12-03.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var enterpriseKnowledgeGraph = new AzureNextGen.EnterpriseKnowledgeGraph.Latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", new AzureNextGen.EnterpriseKnowledgeGraph.Latest.EnterpriseKnowledgeGraphArgs
+        var enterpriseKnowledgeGraph = new AzureNextGen.EnterpriseKnowledgeGraph.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", new AzureNextGen.EnterpriseKnowledgeGraph.EnterpriseKnowledgeGraphArgs
         {
             Location = "West US",
             Properties = ,
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	enterpriseknowledgegraph "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/enterpriseknowledgegraph/latest"
+	enterpriseknowledgegraph "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/enterpriseknowledgegraph"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,9 +86,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-enterprise_knowledge_graph = azure_nextgen.enterpriseknowledgegraph.latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph",
+enterprise_knowledge_graph = azure_nextgen.enterpriseknowledgegraph.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph",
     location="West US",
-    properties=azure_nextgen.enterpriseknowledgegraph.latest.EnterpriseKnowledgeGraphPropertiesArgs(),
+    properties=azure_nextgen.enterpriseknowledgegraph.EnterpriseKnowledgeGraphPropertiesArgs(),
     resource_group_name="OneResourceGroupName",
     resource_name="sampleekgname",
     tags={
@@ -106,7 +106,7 @@ enterprise_knowledge_graph = azure_nextgen.enterpriseknowledgegraph.latest.Enter
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", {
+const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", {
     location: "West US",
     properties: {},
     resourceGroupName: "OneResourceGroupName",
@@ -129,7 +129,7 @@ const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.late
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EnterpriseKnowledgeGraph</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">EnterpriseKnowledgeGraphArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EnterpriseKnowledgeGraph</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnterpriseKnowledgeGraphArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -137,11 +137,11 @@ const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.late
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEnterpriseKnowledgeGraph</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">EnterpriseKnowledgeGraphArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EnterpriseKnowledgeGraph</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEnterpriseKnowledgeGraph</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EnterpriseKnowledgeGraphArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EnterpriseKnowledgeGraph</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EnterpriseKnowledgeGraph</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">EnterpriseKnowledgeGraphArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EnterpriseKnowledgeGraph</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EnterpriseKnowledgeGraphArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -162,7 +162,7 @@ const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.late
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EnterpriseKnowledgeGraphArgs</span>
+        <span class="property-type"><a href="#inputs">EnterpriseKnowledgeGraphArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -231,7 +231,7 @@ const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.late
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EnterpriseKnowledgeGraphArgs</span>
+        <span class="property-type"><a href="#inputs">EnterpriseKnowledgeGraphArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -270,7 +270,7 @@ const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.late
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EnterpriseKnowledgeGraphArgs</span>
+        <span class="property-type"><a href="#inputs">EnterpriseKnowledgeGraphArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -293,11 +293,11 @@ const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.late
 
 ## EnterpriseKnowledgeGraph Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The EnterpriseKnowledgeGraph resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The EnterpriseKnowledgeGraph resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1125,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:enterpriseknowledgegraph/latest:EnterpriseKnowledgeGraph samplename someid 
+$ pulumi import azure-nextgen:enterpriseknowledgegraph:EnterpriseKnowledgeGraph samplename someid 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.saas.SaasSubscriptionLevel resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 SaaS REST API resource definition.
+API Version: 2018-03-01-beta.
 
 {{% examples %}}
 ## Example Usage
@@ -26,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var saasSubscriptionLevel = new AzureNextGen.SaaS.V20180301Beta.SaasSubscriptionLevel("saasSubscriptionLevel", new AzureNextGen.SaaS.V20180301Beta.SaasSubscriptionLevelArgs
+        var saasSubscriptionLevel = new AzureNextGen.SaaS.SaasSubscriptionLevel("saasSubscriptionLevel", new AzureNextGen.SaaS.SaasSubscriptionLevelArgs
         {
-            Properties = new AzureNextGen.SaaS.V20180301Beta.Inputs.SaasCreationPropertiesArgs
+            Properties = new AzureNextGen.SaaS.Inputs.SaasCreationPropertiesArgs
             {
                 OfferId = "contosoOffer",
                 PaymentChannelMetadata = 
@@ -58,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	saas "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/saas/v20180301beta"
+	saas "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/saas"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -96,8 +97,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-saas_subscription_level = azure_nextgen.saas.v20180301beta.SaasSubscriptionLevel("saasSubscriptionLevel",
-    properties=azure_nextgen.saas.v20180301beta.SaasCreationPropertiesArgs(
+saas_subscription_level = azure_nextgen.saas.SaasSubscriptionLevel("saasSubscriptionLevel",
+    properties=azure_nextgen.saas.SaasCreationPropertiesArgs(
         offer_id="contosoOffer",
         payment_channel_metadata={
             "AzureSubscriptionId": "155af98a-3205-47e7-883b-a2ab9db9f88d",
@@ -121,7 +122,7 @@ saas_subscription_level = azure_nextgen.saas.v20180301beta.SaasSubscriptionLevel
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const saasSubscriptionLevel = new azure_nextgen.saas.v20180301beta.SaasSubscriptionLevel("saasSubscriptionLevel", {
+const saasSubscriptionLevel = new azure_nextgen.saas.SaasSubscriptionLevel("saasSubscriptionLevel", {
     properties: {
         offerId: "contosoOffer",
         paymentChannelMetadata: {
@@ -149,7 +150,7 @@ const saasSubscriptionLevel = new azure_nextgen.saas.v20180301beta.SaasSubscript
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SaasSubscriptionLevel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SaasSubscriptionLevelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SaasSubscriptionLevel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SaasSubscriptionLevelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -157,11 +158,11 @@ const saasSubscriptionLevel = new azure_nextgen.saas.v20180301beta.SaasSubscript
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSaasSubscriptionLevel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SaasSubscriptionLevelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SaasSubscriptionLevel</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSaasSubscriptionLevel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SaasSubscriptionLevelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SaasSubscriptionLevel</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SaasSubscriptionLevel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SaasSubscriptionLevelArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SaasSubscriptionLevel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SaasSubscriptionLevelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -182,7 +183,7 @@ const saasSubscriptionLevel = new azure_nextgen.saas.v20180301beta.SaasSubscript
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SaasSubscriptionLevelArgs</span>
+        <span class="property-type"><a href="#inputs">SaasSubscriptionLevelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -251,7 +252,7 @@ const saasSubscriptionLevel = new azure_nextgen.saas.v20180301beta.SaasSubscript
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SaasSubscriptionLevelArgs</span>
+        <span class="property-type"><a href="#inputs">SaasSubscriptionLevelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -290,7 +291,7 @@ const saasSubscriptionLevel = new azure_nextgen.saas.v20180301beta.SaasSubscript
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SaasSubscriptionLevelArgs</span>
+        <span class="property-type"><a href="#inputs">SaasSubscriptionLevelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -313,11 +314,11 @@ const saasSubscriptionLevel = new azure_nextgen.saas.v20180301beta.SaasSubscript
 
 ## SaasSubscriptionLevel Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1911,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:saas/v20180301beta:SaasSubscriptionLevel MyContosoSubscription /subscriptions/c825645b-e31b-9cf4-1cee-2aba9e58bc7c/resourceGroups/my-saas-rg/providers/Microsoft.SaaS/resources/MyContosoSubscription 
+$ pulumi import azure-nextgen:saas:SaasSubscriptionLevel MyContosoSubscription /subscriptions/c825645b-e31b-9cf4-1cee-2aba9e58bc7c/resourceGroups/my-saas-rg/providers/Microsoft.SaaS/resources/MyContosoSubscription 
 ```
 
 

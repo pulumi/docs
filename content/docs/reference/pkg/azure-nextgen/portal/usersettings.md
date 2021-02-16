@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.portal.UserSettings resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Response to get user settings
-Latest API Version: 2018-10-01.
+API Version: 2018-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var userSettings = new AzureNextGen.Portal.Latest.UserSettings("userSettings", new AzureNextGen.Portal.Latest.UserSettingsArgs
+        var userSettings = new AzureNextGen.Portal.UserSettings("userSettings", new AzureNextGen.Portal.UserSettingsArgs
         {
-            Properties = new AzureNextGen.Portal.Latest.Inputs.UserPropertiesArgs
+            Properties = new AzureNextGen.Portal.Inputs.UserPropertiesArgs
             {
                 PreferredLocation = "eastus",
                 PreferredOsType = "Linux",
                 PreferredShellType = "bash",
-                StorageProfile = new AzureNextGen.Portal.Latest.Inputs.StorageProfileArgs
+                StorageProfile = new AzureNextGen.Portal.Inputs.StorageProfileArgs
                 {
                     DiskSizeInGB = 5,
                     FileShareName = "string",
                     StorageAccountResourceId = "string",
                 },
-                TerminalSettings = new AzureNextGen.Portal.Latest.Inputs.TerminalSettingsArgs
+                TerminalSettings = new AzureNextGen.Portal.Inputs.TerminalSettingsArgs
                 {
                     FontSize = "Medium",
                     FontStyle = "Monospace",
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal/latest"
+	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -102,17 +102,17 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-user_settings = azure_nextgen.portal.latest.UserSettings("userSettings",
-    properties=azure_nextgen.portal.latest.UserPropertiesArgs(
+user_settings = azure_nextgen.portal.UserSettings("userSettings",
+    properties=azure_nextgen.portal.UserPropertiesArgs(
         preferred_location="eastus",
         preferred_os_type="Linux",
         preferred_shell_type="bash",
-        storage_profile=azure_nextgen.portal.latest.StorageProfileArgs(
+        storage_profile=azure_nextgen.portal.StorageProfileArgs(
             disk_size_in_gb=5,
             file_share_name="string",
             storage_account_resource_id="string",
         ),
-        terminal_settings=azure_nextgen.portal.latest.TerminalSettingsArgs(
+        terminal_settings=azure_nextgen.portal.TerminalSettingsArgs(
             font_size="Medium",
             font_style="Monospace",
         ),
@@ -129,7 +129,7 @@ user_settings = azure_nextgen.portal.latest.UserSettings("userSettings",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const userSettings = new azure_nextgen.portal.latest.UserSettings("userSettings", {
+const userSettings = new azure_nextgen.portal.UserSettings("userSettings", {
     properties: {
         preferredLocation: "eastus",
         preferredOsType: "Linux",
@@ -159,7 +159,7 @@ const userSettings = new azure_nextgen.portal.latest.UserSettings("userSettings"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">UserSettingsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserSettingsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -167,11 +167,11 @@ const userSettings = new azure_nextgen.portal.latest.UserSettings("userSettings"
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserSettings</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">UserSettingsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserSettings</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserSettings</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserSettingsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserSettings</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">UserSettingsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserSettingsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -192,7 +192,7 @@ const userSettings = new azure_nextgen.portal.latest.UserSettings("userSettings"
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">UserSettingsArgs</span>
+        <span class="property-type"><a href="#inputs">UserSettingsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -261,7 +261,7 @@ const userSettings = new azure_nextgen.portal.latest.UserSettings("userSettings"
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">UserSettingsArgs</span>
+        <span class="property-type"><a href="#inputs">UserSettingsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -300,7 +300,7 @@ const userSettings = new azure_nextgen.portal.latest.UserSettings("userSettings"
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">UserSettingsArgs</span>
+        <span class="property-type"><a href="#inputs">UserSettingsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -323,11 +323,11 @@ const userSettings = new azure_nextgen.portal.latest.UserSettings("userSettings"
 
 ## UserSettings Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The UserSettings resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The UserSettings resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1569,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:portal/latest:UserSettings myresource1 /providers/Microsoft.Portal/userSettings/{userSettingsName} 
+$ pulumi import azure-nextgen:portal:UserSettings myresource1 /providers/Microsoft.Portal/userSettings/{userSettingsName} 
 ```
 
 

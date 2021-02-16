@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.JobTargetGroup resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A group of job targets.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,26 +27,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobTargetGroup = new AzureNextGen.Sql.V20200801Preview.JobTargetGroup("jobTargetGroup", new AzureNextGen.Sql.V20200801Preview.JobTargetGroupArgs
+        var jobTargetGroup = new AzureNextGen.Sql.JobTargetGroup("jobTargetGroup", new AzureNextGen.Sql.JobTargetGroupArgs
         {
             JobAgentName = "agent1",
             Members = 
             {
-                new AzureNextGen.Sql.V20200801Preview.Inputs.JobTargetArgs
+                new AzureNextGen.Sql.Inputs.JobTargetArgs
                 {
                     DatabaseName = "database1",
                     MembershipType = "Exclude",
                     ServerName = "server1",
                     Type = "SqlDatabase",
                 },
-                new AzureNextGen.Sql.V20200801Preview.Inputs.JobTargetArgs
+                new AzureNextGen.Sql.Inputs.JobTargetArgs
                 {
                     MembershipType = "Include",
                     RefreshCredential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
                     ServerName = "server1",
                     Type = "SqlServer",
                 },
-                new AzureNextGen.Sql.V20200801Preview.Inputs.JobTargetArgs
+                new AzureNextGen.Sql.Inputs.JobTargetArgs
                 {
                     ElasticPoolName = "pool1",
                     MembershipType = "Include",
@@ -53,7 +54,7 @@ class MyStack : Stack
                     ServerName = "server2",
                     Type = "SqlElasticPool",
                 },
-                new AzureNextGen.Sql.V20200801Preview.Inputs.JobTargetArgs
+                new AzureNextGen.Sql.Inputs.JobTargetArgs
                 {
                     MembershipType = "Include",
                     RefreshCredential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
@@ -80,7 +81,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -137,29 +138,29 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_target_group = azure_nextgen.sql.v20200801preview.JobTargetGroup("jobTargetGroup",
+job_target_group = azure_nextgen.sql.JobTargetGroup("jobTargetGroup",
     job_agent_name="agent1",
     members=[
-        azure_nextgen.sql.v20200801preview.JobTargetArgs(
+        azure_nextgen.sql.JobTargetArgs(
             database_name="database1",
             membership_type="Exclude",
             server_name="server1",
             type="SqlDatabase",
         ),
-        azure_nextgen.sql.v20200801preview.JobTargetArgs(
+        azure_nextgen.sql.JobTargetArgs(
             membership_type="Include",
             refresh_credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
             server_name="server1",
             type="SqlServer",
         ),
-        azure_nextgen.sql.v20200801preview.JobTargetArgs(
+        azure_nextgen.sql.JobTargetArgs(
             elastic_pool_name="pool1",
             membership_type="Include",
             refresh_credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
             server_name="server2",
             type="SqlElasticPool",
         ),
-        azure_nextgen.sql.v20200801preview.JobTargetArgs(
+        azure_nextgen.sql.JobTargetArgs(
             membership_type="Include",
             refresh_credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
             server_name="server3",
@@ -181,7 +182,7 @@ job_target_group = azure_nextgen.sql.v20200801preview.JobTargetGroup("jobTargetG
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobTargetGroup = new azure_nextgen.sql.v20200801preview.JobTargetGroup("jobTargetGroup", {
+const jobTargetGroup = new azure_nextgen.sql.JobTargetGroup("jobTargetGroup", {
     jobAgentName: "agent1",
     members: [
         {
@@ -230,7 +231,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobTargetGroup = new AzureNextGen.Sql.V20200801Preview.JobTargetGroup("jobTargetGroup", new AzureNextGen.Sql.V20200801Preview.JobTargetGroupArgs
+        var jobTargetGroup = new AzureNextGen.Sql.JobTargetGroup("jobTargetGroup", new AzureNextGen.Sql.JobTargetGroupArgs
         {
             JobAgentName = "agent1",
             Members = {},
@@ -252,7 +253,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -282,7 +283,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_target_group = azure_nextgen.sql.v20200801preview.JobTargetGroup("jobTargetGroup",
+job_target_group = azure_nextgen.sql.JobTargetGroup("jobTargetGroup",
     job_agent_name="agent1",
     members=[],
     resource_group_name="group1",
@@ -299,7 +300,7 @@ job_target_group = azure_nextgen.sql.v20200801preview.JobTargetGroup("jobTargetG
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const jobTargetGroup = new azure_nextgen.sql.v20200801preview.JobTargetGroup("jobTargetGroup", {
+const jobTargetGroup = new azure_nextgen.sql.JobTargetGroup("jobTargetGroup", {
     jobAgentName: "agent1",
     members: [],
     resourceGroupName: "group1",
@@ -319,7 +320,7 @@ const jobTargetGroup = new azure_nextgen.sql.v20200801preview.JobTargetGroup("jo
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">JobTargetGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobTargetGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -327,11 +328,11 @@ const jobTargetGroup = new azure_nextgen.sql.v20200801preview.JobTargetGroup("jo
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJobTargetGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">JobTargetGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JobTargetGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJobTargetGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobTargetGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JobTargetGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">JobTargetGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobTargetGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -352,7 +353,7 @@ const jobTargetGroup = new azure_nextgen.sql.v20200801preview.JobTargetGroup("jo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobTargetGroupArgs</span>
+        <span class="property-type"><a href="#inputs">JobTargetGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -421,7 +422,7 @@ const jobTargetGroup = new azure_nextgen.sql.v20200801preview.JobTargetGroup("jo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobTargetGroupArgs</span>
+        <span class="property-type"><a href="#inputs">JobTargetGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -460,7 +461,7 @@ const jobTargetGroup = new azure_nextgen.sql.v20200801preview.JobTargetGroup("jo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobTargetGroupArgs</span>
+        <span class="property-type"><a href="#inputs">JobTargetGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -483,11 +484,11 @@ const jobTargetGroup = new azure_nextgen.sql.v20200801preview.JobTargetGroup("jo
 
 ## JobTargetGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1505,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:JobTargetGroup targetGroup1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/targetGroups/targetGroup1 
+$ pulumi import azure-nextgen:sql:JobTargetGroup targetGroup1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/targetGroups/targetGroup1 
 ```
 
 

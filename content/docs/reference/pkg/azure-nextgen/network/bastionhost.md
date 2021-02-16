@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.BastionHost resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Bastion Host resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bastionHost = new AzureNextGen.Network.Latest.BastionHost("bastionHost", new AzureNextGen.Network.Latest.BastionHostArgs
+        var bastionHost = new AzureNextGen.Network.BastionHost("bastionHost", new AzureNextGen.Network.BastionHostArgs
         {
             BastionHostName = "bastionhosttenant'",
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.BastionHostIPConfigurationArgs
+                new AzureNextGen.Network.Inputs.BastionHostIPConfigurationArgs
                 {
                     Name = "bastionHostIpConfiguration",
-                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    PublicIPAddress = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
                     },
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Subnet = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/BastionHostSubnet",
                     },
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -99,14 +99,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bastion_host = azure_nextgen.network.latest.BastionHost("bastionHost",
+bastion_host = azure_nextgen.network.BastionHost("bastionHost",
     bastion_host_name="bastionhosttenant'",
-    ip_configurations=[azure_nextgen.network.latest.BastionHostIPConfigurationArgs(
+    ip_configurations=[azure_nextgen.network.BastionHostIPConfigurationArgs(
         name="bastionHostIpConfiguration",
-        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+        public_ip_address=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
         ),
-        subnet=azure_nextgen.network.latest.SubResourceArgs(
+        subnet=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/BastionHostSubnet",
         ),
     )],
@@ -122,7 +122,7 @@ bastion_host = azure_nextgen.network.latest.BastionHost("bastionHost",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const bastionHost = new azure_nextgen.network.latest.BastionHost("bastionHost", {
+const bastionHost = new azure_nextgen.network.BastionHost("bastionHost", {
     bastionHostName: "bastionhosttenant'",
     ipConfigurations: [{
         name: "bastionHostIpConfiguration",
@@ -148,7 +148,7 @@ const bastionHost = new azure_nextgen.network.latest.BastionHost("bastionHost", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BastionHost</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BastionHostArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BastionHost</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BastionHostArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -156,11 +156,11 @@ const bastionHost = new azure_nextgen.network.latest.BastionHost("bastionHost", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBastionHost</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BastionHostArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BastionHost</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBastionHost</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BastionHostArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BastionHost</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BastionHost</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BastionHostArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BastionHost</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BastionHostArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -181,7 +181,7 @@ const bastionHost = new azure_nextgen.network.latest.BastionHost("bastionHost", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BastionHostArgs</span>
+        <span class="property-type"><a href="#inputs">BastionHostArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -250,7 +250,7 @@ const bastionHost = new azure_nextgen.network.latest.BastionHost("bastionHost", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BastionHostArgs</span>
+        <span class="property-type"><a href="#inputs">BastionHostArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -289,7 +289,7 @@ const bastionHost = new azure_nextgen.network.latest.BastionHost("bastionHost", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BastionHostArgs</span>
+        <span class="property-type"><a href="#inputs">BastionHostArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -312,11 +312,11 @@ const bastionHost = new azure_nextgen.network.latest.BastionHost("bastionHost", 
 
 ## BastionHost Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The BastionHost resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The BastionHost resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1504,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:BastionHost bastionhost' /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/bastionHosts/bastionhosttenant' 
+$ pulumi import azure-nextgen:network:BastionHost bastionhost' /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/bastionHosts/bastionhosttenant' 
 ```
 
 

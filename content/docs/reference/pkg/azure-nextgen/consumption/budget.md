@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.consumption.Budget resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A budget resource.
-Latest API Version: 2019-10-01.
+API Version: 2019-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var budget = new AzureNextGen.Consumption.Latest.Budget("budget", new AzureNextGen.Consumption.Latest.BudgetArgs
+        var budget = new AzureNextGen.Consumption.Budget("budget", new AzureNextGen.Consumption.BudgetArgs
         {
             Amount = 100.65,
             BudgetName = "TestBudget",
             Category = "Cost",
             ETag = "\"1d34d016a593709\"",
-            Filter = new AzureNextGen.Consumption.Latest.Inputs.BudgetFilterArgs
+            Filter = new AzureNextGen.Consumption.Inputs.BudgetFilterArgs
             {
                 And = 
                 {
-                    new AzureNextGen.Consumption.Latest.Inputs.BudgetFilterPropertiesArgs
+                    new AzureNextGen.Consumption.Inputs.BudgetFilterPropertiesArgs
                     {
-                        Dimensions = new AzureNextGen.Consumption.Latest.Inputs.BudgetComparisonExpressionArgs
+                        Dimensions = new AzureNextGen.Consumption.Inputs.BudgetComparisonExpressionArgs
                         {
                             Name = "ResourceId",
                             Operator = "In",
@@ -50,9 +50,9 @@ class MyStack : Stack
                             },
                         },
                     },
-                    new AzureNextGen.Consumption.Latest.Inputs.BudgetFilterPropertiesArgs
+                    new AzureNextGen.Consumption.Inputs.BudgetFilterPropertiesArgs
                     {
-                        Tags = new AzureNextGen.Consumption.Latest.Inputs.BudgetComparisonExpressionArgs
+                        Tags = new AzureNextGen.Consumption.Inputs.BudgetComparisonExpressionArgs
                         {
                             Name = "category",
                             Operator = "In",
@@ -63,9 +63,9 @@ class MyStack : Stack
                             },
                         },
                     },
-                    new AzureNextGen.Consumption.Latest.Inputs.BudgetFilterPropertiesArgs
+                    new AzureNextGen.Consumption.Inputs.BudgetFilterPropertiesArgs
                     {
-                        Tags = new AzureNextGen.Consumption.Latest.Inputs.BudgetComparisonExpressionArgs
+                        Tags = new AzureNextGen.Consumption.Inputs.BudgetComparisonExpressionArgs
                         {
                             Name = "department",
                             Operator = "In",
@@ -80,7 +80,7 @@ class MyStack : Stack
             },
             Notifications = 
             {
-                { "Actual_GreaterThan_80_Percent", new AzureNextGen.Consumption.Latest.Inputs.NotificationArgs
+                { "Actual_GreaterThan_80_Percent", new AzureNextGen.Consumption.Inputs.NotificationArgs
                 {
                     ContactEmails = 
                     {
@@ -103,7 +103,7 @@ class MyStack : Stack
             },
             Scope = "subscriptions/00000000-0000-0000-0000-000000000000",
             TimeGrain = "Monthly",
-            TimePeriod = new AzureNextGen.Consumption.Latest.Inputs.BudgetTimePeriodArgs
+            TimePeriod = new AzureNextGen.Consumption.Inputs.BudgetTimePeriodArgs
             {
                 EndDate = "2018-10-31T00:00:00Z",
                 StartDate = "2017-10-01T00:00:00Z",
@@ -127,15 +127,15 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-budget = azure_nextgen.consumption.latest.Budget("budget",
+budget = azure_nextgen.consumption.Budget("budget",
     amount=100.65,
     budget_name="TestBudget",
     category="Cost",
     e_tag="\"1d34d016a593709\"",
-    filter=azure_nextgen.consumption.latest.BudgetFilterArgs(
+    filter=azure_nextgen.consumption.BudgetFilterArgs(
         and_=[
-            azure_nextgen.consumption.latest.BudgetFilterPropertiesArgs(
-                dimensions=azure_nextgen.consumption.latest.BudgetComparisonExpressionArgs(
+            azure_nextgen.consumption.BudgetFilterPropertiesArgs(
+                dimensions=azure_nextgen.consumption.BudgetComparisonExpressionArgs(
                     name="ResourceId",
                     operator="In",
                     values=[
@@ -144,8 +144,8 @@ budget = azure_nextgen.consumption.latest.Budget("budget",
                     ],
                 ),
             ),
-            azure_nextgen.consumption.latest.BudgetFilterPropertiesArgs(
-                tags=azure_nextgen.consumption.latest.BudgetComparisonExpressionArgs(
+            azure_nextgen.consumption.BudgetFilterPropertiesArgs(
+                tags=azure_nextgen.consumption.BudgetComparisonExpressionArgs(
                     name="category",
                     operator="In",
                     values=[
@@ -154,8 +154,8 @@ budget = azure_nextgen.consumption.latest.Budget("budget",
                     ],
                 ),
             ),
-            azure_nextgen.consumption.latest.BudgetFilterPropertiesArgs(
-                tags=azure_nextgen.consumption.latest.BudgetComparisonExpressionArgs(
+            azure_nextgen.consumption.BudgetFilterPropertiesArgs(
+                tags=azure_nextgen.consumption.BudgetComparisonExpressionArgs(
                     name="department",
                     operator="In",
                     values=[
@@ -167,7 +167,7 @@ budget = azure_nextgen.consumption.latest.Budget("budget",
         ],
     ),
     notifications={
-        "Actual_GreaterThan_80_Percent": azure_nextgen.consumption.latest.NotificationArgs(
+        "Actual_GreaterThan_80_Percent": azure_nextgen.consumption.NotificationArgs(
             contact_emails=[
                 "johndoe@contoso.com",
                 "janesmith@contoso.com",
@@ -184,7 +184,7 @@ budget = azure_nextgen.consumption.latest.Budget("budget",
     },
     scope="subscriptions/00000000-0000-0000-0000-000000000000",
     time_grain="Monthly",
-    time_period=azure_nextgen.consumption.latest.BudgetTimePeriodArgs(
+    time_period=azure_nextgen.consumption.BudgetTimePeriodArgs(
         end_date="2018-10-31T00:00:00Z",
         start_date="2017-10-01T00:00:00Z",
     ))
@@ -199,7 +199,7 @@ budget = azure_nextgen.consumption.latest.Budget("budget",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const budget = new azure_nextgen.consumption.latest.Budget("budget", {
+const budget = new azure_nextgen.consumption.Budget("budget", {
     amount: 100.65,
     budgetName: "TestBudget",
     category: "Cost",
@@ -274,7 +274,7 @@ const budget = new azure_nextgen.consumption.latest.Budget("budget", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BudgetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -282,11 +282,11 @@ const budget = new azure_nextgen.consumption.latest.Budget("budget", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBudget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BudgetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Budget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBudget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Budget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BudgetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -307,7 +307,7 @@ const budget = new azure_nextgen.consumption.latest.Budget("budget", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BudgetArgs</span>
+        <span class="property-type"><a href="#inputs">BudgetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -376,7 +376,7 @@ const budget = new azure_nextgen.consumption.latest.Budget("budget", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BudgetArgs</span>
+        <span class="property-type"><a href="#inputs">BudgetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -415,7 +415,7 @@ const budget = new azure_nextgen.consumption.latest.Budget("budget", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BudgetArgs</span>
+        <span class="property-type"><a href="#inputs">BudgetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -438,11 +438,11 @@ const budget = new azure_nextgen.consumption.latest.Budget("budget", {
 
 ## Budget Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Budget resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Budget resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2726,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:consumption/latest:Budget TestBudget subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Consumption/budgets/TestBudget 
+$ pulumi import azure-nextgen:consumption:Budget TestBudget subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Consumption/budgets/TestBudget 
 ```
 
 

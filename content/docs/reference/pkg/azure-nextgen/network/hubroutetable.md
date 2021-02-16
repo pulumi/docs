@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.HubRouteTable resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 RouteTable resource in a virtual hub.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hubRouteTable = new AzureNextGen.Network.Latest.HubRouteTable("hubRouteTable", new AzureNextGen.Network.Latest.HubRouteTableArgs
+        var hubRouteTable = new AzureNextGen.Network.HubRouteTable("hubRouteTable", new AzureNextGen.Network.HubRouteTableArgs
         {
             Labels = 
             {
@@ -38,7 +38,7 @@ class MyStack : Stack
             RouteTableName = "hubRouteTable1",
             Routes = 
             {
-                new AzureNextGen.Network.Latest.Inputs.HubRouteArgs
+                new AzureNextGen.Network.Inputs.HubRouteArgs
                 {
                     DestinationType = "CIDR",
                     Destinations = 
@@ -68,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -113,14 +113,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hub_route_table = azure_nextgen.network.latest.HubRouteTable("hubRouteTable",
+hub_route_table = azure_nextgen.network.HubRouteTable("hubRouteTable",
     labels=[
         "label1",
         "label2",
     ],
     resource_group_name="rg1",
     route_table_name="hubRouteTable1",
-    routes=[azure_nextgen.network.latest.HubRouteArgs(
+    routes=[azure_nextgen.network.HubRouteArgs(
         destination_type="CIDR",
         destinations=[
             "10.0.0.0/8",
@@ -143,7 +143,7 @@ hub_route_table = azure_nextgen.network.latest.HubRouteTable("hubRouteTable",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hubRouteTable = new azure_nextgen.network.latest.HubRouteTable("hubRouteTable", {
+const hubRouteTable = new azure_nextgen.network.HubRouteTable("hubRouteTable", {
     labels: [
         "label1",
         "label2",
@@ -176,7 +176,7 @@ const hubRouteTable = new azure_nextgen.network.latest.HubRouteTable("hubRouteTa
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HubRouteTable</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">HubRouteTableArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HubRouteTable</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HubRouteTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -184,11 +184,11 @@ const hubRouteTable = new azure_nextgen.network.latest.HubRouteTable("hubRouteTa
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHubRouteTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">HubRouteTableArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HubRouteTable</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHubRouteTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HubRouteTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HubRouteTable</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HubRouteTable</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">HubRouteTableArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HubRouteTable</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HubRouteTableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -209,7 +209,7 @@ const hubRouteTable = new azure_nextgen.network.latest.HubRouteTable("hubRouteTa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HubRouteTableArgs</span>
+        <span class="property-type"><a href="#inputs">HubRouteTableArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -278,7 +278,7 @@ const hubRouteTable = new azure_nextgen.network.latest.HubRouteTable("hubRouteTa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HubRouteTableArgs</span>
+        <span class="property-type"><a href="#inputs">HubRouteTableArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -317,7 +317,7 @@ const hubRouteTable = new azure_nextgen.network.latest.HubRouteTable("hubRouteTa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HubRouteTableArgs</span>
+        <span class="property-type"><a href="#inputs">HubRouteTableArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -340,11 +340,11 @@ const hubRouteTable = new azure_nextgen.network.latest.HubRouteTable("hubRouteTa
 
 ## HubRouteTable Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The HubRouteTable resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The HubRouteTable resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1298,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:HubRouteTable hubRouteTable1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1 
+$ pulumi import azure-nextgen:network:HubRouteTable hubRouteTable1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeTables/virtualHubRouteTable1a 
 ```
 
 

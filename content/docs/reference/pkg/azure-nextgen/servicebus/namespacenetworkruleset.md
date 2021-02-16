@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.NamespaceNetworkRuleS
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of NetworkRuleSet resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,32 +27,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceNetworkRuleSet = new AzureNextGen.ServiceBus.Latest.NamespaceNetworkRuleSet("namespaceNetworkRuleSet", new AzureNextGen.ServiceBus.Latest.NamespaceNetworkRuleSetArgs
+        var namespaceNetworkRuleSet = new AzureNextGen.ServiceBus.NamespaceNetworkRuleSet("namespaceNetworkRuleSet", new AzureNextGen.ServiceBus.NamespaceNetworkRuleSetArgs
         {
             DefaultAction = "Deny",
             IpRules = 
             {
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetIpRulesArgs
+                new AzureNextGen.ServiceBus.Inputs.NWRuleSetIpRulesArgs
                 {
                     Action = "Allow",
                     IpMask = "1.1.1.1",
                 },
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetIpRulesArgs
+                new AzureNextGen.ServiceBus.Inputs.NWRuleSetIpRulesArgs
                 {
                     Action = "Allow",
                     IpMask = "1.1.1.2",
                 },
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetIpRulesArgs
+                new AzureNextGen.ServiceBus.Inputs.NWRuleSetIpRulesArgs
                 {
                     Action = "Allow",
                     IpMask = "1.1.1.3",
                 },
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetIpRulesArgs
+                new AzureNextGen.ServiceBus.Inputs.NWRuleSetIpRulesArgs
                 {
                     Action = "Allow",
                     IpMask = "1.1.1.4",
                 },
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetIpRulesArgs
+                new AzureNextGen.ServiceBus.Inputs.NWRuleSetIpRulesArgs
                 {
                     Action = "Allow",
                     IpMask = "1.1.1.5",
@@ -62,26 +62,26 @@ class MyStack : Stack
             ResourceGroupName = "ResourceGroup",
             VirtualNetworkRules = 
             {
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetVirtualNetworkRulesArgs
+                new AzureNextGen.ServiceBus.Inputs.NWRuleSetVirtualNetworkRulesArgs
                 {
                     IgnoreMissingVnetServiceEndpoint = true,
-                    Subnet = new AzureNextGen.ServiceBus.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.ServiceBus.Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet2",
                     },
                 },
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetVirtualNetworkRulesArgs
+                new AzureNextGen.ServiceBus.Inputs.NWRuleSetVirtualNetworkRulesArgs
                 {
                     IgnoreMissingVnetServiceEndpoint = false,
-                    Subnet = new AzureNextGen.ServiceBus.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.ServiceBus.Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet3",
                     },
                 },
-                new AzureNextGen.ServiceBus.Latest.Inputs.NWRuleSetVirtualNetworkRulesArgs
+                new AzureNextGen.ServiceBus.Inputs.NWRuleSetVirtualNetworkRulesArgs
                 {
                     IgnoreMissingVnetServiceEndpoint = false,
-                    Subnet = new AzureNextGen.ServiceBus.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.ServiceBus.Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet6",
                     },
@@ -102,7 +102,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -172,26 +172,26 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_network_rule_set = azure_nextgen.servicebus.latest.NamespaceNetworkRuleSet("namespaceNetworkRuleSet",
+namespace_network_rule_set = azure_nextgen.servicebus.NamespaceNetworkRuleSet("namespaceNetworkRuleSet",
     default_action="Deny",
     ip_rules=[
-        azure_nextgen.servicebus.latest.NWRuleSetIpRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetIpRulesArgs(
             action="Allow",
             ip_mask="1.1.1.1",
         ),
-        azure_nextgen.servicebus.latest.NWRuleSetIpRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetIpRulesArgs(
             action="Allow",
             ip_mask="1.1.1.2",
         ),
-        azure_nextgen.servicebus.latest.NWRuleSetIpRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetIpRulesArgs(
             action="Allow",
             ip_mask="1.1.1.3",
         ),
-        azure_nextgen.servicebus.latest.NWRuleSetIpRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetIpRulesArgs(
             action="Allow",
             ip_mask="1.1.1.4",
         ),
-        azure_nextgen.servicebus.latest.NWRuleSetIpRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetIpRulesArgs(
             action="Allow",
             ip_mask="1.1.1.5",
         ),
@@ -199,21 +199,21 @@ namespace_network_rule_set = azure_nextgen.servicebus.latest.NamespaceNetworkRul
     namespace_name="sdk-Namespace-6019",
     resource_group_name="ResourceGroup",
     virtual_network_rules=[
-        azure_nextgen.servicebus.latest.NWRuleSetVirtualNetworkRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetVirtualNetworkRulesArgs(
             ignore_missing_vnet_service_endpoint=True,
-            subnet=azure_nextgen.servicebus.latest.SubnetArgs(
+            subnet=azure_nextgen.servicebus.SubnetArgs(
                 id="/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet2",
             ),
         ),
-        azure_nextgen.servicebus.latest.NWRuleSetVirtualNetworkRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetVirtualNetworkRulesArgs(
             ignore_missing_vnet_service_endpoint=False,
-            subnet=azure_nextgen.servicebus.latest.SubnetArgs(
+            subnet=azure_nextgen.servicebus.SubnetArgs(
                 id="/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet3",
             ),
         ),
-        azure_nextgen.servicebus.latest.NWRuleSetVirtualNetworkRulesArgs(
+        azure_nextgen.servicebus.NWRuleSetVirtualNetworkRulesArgs(
             ignore_missing_vnet_service_endpoint=False,
-            subnet=azure_nextgen.servicebus.latest.SubnetArgs(
+            subnet=azure_nextgen.servicebus.SubnetArgs(
                 id="/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet6",
             ),
         ),
@@ -229,7 +229,7 @@ namespace_network_rule_set = azure_nextgen.servicebus.latest.NamespaceNetworkRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const namespaceNetworkRuleSet = new azure_nextgen.servicebus.latest.NamespaceNetworkRuleSet("namespaceNetworkRuleSet", {
+const namespaceNetworkRuleSet = new azure_nextgen.servicebus.NamespaceNetworkRuleSet("namespaceNetworkRuleSet", {
     defaultAction: "Deny",
     ipRules: [
         {
@@ -289,7 +289,7 @@ const namespaceNetworkRuleSet = new azure_nextgen.servicebus.latest.NamespaceNet
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">NamespaceNetworkRuleSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -297,11 +297,11 @@ const namespaceNetworkRuleSet = new azure_nextgen.servicebus.latest.NamespaceNet
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">NamespaceNetworkRuleSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NamespaceNetworkRuleSet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NamespaceNetworkRuleSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">NamespaceNetworkRuleSetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -322,7 +322,7 @@ const namespaceNetworkRuleSet = new azure_nextgen.servicebus.latest.NamespaceNet
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NamespaceNetworkRuleSetArgs</span>
+        <span class="property-type"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -391,7 +391,7 @@ const namespaceNetworkRuleSet = new azure_nextgen.servicebus.latest.NamespaceNet
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NamespaceNetworkRuleSetArgs</span>
+        <span class="property-type"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -430,7 +430,7 @@ const namespaceNetworkRuleSet = new azure_nextgen.servicebus.latest.NamespaceNet
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NamespaceNetworkRuleSetArgs</span>
+        <span class="property-type"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -453,11 +453,11 @@ const namespaceNetworkRuleSet = new azure_nextgen.servicebus.latest.NamespaceNet
 
 ## NamespaceNetworkRuleSet Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1403,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:NamespaceNetworkRuleSet default /subscriptions/854d368f-1828-428f-8f3c-f2affa9b2f7d/resourceGroups/resourcegroupid/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-9659/networkrulesets/default 
+$ pulumi import azure-nextgen:servicebus:NamespaceNetworkRuleSet default /subscriptions/854d368f-1828-428f-8f3c-f2affa9b2f7d/resourceGroups/resourcegroupid/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-9659/networkrulesets/default 
 ```
 
 

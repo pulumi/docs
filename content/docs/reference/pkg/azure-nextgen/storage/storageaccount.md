@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.StorageAccount resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The storage account.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,23 +27,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageAccount = new AzureNextGen.Storage.Latest.StorageAccount("storageAccount", new AzureNextGen.Storage.Latest.StorageAccountArgs
+        var storageAccount = new AzureNextGen.Storage.StorageAccount("storageAccount", new AzureNextGen.Storage.StorageAccountArgs
         {
             AccountName = "sto4445",
             AllowBlobPublicAccess = false,
             AllowSharedKeyAccess = true,
-            Encryption = new AzureNextGen.Storage.Latest.Inputs.EncryptionArgs
+            Encryption = new AzureNextGen.Storage.Inputs.EncryptionArgs
             {
                 KeySource = "Microsoft.Storage",
                 RequireInfrastructureEncryption = false,
-                Services = new AzureNextGen.Storage.Latest.Inputs.EncryptionServicesArgs
+                Services = new AzureNextGen.Storage.Inputs.EncryptionServicesArgs
                 {
-                    Blob = new AzureNextGen.Storage.Latest.Inputs.EncryptionServiceArgs
+                    Blob = new AzureNextGen.Storage.Inputs.EncryptionServiceArgs
                     {
                         Enabled = true,
                         KeyType = "Account",
                     },
-                    File = new AzureNextGen.Storage.Latest.Inputs.EncryptionServiceArgs
+                    File = new AzureNextGen.Storage.Inputs.EncryptionServiceArgs
                     {
                         Enabled = true,
                         KeyType = "Account",
@@ -55,13 +55,13 @@ class MyStack : Stack
             Location = "eastus",
             MinimumTlsVersion = "TLS1_2",
             ResourceGroupName = "res9101",
-            RoutingPreference = new AzureNextGen.Storage.Latest.Inputs.RoutingPreferenceArgs
+            RoutingPreference = new AzureNextGen.Storage.Inputs.RoutingPreferenceArgs
             {
                 PublishInternetEndpoints = true,
                 PublishMicrosoftEndpoints = true,
                 RoutingChoice = "MicrosoftRouting",
             },
-            Sku = new AzureNextGen.Storage.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Storage.Inputs.SkuArgs
             {
                 Name = "Standard_GRS",
             },
@@ -85,7 +85,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -144,19 +144,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_account = azure_nextgen.storage.latest.StorageAccount("storageAccount",
+storage_account = azure_nextgen.storage.StorageAccount("storageAccount",
     account_name="sto4445",
     allow_blob_public_access=False,
     allow_shared_key_access=True,
-    encryption=azure_nextgen.storage.latest.EncryptionArgs(
+    encryption=azure_nextgen.storage.EncryptionArgs(
         key_source="Microsoft.Storage",
         require_infrastructure_encryption=False,
-        services=azure_nextgen.storage.latest.EncryptionServicesArgs(
-            blob=azure_nextgen.storage.latest.EncryptionServiceArgs(
+        services=azure_nextgen.storage.EncryptionServicesArgs(
+            blob=azure_nextgen.storage.EncryptionServiceArgs(
                 enabled=True,
                 key_type="Account",
             ),
-            file=azure_nextgen.storage.latest.EncryptionServiceArgs(
+            file=azure_nextgen.storage.EncryptionServiceArgs(
                 enabled=True,
                 key_type="Account",
             ),
@@ -167,12 +167,12 @@ storage_account = azure_nextgen.storage.latest.StorageAccount("storageAccount",
     location="eastus",
     minimum_tls_version="TLS1_2",
     resource_group_name="res9101",
-    routing_preference=azure_nextgen.storage.latest.RoutingPreferenceArgs(
+    routing_preference=azure_nextgen.storage.RoutingPreferenceArgs(
         publish_internet_endpoints=True,
         publish_microsoft_endpoints=True,
         routing_choice="MicrosoftRouting",
     ),
-    sku=azure_nextgen.storage.latest.SkuArgs(
+    sku=azure_nextgen.storage.SkuArgs(
         name="Standard_GRS",
     ),
     tags={
@@ -190,7 +190,7 @@ storage_account = azure_nextgen.storage.latest.StorageAccount("storageAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageAccount", {
+const storageAccount = new azure_nextgen.storage.StorageAccount("storageAccount", {
     accountName: "sto4445",
     allowBlobPublicAccess: false,
     allowSharedKeyAccess: true,
@@ -239,7 +239,7 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">StorageAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -247,11 +247,11 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">StorageAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageAccount</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageAccount</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">StorageAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -272,7 +272,7 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageAccountArgs</span>
+        <span class="property-type"><a href="#inputs">StorageAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -341,7 +341,7 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageAccountArgs</span>
+        <span class="property-type"><a href="#inputs">StorageAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -380,7 +380,7 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageAccountArgs</span>
+        <span class="property-type"><a href="#inputs">StorageAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -403,11 +403,11 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
 
 ## StorageAccount Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The StorageAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The StorageAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -7605,7 +7605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:StorageAccount sto4445 /subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.Storage/storageAccounts/sto4445 
+$ pulumi import azure-nextgen:storage:StorageAccount sto4445 /subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.Storage/storageAccounts/sto4445 
 ```
 
 

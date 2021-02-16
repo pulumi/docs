@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.FileShare resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Properties of the file share, including Id, resource name, resource type, Etag.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileShare = new AzureNextGen.Storage.Latest.FileShare("fileShare", new AzureNextGen.Storage.Latest.FileShareArgs
+        var fileShare = new AzureNextGen.Storage.FileShare("fileShare", new AzureNextGen.Storage.FileShareArgs
         {
             AccountName = "sto666",
             EnabledProtocols = "NFS",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_share = azure_nextgen.storage.latest.FileShare("fileShare",
+file_share = azure_nextgen.storage.FileShare("fileShare",
     account_name="sto666",
     enabled_protocols="NFS",
     resource_group_name="res346",
@@ -93,7 +93,7 @@ file_share = azure_nextgen.storage.latest.FileShare("fileShare",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
+const fileShare = new azure_nextgen.storage.FileShare("fileShare", {
     accountName: "sto666",
     enabledProtocols: "NFS",
     resourceGroupName: "res346",
@@ -114,7 +114,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileShare = new AzureNextGen.Storage.Latest.FileShare("fileShare", new AzureNextGen.Storage.Latest.FileShareArgs
+        var fileShare = new AzureNextGen.Storage.FileShare("fileShare", new AzureNextGen.Storage.FileShareArgs
         {
             AccountName = "sto328",
             ResourceGroupName = "res3376",
@@ -134,7 +134,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -162,7 +162,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_share = azure_nextgen.storage.latest.FileShare("fileShare",
+file_share = azure_nextgen.storage.FileShare("fileShare",
     account_name="sto328",
     resource_group_name="res3376",
     share_name="share6185")
@@ -177,7 +177,7 @@ file_share = azure_nextgen.storage.latest.FileShare("fileShare",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
+const fileShare = new azure_nextgen.storage.FileShare("fileShare", {
     accountName: "sto328",
     resourceGroupName: "res3376",
     shareName: "share6185",
@@ -197,7 +197,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileShare = new AzureNextGen.Storage.Latest.FileShare("fileShare", new AzureNextGen.Storage.Latest.FileShareArgs
+        var fileShare = new AzureNextGen.Storage.FileShare("fileShare", new AzureNextGen.Storage.FileShareArgs
         {
             AccessTier = "Hot",
             AccountName = "sto666",
@@ -218,7 +218,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -247,7 +247,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_share = azure_nextgen.storage.latest.FileShare("fileShare",
+file_share = azure_nextgen.storage.FileShare("fileShare",
     access_tier="Hot",
     account_name="sto666",
     resource_group_name="res346",
@@ -263,7 +263,7 @@ file_share = azure_nextgen.storage.latest.FileShare("fileShare",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
+const fileShare = new azure_nextgen.storage.FileShare("fileShare", {
     accessTier: "Hot",
     accountName: "sto666",
     resourceGroupName: "res346",
@@ -282,7 +282,7 @@ const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FileShare</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FileShareArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FileShare</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FileShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -290,11 +290,11 @@ const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFileShare</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FileShareArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FileShare</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFileShare</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FileShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FileShare</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FileShare</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FileShareArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FileShare</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FileShareArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -315,7 +315,7 @@ const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FileShareArgs</span>
+        <span class="property-type"><a href="#inputs">FileShareArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -384,7 +384,7 @@ const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FileShareArgs</span>
+        <span class="property-type"><a href="#inputs">FileShareArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -423,7 +423,7 @@ const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FileShareArgs</span>
+        <span class="property-type"><a href="#inputs">FileShareArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -446,11 +446,11 @@ const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
 
 ## FileShare Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The FileShare resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The FileShare resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1382,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:FileShare share1235 /subscriptions/{subscription-id}/resourceGroups/res346/providers/Microsoft.Storage/storageAccounts/sto666/fileServices/default/shares/share1235 
+$ pulumi import azure-nextgen:storage:FileShare share1235 /subscriptions/{subscription-id}/resourceGroups/res346/providers/Microsoft.Storage/storageAccounts/sto666/fileServices/default/shares/share1235 
 ```
 
 

@@ -19,7 +19,7 @@ meta_desc: "Explore the GetConnectedCluster function of the kubernetes module, i
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConnectedCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetConnectedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetConnectedClusterResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConnectedCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetConnectedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetConnectedClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetConnectedCluster function of the kubernetes module, i
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConnectedCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupConnectedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupConnectedClusterResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConnectedCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupConnectedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupConnectedClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupConnectedCluster` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetConnectedCluster function of the kubernetes module, i
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetConnectedCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetConnectedClusterResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetConnectedClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetConnectedClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetConnectedClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -157,15 +157,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="aadprofile_csharp">
-<a href="#aadprofile_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteraadprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Outputs.<wbr>Connected<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="agentpublickeycertificate_csharp">
 <a href="#agentpublickeycertificate_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Public<wbr>Key<wbr>Certificate</a>
 </span>
@@ -182,6 +173,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the agent running on the connected cluster resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="connectivitystatus_csharp">
+<a href="#connectivitystatus_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -256,6 +256,15 @@ The following output properties are available:
     <dd>{{% md %}}Connected cluster offering{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="totalcorecount_csharp">
 <a href="#totalcorecount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Core<wbr>Count</a>
 </span>
@@ -281,15 +290,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="connectivitystatus_csharp">
-<a href="#connectivitystatus_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="distribution_csharp">
@@ -334,15 +334,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="aadprofile_go">
-<a href="#aadprofile_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteraadprofileresponse">Connected<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="agentpublickeycertificate_go">
 <a href="#agentpublickeycertificate_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Public<wbr>Key<wbr>Certificate</a>
 </span>
@@ -359,6 +350,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the agent running on the connected cluster resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="connectivitystatus_go">
+<a href="#connectivitystatus_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -433,6 +433,15 @@ The following output properties are available:
     <dd>{{% md %}}Connected cluster offering{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="totalcorecount_go">
 <a href="#totalcorecount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Core<wbr>Count</a>
 </span>
@@ -458,15 +467,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="connectivitystatus_go">
-<a href="#connectivitystatus_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="distribution_go">
@@ -511,15 +511,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="aadprofile_nodejs">
-<a href="#aadprofile_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteraadprofileresponse">Connected<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="agentpublickeycertificate_nodejs">
 <a href="#agentpublickeycertificate_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Public<wbr>Key<wbr>Certificate</a>
 </span>
@@ -536,6 +527,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the agent running on the connected cluster resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="connectivitystatus_nodejs">
+<a href="#connectivitystatus_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -610,6 +610,15 @@ The following output properties are available:
     <dd>{{% md %}}Connected cluster offering{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="totalcorecount_nodejs">
 <a href="#totalcorecount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Core<wbr>Count</a>
 </span>
@@ -635,15 +644,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="connectivitystatus_nodejs">
-<a href="#connectivitystatus_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="distribution_nodejs">
@@ -688,15 +688,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="aad_profile_python">
-<a href="#aad_profile_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteraadprofileresponse">Connected<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}AAD profile of the connected cluster.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="agent_public_key_certificate_python">
 <a href="#agent_public_key_certificate_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>public_<wbr>key_<wbr>certificate</a>
 </span>
@@ -713,6 +704,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the agent running on the connected cluster resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="connectivity_status_python">
+<a href="#connectivity_status_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -787,6 +787,15 @@ The following output properties are available:
     <dd>{{% md %}}Connected cluster offering{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="total_core_count_python">
 <a href="#total_core_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>core_<wbr>count</a>
 </span>
@@ -812,15 +821,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="connectivity_status_python">
-<a href="#connectivity_status_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Represents the connectivity status of the connected cluster.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="distribution_python">
@@ -866,149 +866,7 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="connectedclusteraadprofileresponse">Connected<wbr>Cluster<wbr>AADProfile<wbr>Response</h4>
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="clientappid_csharp">
-<a href="#clientappid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client app id configured on target K8 cluster {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="serverappid_csharp">
-<a href="#serverappid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The server app id to access AD server{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="tenantid_csharp">
-<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The aad tenant id which is configured on target K8s cluster{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="clientappid_go">
-<a href="#clientappid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client app id configured on target K8 cluster {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="serverappid_go">
-<a href="#serverappid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The server app id to access AD server{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="tenantid_go">
-<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The aad tenant id which is configured on target K8s cluster{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="clientappid_nodejs">
-<a href="#clientappid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client app id configured on target K8 cluster {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="serverappid_nodejs">
-<a href="#serverappid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The server app id to access AD server{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="tenantid_nodejs">
-<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The aad tenant id which is configured on target K8s cluster{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="client_app_id_python">
-<a href="#client_app_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>app_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The client app id configured on target K8 cluster {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="server_app_id_python">
-<a href="#server_app_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>app_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The server app id to access AD server{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="tenant_id_python">
-<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The aad tenant id which is configured on target K8s cluster{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
 <h4 id="connectedclusteridentityresponse">Connected<wbr>Cluster<wbr>Identity<wbr>Response</h4>
-
-
-
 
 
 
@@ -1141,6 +999,250 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

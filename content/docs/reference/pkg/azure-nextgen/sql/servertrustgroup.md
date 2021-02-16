@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.ServerTrustGroup resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A server trust group.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverTrustGroup = new AzureNextGen.Sql.V20200801Preview.ServerTrustGroup("serverTrustGroup", new AzureNextGen.Sql.V20200801Preview.ServerTrustGroupArgs
+        var serverTrustGroup = new AzureNextGen.Sql.ServerTrustGroup("serverTrustGroup", new AzureNextGen.Sql.ServerTrustGroupArgs
         {
             GroupMembers = 
             {
-                new AzureNextGen.Sql.V20200801Preview.Inputs.ServerInfoArgs
+                new AzureNextGen.Sql.Inputs.ServerInfoArgs
                 {
                     ServerId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",
                 },
-                new AzureNextGen.Sql.V20200801Preview.Inputs.ServerInfoArgs
+                new AzureNextGen.Sql.Inputs.ServerInfoArgs
                 {
                     ServerId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-2",
                 },
@@ -61,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -100,12 +101,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_trust_group = azure_nextgen.sql.v20200801preview.ServerTrustGroup("serverTrustGroup",
+server_trust_group = azure_nextgen.sql.ServerTrustGroup("serverTrustGroup",
     group_members=[
-        azure_nextgen.sql.v20200801preview.ServerInfoArgs(
+        azure_nextgen.sql.ServerInfoArgs(
             server_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",
         ),
-        azure_nextgen.sql.v20200801preview.ServerInfoArgs(
+        azure_nextgen.sql.ServerInfoArgs(
             server_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-2",
         ),
     ],
@@ -124,7 +125,7 @@ server_trust_group = azure_nextgen.sql.v20200801preview.ServerTrustGroup("server
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const serverTrustGroup = new azure_nextgen.sql.v20200801preview.ServerTrustGroup("serverTrustGroup", {
+const serverTrustGroup = new azure_nextgen.sql.ServerTrustGroup("serverTrustGroup", {
     groupMembers: [
         {
             serverId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",
@@ -151,7 +152,7 @@ const serverTrustGroup = new azure_nextgen.sql.v20200801preview.ServerTrustGroup
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServerTrustGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ServerTrustGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServerTrustGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerTrustGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -159,11 +160,11 @@ const serverTrustGroup = new azure_nextgen.sql.v20200801preview.ServerTrustGroup
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServerTrustGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ServerTrustGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerTrustGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServerTrustGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerTrustGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerTrustGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServerTrustGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ServerTrustGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServerTrustGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServerTrustGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -184,7 +185,7 @@ const serverTrustGroup = new azure_nextgen.sql.v20200801preview.ServerTrustGroup
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServerTrustGroupArgs</span>
+        <span class="property-type"><a href="#inputs">ServerTrustGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -253,7 +254,7 @@ const serverTrustGroup = new azure_nextgen.sql.v20200801preview.ServerTrustGroup
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServerTrustGroupArgs</span>
+        <span class="property-type"><a href="#inputs">ServerTrustGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -292,7 +293,7 @@ const serverTrustGroup = new azure_nextgen.sql.v20200801preview.ServerTrustGroup
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServerTrustGroupArgs</span>
+        <span class="property-type"><a href="#inputs">ServerTrustGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -315,11 +316,11 @@ const serverTrustGroup = new azure_nextgen.sql.v20200801preview.ServerTrustGroup
 
 ## ServerTrustGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ServerTrustGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ServerTrustGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -805,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:ServerTrustGroup server-trust-group-test /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/locations/Japan East/serverTrustGroups/server-trust-group-test 
+$ pulumi import azure-nextgen:sql:ServerTrustGroup server-trust-group-test /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/locations/Japan East/serverTrustGroups/server-trust-group-test 
 ```
 
 

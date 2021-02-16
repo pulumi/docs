@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.botservice.EnterpriseChannel res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Enterprise Channel resource definition
-Latest API Version: 2018-07-12.
+API Version: 2018-07-12.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var enterpriseChannel = new AzureNextGen.BotService.Latest.EnterpriseChannel("enterpriseChannel", new AzureNextGen.BotService.Latest.EnterpriseChannelArgs
+        var enterpriseChannel = new AzureNextGen.BotService.EnterpriseChannel("enterpriseChannel", new AzureNextGen.BotService.EnterpriseChannelArgs
         {
             Etag = "etag1",
             Location = "West US",
-            Properties = new AzureNextGen.BotService.Latest.Inputs.EnterpriseChannelPropertiesArgs
+            Properties = new AzureNextGen.BotService.Inputs.EnterpriseChannelPropertiesArgs
             {
                 Nodes = 
                 {
-                    new AzureNextGen.BotService.Latest.Inputs.EnterpriseChannelNodeArgs
+                    new AzureNextGen.BotService.Inputs.EnterpriseChannelNodeArgs
                     {
                         AzureLocation = "WestUs",
                         AzureSku = "Int1",
@@ -45,7 +45,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "contoso-dl",
-            Sku = new AzureNextGen.BotService.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.BotService.Inputs.SkuArgs
             {
                 Name = "S1",
             },
@@ -69,7 +69,7 @@ class MyStack : Stack
 package main
 
 import (
-	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice/latest"
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -114,11 +114,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-enterprise_channel = azure_nextgen.botservice.latest.EnterpriseChannel("enterpriseChannel",
+enterprise_channel = azure_nextgen.botservice.EnterpriseChannel("enterpriseChannel",
     etag="etag1",
     location="West US",
-    properties=azure_nextgen.botservice.latest.EnterpriseChannelPropertiesArgs(
-        nodes=[azure_nextgen.botservice.latest.EnterpriseChannelNodeArgs(
+    properties=azure_nextgen.botservice.EnterpriseChannelPropertiesArgs(
+        nodes=[azure_nextgen.botservice.EnterpriseChannelNodeArgs(
             azure_location="WestUs",
             azure_sku="Int1",
             name="Node 1",
@@ -126,7 +126,7 @@ enterprise_channel = azure_nextgen.botservice.latest.EnterpriseChannel("enterpri
     ),
     resource_group_name="OneResourceGroupName",
     resource_name="contoso-dl",
-    sku=azure_nextgen.botservice.latest.SkuArgs(
+    sku=azure_nextgen.botservice.SkuArgs(
         name="S1",
     ),
     tags={
@@ -144,7 +144,7 @@ enterprise_channel = azure_nextgen.botservice.latest.EnterpriseChannel("enterpri
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const enterpriseChannel = new azure_nextgen.botservice.latest.EnterpriseChannel("enterpriseChannel", {
+const enterpriseChannel = new azure_nextgen.botservice.EnterpriseChannel("enterpriseChannel", {
     etag: "etag1",
     location: "West US",
     properties: {
@@ -177,7 +177,7 @@ const enterpriseChannel = new azure_nextgen.botservice.latest.EnterpriseChannel(
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EnterpriseChannel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">EnterpriseChannelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EnterpriseChannel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnterpriseChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -185,11 +185,11 @@ const enterpriseChannel = new azure_nextgen.botservice.latest.EnterpriseChannel(
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEnterpriseChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">EnterpriseChannelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EnterpriseChannel</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEnterpriseChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EnterpriseChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EnterpriseChannel</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EnterpriseChannel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">EnterpriseChannelArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EnterpriseChannel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EnterpriseChannelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -210,7 +210,7 @@ const enterpriseChannel = new azure_nextgen.botservice.latest.EnterpriseChannel(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EnterpriseChannelArgs</span>
+        <span class="property-type"><a href="#inputs">EnterpriseChannelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -279,7 +279,7 @@ const enterpriseChannel = new azure_nextgen.botservice.latest.EnterpriseChannel(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EnterpriseChannelArgs</span>
+        <span class="property-type"><a href="#inputs">EnterpriseChannelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -318,7 +318,7 @@ const enterpriseChannel = new azure_nextgen.botservice.latest.EnterpriseChannel(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EnterpriseChannelArgs</span>
+        <span class="property-type"><a href="#inputs">EnterpriseChannelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -341,11 +341,11 @@ const enterpriseChannel = new azure_nextgen.botservice.latest.EnterpriseChannel(
 
 ## EnterpriseChannel Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1843,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:botservice/latest:EnterpriseChannel myresource1 someid 
+$ pulumi import azure-nextgen:botservice:EnterpriseChannel myresource1 someid 
 ```
 
 

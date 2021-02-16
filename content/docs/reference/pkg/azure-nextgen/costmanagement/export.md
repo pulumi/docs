@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.costmanagement.Export resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An export resource.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var export = new AzureNextGen.CostManagement.Latest.Export("export", new AzureNextGen.CostManagement.Latest.ExportArgs
+        var export = new AzureNextGen.CostManagement.Export("export", new AzureNextGen.CostManagement.ExportArgs
         {
-            Definition = new AzureNextGen.CostManagement.Latest.Inputs.ExportDefinitionArgs
+            Definition = new AzureNextGen.CostManagement.Inputs.ExportDefinitionArgs
             {
-                DataSet = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetArgs
+                DataSet = new AzureNextGen.CostManagement.Inputs.ExportDatasetArgs
                 {
-                    Configuration = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetConfigurationArgs
+                    Configuration = new AzureNextGen.CostManagement.Inputs.ExportDatasetConfigurationArgs
                     {
                         Columns = 
                         {
@@ -49,9 +49,9 @@ class MyStack : Stack
                 Timeframe = "MonthToDate",
                 Type = "ActualCost",
             },
-            DeliveryInfo = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryInfoArgs
+            DeliveryInfo = new AzureNextGen.CostManagement.Inputs.ExportDeliveryInfoArgs
             {
-                Destination = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryDestinationArgs
+                Destination = new AzureNextGen.CostManagement.Inputs.ExportDeliveryDestinationArgs
                 {
                     Container = "exports",
                     ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
@@ -60,10 +60,10 @@ class MyStack : Stack
             },
             ExportName = "TestExport",
             Format = "Csv",
-            Schedule = new AzureNextGen.CostManagement.Latest.Inputs.ExportScheduleArgs
+            Schedule = new AzureNextGen.CostManagement.Inputs.ExportScheduleArgs
             {
                 Recurrence = "Weekly",
-                RecurrencePeriod = new AzureNextGen.CostManagement.Latest.Inputs.ExportRecurrencePeriodArgs
+                RecurrencePeriod = new AzureNextGen.CostManagement.Inputs.ExportRecurrencePeriodArgs
                 {
                     From = "2020-06-01T00:00:00Z",
                     To = "2020-10-31T00:00:00Z",
@@ -86,7 +86,7 @@ class MyStack : Stack
 package main
 
 import (
-	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/latest"
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -145,10 +145,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-export = azure_nextgen.costmanagement.latest.Export("export",
-    definition=azure_nextgen.costmanagement.latest.ExportDefinitionArgs(
-        data_set=azure_nextgen.costmanagement.latest.ExportDatasetArgs(
-            configuration=azure_nextgen.costmanagement.latest.ExportDatasetConfigurationArgs(
+export = azure_nextgen.costmanagement.Export("export",
+    definition=azure_nextgen.costmanagement.ExportDefinitionArgs(
+        data_set=azure_nextgen.costmanagement.ExportDatasetArgs(
+            configuration=azure_nextgen.costmanagement.ExportDatasetConfigurationArgs(
                 columns=[
                     "Date",
                     "MeterId",
@@ -162,8 +162,8 @@ export = azure_nextgen.costmanagement.latest.Export("export",
         timeframe="MonthToDate",
         type="ActualCost",
     ),
-    delivery_info=azure_nextgen.costmanagement.latest.ExportDeliveryInfoArgs(
-        destination=azure_nextgen.costmanagement.latest.ExportDeliveryDestinationArgs(
+    delivery_info=azure_nextgen.costmanagement.ExportDeliveryInfoArgs(
+        destination=azure_nextgen.costmanagement.ExportDeliveryDestinationArgs(
             container="exports",
             resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
             root_folder_path="ad-hoc",
@@ -171,9 +171,9 @@ export = azure_nextgen.costmanagement.latest.Export("export",
     ),
     export_name="TestExport",
     format="Csv",
-    schedule=azure_nextgen.costmanagement.latest.ExportScheduleArgs(
+    schedule=azure_nextgen.costmanagement.ExportScheduleArgs(
         recurrence="Weekly",
-        recurrence_period=azure_nextgen.costmanagement.latest.ExportRecurrencePeriodArgs(
+        recurrence_period=azure_nextgen.costmanagement.ExportRecurrencePeriodArgs(
             from_="2020-06-01T00:00:00Z",
             to="2020-10-31T00:00:00Z",
         ),
@@ -191,7 +191,7 @@ export = azure_nextgen.costmanagement.latest.Export("export",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const _export = new azure_nextgen.costmanagement.latest.Export("export", {
+const _export = new azure_nextgen.costmanagement.Export("export", {
     definition: {
         dataSet: {
             configuration: {
@@ -242,13 +242,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var export = new AzureNextGen.CostManagement.Latest.Export("export", new AzureNextGen.CostManagement.Latest.ExportArgs
+        var export = new AzureNextGen.CostManagement.Export("export", new AzureNextGen.CostManagement.ExportArgs
         {
-            Definition = new AzureNextGen.CostManagement.Latest.Inputs.ExportDefinitionArgs
+            Definition = new AzureNextGen.CostManagement.Inputs.ExportDefinitionArgs
             {
-                DataSet = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetArgs
+                DataSet = new AzureNextGen.CostManagement.Inputs.ExportDatasetArgs
                 {
-                    Configuration = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetConfigurationArgs
+                    Configuration = new AzureNextGen.CostManagement.Inputs.ExportDatasetConfigurationArgs
                     {
                         Columns = 
                         {
@@ -264,9 +264,9 @@ class MyStack : Stack
                 Timeframe = "MonthToDate",
                 Type = "ActualCost",
             },
-            DeliveryInfo = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryInfoArgs
+            DeliveryInfo = new AzureNextGen.CostManagement.Inputs.ExportDeliveryInfoArgs
             {
-                Destination = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryDestinationArgs
+                Destination = new AzureNextGen.CostManagement.Inputs.ExportDeliveryDestinationArgs
                 {
                     Container = "exports",
                     ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
@@ -275,10 +275,10 @@ class MyStack : Stack
             },
             ExportName = "TestExport",
             Format = "Csv",
-            Schedule = new AzureNextGen.CostManagement.Latest.Inputs.ExportScheduleArgs
+            Schedule = new AzureNextGen.CostManagement.Inputs.ExportScheduleArgs
             {
                 Recurrence = "Weekly",
-                RecurrencePeriod = new AzureNextGen.CostManagement.Latest.Inputs.ExportRecurrencePeriodArgs
+                RecurrencePeriod = new AzureNextGen.CostManagement.Inputs.ExportRecurrencePeriodArgs
                 {
                     From = "2020-06-01T00:00:00Z",
                     To = "2020-10-31T00:00:00Z",
@@ -301,7 +301,7 @@ class MyStack : Stack
 package main
 
 import (
-	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/latest"
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -360,10 +360,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-export = azure_nextgen.costmanagement.latest.Export("export",
-    definition=azure_nextgen.costmanagement.latest.ExportDefinitionArgs(
-        data_set=azure_nextgen.costmanagement.latest.ExportDatasetArgs(
-            configuration=azure_nextgen.costmanagement.latest.ExportDatasetConfigurationArgs(
+export = azure_nextgen.costmanagement.Export("export",
+    definition=azure_nextgen.costmanagement.ExportDefinitionArgs(
+        data_set=azure_nextgen.costmanagement.ExportDatasetArgs(
+            configuration=azure_nextgen.costmanagement.ExportDatasetConfigurationArgs(
                 columns=[
                     "Date",
                     "MeterId",
@@ -377,8 +377,8 @@ export = azure_nextgen.costmanagement.latest.Export("export",
         timeframe="MonthToDate",
         type="ActualCost",
     ),
-    delivery_info=azure_nextgen.costmanagement.latest.ExportDeliveryInfoArgs(
-        destination=azure_nextgen.costmanagement.latest.ExportDeliveryDestinationArgs(
+    delivery_info=azure_nextgen.costmanagement.ExportDeliveryInfoArgs(
+        destination=azure_nextgen.costmanagement.ExportDeliveryDestinationArgs(
             container="exports",
             resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
             root_folder_path="ad-hoc",
@@ -386,9 +386,9 @@ export = azure_nextgen.costmanagement.latest.Export("export",
     ),
     export_name="TestExport",
     format="Csv",
-    schedule=azure_nextgen.costmanagement.latest.ExportScheduleArgs(
+    schedule=azure_nextgen.costmanagement.ExportScheduleArgs(
         recurrence="Weekly",
-        recurrence_period=azure_nextgen.costmanagement.latest.ExportRecurrencePeriodArgs(
+        recurrence_period=azure_nextgen.costmanagement.ExportRecurrencePeriodArgs(
             from_="2020-06-01T00:00:00Z",
             to="2020-10-31T00:00:00Z",
         ),
@@ -406,7 +406,7 @@ export = azure_nextgen.costmanagement.latest.Export("export",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const _export = new azure_nextgen.costmanagement.latest.Export("export", {
+const _export = new azure_nextgen.costmanagement.Export("export", {
     definition: {
         dataSet: {
             configuration: {
@@ -457,13 +457,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var export = new AzureNextGen.CostManagement.Latest.Export("export", new AzureNextGen.CostManagement.Latest.ExportArgs
+        var export = new AzureNextGen.CostManagement.Export("export", new AzureNextGen.CostManagement.ExportArgs
         {
-            Definition = new AzureNextGen.CostManagement.Latest.Inputs.ExportDefinitionArgs
+            Definition = new AzureNextGen.CostManagement.Inputs.ExportDefinitionArgs
             {
-                DataSet = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetArgs
+                DataSet = new AzureNextGen.CostManagement.Inputs.ExportDatasetArgs
                 {
-                    Configuration = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetConfigurationArgs
+                    Configuration = new AzureNextGen.CostManagement.Inputs.ExportDatasetConfigurationArgs
                     {
                         Columns = 
                         {
@@ -479,9 +479,9 @@ class MyStack : Stack
                 Timeframe = "MonthToDate",
                 Type = "ActualCost",
             },
-            DeliveryInfo = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryInfoArgs
+            DeliveryInfo = new AzureNextGen.CostManagement.Inputs.ExportDeliveryInfoArgs
             {
-                Destination = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryDestinationArgs
+                Destination = new AzureNextGen.CostManagement.Inputs.ExportDeliveryDestinationArgs
                 {
                     Container = "exports",
                     ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
@@ -490,10 +490,10 @@ class MyStack : Stack
             },
             ExportName = "TestExport",
             Format = "Csv",
-            Schedule = new AzureNextGen.CostManagement.Latest.Inputs.ExportScheduleArgs
+            Schedule = new AzureNextGen.CostManagement.Inputs.ExportScheduleArgs
             {
                 Recurrence = "Weekly",
-                RecurrencePeriod = new AzureNextGen.CostManagement.Latest.Inputs.ExportRecurrencePeriodArgs
+                RecurrencePeriod = new AzureNextGen.CostManagement.Inputs.ExportRecurrencePeriodArgs
                 {
                     From = "2020-06-01T00:00:00Z",
                     To = "2020-10-31T00:00:00Z",
@@ -516,7 +516,7 @@ class MyStack : Stack
 package main
 
 import (
-	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/latest"
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -575,10 +575,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-export = azure_nextgen.costmanagement.latest.Export("export",
-    definition=azure_nextgen.costmanagement.latest.ExportDefinitionArgs(
-        data_set=azure_nextgen.costmanagement.latest.ExportDatasetArgs(
-            configuration=azure_nextgen.costmanagement.latest.ExportDatasetConfigurationArgs(
+export = azure_nextgen.costmanagement.Export("export",
+    definition=azure_nextgen.costmanagement.ExportDefinitionArgs(
+        data_set=azure_nextgen.costmanagement.ExportDatasetArgs(
+            configuration=azure_nextgen.costmanagement.ExportDatasetConfigurationArgs(
                 columns=[
                     "Date",
                     "MeterId",
@@ -592,8 +592,8 @@ export = azure_nextgen.costmanagement.latest.Export("export",
         timeframe="MonthToDate",
         type="ActualCost",
     ),
-    delivery_info=azure_nextgen.costmanagement.latest.ExportDeliveryInfoArgs(
-        destination=azure_nextgen.costmanagement.latest.ExportDeliveryDestinationArgs(
+    delivery_info=azure_nextgen.costmanagement.ExportDeliveryInfoArgs(
+        destination=azure_nextgen.costmanagement.ExportDeliveryDestinationArgs(
             container="exports",
             resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
             root_folder_path="ad-hoc",
@@ -601,9 +601,9 @@ export = azure_nextgen.costmanagement.latest.Export("export",
     ),
     export_name="TestExport",
     format="Csv",
-    schedule=azure_nextgen.costmanagement.latest.ExportScheduleArgs(
+    schedule=azure_nextgen.costmanagement.ExportScheduleArgs(
         recurrence="Weekly",
-        recurrence_period=azure_nextgen.costmanagement.latest.ExportRecurrencePeriodArgs(
+        recurrence_period=azure_nextgen.costmanagement.ExportRecurrencePeriodArgs(
             from_="2020-06-01T00:00:00Z",
             to="2020-10-31T00:00:00Z",
         ),
@@ -621,7 +621,7 @@ export = azure_nextgen.costmanagement.latest.Export("export",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const _export = new azure_nextgen.costmanagement.latest.Export("export", {
+const _export = new azure_nextgen.costmanagement.Export("export", {
     definition: {
         dataSet: {
             configuration: {
@@ -672,13 +672,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var export = new AzureNextGen.CostManagement.Latest.Export("export", new AzureNextGen.CostManagement.Latest.ExportArgs
+        var export = new AzureNextGen.CostManagement.Export("export", new AzureNextGen.CostManagement.ExportArgs
         {
-            Definition = new AzureNextGen.CostManagement.Latest.Inputs.ExportDefinitionArgs
+            Definition = new AzureNextGen.CostManagement.Inputs.ExportDefinitionArgs
             {
-                DataSet = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetArgs
+                DataSet = new AzureNextGen.CostManagement.Inputs.ExportDatasetArgs
                 {
-                    Configuration = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetConfigurationArgs
+                    Configuration = new AzureNextGen.CostManagement.Inputs.ExportDatasetConfigurationArgs
                     {
                         Columns = 
                         {
@@ -694,9 +694,9 @@ class MyStack : Stack
                 Timeframe = "MonthToDate",
                 Type = "ActualCost",
             },
-            DeliveryInfo = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryInfoArgs
+            DeliveryInfo = new AzureNextGen.CostManagement.Inputs.ExportDeliveryInfoArgs
             {
-                Destination = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryDestinationArgs
+                Destination = new AzureNextGen.CostManagement.Inputs.ExportDeliveryDestinationArgs
                 {
                     Container = "exports",
                     ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
@@ -705,10 +705,10 @@ class MyStack : Stack
             },
             ExportName = "TestExport",
             Format = "Csv",
-            Schedule = new AzureNextGen.CostManagement.Latest.Inputs.ExportScheduleArgs
+            Schedule = new AzureNextGen.CostManagement.Inputs.ExportScheduleArgs
             {
                 Recurrence = "Weekly",
-                RecurrencePeriod = new AzureNextGen.CostManagement.Latest.Inputs.ExportRecurrencePeriodArgs
+                RecurrencePeriod = new AzureNextGen.CostManagement.Inputs.ExportRecurrencePeriodArgs
                 {
                     From = "2020-06-01T00:00:00Z",
                     To = "2020-10-31T00:00:00Z",
@@ -731,7 +731,7 @@ class MyStack : Stack
 package main
 
 import (
-	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/latest"
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -790,10 +790,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-export = azure_nextgen.costmanagement.latest.Export("export",
-    definition=azure_nextgen.costmanagement.latest.ExportDefinitionArgs(
-        data_set=azure_nextgen.costmanagement.latest.ExportDatasetArgs(
-            configuration=azure_nextgen.costmanagement.latest.ExportDatasetConfigurationArgs(
+export = azure_nextgen.costmanagement.Export("export",
+    definition=azure_nextgen.costmanagement.ExportDefinitionArgs(
+        data_set=azure_nextgen.costmanagement.ExportDatasetArgs(
+            configuration=azure_nextgen.costmanagement.ExportDatasetConfigurationArgs(
                 columns=[
                     "Date",
                     "MeterId",
@@ -807,8 +807,8 @@ export = azure_nextgen.costmanagement.latest.Export("export",
         timeframe="MonthToDate",
         type="ActualCost",
     ),
-    delivery_info=azure_nextgen.costmanagement.latest.ExportDeliveryInfoArgs(
-        destination=azure_nextgen.costmanagement.latest.ExportDeliveryDestinationArgs(
+    delivery_info=azure_nextgen.costmanagement.ExportDeliveryInfoArgs(
+        destination=azure_nextgen.costmanagement.ExportDeliveryDestinationArgs(
             container="exports",
             resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
             root_folder_path="ad-hoc",
@@ -816,9 +816,9 @@ export = azure_nextgen.costmanagement.latest.Export("export",
     ),
     export_name="TestExport",
     format="Csv",
-    schedule=azure_nextgen.costmanagement.latest.ExportScheduleArgs(
+    schedule=azure_nextgen.costmanagement.ExportScheduleArgs(
         recurrence="Weekly",
-        recurrence_period=azure_nextgen.costmanagement.latest.ExportRecurrencePeriodArgs(
+        recurrence_period=azure_nextgen.costmanagement.ExportRecurrencePeriodArgs(
             from_="2020-06-01T00:00:00Z",
             to="2020-10-31T00:00:00Z",
         ),
@@ -836,7 +836,7 @@ export = azure_nextgen.costmanagement.latest.Export("export",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const _export = new azure_nextgen.costmanagement.latest.Export("export", {
+const _export = new azure_nextgen.costmanagement.Export("export", {
     definition: {
         dataSet: {
             configuration: {
@@ -887,13 +887,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var export = new AzureNextGen.CostManagement.Latest.Export("export", new AzureNextGen.CostManagement.Latest.ExportArgs
+        var export = new AzureNextGen.CostManagement.Export("export", new AzureNextGen.CostManagement.ExportArgs
         {
-            Definition = new AzureNextGen.CostManagement.Latest.Inputs.ExportDefinitionArgs
+            Definition = new AzureNextGen.CostManagement.Inputs.ExportDefinitionArgs
             {
-                DataSet = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetArgs
+                DataSet = new AzureNextGen.CostManagement.Inputs.ExportDatasetArgs
                 {
-                    Configuration = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetConfigurationArgs
+                    Configuration = new AzureNextGen.CostManagement.Inputs.ExportDatasetConfigurationArgs
                     {
                         Columns = 
                         {
@@ -909,9 +909,9 @@ class MyStack : Stack
                 Timeframe = "MonthToDate",
                 Type = "ActualCost",
             },
-            DeliveryInfo = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryInfoArgs
+            DeliveryInfo = new AzureNextGen.CostManagement.Inputs.ExportDeliveryInfoArgs
             {
-                Destination = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryDestinationArgs
+                Destination = new AzureNextGen.CostManagement.Inputs.ExportDeliveryDestinationArgs
                 {
                     Container = "exports",
                     ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
@@ -920,10 +920,10 @@ class MyStack : Stack
             },
             ExportName = "TestExport",
             Format = "Csv",
-            Schedule = new AzureNextGen.CostManagement.Latest.Inputs.ExportScheduleArgs
+            Schedule = new AzureNextGen.CostManagement.Inputs.ExportScheduleArgs
             {
                 Recurrence = "Weekly",
-                RecurrencePeriod = new AzureNextGen.CostManagement.Latest.Inputs.ExportRecurrencePeriodArgs
+                RecurrencePeriod = new AzureNextGen.CostManagement.Inputs.ExportRecurrencePeriodArgs
                 {
                     From = "2020-06-01T00:00:00Z",
                     To = "2020-10-31T00:00:00Z",
@@ -946,7 +946,7 @@ class MyStack : Stack
 package main
 
 import (
-	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/latest"
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1005,10 +1005,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-export = azure_nextgen.costmanagement.latest.Export("export",
-    definition=azure_nextgen.costmanagement.latest.ExportDefinitionArgs(
-        data_set=azure_nextgen.costmanagement.latest.ExportDatasetArgs(
-            configuration=azure_nextgen.costmanagement.latest.ExportDatasetConfigurationArgs(
+export = azure_nextgen.costmanagement.Export("export",
+    definition=azure_nextgen.costmanagement.ExportDefinitionArgs(
+        data_set=azure_nextgen.costmanagement.ExportDatasetArgs(
+            configuration=azure_nextgen.costmanagement.ExportDatasetConfigurationArgs(
                 columns=[
                     "Date",
                     "MeterId",
@@ -1022,8 +1022,8 @@ export = azure_nextgen.costmanagement.latest.Export("export",
         timeframe="MonthToDate",
         type="ActualCost",
     ),
-    delivery_info=azure_nextgen.costmanagement.latest.ExportDeliveryInfoArgs(
-        destination=azure_nextgen.costmanagement.latest.ExportDeliveryDestinationArgs(
+    delivery_info=azure_nextgen.costmanagement.ExportDeliveryInfoArgs(
+        destination=azure_nextgen.costmanagement.ExportDeliveryDestinationArgs(
             container="exports",
             resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
             root_folder_path="ad-hoc",
@@ -1031,9 +1031,9 @@ export = azure_nextgen.costmanagement.latest.Export("export",
     ),
     export_name="TestExport",
     format="Csv",
-    schedule=azure_nextgen.costmanagement.latest.ExportScheduleArgs(
+    schedule=azure_nextgen.costmanagement.ExportScheduleArgs(
         recurrence="Weekly",
-        recurrence_period=azure_nextgen.costmanagement.latest.ExportRecurrencePeriodArgs(
+        recurrence_period=azure_nextgen.costmanagement.ExportRecurrencePeriodArgs(
             from_="2020-06-01T00:00:00Z",
             to="2020-10-31T00:00:00Z",
         ),
@@ -1051,7 +1051,7 @@ export = azure_nextgen.costmanagement.latest.Export("export",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const _export = new azure_nextgen.costmanagement.latest.Export("export", {
+const _export = new azure_nextgen.costmanagement.Export("export", {
     definition: {
         dataSet: {
             configuration: {
@@ -1102,13 +1102,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var export = new AzureNextGen.CostManagement.Latest.Export("export", new AzureNextGen.CostManagement.Latest.ExportArgs
+        var export = new AzureNextGen.CostManagement.Export("export", new AzureNextGen.CostManagement.ExportArgs
         {
-            Definition = new AzureNextGen.CostManagement.Latest.Inputs.ExportDefinitionArgs
+            Definition = new AzureNextGen.CostManagement.Inputs.ExportDefinitionArgs
             {
-                DataSet = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetArgs
+                DataSet = new AzureNextGen.CostManagement.Inputs.ExportDatasetArgs
                 {
-                    Configuration = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetConfigurationArgs
+                    Configuration = new AzureNextGen.CostManagement.Inputs.ExportDatasetConfigurationArgs
                     {
                         Columns = 
                         {
@@ -1124,9 +1124,9 @@ class MyStack : Stack
                 Timeframe = "MonthToDate",
                 Type = "ActualCost",
             },
-            DeliveryInfo = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryInfoArgs
+            DeliveryInfo = new AzureNextGen.CostManagement.Inputs.ExportDeliveryInfoArgs
             {
-                Destination = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryDestinationArgs
+                Destination = new AzureNextGen.CostManagement.Inputs.ExportDeliveryDestinationArgs
                 {
                     Container = "exports",
                     ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
@@ -1135,10 +1135,10 @@ class MyStack : Stack
             },
             ExportName = "TestExport",
             Format = "Csv",
-            Schedule = new AzureNextGen.CostManagement.Latest.Inputs.ExportScheduleArgs
+            Schedule = new AzureNextGen.CostManagement.Inputs.ExportScheduleArgs
             {
                 Recurrence = "Weekly",
-                RecurrencePeriod = new AzureNextGen.CostManagement.Latest.Inputs.ExportRecurrencePeriodArgs
+                RecurrencePeriod = new AzureNextGen.CostManagement.Inputs.ExportRecurrencePeriodArgs
                 {
                     From = "2020-06-01T00:00:00Z",
                     To = "2020-10-31T00:00:00Z",
@@ -1161,7 +1161,7 @@ class MyStack : Stack
 package main
 
 import (
-	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/latest"
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1220,10 +1220,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-export = azure_nextgen.costmanagement.latest.Export("export",
-    definition=azure_nextgen.costmanagement.latest.ExportDefinitionArgs(
-        data_set=azure_nextgen.costmanagement.latest.ExportDatasetArgs(
-            configuration=azure_nextgen.costmanagement.latest.ExportDatasetConfigurationArgs(
+export = azure_nextgen.costmanagement.Export("export",
+    definition=azure_nextgen.costmanagement.ExportDefinitionArgs(
+        data_set=azure_nextgen.costmanagement.ExportDatasetArgs(
+            configuration=azure_nextgen.costmanagement.ExportDatasetConfigurationArgs(
                 columns=[
                     "Date",
                     "MeterId",
@@ -1237,8 +1237,8 @@ export = azure_nextgen.costmanagement.latest.Export("export",
         timeframe="MonthToDate",
         type="ActualCost",
     ),
-    delivery_info=azure_nextgen.costmanagement.latest.ExportDeliveryInfoArgs(
-        destination=azure_nextgen.costmanagement.latest.ExportDeliveryDestinationArgs(
+    delivery_info=azure_nextgen.costmanagement.ExportDeliveryInfoArgs(
+        destination=azure_nextgen.costmanagement.ExportDeliveryDestinationArgs(
             container="exports",
             resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
             root_folder_path="ad-hoc",
@@ -1246,9 +1246,9 @@ export = azure_nextgen.costmanagement.latest.Export("export",
     ),
     export_name="TestExport",
     format="Csv",
-    schedule=azure_nextgen.costmanagement.latest.ExportScheduleArgs(
+    schedule=azure_nextgen.costmanagement.ExportScheduleArgs(
         recurrence="Weekly",
-        recurrence_period=azure_nextgen.costmanagement.latest.ExportRecurrencePeriodArgs(
+        recurrence_period=azure_nextgen.costmanagement.ExportRecurrencePeriodArgs(
             from_="2020-06-01T00:00:00Z",
             to="2020-10-31T00:00:00Z",
         ),
@@ -1266,7 +1266,7 @@ export = azure_nextgen.costmanagement.latest.Export("export",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const _export = new azure_nextgen.costmanagement.latest.Export("export", {
+const _export = new azure_nextgen.costmanagement.Export("export", {
     definition: {
         dataSet: {
             configuration: {
@@ -1315,7 +1315,7 @@ const _export = new azure_nextgen.costmanagement.latest.Export("export", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Export</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ExportArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Export</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExportArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1323,11 +1323,11 @@ const _export = new azure_nextgen.costmanagement.latest.Export("export", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExport</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ExportArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Export</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExport</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExportArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Export</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Export</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ExportArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Export</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExportArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1348,7 +1348,7 @@ const _export = new azure_nextgen.costmanagement.latest.Export("export", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExportArgs</span>
+        <span class="property-type"><a href="#inputs">ExportArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1417,7 +1417,7 @@ const _export = new azure_nextgen.costmanagement.latest.Export("export", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExportArgs</span>
+        <span class="property-type"><a href="#inputs">ExportArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1456,7 +1456,7 @@ const _export = new azure_nextgen.costmanagement.latest.Export("export", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExportArgs</span>
+        <span class="property-type"><a href="#inputs">ExportArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1479,11 +1479,11 @@ const _export = new azure_nextgen.costmanagement.latest.Export("export", {
 
 ## Export Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Export resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Export resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4813,7 +4813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:costmanagement/latest:Export TestExport subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.CostManagement/exports/TestExport 
+$ pulumi import azure-nextgen:costmanagement:Export TestExport subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.CostManagement/exports/TestExport 
 ```
 
 

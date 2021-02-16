@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.healthcareapis.Service resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The description of the service.
-Latest API Version: 2021-01-11.
+API Version: 2021-01-11.
 
 {{% examples %}}
 ## Example Usage
@@ -27,34 +27,34 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.HealthcareApis.Latest.Service("service", new AzureNextGen.HealthcareApis.Latest.ServiceArgs
+        var service = new AzureNextGen.HealthcareApis.Service("service", new AzureNextGen.HealthcareApis.ServiceArgs
         {
-            Identity = new AzureNextGen.HealthcareApis.Latest.Inputs.ServicesResourceIdentityArgs
+            Identity = new AzureNextGen.HealthcareApis.Inputs.ServicesResourceIdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Kind = "fhir-R4",
             Location = "westus2",
-            Properties = new AzureNextGen.HealthcareApis.Latest.Inputs.ServicesPropertiesArgs
+            Properties = new AzureNextGen.HealthcareApis.Inputs.ServicesPropertiesArgs
             {
                 AccessPolicies = 
                 {
-                    new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceAccessPolicyEntryArgs
+                    new AzureNextGen.HealthcareApis.Inputs.ServiceAccessPolicyEntryArgs
                     {
                         ObjectId = "c487e7d1-3210-41a3-8ccc-e9372b78da47",
                     },
-                    new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceAccessPolicyEntryArgs
+                    new AzureNextGen.HealthcareApis.Inputs.ServiceAccessPolicyEntryArgs
                     {
                         ObjectId = "5b307da8-43d4-492b-8b66-b0294ade872f",
                     },
                 },
-                AuthenticationConfiguration = new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceAuthenticationConfigurationInfoArgs
+                AuthenticationConfiguration = new AzureNextGen.HealthcareApis.Inputs.ServiceAuthenticationConfigurationInfoArgs
                 {
                     Audience = "https://azurehealthcareapis.com",
                     Authority = "https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
                     SmartProxyEnabled = true,
                 },
-                CorsConfiguration = new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceCorsConfigurationInfoArgs
+                CorsConfiguration = new AzureNextGen.HealthcareApis.Inputs.ServiceCorsConfigurationInfoArgs
                 {
                     AllowCredentials = false,
                     Headers = 
@@ -76,12 +76,12 @@ class MyStack : Stack
                         "*",
                     },
                 },
-                CosmosDbConfiguration = new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceCosmosDbConfigurationInfoArgs
+                CosmosDbConfiguration = new AzureNextGen.HealthcareApis.Inputs.ServiceCosmosDbConfigurationInfoArgs
                 {
                     KeyVaultKeyUri = "https://my-vault.vault.azure.net/keys/my-key",
                     OfferThroughput = 1000,
                 },
-                ExportConfiguration = new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceExportConfigurationInfoArgs
+                ExportConfiguration = new AzureNextGen.HealthcareApis.Inputs.ServiceExportConfigurationInfoArgs
                 {
                     StorageAccountName = "existingStorageAccount",
                 },
@@ -106,7 +106,7 @@ class MyStack : Stack
 package main
 
 import (
-	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis/latest"
+	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -181,27 +181,27 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.healthcareapis.latest.Service("service",
-    identity=azure_nextgen.healthcareapis.latest.ServicesResourceIdentityArgs(
+service = azure_nextgen.healthcareapis.Service("service",
+    identity=azure_nextgen.healthcareapis.ServicesResourceIdentityArgs(
         type="SystemAssigned",
     ),
     kind="fhir-R4",
     location="westus2",
-    properties=azure_nextgen.healthcareapis.latest.ServicesPropertiesArgs(
+    properties=azure_nextgen.healthcareapis.ServicesPropertiesArgs(
         access_policies=[
-            azure_nextgen.healthcareapis.latest.ServiceAccessPolicyEntryArgs(
+            azure_nextgen.healthcareapis.ServiceAccessPolicyEntryArgs(
                 object_id="c487e7d1-3210-41a3-8ccc-e9372b78da47",
             ),
-            azure_nextgen.healthcareapis.latest.ServiceAccessPolicyEntryArgs(
+            azure_nextgen.healthcareapis.ServiceAccessPolicyEntryArgs(
                 object_id="5b307da8-43d4-492b-8b66-b0294ade872f",
             ),
         ],
-        authentication_configuration=azure_nextgen.healthcareapis.latest.ServiceAuthenticationConfigurationInfoArgs(
+        authentication_configuration=azure_nextgen.healthcareapis.ServiceAuthenticationConfigurationInfoArgs(
             audience="https://azurehealthcareapis.com",
             authority="https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
             smart_proxy_enabled=True,
         ),
-        cors_configuration=azure_nextgen.healthcareapis.latest.ServiceCorsConfigurationInfoArgs(
+        cors_configuration=azure_nextgen.healthcareapis.ServiceCorsConfigurationInfoArgs(
             allow_credentials=False,
             headers=["*"],
             max_age=1440,
@@ -215,11 +215,11 @@ service = azure_nextgen.healthcareapis.latest.Service("service",
             ],
             origins=["*"],
         ),
-        cosmos_db_configuration=azure_nextgen.healthcareapis.latest.ServiceCosmosDbConfigurationInfoArgs(
+        cosmos_db_configuration=azure_nextgen.healthcareapis.ServiceCosmosDbConfigurationInfoArgs(
             key_vault_key_uri="https://my-vault.vault.azure.net/keys/my-key",
             offer_throughput=1000,
         ),
-        export_configuration=azure_nextgen.healthcareapis.latest.ServiceExportConfigurationInfoArgs(
+        export_configuration=azure_nextgen.healthcareapis.ServiceExportConfigurationInfoArgs(
             storage_account_name="existingStorageAccount",
         ),
         private_endpoint_connections=[],
@@ -239,7 +239,7 @@ service = azure_nextgen.healthcareapis.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.healthcareapis.latest.Service("service", {
+const service = new azure_nextgen.healthcareapis.Service("service", {
     identity: {
         type: "SystemAssigned",
     },
@@ -302,15 +302,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.HealthcareApis.Latest.Service("service", new AzureNextGen.HealthcareApis.Latest.ServiceArgs
+        var service = new AzureNextGen.HealthcareApis.Service("service", new AzureNextGen.HealthcareApis.ServiceArgs
         {
             Kind = "fhir-R4",
             Location = "westus2",
-            Properties = new AzureNextGen.HealthcareApis.Latest.Inputs.ServicesPropertiesArgs
+            Properties = new AzureNextGen.HealthcareApis.Inputs.ServicesPropertiesArgs
             {
                 AccessPolicies = 
                 {
-                    new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceAccessPolicyEntryArgs
+                    new AzureNextGen.HealthcareApis.Inputs.ServiceAccessPolicyEntryArgs
                     {
                         ObjectId = "c487e7d1-3210-41a3-8ccc-e9372b78da47",
                     },
@@ -334,7 +334,7 @@ class MyStack : Stack
 package main
 
 import (
-	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis/latest"
+	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -371,11 +371,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.healthcareapis.latest.Service("service",
+service = azure_nextgen.healthcareapis.Service("service",
     kind="fhir-R4",
     location="westus2",
-    properties=azure_nextgen.healthcareapis.latest.ServicesPropertiesArgs(
-        access_policies=[azure_nextgen.healthcareapis.latest.ServiceAccessPolicyEntryArgs(
+    properties=azure_nextgen.healthcareapis.ServicesPropertiesArgs(
+        access_policies=[azure_nextgen.healthcareapis.ServiceAccessPolicyEntryArgs(
             object_id="c487e7d1-3210-41a3-8ccc-e9372b78da47",
         )],
     ),
@@ -393,7 +393,7 @@ service = azure_nextgen.healthcareapis.latest.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const service = new azure_nextgen.healthcareapis.latest.Service("service", {
+const service = new azure_nextgen.healthcareapis.Service("service", {
     kind: "fhir-R4",
     location: "westus2",
     properties: {
@@ -418,7 +418,7 @@ const service = new azure_nextgen.healthcareapis.latest.Service("service", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -426,11 +426,11 @@ const service = new azure_nextgen.healthcareapis.latest.Service("service", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -451,7 +451,7 @@ const service = new azure_nextgen.healthcareapis.latest.Service("service", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServiceArgs</span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -520,7 +520,7 @@ const service = new azure_nextgen.healthcareapis.latest.Service("service", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServiceArgs</span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -559,7 +559,7 @@ const service = new azure_nextgen.healthcareapis.latest.Service("service", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ServiceArgs</span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -582,11 +582,11 @@ const service = new azure_nextgen.healthcareapis.latest.Service("service", {
 
 ## Service Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Service resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Service resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4244,7 +4244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:healthcareapis/latest:Service service2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HealthcareApis/services/service2 
+$ pulumi import azure-nextgen:healthcareapis:Service service2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HealthcareApis/services/service2 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.streamanalytics.Input resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
-Latest API Version: 2016-03-01.
+API Version: 2016-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,35 +27,35 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var input = new AzureNextGen.StreamAnalytics.Latest.Input("input", new AzureNextGen.StreamAnalytics.Latest.InputArgs
+        var input = new AzureNextGen.StreamAnalytics.Input("input", new AzureNextGen.StreamAnalytics.InputArgs
         {
             InputName = "input7225",
             JobName = "sj9597",
-            Properties = 
+            Properties = new AzureNextGen.StreamAnalytics.Inputs.ReferenceInputPropertiesArgs
             {
-                { "datasource", 
+                Datasource = new AzureNextGen.StreamAnalytics.Inputs.BlobReferenceInputDataSourceArgs
                 {
-                    { "container", "state" },
-                    { "dateFormat", "yyyy/MM/dd" },
-                    { "pathPattern", "{date}/{time}" },
-                    { "storageAccounts", 
+                    Container = "state",
+                    DateFormat = "yyyy/MM/dd",
+                    PathPattern = "{date}/{time}",
+                    StorageAccounts = 
                     {
-                        new AzureNextGen.StreamAnalytics.Latest.Inputs.StorageAccountArgs
+                        new AzureNextGen.StreamAnalytics.Inputs.StorageAccountArgs
                         {
                             AccountKey = "someAccountKey==",
                             AccountName = "someAccountName",
                         },
-                    } },
-                    { "timeFormat", "HH" },
-                    { "type", "Microsoft.Storage/Blob" },
-                } },
-                { "serialization", 
+                    },
+                    TimeFormat = "HH",
+                    Type = "Microsoft.Storage/Blob",
+                },
+                Serialization = new AzureNextGen.StreamAnalytics.Inputs.CsvSerializationArgs
                 {
-                    { "encoding", "UTF8" },
-                    { "fieldDelimiter", "," },
-                    { "type", "Csv" },
-                } },
-                { "type", "Reference" },
+                    Encoding = "UTF8",
+                    FieldDelimiter = ",",
+                    Type = "Csv",
+                },
+                Type = "Reference",
             },
             ResourceGroupName = "sjrg8440",
         });
@@ -68,7 +68,52 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewInput(ctx, "input", &streamanalytics.InputArgs{
+			InputName: pulumi.String("input7225"),
+			JobName:   pulumi.String("sj9597"),
+			Properties: &streamanalytics.ReferenceInputPropertiesArgs{
+				Datasource: &streamanalytics.BlobReferenceInputDataSourceArgs{
+					Container:   pulumi.String("state"),
+					DateFormat:  pulumi.String("yyyy/MM/dd"),
+					PathPattern: pulumi.String("{date}/{time}"),
+					StorageAccounts: streamanalytics.StorageAccountArray{
+						&streamanalytics.StorageAccountArgs{
+							AccountKey:  pulumi.String("someAccountKey=="),
+							AccountName: pulumi.String("someAccountName"),
+						},
+					},
+					TimeFormat: pulumi.String("HH"),
+					Type:       pulumi.String("Microsoft.Storage/Blob"),
+				},
+				Serialization: &streamanalytics.CsvSerializationArgs{
+					Encoding:       pulumi.String("UTF8"),
+					FieldDelimiter: pulumi.String(","),
+					Type:           pulumi.String("Csv"),
+				},
+				Type: pulumi.String("Reference"),
+			},
+			ResourceGroupName: pulumi.String("sjrg8440"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,28 +122,28 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-input = azure_nextgen.streamanalytics.latest.Input("input",
+input = azure_nextgen.streamanalytics.Input("input",
     input_name="input7225",
     job_name="sj9597",
-    properties={
-        "datasource": {
-            "container": "state",
-            "dateFormat": "yyyy/MM/dd",
-            "pathPattern": "{date}/{time}",
-            "storageAccounts": [azure_nextgen.streamanalytics.latest.StorageAccountArgs(
+    properties=azure_nextgen.streamanalytics.ReferenceInputPropertiesArgs(
+        datasource=azure_nextgen.streamanalytics.BlobReferenceInputDataSourceArgs(
+            container="state",
+            date_format="yyyy/MM/dd",
+            path_pattern="{date}/{time}",
+            storage_accounts=[azure_nextgen.streamanalytics.StorageAccountArgs(
                 account_key="someAccountKey==",
                 account_name="someAccountName",
             )],
-            "timeFormat": "HH",
-            "type": "Microsoft.Storage/Blob",
-        },
-        "serialization": {
-            "encoding": "UTF8",
-            "fieldDelimiter": ",",
-            "type": "Csv",
-        },
-        "type": "Reference",
-    },
+            time_format="HH",
+            type="Microsoft.Storage/Blob",
+        ),
+        serialization=azure_nextgen.streamanalytics.CsvSerializationArgs(
+            encoding="UTF8",
+            field_delimiter=",",
+            type="Csv",
+        ),
+        type="Reference",
+    ),
     resource_group_name="sjrg8440")
 
 ```
@@ -111,7 +156,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const input = new azure_nextgen.streamanalytics.latest.Input("input", {
+const input = new azure_nextgen.streamanalytics.Input("input", {
     inputName: "input7225",
     jobName: "sj9597",
     properties: {
@@ -150,27 +195,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var input = new AzureNextGen.StreamAnalytics.Latest.Input("input", new AzureNextGen.StreamAnalytics.Latest.InputArgs
+        var input = new AzureNextGen.StreamAnalytics.Input("input", new AzureNextGen.StreamAnalytics.InputArgs
         {
             InputName = "input7425",
             JobName = "sj197",
-            Properties = 
+            Properties = new AzureNextGen.StreamAnalytics.Inputs.StreamInputPropertiesArgs
             {
-                { "datasource", 
+                Datasource = new AzureNextGen.StreamAnalytics.Inputs.EventHubStreamInputDataSourceArgs
                 {
-                    { "consumerGroupName", "sdkconsumergroup" },
-                    { "eventHubName", "sdkeventhub" },
-                    { "serviceBusNamespace", "sdktest" },
-                    { "sharedAccessPolicyKey", "someSharedAccessPolicyKey==" },
-                    { "sharedAccessPolicyName", "RootManageSharedAccessKey" },
-                    { "type", "Microsoft.ServiceBus/EventHub" },
-                } },
-                { "serialization", 
+                    ConsumerGroupName = "sdkconsumergroup",
+                    EventHubName = "sdkeventhub",
+                    ServiceBusNamespace = "sdktest",
+                    SharedAccessPolicyKey = "someSharedAccessPolicyKey==",
+                    SharedAccessPolicyName = "RootManageSharedAccessKey",
+                    Type = "Microsoft.ServiceBus/EventHub",
+                },
+                Serialization = new AzureNextGen.StreamAnalytics.Inputs.JsonSerializationArgs
                 {
-                    { "encoding", "UTF8" },
-                    { "type", "Json" },
-                } },
-                { "type", "Stream" },
+                    Encoding = "UTF8",
+                    Type = "Json",
+                },
+                Type = "Stream",
             },
             ResourceGroupName = "sjrg3139",
         });
@@ -183,7 +228,46 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewInput(ctx, "input", &streamanalytics.InputArgs{
+			InputName: pulumi.String("input7425"),
+			JobName:   pulumi.String("sj197"),
+			Properties: &streamanalytics.StreamInputPropertiesArgs{
+				Datasource: &streamanalytics.EventHubStreamInputDataSourceArgs{
+					ConsumerGroupName:      pulumi.String("sdkconsumergroup"),
+					EventHubName:           pulumi.String("sdkeventhub"),
+					ServiceBusNamespace:    pulumi.String("sdktest"),
+					SharedAccessPolicyKey:  pulumi.String("someSharedAccessPolicyKey=="),
+					SharedAccessPolicyName: pulumi.String("RootManageSharedAccessKey"),
+					Type:                   pulumi.String("Microsoft.ServiceBus/EventHub"),
+				},
+				Serialization: &streamanalytics.JsonSerializationArgs{
+					Encoding: pulumi.String("UTF8"),
+					Type:     pulumi.String("Json"),
+				},
+				Type: pulumi.String("Stream"),
+			},
+			ResourceGroupName: pulumi.String("sjrg3139"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -192,24 +276,24 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-input = azure_nextgen.streamanalytics.latest.Input("input",
+input = azure_nextgen.streamanalytics.Input("input",
     input_name="input7425",
     job_name="sj197",
-    properties={
-        "datasource": {
-            "consumerGroupName": "sdkconsumergroup",
-            "eventHubName": "sdkeventhub",
-            "serviceBusNamespace": "sdktest",
-            "sharedAccessPolicyKey": "someSharedAccessPolicyKey==",
-            "sharedAccessPolicyName": "RootManageSharedAccessKey",
-            "type": "Microsoft.ServiceBus/EventHub",
-        },
-        "serialization": {
-            "encoding": "UTF8",
-            "type": "Json",
-        },
-        "type": "Stream",
-    },
+    properties=azure_nextgen.streamanalytics.StreamInputPropertiesArgs(
+        datasource=azure_nextgen.streamanalytics.EventHubStreamInputDataSourceArgs(
+            consumer_group_name="sdkconsumergroup",
+            event_hub_name="sdkeventhub",
+            service_bus_namespace="sdktest",
+            shared_access_policy_key="someSharedAccessPolicyKey==",
+            shared_access_policy_name="RootManageSharedAccessKey",
+            type="Microsoft.ServiceBus/EventHub",
+        ),
+        serialization=azure_nextgen.streamanalytics.JsonSerializationArgs(
+            encoding="UTF8",
+            type="Json",
+        ),
+        type="Stream",
+    ),
     resource_group_name="sjrg3139")
 
 ```
@@ -222,7 +306,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const input = new azure_nextgen.streamanalytics.latest.Input("input", {
+const input = new azure_nextgen.streamanalytics.Input("input", {
     inputName: "input7425",
     jobName: "sj197",
     properties: {
@@ -257,26 +341,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var input = new AzureNextGen.StreamAnalytics.Latest.Input("input", new AzureNextGen.StreamAnalytics.Latest.InputArgs
+        var input = new AzureNextGen.StreamAnalytics.Input("input", new AzureNextGen.StreamAnalytics.InputArgs
         {
             InputName = "input7970",
             JobName = "sj9742",
-            Properties = 
+            Properties = new AzureNextGen.StreamAnalytics.Inputs.StreamInputPropertiesArgs
             {
-                { "datasource", 
+                Datasource = new AzureNextGen.StreamAnalytics.Inputs.IoTHubStreamInputDataSourceArgs
                 {
-                    { "consumerGroupName", "sdkconsumergroup" },
-                    { "endpoint", "messages/events" },
-                    { "iotHubNamespace", "iothub" },
-                    { "sharedAccessPolicyKey", "sharedAccessPolicyKey=" },
-                    { "sharedAccessPolicyName", "owner" },
-                    { "type", "Microsoft.Devices/IotHubs" },
-                } },
-                { "serialization", 
+                    ConsumerGroupName = "sdkconsumergroup",
+                    Endpoint = "messages/events",
+                    IotHubNamespace = "iothub",
+                    SharedAccessPolicyKey = "sharedAccessPolicyKey=",
+                    SharedAccessPolicyName = "owner",
+                    Type = "Microsoft.Devices/IotHubs",
+                },
+                Serialization = new AzureNextGen.StreamAnalytics.Inputs.AvroSerializationArgs
                 {
-                    { "type", "Avro" },
-                } },
-                { "type", "Stream" },
+                    Type = "Avro",
+                },
+                Type = "Stream",
             },
             ResourceGroupName = "sjrg3467",
         });
@@ -289,7 +373,45 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewInput(ctx, "input", &streamanalytics.InputArgs{
+			InputName: pulumi.String("input7970"),
+			JobName:   pulumi.String("sj9742"),
+			Properties: &streamanalytics.StreamInputPropertiesArgs{
+				Datasource: &streamanalytics.IoTHubStreamInputDataSourceArgs{
+					ConsumerGroupName:      pulumi.String("sdkconsumergroup"),
+					Endpoint:               pulumi.String("messages/events"),
+					IotHubNamespace:        pulumi.String("iothub"),
+					SharedAccessPolicyKey:  pulumi.String("sharedAccessPolicyKey="),
+					SharedAccessPolicyName: pulumi.String("owner"),
+					Type:                   pulumi.String("Microsoft.Devices/IotHubs"),
+				},
+				Serialization: &streamanalytics.AvroSerializationArgs{
+					Type: pulumi.String("Avro"),
+				},
+				Type: pulumi.String("Stream"),
+			},
+			ResourceGroupName: pulumi.String("sjrg3467"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -298,23 +420,23 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-input = azure_nextgen.streamanalytics.latest.Input("input",
+input = azure_nextgen.streamanalytics.Input("input",
     input_name="input7970",
     job_name="sj9742",
-    properties={
-        "datasource": {
-            "consumerGroupName": "sdkconsumergroup",
-            "endpoint": "messages/events",
-            "iotHubNamespace": "iothub",
-            "sharedAccessPolicyKey": "sharedAccessPolicyKey=",
-            "sharedAccessPolicyName": "owner",
-            "type": "Microsoft.Devices/IotHubs",
-        },
-        "serialization": {
-            "type": "Avro",
-        },
-        "type": "Stream",
-    },
+    properties=azure_nextgen.streamanalytics.StreamInputPropertiesArgs(
+        datasource=azure_nextgen.streamanalytics.IoTHubStreamInputDataSourceArgs(
+            consumer_group_name="sdkconsumergroup",
+            endpoint="messages/events",
+            iot_hub_namespace="iothub",
+            shared_access_policy_key="sharedAccessPolicyKey=",
+            shared_access_policy_name="owner",
+            type="Microsoft.Devices/IotHubs",
+        ),
+        serialization=azure_nextgen.streamanalytics.AvroSerializationArgs(
+            type="Avro",
+        ),
+        type="Stream",
+    ),
     resource_group_name="sjrg3467")
 
 ```
@@ -327,7 +449,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const input = new azure_nextgen.streamanalytics.latest.Input("input", {
+const input = new azure_nextgen.streamanalytics.Input("input", {
     inputName: "input7970",
     jobName: "sj9742",
     properties: {
@@ -361,36 +483,36 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var input = new AzureNextGen.StreamAnalytics.Latest.Input("input", new AzureNextGen.StreamAnalytics.Latest.InputArgs
+        var input = new AzureNextGen.StreamAnalytics.Input("input", new AzureNextGen.StreamAnalytics.InputArgs
         {
             InputName = "input8899",
             JobName = "sj6695",
-            Properties = 
+            Properties = new AzureNextGen.StreamAnalytics.Inputs.StreamInputPropertiesArgs
             {
-                { "datasource", 
+                Datasource = new AzureNextGen.StreamAnalytics.Inputs.BlobStreamInputDataSourceArgs
                 {
-                    { "container", "state" },
-                    { "dateFormat", "yyyy/MM/dd" },
-                    { "pathPattern", "{date}/{time}" },
-                    { "sourcePartitionCount", 16 },
-                    { "storageAccounts", 
+                    Container = "state",
+                    DateFormat = "yyyy/MM/dd",
+                    PathPattern = "{date}/{time}",
+                    SourcePartitionCount = 16,
+                    StorageAccounts = 
                     {
-                        new AzureNextGen.StreamAnalytics.Latest.Inputs.StorageAccountArgs
+                        new AzureNextGen.StreamAnalytics.Inputs.StorageAccountArgs
                         {
                             AccountKey = "someAccountKey==",
                             AccountName = "someAccountName",
                         },
-                    } },
-                    { "timeFormat", "HH" },
-                    { "type", "Microsoft.Storage/Blob" },
-                } },
-                { "serialization", 
+                    },
+                    TimeFormat = "HH",
+                    Type = "Microsoft.Storage/Blob",
+                },
+                Serialization = new AzureNextGen.StreamAnalytics.Inputs.CsvSerializationArgs
                 {
-                    { "encoding", "UTF8" },
-                    { "fieldDelimiter", "," },
-                    { "type", "Csv" },
-                } },
-                { "type", "Stream" },
+                    Encoding = "UTF8",
+                    FieldDelimiter = ",",
+                    Type = "Csv",
+                },
+                Type = "Stream",
             },
             ResourceGroupName = "sjrg8161",
         });
@@ -403,7 +525,53 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewInput(ctx, "input", &streamanalytics.InputArgs{
+			InputName: pulumi.String("input8899"),
+			JobName:   pulumi.String("sj6695"),
+			Properties: &streamanalytics.StreamInputPropertiesArgs{
+				Datasource: &streamanalytics.BlobStreamInputDataSourceArgs{
+					Container:            pulumi.String("state"),
+					DateFormat:           pulumi.String("yyyy/MM/dd"),
+					PathPattern:          pulumi.String("{date}/{time}"),
+					SourcePartitionCount: pulumi.Int(16),
+					StorageAccounts: streamanalytics.StorageAccountArray{
+						&streamanalytics.StorageAccountArgs{
+							AccountKey:  pulumi.String("someAccountKey=="),
+							AccountName: pulumi.String("someAccountName"),
+						},
+					},
+					TimeFormat: pulumi.String("HH"),
+					Type:       pulumi.String("Microsoft.Storage/Blob"),
+				},
+				Serialization: &streamanalytics.CsvSerializationArgs{
+					Encoding:       pulumi.String("UTF8"),
+					FieldDelimiter: pulumi.String(","),
+					Type:           pulumi.String("Csv"),
+				},
+				Type: pulumi.String("Stream"),
+			},
+			ResourceGroupName: pulumi.String("sjrg8161"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -412,29 +580,29 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-input = azure_nextgen.streamanalytics.latest.Input("input",
+input = azure_nextgen.streamanalytics.Input("input",
     input_name="input8899",
     job_name="sj6695",
-    properties={
-        "datasource": {
-            "container": "state",
-            "dateFormat": "yyyy/MM/dd",
-            "pathPattern": "{date}/{time}",
-            "sourcePartitionCount": 16,
-            "storageAccounts": [azure_nextgen.streamanalytics.latest.StorageAccountArgs(
+    properties=azure_nextgen.streamanalytics.StreamInputPropertiesArgs(
+        datasource=azure_nextgen.streamanalytics.BlobStreamInputDataSourceArgs(
+            container="state",
+            date_format="yyyy/MM/dd",
+            path_pattern="{date}/{time}",
+            source_partition_count=16,
+            storage_accounts=[azure_nextgen.streamanalytics.StorageAccountArgs(
                 account_key="someAccountKey==",
                 account_name="someAccountName",
             )],
-            "timeFormat": "HH",
-            "type": "Microsoft.Storage/Blob",
-        },
-        "serialization": {
-            "encoding": "UTF8",
-            "fieldDelimiter": ",",
-            "type": "Csv",
-        },
-        "type": "Stream",
-    },
+            time_format="HH",
+            type="Microsoft.Storage/Blob",
+        ),
+        serialization=azure_nextgen.streamanalytics.CsvSerializationArgs(
+            encoding="UTF8",
+            field_delimiter=",",
+            type="Csv",
+        ),
+        type="Stream",
+    ),
     resource_group_name="sjrg8161")
 
 ```
@@ -447,7 +615,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const input = new azure_nextgen.streamanalytics.latest.Input("input", {
+const input = new azure_nextgen.streamanalytics.Input("input", {
     inputName: "input8899",
     jobName: "sj6695",
     properties: {
@@ -485,7 +653,7 @@ const input = new azure_nextgen.streamanalytics.latest.Input("input", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Input</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">InputArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Input</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InputArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -493,11 +661,11 @@ const input = new azure_nextgen.streamanalytics.latest.Input("input", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInput</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">InputArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Input</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInput</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InputArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Input</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Input</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">InputArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Input</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InputArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -518,7 +686,7 @@ const input = new azure_nextgen.streamanalytics.latest.Input("input", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">InputArgs</span>
+        <span class="property-type"><a href="#inputs">InputArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -587,7 +755,7 @@ const input = new azure_nextgen.streamanalytics.latest.Input("input", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">InputArgs</span>
+        <span class="property-type"><a href="#inputs">InputArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -626,7 +794,7 @@ const input = new azure_nextgen.streamanalytics.latest.Input("input", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">InputArgs</span>
+        <span class="property-type"><a href="#inputs">InputArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -649,11 +817,11 @@ const input = new azure_nextgen.streamanalytics.latest.Input("input", {
 
 ## Input Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Input resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Input resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4139,7 +4307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:streamanalytics/latest:Input input8899 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg8161/providers/Microsoft.StreamAnalytics/streamingjobs/sj6695/inputs/input8899 
+$ pulumi import azure-nextgen:streamanalytics:Input input8899 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg8161/providers/Microsoft.StreamAnalytics/streamingjobs/sj6695/inputs/input8899 
 ```
 
 

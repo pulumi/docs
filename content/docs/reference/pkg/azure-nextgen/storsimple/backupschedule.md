@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.BackupSchedule resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The backup schedule.
-Latest API Version: 2017-06-01.
+API Version: 2017-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backupSchedule = new AzureNextGen.StorSimple.Latest.BackupSchedule("backupSchedule", new AzureNextGen.StorSimple.Latest.BackupScheduleArgs
+        var backupSchedule = new AzureNextGen.StorSimple.BackupSchedule("backupSchedule", new AzureNextGen.StorSimple.BackupScheduleArgs
         {
             BackupPolicyName = "BkUpPolicy01ForSDKTest",
             BackupScheduleName = "schedule2",
@@ -37,7 +37,7 @@ class MyStack : Stack
             ManagerName = "ManagerForSDKTest1",
             ResourceGroupName = "ResourceGroupForSDKTest",
             RetentionCount = 1,
-            ScheduleRecurrence = new AzureNextGen.StorSimple.Latest.Inputs.ScheduleRecurrenceArgs
+            ScheduleRecurrence = new AzureNextGen.StorSimple.Inputs.ScheduleRecurrenceArgs
             {
                 RecurrenceType = "Weekly",
                 RecurrenceValue = 1,
@@ -69,7 +69,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backup_schedule = azure_nextgen.storsimple.latest.BackupSchedule("backupSchedule",
+backup_schedule = azure_nextgen.storsimple.BackupSchedule("backupSchedule",
     backup_policy_name="BkUpPolicy01ForSDKTest",
     backup_schedule_name="schedule2",
     backup_type="CloudSnapshot",
@@ -78,7 +78,7 @@ backup_schedule = azure_nextgen.storsimple.latest.BackupSchedule("backupSchedule
     manager_name="ManagerForSDKTest1",
     resource_group_name="ResourceGroupForSDKTest",
     retention_count=1,
-    schedule_recurrence=azure_nextgen.storsimple.latest.ScheduleRecurrenceArgs(
+    schedule_recurrence=azure_nextgen.storsimple.ScheduleRecurrenceArgs(
         recurrence_type="Weekly",
         recurrence_value=1,
         weekly_days_list=[
@@ -100,7 +100,7 @@ backup_schedule = azure_nextgen.storsimple.latest.BackupSchedule("backupSchedule
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const backupSchedule = new azure_nextgen.storsimple.latest.BackupSchedule("backupSchedule", {
+const backupSchedule = new azure_nextgen.storsimple.BackupSchedule("backupSchedule", {
     backupPolicyName: "BkUpPolicy01ForSDKTest",
     backupScheduleName: "schedule2",
     backupType: "CloudSnapshot",
@@ -134,7 +134,7 @@ const backupSchedule = new azure_nextgen.storsimple.latest.BackupSchedule("backu
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackupSchedule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BackupScheduleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackupSchedule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackupScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -142,11 +142,11 @@ const backupSchedule = new azure_nextgen.storsimple.latest.BackupSchedule("backu
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackupSchedule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BackupScheduleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackupSchedule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackupSchedule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackupScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackupSchedule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackupSchedule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BackupScheduleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackupSchedule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BackupScheduleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -167,7 +167,7 @@ const backupSchedule = new azure_nextgen.storsimple.latest.BackupSchedule("backu
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BackupScheduleArgs</span>
+        <span class="property-type"><a href="#inputs">BackupScheduleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -236,7 +236,7 @@ const backupSchedule = new azure_nextgen.storsimple.latest.BackupSchedule("backu
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BackupScheduleArgs</span>
+        <span class="property-type"><a href="#inputs">BackupScheduleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -275,7 +275,7 @@ const backupSchedule = new azure_nextgen.storsimple.latest.BackupSchedule("backu
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BackupScheduleArgs</span>
+        <span class="property-type"><a href="#inputs">BackupScheduleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -298,11 +298,11 @@ const backupSchedule = new azure_nextgen.storsimple.latest.BackupSchedule("backu
 
 ## BackupSchedule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The BackupSchedule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The BackupSchedule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1422,7 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storsimple/latest:BackupSchedule schedule2 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/backupPolicies/BkUpPolicy01ForSDKTest/schedules/schedule2 
+$ pulumi import azure-nextgen:storsimple:BackupSchedule schedule2 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/backupPolicies/BkUpPolicy01ForSDKTest/schedules/schedule2 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationServiceEnvironm
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The integration service environment.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,45 +27,45 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationServiceEnvironment = new AzureNextGen.Logic.Latest.IntegrationServiceEnvironment("integrationServiceEnvironment", new AzureNextGen.Logic.Latest.IntegrationServiceEnvironmentArgs
+        var integrationServiceEnvironment = new AzureNextGen.Logic.IntegrationServiceEnvironment("integrationServiceEnvironment", new AzureNextGen.Logic.IntegrationServiceEnvironmentArgs
         {
             IntegrationServiceEnvironmentName = "testIntegrationServiceEnvironment",
             Location = "brazilsouth",
-            Properties = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmentPropertiesArgs
+            Properties = new AzureNextGen.Logic.Inputs.IntegrationServiceEnvironmentPropertiesArgs
             {
-                EncryptionConfiguration = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmenEncryptionConfigurationArgs
+                EncryptionConfiguration = new AzureNextGen.Logic.Inputs.IntegrationServiceEnvironmenEncryptionConfigurationArgs
                 {
-                    EncryptionKeyReference = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs
+                    EncryptionKeyReference = new AzureNextGen.Logic.Inputs.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs
                     {
                         KeyName = "testKeyName",
-                        KeyVault = new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        KeyVault = new AzureNextGen.Logic.Inputs.ResourceReferenceArgs
                         {
                             Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault",
                         },
                         KeyVersion = "13b261d30b984753869902d7f47f4d55",
                     },
                 },
-                NetworkConfiguration = new AzureNextGen.Logic.Latest.Inputs.NetworkConfigurationArgs
+                NetworkConfiguration = new AzureNextGen.Logic.Inputs.NetworkConfigurationArgs
                 {
-                    AccessEndpoint = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmentAccessEndpointArgs
+                    AccessEndpoint = new AzureNextGen.Logic.Inputs.IntegrationServiceEnvironmentAccessEndpointArgs
                     {
                         Type = "Internal",
                     },
                     Subnets = 
                     {
-                        new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        new AzureNextGen.Logic.Inputs.ResourceReferenceArgs
                         {
                             Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1",
                         },
-                        new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        new AzureNextGen.Logic.Inputs.ResourceReferenceArgs
                         {
                             Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2",
                         },
-                        new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        new AzureNextGen.Logic.Inputs.ResourceReferenceArgs
                         {
                             Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3",
                         },
-                        new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        new AzureNextGen.Logic.Inputs.ResourceReferenceArgs
                         {
                             Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4",
                         },
@@ -73,7 +73,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroup = "testResourceGroup",
-            Sku = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmentSkuArgs
+            Sku = new AzureNextGen.Logic.Inputs.IntegrationServiceEnvironmentSkuArgs
             {
                 Capacity = 2,
                 Name = "Premium",
@@ -93,7 +93,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -155,41 +155,41 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_service_environment = azure_nextgen.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment",
+integration_service_environment = azure_nextgen.logic.IntegrationServiceEnvironment("integrationServiceEnvironment",
     integration_service_environment_name="testIntegrationServiceEnvironment",
     location="brazilsouth",
-    properties=azure_nextgen.logic.latest.IntegrationServiceEnvironmentPropertiesArgs(
-        encryption_configuration=azure_nextgen.logic.latest.IntegrationServiceEnvironmenEncryptionConfigurationArgs(
-            encryption_key_reference=azure_nextgen.logic.latest.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs(
+    properties=azure_nextgen.logic.IntegrationServiceEnvironmentPropertiesArgs(
+        encryption_configuration=azure_nextgen.logic.IntegrationServiceEnvironmenEncryptionConfigurationArgs(
+            encryption_key_reference=azure_nextgen.logic.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs(
                 key_name="testKeyName",
-                key_vault=azure_nextgen.logic.latest.ResourceReferenceArgs(
+                key_vault=azure_nextgen.logic.ResourceReferenceArgs(
                     id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault",
                 ),
                 key_version="13b261d30b984753869902d7f47f4d55",
             ),
         ),
-        network_configuration=azure_nextgen.logic.latest.NetworkConfigurationArgs(
-            access_endpoint=azure_nextgen.logic.latest.IntegrationServiceEnvironmentAccessEndpointArgs(
+        network_configuration=azure_nextgen.logic.NetworkConfigurationArgs(
+            access_endpoint=azure_nextgen.logic.IntegrationServiceEnvironmentAccessEndpointArgs(
                 type="Internal",
             ),
             subnets=[
-                azure_nextgen.logic.latest.ResourceReferenceArgs(
+                azure_nextgen.logic.ResourceReferenceArgs(
                     id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1",
                 ),
-                azure_nextgen.logic.latest.ResourceReferenceArgs(
+                azure_nextgen.logic.ResourceReferenceArgs(
                     id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2",
                 ),
-                azure_nextgen.logic.latest.ResourceReferenceArgs(
+                azure_nextgen.logic.ResourceReferenceArgs(
                     id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3",
                 ),
-                azure_nextgen.logic.latest.ResourceReferenceArgs(
+                azure_nextgen.logic.ResourceReferenceArgs(
                     id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4",
                 ),
             ],
         ),
     ),
     resource_group="testResourceGroup",
-    sku=azure_nextgen.logic.latest.IntegrationServiceEnvironmentSkuArgs(
+    sku=azure_nextgen.logic.IntegrationServiceEnvironmentSkuArgs(
         capacity=2,
         name="Premium",
     ))
@@ -204,7 +204,7 @@ integration_service_environment = azure_nextgen.logic.latest.IntegrationServiceE
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationServiceEnvironment = new azure_nextgen.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment", {
+const integrationServiceEnvironment = new azure_nextgen.logic.IntegrationServiceEnvironment("integrationServiceEnvironment", {
     integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
     location: "brazilsouth",
     properties: {
@@ -256,7 +256,7 @@ const integrationServiceEnvironment = new azure_nextgen.logic.latest.Integration
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IntegrationServiceEnvironmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -264,11 +264,11 @@ const integrationServiceEnvironment = new azure_nextgen.logic.latest.Integration
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IntegrationServiceEnvironmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationServiceEnvironment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationServiceEnvironment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IntegrationServiceEnvironmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -289,7 +289,7 @@ const integrationServiceEnvironment = new azure_nextgen.logic.latest.Integration
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationServiceEnvironmentArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -358,7 +358,7 @@ const integrationServiceEnvironment = new azure_nextgen.logic.latest.Integration
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationServiceEnvironmentArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -397,7 +397,7 @@ const integrationServiceEnvironment = new azure_nextgen.logic.latest.Integration
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationServiceEnvironmentArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -420,11 +420,11 @@ const integrationServiceEnvironment = new azure_nextgen.logic.latest.Integration
 
 ## IntegrationServiceEnvironment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IntegrationServiceEnvironment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IntegrationServiceEnvironment resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3358,7 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationServiceEnvironment testIntegrationServiceEnvironment /subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationServiceEnvironments/testIntegrationServiceEnvironment 
+$ pulumi import azure-nextgen:logic:IntegrationServiceEnvironment testIntegrationServiceEnvironment /subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationServiceEnvironments/testIntegrationServiceEnvironment 
 ```
 
 

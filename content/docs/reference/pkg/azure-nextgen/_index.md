@@ -94,6 +94,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
     <li><a href="hybridnetwork/" title="hybridnetwork"><span class="symbol module"></span>hybridnetwork</a></li>
     <li><a href="importexport/" title="importexport"><span class="symbol module"></span>importexport</a></li>
     <li><a href="insights/" title="insights"><span class="symbol module"></span>insights</a></li>
+    <li><a href="intune/" title="intune"><span class="symbol module"></span>intune</a></li>
     <li><a href="iotcentral/" title="iotcentral"><span class="symbol module"></span>iotcentral</a></li>
     <li><a href="iotsecurity/" title="iotsecurity"><span class="symbol module"></span>iotsecurity</a></li>
     <li><a href="iotspaces/" title="iotspaces"><span class="symbol module"></span>iotspaces</a></li>
@@ -181,9 +182,6 @@ A Next Generation Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.6.1</dd>
+	<dd>0.7.0</dd>
 </dl>
-
-
-
 

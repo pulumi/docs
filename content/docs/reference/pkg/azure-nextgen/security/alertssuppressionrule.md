@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.security.AlertsSuppressionRule r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes the suppression rule
+API Version: 2019-01-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertsSuppressionRule = new AzureNextGen.Security.V20190101Preview.AlertsSuppressionRule("alertsSuppressionRule", new AzureNextGen.Security.V20190101Preview.AlertsSuppressionRuleArgs
+        var alertsSuppressionRule = new AzureNextGen.Security.AlertsSuppressionRule("alertsSuppressionRule", new AzureNextGen.Security.AlertsSuppressionRuleArgs
         {
             AlertType = "IpAnomaly",
             AlertsSuppressionRuleName = "dismissIpAnomalyAlerts",
@@ -34,15 +35,15 @@ class MyStack : Stack
             ExpirationDateUtc = "2019-12-01T19:50:47.083633Z",
             Reason = "FalsePositive",
             State = "Enabled",
-            SuppressionAlertsScope = new AzureNextGen.Security.V20190101Preview.Inputs.SuppressionAlertsScopeArgs
+            SuppressionAlertsScope = new AzureNextGen.Security.Inputs.SuppressionAlertsScopeArgs
             {
                 AllOf = 
                 {
-                    new AzureNextGen.Security.V20190101Preview.Inputs.ScopeElementArgs
+                    new AzureNextGen.Security.Inputs.ScopeElementArgs
                     {
                         Field = "entities.ip.address",
                     },
-                    new AzureNextGen.Security.V20190101Preview.Inputs.ScopeElementArgs
+                    new AzureNextGen.Security.Inputs.ScopeElementArgs
                     {
                         Field = "entities.process.commandline",
                     },
@@ -63,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/v20190101preview"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -104,19 +105,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alerts_suppression_rule = azure_nextgen.security.v20190101preview.AlertsSuppressionRule("alertsSuppressionRule",
+alerts_suppression_rule = azure_nextgen.security.AlertsSuppressionRule("alertsSuppressionRule",
     alert_type="IpAnomaly",
     alerts_suppression_rule_name="dismissIpAnomalyAlerts",
     comment="Test VM",
     expiration_date_utc="2019-12-01T19:50:47.083633Z",
     reason="FalsePositive",
     state="Enabled",
-    suppression_alerts_scope=azure_nextgen.security.v20190101preview.SuppressionAlertsScopeArgs(
+    suppression_alerts_scope=azure_nextgen.security.SuppressionAlertsScopeArgs(
         all_of=[
-            azure_nextgen.security.v20190101preview.ScopeElementArgs(
+            azure_nextgen.security.ScopeElementArgs(
                 field="entities.ip.address",
             ),
-            azure_nextgen.security.v20190101preview.ScopeElementArgs(
+            azure_nextgen.security.ScopeElementArgs(
                 field="entities.process.commandline",
             ),
         ],
@@ -132,7 +133,7 @@ alerts_suppression_rule = azure_nextgen.security.v20190101preview.AlertsSuppress
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alertsSuppressionRule = new azure_nextgen.security.v20190101preview.AlertsSuppressionRule("alertsSuppressionRule", {
+const alertsSuppressionRule = new azure_nextgen.security.AlertsSuppressionRule("alertsSuppressionRule", {
     alertType: "IpAnomaly",
     alertsSuppressionRuleName: "dismissIpAnomalyAlerts",
     comment: "Test VM",
@@ -163,7 +164,7 @@ const alertsSuppressionRule = new azure_nextgen.security.v20190101preview.Alerts
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertsSuppressionRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AlertsSuppressionRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertsSuppressionRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertsSuppressionRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -171,11 +172,11 @@ const alertsSuppressionRule = new azure_nextgen.security.v20190101preview.Alerts
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertsSuppressionRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AlertsSuppressionRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertsSuppressionRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertsSuppressionRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertsSuppressionRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertsSuppressionRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertsSuppressionRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AlertsSuppressionRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertsSuppressionRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AlertsSuppressionRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -196,7 +197,7 @@ const alertsSuppressionRule = new azure_nextgen.security.v20190101preview.Alerts
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AlertsSuppressionRuleArgs</span>
+        <span class="property-type"><a href="#inputs">AlertsSuppressionRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -265,7 +266,7 @@ const alertsSuppressionRule = new azure_nextgen.security.v20190101preview.Alerts
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AlertsSuppressionRuleArgs</span>
+        <span class="property-type"><a href="#inputs">AlertsSuppressionRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -304,7 +305,7 @@ const alertsSuppressionRule = new azure_nextgen.security.v20190101preview.Alerts
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AlertsSuppressionRuleArgs</span>
+        <span class="property-type"><a href="#inputs">AlertsSuppressionRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -327,11 +328,11 @@ const alertsSuppressionRule = new azure_nextgen.security.v20190101preview.Alerts
 
 ## AlertsSuppressionRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AlertsSuppressionRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AlertsSuppressionRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1095,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:security/v20190101preview:AlertsSuppressionRule dismissIpAnomalyAlerts /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/alertsSuppressionRules/dismissIpAnomalyAlerts 
+$ pulumi import azure-nextgen:security:AlertsSuppressionRule dismissIpAnomalyAlerts /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/alertsSuppressionRules/dismissIpAnomalyAlerts 
 ```
 
 

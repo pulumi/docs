@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datamigration.File resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A file resource
+API Version: 2018-07-15-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var file = new AzureNextGen.DataMigration.V20180715Preview.File("file", new AzureNextGen.DataMigration.V20180715Preview.FileArgs
+        var file = new AzureNextGen.DataMigration.File("file", new AzureNextGen.DataMigration.FileArgs
         {
             FileName = "x114d023d8",
             GroupName = "DmsSdkRg",
             ProjectName = "DmsSdkProject",
-            Properties = new AzureNextGen.DataMigration.V20180715Preview.Inputs.ProjectFilePropertiesArgs
+            Properties = new AzureNextGen.DataMigration.Inputs.ProjectFilePropertiesArgs
             {
                 FilePath = "DmsSdkFilePath/DmsSdkFile.sql",
             },
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	datamigration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration/v20180715preview"
+	datamigration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,11 +84,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file = azure_nextgen.datamigration.v20180715preview.File("file",
+file = azure_nextgen.datamigration.File("file",
     file_name="x114d023d8",
     group_name="DmsSdkRg",
     project_name="DmsSdkProject",
-    properties=azure_nextgen.datamigration.v20180715preview.ProjectFilePropertiesArgs(
+    properties=azure_nextgen.datamigration.ProjectFilePropertiesArgs(
         file_path="DmsSdkFilePath/DmsSdkFile.sql",
     ),
     service_name="DmsSdkService")
@@ -102,7 +103,7 @@ file = azure_nextgen.datamigration.v20180715preview.File("file",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const file = new azure_nextgen.datamigration.v20180715preview.File("file", {
+const file = new azure_nextgen.datamigration.File("file", {
     fileName: "x114d023d8",
     groupName: "DmsSdkRg",
     projectName: "DmsSdkProject",
@@ -124,7 +125,7 @@ const file = new azure_nextgen.datamigration.v20180715preview.File("file", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">File</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">File</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -132,11 +133,11 @@ const file = new azure_nextgen.datamigration.v20180715preview.File("file", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">File</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">File</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">File</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FileArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">File</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -157,7 +158,7 @@ const file = new azure_nextgen.datamigration.v20180715preview.File("file", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FileArgs</span>
+        <span class="property-type"><a href="#inputs">FileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -226,7 +227,7 @@ const file = new azure_nextgen.datamigration.v20180715preview.File("file", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FileArgs</span>
+        <span class="property-type"><a href="#inputs">FileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -265,7 +266,7 @@ const file = new azure_nextgen.datamigration.v20180715preview.File("file", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FileArgs</span>
+        <span class="property-type"><a href="#inputs">FileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -288,11 +289,11 @@ const file = new azure_nextgen.datamigration.v20180715preview.File("file", {
 
 ## File Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The File resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The File resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1030,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datamigration/v20180715preview:File x114d023d8 /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService/projects/DmsSdkProject/files/x114d023d8 
+$ pulumi import azure-nextgen:datamigration:File x114d023d8 /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService/projects/DmsSdkProject/files/x114d023d8 
 ```
 
 

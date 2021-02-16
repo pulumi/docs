@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.AFDCustomDomain resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var afdCustomDomain = new AzureNextGen.Cdn.Latest.AFDCustomDomain("afdCustomDomain", new AzureNextGen.Cdn.Latest.AFDCustomDomainArgs
+        var afdCustomDomain = new AzureNextGen.Cdn.AFDCustomDomain("afdCustomDomain", new AzureNextGen.Cdn.AFDCustomDomainArgs
         {
-            AzureDnsZone = new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+            AzureDnsZone = new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
             {
                 Id = "",
             },
@@ -37,7 +37,7 @@ class MyStack : Stack
             HostName = "www.someDomain.net",
             ProfileName = "profile1",
             ResourceGroupName = "RG",
-            TlsSettings = new AzureNextGen.Cdn.Latest.Inputs.AFDDomainHttpsParametersArgs
+            TlsSettings = new AzureNextGen.Cdn.Inputs.AFDDomainHttpsParametersArgs
             {
                 CertificateType = "ManagedCertificate",
                 MinimumTlsVersion = "TLS12",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,15 +93,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-afd_custom_domain = azure_nextgen.cdn.latest.AFDCustomDomain("afdCustomDomain",
-    azure_dns_zone=azure_nextgen.cdn.latest.ResourceReferenceArgs(
+afd_custom_domain = azure_nextgen.cdn.AFDCustomDomain("afdCustomDomain",
+    azure_dns_zone=azure_nextgen.cdn.ResourceReferenceArgs(
         id="",
     ),
     custom_domain_name="domain1",
     host_name="www.someDomain.net",
     profile_name="profile1",
     resource_group_name="RG",
-    tls_settings=azure_nextgen.cdn.latest.AFDDomainHttpsParametersArgs(
+    tls_settings=azure_nextgen.cdn.AFDDomainHttpsParametersArgs(
         certificate_type="ManagedCertificate",
         minimum_tls_version="TLS12",
     ))
@@ -116,7 +116,7 @@ afd_custom_domain = azure_nextgen.cdn.latest.AFDCustomDomain("afdCustomDomain",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const afdCustomDomain = new azure_nextgen.cdn.latest.AFDCustomDomain("afdCustomDomain", {
+const afdCustomDomain = new azure_nextgen.cdn.AFDCustomDomain("afdCustomDomain", {
     azureDnsZone: {
         id: "",
     },
@@ -142,7 +142,7 @@ const afdCustomDomain = new azure_nextgen.cdn.latest.AFDCustomDomain("afdCustomD
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AFDCustomDomain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AFDCustomDomainArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AFDCustomDomain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AFDCustomDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -150,11 +150,11 @@ const afdCustomDomain = new azure_nextgen.cdn.latest.AFDCustomDomain("afdCustomD
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAFDCustomDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AFDCustomDomainArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AFDCustomDomain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAFDCustomDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AFDCustomDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AFDCustomDomain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AFDCustomDomain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AFDCustomDomainArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AFDCustomDomain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AFDCustomDomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -175,7 +175,7 @@ const afdCustomDomain = new azure_nextgen.cdn.latest.AFDCustomDomain("afdCustomD
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AFDCustomDomainArgs</span>
+        <span class="property-type"><a href="#inputs">AFDCustomDomainArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -244,7 +244,7 @@ const afdCustomDomain = new azure_nextgen.cdn.latest.AFDCustomDomain("afdCustomD
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AFDCustomDomainArgs</span>
+        <span class="property-type"><a href="#inputs">AFDCustomDomainArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,7 +283,7 @@ const afdCustomDomain = new azure_nextgen.cdn.latest.AFDCustomDomain("afdCustomD
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AFDCustomDomainArgs</span>
+        <span class="property-type"><a href="#inputs">AFDCustomDomainArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -306,11 +306,11 @@ const afdCustomDomain = new azure_nextgen.cdn.latest.AFDCustomDomain("afdCustomD
 
 ## AFDCustomDomain Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AFDCustomDomain resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AFDCustomDomain resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1696,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:AFDCustomDomain domain1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/domains/domain1 
+$ pulumi import azure-nextgen:cdn:AFDCustomDomain domain1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/domains/domain1 
 ```
 
 

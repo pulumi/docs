@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databox.Job resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Job Resource.
-Latest API Version: 2020-11-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,48 +27,48 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        var job = new AzureNextGen.DataBox.Job("job", new AzureNextGen.DataBox.JobArgs
         {
             Details = 
             {
-                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                { "contactDetails", 
                 {
-                    ContactName = "Public SDK Test",
-                    EmailList = 
+                    { "contactName", "Public SDK Test" },
+                    { "emailList", 
                     {
                         "testing@microsoft.com",
-                    },
-                    Phone = "1234567890",
-                    PhoneExtension = "1234",
+                    } },
+                    { "phone", "1234567890" },
+                    { "phoneExtension", "1234" },
                 } },
                 { "dataImportDetails", 
                 {
-                    new AzureNextGen.DataBox.Latest.Inputs.DataImportDetailsArgs
+                    
                     {
-                        AccountDetails = 
+                        { "accountDetails", 
                         {
                             { "dataAccountType", "StorageAccount" },
                             { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount" },
-                        },
+                        } },
                     },
                 } },
                 { "jobDetailsType", "DataBox" },
-                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                { "shippingAddress", 
                 {
-                    AddressType = "Commercial",
-                    City = "San Francisco",
-                    CompanyName = "Microsoft",
-                    Country = "US",
-                    PostalCode = "94107",
-                    StateOrProvince = "CA",
-                    StreetAddress1 = "16 TOWNSEND ST",
-                    StreetAddress2 = "Unit 1",
+                    { "addressType", "Commercial" },
+                    { "city", "San Francisco" },
+                    { "companyName", "Microsoft" },
+                    { "country", "US" },
+                    { "postalCode", "94107" },
+                    { "stateOrProvince", "CA" },
+                    { "streetAddress1", "16 TOWNSEND ST" },
+                    { "streetAddress2", "Unit 1" },
                 } },
             },
             JobName = "SdkJob952",
             Location = "westus",
             ResourceGroupName = "SdkRg5154",
-            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DataBox.Inputs.SkuArgs
             {
                 Name = "DataBox",
             },
@@ -92,36 +92,36 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.databox.latest.Job("job",
+job = azure_nextgen.databox.Job("job",
     details={
-        "contactDetails": azure_nextgen.databox.latest.ContactDetailsArgs(
-            contact_name="Public SDK Test",
-            email_list=["testing@microsoft.com"],
-            phone="1234567890",
-            phone_extension="1234",
-        ),
-        "dataImportDetails": [azure_nextgen.databox.latest.DataImportDetailsArgs(
-            account_details={
+        "contactDetails": {
+            "contactName": "Public SDK Test",
+            "emailList": ["testing@microsoft.com"],
+            "phone": "1234567890",
+            "phoneExtension": "1234",
+        },
+        "dataImportDetails": [{
+            "accountDetails": {
                 "dataAccountType": "StorageAccount",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
             },
-        )],
+        }],
         "jobDetailsType": "DataBox",
-        "shippingAddress": azure_nextgen.databox.latest.ShippingAddressArgs(
-            address_type="Commercial",
-            city="San Francisco",
-            company_name="Microsoft",
-            country="US",
-            postal_code="94107",
-            state_or_province="CA",
-            street_address1="16 TOWNSEND ST",
-            street_address2="Unit 1",
-        ),
+        "shippingAddress": {
+            "addressType": "Commercial",
+            "city": "San Francisco",
+            "companyName": "Microsoft",
+            "country": "US",
+            "postalCode": "94107",
+            "stateOrProvince": "CA",
+            "streetAddress1": "16 TOWNSEND ST",
+            "streetAddress2": "Unit 1",
+        },
     },
     job_name="SdkJob952",
     location="westus",
     resource_group_name="SdkRg5154",
-    sku=azure_nextgen.databox.latest.SkuArgs(
+    sku=azure_nextgen.databox.SkuArgs(
         name="DataBox",
     ),
     transfer_type="ImportToAzure")
@@ -136,7 +136,7 @@ job = azure_nextgen.databox.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.databox.latest.Job("job", {
+const job = new azure_nextgen.databox.Job("job", {
     details: {
         contactDetails: {
             contactName: "Public SDK Test",
@@ -185,50 +185,50 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        var job = new AzureNextGen.DataBox.Job("job", new AzureNextGen.DataBox.JobArgs
         {
             Details = 
             {
-                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                { "contactDetails", 
                 {
-                    ContactName = "Public SDK Test",
-                    EmailList = 
+                    { "contactName", "Public SDK Test" },
+                    { "emailList", 
                     {
                         "testing@microsoft.com",
-                    },
-                    Phone = "1234567890",
-                    PhoneExtension = "1234",
+                    } },
+                    { "phone", "1234567890" },
+                    { "phoneExtension", "1234" },
                 } },
                 { "dataImportDetails", 
                 {
-                    new AzureNextGen.DataBox.Latest.Inputs.DataImportDetailsArgs
+                    
                     {
-                        AccountDetails = 
+                        { "accountDetails", 
                         {
                             { "dataAccountType", "StorageAccount" },
                             { "sharePassword", "<sharePassword>" },
                             { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2" },
-                        },
+                        } },
                     },
                 } },
                 { "devicePassword", "<devicePassword>" },
                 { "jobDetailsType", "DataBox" },
-                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                { "shippingAddress", 
                 {
-                    AddressType = "Commercial",
-                    City = "San Francisco",
-                    CompanyName = "Microsoft",
-                    Country = "US",
-                    PostalCode = "94107",
-                    StateOrProvince = "CA",
-                    StreetAddress1 = "16 TOWNSEND ST",
-                    StreetAddress2 = "Unit 1",
+                    { "addressType", "Commercial" },
+                    { "city", "San Francisco" },
+                    { "companyName", "Microsoft" },
+                    { "country", "US" },
+                    { "postalCode", "94107" },
+                    { "stateOrProvince", "CA" },
+                    { "streetAddress1", "16 TOWNSEND ST" },
+                    { "streetAddress2", "Unit 1" },
                 } },
             },
             JobName = "SdkJob9640",
             Location = "westus",
             ResourceGroupName = "SdkRg7478",
-            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DataBox.Inputs.SkuArgs
             {
                 Name = "DataBox",
             },
@@ -252,38 +252,38 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.databox.latest.Job("job",
+job = azure_nextgen.databox.Job("job",
     details={
-        "contactDetails": azure_nextgen.databox.latest.ContactDetailsArgs(
-            contact_name="Public SDK Test",
-            email_list=["testing@microsoft.com"],
-            phone="1234567890",
-            phone_extension="1234",
-        ),
-        "dataImportDetails": [azure_nextgen.databox.latest.DataImportDetailsArgs(
-            account_details={
+        "contactDetails": {
+            "contactName": "Public SDK Test",
+            "emailList": ["testing@microsoft.com"],
+            "phone": "1234567890",
+            "phoneExtension": "1234",
+        },
+        "dataImportDetails": [{
+            "accountDetails": {
                 "dataAccountType": "StorageAccount",
                 "sharePassword": "<sharePassword>",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
             },
-        )],
+        }],
         "devicePassword": "<devicePassword>",
         "jobDetailsType": "DataBox",
-        "shippingAddress": azure_nextgen.databox.latest.ShippingAddressArgs(
-            address_type="Commercial",
-            city="San Francisco",
-            company_name="Microsoft",
-            country="US",
-            postal_code="94107",
-            state_or_province="CA",
-            street_address1="16 TOWNSEND ST",
-            street_address2="Unit 1",
-        ),
+        "shippingAddress": {
+            "addressType": "Commercial",
+            "city": "San Francisco",
+            "companyName": "Microsoft",
+            "country": "US",
+            "postalCode": "94107",
+            "stateOrProvince": "CA",
+            "streetAddress1": "16 TOWNSEND ST",
+            "streetAddress2": "Unit 1",
+        },
     },
     job_name="SdkJob9640",
     location="westus",
     resource_group_name="SdkRg7478",
-    sku=azure_nextgen.databox.latest.SkuArgs(
+    sku=azure_nextgen.databox.SkuArgs(
         name="DataBox",
     ),
     transfer_type="ImportToAzure")
@@ -298,7 +298,7 @@ job = azure_nextgen.databox.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.databox.latest.Job("job", {
+const job = new azure_nextgen.databox.Job("job", {
     details: {
         contactDetails: {
             contactName: "Public SDK Test",
@@ -349,55 +349,55 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        var job = new AzureNextGen.DataBox.Job("job", new AzureNextGen.DataBox.JobArgs
         {
             Details = 
             {
-                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                { "contactDetails", 
                 {
-                    ContactName = "Public SDK Test",
-                    EmailList = 
+                    { "contactName", "Public SDK Test" },
+                    { "emailList", 
                     {
                         "testing@microsoft.com",
-                    },
-                    Phone = "1234567890",
-                    PhoneExtension = "1234",
+                    } },
+                    { "phone", "1234567890" },
+                    { "phoneExtension", "1234" },
                 } },
                 { "dataImportDetails", 
                 {
-                    new AzureNextGen.DataBox.Latest.Inputs.DataImportDetailsArgs
+                    
                     {
-                        AccountDetails = 
+                        { "accountDetails", 
                         {
                             { "dataAccountType", "StorageAccount" },
                             { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount" },
-                        },
+                        } },
                     },
                 } },
                 { "jobDetailsType", "DataBox" },
-                { "preferences", new AzureNextGen.DataBox.Latest.Inputs.PreferencesArgs
+                { "preferences", 
                 {
-                    EncryptionPreferences = new AzureNextGen.DataBox.Latest.Inputs.EncryptionPreferencesArgs
+                    { "encryptionPreferences", 
                     {
-                        DoubleEncryption = "Enabled",
-                    },
+                        { "doubleEncryption", "Enabled" },
+                    } },
                 } },
-                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                { "shippingAddress", 
                 {
-                    AddressType = "Commercial",
-                    City = "San Francisco",
-                    CompanyName = "Microsoft",
-                    Country = "US",
-                    PostalCode = "94107",
-                    StateOrProvince = "CA",
-                    StreetAddress1 = "16 TOWNSEND ST",
-                    StreetAddress2 = "Unit 1",
+                    { "addressType", "Commercial" },
+                    { "city", "San Francisco" },
+                    { "companyName", "Microsoft" },
+                    { "country", "US" },
+                    { "postalCode", "94107" },
+                    { "stateOrProvince", "CA" },
+                    { "streetAddress1", "16 TOWNSEND ST" },
+                    { "streetAddress2", "Unit 1" },
                 } },
             },
             JobName = "SdkJob6599",
             Location = "westus",
             ResourceGroupName = "SdkRg608",
-            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DataBox.Inputs.SkuArgs
             {
                 Name = "DataBox",
             },
@@ -421,41 +421,41 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.databox.latest.Job("job",
+job = azure_nextgen.databox.Job("job",
     details={
-        "contactDetails": azure_nextgen.databox.latest.ContactDetailsArgs(
-            contact_name="Public SDK Test",
-            email_list=["testing@microsoft.com"],
-            phone="1234567890",
-            phone_extension="1234",
-        ),
-        "dataImportDetails": [azure_nextgen.databox.latest.DataImportDetailsArgs(
-            account_details={
+        "contactDetails": {
+            "contactName": "Public SDK Test",
+            "emailList": ["testing@microsoft.com"],
+            "phone": "1234567890",
+            "phoneExtension": "1234",
+        },
+        "dataImportDetails": [{
+            "accountDetails": {
                 "dataAccountType": "StorageAccount",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
             },
-        )],
+        }],
         "jobDetailsType": "DataBox",
-        "preferences": azure_nextgen.databox.latest.PreferencesArgs(
-            encryption_preferences=azure_nextgen.databox.latest.EncryptionPreferencesArgs(
-                double_encryption="Enabled",
-            ),
-        ),
-        "shippingAddress": azure_nextgen.databox.latest.ShippingAddressArgs(
-            address_type="Commercial",
-            city="San Francisco",
-            company_name="Microsoft",
-            country="US",
-            postal_code="94107",
-            state_or_province="CA",
-            street_address1="16 TOWNSEND ST",
-            street_address2="Unit 1",
-        ),
+        "preferences": {
+            "encryptionPreferences": {
+                "doubleEncryption": "Enabled",
+            },
+        },
+        "shippingAddress": {
+            "addressType": "Commercial",
+            "city": "San Francisco",
+            "companyName": "Microsoft",
+            "country": "US",
+            "postalCode": "94107",
+            "stateOrProvince": "CA",
+            "streetAddress1": "16 TOWNSEND ST",
+            "streetAddress2": "Unit 1",
+        },
     },
     job_name="SdkJob6599",
     location="westus",
     resource_group_name="SdkRg608",
-    sku=azure_nextgen.databox.latest.SkuArgs(
+    sku=azure_nextgen.databox.SkuArgs(
         name="DataBox",
     ),
     transfer_type="ImportToAzure")
@@ -470,7 +470,7 @@ job = azure_nextgen.databox.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.databox.latest.Job("job", {
+const job = new azure_nextgen.databox.Job("job", {
     details: {
         contactDetails: {
             contactName: "Public SDK Test",
@@ -524,61 +524,61 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        var job = new AzureNextGen.DataBox.Job("job", new AzureNextGen.DataBox.JobArgs
         {
             Details = 
             {
-                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                { "contactDetails", 
                 {
-                    ContactName = "Public SDK Test",
-                    EmailList = 
+                    { "contactName", "Public SDK Test" },
+                    { "emailList", 
                     {
                         "testing@microsoft.com",
-                    },
-                    Phone = "1234567890",
-                    PhoneExtension = "1234",
+                    } },
+                    { "phone", "1234567890" },
+                    { "phoneExtension", "1234" },
                 } },
                 { "dataExportDetails", 
                 {
-                    new AzureNextGen.DataBox.Latest.Inputs.DataExportDetailsArgs
+                    
                     {
-                        AccountDetails = 
+                        { "accountDetails", 
                         {
                             { "dataAccountType", "StorageAccount" },
                             { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2" },
-                        },
-                        TransferConfiguration = new AzureNextGen.DataBox.Latest.Inputs.TransferConfigurationArgs
+                        } },
+                        { "transferConfiguration", 
                         {
-                            TransferAllDetails = new AzureNextGen.DataBox.Latest.Inputs.TransferConfigurationTransferAllDetailsArgs
+                            { "transferAllDetails", 
                             {
-                                Include = new AzureNextGen.DataBox.Latest.Inputs.TransferAllDetailsArgs
+                                { "include", 
                                 {
-                                    DataAccountType = "StorageAccount",
-                                    TransferAllBlobs = true,
-                                    TransferAllFiles = true,
-                                },
-                            },
-                            TransferConfigurationType = "TransferAll",
-                        },
+                                    { "dataAccountType", "StorageAccount" },
+                                    { "transferAllBlobs", true },
+                                    { "transferAllFiles", true },
+                                } },
+                            } },
+                            { "transferConfigurationType", "TransferAll" },
+                        } },
                     },
                 } },
                 { "jobDetailsType", "DataBox" },
-                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                { "shippingAddress", 
                 {
-                    AddressType = "Commercial",
-                    City = "San Francisco",
-                    CompanyName = "Microsoft",
-                    Country = "US",
-                    PostalCode = "94107",
-                    StateOrProvince = "CA",
-                    StreetAddress1 = "16 TOWNSEND ST",
-                    StreetAddress2 = "Unit 1",
+                    { "addressType", "Commercial" },
+                    { "city", "San Francisco" },
+                    { "companyName", "Microsoft" },
+                    { "country", "US" },
+                    { "postalCode", "94107" },
+                    { "stateOrProvince", "CA" },
+                    { "streetAddress1", "16 TOWNSEND ST" },
+                    { "streetAddress2", "Unit 1" },
                 } },
             },
             JobName = "SdkJob6429",
             Location = "westus",
             ResourceGroupName = "SdkRg8091",
-            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DataBox.Inputs.SkuArgs
             {
                 Name = "DataBox",
             },
@@ -602,46 +602,46 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.databox.latest.Job("job",
+job = azure_nextgen.databox.Job("job",
     details={
-        "contactDetails": azure_nextgen.databox.latest.ContactDetailsArgs(
-            contact_name="Public SDK Test",
-            email_list=["testing@microsoft.com"],
-            phone="1234567890",
-            phone_extension="1234",
-        ),
-        "dataExportDetails": [azure_nextgen.databox.latest.DataExportDetailsArgs(
-            account_details={
+        "contactDetails": {
+            "contactName": "Public SDK Test",
+            "emailList": ["testing@microsoft.com"],
+            "phone": "1234567890",
+            "phoneExtension": "1234",
+        },
+        "dataExportDetails": [{
+            "accountDetails": {
                 "dataAccountType": "StorageAccount",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2",
             },
-            transfer_configuration=azure_nextgen.databox.latest.TransferConfigurationArgs(
-                transfer_all_details=azure_nextgen.databox.latest.TransferConfigurationTransferAllDetailsArgs(
-                    include=azure_nextgen.databox.latest.TransferAllDetailsArgs(
-                        data_account_type="StorageAccount",
-                        transfer_all_blobs=True,
-                        transfer_all_files=True,
-                    ),
-                ),
-                transfer_configuration_type="TransferAll",
-            ),
-        )],
+            "transferConfiguration": {
+                "transferAllDetails": {
+                    "include": {
+                        "dataAccountType": "StorageAccount",
+                        "transferAllBlobs": True,
+                        "transferAllFiles": True,
+                    },
+                },
+                "transferConfigurationType": "TransferAll",
+            },
+        }],
         "jobDetailsType": "DataBox",
-        "shippingAddress": azure_nextgen.databox.latest.ShippingAddressArgs(
-            address_type="Commercial",
-            city="San Francisco",
-            company_name="Microsoft",
-            country="US",
-            postal_code="94107",
-            state_or_province="CA",
-            street_address1="16 TOWNSEND ST",
-            street_address2="Unit 1",
-        ),
+        "shippingAddress": {
+            "addressType": "Commercial",
+            "city": "San Francisco",
+            "companyName": "Microsoft",
+            "country": "US",
+            "postalCode": "94107",
+            "stateOrProvince": "CA",
+            "streetAddress1": "16 TOWNSEND ST",
+            "streetAddress2": "Unit 1",
+        },
     },
     job_name="SdkJob6429",
     location="westus",
     resource_group_name="SdkRg8091",
-    sku=azure_nextgen.databox.latest.SkuArgs(
+    sku=azure_nextgen.databox.SkuArgs(
         name="DataBox",
     ),
     transfer_type="ExportFromAzure")
@@ -656,7 +656,7 @@ job = azure_nextgen.databox.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.databox.latest.Job("job", {
+const job = new azure_nextgen.databox.Job("job", {
     details: {
         contactDetails: {
             contactName: "Public SDK Test",
@@ -715,45 +715,45 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        var job = new AzureNextGen.DataBox.Job("job", new AzureNextGen.DataBox.JobArgs
         {
             Details = 
             {
-                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                { "contactDetails", 
                 {
-                    ContactName = "Public SDK Test",
-                    EmailList = 
+                    { "contactName", "Public SDK Test" },
+                    { "emailList", 
                     {
                         "testing@microsoft.com",
-                    },
-                    Phone = "1234567890",
-                    PhoneExtension = "1234",
+                    } },
+                    { "phone", "1234567890" },
+                    { "phoneExtension", "1234" },
                 } },
                 { "dataImportDetails", 
                 {
-                    new AzureNextGen.DataBox.Latest.Inputs.DataImportDetailsArgs
+                    
                     {
-                        AccountDetails = 
+                        { "accountDetails", 
                         {
                             { "dataAccountType", "StorageAccount" },
                             { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2" },
-                        },
+                        } },
                     },
                 } },
                 { "jobDetailsType", "DataBox" },
-                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                { "shippingAddress", 
                 {
-                    AddressType = "Commercial",
-                    City = "San Francisco",
-                    CompanyName = "Microsoft",
-                    Country = "US",
-                    PostalCode = "94107",
-                    StateOrProvince = "CA",
-                    StreetAddress1 = "16 TOWNSEND ST",
-                    StreetAddress2 = "Unit 1",
+                    { "addressType", "Commercial" },
+                    { "city", "San Francisco" },
+                    { "companyName", "Microsoft" },
+                    { "country", "US" },
+                    { "postalCode", "94107" },
+                    { "stateOrProvince", "CA" },
+                    { "streetAddress1", "16 TOWNSEND ST" },
+                    { "streetAddress2", "Unit 1" },
                 } },
             },
-            Identity = new AzureNextGen.DataBox.Latest.Inputs.ResourceIdentityArgs
+            Identity = new AzureNextGen.DataBox.Inputs.ResourceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -764,7 +764,7 @@ class MyStack : Stack
             JobName = "SdkJob5337",
             Location = "westus",
             ResourceGroupName = "SdkRg7552",
-            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.DataBox.Inputs.SkuArgs
             {
                 Name = "DataBox",
             },
@@ -788,33 +788,33 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.databox.latest.Job("job",
+job = azure_nextgen.databox.Job("job",
     details={
-        "contactDetails": azure_nextgen.databox.latest.ContactDetailsArgs(
-            contact_name="Public SDK Test",
-            email_list=["testing@microsoft.com"],
-            phone="1234567890",
-            phone_extension="1234",
-        ),
-        "dataImportDetails": [azure_nextgen.databox.latest.DataImportDetailsArgs(
-            account_details={
+        "contactDetails": {
+            "contactName": "Public SDK Test",
+            "emailList": ["testing@microsoft.com"],
+            "phone": "1234567890",
+            "phoneExtension": "1234",
+        },
+        "dataImportDetails": [{
+            "accountDetails": {
                 "dataAccountType": "StorageAccount",
                 "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
             },
-        )],
+        }],
         "jobDetailsType": "DataBox",
-        "shippingAddress": azure_nextgen.databox.latest.ShippingAddressArgs(
-            address_type="Commercial",
-            city="San Francisco",
-            company_name="Microsoft",
-            country="US",
-            postal_code="94107",
-            state_or_province="CA",
-            street_address1="16 TOWNSEND ST",
-            street_address2="Unit 1",
-        ),
+        "shippingAddress": {
+            "addressType": "Commercial",
+            "city": "San Francisco",
+            "companyName": "Microsoft",
+            "country": "US",
+            "postalCode": "94107",
+            "stateOrProvince": "CA",
+            "streetAddress1": "16 TOWNSEND ST",
+            "streetAddress2": "Unit 1",
+        },
     },
-    identity=azure_nextgen.databox.latest.ResourceIdentityArgs(
+    identity=azure_nextgen.databox.ResourceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sdkIdentity": {},
@@ -823,7 +823,7 @@ job = azure_nextgen.databox.latest.Job("job",
     job_name="SdkJob5337",
     location="westus",
     resource_group_name="SdkRg7552",
-    sku=azure_nextgen.databox.latest.SkuArgs(
+    sku=azure_nextgen.databox.SkuArgs(
         name="DataBox",
     ),
     transfer_type="ImportToAzure")
@@ -838,7 +838,7 @@ job = azure_nextgen.databox.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.databox.latest.Job("job", {
+const job = new azure_nextgen.databox.Job("job", {
     details: {
         contactDetails: {
             contactName: "Public SDK Test",
@@ -891,7 +891,7 @@ const job = new azure_nextgen.databox.latest.Job("job", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">JobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -899,11 +899,11 @@ const job = new azure_nextgen.databox.latest.Job("job", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">JobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">JobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -924,7 +924,7 @@ const job = new azure_nextgen.databox.latest.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobArgs</span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -993,7 +993,7 @@ const job = new azure_nextgen.databox.latest.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobArgs</span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1032,7 +1032,7 @@ const job = new azure_nextgen.databox.latest.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobArgs</span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1055,11 +1055,11 @@ const job = new azure_nextgen.databox.latest.Job("job", {
 
 ## Job Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -13061,7 +13061,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databox/latest:Job SdkJob5337 /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/SdkRg7552/providers/Microsoft.DataBox/jobs/SdkJob5337 
+$ pulumi import azure-nextgen:databox:Job SdkJob5337 /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/SdkRg7552/providers/Microsoft.DataBox/jobs/SdkJob5337 
 ```
 
 

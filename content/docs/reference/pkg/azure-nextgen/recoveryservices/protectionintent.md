@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectionInten
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for backup ProtectionIntent.
-Latest API Version: 2017-07-01.
+API Version: 2017-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var protectionIntent = new AzureNextGen.RecoveryServices.Latest.ProtectionIntent("protectionIntent", new AzureNextGen.RecoveryServices.Latest.ProtectionIntentArgs
+        var protectionIntent = new AzureNextGen.RecoveryServices.ProtectionIntent("protectionIntent", new AzureNextGen.RecoveryServices.ProtectionIntentArgs
         {
             FabricName = "Azure",
             IntentObjectName = "vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
-            Properties = 
+            Properties = new AzureNextGen.RecoveryServices.Inputs.AzureResourceProtectionIntentArgs
             {
-                { "policyId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy" },
-                { "protectionIntentItemType", "AzureResourceItem" },
-                { "sourceResourceId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel" },
+                PolicyId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy",
+                ProtectionIntentItemType = "AzureResourceItem",
+                SourceResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel",
             },
             ResourceGroupName = "myRG",
             VaultName = "myVault",
@@ -49,7 +49,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewProtectionIntent(ctx, "protectionIntent", &recoveryservices.ProtectionIntentArgs{
+			FabricName:       pulumi.String("Azure"),
+			IntentObjectName: pulumi.String("vm;iaasvmcontainerv2;chamsrgtest;chamscandel"),
+			Properties: &recoveryservices.AzureResourceProtectionIntentArgs{
+				PolicyId:                 pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy"),
+				ProtectionIntentItemType: pulumi.String("AzureResourceItem"),
+				SourceResourceId:         pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel"),
+			},
+			ResourceGroupName: pulumi.String("myRG"),
+			VaultName:         pulumi.String("myVault"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -58,14 +88,14 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-protection_intent = azure_nextgen.recoveryservices.latest.ProtectionIntent("protectionIntent",
+protection_intent = azure_nextgen.recoveryservices.ProtectionIntent("protectionIntent",
     fabric_name="Azure",
     intent_object_name="vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
-    properties={
-        "policyId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy",
-        "protectionIntentItemType": "AzureResourceItem",
-        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel",
-    },
+    properties=azure_nextgen.recoveryservices.AzureResourceProtectionIntentArgs(
+        policy_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy",
+        protection_intent_item_type="AzureResourceItem",
+        source_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel",
+    ),
     resource_group_name="myRG",
     vault_name="myVault")
 
@@ -79,7 +109,7 @@ protection_intent = azure_nextgen.recoveryservices.latest.ProtectionIntent("prot
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const protectionIntent = new azure_nextgen.recoveryservices.latest.ProtectionIntent("protectionIntent", {
+const protectionIntent = new azure_nextgen.recoveryservices.ProtectionIntent("protectionIntent", {
     fabricName: "Azure",
     intentObjectName: "vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
     properties: {
@@ -103,7 +133,7 @@ const protectionIntent = new azure_nextgen.recoveryservices.latest.ProtectionInt
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectionIntent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ProtectionIntentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectionIntent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionIntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -111,11 +141,11 @@ const protectionIntent = new azure_nextgen.recoveryservices.latest.ProtectionInt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectionIntent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ProtectionIntentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectionIntent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectionIntent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectionIntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectionIntent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectionIntent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ProtectionIntentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectionIntent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProtectionIntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -136,7 +166,7 @@ const protectionIntent = new azure_nextgen.recoveryservices.latest.ProtectionInt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProtectionIntentArgs</span>
+        <span class="property-type"><a href="#inputs">ProtectionIntentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -205,7 +235,7 @@ const protectionIntent = new azure_nextgen.recoveryservices.latest.ProtectionInt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProtectionIntentArgs</span>
+        <span class="property-type"><a href="#inputs">ProtectionIntentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -244,7 +274,7 @@ const protectionIntent = new azure_nextgen.recoveryservices.latest.ProtectionInt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ProtectionIntentArgs</span>
+        <span class="property-type"><a href="#inputs">ProtectionIntentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -267,11 +297,11 @@ const protectionIntent = new azure_nextgen.recoveryservices.latest.ProtectionInt
 
 ## ProtectionIntent Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ProtectionIntent resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ProtectionIntent resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2767,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ProtectionIntent vm;iaasvmcontainerv2;chamsrgtest;chamscandel /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupFabrics/Azure/backupProtectionIntent/vm;iaasvmcontainerv2;chamsrgtest;chamscandel 
+$ pulumi import azure-nextgen:recoveryservices:ProtectionIntent vm;iaasvmcontainerv2;chamsrgtest;chamscandel /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupFabrics/Azure/backupProtectionIntent/vm;iaasvmcontainerv2;chamsrgtest;chamscandel 
 ```
 
 

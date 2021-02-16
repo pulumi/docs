@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.Rule resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of Rule Resource.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rule = new AzureNextGen.ServiceBus.Latest.Rule("rule", new AzureNextGen.ServiceBus.Latest.RuleArgs
+        var rule = new AzureNextGen.ServiceBus.Rule("rule", new AzureNextGen.ServiceBus.RuleArgs
         {
-            CorrelationFilter = new AzureNextGen.ServiceBus.Latest.Inputs.CorrelationFilterArgs
+            CorrelationFilter = new AzureNextGen.ServiceBus.Inputs.CorrelationFilterArgs
             {
                 Properties = 
                 {
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,8 +93,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rule = azure_nextgen.servicebus.latest.Rule("rule",
-    correlation_filter=azure_nextgen.servicebus.latest.CorrelationFilterArgs(
+rule = azure_nextgen.servicebus.Rule("rule",
+    correlation_filter=azure_nextgen.servicebus.CorrelationFilterArgs(
         properties={
             "topicHint": "Crop",
         },
@@ -116,7 +116,7 @@ rule = azure_nextgen.servicebus.latest.Rule("rule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
+const rule = new azure_nextgen.servicebus.Rule("rule", {
     correlationFilter: {
         properties: {
             topicHint: "Crop",
@@ -144,7 +144,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rule = new AzureNextGen.ServiceBus.Latest.Rule("rule", new AzureNextGen.ServiceBus.Latest.RuleArgs
+        var rule = new AzureNextGen.ServiceBus.Rule("rule", new AzureNextGen.ServiceBus.RuleArgs
         {
             NamespaceName = "sdk-Namespace-1319",
             ResourceGroupName = "resourceGroupName",
@@ -166,7 +166,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -196,7 +196,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rule = azure_nextgen.servicebus.latest.Rule("rule",
+rule = azure_nextgen.servicebus.Rule("rule",
     namespace_name="sdk-Namespace-1319",
     resource_group_name="resourceGroupName",
     rule_name="sdk-Rules-6571",
@@ -213,7 +213,7 @@ rule = azure_nextgen.servicebus.latest.Rule("rule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
+const rule = new azure_nextgen.servicebus.Rule("rule", {
     namespaceName: "sdk-Namespace-1319",
     resourceGroupName: "resourceGroupName",
     ruleName: "sdk-Rules-6571",
@@ -235,13 +235,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rule = new AzureNextGen.ServiceBus.Latest.Rule("rule", new AzureNextGen.ServiceBus.Latest.RuleArgs
+        var rule = new AzureNextGen.ServiceBus.Rule("rule", new AzureNextGen.ServiceBus.RuleArgs
         {
             FilterType = "SqlFilter",
             NamespaceName = "sdk-Namespace-1319",
             ResourceGroupName = "resourceGroupName",
             RuleName = "sdk-Rules-6571",
-            SqlFilter = new AzureNextGen.ServiceBus.Latest.Inputs.SqlFilterArgs
+            SqlFilter = new AzureNextGen.ServiceBus.Inputs.SqlFilterArgs
             {
                 SqlExpression = "myproperty=test",
             },
@@ -262,7 +262,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -296,12 +296,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rule = azure_nextgen.servicebus.latest.Rule("rule",
+rule = azure_nextgen.servicebus.Rule("rule",
     filter_type="SqlFilter",
     namespace_name="sdk-Namespace-1319",
     resource_group_name="resourceGroupName",
     rule_name="sdk-Rules-6571",
-    sql_filter=azure_nextgen.servicebus.latest.SqlFilterArgs(
+    sql_filter=azure_nextgen.servicebus.SqlFilterArgs(
         sql_expression="myproperty=test",
     ),
     subscription_name="sdk-Subscriptions-8691",
@@ -317,7 +317,7 @@ rule = azure_nextgen.servicebus.latest.Rule("rule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
+const rule = new azure_nextgen.servicebus.Rule("rule", {
     filterType: "SqlFilter",
     namespaceName: "sdk-Namespace-1319",
     resourceGroupName: "resourceGroupName",
@@ -341,7 +341,7 @@ const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -349,11 +349,11 @@ const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Rule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Rule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -374,7 +374,7 @@ const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RuleArgs</span>
+        <span class="property-type"><a href="#inputs">RuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -443,7 +443,7 @@ const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RuleArgs</span>
+        <span class="property-type"><a href="#inputs">RuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -482,7 +482,7 @@ const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RuleArgs</span>
+        <span class="property-type"><a href="#inputs">RuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -505,11 +505,11 @@ const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
 
 ## Rule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2361,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:Rule sdk-Rules-6571 /subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-1319/topics/sdk-Topics-2081/subscriptions/sdk-Subscriptions-8691/rules/sdk-Rules-6571 
+$ pulumi import azure-nextgen:servicebus:Rule sdk-Rules-6571 /subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-1319/topics/sdk-Topics-2081/subscriptions/sdk-Subscriptions-8691/rules/sdk-Rules-6571 
 ```
 
 

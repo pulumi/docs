@@ -19,7 +19,7 @@ meta_desc: "Explore the GetJitNetworkAccessPolicy function of the security modul
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJitNetworkAccessPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJitNetworkAccessPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetJitNetworkAccessPolicyResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJitNetworkAccessPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJitNetworkAccessPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetJitNetworkAccessPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetJitNetworkAccessPolicy function of the security modul
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJitNetworkAccessPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJitNetworkAccessPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupJitNetworkAccessPolicyResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJitNetworkAccessPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJitNetworkAccessPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupJitNetworkAccessPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupJitNetworkAccessPolicy` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetJitNetworkAccessPolicy function of the security modul
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetJitNetworkAccessPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetJitNetworkAccessPolicyResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetJitNetworkAccessPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetJitNetworkAccessPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetJitNetworkAccessPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -510,9 +510,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -646,9 +643,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="jitnetworkaccessportruleresponse">Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 
@@ -857,9 +851,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="jitnetworkaccessrequestportresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response</h4>
-
-
-
 
 
 
@@ -1143,9 +1134,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1315,9 +1303,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="jitnetworkaccessrequestvirtualmachineresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response</h4>
-
-
-
 
 
 

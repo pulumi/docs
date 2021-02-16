@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.Route resource with examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Friendly Routes name mapping to the any Routes or secret related information.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var route = new AzureNextGen.Cdn.Latest.Route("route", new AzureNextGen.Cdn.Latest.RouteArgs
+        var route = new AzureNextGen.Cdn.Route("route", new AzureNextGen.Cdn.RouteArgs
         {
             CompressionSettings = 
             {
@@ -40,7 +40,7 @@ class MyStack : Stack
             },
             CustomDomains = 
             {
-                new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/customDomains/domain1",
                 },
@@ -50,7 +50,7 @@ class MyStack : Stack
             ForwardingProtocol = "MatchRequest",
             HttpsRedirect = "Enabled",
             LinkToDefaultDomain = "Enabled",
-            OriginGroup = new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+            OriginGroup = new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/originGroups/originGroup1",
             },
@@ -64,7 +64,7 @@ class MyStack : Stack
             RouteName = "route1",
             RuleSets = 
             {
-                new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/ruleSets/ruleSet1",
                 },
@@ -93,7 +93,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-route = azure_nextgen.cdn.latest.Route("route",
+route = azure_nextgen.cdn.Route("route",
     compression_settings={
         "contentTypesToCompress": [
             "text/html",
@@ -101,7 +101,7 @@ route = azure_nextgen.cdn.latest.Route("route",
         ],
         "isCompressionEnabled": True,
     },
-    custom_domains=[azure_nextgen.cdn.latest.ResourceReferenceArgs(
+    custom_domains=[azure_nextgen.cdn.ResourceReferenceArgs(
         id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/customDomains/domain1",
     )],
     enabled_state="Enabled",
@@ -109,7 +109,7 @@ route = azure_nextgen.cdn.latest.Route("route",
     forwarding_protocol="MatchRequest",
     https_redirect="Enabled",
     link_to_default_domain="Enabled",
-    origin_group=azure_nextgen.cdn.latest.ResourceReferenceArgs(
+    origin_group=azure_nextgen.cdn.ResourceReferenceArgs(
         id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/originGroups/originGroup1",
     ),
     patterns_to_match=["/*"],
@@ -117,7 +117,7 @@ route = azure_nextgen.cdn.latest.Route("route",
     query_string_caching_behavior="IgnoreQueryString",
     resource_group_name="RG",
     route_name="route1",
-    rule_sets=[azure_nextgen.cdn.latest.ResourceReferenceArgs(
+    rule_sets=[azure_nextgen.cdn.ResourceReferenceArgs(
         id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/ruleSets/ruleSet1",
     )],
     supported_protocols=[
@@ -135,7 +135,7 @@ route = azure_nextgen.cdn.latest.Route("route",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const route = new azure_nextgen.cdn.latest.Route("route", {
+const route = new azure_nextgen.cdn.Route("route", {
     compressionSettings: {
         contentTypesToCompress: [
             "text/html",
@@ -180,7 +180,7 @@ const route = new azure_nextgen.cdn.latest.Route("route", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Route</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RouteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Route</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -188,11 +188,11 @@ const route = new azure_nextgen.cdn.latest.Route("route", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RouteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Route</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RouteArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Route</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -213,7 +213,7 @@ const route = new azure_nextgen.cdn.latest.Route("route", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RouteArgs</span>
+        <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -282,7 +282,7 @@ const route = new azure_nextgen.cdn.latest.Route("route", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RouteArgs</span>
+        <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -321,7 +321,7 @@ const route = new azure_nextgen.cdn.latest.Route("route", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RouteArgs</span>
+        <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -344,11 +344,11 @@ const route = new azure_nextgen.cdn.latest.Route("route", {
 
 ## Route Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Route resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Route resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2020,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:Route route1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afdendpoints/endpoint1/routes/route1 
+$ pulumi import azure-nextgen:cdn:Route route1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afdendpoints/endpoint1/routes/route1 
 ```
 
 

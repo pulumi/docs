@@ -19,7 +19,7 @@ meta_desc: "Explore the GetVirtualMachineImageTemplate function of the virtualma
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachineImageTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualMachineImageTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetVirtualMachineImageTemplateResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachineImageTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualMachineImageTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualMachineImageTemplateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetVirtualMachineImageTemplate function of the virtualma
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachineImageTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualMachineImageTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupVirtualMachineImageTemplateResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachineImageTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualMachineImageTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualMachineImageTemplateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVirtualMachineImageTemplate` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetVirtualMachineImageTemplate function of the virtualma
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualMachineImageTemplate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetVirtualMachineImageTemplateResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualMachineImageTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualMachineImageTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualMachineImageTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -690,9 +690,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -865,9 +862,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -968,9 +962,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1068,9 +1059,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="imagetemplatelastrunstatusresponse">Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response</h4>
-
-
-
 
 
 
@@ -1282,9 +1270,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1457,9 +1442,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1521,9 +1503,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="imagetemplateplatformimagesourceresponse">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -1732,9 +1711,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="imagetemplatepowershellcustomizerresponse">Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer<wbr>Response</h4>
-
-
-
 
 
 
@@ -2018,9 +1994,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2190,9 +2163,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="imagetemplatesharedimagedistributorresponse">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor<wbr>Response</h4>
-
-
-
 
 
 
@@ -2440,9 +2410,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2504,9 +2471,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="imagetemplateshellcustomizerresponse">Image<wbr>Template<wbr>Shell<wbr>Customizer<wbr>Response</h4>
-
-
-
 
 
 
@@ -2682,9 +2646,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2782,9 +2743,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="imagetemplatevmprofileresponse">Image<wbr>Template<wbr>Vm<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 
@@ -2921,9 +2879,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="imagetemplatewindowsupdatecustomizerresponse">Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer<wbr>Response</h4>
-
-
-
 
 
 
@@ -3099,9 +3054,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3238,9 +3190,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3338,9 +3287,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response</h4>
-
-
-
 
 
 

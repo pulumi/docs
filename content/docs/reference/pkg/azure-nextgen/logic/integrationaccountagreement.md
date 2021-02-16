@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountAgreemen
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The integration account agreement.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,26 +27,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountAgreement = new AzureNextGen.Logic.Latest.IntegrationAccountAgreement("integrationAccountAgreement", new AzureNextGen.Logic.Latest.IntegrationAccountAgreementArgs
+        var integrationAccountAgreement = new AzureNextGen.Logic.IntegrationAccountAgreement("integrationAccountAgreement", new AzureNextGen.Logic.IntegrationAccountAgreementArgs
         {
             AgreementName = "testAgreement",
             AgreementType = "AS2",
-            Content = new AzureNextGen.Logic.Latest.Inputs.AgreementContentArgs
+            Content = new AzureNextGen.Logic.Inputs.AgreementContentArgs
             {
-                AS2 = new AzureNextGen.Logic.Latest.Inputs.AS2AgreementContentArgs
+                AS2 = new AzureNextGen.Logic.Inputs.AS2AgreementContentArgs
                 {
-                    ReceiveAgreement = new AzureNextGen.Logic.Latest.Inputs.AS2OneWayAgreementArgs
+                    ReceiveAgreement = new AzureNextGen.Logic.Inputs.AS2OneWayAgreementArgs
                     {
-                        ProtocolSettings = new AzureNextGen.Logic.Latest.Inputs.AS2ProtocolSettingsArgs
+                        ProtocolSettings = new AzureNextGen.Logic.Inputs.AS2ProtocolSettingsArgs
                         {
-                            AcknowledgementConnectionSettings = new AzureNextGen.Logic.Latest.Inputs.AS2AcknowledgementConnectionSettingsArgs
+                            AcknowledgementConnectionSettings = new AzureNextGen.Logic.Inputs.AS2AcknowledgementConnectionSettingsArgs
                             {
                                 IgnoreCertificateNameMismatch = true,
                                 KeepHttpConnectionAlive = true,
                                 SupportHttpStatusCodeContinue = true,
                                 UnfoldHttpHeaders = true,
                             },
-                            EnvelopeSettings = new AzureNextGen.Logic.Latest.Inputs.AS2EnvelopeSettingsArgs
+                            EnvelopeSettings = new AzureNextGen.Logic.Inputs.AS2EnvelopeSettingsArgs
                             {
                                 AutogenerateFileName = true,
                                 FileNameTemplate = "Test",
@@ -54,12 +54,12 @@ class MyStack : Stack
                                 SuspendMessageOnFileNameGenerationError = true,
                                 TransmitFileNameInMimeHeader = true,
                             },
-                            ErrorSettings = new AzureNextGen.Logic.Latest.Inputs.AS2ErrorSettingsArgs
+                            ErrorSettings = new AzureNextGen.Logic.Inputs.AS2ErrorSettingsArgs
                             {
                                 ResendIfMDNNotReceived = true,
                                 SuspendDuplicateMessage = true,
                             },
-                            MdnSettings = new AzureNextGen.Logic.Latest.Inputs.AS2MdnSettingsArgs
+                            MdnSettings = new AzureNextGen.Logic.Inputs.AS2MdnSettingsArgs
                             {
                                 DispositionNotificationTo = "http://tempuri.org",
                                 MdnText = "Sample",
@@ -71,14 +71,14 @@ class MyStack : Stack
                                 SignMDN = true,
                                 SignOutboundMDNIfOptional = true,
                             },
-                            MessageConnectionSettings = new AzureNextGen.Logic.Latest.Inputs.AS2MessageConnectionSettingsArgs
+                            MessageConnectionSettings = new AzureNextGen.Logic.Inputs.AS2MessageConnectionSettingsArgs
                             {
                                 IgnoreCertificateNameMismatch = true,
                                 KeepHttpConnectionAlive = true,
                                 SupportHttpStatusCodeContinue = true,
                                 UnfoldHttpHeaders = true,
                             },
-                            SecuritySettings = new AzureNextGen.Logic.Latest.Inputs.AS2SecuritySettingsArgs
+                            SecuritySettings = new AzureNextGen.Logic.Inputs.AS2SecuritySettingsArgs
                             {
                                 EnableNRRForInboundDecodedMessages = true,
                                 EnableNRRForInboundEncodedMessages = true,
@@ -88,7 +88,7 @@ class MyStack : Stack
                                 EnableNRRForOutboundMDN = true,
                                 OverrideGroupSigningCertificate = false,
                             },
-                            ValidationSettings = new AzureNextGen.Logic.Latest.Inputs.AS2ValidationSettingsArgs
+                            ValidationSettings = new AzureNextGen.Logic.Inputs.AS2ValidationSettingsArgs
                             {
                                 CheckCertificateRevocationListOnReceive = true,
                                 CheckCertificateRevocationListOnSend = true,
@@ -101,29 +101,29 @@ class MyStack : Stack
                                 SignMessage = false,
                             },
                         },
-                        ReceiverBusinessIdentity = new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+                        ReceiverBusinessIdentity = new AzureNextGen.Logic.Inputs.BusinessIdentityArgs
                         {
                             Qualifier = "ZZ",
                             Value = "ZZ",
                         },
-                        SenderBusinessIdentity = new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+                        SenderBusinessIdentity = new AzureNextGen.Logic.Inputs.BusinessIdentityArgs
                         {
                             Qualifier = "AA",
                             Value = "AA",
                         },
                     },
-                    SendAgreement = new AzureNextGen.Logic.Latest.Inputs.AS2OneWayAgreementArgs
+                    SendAgreement = new AzureNextGen.Logic.Inputs.AS2OneWayAgreementArgs
                     {
-                        ProtocolSettings = new AzureNextGen.Logic.Latest.Inputs.AS2ProtocolSettingsArgs
+                        ProtocolSettings = new AzureNextGen.Logic.Inputs.AS2ProtocolSettingsArgs
                         {
-                            AcknowledgementConnectionSettings = new AzureNextGen.Logic.Latest.Inputs.AS2AcknowledgementConnectionSettingsArgs
+                            AcknowledgementConnectionSettings = new AzureNextGen.Logic.Inputs.AS2AcknowledgementConnectionSettingsArgs
                             {
                                 IgnoreCertificateNameMismatch = true,
                                 KeepHttpConnectionAlive = true,
                                 SupportHttpStatusCodeContinue = true,
                                 UnfoldHttpHeaders = true,
                             },
-                            EnvelopeSettings = new AzureNextGen.Logic.Latest.Inputs.AS2EnvelopeSettingsArgs
+                            EnvelopeSettings = new AzureNextGen.Logic.Inputs.AS2EnvelopeSettingsArgs
                             {
                                 AutogenerateFileName = true,
                                 FileNameTemplate = "Test",
@@ -131,12 +131,12 @@ class MyStack : Stack
                                 SuspendMessageOnFileNameGenerationError = true,
                                 TransmitFileNameInMimeHeader = true,
                             },
-                            ErrorSettings = new AzureNextGen.Logic.Latest.Inputs.AS2ErrorSettingsArgs
+                            ErrorSettings = new AzureNextGen.Logic.Inputs.AS2ErrorSettingsArgs
                             {
                                 ResendIfMDNNotReceived = true,
                                 SuspendDuplicateMessage = true,
                             },
-                            MdnSettings = new AzureNextGen.Logic.Latest.Inputs.AS2MdnSettingsArgs
+                            MdnSettings = new AzureNextGen.Logic.Inputs.AS2MdnSettingsArgs
                             {
                                 DispositionNotificationTo = "http://tempuri.org",
                                 MdnText = "Sample",
@@ -148,14 +148,14 @@ class MyStack : Stack
                                 SignMDN = true,
                                 SignOutboundMDNIfOptional = true,
                             },
-                            MessageConnectionSettings = new AzureNextGen.Logic.Latest.Inputs.AS2MessageConnectionSettingsArgs
+                            MessageConnectionSettings = new AzureNextGen.Logic.Inputs.AS2MessageConnectionSettingsArgs
                             {
                                 IgnoreCertificateNameMismatch = true,
                                 KeepHttpConnectionAlive = true,
                                 SupportHttpStatusCodeContinue = true,
                                 UnfoldHttpHeaders = true,
                             },
-                            SecuritySettings = new AzureNextGen.Logic.Latest.Inputs.AS2SecuritySettingsArgs
+                            SecuritySettings = new AzureNextGen.Logic.Inputs.AS2SecuritySettingsArgs
                             {
                                 EnableNRRForInboundDecodedMessages = true,
                                 EnableNRRForInboundEncodedMessages = true,
@@ -165,7 +165,7 @@ class MyStack : Stack
                                 EnableNRRForOutboundMDN = true,
                                 OverrideGroupSigningCertificate = false,
                             },
-                            ValidationSettings = new AzureNextGen.Logic.Latest.Inputs.AS2ValidationSettingsArgs
+                            ValidationSettings = new AzureNextGen.Logic.Inputs.AS2ValidationSettingsArgs
                             {
                                 CheckCertificateRevocationListOnReceive = true,
                                 CheckCertificateRevocationListOnSend = true,
@@ -178,12 +178,12 @@ class MyStack : Stack
                                 SignMessage = false,
                             },
                         },
-                        ReceiverBusinessIdentity = new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+                        ReceiverBusinessIdentity = new AzureNextGen.Logic.Inputs.BusinessIdentityArgs
                         {
                             Qualifier = "AA",
                             Value = "AA",
                         },
-                        SenderBusinessIdentity = new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+                        SenderBusinessIdentity = new AzureNextGen.Logic.Inputs.BusinessIdentityArgs
                         {
                             Qualifier = "ZZ",
                             Value = "ZZ",
@@ -191,13 +191,13 @@ class MyStack : Stack
                     },
                 },
             },
-            GuestIdentity = new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+            GuestIdentity = new AzureNextGen.Logic.Inputs.BusinessIdentityArgs
             {
                 Qualifier = "AA",
                 Value = "AA",
             },
             GuestPartner = "GuestPartner",
-            HostIdentity = new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
+            HostIdentity = new AzureNextGen.Logic.Inputs.BusinessIdentityArgs
             {
                 Qualifier = "ZZ",
                 Value = "ZZ",
@@ -226,7 +226,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -406,31 +406,31 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgreement("integrationAccountAgreement",
+integration_account_agreement = azure_nextgen.logic.IntegrationAccountAgreement("integrationAccountAgreement",
     agreement_name="testAgreement",
     agreement_type="AS2",
-    content=azure_nextgen.logic.latest.AgreementContentArgs(
-        a_s2=azure_nextgen.logic.latest.AS2AgreementContentArgs(
-            receive_agreement=azure_nextgen.logic.latest.AS2OneWayAgreementArgs(
-                protocol_settings=azure_nextgen.logic.latest.AS2ProtocolSettingsArgs(
-                    acknowledgement_connection_settings=azure_nextgen.logic.latest.AS2AcknowledgementConnectionSettingsArgs(
+    content=azure_nextgen.logic.AgreementContentArgs(
+        a_s2=azure_nextgen.logic.AS2AgreementContentArgs(
+            receive_agreement=azure_nextgen.logic.AS2OneWayAgreementArgs(
+                protocol_settings=azure_nextgen.logic.AS2ProtocolSettingsArgs(
+                    acknowledgement_connection_settings=azure_nextgen.logic.AS2AcknowledgementConnectionSettingsArgs(
                         ignore_certificate_name_mismatch=True,
                         keep_http_connection_alive=True,
                         support_http_status_code_continue=True,
                         unfold_http_headers=True,
                     ),
-                    envelope_settings=azure_nextgen.logic.latest.AS2EnvelopeSettingsArgs(
+                    envelope_settings=azure_nextgen.logic.AS2EnvelopeSettingsArgs(
                         autogenerate_file_name=True,
                         file_name_template="Test",
                         message_content_type="text/plain",
                         suspend_message_on_file_name_generation_error=True,
                         transmit_file_name_in_mime_header=True,
                     ),
-                    error_settings=azure_nextgen.logic.latest.AS2ErrorSettingsArgs(
+                    error_settings=azure_nextgen.logic.AS2ErrorSettingsArgs(
                         resend_if_mdn_not_received=True,
                         suspend_duplicate_message=True,
                     ),
-                    mdn_settings=azure_nextgen.logic.latest.AS2MdnSettingsArgs(
+                    mdn_settings=azure_nextgen.logic.AS2MdnSettingsArgs(
                         disposition_notification_to="http://tempuri.org",
                         mdn_text="Sample",
                         mic_hashing_algorithm="SHA1",
@@ -441,13 +441,13 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
                         sign_mdn=True,
                         sign_outbound_mdn_if_optional=True,
                     ),
-                    message_connection_settings=azure_nextgen.logic.latest.AS2MessageConnectionSettingsArgs(
+                    message_connection_settings=azure_nextgen.logic.AS2MessageConnectionSettingsArgs(
                         ignore_certificate_name_mismatch=True,
                         keep_http_connection_alive=True,
                         support_http_status_code_continue=True,
                         unfold_http_headers=True,
                     ),
-                    security_settings=azure_nextgen.logic.latest.AS2SecuritySettingsArgs(
+                    security_settings=azure_nextgen.logic.AS2SecuritySettingsArgs(
                         enable_nrr_for_inbound_decoded_messages=True,
                         enable_nrr_for_inbound_encoded_messages=True,
                         enable_nrr_for_inbound_mdn=True,
@@ -456,7 +456,7 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
                         enable_nrr_for_outbound_mdn=True,
                         override_group_signing_certificate=False,
                     ),
-                    validation_settings=azure_nextgen.logic.latest.AS2ValidationSettingsArgs(
+                    validation_settings=azure_nextgen.logic.AS2ValidationSettingsArgs(
                         check_certificate_revocation_list_on_receive=True,
                         check_certificate_revocation_list_on_send=True,
                         check_duplicate_message=True,
@@ -468,35 +468,35 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
                         sign_message=False,
                     ),
                 ),
-                receiver_business_identity=azure_nextgen.logic.latest.BusinessIdentityArgs(
+                receiver_business_identity=azure_nextgen.logic.BusinessIdentityArgs(
                     qualifier="ZZ",
                     value="ZZ",
                 ),
-                sender_business_identity=azure_nextgen.logic.latest.BusinessIdentityArgs(
+                sender_business_identity=azure_nextgen.logic.BusinessIdentityArgs(
                     qualifier="AA",
                     value="AA",
                 ),
             ),
-            send_agreement=azure_nextgen.logic.latest.AS2OneWayAgreementArgs(
-                protocol_settings=azure_nextgen.logic.latest.AS2ProtocolSettingsArgs(
-                    acknowledgement_connection_settings=azure_nextgen.logic.latest.AS2AcknowledgementConnectionSettingsArgs(
+            send_agreement=azure_nextgen.logic.AS2OneWayAgreementArgs(
+                protocol_settings=azure_nextgen.logic.AS2ProtocolSettingsArgs(
+                    acknowledgement_connection_settings=azure_nextgen.logic.AS2AcknowledgementConnectionSettingsArgs(
                         ignore_certificate_name_mismatch=True,
                         keep_http_connection_alive=True,
                         support_http_status_code_continue=True,
                         unfold_http_headers=True,
                     ),
-                    envelope_settings=azure_nextgen.logic.latest.AS2EnvelopeSettingsArgs(
+                    envelope_settings=azure_nextgen.logic.AS2EnvelopeSettingsArgs(
                         autogenerate_file_name=True,
                         file_name_template="Test",
                         message_content_type="text/plain",
                         suspend_message_on_file_name_generation_error=True,
                         transmit_file_name_in_mime_header=True,
                     ),
-                    error_settings=azure_nextgen.logic.latest.AS2ErrorSettingsArgs(
+                    error_settings=azure_nextgen.logic.AS2ErrorSettingsArgs(
                         resend_if_mdn_not_received=True,
                         suspend_duplicate_message=True,
                     ),
-                    mdn_settings=azure_nextgen.logic.latest.AS2MdnSettingsArgs(
+                    mdn_settings=azure_nextgen.logic.AS2MdnSettingsArgs(
                         disposition_notification_to="http://tempuri.org",
                         mdn_text="Sample",
                         mic_hashing_algorithm="SHA1",
@@ -507,13 +507,13 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
                         sign_mdn=True,
                         sign_outbound_mdn_if_optional=True,
                     ),
-                    message_connection_settings=azure_nextgen.logic.latest.AS2MessageConnectionSettingsArgs(
+                    message_connection_settings=azure_nextgen.logic.AS2MessageConnectionSettingsArgs(
                         ignore_certificate_name_mismatch=True,
                         keep_http_connection_alive=True,
                         support_http_status_code_continue=True,
                         unfold_http_headers=True,
                     ),
-                    security_settings=azure_nextgen.logic.latest.AS2SecuritySettingsArgs(
+                    security_settings=azure_nextgen.logic.AS2SecuritySettingsArgs(
                         enable_nrr_for_inbound_decoded_messages=True,
                         enable_nrr_for_inbound_encoded_messages=True,
                         enable_nrr_for_inbound_mdn=True,
@@ -522,7 +522,7 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
                         enable_nrr_for_outbound_mdn=True,
                         override_group_signing_certificate=False,
                     ),
-                    validation_settings=azure_nextgen.logic.latest.AS2ValidationSettingsArgs(
+                    validation_settings=azure_nextgen.logic.AS2ValidationSettingsArgs(
                         check_certificate_revocation_list_on_receive=True,
                         check_certificate_revocation_list_on_send=True,
                         check_duplicate_message=True,
@@ -534,23 +534,23 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
                         sign_message=False,
                     ),
                 ),
-                receiver_business_identity=azure_nextgen.logic.latest.BusinessIdentityArgs(
+                receiver_business_identity=azure_nextgen.logic.BusinessIdentityArgs(
                     qualifier="AA",
                     value="AA",
                 ),
-                sender_business_identity=azure_nextgen.logic.latest.BusinessIdentityArgs(
+                sender_business_identity=azure_nextgen.logic.BusinessIdentityArgs(
                     qualifier="ZZ",
                     value="ZZ",
                 ),
             ),
         ),
     ),
-    guest_identity=azure_nextgen.logic.latest.BusinessIdentityArgs(
+    guest_identity=azure_nextgen.logic.BusinessIdentityArgs(
         qualifier="AA",
         value="AA",
     ),
     guest_partner="GuestPartner",
-    host_identity=azure_nextgen.logic.latest.BusinessIdentityArgs(
+    host_identity=azure_nextgen.logic.BusinessIdentityArgs(
         qualifier="ZZ",
         value="ZZ",
     ),
@@ -573,7 +573,7 @@ integration_account_agreement = azure_nextgen.logic.latest.IntegrationAccountAgr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationAccountAgreement = new azure_nextgen.logic.latest.IntegrationAccountAgreement("integrationAccountAgreement", {
+const integrationAccountAgreement = new azure_nextgen.logic.IntegrationAccountAgreement("integrationAccountAgreement", {
     agreementName: "testAgreement",
     agreementType: "AS2",
     content: {
@@ -743,7 +743,7 @@ const integrationAccountAgreement = new azure_nextgen.logic.latest.IntegrationAc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IntegrationAccountAgreementArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -751,11 +751,11 @@ const integrationAccountAgreement = new azure_nextgen.logic.latest.IntegrationAc
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountAgreement</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IntegrationAccountAgreementArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountAgreement</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountAgreement</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountAgreement</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IntegrationAccountAgreementArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -776,7 +776,7 @@ const integrationAccountAgreement = new azure_nextgen.logic.latest.IntegrationAc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountAgreementArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountAgreementArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -845,7 +845,7 @@ const integrationAccountAgreement = new azure_nextgen.logic.latest.IntegrationAc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountAgreementArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountAgreementArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -884,7 +884,7 @@ const integrationAccountAgreement = new azure_nextgen.logic.latest.IntegrationAc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationAccountAgreementArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountAgreementArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -907,11 +907,11 @@ const integrationAccountAgreement = new azure_nextgen.logic.latest.IntegrationAc
 
 ## IntegrationAccountAgreement Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IntegrationAccountAgreement resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IntegrationAccountAgreement resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -27111,7 +27111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationAccountAgreement <IntegrationAccountAgreementName> /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount4533/agreements/<IntegrationAccountAgreementName> 
+$ pulumi import azure-nextgen:logic:IntegrationAccountAgreement <IntegrationAccountAgreementName> /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount4533/agreements/<IntegrationAccountAgreementName> 
 ```
 
 

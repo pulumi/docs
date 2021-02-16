@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.consumption.BudgetByResourceGrou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A budget resource.
-Latest API Version: 2018-10-01.
+API Version: 2018-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var budgetByResourceGroupName = new AzureNextGen.Consumption.Latest.BudgetByResourceGroupName("budgetByResourceGroupName", new AzureNextGen.Consumption.Latest.BudgetByResourceGroupNameArgs
+        var budgetByResourceGroupName = new AzureNextGen.Consumption.BudgetByResourceGroupName("budgetByResourceGroupName", new AzureNextGen.Consumption.BudgetByResourceGroupNameArgs
         {
             Amount = 100.65,
             BudgetName = "TestBudget",
             Category = "Cost",
             ETag = "\"1d34d016a593709\"",
-            Filters = new AzureNextGen.Consumption.Latest.Inputs.FiltersArgs
+            Filters = new AzureNextGen.Consumption.Inputs.FiltersArgs
             {
                 Meters = 
                 {
@@ -64,7 +64,7 @@ class MyStack : Stack
             },
             Notifications = 
             {
-                { "Actual_GreaterThan_80_Percent", new AzureNextGen.Consumption.Latest.Inputs.NotificationArgs
+                { "Actual_GreaterThan_80_Percent", new AzureNextGen.Consumption.Inputs.NotificationArgs
                 {
                     ContactEmails = 
                     {
@@ -87,7 +87,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "MYDEVTESTRG",
             TimeGrain = "Monthly",
-            TimePeriod = new AzureNextGen.Consumption.Latest.Inputs.BudgetTimePeriodArgs
+            TimePeriod = new AzureNextGen.Consumption.Inputs.BudgetTimePeriodArgs
             {
                 EndDate = "2018-10-31T00:00:00Z",
                 StartDate = "2017-10-01T00:00:00Z",
@@ -111,12 +111,12 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-budget_by_resource_group_name = azure_nextgen.consumption.latest.BudgetByResourceGroupName("budgetByResourceGroupName",
+budget_by_resource_group_name = azure_nextgen.consumption.BudgetByResourceGroupName("budgetByResourceGroupName",
     amount=100.65,
     budget_name="TestBudget",
     category="Cost",
     e_tag="\"1d34d016a593709\"",
-    filters=azure_nextgen.consumption.latest.FiltersArgs(
+    filters=azure_nextgen.consumption.FiltersArgs(
         meters=["00000000-0000-0000-0000-000000000000"],
         resource_groups=["MYDEVTESTRG"],
         resources=[
@@ -135,7 +135,7 @@ budget_by_resource_group_name = azure_nextgen.consumption.latest.BudgetByResourc
         },
     ),
     notifications={
-        "Actual_GreaterThan_80_Percent": azure_nextgen.consumption.latest.NotificationArgs(
+        "Actual_GreaterThan_80_Percent": azure_nextgen.consumption.NotificationArgs(
             contact_emails=[
                 "johndoe@contoso.com",
                 "janesmith@contoso.com",
@@ -152,7 +152,7 @@ budget_by_resource_group_name = azure_nextgen.consumption.latest.BudgetByResourc
     },
     resource_group_name="MYDEVTESTRG",
     time_grain="Monthly",
-    time_period=azure_nextgen.consumption.latest.BudgetTimePeriodArgs(
+    time_period=azure_nextgen.consumption.BudgetTimePeriodArgs(
         end_date="2018-10-31T00:00:00Z",
         start_date="2017-10-01T00:00:00Z",
     ))
@@ -167,7 +167,7 @@ budget_by_resource_group_name = azure_nextgen.consumption.latest.BudgetByResourc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const budgetByResourceGroupName = new azure_nextgen.consumption.latest.BudgetByResourceGroupName("budgetByResourceGroupName", {
+const budgetByResourceGroupName = new azure_nextgen.consumption.BudgetByResourceGroupName("budgetByResourceGroupName", {
     amount: 100.65,
     budgetName: "TestBudget",
     category: "Cost",
@@ -226,7 +226,7 @@ const budgetByResourceGroupName = new azure_nextgen.consumption.latest.BudgetByR
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BudgetByResourceGroupName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BudgetByResourceGroupNameArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BudgetByResourceGroupName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BudgetByResourceGroupNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -234,11 +234,11 @@ const budgetByResourceGroupName = new azure_nextgen.consumption.latest.BudgetByR
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBudgetByResourceGroupName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BudgetByResourceGroupNameArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BudgetByResourceGroupName</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBudgetByResourceGroupName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BudgetByResourceGroupNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BudgetByResourceGroupName</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BudgetByResourceGroupName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BudgetByResourceGroupNameArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BudgetByResourceGroupName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BudgetByResourceGroupNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -259,7 +259,7 @@ const budgetByResourceGroupName = new azure_nextgen.consumption.latest.BudgetByR
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BudgetByResourceGroupNameArgs</span>
+        <span class="property-type"><a href="#inputs">BudgetByResourceGroupNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -328,7 +328,7 @@ const budgetByResourceGroupName = new azure_nextgen.consumption.latest.BudgetByR
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BudgetByResourceGroupNameArgs</span>
+        <span class="property-type"><a href="#inputs">BudgetByResourceGroupNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -367,7 +367,7 @@ const budgetByResourceGroupName = new azure_nextgen.consumption.latest.BudgetByR
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BudgetByResourceGroupNameArgs</span>
+        <span class="property-type"><a href="#inputs">BudgetByResourceGroupNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -390,11 +390,11 @@ const budgetByResourceGroupName = new azure_nextgen.consumption.latest.BudgetByR
 
 ## BudgetByResourceGroupName Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The BudgetByResourceGroupName resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The BudgetByResourceGroupName resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2184,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:consumption/latest:BudgetByResourceGroupName TestBudget subscriptions/{subscription-id}/providers/Microsoft.Consumption/budgets/TestBudget 
+$ pulumi import azure-nextgen:consumption:BudgetByResourceGroupName TestBudget subscriptions/{subscription-id}/providers/Microsoft.Consumption/budgets/TestBudget 
 ```
 
 

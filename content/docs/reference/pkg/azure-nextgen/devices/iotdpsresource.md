@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devices.IotDpsResource resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The description of the provisioning service.
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotDpsResource = new AzureNextGen.Devices.Latest.IotDpsResource("iotDpsResource", new AzureNextGen.Devices.Latest.IotDpsResourceArgs
+        var iotDpsResource = new AzureNextGen.Devices.IotDpsResource("iotDpsResource", new AzureNextGen.Devices.IotDpsResourceArgs
         {
             Location = "East US",
             Properties = ,
             ProvisioningServiceName = "myFirstProvisioningService",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Devices.Latest.Inputs.IotDpsSkuInfoArgs
+            Sku = new AzureNextGen.Devices.Inputs.IotDpsSkuInfoArgs
             {
                 Capacity = 1,
                 Name = "S1",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,12 +88,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_dps_resource = azure_nextgen.devices.latest.IotDpsResource("iotDpsResource",
+iot_dps_resource = azure_nextgen.devices.IotDpsResource("iotDpsResource",
     location="East US",
-    properties=azure_nextgen.devices.latest.IotDpsPropertiesDescriptionArgs(),
+    properties=azure_nextgen.devices.IotDpsPropertiesDescriptionArgs(),
     provisioning_service_name="myFirstProvisioningService",
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.devices.latest.IotDpsSkuInfoArgs(
+    sku=azure_nextgen.devices.IotDpsSkuInfoArgs(
         capacity=1,
         name="S1",
     ),
@@ -109,7 +109,7 @@ iot_dps_resource = azure_nextgen.devices.latest.IotDpsResource("iotDpsResource",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iotDpsResource = new azure_nextgen.devices.latest.IotDpsResource("iotDpsResource", {
+const iotDpsResource = new azure_nextgen.devices.IotDpsResource("iotDpsResource", {
     location: "East US",
     properties: {},
     provisioningServiceName: "myFirstProvisioningService",
@@ -133,7 +133,7 @@ const iotDpsResource = new azure_nextgen.devices.latest.IotDpsResource("iotDpsRe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotDpsResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IotDpsResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotDpsResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IotDpsResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -141,11 +141,11 @@ const iotDpsResource = new azure_nextgen.devices.latest.IotDpsResource("iotDpsRe
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotDpsResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IotDpsResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotDpsResource</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotDpsResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IotDpsResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotDpsResource</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotDpsResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IotDpsResourceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotDpsResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IotDpsResourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -166,7 +166,7 @@ const iotDpsResource = new azure_nextgen.devices.latest.IotDpsResource("iotDpsRe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotDpsResourceArgs</span>
+        <span class="property-type"><a href="#inputs">IotDpsResourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -235,7 +235,7 @@ const iotDpsResource = new azure_nextgen.devices.latest.IotDpsResource("iotDpsRe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotDpsResourceArgs</span>
+        <span class="property-type"><a href="#inputs">IotDpsResourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,7 +274,7 @@ const iotDpsResource = new azure_nextgen.devices.latest.IotDpsResource("iotDpsRe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotDpsResourceArgs</span>
+        <span class="property-type"><a href="#inputs">IotDpsResourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -297,11 +297,11 @@ const iotDpsResource = new azure_nextgen.devices.latest.IotDpsResource("iotDpsRe
 
 ## IotDpsResource Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IotDpsResource resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IotDpsResource resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3803,7 +3803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devices/latest:IotDpsResource myFirstProvisioningService /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups//providers/Microsoft.Devices/ProvisioningServices/myFirstProvisioningService 
+$ pulumi import azure-nextgen:devices:IotDpsResource myFirstProvisioningService /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups//providers/Microsoft.Devices/ProvisioningServices/myFirstProvisioningService 
 ```
 
 

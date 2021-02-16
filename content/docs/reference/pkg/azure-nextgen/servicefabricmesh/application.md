@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.Application re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 This type describes an application resource.
+API Version: 2018-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Application("application", new AzureNextGen.ServiceFabricMesh.V20180901Preview.ApplicationArgs
+        var application = new AzureNextGen.ServiceFabricMesh.Application("application", new AzureNextGen.ServiceFabricMesh.ApplicationArgs
         {
             ApplicationResourceName = "sampleApplication",
             Description = "Service Fabric Mesh sample application.",
@@ -34,15 +35,15 @@ class MyStack : Stack
             ResourceGroupName = "sbz_demo",
             Services = 
             {
-                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ServiceResourceDescriptionArgs
+                new AzureNextGen.ServiceFabricMesh.Inputs.ServiceResourceDescriptionArgs
                 {
                     CodePackages = 
                     {
-                        new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ContainerCodePackagePropertiesArgs
+                        new AzureNextGen.ServiceFabricMesh.Inputs.ContainerCodePackagePropertiesArgs
                         {
                             Endpoints = 
                             {
-                                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.EndpointPropertiesArgs
+                                new AzureNextGen.ServiceFabricMesh.Inputs.EndpointPropertiesArgs
                                 {
                                     Name = "helloWorldListener",
                                     Port = 80,
@@ -50,9 +51,9 @@ class MyStack : Stack
                             },
                             Image = "seabreeze/sbz-helloworld:1.0-alpine",
                             Name = "helloWorldCode",
-                            Resources = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ResourceRequirementsArgs
+                            Resources = new AzureNextGen.ServiceFabricMesh.Inputs.ResourceRequirementsArgs
                             {
-                                Requests = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ResourceRequestsArgs
+                                Requests = new AzureNextGen.ServiceFabricMesh.Inputs.ResourceRequestsArgs
                                 {
                                     Cpu = 1,
                                     MemoryInGB = 1,
@@ -64,11 +65,11 @@ class MyStack : Stack
                     Name = "helloWorldService",
                     NetworkRefs = 
                     {
-                        new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.NetworkRefArgs
+                        new AzureNextGen.ServiceFabricMesh.Inputs.NetworkRefArgs
                         {
                             EndpointRefs = 
                             {
-                                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.EndpointRefArgs
+                                new AzureNextGen.ServiceFabricMesh.Inputs.EndpointRefArgs
                                 {
                                     Name = "helloWorldListener",
                                 },
@@ -96,7 +97,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh/v20180901preview"
+	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -162,21 +163,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.servicefabricmesh.v20180901preview.Application("application",
+application = azure_nextgen.servicefabricmesh.Application("application",
     application_resource_name="sampleApplication",
     description="Service Fabric Mesh sample application.",
     location="EastUS",
     resource_group_name="sbz_demo",
-    services=[azure_nextgen.servicefabricmesh.v20180901preview.ServiceResourceDescriptionArgs(
-        code_packages=[azure_nextgen.servicefabricmesh.v20180901preview.ContainerCodePackagePropertiesArgs(
-            endpoints=[azure_nextgen.servicefabricmesh.v20180901preview.EndpointPropertiesArgs(
+    services=[azure_nextgen.servicefabricmesh.ServiceResourceDescriptionArgs(
+        code_packages=[azure_nextgen.servicefabricmesh.ContainerCodePackagePropertiesArgs(
+            endpoints=[azure_nextgen.servicefabricmesh.EndpointPropertiesArgs(
                 name="helloWorldListener",
                 port=80,
             )],
             image="seabreeze/sbz-helloworld:1.0-alpine",
             name="helloWorldCode",
-            resources=azure_nextgen.servicefabricmesh.v20180901preview.ResourceRequirementsArgs(
-                requests=azure_nextgen.servicefabricmesh.v20180901preview.ResourceRequestsArgs(
+            resources=azure_nextgen.servicefabricmesh.ResourceRequirementsArgs(
+                requests=azure_nextgen.servicefabricmesh.ResourceRequestsArgs(
                     cpu=1,
                     memory_in_gb=1,
                 ),
@@ -184,8 +185,8 @@ application = azure_nextgen.servicefabricmesh.v20180901preview.Application("appl
         )],
         description="SeaBreeze Hello World Service.",
         name="helloWorldService",
-        network_refs=[azure_nextgen.servicefabricmesh.v20180901preview.NetworkRefArgs(
-            endpoint_refs=[azure_nextgen.servicefabricmesh.v20180901preview.EndpointRefArgs(
+        network_refs=[azure_nextgen.servicefabricmesh.NetworkRefArgs(
+            endpoint_refs=[azure_nextgen.servicefabricmesh.EndpointRefArgs(
                 name="helloWorldListener",
             )],
             name="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork",
@@ -205,7 +206,7 @@ application = azure_nextgen.servicefabricmesh.v20180901preview.Application("appl
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.servicefabricmesh.v20180901preview.Application("application", {
+const application = new azure_nextgen.servicefabricmesh.Application("application", {
     applicationResourceName: "sampleApplication",
     description: "Service Fabric Mesh sample application.",
     location: "EastUS",
@@ -251,7 +252,7 @@ const application = new azure_nextgen.servicefabricmesh.v20180901preview.Applica
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -259,11 +260,11 @@ const application = new azure_nextgen.servicefabricmesh.v20180901preview.Applica
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ApplicationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -284,7 +285,7 @@ const application = new azure_nextgen.servicefabricmesh.v20180901preview.Applica
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -353,7 +354,7 @@ const application = new azure_nextgen.servicefabricmesh.v20180901preview.Applica
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -392,7 +393,7 @@ const application = new azure_nextgen.servicefabricmesh.v20180901preview.Applica
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -415,11 +416,11 @@ const application = new azure_nextgen.servicefabricmesh.v20180901preview.Applica
 
 ## Application Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Application resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Application resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -8801,7 +8802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:Application sampleApplication /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/applications/sampleApplication 
+$ pulumi import azure-nextgen:servicefabricmesh:Application sampleApplication /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/applications/sampleApplication 
 ```
 
 

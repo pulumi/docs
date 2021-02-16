@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationProt
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Replication protected item.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationProtectedItem = new AzureNextGen.RecoveryServices.Latest.ReplicationProtectedItem("replicationProtectedItem", new AzureNextGen.RecoveryServices.Latest.ReplicationProtectedItemArgs
+        var replicationProtectedItem = new AzureNextGen.RecoveryServices.ReplicationProtectedItem("replicationProtectedItem", new AzureNextGen.RecoveryServices.ReplicationProtectedItemArgs
         {
             FabricName = "cloud1",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.EnableProtectionInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices.Inputs.EnableProtectionInputPropertiesArgs
             {
                 PolicyId = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
                 ProtectableItemId = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectableItems/f8491e4f-817a-40dd-a90c-af773978c75b",
-                ProviderSpecificDetails = 
+                ProviderSpecificDetails = new AzureNextGen.RecoveryServices.Inputs.HyperVReplicaAzureEnableProtectionInputArgs
                 {
-                    { "instanceType", "HyperVReplicaAzure" },
+                    InstanceType = "HyperVReplicaAzure",
                 },
             },
             ProtectionContainerName = "cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
@@ -53,7 +53,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewReplicationProtectedItem(ctx, "replicationProtectedItem", &recoveryservices.ReplicationProtectedItemArgs{
+			FabricName: pulumi.String("cloud1"),
+			Properties: &recoveryservices.EnableProtectionInputPropertiesArgs{
+				PolicyId:          pulumi.String("/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1"),
+				ProtectableItemId: pulumi.String("/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectableItems/f8491e4f-817a-40dd-a90c-af773978c75b"),
+				ProviderSpecificDetails: &recoveryservices.HyperVReplicaAzureEnableProtectionInputArgs{
+					InstanceType: pulumi.String("HyperVReplicaAzure"),
+				},
+			},
+			ProtectionContainerName:     pulumi.String("cloud_6d224fc6-f326-5d35-96de-fbf51efb3179"),
+			ReplicatedProtectedItemName: pulumi.String("f8491e4f-817a-40dd-a90c-af773978c75b"),
+			ResourceGroupName:           pulumi.String("resourceGroupPS1"),
+			ResourceName:                pulumi.String("vault1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -62,14 +95,14 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_protected_item = azure_nextgen.recoveryservices.latest.ReplicationProtectedItem("replicationProtectedItem",
+replication_protected_item = azure_nextgen.recoveryservices.ReplicationProtectedItem("replicationProtectedItem",
     fabric_name="cloud1",
-    properties=azure_nextgen.recoveryservices.latest.EnableProtectionInputPropertiesArgs(
+    properties=azure_nextgen.recoveryservices.EnableProtectionInputPropertiesArgs(
         policy_id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
         protectable_item_id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectableItems/f8491e4f-817a-40dd-a90c-af773978c75b",
-        provider_specific_details={
-            "instanceType": "HyperVReplicaAzure",
-        },
+        provider_specific_details=azure_nextgen.recoveryservices.HyperVReplicaAzureEnableProtectionInputArgs(
+            instance_type="HyperVReplicaAzure",
+        ),
     ),
     protection_container_name="cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
     replicated_protected_item_name="f8491e4f-817a-40dd-a90c-af773978c75b",
@@ -86,7 +119,7 @@ replication_protected_item = azure_nextgen.recoveryservices.latest.ReplicationPr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.ReplicationProtectedItem("replicationProtectedItem", {
+const replicationProtectedItem = new azure_nextgen.recoveryservices.ReplicationProtectedItem("replicationProtectedItem", {
     fabricName: "cloud1",
     properties: {
         policyId: "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
@@ -113,7 +146,7 @@ const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.Repli
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationProtectedItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReplicationProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationProtectedItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationProtectedItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -121,11 +154,11 @@ const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.Repli
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationProtectedItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReplicationProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationProtectedItem</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationProtectedItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationProtectedItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationProtectedItem</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationProtectedItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReplicationProtectedItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationProtectedItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationProtectedItemArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -146,7 +179,7 @@ const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.Repli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationProtectedItemArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationProtectedItemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -215,7 +248,7 @@ const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.Repli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationProtectedItemArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationProtectedItemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -254,7 +287,7 @@ const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.Repli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationProtectedItemArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationProtectedItemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -277,11 +310,11 @@ const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.Repli
 
 ## ReplicationProtectedItem Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ReplicationProtectedItem resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ReplicationProtectedItem resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -23121,7 +23154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationProtectedItem f8491e4f-817a-40dd-a90c-af773978c75b /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationProtectedItem f8491e4f-817a-40dd-a90c-af773978c75b /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b 
 ```
 
 

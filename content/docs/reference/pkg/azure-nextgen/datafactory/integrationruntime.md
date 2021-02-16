@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datafactory.IntegrationRuntime r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Integration runtime resource type.
-Latest API Version: 2018-06-01.
+API Version: 2018-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationRuntime = new AzureNextGen.DataFactory.Latest.IntegrationRuntime("integrationRuntime", new AzureNextGen.DataFactory.Latest.IntegrationRuntimeArgs
+        var integrationRuntime = new AzureNextGen.DataFactory.IntegrationRuntime("integrationRuntime", new AzureNextGen.DataFactory.IntegrationRuntimeArgs
         {
             FactoryName = "exampleFactoryName",
             IntegrationRuntimeName = "exampleIntegrationRuntime",
-            Properties = 
+            Properties = new AzureNextGen.DataFactory.Inputs.SelfHostedIntegrationRuntimeArgs
             {
-                { "description", "A selfhosted integration runtime" },
-                { "type", "SelfHosted" },
+                Description = "A selfhosted integration runtime",
+                Type = "SelfHosted",
             },
             ResourceGroupName = "exampleResourceGroup",
         });
@@ -47,7 +47,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datafactory.NewIntegrationRuntime(ctx, "integrationRuntime", &datafactory.IntegrationRuntimeArgs{
+			FactoryName:            pulumi.String("exampleFactoryName"),
+			IntegrationRuntimeName: pulumi.String("exampleIntegrationRuntime"),
+			Properties: &datafactory.SelfHostedIntegrationRuntimeArgs{
+				Description: pulumi.String("A selfhosted integration runtime"),
+				Type:        pulumi.String("SelfHosted"),
+			},
+			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -56,13 +84,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_runtime = azure_nextgen.datafactory.latest.IntegrationRuntime("integrationRuntime",
+integration_runtime = azure_nextgen.datafactory.IntegrationRuntime("integrationRuntime",
     factory_name="exampleFactoryName",
     integration_runtime_name="exampleIntegrationRuntime",
-    properties={
-        "description": "A selfhosted integration runtime",
-        "type": "SelfHosted",
-    },
+    properties=azure_nextgen.datafactory.SelfHostedIntegrationRuntimeArgs(
+        description="A selfhosted integration runtime",
+        type="SelfHosted",
+    ),
     resource_group_name="exampleResourceGroup")
 
 ```
@@ -75,7 +103,7 @@ integration_runtime = azure_nextgen.datafactory.latest.IntegrationRuntime("integ
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationRuntime = new azure_nextgen.datafactory.latest.IntegrationRuntime("integrationRuntime", {
+const integrationRuntime = new azure_nextgen.datafactory.IntegrationRuntime("integrationRuntime", {
     factoryName: "exampleFactoryName",
     integrationRuntimeName: "exampleIntegrationRuntime",
     properties: {
@@ -97,7 +125,7 @@ const integrationRuntime = new azure_nextgen.datafactory.latest.IntegrationRunti
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IntegrationRuntimeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -105,11 +133,11 @@ const integrationRuntime = new azure_nextgen.datafactory.latest.IntegrationRunti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationRuntime</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IntegrationRuntimeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntime</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationRuntime</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntime</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IntegrationRuntimeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -130,7 +158,7 @@ const integrationRuntime = new azure_nextgen.datafactory.latest.IntegrationRunti
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationRuntimeArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationRuntimeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -199,7 +227,7 @@ const integrationRuntime = new azure_nextgen.datafactory.latest.IntegrationRunti
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationRuntimeArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationRuntimeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -238,7 +266,7 @@ const integrationRuntime = new azure_nextgen.datafactory.latest.IntegrationRunti
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationRuntimeArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationRuntimeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -261,11 +289,11 @@ const integrationRuntime = new azure_nextgen.datafactory.latest.IntegrationRunti
 
 ## IntegrationRuntime Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -6145,7 +6173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datafactory/latest:IntegrationRuntime exampleIntegrationRuntime /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/integrationruntimes/exampleIntegrationRuntime 
+$ pulumi import azure-nextgen:datafactory:IntegrationRuntime exampleIntegrationRuntime /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/integrationruntimes/exampleIntegrationRuntime 
 ```
 
 

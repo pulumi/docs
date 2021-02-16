@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.SqlResourceSqlStoredP
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB storedProcedure.
-Latest API Version: 2020-09-01.
+API Version: 2021-01-15.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlStoredProcedure = new AzureNextGen.DocumentDB.Latest.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", new AzureNextGen.DocumentDB.Latest.SqlResourceSqlStoredProcedureArgs
+        var sqlResourceSqlStoredProcedure = new AzureNextGen.DocumentDB.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", new AzureNextGen.DocumentDB.SqlResourceSqlStoredProcedureArgs
         {
             AccountName = "ddb1",
             ContainerName = "containerName",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlStoredProcedureResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Inputs.SqlStoredProcedureResourceArgs
             {
                 Body = "body",
                 Id = "storedProcedureName",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,12 +90,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_stored_procedure = azure_nextgen.documentdb.latest.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure",
+sql_resource_sql_stored_procedure = azure_nextgen.documentdb.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure",
     account_name="ddb1",
     container_name="containerName",
     database_name="databaseName",
-    options=azure_nextgen.documentdb.latest.CreateUpdateOptionsArgs(),
-    resource=azure_nextgen.documentdb.latest.SqlStoredProcedureResourceArgs(
+    options=azure_nextgen.documentdb.CreateUpdateOptionsArgs(),
+    resource=azure_nextgen.documentdb.SqlStoredProcedureResourceArgs(
         body="body",
         id="storedProcedureName",
     ),
@@ -112,7 +112,7 @@ sql_resource_sql_stored_procedure = azure_nextgen.documentdb.latest.SqlResourceS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlResourceSqlStoredProcedure = new azure_nextgen.documentdb.latest.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", {
+const sqlResourceSqlStoredProcedure = new azure_nextgen.documentdb.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", {
     accountName: "ddb1",
     containerName: "containerName",
     databaseName: "databaseName",
@@ -137,7 +137,7 @@ const sqlResourceSqlStoredProcedure = new azure_nextgen.documentdb.latest.SqlRes
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlResourceSqlStoredProcedure</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SqlResourceSqlStoredProcedureArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlResourceSqlStoredProcedure</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlResourceSqlStoredProcedureArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -145,11 +145,11 @@ const sqlResourceSqlStoredProcedure = new azure_nextgen.documentdb.latest.SqlRes
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlResourceSqlStoredProcedure</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SqlResourceSqlStoredProcedureArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlResourceSqlStoredProcedure</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlResourceSqlStoredProcedure</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlResourceSqlStoredProcedureArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlResourceSqlStoredProcedure</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlResourceSqlStoredProcedure</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SqlResourceSqlStoredProcedureArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlResourceSqlStoredProcedure</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SqlResourceSqlStoredProcedureArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,7 +170,7 @@ const sqlResourceSqlStoredProcedure = new azure_nextgen.documentdb.latest.SqlRes
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlResourceSqlStoredProcedureArgs</span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlStoredProcedureArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -239,7 +239,7 @@ const sqlResourceSqlStoredProcedure = new azure_nextgen.documentdb.latest.SqlRes
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlResourceSqlStoredProcedureArgs</span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlStoredProcedureArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -278,7 +278,7 @@ const sqlResourceSqlStoredProcedure = new azure_nextgen.documentdb.latest.SqlRes
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlResourceSqlStoredProcedureArgs</span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlStoredProcedureArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,11 +301,11 @@ const sqlResourceSqlStoredProcedure = new azure_nextgen.documentdb.latest.SqlRes
 
 ## SqlResourceSqlStoredProcedure Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SqlResourceSqlStoredProcedure resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SqlResourceSqlStoredProcedure resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1275,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:SqlResourceSqlStoredProcedure storedProcedureName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName/sqlStoredProcedures/storedProcedureName 
+$ pulumi import azure-nextgen:documentdb:SqlResourceSqlStoredProcedure storedProcedureName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName/sqlStoredProcedures/storedProcedureName 
 ```
 
 

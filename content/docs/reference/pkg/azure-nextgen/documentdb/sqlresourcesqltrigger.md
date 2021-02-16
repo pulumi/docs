@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.SqlResourceSqlTrigger
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB trigger.
-Latest API Version: 2020-09-01.
+API Version: 2021-01-15.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlTrigger = new AzureNextGen.DocumentDB.Latest.SqlResourceSqlTrigger("sqlResourceSqlTrigger", new AzureNextGen.DocumentDB.Latest.SqlResourceSqlTriggerArgs
+        var sqlResourceSqlTrigger = new AzureNextGen.DocumentDB.SqlResourceSqlTrigger("sqlResourceSqlTrigger", new AzureNextGen.DocumentDB.SqlResourceSqlTriggerArgs
         {
             AccountName = "ddb1",
             ContainerName = "containerName",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlTriggerResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Inputs.SqlTriggerResourceArgs
             {
                 Body = "body",
                 Id = "triggerName",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,12 +94,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_trigger = azure_nextgen.documentdb.latest.SqlResourceSqlTrigger("sqlResourceSqlTrigger",
+sql_resource_sql_trigger = azure_nextgen.documentdb.SqlResourceSqlTrigger("sqlResourceSqlTrigger",
     account_name="ddb1",
     container_name="containerName",
     database_name="databaseName",
-    options=azure_nextgen.documentdb.latest.CreateUpdateOptionsArgs(),
-    resource=azure_nextgen.documentdb.latest.SqlTriggerResourceArgs(
+    options=azure_nextgen.documentdb.CreateUpdateOptionsArgs(),
+    resource=azure_nextgen.documentdb.SqlTriggerResourceArgs(
         body="body",
         id="triggerName",
         trigger_operation="triggerOperation",
@@ -118,7 +118,7 @@ sql_resource_sql_trigger = azure_nextgen.documentdb.latest.SqlResourceSqlTrigger
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlResourceSqlTrigger = new azure_nextgen.documentdb.latest.SqlResourceSqlTrigger("sqlResourceSqlTrigger", {
+const sqlResourceSqlTrigger = new azure_nextgen.documentdb.SqlResourceSqlTrigger("sqlResourceSqlTrigger", {
     accountName: "ddb1",
     containerName: "containerName",
     databaseName: "databaseName",
@@ -145,7 +145,7 @@ const sqlResourceSqlTrigger = new azure_nextgen.documentdb.latest.SqlResourceSql
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlResourceSqlTrigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SqlResourceSqlTriggerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlResourceSqlTrigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlResourceSqlTriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -153,11 +153,11 @@ const sqlResourceSqlTrigger = new azure_nextgen.documentdb.latest.SqlResourceSql
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlResourceSqlTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SqlResourceSqlTriggerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlResourceSqlTrigger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlResourceSqlTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlResourceSqlTriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlResourceSqlTrigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlResourceSqlTrigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SqlResourceSqlTriggerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlResourceSqlTrigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SqlResourceSqlTriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -178,7 +178,7 @@ const sqlResourceSqlTrigger = new azure_nextgen.documentdb.latest.SqlResourceSql
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlResourceSqlTriggerArgs</span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlTriggerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -247,7 +247,7 @@ const sqlResourceSqlTrigger = new azure_nextgen.documentdb.latest.SqlResourceSql
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlResourceSqlTriggerArgs</span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlTriggerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -286,7 +286,7 @@ const sqlResourceSqlTrigger = new azure_nextgen.documentdb.latest.SqlResourceSql
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlResourceSqlTriggerArgs</span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlTriggerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -309,11 +309,11 @@ const sqlResourceSqlTrigger = new azure_nextgen.documentdb.latest.SqlResourceSql
 
 ## SqlResourceSqlTrigger Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SqlResourceSqlTrigger resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SqlResourceSqlTrigger resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1527,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:SqlResourceSqlTrigger triggerName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName/sqlTriggers/triggerName 
+$ pulumi import azure-nextgen:documentdb:SqlResourceSqlTrigger triggerName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName/sqlTriggers/triggerName 
 ```
 
 

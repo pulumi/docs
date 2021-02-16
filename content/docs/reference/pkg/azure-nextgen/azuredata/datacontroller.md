@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.azuredata.DataController resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data controller resource
+API Version: 2020-09-08-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataController = new AzureNextGen.AzureData.V20200908Preview.DataController("dataController", new AzureNextGen.AzureData.V20200908Preview.DataControllerArgs
+        var dataController = new AzureNextGen.AzureData.DataController("dataController", new AzureNextGen.AzureData.DataControllerArgs
         {
             DataControllerName = "testdataController",
             Location = "northeurope",
-            OnPremiseProperty = new AzureNextGen.AzureData.V20200908Preview.Inputs.OnPremisePropertyArgs
+            OnPremiseProperty = new AzureNextGen.AzureData.Inputs.OnPremisePropertyArgs
             {
                 Id = "12345678-1234-1234-ab12-1a2b3c4d5e6f",
                 PublicSigningKey = "publicOnPremSigningKey",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata/v20200908preview"
+	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,10 +91,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_controller = azure_nextgen.azuredata.v20200908preview.DataController("dataController",
+data_controller = azure_nextgen.azuredata.DataController("dataController",
     data_controller_name="testdataController",
     location="northeurope",
-    on_premise_property=azure_nextgen.azuredata.v20200908preview.OnPremisePropertyArgs(
+    on_premise_property=azure_nextgen.azuredata.OnPremisePropertyArgs(
         id="12345678-1234-1234-ab12-1a2b3c4d5e6f",
         public_signing_key="publicOnPremSigningKey",
     ),
@@ -112,7 +113,7 @@ data_controller = azure_nextgen.azuredata.v20200908preview.DataController("dataC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataController = new azure_nextgen.azuredata.v20200908preview.DataController("dataController", {
+const dataController = new azure_nextgen.azuredata.DataController("dataController", {
     dataControllerName: "testdataController",
     location: "northeurope",
     onPremiseProperty: {
@@ -137,7 +138,7 @@ const dataController = new azure_nextgen.azuredata.v20200908preview.DataControll
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataController</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DataControllerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataController</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataControllerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -145,11 +146,11 @@ const dataController = new azure_nextgen.azuredata.v20200908preview.DataControll
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataController</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DataControllerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataController</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataController</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataControllerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataController</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataController</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DataControllerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataController</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataControllerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,7 +171,7 @@ const dataController = new azure_nextgen.azuredata.v20200908preview.DataControll
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataControllerArgs</span>
+        <span class="property-type"><a href="#inputs">DataControllerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -239,7 +240,7 @@ const dataController = new azure_nextgen.azuredata.v20200908preview.DataControll
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataControllerArgs</span>
+        <span class="property-type"><a href="#inputs">DataControllerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -278,7 +279,7 @@ const dataController = new azure_nextgen.azuredata.v20200908preview.DataControll
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataControllerArgs</span>
+        <span class="property-type"><a href="#inputs">DataControllerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,11 +302,11 @@ const dataController = new azure_nextgen.azuredata.v20200908preview.DataControll
 
 ## DataController Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DataController resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DataController resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1285,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:azuredata/v20200908preview:DataController testdataController /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/dataControllers/testdataController 
+$ pulumi import azure-nextgen:azuredata:DataController testdataController /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/dataControllers/testdataController 
 ```
 
 

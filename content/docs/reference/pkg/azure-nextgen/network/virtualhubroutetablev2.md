@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualHubRouteTableV2 r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 VirtualHubRouteTableV2 Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualHubRouteTableV2 = new AzureNextGen.Network.Latest.VirtualHubRouteTableV2("virtualHubRouteTableV2", new AzureNextGen.Network.Latest.VirtualHubRouteTableV2Args
+        var virtualHubRouteTableV2 = new AzureNextGen.Network.VirtualHubRouteTableV2("virtualHubRouteTableV2", new AzureNextGen.Network.VirtualHubRouteTableV2Args
         {
             AttachedConnections = 
             {
@@ -37,7 +37,7 @@ class MyStack : Stack
             RouteTableName = "virtualHubRouteTable1a",
             Routes = 
             {
-                new AzureNextGen.Network.Latest.Inputs.VirtualHubRouteV2Args
+                new AzureNextGen.Network.Inputs.VirtualHubRouteV2Args
                 {
                     DestinationType = "CIDR",
                     Destinations = 
@@ -51,7 +51,7 @@ class MyStack : Stack
                         "10.0.0.68",
                     },
                 },
-                new AzureNextGen.Network.Latest.Inputs.VirtualHubRouteV2Args
+                new AzureNextGen.Network.Inputs.VirtualHubRouteV2Args
                 {
                     DestinationType = "CIDR",
                     Destinations = 
@@ -81,7 +81,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -135,12 +135,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_hub_route_table_v2 = azure_nextgen.network.latest.VirtualHubRouteTableV2("virtualHubRouteTableV2",
+virtual_hub_route_table_v2 = azure_nextgen.network.VirtualHubRouteTableV2("virtualHubRouteTableV2",
     attached_connections=["All_Vnets"],
     resource_group_name="rg1",
     route_table_name="virtualHubRouteTable1a",
     routes=[
-        azure_nextgen.network.latest.VirtualHubRouteV2Args(
+        azure_nextgen.network.VirtualHubRouteV2Args(
             destination_type="CIDR",
             destinations=[
                 "20.10.0.0/16",
@@ -149,7 +149,7 @@ virtual_hub_route_table_v2 = azure_nextgen.network.latest.VirtualHubRouteTableV2
             next_hop_type="IPAddress",
             next_hops=["10.0.0.68"],
         ),
-        azure_nextgen.network.latest.VirtualHubRouteV2Args(
+        azure_nextgen.network.VirtualHubRouteV2Args(
             destination_type="CIDR",
             destinations=["0.0.0.0/0"],
             next_hop_type="IPAddress",
@@ -168,7 +168,7 @@ virtual_hub_route_table_v2 = azure_nextgen.network.latest.VirtualHubRouteTableV2
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualHubRouteTableV2 = new azure_nextgen.network.latest.VirtualHubRouteTableV2("virtualHubRouteTableV2", {
+const virtualHubRouteTableV2 = new azure_nextgen.network.VirtualHubRouteTableV2("virtualHubRouteTableV2", {
     attachedConnections: ["All_Vnets"],
     resourceGroupName: "rg1",
     routeTableName: "virtualHubRouteTable1a",
@@ -204,7 +204,7 @@ const virtualHubRouteTableV2 = new azure_nextgen.network.latest.VirtualHubRouteT
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualHubRouteTableV2</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualHubRouteTableV2Args</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualHubRouteTableV2</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualHubRouteTableV2Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -212,11 +212,11 @@ const virtualHubRouteTableV2 = new azure_nextgen.network.latest.VirtualHubRouteT
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualHubRouteTableV2</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualHubRouteTableV2Args</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualHubRouteTableV2</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualHubRouteTableV2</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualHubRouteTableV2Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualHubRouteTableV2</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualHubRouteTableV2</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualHubRouteTableV2Args</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualHubRouteTableV2</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualHubRouteTableV2Args</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -237,7 +237,7 @@ const virtualHubRouteTableV2 = new azure_nextgen.network.latest.VirtualHubRouteT
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualHubRouteTableV2Args</span>
+        <span class="property-type"><a href="#inputs">VirtualHubRouteTableV2Args</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -306,7 +306,7 @@ const virtualHubRouteTableV2 = new azure_nextgen.network.latest.VirtualHubRouteT
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualHubRouteTableV2Args</span>
+        <span class="property-type"><a href="#inputs">VirtualHubRouteTableV2Args</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -345,7 +345,7 @@ const virtualHubRouteTableV2 = new azure_nextgen.network.latest.VirtualHubRouteT
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualHubRouteTableV2Args</span>
+        <span class="property-type"><a href="#inputs">VirtualHubRouteTableV2Args</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -368,11 +368,11 @@ const virtualHubRouteTableV2 = new azure_nextgen.network.latest.VirtualHubRouteT
 
 ## VirtualHubRouteTableV2 Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1146,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VirtualHubRouteTableV2 virtualHubRouteTable1a /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeTables/virtualHubRouteTable1a 
+$ pulumi import azure-nextgen:network:VirtualHubRouteTableV2 virtualHubRouteTable1a /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeTables/virtualHubRouteTable1a 
 ```
 
 

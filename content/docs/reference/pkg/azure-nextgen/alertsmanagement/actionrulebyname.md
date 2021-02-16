@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.alertsmanagement.ActionRuleByNam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Action rule object containing target scope, conditions and suppression logic
+API Version: 2019-05-05-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var actionRuleByName = new AzureNextGen.AlertsManagement.V20190505Preview.ActionRuleByName("actionRuleByName", new AzureNextGen.AlertsManagement.V20190505Preview.ActionRuleByNameArgs
+        var actionRuleByName = new AzureNextGen.AlertsManagement.ActionRuleByName("actionRuleByName", new AzureNextGen.AlertsManagement.ActionRuleByNameArgs
         {
             ActionRuleName = "DailySuppression",
             Location = "Global",
-            Properties = 
+            Properties = new AzureNextGen.AlertsManagement.Inputs.SuppressionArgs
             {
-                { "conditions", new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionsArgs
+                Conditions = new AzureNextGen.AlertsManagement.Inputs.ConditionsArgs
                 {
-                    MonitorCondition = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionArgs
+                    MonitorCondition = new AzureNextGen.AlertsManagement.Inputs.ConditionArgs
                     {
                         Operator = "Equals",
                         Values = 
@@ -42,7 +43,7 @@ class MyStack : Stack
                             "Fired",
                         },
                     },
-                    MonitorService = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionArgs
+                    MonitorService = new AzureNextGen.AlertsManagement.Inputs.ConditionArgs
                     {
                         Operator = "Equals",
                         Values = 
@@ -51,7 +52,7 @@ class MyStack : Stack
                             "Application Insights",
                         },
                     },
-                    Severity = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionArgs
+                    Severity = new AzureNextGen.AlertsManagement.Inputs.ConditionArgs
                     {
                         Operator = "Equals",
                         Values = 
@@ -60,7 +61,7 @@ class MyStack : Stack
                             "Sev2",
                         },
                     },
-                    TargetResourceType = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionArgs
+                    TargetResourceType = new AzureNextGen.AlertsManagement.Inputs.ConditionArgs
                     {
                         Operator = "NotEquals",
                         Values = 
@@ -68,29 +69,29 @@ class MyStack : Stack
                             "Microsoft.Compute/VirtualMachines",
                         },
                     },
-                } },
-                { "description", "Action rule on resource group for daily suppression" },
-                { "scope", new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ScopeArgs
+                },
+                Description = "Action rule on resource group for daily suppression",
+                Scope = new AzureNextGen.AlertsManagement.Inputs.ScopeArgs
                 {
                     ScopeType = "ResourceGroup",
                     Values = 
                     {
                         "/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg",
                     },
-                } },
-                { "status", "Enabled" },
-                { "suppressionConfig", new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.SuppressionConfigArgs
+                },
+                Status = "Enabled",
+                SuppressionConfig = new AzureNextGen.AlertsManagement.Inputs.SuppressionConfigArgs
                 {
                     RecurrenceType = "Daily",
-                    Schedule = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.SuppressionScheduleArgs
+                    Schedule = new AzureNextGen.AlertsManagement.Inputs.SuppressionScheduleArgs
                     {
                         EndDate = "12/18/2018",
                         EndTime = "14:00:00",
                         StartDate = "12/09/2018",
                         StartTime = "06:00:00",
                     },
-                } },
-                { "type", "Suppression" },
+                },
+                Type = "Suppression",
             },
             ResourceGroupName = "alertscorrelationrg",
             Tags = ,
@@ -104,7 +105,80 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	alertsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/alertsmanagement"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := alertsmanagement.NewActionRuleByName(ctx, "actionRuleByName", &alertsmanagement.ActionRuleByNameArgs{
+			ActionRuleName: pulumi.String("DailySuppression"),
+			Location:       pulumi.String("Global"),
+			Properties: &alertsmanagement.SuppressionArgs{
+				Conditions: &alertsmanagement.ConditionsArgs{
+					MonitorCondition: &alertsmanagement.ConditionArgs{
+						Operator: pulumi.String("Equals"),
+						Values: pulumi.StringArray{
+							pulumi.String("Fired"),
+						},
+					},
+					MonitorService: &alertsmanagement.ConditionArgs{
+						Operator: pulumi.String("Equals"),
+						Values: pulumi.StringArray{
+							pulumi.String("Platform"),
+							pulumi.String("Application Insights"),
+						},
+					},
+					Severity: &alertsmanagement.ConditionArgs{
+						Operator: pulumi.String("Equals"),
+						Values: pulumi.StringArray{
+							pulumi.String("Sev0"),
+							pulumi.String("Sev2"),
+						},
+					},
+					TargetResourceType: &alertsmanagement.ConditionArgs{
+						Operator: pulumi.String("NotEquals"),
+						Values: pulumi.StringArray{
+							pulumi.String("Microsoft.Compute/VirtualMachines"),
+						},
+					},
+				},
+				Description: pulumi.String("Action rule on resource group for daily suppression"),
+				Scope: &alertsmanagement.ScopeArgs{
+					ScopeType: pulumi.String("ResourceGroup"),
+					Values: pulumi.StringArray{
+						pulumi.String("/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg"),
+					},
+				},
+				Status: pulumi.String("Enabled"),
+				SuppressionConfig: &alertsmanagement.SuppressionConfigArgs{
+					RecurrenceType: pulumi.String("Daily"),
+					Schedule: &alertsmanagement.SuppressionScheduleArgs{
+						EndDate:   pulumi.String("12/18/2018"),
+						EndTime:   pulumi.String("14:00:00"),
+						StartDate: pulumi.String("12/09/2018"),
+						StartTime: pulumi.String("06:00:00"),
+					},
+				},
+				Type: pulumi.String("Suppression"),
+			},
+			ResourceGroupName: pulumi.String("alertscorrelationrg"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -113,51 +187,51 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-action_rule_by_name = azure_nextgen.alertsmanagement.v20190505preview.ActionRuleByName("actionRuleByName",
+action_rule_by_name = azure_nextgen.alertsmanagement.ActionRuleByName("actionRuleByName",
     action_rule_name="DailySuppression",
     location="Global",
-    properties={
-        "conditions": azure_nextgen.alertsmanagement.v20190505preview.ConditionsArgs(
-            monitor_condition=azure_nextgen.alertsmanagement.v20190505preview.ConditionArgs(
+    properties=azure_nextgen.alertsmanagement.SuppressionArgs(
+        conditions=azure_nextgen.alertsmanagement.ConditionsArgs(
+            monitor_condition=azure_nextgen.alertsmanagement.ConditionArgs(
                 operator="Equals",
                 values=["Fired"],
             ),
-            monitor_service=azure_nextgen.alertsmanagement.v20190505preview.ConditionArgs(
+            monitor_service=azure_nextgen.alertsmanagement.ConditionArgs(
                 operator="Equals",
                 values=[
                     "Platform",
                     "Application Insights",
                 ],
             ),
-            severity=azure_nextgen.alertsmanagement.v20190505preview.ConditionArgs(
+            severity=azure_nextgen.alertsmanagement.ConditionArgs(
                 operator="Equals",
                 values=[
                     "Sev0",
                     "Sev2",
                 ],
             ),
-            target_resource_type=azure_nextgen.alertsmanagement.v20190505preview.ConditionArgs(
+            target_resource_type=azure_nextgen.alertsmanagement.ConditionArgs(
                 operator="NotEquals",
                 values=["Microsoft.Compute/VirtualMachines"],
             ),
         ),
-        "description": "Action rule on resource group for daily suppression",
-        "scope": azure_nextgen.alertsmanagement.v20190505preview.ScopeArgs(
+        description="Action rule on resource group for daily suppression",
+        scope=azure_nextgen.alertsmanagement.ScopeArgs(
             scope_type="ResourceGroup",
             values=["/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg"],
         ),
-        "status": "Enabled",
-        "suppressionConfig": azure_nextgen.alertsmanagement.v20190505preview.SuppressionConfigArgs(
+        status="Enabled",
+        suppression_config=azure_nextgen.alertsmanagement.SuppressionConfigArgs(
             recurrence_type="Daily",
-            schedule=azure_nextgen.alertsmanagement.v20190505preview.SuppressionScheduleArgs(
+            schedule=azure_nextgen.alertsmanagement.SuppressionScheduleArgs(
                 end_date="12/18/2018",
                 end_time="14:00:00",
                 start_date="12/09/2018",
                 start_time="06:00:00",
             ),
         ),
-        "type": "Suppression",
-    },
+        type="Suppression",
+    ),
     resource_group_name="alertscorrelationrg",
     tags={})
 
@@ -171,7 +245,7 @@ action_rule_by_name = azure_nextgen.alertsmanagement.v20190505preview.ActionRule
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const actionRuleByName = new azure_nextgen.alertsmanagement.v20190505preview.ActionRuleByName("actionRuleByName", {
+const actionRuleByName = new azure_nextgen.alertsmanagement.ActionRuleByName("actionRuleByName", {
     actionRuleName: "DailySuppression",
     location: "Global",
     properties: {
@@ -232,7 +306,7 @@ const actionRuleByName = new azure_nextgen.alertsmanagement.v20190505preview.Act
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActionRuleByName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ActionRuleByNameArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActionRuleByName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionRuleByNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -240,11 +314,11 @@ const actionRuleByName = new azure_nextgen.alertsmanagement.v20190505preview.Act
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActionRuleByName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ActionRuleByNameArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionRuleByName</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActionRuleByName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActionRuleByNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionRuleByName</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActionRuleByName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ActionRuleByNameArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActionRuleByName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ActionRuleByNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -265,7 +339,7 @@ const actionRuleByName = new azure_nextgen.alertsmanagement.v20190505preview.Act
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ActionRuleByNameArgs</span>
+        <span class="property-type"><a href="#inputs">ActionRuleByNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -334,7 +408,7 @@ const actionRuleByName = new azure_nextgen.alertsmanagement.v20190505preview.Act
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ActionRuleByNameArgs</span>
+        <span class="property-type"><a href="#inputs">ActionRuleByNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -373,7 +447,7 @@ const actionRuleByName = new azure_nextgen.alertsmanagement.v20190505preview.Act
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ActionRuleByNameArgs</span>
+        <span class="property-type"><a href="#inputs">ActionRuleByNameArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -396,11 +470,11 @@ const actionRuleByName = new azure_nextgen.alertsmanagement.v20190505preview.Act
 
 ## ActionRuleByName Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ActionRuleByName resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ActionRuleByName resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4114,7 +4188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:alertsmanagement/v20190505preview:ActionRuleByName DailySuppression /subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg/providers/Microsoft.AlertsManagement/actionRules/DailySuppression 
+$ pulumi import azure-nextgen:alertsmanagement:ActionRuleByName DailySuppression /subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg/providers/Microsoft.AlertsManagement/actionRules/DailySuppression 
 ```
 
 

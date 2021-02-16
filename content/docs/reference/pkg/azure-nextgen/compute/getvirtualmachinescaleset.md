@@ -19,7 +19,7 @@ meta_desc: "Explore the GetVirtualMachineScaleSet function of the compute module
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachineScaleSet<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualMachineScaleSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetVirtualMachineScaleSetResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachineScaleSet<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualMachineScaleSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualMachineScaleSetResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetVirtualMachineScaleSet function of the compute module
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachineScaleSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualMachineScaleSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupVirtualMachineScaleSetResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachineScaleSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualMachineScaleSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualMachineScaleSetResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVirtualMachineScaleSet` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetVirtualMachineScaleSet function of the compute module
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualMachineScaleSet </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetVirtualMachineScaleSetResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualMachineScaleSetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualMachineScaleSetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualMachineScaleSetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1086,9 +1086,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1150,9 +1147,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="additionalunattendcontentresponse">Additional<wbr>Unattend<wbr>Content<wbr>Response</h4>
-
-
-
 
 
 
@@ -1328,9 +1322,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1392,9 +1383,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="automaticosupgradepolicyresponse">Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -1498,9 +1486,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1601,9 +1586,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1665,9 +1647,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response</h4>
-
-
-
 
 
 
@@ -1771,9 +1750,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1835,9 +1811,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="diffdisksettingsresponse">Diff<wbr>Disk<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -1941,9 +1914,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2005,9 +1975,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
-
-
-
 
 
 
@@ -2108,9 +2075,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="imagereferenceresponse">Image<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 
@@ -2358,9 +2322,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2533,9 +2494,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2597,9 +2555,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="patchsettingsresponse">Patch<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -2700,9 +2655,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="planresponse">Plan<wbr>Response</h4>
-
-
-
 
 
 
@@ -2875,9 +2827,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="rollingupgradepolicyresponse">Rolling<wbr>Upgrade<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -3125,9 +3074,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3192,9 +3138,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3256,9 +3199,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="securityprofileresponse">Security<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 
@@ -3398,9 +3338,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3537,9 +3474,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3601,9 +3535,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response</h4>
-
-
-
 
 
 
@@ -3707,9 +3638,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3771,9 +3699,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="terminatenotificationprofileresponse">Terminate<wbr>Notification<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 
@@ -3877,9 +3802,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3977,9 +3899,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="upgradepolicyresponse">Upgrade<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -4119,9 +4038,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4219,9 +4135,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vaultsecretgroupresponse">Vault<wbr>Secret<wbr>Group<wbr>Response</h4>
-
-
-
 
 
 
@@ -4325,9 +4238,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4389,9 +4299,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualmachinescalesetdatadiskresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Response</h4>
-
-
-
 
 
 
@@ -4747,9 +4654,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4847,9 +4751,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualmachinescalesetextensionresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Response</h4>
-
-
-
 
 
 
@@ -5313,9 +5214,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5704,9 +5602,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5879,9 +5774,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5979,9 +5871,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualmachinescalesetiptagresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Response</h4>
-
-
-
 
 
 
@@ -6085,9 +5974,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6188,9 +6074,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6252,9 +6135,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualmachinescalesetnetworkconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 
@@ -6610,9 +6490,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6710,9 +6587,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualmachinescalesetosdiskresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Response</h4>
-
-
-
 
 
 
@@ -7104,9 +6978,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7387,9 +7258,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7451,9 +7319,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualmachinescalesetpublicipaddressconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 
@@ -7701,9 +7566,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7837,9 +7699,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualmachinescalesetvmprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>VMProfile<wbr>Response</h4>
-
-
-
 
 
 
@@ -8267,9 +8126,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8331,9 +8187,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="winrmlistenerresponse">Win<wbr>RMListener<wbr>Response</h4>
-
-
-
 
 
 
@@ -8434,9 +8287,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 

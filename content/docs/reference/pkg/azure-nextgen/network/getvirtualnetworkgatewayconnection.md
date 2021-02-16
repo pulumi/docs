@@ -19,7 +19,7 @@ meta_desc: "Explore the GetVirtualNetworkGatewayConnection function of the netwo
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualNetworkGatewayConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualNetworkGatewayConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetVirtualNetworkGatewayConnectionResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualNetworkGatewayConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualNetworkGatewayConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualNetworkGatewayConnectionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetVirtualNetworkGatewayConnection function of the netwo
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualNetworkGatewayConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualNetworkGatewayConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupVirtualNetworkGatewayConnectionResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualNetworkGatewayConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualNetworkGatewayConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualNetworkGatewayConnectionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVirtualNetworkGatewayConnection` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetVirtualNetworkGatewayConnection function of the netwo
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualNetworkGatewayConnection </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetVirtualNetworkGatewayConnectionResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualNetworkGatewayConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualNetworkGatewayConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualNetworkGatewayConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1230,9 +1230,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1294,9 +1291,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -1472,9 +1466,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1572,9 +1563,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response</h4>
-
-
-
 
 
 
@@ -1747,9 +1735,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ipsecpolicyresponse">Ipsec<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -2066,9 +2051,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="localnetworkgatewayresponse">Local<wbr>Network<wbr>Gateway<wbr>Response</h4>
-
-
-
 
 
 
@@ -2532,9 +2514,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2671,9 +2650,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2735,9 +2711,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="trafficselectorpolicyresponse">Traffic<wbr>Selector<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -2838,9 +2811,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="tunnelconnectionhealthresponse">Tunnel<wbr>Connection<wbr>Health<wbr>Response</h4>
-
-
-
 
 
 
@@ -3049,9 +3019,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualnetworkgatewayipconfigurationresponse">Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response</h4>
-
-
-
 
 
 
@@ -3368,9 +3335,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualnetworkgatewayresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Response</h4>
-
-
-
 
 
 
@@ -4266,9 +4230,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4402,9 +4363,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 
@@ -4832,9 +4790,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5040,9 +4995,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vpnclientrootcertificateresponse">Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response</h4>
-
-
-
 
 
 

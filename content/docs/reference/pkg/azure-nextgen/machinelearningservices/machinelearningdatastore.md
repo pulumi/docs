@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.MachineL
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Machine Learning datastore object wrapped into ARM resource envelope.
+API Version: 2020-05-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.MachineLearningDatastoreArgs
         {
             ClientId = "233d7008-b157-4354-88d1-ba191f06a900",
             ClientSecret = "vdvgdvdvdv",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     client_id="233d7008-b157-4354-88d1-ba191f06a900",
     client_secret="vdvgdvdvdv",
     data_store_type="adls",
@@ -104,7 +105,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     clientId: "233d7008-b157-4354-88d1-ba191f06a900",
     clientSecret: "vdvgdvdvdv",
     dataStoreType: "adls",
@@ -129,7 +130,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.MachineLearningDatastoreArgs
         {
             AccountName = "nicksadlsgen2storage",
             ClientId = "233d7008-b157-4354-88d1-ba191f06a900",
@@ -155,7 +156,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -189,7 +190,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     account_name="nicksadlsgen2storage",
     client_id="233d7008-b157-4354-88d1-ba191f06a900",
     client_secret="vdegbvedgeg",
@@ -210,7 +211,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     accountName: "nicksadlsgen2storage",
     clientId: "233d7008-b157-4354-88d1-ba191f06a900",
     clientSecret: "vdegbvedgeg",
@@ -236,7 +237,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.MachineLearningDatastoreArgs
         {
             AccountKey = "wddrfewfewsgewgrrwegwreg",
             AccountName = "acjainmleastus9484093746",
@@ -260,7 +261,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -292,7 +293,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     account_key="wddrfewfewsgewgrrwegwreg",
     account_name="acjainmleastus9484093746",
     container_name="azureml-blobstore-5da947c5-53aa-41a5-bb2b-074074e73b7",
@@ -311,7 +312,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     accountKey: "wddrfewfewsgewgrrwegwreg",
     accountName: "acjainmleastus9484093746",
     containerName: "azureml-blobstore-5da947c5-53aa-41a5-bb2b-074074e73b7",
@@ -335,7 +336,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.MachineLearningDatastoreArgs
         {
             DataStoreType = "dbfs",
             DatastoreName = "blobDatastore",
@@ -356,7 +357,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -385,7 +386,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     data_store_type="dbfs",
     datastore_name="blobDatastore",
     resource_group_name="acjain-mleastUS2",
@@ -401,7 +402,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     dataStoreType: "dbfs",
     datastoreName: "blobDatastore",
     resourceGroupName: "acjain-mleastUS2",
@@ -422,7 +423,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.MachineLearningDatastoreArgs
         {
             AccountKey = "wddrfewfewsgewgrrwegwreg",
             AccountName = "acjainmleastus9484093746",
@@ -446,7 +447,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -478,7 +479,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     account_key="wddrfewfewsgewgrrwegwreg",
     account_name="acjainmleastus9484093746",
     data_store_type="file",
@@ -497,7 +498,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     accountKey: "wddrfewfewsgewgrrwegwreg",
     accountName: "acjainmleastus9484093746",
     dataStoreType: "file",
@@ -521,7 +522,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.MachineLearningDatastoreArgs
         {
             DataStoreType = "mysqldb",
             DatabaseName = "dataset",
@@ -546,7 +547,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -579,7 +580,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     data_store_type="mysqldb",
     database_name="dataset",
     datastore_name="mySqlDatastore",
@@ -599,7 +600,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     dataStoreType: "mysqldb",
     databaseName: "dataset",
     datastoreName: "mySqlDatastore",
@@ -624,7 +625,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.MachineLearningDatastoreArgs
         {
             DataStoreType = "psqldb",
             DatabaseName = "dataset",
@@ -649,7 +650,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -682,7 +683,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     data_store_type="psqldb",
     database_name="dataset",
     datastore_name="postgreSqlDatastore",
@@ -702,7 +703,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     dataStoreType: "psqldb",
     databaseName: "dataset",
     datastoreName: "postgreSqlDatastore",
@@ -727,7 +728,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatastoreArgs
+        var machineLearningDatastore = new AzureNextGen.MachineLearningServices.MachineLearningDatastore("machineLearningDatastore", new AzureNextGen.MachineLearningServices.MachineLearningDatastoreArgs
         {
             DataStoreType = "sqldb",
             DatabaseName = "dataset",
@@ -752,7 +753,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -785,7 +786,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore",
+machine_learning_datastore = azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore",
     data_store_type="sqldb",
     database_name="dataset",
     datastore_name="sqlDatastore",
@@ -805,7 +806,7 @@ machine_learning_datastore = azure_nextgen.machinelearningservices.v20200501prev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDatastore = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDatastore("machineLearningDatastore", {
+const machineLearningDatastore = new azure_nextgen.machinelearningservices.MachineLearningDatastore("machineLearningDatastore", {
     dataStoreType: "sqldb",
     databaseName: "dataset",
     datastoreName: "sqlDatastore",
@@ -828,7 +829,7 @@ const machineLearningDatastore = new azure_nextgen.machinelearningservices.v2020
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">MachineLearningDatastoreArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningDatastoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -836,11 +837,11 @@ const machineLearningDatastore = new azure_nextgen.machinelearningservices.v2020
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningDatastore</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">MachineLearningDatastoreArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningDatastore</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningDatastore</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineLearningDatastoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningDatastore</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">MachineLearningDatastoreArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MachineLearningDatastoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -861,7 +862,7 @@ const machineLearningDatastore = new azure_nextgen.machinelearningservices.v2020
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MachineLearningDatastoreArgs</span>
+        <span class="property-type"><a href="#inputs">MachineLearningDatastoreArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -930,7 +931,7 @@ const machineLearningDatastore = new azure_nextgen.machinelearningservices.v2020
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MachineLearningDatastoreArgs</span>
+        <span class="property-type"><a href="#inputs">MachineLearningDatastoreArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -969,7 +970,7 @@ const machineLearningDatastore = new azure_nextgen.machinelearningservices.v2020
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MachineLearningDatastoreArgs</span>
+        <span class="property-type"><a href="#inputs">MachineLearningDatastoreArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -992,11 +993,11 @@ const machineLearningDatastore = new azure_nextgen.machinelearningservices.v2020
 
 ## MachineLearningDatastore Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The MachineLearningDatastore resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The MachineLearningDatastore resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -7686,7 +7687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningservices/v20200501preview:MachineLearningDatastore sqlDatastore /subscriptions/35f16a99-532a-4a47-9e93-00305f6c40f2/resourceGroups/acjain-mleastUS2/providers/Microsoft.MachineLearningServices/workspaces/acjain-mleastUS2/datastores/sqlDatastore 
+$ pulumi import azure-nextgen:machinelearningservices:MachineLearningDatastore sqlDatastore /subscriptions/35f16a99-532a-4a47-9e93-00305f6c40f2/resourceGroups/acjain-mleastUS2/providers/Microsoft.MachineLearningServices/workspaces/acjain-mleastUS2/datastores/sqlDatastore 
 ```
 
 

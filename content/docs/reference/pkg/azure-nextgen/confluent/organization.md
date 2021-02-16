@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.confluent.Organization resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Organization resource.
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var organization = new AzureNextGen.Confluent.Latest.Organization("organization", new AzureNextGen.Confluent.Latest.OrganizationArgs
+        var organization = new AzureNextGen.Confluent.Organization("organization", new AzureNextGen.Confluent.OrganizationArgs
         {
             Location = "West US",
-            OfferDetail = new AzureNextGen.Confluent.Latest.Inputs.OrganizationResourcePropertiesOfferDetailArgs
+            OfferDetail = new AzureNextGen.Confluent.Inputs.OrganizationResourcePropertiesOfferDetailArgs
             {
                 Id = "string",
                 PlanId = "string",
@@ -44,7 +44,7 @@ class MyStack : Stack
             {
                 { "Environment", "Dev" },
             },
-            UserDetail = new AzureNextGen.Confluent.Latest.Inputs.OrganizationResourcePropertiesUserDetailArgs
+            UserDetail = new AzureNextGen.Confluent.Inputs.OrganizationResourcePropertiesUserDetailArgs
             {
                 EmailAddress = "contoso@microsoft.com",
                 FirstName = "string",
@@ -65,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	confluent "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/confluent/latest"
+	confluent "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/confluent"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -108,9 +108,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-organization = azure_nextgen.confluent.latest.Organization("organization",
+organization = azure_nextgen.confluent.Organization("organization",
     location="West US",
-    offer_detail=azure_nextgen.confluent.latest.OrganizationResourcePropertiesOfferDetailArgs(
+    offer_detail=azure_nextgen.confluent.OrganizationResourcePropertiesOfferDetailArgs(
         id="string",
         plan_id="string",
         plan_name="string",
@@ -122,7 +122,7 @@ organization = azure_nextgen.confluent.latest.Organization("organization",
     tags={
         "Environment": "Dev",
     },
-    user_detail=azure_nextgen.confluent.latest.OrganizationResourcePropertiesUserDetailArgs(
+    user_detail=azure_nextgen.confluent.OrganizationResourcePropertiesUserDetailArgs(
         email_address="contoso@microsoft.com",
         first_name="string",
         last_name="string",
@@ -138,7 +138,7 @@ organization = azure_nextgen.confluent.latest.Organization("organization",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const organization = new azure_nextgen.confluent.latest.Organization("organization", {
+const organization = new azure_nextgen.confluent.Organization("organization", {
     location: "West US",
     offerDetail: {
         id: "string",
@@ -171,7 +171,7 @@ const organization = new azure_nextgen.confluent.latest.Organization("organizati
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">OrganizationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -179,11 +179,11 @@ const organization = new azure_nextgen.confluent.latest.Organization("organizati
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganization</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">OrganizationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Organization</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganization</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Organization</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">OrganizationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -204,7 +204,7 @@ const organization = new azure_nextgen.confluent.latest.Organization("organizati
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrganizationArgs</span>
+        <span class="property-type"><a href="#inputs">OrganizationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -273,7 +273,7 @@ const organization = new azure_nextgen.confluent.latest.Organization("organizati
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrganizationArgs</span>
+        <span class="property-type"><a href="#inputs">OrganizationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -312,7 +312,7 @@ const organization = new azure_nextgen.confluent.latest.Organization("organizati
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrganizationArgs</span>
+        <span class="property-type"><a href="#inputs">OrganizationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -335,11 +335,11 @@ const organization = new azure_nextgen.confluent.latest.Organization("organizati
 
 ## Organization Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Organization resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Organization resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1735,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:confluent/latest:Organization myOrganization /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Confluent/organizations/myOrganization 
+$ pulumi import azure-nextgen:confluent:Organization myOrganization /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Confluent/organizations/myOrganization 
 ```
 
 

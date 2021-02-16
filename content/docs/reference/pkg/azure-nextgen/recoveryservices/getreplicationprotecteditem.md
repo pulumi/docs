@@ -19,7 +19,7 @@ meta_desc: "Explore the GetReplicationProtectedItem function of the recoveryserv
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationProtectedItem<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetReplicationProtectedItemResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationProtectedItem<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReplicationProtectedItemResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetReplicationProtectedItem function of the recoveryserv
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationProtectedItem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupReplicationProtectedItemResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationProtectedItem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReplicationProtectedItemResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupReplicationProtectedItem` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetReplicationProtectedItem function of the recoveryserv
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetReplicationProtectedItem </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetReplicationProtectedItemResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationProtectedItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetReplicationProtectedItemResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationProtectedItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -471,9 +471,6 @@ The following output properties are available:
 
 
 <h4 id="a2aprotecteddiskdetailsresponse">A2AProtected<wbr>Disk<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -1258,9 +1255,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="a2aprotectedmanageddiskdetailsresponse">A2AProtected<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -2225,9 +2219,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="a2areplicationdetailsresponse">A2AReplication<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -3735,9 +3726,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3799,9 +3787,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuretoazurevmsyncedconfigdetailsresponse">Azure<wbr>To<wbr>Azure<wbr>Vm<wbr>Synced<wbr>Config<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -3902,9 +3887,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azurevmdiskdetailsresponse">Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -4260,9 +4242,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4396,9 +4375,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="diskdetailsresponse">Disk<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -4571,9 +4547,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="healtherrorresponse">Health<wbr>Error<wbr>Response</h4>
-
-
-
 
 
 
@@ -5142,9 +5115,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hypervreplicaazurereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -6112,9 +6082,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6392,9 +6359,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hypervreplicabluereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -6678,9 +6642,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6961,9 +6922,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7097,9 +7055,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="inmageagentdetailsresponse">In<wbr>Mage<wbr>Agent<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -7275,9 +7230,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7411,9 +7363,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="inmageazurev2protecteddiskdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Protected<wbr>Disk<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -7982,9 +7931,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="inmageazurev2replicationdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -9960,9 +9906,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10531,9 +10474,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10778,9 +10718,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -11022,9 +10959,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="inmagercmmobilityagentdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -11377,9 +11311,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="inmagercmnicdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -11879,9 +11810,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12231,9 +12159,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="inmagercmreplicationdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -13849,9 +13774,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15212,9 +15134,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15312,9 +15231,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response</h4>
-
-
-
 
 
 
@@ -15778,9 +15694,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15950,9 +15863,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="osdetailsresponse">OSDetails<wbr>Response</h4>
-
-
-
 
 
 
@@ -16200,9 +16110,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -16336,9 +16243,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="replicationprotecteditempropertiesresponse">Replication<wbr>Protected<wbr>Item<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -17339,9 +17243,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 

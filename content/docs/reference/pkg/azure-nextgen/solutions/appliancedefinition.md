@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.solutions.ApplianceDefinition re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about appliance definition.
+API Version: 2016-09-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applianceDefinition = new AzureNextGen.Solutions.V20160901Preview.ApplianceDefinition("applianceDefinition", new AzureNextGen.Solutions.V20160901Preview.ApplianceDefinitionArgs
+        var applianceDefinition = new AzureNextGen.Solutions.ApplianceDefinition("applianceDefinition", new AzureNextGen.Solutions.ApplianceDefinitionArgs
         {
             ApplianceDefinitionName = "myApplianceDef",
             Authorizations = 
             {
-                new AzureNextGen.Solutions.V20160901Preview.Inputs.ApplianceProviderAuthorizationArgs
+                new AzureNextGen.Solutions.Inputs.ApplianceProviderAuthorizationArgs
                 {
                     PrincipalId = "validprincipalguid",
                     RoleDefinitionId = "validroleguid",
@@ -58,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	solutions "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/solutions/v20160901preview"
+	solutions "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/solutions"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -96,9 +97,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-appliance_definition = azure_nextgen.solutions.v20160901preview.ApplianceDefinition("applianceDefinition",
+appliance_definition = azure_nextgen.solutions.ApplianceDefinition("applianceDefinition",
     appliance_definition_name="myApplianceDef",
-    authorizations=[azure_nextgen.solutions.v20160901preview.ApplianceProviderAuthorizationArgs(
+    authorizations=[azure_nextgen.solutions.ApplianceProviderAuthorizationArgs(
         principal_id="validprincipalguid",
         role_definition_id="validroleguid",
     )],
@@ -119,7 +120,7 @@ appliance_definition = azure_nextgen.solutions.v20160901preview.ApplianceDefinit
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const applianceDefinition = new azure_nextgen.solutions.v20160901preview.ApplianceDefinition("applianceDefinition", {
+const applianceDefinition = new azure_nextgen.solutions.ApplianceDefinition("applianceDefinition", {
     applianceDefinitionName: "myApplianceDef",
     authorizations: [{
         principalId: "validprincipalguid",
@@ -145,7 +146,7 @@ const applianceDefinition = new azure_nextgen.solutions.v20160901preview.Applian
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApplianceDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ApplianceDefinitionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApplianceDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplianceDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -153,11 +154,11 @@ const applianceDefinition = new azure_nextgen.solutions.v20160901preview.Applian
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplianceDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ApplianceDefinitionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApplianceDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplianceDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplianceDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApplianceDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApplianceDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ApplianceDefinitionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApplianceDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplianceDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -178,7 +179,7 @@ const applianceDefinition = new azure_nextgen.solutions.v20160901preview.Applian
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplianceDefinitionArgs</span>
+        <span class="property-type"><a href="#inputs">ApplianceDefinitionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -247,7 +248,7 @@ const applianceDefinition = new azure_nextgen.solutions.v20160901preview.Applian
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplianceDefinitionArgs</span>
+        <span class="property-type"><a href="#inputs">ApplianceDefinitionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -286,7 +287,7 @@ const applianceDefinition = new azure_nextgen.solutions.v20160901preview.Applian
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplianceDefinitionArgs</span>
+        <span class="property-type"><a href="#inputs">ApplianceDefinitionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -309,11 +310,11 @@ const applianceDefinition = new azure_nextgen.solutions.v20160901preview.Applian
 
 ## ApplianceDefinition Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ApplianceDefinition resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ApplianceDefinition resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1520,6 +1521,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1535,6 +1545,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1550,6 +1569,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1565,6 +1593,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1600,6 +1637,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Solutions.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1633,6 +1679,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1666,6 +1721,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1699,6 +1763,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1708,6 +1781,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>System<wbr>Assigned</dt>
     <dd>SystemAssigned</dd>
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
+    <dt>System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned, UserAssigned</dd>
+    <dt>None</dt>
+    <dd>None</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1715,6 +1794,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>Resource<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
     <dd>SystemAssigned</dd>
+    <dt>Resource<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
+    <dt>Resource<wbr>Identity<wbr>Type_System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned, UserAssigned</dd>
+    <dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
+    <dd>None</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1722,6 +1807,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>System<wbr>Assigned</dt>
     <dd>SystemAssigned</dd>
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
+    <dt>System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned, UserAssigned</dd>
+    <dt>None</dt>
+    <dd>None</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1729,6 +1820,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>SYSTEM_ASSIGNED</dt>
     <dd>SystemAssigned</dd>
+    <dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned</dd>
+    <dt>SYSTEM_ASSIGNED_USER_ASSIGNED</dt>
+    <dd>SystemAssigned, UserAssigned</dd>
+    <dt>NONE</dt>
+    <dd>None</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2215,13 +2312,111 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The SKU tier.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+
+<h4 id="userassignedresourceidentityresponse">User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 ## Import
 
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:solutions/v20160901preview:ApplianceDefinition myApplianceDef /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applianceDefinitions/myApplianceDef 
+$ pulumi import azure-nextgen:solutions:ApplianceDefinition myApplianceDef /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applianceDefinitions/myApplianceDef 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datashare.DataSet resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A DataSet data transfer object.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare.DataSet("dataSet", new AzureNextGen.DataShare.DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
+data_set = azure_nextgen.datashare.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="Blob",
@@ -96,7 +96,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "Blob",
@@ -118,7 +118,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare.DataSet("dataSet", new AzureNextGen.DataShare.DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -140,7 +140,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -170,7 +170,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
+data_set = azure_nextgen.datashare.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="KustoCluster",
@@ -187,7 +187,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "KustoCluster",
@@ -209,7 +209,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare.DataSet("dataSet", new AzureNextGen.DataShare.DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -231,7 +231,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -261,7 +261,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
+data_set = azure_nextgen.datashare.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="KustoDatabase",
@@ -278,7 +278,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "KustoDatabase",
@@ -300,7 +300,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare.DataSet("dataSet", new AzureNextGen.DataShare.DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -322,7 +322,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -352,7 +352,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
+data_set = azure_nextgen.datashare.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="SqlDBTable",
@@ -369,7 +369,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "SqlDBTable",
@@ -391,7 +391,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare.DataSet("dataSet", new AzureNextGen.DataShare.DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -413,7 +413,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -443,7 +443,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
+data_set = azure_nextgen.datashare.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="SqlDWTable",
@@ -460,7 +460,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "SqlDWTable",
@@ -482,7 +482,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare.DataSet("dataSet", new AzureNextGen.DataShare.DataSetArgs
         {
             AccountName = "sourceAccount",
             DataSetName = "dataset1",
@@ -504,7 +504,7 @@ class MyStack : Stack
 package main
 
 import (
-	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -534,7 +534,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
+data_set = azure_nextgen.datashare.DataSet("dataSet",
     account_name="sourceAccount",
     data_set_name="dataset1",
     kind="SynapseWorkspaceSqlPoolTable",
@@ -551,7 +551,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
     accountName: "sourceAccount",
     dataSetName: "dataset1",
     kind: "SynapseWorkspaceSqlPoolTable",
@@ -571,7 +571,7 @@ const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DataSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -579,11 +579,11 @@ const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DataSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataSet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DataSetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -604,7 +604,7 @@ const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataSetArgs</span>
+        <span class="property-type"><a href="#inputs">DataSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -673,7 +673,7 @@ const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataSetArgs</span>
+        <span class="property-type"><a href="#inputs">DataSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -712,7 +712,7 @@ const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataSetArgs</span>
+        <span class="property-type"><a href="#inputs">DataSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -735,11 +735,11 @@ const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
 
 ## DataSet Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DataSet resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DataSet resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -981,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydtoresponsesystemdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Outputs.<wbr>Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1023,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1065,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1107,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1162,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
-<h4 id="proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</h4>
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1409,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datashare/latest:DataSet dataset1 /subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/sourceAccount/shares/share1/dataSets/dataset1 
+$ pulumi import azure-nextgen:datashare:DataSet dataset1 /subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/sourceAccount/shares/share1/dataSets/dataset1 
 ```
 
 

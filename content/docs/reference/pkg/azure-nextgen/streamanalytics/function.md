@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.streamanalytics.Function resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A function object, containing all information associated with the named function. All functions are contained under a streaming job.
-Latest API Version: 2016-03-01.
+API Version: 2016-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,25 +27,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var function = new AzureNextGen.StreamAnalytics.Latest.Function("function", new AzureNextGen.StreamAnalytics.Latest.FunctionArgs
+        var function = new AzureNextGen.StreamAnalytics.Function("function", new AzureNextGen.StreamAnalytics.FunctionArgs
         {
             FunctionName = "function8197",
             JobName = "sj8653",
-            Properties = new AzureNextGen.StreamAnalytics.Latest.Inputs.ScalarFunctionPropertiesArgs
+            Properties = new AzureNextGen.StreamAnalytics.Inputs.ScalarFunctionPropertiesArgs
             {
-                Binding = 
+                Binding = new AzureNextGen.StreamAnalytics.Inputs.JavaScriptFunctionBindingArgs
                 {
-                    { "script", "function (x, y) { return x + y; }" },
-                    { "type", "Microsoft.StreamAnalytics/JavascriptUdf" },
+                    Script = "function (x, y) { return x + y; }",
+                    Type = "Microsoft.StreamAnalytics/JavascriptUdf",
                 },
                 Inputs = 
                 {
-                    new AzureNextGen.StreamAnalytics.Latest.Inputs.FunctionInputArgs
+                    new AzureNextGen.StreamAnalytics.Inputs.FunctionInputArgs
                     {
                         DataType = "Any",
                     },
                 },
-                Output = new AzureNextGen.StreamAnalytics.Latest.Inputs.FunctionOutputArgs
+                Output = new AzureNextGen.StreamAnalytics.Inputs.FunctionOutputArgs
                 {
                     DataType = "Any",
                 },
@@ -62,7 +62,46 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewFunction(ctx, "function", &streamanalytics.FunctionArgs{
+			FunctionName: pulumi.String("function8197"),
+			JobName:      pulumi.String("sj8653"),
+			Properties: &streamanalytics.ScalarFunctionPropertiesArgs{
+				Binding: &streamanalytics.JavaScriptFunctionBindingArgs{
+					Script: pulumi.String("function (x, y) { return x + y; }"),
+					Type:   pulumi.String("Microsoft.StreamAnalytics/JavascriptUdf"),
+				},
+				Inputs: streamanalytics.FunctionInputArray{
+					&streamanalytics.FunctionInputArgs{
+						DataType: pulumi.String("Any"),
+					},
+				},
+				Output: &streamanalytics.FunctionOutputArgs{
+					DataType: pulumi.String("Any"),
+				},
+				Type: pulumi.String("Scalar"),
+			},
+			ResourceGroupName: pulumi.String("sjrg1637"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,18 +110,18 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-function = azure_nextgen.streamanalytics.latest.Function("function",
+function = azure_nextgen.streamanalytics.Function("function",
     function_name="function8197",
     job_name="sj8653",
-    properties=azure_nextgen.streamanalytics.latest.ScalarFunctionPropertiesArgs(
-        binding={
-            "script": "function (x, y) { return x + y; }",
-            "type": "Microsoft.StreamAnalytics/JavascriptUdf",
-        },
-        inputs=[azure_nextgen.streamanalytics.latest.FunctionInputArgs(
+    properties=azure_nextgen.streamanalytics.ScalarFunctionPropertiesArgs(
+        binding=azure_nextgen.streamanalytics.JavaScriptFunctionBindingArgs(
+            script="function (x, y) { return x + y; }",
+            type="Microsoft.StreamAnalytics/JavascriptUdf",
+        ),
+        inputs=[azure_nextgen.streamanalytics.FunctionInputArgs(
             data_type="Any",
         )],
-        output=azure_nextgen.streamanalytics.latest.FunctionOutputArgs(
+        output=azure_nextgen.streamanalytics.FunctionOutputArgs(
             data_type="Any",
         ),
         type="Scalar",
@@ -99,7 +138,7 @@ function = azure_nextgen.streamanalytics.latest.Function("function",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const _function = new azure_nextgen.streamanalytics.latest.Function("function", {
+const _function = new azure_nextgen.streamanalytics.Function("function", {
     functionName: "function8197",
     jobName: "sj8653",
     properties: {
@@ -132,22 +171,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var function = new AzureNextGen.StreamAnalytics.Latest.Function("function", new AzureNextGen.StreamAnalytics.Latest.FunctionArgs
+        var function = new AzureNextGen.StreamAnalytics.Function("function", new AzureNextGen.StreamAnalytics.FunctionArgs
         {
             FunctionName = "function588",
             JobName = "sj9093",
-            Properties = new AzureNextGen.StreamAnalytics.Latest.Inputs.ScalarFunctionPropertiesArgs
+            Properties = new AzureNextGen.StreamAnalytics.Inputs.ScalarFunctionPropertiesArgs
             {
-                Binding = 
+                Binding = new AzureNextGen.StreamAnalytics.Inputs.AzureMachineLearningWebServiceFunctionBindingArgs
                 {
-                    { "apiKey", "someApiKey==" },
-                    { "batchSize", 1000 },
-                    { "endpoint", "someAzureMLEndpointURL" },
-                    { "inputs", new AzureNextGen.StreamAnalytics.Latest.Inputs.AzureMachineLearningWebServiceInputsArgs
+                    ApiKey = "someApiKey==",
+                    BatchSize = 1000,
+                    Endpoint = "someAzureMLEndpointURL",
+                    Inputs = new AzureNextGen.StreamAnalytics.Inputs.AzureMachineLearningWebServiceInputsArgs
                     {
                         ColumnNames = 
                         {
-                            new AzureNextGen.StreamAnalytics.Latest.Inputs.AzureMachineLearningWebServiceInputColumnArgs
+                            new AzureNextGen.StreamAnalytics.Inputs.AzureMachineLearningWebServiceInputColumnArgs
                             {
                                 DataType = "string",
                                 MapTo = 0,
@@ -155,25 +194,25 @@ class MyStack : Stack
                             },
                         },
                         Name = "input1",
-                    } },
-                    { "outputs", 
+                    },
+                    Outputs = 
                     {
-                        new AzureNextGen.StreamAnalytics.Latest.Inputs.AzureMachineLearningWebServiceOutputColumnArgs
+                        new AzureNextGen.StreamAnalytics.Inputs.AzureMachineLearningWebServiceOutputColumnArgs
                         {
                             DataType = "string",
                             Name = "Sentiment",
                         },
-                    } },
-                    { "type", "Microsoft.MachineLearning/WebService" },
+                    },
+                    Type = "Microsoft.MachineLearning/WebService",
                 },
                 Inputs = 
                 {
-                    new AzureNextGen.StreamAnalytics.Latest.Inputs.FunctionInputArgs
+                    new AzureNextGen.StreamAnalytics.Inputs.FunctionInputArgs
                     {
                         DataType = "nvarchar(max)",
                     },
                 },
-                Output = new AzureNextGen.StreamAnalytics.Latest.Inputs.FunctionOutputArgs
+                Output = new AzureNextGen.StreamAnalytics.Inputs.FunctionOutputArgs
                 {
                     DataType = "nvarchar(max)",
                 },
@@ -190,7 +229,64 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewFunction(ctx, "function", &streamanalytics.FunctionArgs{
+			FunctionName: pulumi.String("function588"),
+			JobName:      pulumi.String("sj9093"),
+			Properties: &streamanalytics.ScalarFunctionPropertiesArgs{
+				Binding: &streamanalytics.AzureMachineLearningWebServiceFunctionBindingArgs{
+					ApiKey:    pulumi.String("someApiKey=="),
+					BatchSize: pulumi.Int(1000),
+					Endpoint:  pulumi.String("someAzureMLEndpointURL"),
+					Inputs: &streamanalytics.AzureMachineLearningWebServiceInputsArgs{
+						ColumnNames: streamanalytics.AzureMachineLearningWebServiceInputColumnArray{
+							&streamanalytics.AzureMachineLearningWebServiceInputColumnArgs{
+								DataType: pulumi.String("string"),
+								MapTo:    pulumi.Int(0),
+								Name:     pulumi.String("tweet"),
+							},
+						},
+						Name: pulumi.String("input1"),
+					},
+					Outputs: streamanalytics.AzureMachineLearningWebServiceOutputColumnArray{
+						&streamanalytics.AzureMachineLearningWebServiceOutputColumnArgs{
+							DataType: pulumi.String("string"),
+							Name:     pulumi.String("Sentiment"),
+						},
+					},
+					Type: pulumi.String("Microsoft.MachineLearning/WebService"),
+				},
+				Inputs: streamanalytics.FunctionInputArray{
+					&streamanalytics.FunctionInputArgs{
+						DataType: pulumi.String("nvarchar(max)"),
+					},
+				},
+				Output: &streamanalytics.FunctionOutputArgs{
+					DataType: pulumi.String("nvarchar(max)"),
+				},
+				Type: pulumi.String("Scalar"),
+			},
+			ResourceGroupName: pulumi.String("sjrg7"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -199,32 +295,32 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-function = azure_nextgen.streamanalytics.latest.Function("function",
+function = azure_nextgen.streamanalytics.Function("function",
     function_name="function588",
     job_name="sj9093",
-    properties=azure_nextgen.streamanalytics.latest.ScalarFunctionPropertiesArgs(
-        binding={
-            "apiKey": "someApiKey==",
-            "batchSize": 1000,
-            "endpoint": "someAzureMLEndpointURL",
-            "inputs": azure_nextgen.streamanalytics.latest.AzureMachineLearningWebServiceInputsArgs(
-                column_names=[azure_nextgen.streamanalytics.latest.AzureMachineLearningWebServiceInputColumnArgs(
+    properties=azure_nextgen.streamanalytics.ScalarFunctionPropertiesArgs(
+        binding=azure_nextgen.streamanalytics.AzureMachineLearningWebServiceFunctionBindingArgs(
+            api_key="someApiKey==",
+            batch_size=1000,
+            endpoint="someAzureMLEndpointURL",
+            inputs=azure_nextgen.streamanalytics.AzureMachineLearningWebServiceInputsArgs(
+                column_names=[azure_nextgen.streamanalytics.AzureMachineLearningWebServiceInputColumnArgs(
                     data_type="string",
                     map_to=0,
                     name="tweet",
                 )],
                 name="input1",
             ),
-            "outputs": [azure_nextgen.streamanalytics.latest.AzureMachineLearningWebServiceOutputColumnArgs(
+            outputs=[azure_nextgen.streamanalytics.AzureMachineLearningWebServiceOutputColumnArgs(
                 data_type="string",
                 name="Sentiment",
             )],
-            "type": "Microsoft.MachineLearning/WebService",
-        },
-        inputs=[azure_nextgen.streamanalytics.latest.FunctionInputArgs(
+            type="Microsoft.MachineLearning/WebService",
+        ),
+        inputs=[azure_nextgen.streamanalytics.FunctionInputArgs(
             data_type="nvarchar(max)",
         )],
-        output=azure_nextgen.streamanalytics.latest.FunctionOutputArgs(
+        output=azure_nextgen.streamanalytics.FunctionOutputArgs(
             data_type="nvarchar(max)",
         ),
         type="Scalar",
@@ -241,7 +337,7 @@ function = azure_nextgen.streamanalytics.latest.Function("function",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const _function = new azure_nextgen.streamanalytics.latest.Function("function", {
+const _function = new azure_nextgen.streamanalytics.Function("function", {
     functionName: "function588",
     jobName: "sj9093",
     properties: {
@@ -286,7 +382,7 @@ const _function = new azure_nextgen.streamanalytics.latest.Function("function", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Function</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FunctionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Function</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -294,11 +390,11 @@ const _function = new azure_nextgen.streamanalytics.latest.Function("function", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FunctionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Function</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FunctionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Function</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -319,7 +415,7 @@ const _function = new azure_nextgen.streamanalytics.latest.Function("function", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FunctionArgs</span>
+        <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -388,7 +484,7 @@ const _function = new azure_nextgen.streamanalytics.latest.Function("function", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FunctionArgs</span>
+        <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -427,7 +523,7 @@ const _function = new azure_nextgen.streamanalytics.latest.Function("function", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FunctionArgs</span>
+        <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -450,11 +546,11 @@ const _function = new azure_nextgen.streamanalytics.latest.Function("function", 
 
 ## Function Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Function resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Function resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2600,7 +2696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:streamanalytics/latest:Function function588 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg7/providers/Microsoft.StreamAnalytics/streamingjobs/sj9093/functions/function588 
+$ pulumi import azure-nextgen:streamanalytics:Function function588 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg7/providers/Microsoft.StreamAnalytics/streamingjobs/sj9093/functions/function588 
 ```
 
 

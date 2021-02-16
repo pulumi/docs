@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.GuestDiagnosticsSetting
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Virtual machine guest diagnostic settings resource.
+API Version: 2018-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var guestDiagnosticsSettingsAssociation = new AzureNextGen.Insights.V20180601Preview.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation", new AzureNextGen.Insights.V20180601Preview.GuestDiagnosticsSettingsAssociationArgs
+        var guestDiagnosticsSettingsAssociation = new AzureNextGen.Insights.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation", new AzureNextGen.Insights.GuestDiagnosticsSettingsAssociationArgs
         {
             AssociationName = "healthSystemMachineConfigAssociation",
             GuestDiagnosticSettingsName = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-Association-ResourceGroup/providers/providers/microsoft.insights/guestDiagnosticSettings/vmSettingForSecurity",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20180601preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-guest_diagnostics_settings_association = azure_nextgen.insights.v20180601preview.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation",
+guest_diagnostics_settings_association = azure_nextgen.insights.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation",
     association_name="healthSystemMachineConfigAssociation",
     guest_diagnostic_settings_name="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-Association-ResourceGroup/providers/providers/microsoft.insights/guestDiagnosticSettings/vmSettingForSecurity",
     location="Global",
@@ -95,7 +96,7 @@ guest_diagnostics_settings_association = azure_nextgen.insights.v20180601preview
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const guestDiagnosticsSettingsAssociation = new azure_nextgen.insights.v20180601preview.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation", {
+const guestDiagnosticsSettingsAssociation = new azure_nextgen.insights.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation", {
     associationName: "healthSystemMachineConfigAssociation",
     guestDiagnosticSettingsName: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-Association-ResourceGroup/providers/providers/microsoft.insights/guestDiagnosticSettings/vmSettingForSecurity",
     location: "Global",
@@ -115,7 +116,7 @@ const guestDiagnosticsSettingsAssociation = new azure_nextgen.insights.v20180601
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GuestDiagnosticsSettingsAssociation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">GuestDiagnosticsSettingsAssociationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GuestDiagnosticsSettingsAssociation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GuestDiagnosticsSettingsAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -123,11 +124,11 @@ const guestDiagnosticsSettingsAssociation = new azure_nextgen.insights.v20180601
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGuestDiagnosticsSettingsAssociation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">GuestDiagnosticsSettingsAssociationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestDiagnosticsSettingsAssociation</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGuestDiagnosticsSettingsAssociation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GuestDiagnosticsSettingsAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestDiagnosticsSettingsAssociation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GuestDiagnosticsSettingsAssociation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">GuestDiagnosticsSettingsAssociationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GuestDiagnosticsSettingsAssociation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GuestDiagnosticsSettingsAssociationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,7 +149,7 @@ const guestDiagnosticsSettingsAssociation = new azure_nextgen.insights.v20180601
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GuestDiagnosticsSettingsAssociationArgs</span>
+        <span class="property-type"><a href="#inputs">GuestDiagnosticsSettingsAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -217,7 +218,7 @@ const guestDiagnosticsSettingsAssociation = new azure_nextgen.insights.v20180601
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GuestDiagnosticsSettingsAssociationArgs</span>
+        <span class="property-type"><a href="#inputs">GuestDiagnosticsSettingsAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -256,7 +257,7 @@ const guestDiagnosticsSettingsAssociation = new azure_nextgen.insights.v20180601
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GuestDiagnosticsSettingsAssociationArgs</span>
+        <span class="property-type"><a href="#inputs">GuestDiagnosticsSettingsAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -279,11 +280,11 @@ const guestDiagnosticsSettingsAssociation = new azure_nextgen.insights.v20180601
 
 ## GuestDiagnosticsSettingsAssociation Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The GuestDiagnosticsSettingsAssociation resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The GuestDiagnosticsSettingsAssociation resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -641,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20180601preview:GuestDiagnosticsSettingsAssociation healthSystemMachineConfigAssociation /subscriptions/8498f01b-8064-4e37-856e-318f3c6c685f/resourceGroups/healthsystem/providers/Microsoft.Compute/virtualMachines/eastussojai/providers/microsoft.insights/guestDiagnosticSettingsAssociation/healthSystemMachineConfigAssociation 
+$ pulumi import azure-nextgen:insights:GuestDiagnosticsSettingsAssociation healthSystemMachineConfigAssociation /subscriptions/8498f01b-8064-4e37-856e-318f3c6c685f/resourceGroups/healthsystem/providers/Microsoft.Compute/virtualMachines/eastussojai/providers/microsoft.insights/guestDiagnosticSettingsAssociation/healthSystemMachineConfigAssociation 
 ```
 
 

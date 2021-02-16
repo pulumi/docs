@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationReco
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provider details.
-Latest API Version: 2018-07-10.
+API Version: 2018-07-10.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationRecoveryServicesProvider = new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryServicesProviderArgs
+        var replicationRecoveryServicesProvider = new AzureNextGen.RecoveryServices.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", new AzureNextGen.RecoveryServices.ReplicationRecoveryServicesProviderArgs
         {
             FabricName = "vmwarefabric1",
-            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.AddRecoveryServicesProviderInputPropertiesArgs
+            Properties = new AzureNextGen.RecoveryServices.Inputs.AddRecoveryServicesProviderInputPropertiesArgs
             {
-                AuthenticationIdentityInput = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityProviderInputArgs
+                AuthenticationIdentityInput = new AzureNextGen.RecoveryServices.Inputs.IdentityProviderInputArgs
                 {
                     AadAuthority = "https://login.microsoftonline.com",
                     ApplicationId = "f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
@@ -41,7 +41,7 @@ class MyStack : Stack
                     TenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47",
                 },
                 MachineName = "vmwareprovider1",
-                ResourceAccessIdentityInput = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityProviderInputArgs
+                ResourceAccessIdentityInput = new AzureNextGen.RecoveryServices.Inputs.IdentityProviderInputArgs
                 {
                     AadAuthority = "https://login.microsoftonline.com",
                     ApplicationId = "f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
@@ -68,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -114,10 +114,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_recovery_services_provider = azure_nextgen.recoveryservices.latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider",
+replication_recovery_services_provider = azure_nextgen.recoveryservices.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider",
     fabric_name="vmwarefabric1",
-    properties=azure_nextgen.recoveryservices.latest.AddRecoveryServicesProviderInputPropertiesArgs(
-        authentication_identity_input=azure_nextgen.recoveryservices.latest.IdentityProviderInputArgs(
+    properties=azure_nextgen.recoveryservices.AddRecoveryServicesProviderInputPropertiesArgs(
+        authentication_identity_input=azure_nextgen.recoveryservices.IdentityProviderInputArgs(
             aad_authority="https://login.microsoftonline.com",
             application_id="f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
             audience="https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874",
@@ -125,7 +125,7 @@ replication_recovery_services_provider = azure_nextgen.recoveryservices.latest.R
             tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
         ),
         machine_name="vmwareprovider1",
-        resource_access_identity_input=azure_nextgen.recoveryservices.latest.IdentityProviderInputArgs(
+        resource_access_identity_input=azure_nextgen.recoveryservices.IdentityProviderInputArgs(
             aad_authority="https://login.microsoftonline.com",
             application_id="f66fce08-c0c6-47a1-beeb-0ede5ea94f90",
             audience="https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874",
@@ -147,7 +147,7 @@ replication_recovery_services_provider = azure_nextgen.recoveryservices.latest.R
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", {
+const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", {
     fabricName: "vmwarefabric1",
     properties: {
         authenticationIdentityInput: {
@@ -183,7 +183,7 @@ const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.l
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReplicationRecoveryServicesProviderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -191,11 +191,11 @@ const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.l
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReplicationRecoveryServicesProviderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationRecoveryServicesProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationRecoveryServicesProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReplicationRecoveryServicesProviderArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationRecoveryServicesProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -216,7 +216,7 @@ const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.l
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationRecoveryServicesProviderArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -285,7 +285,7 @@ const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.l
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationRecoveryServicesProviderArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -324,7 +324,7 @@ const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.l
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationRecoveryServicesProviderArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationRecoveryServicesProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -347,11 +347,11 @@ const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.l
 
 ## ReplicationRecoveryServicesProvider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ReplicationRecoveryServicesProvider resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ReplicationRecoveryServicesProvider resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3127,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationRecoveryServicesProvider vmwareprovider1 /Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationFabrics/vmwarefabric1/replicationRecoveryServicesProviders/vmwareprovider1 
+$ pulumi import azure-nextgen:recoveryservices:ReplicationRecoveryServicesProvider vmwareprovider1 /Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationFabrics/vmwarefabric1/replicationRecoveryServicesProviders/vmwareprovider1 
 ```
 
 

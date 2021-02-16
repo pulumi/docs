@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.TagAtScope resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Wrapper resource for tags API requests and responses.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tagAtScope = new AzureNextGen.Resources.Latest.TagAtScope("tagAtScope", new AzureNextGen.Resources.Latest.TagAtScopeArgs
+        var tagAtScope = new AzureNextGen.Resources.TagAtScope("tagAtScope", new AzureNextGen.Resources.TagAtScopeArgs
         {
-            Properties = new AzureNextGen.Resources.Latest.Inputs.TagsArgs
+            Properties = new AzureNextGen.Resources.Inputs.TagsArgs
             {
                 Tags = 
                 {
@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,8 +85,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope",
-    properties=azure_nextgen.resources.latest.TagsArgs(
+tag_at_scope = azure_nextgen.resources.TagAtScope("tagAtScope",
+    properties=azure_nextgen.resources.TagsArgs(
         tags={
             "tagKey1": "tag-value-1",
             "tagKey2": "tag-value-2",
@@ -104,7 +104,7 @@ tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {
+const tagAtScope = new azure_nextgen.resources.TagAtScope("tagAtScope", {
     properties: {
         tags: {
             tagKey1: "tag-value-1",
@@ -128,9 +128,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tagAtScope = new AzureNextGen.Resources.Latest.TagAtScope("tagAtScope", new AzureNextGen.Resources.Latest.TagAtScopeArgs
+        var tagAtScope = new AzureNextGen.Resources.TagAtScope("tagAtScope", new AzureNextGen.Resources.TagAtScopeArgs
         {
-            Properties = new AzureNextGen.Resources.Latest.Inputs.TagsArgs
+            Properties = new AzureNextGen.Resources.Inputs.TagsArgs
             {
                 Tags = 
                 {
@@ -154,7 +154,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -186,8 +186,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope",
-    properties=azure_nextgen.resources.latest.TagsArgs(
+tag_at_scope = azure_nextgen.resources.TagAtScope("tagAtScope",
+    properties=azure_nextgen.resources.TagsArgs(
         tags={
             "tagKey1": "tag-value-1",
             "tagKey2": "tag-value-2",
@@ -205,7 +205,7 @@ tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {
+const tagAtScope = new azure_nextgen.resources.TagAtScope("tagAtScope", {
     properties: {
         tags: {
             tagKey1: "tag-value-1",
@@ -227,7 +227,7 @@ const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TagAtScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">TagAtScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TagAtScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TagAtScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -235,11 +235,11 @@ const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTagAtScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">TagAtScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TagAtScope</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTagAtScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TagAtScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TagAtScope</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TagAtScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">TagAtScopeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TagAtScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TagAtScopeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -260,7 +260,7 @@ const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TagAtScopeArgs</span>
+        <span class="property-type"><a href="#inputs">TagAtScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -329,7 +329,7 @@ const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TagAtScopeArgs</span>
+        <span class="property-type"><a href="#inputs">TagAtScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -368,7 +368,7 @@ const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TagAtScopeArgs</span>
+        <span class="property-type"><a href="#inputs">TagAtScopeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -391,11 +391,11 @@ const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {
 
 ## TagAtScope Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The TagAtScope resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The TagAtScope resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -773,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:resources/latest:TagAtScope myresource1 /{scope}/providers/Microsoft.Resources/tags/default 
+$ pulumi import azure-nextgen:resources:TagAtScope myresource1 /{scope}/providers/Microsoft.Resources/tags/default 
 ```
 
 

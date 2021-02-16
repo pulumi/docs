@@ -19,7 +19,7 @@ meta_desc: "Explore the GetProtectionPolicy function of the recoveryservices mod
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProtectionPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProtectionPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetProtectionPolicyResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProtectionPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProtectionPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProtectionPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetProtectionPolicy function of the recoveryservices mod
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProtectionPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProtectionPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupProtectionPolicyResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProtectionPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProtectionPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupProtectionPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupProtectionPolicy` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetProtectionPolicy function of the recoveryservices mod
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProtectionPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetProtectionPolicyResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetProtectionPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetProtectionPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProtectionPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -474,9 +474,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -682,9 +679,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azureiaasvmprotectionpolicyresponse">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -932,9 +926,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1032,9 +1023,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azurevmworkloadprotectionpolicyresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -1246,9 +1234,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1310,9 +1295,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response</h4>
-
-
-
 
 
 
@@ -1416,9 +1398,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1516,9 +1495,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="genericprotectionpolicyresponse">Generic<wbr>Protection<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -1694,9 +1670,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1797,9 +1770,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1861,9 +1831,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -2039,9 +2006,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2067,9 +2031,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mabprotectionpolicyresponse">Mab<wbr>Protection<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -2206,9 +2167,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response</h4>
-
-
-
 
 
 
@@ -2420,9 +2378,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2524,9 +2479,6 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 {{% /choosable %}}
 
 <h4 id="settingsresponse">Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -2670,9 +2622,6 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2734,9 +2683,6 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -2912,9 +2858,6 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3051,9 +2994,6 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3151,9 +3091,6 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response</h4>
-
-
-
 
 
 
@@ -3290,9 +3227,6 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response</h4>
-
-
-
 
 
 

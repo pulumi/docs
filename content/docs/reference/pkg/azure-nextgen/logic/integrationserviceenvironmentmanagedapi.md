@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationServiceEnvironm
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The managed api definition.
-Latest API Version: 2019-05-01.
+API Version: 2019-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationServiceEnvironmentManagedApi = new AzureNextGen.Logic.Latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", new AzureNextGen.Logic.Latest.IntegrationServiceEnvironmentManagedApiArgs
+        var integrationServiceEnvironmentManagedApi = new AzureNextGen.Logic.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", new AzureNextGen.Logic.IntegrationServiceEnvironmentManagedApiArgs
         {
             ApiName = "servicebus",
             IntegrationServiceEnvironmentName = "testIntegrationServiceEnvironment",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_service_environment_managed_api = azure_nextgen.logic.latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi",
+integration_service_environment_managed_api = azure_nextgen.logic.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi",
     api_name="servicebus",
     integration_service_environment_name="testIntegrationServiceEnvironment",
     resource_group="testResourceGroup")
@@ -90,7 +90,7 @@ integration_service_environment_managed_api = azure_nextgen.logic.latest.Integra
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", {
+const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", {
     apiName: "servicebus",
     integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
     resourceGroup: "testResourceGroup",
@@ -108,7 +108,7 @@ const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.latest.I
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationServiceEnvironmentManagedApi</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IntegrationServiceEnvironmentManagedApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationServiceEnvironmentManagedApi</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationServiceEnvironmentManagedApiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -116,11 +116,11 @@ const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.latest.I
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationServiceEnvironmentManagedApi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IntegrationServiceEnvironmentManagedApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationServiceEnvironmentManagedApi</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationServiceEnvironmentManagedApi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationServiceEnvironmentManagedApiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationServiceEnvironmentManagedApi</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationServiceEnvironmentManagedApi</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IntegrationServiceEnvironmentManagedApiArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationServiceEnvironmentManagedApi</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationServiceEnvironmentManagedApiArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -141,7 +141,7 @@ const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.latest.I
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationServiceEnvironmentManagedApiArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationServiceEnvironmentManagedApiArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -210,7 +210,7 @@ const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.latest.I
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationServiceEnvironmentManagedApiArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationServiceEnvironmentManagedApiArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -249,7 +249,7 @@ const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.latest.I
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IntegrationServiceEnvironmentManagedApiArgs</span>
+        <span class="property-type"><a href="#inputs">IntegrationServiceEnvironmentManagedApiArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -272,11 +272,11 @@ const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.latest.I
 
 ## IntegrationServiceEnvironmentManagedApi Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IntegrationServiceEnvironmentManagedApi resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IntegrationServiceEnvironmentManagedApi resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2590,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:logic/latest:IntegrationServiceEnvironmentManagedApi servicebus /subscriptions/80d4fe69-c95b-4dd2-a938-9250f1c8ab03/resourceGroups/rohithah-ise/providers/Microsoft.Logic/integrationServiceEnvironments/tes-ise-ga/managedApis/servicebus 
+$ pulumi import azure-nextgen:logic:IntegrationServiceEnvironmentManagedApi servicebus /subscriptions/80d4fe69-c95b-4dd2-a938-9250f1c8ab03/resourceGroups/rohithah-ise/providers/Microsoft.Logic/integrationServiceEnvironments/tes-ise-ga/managedApis/servicebus 
 ```
 
 

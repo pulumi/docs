@@ -19,7 +19,7 @@ meta_desc: "Explore the GetLoadBalancer function of the network module, includin
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLoadBalancer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLoadBalancerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetLoadBalancerResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLoadBalancer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLoadBalancerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetLoadBalancer function of the network module, includin
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLoadBalancerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupLoadBalancerResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLoadBalancerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLoadBalancerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupLoadBalancer` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetLoadBalancer function of the network module, includin
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLoadBalancer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetLoadBalancerResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetLoadBalancerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLoadBalancerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -834,9 +834,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1117,9 +1114,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1217,9 +1211,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="applicationsecuritygroupresponse">Application<wbr>Security<wbr>Group<wbr>Response</h4>
-
-
-
 
 
 
@@ -1536,9 +1527,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="backendaddresspoolresponse">Backend<wbr>Address<wbr>Pool<wbr>Response</h4>
-
-
-
 
 
 
@@ -1966,9 +1954,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2066,9 +2051,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ddossettingsresponse">Ddos<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -2205,9 +2187,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="delegationresponse">Delegation<wbr>Response</h4>
-
-
-
 
 
 
@@ -2455,9 +2434,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2558,9 +2534,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2658,9 +2631,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="flowlogresponse">Flow<wbr>Log<wbr>Response</h4>
-
-
-
 
 
 
@@ -3193,9 +3163,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="frontendipconfigurationresponse">Frontend<wbr>IPConfiguration<wbr>Response</h4>
-
-
-
 
 
 
@@ -3803,9 +3770,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4047,9 +4011,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ipconfigurationresponse">IPConfiguration<wbr>Response</h4>
-
-
-
 
 
 
@@ -4366,9 +4327,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="inboundnatpoolresponse">Inbound<wbr>Nat<wbr>Pool<wbr>Response</h4>
-
-
-
 
 
 
@@ -4868,9 +4826,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5367,9 +5322,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5467,9 +5419,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="loadbalancerbackendaddressresponse">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Response</h4>
-
-
-
 
 
 
@@ -5681,9 +5630,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5781,9 +5727,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="loadbalancingruleresponse">Load<wbr>Balancing<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 
@@ -6391,9 +6334,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6602,9 +6542,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6738,9 +6675,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response</h4>
-
-
-
 
 
 
@@ -7345,9 +7279,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="networkinterfaceresponse">Network<wbr>Interface<wbr>Response</h4>
-
-
-
 
 
 
@@ -8135,9 +8066,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8379,9 +8307,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="networksecuritygroupresponse">Network<wbr>Security<wbr>Group<wbr>Response</h4>
-
-
-
 
 
 
@@ -8881,9 +8806,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9305,9 +9227,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
-
-
-
 
 
 
@@ -9807,9 +9726,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10162,9 +10078,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10298,9 +10211,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="proberesponse">Probe<wbr>Response</h4>
-
-
-
 
 
 
@@ -10728,9 +10638,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10864,9 +10771,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</h4>
-
-
-
 
 
 
@@ -11618,9 +11522,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -11718,9 +11619,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcenavigationlinkresponse">Resource<wbr>Navigation<wbr>Link<wbr>Response</h4>
-
-
-
 
 
 
@@ -12004,9 +11902,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12104,9 +11999,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="routeresponse">Route<wbr>Response</h4>
-
-
-
 
 
 
@@ -12459,9 +12351,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="routetableresponse">Route<wbr>Table<wbr>Response</h4>
-
-
-
 
 
 
@@ -12886,9 +12775,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="securityruleresponse">Security<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 
@@ -13640,9 +13526,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13995,9 +13878,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -14275,9 +14155,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="serviceendpointpolicyresponse">Service<wbr>Endpoint<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -14669,9 +14546,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -14808,9 +14682,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -14872,9 +14743,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="subnetresponse">Subnet<wbr>Response</h4>
-
-
-
 
 
 
@@ -15662,9 +15530,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15873,9 +15738,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15937,9 +15799,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualnetworktapresponse">Virtual<wbr>Network<wbr>Tap<wbr>Response</h4>
-
-
-
 
 
 

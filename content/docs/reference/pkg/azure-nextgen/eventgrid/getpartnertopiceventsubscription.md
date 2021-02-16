@@ -19,7 +19,7 @@ meta_desc: "Explore the GetPartnerTopicEventSubscription function of the eventgr
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPartnerTopicEventSubscription<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPartnerTopicEventSubscriptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetPartnerTopicEventSubscriptionResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPartnerTopicEventSubscription<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPartnerTopicEventSubscriptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPartnerTopicEventSubscriptionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetPartnerTopicEventSubscription function of the eventgr
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPartnerTopicEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPartnerTopicEventSubscriptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupPartnerTopicEventSubscriptionResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPartnerTopicEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPartnerTopicEventSubscriptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPartnerTopicEventSubscriptionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPartnerTopicEventSubscription` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetPartnerTopicEventSubscription function of the eventgr
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPartnerTopicEventSubscription </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetPartnerTopicEventSubscriptionResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetPartnerTopicEventSubscriptionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPartnerTopicEventSubscriptionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPartnerTopicEventSubscriptionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -742,9 +742,6 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -881,9 +878,6 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -981,9 +975,6 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 {{% /choosable %}}
 
 <h4 id="deadletterwithresourceidentityresponse">Dead<wbr>Letter<wbr>With<wbr>Resource<wbr>Identity<wbr>Response</h4>
-
-
-
 
 
 
@@ -1091,9 +1082,6 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1198,9 +1186,6 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1262,9 +1247,6 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 {{% /choosable %}}
 
 <h4 id="eventsubscriptionfilterresponse">Event<wbr>Subscription<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 
@@ -1492,9 +1474,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1595,9 +1574,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1659,9 +1635,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="numbergreaterthanadvancedfilterresponse">Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 
@@ -1765,9 +1738,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1865,9 +1835,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="numberinadvancedfilterresponse">Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 
@@ -1971,9 +1938,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2071,9 +2035,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="numberlessthanorequalsadvancedfilterresponse">Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 
@@ -2177,9 +2138,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2277,9 +2235,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="retrypolicyresponse">Retry<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -2383,9 +2338,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2450,9 +2402,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2514,9 +2463,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="storageblobdeadletterdestinationresponse">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response</h4>
-
-
-
 
 
 
@@ -2620,9 +2566,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2720,9 +2663,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="stringbeginswithadvancedfilterresponse">String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 
@@ -2826,9 +2766,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2926,9 +2863,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="stringendswithadvancedfilterresponse">String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 
@@ -3032,9 +2966,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3135,9 +3066,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3235,9 +3163,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="webhookeventsubscriptiondestinationresponse">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</h4>
-
-
-
 
 
 

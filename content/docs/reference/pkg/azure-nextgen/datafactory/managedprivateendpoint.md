@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datafactory.ManagedPrivateEndpoi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Managed private endpoint resource type.
-Latest API Version: 2018-06-01.
+API Version: 2018-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedPrivateEndpoint = new AzureNextGen.DataFactory.Latest.ManagedPrivateEndpoint("managedPrivateEndpoint", new AzureNextGen.DataFactory.Latest.ManagedPrivateEndpointArgs
+        var managedPrivateEndpoint = new AzureNextGen.DataFactory.ManagedPrivateEndpoint("managedPrivateEndpoint", new AzureNextGen.DataFactory.ManagedPrivateEndpointArgs
         {
             FactoryName = "exampleFactoryName",
             ManagedPrivateEndpointName = "exampleManagedPrivateEndpointName",
             ManagedVirtualNetworkName = "exampleManagedVirtualNetworkName",
-            Properties = new AzureNextGen.DataFactory.Latest.Inputs.ManagedPrivateEndpointArgs
+            Properties = new AzureNextGen.DataFactory.Inputs.ManagedPrivateEndpointArgs
             {
                 Fqdns = {},
                 GroupId = "blob",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory/latest"
+	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,11 +88,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_private_endpoint = azure_nextgen.datafactory.latest.ManagedPrivateEndpoint("managedPrivateEndpoint",
+managed_private_endpoint = azure_nextgen.datafactory.ManagedPrivateEndpoint("managedPrivateEndpoint",
     factory_name="exampleFactoryName",
     managed_private_endpoint_name="exampleManagedPrivateEndpointName",
     managed_virtual_network_name="exampleManagedVirtualNetworkName",
-    properties=azure_nextgen.datafactory.latest.ManagedPrivateEndpointArgs(
+    properties=azure_nextgen.datafactory.ManagedPrivateEndpointArgs(
         fqdns=[],
         group_id="blob",
         private_link_resource_id="/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage",
@@ -109,7 +109,7 @@ managed_private_endpoint = azure_nextgen.datafactory.latest.ManagedPrivateEndpoi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedPrivateEndpoint = new azure_nextgen.datafactory.latest.ManagedPrivateEndpoint("managedPrivateEndpoint", {
+const managedPrivateEndpoint = new azure_nextgen.datafactory.ManagedPrivateEndpoint("managedPrivateEndpoint", {
     factoryName: "exampleFactoryName",
     managedPrivateEndpointName: "exampleManagedPrivateEndpointName",
     managedVirtualNetworkName: "exampleManagedVirtualNetworkName",
@@ -133,7 +133,7 @@ const managedPrivateEndpoint = new azure_nextgen.datafactory.latest.ManagedPriva
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedPrivateEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagedPrivateEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedPrivateEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedPrivateEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -141,11 +141,11 @@ const managedPrivateEndpoint = new azure_nextgen.datafactory.latest.ManagedPriva
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedPrivateEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagedPrivateEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedPrivateEndpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedPrivateEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedPrivateEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedPrivateEndpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedPrivateEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagedPrivateEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedPrivateEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagedPrivateEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -166,7 +166,7 @@ const managedPrivateEndpoint = new azure_nextgen.datafactory.latest.ManagedPriva
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedPrivateEndpointArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedPrivateEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -235,7 +235,7 @@ const managedPrivateEndpoint = new azure_nextgen.datafactory.latest.ManagedPriva
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedPrivateEndpointArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedPrivateEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,7 +274,7 @@ const managedPrivateEndpoint = new azure_nextgen.datafactory.latest.ManagedPriva
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedPrivateEndpointArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedPrivateEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -297,11 +297,11 @@ const managedPrivateEndpoint = new azure_nextgen.datafactory.latest.ManagedPriva
 
 ## ManagedPrivateEndpoint Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1209,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datafactory/latest:ManagedPrivateEndpoint exampleManagedPrivateEndpointName /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/managedVirtualNetworks/exampleManagedVirtualNetworkName/managedPrivateEndpoints/exampleManagedPrivateEndpointName 
+$ pulumi import azure-nextgen:datafactory:ManagedPrivateEndpoint exampleManagedPrivateEndpointName /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/managedVirtualNetworks/exampleManagedVirtualNetworkName/managedPrivateEndpoints/exampleManagedPrivateEndpointName 
 ```
 
 

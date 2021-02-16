@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRouteCircuit reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 ExpressRouteCircuit resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRouteCircuit = new AzureNextGen.Network.Latest.ExpressRouteCircuit("expressRouteCircuit", new AzureNextGen.Network.Latest.ExpressRouteCircuitArgs
+        var expressRouteCircuit = new AzureNextGen.Network.ExpressRouteCircuit("expressRouteCircuit", new AzureNextGen.Network.ExpressRouteCircuitArgs
         {
             AllowClassicOperations = false,
             Authorizations = {},
@@ -35,13 +35,13 @@ class MyStack : Stack
             Location = "Brazil South",
             Peerings = {},
             ResourceGroupName = "rg1",
-            ServiceProviderProperties = new AzureNextGen.Network.Latest.Inputs.ExpressRouteCircuitServiceProviderPropertiesArgs
+            ServiceProviderProperties = new AzureNextGen.Network.Inputs.ExpressRouteCircuitServiceProviderPropertiesArgs
             {
                 BandwidthInMbps = 200,
                 PeeringLocation = "Silicon Valley",
                 ServiceProviderName = "Equinix",
             },
-            Sku = new AzureNextGen.Network.Latest.Inputs.ExpressRouteCircuitSkuArgs
+            Sku = new AzureNextGen.Network.Inputs.ExpressRouteCircuitSkuArgs
             {
                 Family = "MeteredData",
                 Name = "Standard_MeteredData",
@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,19 +103,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_circuit = azure_nextgen.network.latest.ExpressRouteCircuit("expressRouteCircuit",
+express_route_circuit = azure_nextgen.network.ExpressRouteCircuit("expressRouteCircuit",
     allow_classic_operations=False,
     authorizations=[],
     circuit_name="circuitName",
     location="Brazil South",
     peerings=[],
     resource_group_name="rg1",
-    service_provider_properties=azure_nextgen.network.latest.ExpressRouteCircuitServiceProviderPropertiesArgs(
+    service_provider_properties=azure_nextgen.network.ExpressRouteCircuitServiceProviderPropertiesArgs(
         bandwidth_in_mbps=200,
         peering_location="Silicon Valley",
         service_provider_name="Equinix",
     ),
-    sku=azure_nextgen.network.latest.ExpressRouteCircuitSkuArgs(
+    sku=azure_nextgen.network.ExpressRouteCircuitSkuArgs(
         family="MeteredData",
         name="Standard_MeteredData",
         tier="Standard",
@@ -131,7 +131,7 @@ express_route_circuit = azure_nextgen.network.latest.ExpressRouteCircuit("expres
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRouteCircuit = new azure_nextgen.network.latest.ExpressRouteCircuit("expressRouteCircuit", {
+const expressRouteCircuit = new azure_nextgen.network.ExpressRouteCircuit("expressRouteCircuit", {
     allowClassicOperations: false,
     authorizations: [],
     circuitName: "circuitName",
@@ -164,17 +164,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRouteCircuit = new AzureNextGen.Network.Latest.ExpressRouteCircuit("expressRouteCircuit", new AzureNextGen.Network.Latest.ExpressRouteCircuitArgs
+        var expressRouteCircuit = new AzureNextGen.Network.ExpressRouteCircuit("expressRouteCircuit", new AzureNextGen.Network.ExpressRouteCircuitArgs
         {
             BandwidthInGbps = 10,
             CircuitName = "expressRouteCircuit1",
-            ExpressRoutePort = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            ExpressRoutePort = new AzureNextGen.Network.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName",
             },
             Location = "westus",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.ExpressRouteCircuitSkuArgs
+            Sku = new AzureNextGen.Network.Inputs.ExpressRouteCircuitSkuArgs
             {
                 Family = "MeteredData",
                 Name = "Premium_MeteredData",
@@ -195,7 +195,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -232,15 +232,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_circuit = azure_nextgen.network.latest.ExpressRouteCircuit("expressRouteCircuit",
+express_route_circuit = azure_nextgen.network.ExpressRouteCircuit("expressRouteCircuit",
     bandwidth_in_gbps=10,
     circuit_name="expressRouteCircuit1",
-    express_route_port=azure_nextgen.network.latest.SubResourceArgs(
+    express_route_port=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName",
     ),
     location="westus",
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.ExpressRouteCircuitSkuArgs(
+    sku=azure_nextgen.network.ExpressRouteCircuitSkuArgs(
         family="MeteredData",
         name="Premium_MeteredData",
         tier="Premium",
@@ -256,7 +256,7 @@ express_route_circuit = azure_nextgen.network.latest.ExpressRouteCircuit("expres
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRouteCircuit = new azure_nextgen.network.latest.ExpressRouteCircuit("expressRouteCircuit", {
+const expressRouteCircuit = new azure_nextgen.network.ExpressRouteCircuit("expressRouteCircuit", {
     bandwidthInGbps: 10,
     circuitName: "expressRouteCircuit1",
     expressRoutePort: {
@@ -283,7 +283,7 @@ const expressRouteCircuit = new azure_nextgen.network.latest.ExpressRouteCircuit
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteCircuit</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ExpressRouteCircuitArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteCircuit</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -291,11 +291,11 @@ const expressRouteCircuit = new azure_nextgen.network.latest.ExpressRouteCircuit
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteCircuit</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ExpressRouteCircuitArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteCircuit</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteCircuit</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRouteCircuitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteCircuit</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteCircuit</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ExpressRouteCircuitArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteCircuit</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExpressRouteCircuitArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -316,7 +316,7 @@ const expressRouteCircuit = new azure_nextgen.network.latest.ExpressRouteCircuit
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExpressRouteCircuitArgs</span>
+        <span class="property-type"><a href="#inputs">ExpressRouteCircuitArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -385,7 +385,7 @@ const expressRouteCircuit = new azure_nextgen.network.latest.ExpressRouteCircuit
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExpressRouteCircuitArgs</span>
+        <span class="property-type"><a href="#inputs">ExpressRouteCircuitArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -424,7 +424,7 @@ const expressRouteCircuit = new azure_nextgen.network.latest.ExpressRouteCircuit
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExpressRouteCircuitArgs</span>
+        <span class="property-type"><a href="#inputs">ExpressRouteCircuitArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -447,11 +447,11 @@ const expressRouteCircuit = new azure_nextgen.network.latest.ExpressRouteCircuit
 
 ## ExpressRouteCircuit Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -6911,7 +6911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ExpressRouteCircuit expressRouteCircuit1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteCircuits/expressRouteCircuit1 
+$ pulumi import azure-nextgen:network:ExpressRouteCircuit expressRouteCircuit1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteCircuits/expressRouteCircuit1 
 ```
 
 

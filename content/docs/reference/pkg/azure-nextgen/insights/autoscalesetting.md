@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.AutoscaleSetting resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The autoscale setting resource.
-Latest API Version: 2015-04-01.
+API Version: 2015-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var autoscaleSetting = new AzureNextGen.Insights.Latest.AutoscaleSetting("autoscaleSetting", new AzureNextGen.Insights.Latest.AutoscaleSettingArgs
+        var autoscaleSetting = new AzureNextGen.Insights.AutoscaleSetting("autoscaleSetting", new AzureNextGen.Insights.AutoscaleSettingArgs
         {
             AutoscaleSettingName = "MySetting",
             Enabled = true,
             Location = "West US",
             Notifications = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.AutoscaleNotificationArgs
+                new AzureNextGen.Insights.Inputs.AutoscaleNotificationArgs
                 {
-                    Email = new AzureNextGen.Insights.Latest.Inputs.EmailNotificationArgs
+                    Email = new AzureNextGen.Insights.Inputs.EmailNotificationArgs
                     {
                         CustomEmails = 
                         {
@@ -49,7 +49,7 @@ class MyStack : Stack
                     Operation = "Scale",
                     Webhooks = 
                     {
-                        new AzureNextGen.Insights.Latest.Inputs.WebhookNotificationArgs
+                        new AzureNextGen.Insights.Inputs.WebhookNotificationArgs
                         {
                             Properties = ,
                             ServiceUri = "http://myservice.com",
@@ -59,15 +59,15 @@ class MyStack : Stack
             },
             Profiles = 
             {
-                new AzureNextGen.Insights.Latest.Inputs.AutoscaleProfileArgs
+                new AzureNextGen.Insights.Inputs.AutoscaleProfileArgs
                 {
-                    Capacity = new AzureNextGen.Insights.Latest.Inputs.ScaleCapacityArgs
+                    Capacity = new AzureNextGen.Insights.Inputs.ScaleCapacityArgs
                     {
                         Default = "1",
                         Maximum = "10",
                         Minimum = "1",
                     },
-                    FixedDate = new AzureNextGen.Insights.Latest.Inputs.TimeWindowArgs
+                    FixedDate = new AzureNextGen.Insights.Inputs.TimeWindowArgs
                     {
                         End = "2015-03-05T14:30:00Z",
                         Start = "2015-03-05T14:00:00Z",
@@ -76,9 +76,9 @@ class MyStack : Stack
                     Name = "adios",
                     Rules = 
                     {
-                        new AzureNextGen.Insights.Latest.Inputs.ScaleRuleArgs
+                        new AzureNextGen.Insights.Inputs.ScaleRuleArgs
                         {
-                            MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.MetricTriggerArgs
+                            MetricTrigger = new AzureNextGen.Insights.Inputs.MetricTriggerArgs
                             {
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
@@ -89,7 +89,7 @@ class MyStack : Stack
                                 TimeGrain = "PT1M",
                                 TimeWindow = "PT5M",
                             },
-                            ScaleAction = new AzureNextGen.Insights.Latest.Inputs.ScaleActionArgs
+                            ScaleAction = new AzureNextGen.Insights.Inputs.ScaleActionArgs
                             {
                                 Cooldown = "PT5M",
                                 Direction = "Increase",
@@ -97,9 +97,9 @@ class MyStack : Stack
                                 Value = "1",
                             },
                         },
-                        new AzureNextGen.Insights.Latest.Inputs.ScaleRuleArgs
+                        new AzureNextGen.Insights.Inputs.ScaleRuleArgs
                         {
-                            MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.MetricTriggerArgs
+                            MetricTrigger = new AzureNextGen.Insights.Inputs.MetricTriggerArgs
                             {
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
@@ -110,7 +110,7 @@ class MyStack : Stack
                                 TimeGrain = "PT2M",
                                 TimeWindow = "PT5M",
                             },
-                            ScaleAction = new AzureNextGen.Insights.Latest.Inputs.ScaleActionArgs
+                            ScaleAction = new AzureNextGen.Insights.Inputs.ScaleActionArgs
                             {
                                 Cooldown = "PT6M",
                                 Direction = "Decrease",
@@ -120,19 +120,19 @@ class MyStack : Stack
                         },
                     },
                 },
-                new AzureNextGen.Insights.Latest.Inputs.AutoscaleProfileArgs
+                new AzureNextGen.Insights.Inputs.AutoscaleProfileArgs
                 {
-                    Capacity = new AzureNextGen.Insights.Latest.Inputs.ScaleCapacityArgs
+                    Capacity = new AzureNextGen.Insights.Inputs.ScaleCapacityArgs
                     {
                         Default = "1",
                         Maximum = "10",
                         Minimum = "1",
                     },
                     Name = "saludos",
-                    Recurrence = new AzureNextGen.Insights.Latest.Inputs.RecurrenceArgs
+                    Recurrence = new AzureNextGen.Insights.Inputs.RecurrenceArgs
                     {
                         Frequency = "Week",
-                        Schedule = new AzureNextGen.Insights.Latest.Inputs.RecurrentScheduleArgs
+                        Schedule = new AzureNextGen.Insights.Inputs.RecurrentScheduleArgs
                         {
                             Days = 
                             {
@@ -151,9 +151,9 @@ class MyStack : Stack
                     },
                     Rules = 
                     {
-                        new AzureNextGen.Insights.Latest.Inputs.ScaleRuleArgs
+                        new AzureNextGen.Insights.Inputs.ScaleRuleArgs
                         {
-                            MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.MetricTriggerArgs
+                            MetricTrigger = new AzureNextGen.Insights.Inputs.MetricTriggerArgs
                             {
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
@@ -164,7 +164,7 @@ class MyStack : Stack
                                 TimeGrain = "PT1M",
                                 TimeWindow = "PT5M",
                             },
-                            ScaleAction = new AzureNextGen.Insights.Latest.Inputs.ScaleActionArgs
+                            ScaleAction = new AzureNextGen.Insights.Inputs.ScaleActionArgs
                             {
                                 Cooldown = "PT5M",
                                 Direction = "Increase",
@@ -172,9 +172,9 @@ class MyStack : Stack
                                 Value = "1",
                             },
                         },
-                        new AzureNextGen.Insights.Latest.Inputs.ScaleRuleArgs
+                        new AzureNextGen.Insights.Inputs.ScaleRuleArgs
                         {
-                            MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.MetricTriggerArgs
+                            MetricTrigger = new AzureNextGen.Insights.Inputs.MetricTriggerArgs
                             {
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
@@ -185,7 +185,7 @@ class MyStack : Stack
                                 TimeGrain = "PT2M",
                                 TimeWindow = "PT5M",
                             },
-                            ScaleAction = new AzureNextGen.Insights.Latest.Inputs.ScaleActionArgs
+                            ScaleAction = new AzureNextGen.Insights.Inputs.ScaleActionArgs
                             {
                                 Cooldown = "PT6M",
                                 Direction = "Decrease",
@@ -218,12 +218,12 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSetting",
+autoscale_setting = azure_nextgen.insights.AutoscaleSetting("autoscaleSetting",
     autoscale_setting_name="MySetting",
     enabled=True,
     location="West US",
-    notifications=[azure_nextgen.insights.latest.AutoscaleNotificationArgs(
-        email=azure_nextgen.insights.latest.EmailNotificationArgs(
+    notifications=[azure_nextgen.insights.AutoscaleNotificationArgs(
+        email=azure_nextgen.insights.EmailNotificationArgs(
             custom_emails=[
                 "gu@ms.com",
                 "ge@ns.net",
@@ -232,27 +232,27 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
             send_to_subscription_co_administrators=True,
         ),
         operation="Scale",
-        webhooks=[azure_nextgen.insights.latest.WebhookNotificationArgs(
+        webhooks=[azure_nextgen.insights.WebhookNotificationArgs(
             properties={},
             service_uri="http://myservice.com",
         )],
     )],
     profiles=[
-        azure_nextgen.insights.latest.AutoscaleProfileArgs(
-            capacity=azure_nextgen.insights.latest.ScaleCapacityArgs(
+        azure_nextgen.insights.AutoscaleProfileArgs(
+            capacity=azure_nextgen.insights.ScaleCapacityArgs(
                 default="1",
                 maximum="10",
                 minimum="1",
             ),
-            fixed_date=azure_nextgen.insights.latest.TimeWindowArgs(
+            fixed_date=azure_nextgen.insights.TimeWindowArgs(
                 end="2015-03-05T14:30:00Z",
                 start="2015-03-05T14:00:00Z",
                 time_zone="UTC",
             ),
             name="adios",
             rules=[
-                azure_nextgen.insights.latest.ScaleRuleArgs(
-                    metric_trigger=azure_nextgen.insights.latest.MetricTriggerArgs(
+                azure_nextgen.insights.ScaleRuleArgs(
+                    metric_trigger=azure_nextgen.insights.MetricTriggerArgs(
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -262,15 +262,15 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
                         time_grain="PT1M",
                         time_window="PT5M",
                     ),
-                    scale_action=azure_nextgen.insights.latest.ScaleActionArgs(
+                    scale_action=azure_nextgen.insights.ScaleActionArgs(
                         cooldown="PT5M",
                         direction="Increase",
                         type="ChangeCount",
                         value="1",
                     ),
                 ),
-                azure_nextgen.insights.latest.ScaleRuleArgs(
-                    metric_trigger=azure_nextgen.insights.latest.MetricTriggerArgs(
+                azure_nextgen.insights.ScaleRuleArgs(
+                    metric_trigger=azure_nextgen.insights.MetricTriggerArgs(
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -280,7 +280,7 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
                         time_grain="PT2M",
                         time_window="PT5M",
                     ),
-                    scale_action=azure_nextgen.insights.latest.ScaleActionArgs(
+                    scale_action=azure_nextgen.insights.ScaleActionArgs(
                         cooldown="PT6M",
                         direction="Decrease",
                         type="ChangeCount",
@@ -289,16 +289,16 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
                 ),
             ],
         ),
-        azure_nextgen.insights.latest.AutoscaleProfileArgs(
-            capacity=azure_nextgen.insights.latest.ScaleCapacityArgs(
+        azure_nextgen.insights.AutoscaleProfileArgs(
+            capacity=azure_nextgen.insights.ScaleCapacityArgs(
                 default="1",
                 maximum="10",
                 minimum="1",
             ),
             name="saludos",
-            recurrence=azure_nextgen.insights.latest.RecurrenceArgs(
+            recurrence=azure_nextgen.insights.RecurrenceArgs(
                 frequency="Week",
-                schedule=azure_nextgen.insights.latest.RecurrentScheduleArgs(
+                schedule=azure_nextgen.insights.RecurrentScheduleArgs(
                     days=["1"],
                     hours=[5],
                     minutes=[15],
@@ -306,8 +306,8 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
                 ),
             ),
             rules=[
-                azure_nextgen.insights.latest.ScaleRuleArgs(
-                    metric_trigger=azure_nextgen.insights.latest.MetricTriggerArgs(
+                azure_nextgen.insights.ScaleRuleArgs(
+                    metric_trigger=azure_nextgen.insights.MetricTriggerArgs(
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -317,15 +317,15 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
                         time_grain="PT1M",
                         time_window="PT5M",
                     ),
-                    scale_action=azure_nextgen.insights.latest.ScaleActionArgs(
+                    scale_action=azure_nextgen.insights.ScaleActionArgs(
                         cooldown="PT5M",
                         direction="Increase",
                         type="ChangeCount",
                         value="1",
                     ),
                 ),
-                azure_nextgen.insights.latest.ScaleRuleArgs(
-                    metric_trigger=azure_nextgen.insights.latest.MetricTriggerArgs(
+                azure_nextgen.insights.ScaleRuleArgs(
+                    metric_trigger=azure_nextgen.insights.MetricTriggerArgs(
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -335,7 +335,7 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
                         time_grain="PT2M",
                         time_window="PT5M",
                     ),
-                    scale_action=azure_nextgen.insights.latest.ScaleActionArgs(
+                    scale_action=azure_nextgen.insights.ScaleActionArgs(
                         cooldown="PT6M",
                         direction="Decrease",
                         type="ChangeCount",
@@ -359,7 +359,7 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const autoscaleSetting = new azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSetting", {
+const autoscaleSetting = new azure_nextgen.insights.AutoscaleSetting("autoscaleSetting", {
     autoscaleSettingName: "MySetting",
     enabled: true,
     location: "West US",
@@ -503,7 +503,7 @@ const autoscaleSetting = new azure_nextgen.insights.latest.AutoscaleSetting("aut
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AutoscaleSettingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -511,11 +511,11 @@ const autoscaleSetting = new azure_nextgen.insights.latest.AutoscaleSetting("aut
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscaleSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AutoscaleSettingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscaleSetting</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscaleSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscaleSetting</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AutoscaleSettingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -536,7 +536,7 @@ const autoscaleSetting = new azure_nextgen.insights.latest.AutoscaleSetting("aut
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AutoscaleSettingArgs</span>
+        <span class="property-type"><a href="#inputs">AutoscaleSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -605,7 +605,7 @@ const autoscaleSetting = new azure_nextgen.insights.latest.AutoscaleSetting("aut
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AutoscaleSettingArgs</span>
+        <span class="property-type"><a href="#inputs">AutoscaleSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -644,7 +644,7 @@ const autoscaleSetting = new azure_nextgen.insights.latest.AutoscaleSetting("aut
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AutoscaleSettingArgs</span>
+        <span class="property-type"><a href="#inputs">AutoscaleSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -667,11 +667,11 @@ const autoscaleSetting = new azure_nextgen.insights.latest.AutoscaleSetting("aut
 
 ## AutoscaleSetting Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -5373,7 +5373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:AutoscaleSetting MySetting /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/microsoft.insights/autoscalesettings/MySetting 
+$ pulumi import azure-nextgen:insights:AutoscaleSetting MySetting /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/microsoft.insights/autoscalesettings/MySetting 
 ```
 
 

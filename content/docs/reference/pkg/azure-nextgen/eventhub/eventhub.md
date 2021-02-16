@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.EventHub resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Single item in List or Get Event Hub operation
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventHub = new AzureNextGen.EventHub.Latest.EventHub("eventHub", new AzureNextGen.EventHub.Latest.EventHubArgs
+        var eventHub = new AzureNextGen.EventHub.EventHub("eventHub", new AzureNextGen.EventHub.EventHubArgs
         {
-            CaptureDescription = new AzureNextGen.EventHub.Latest.Inputs.CaptureDescriptionArgs
+            CaptureDescription = new AzureNextGen.EventHub.Inputs.CaptureDescriptionArgs
             {
-                Destination = new AzureNextGen.EventHub.Latest.Inputs.DestinationArgs
+                Destination = new AzureNextGen.EventHub.Inputs.DestinationArgs
                 {
                     ArchiveNameFormat = "{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
                     BlobContainer = "container",
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/latest"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -107,9 +107,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_hub = azure_nextgen.eventhub.latest.EventHub("eventHub",
-    capture_description=azure_nextgen.eventhub.latest.CaptureDescriptionArgs(
-        destination=azure_nextgen.eventhub.latest.DestinationArgs(
+event_hub = azure_nextgen.eventhub.EventHub("eventHub",
+    capture_description=azure_nextgen.eventhub.CaptureDescriptionArgs(
+        destination=azure_nextgen.eventhub.DestinationArgs(
             archive_name_format="{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
             blob_container="container",
             name="EventHubArchive.AzureBlockBlob",
@@ -137,7 +137,7 @@ event_hub = azure_nextgen.eventhub.latest.EventHub("eventHub",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
+const eventHub = new azure_nextgen.eventhub.EventHub("eventHub", {
     captureDescription: {
         destination: {
             archiveNameFormat: "{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
@@ -170,7 +170,7 @@ const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">EventHubArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventHubArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -178,11 +178,11 @@ const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventHub</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">EventHubArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventHub</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventHub</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventHubArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventHub</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">EventHubArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EventHubArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -203,7 +203,7 @@ const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EventHubArgs</span>
+        <span class="property-type"><a href="#inputs">EventHubArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -272,7 +272,7 @@ const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EventHubArgs</span>
+        <span class="property-type"><a href="#inputs">EventHubArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -311,7 +311,7 @@ const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">EventHubArgs</span>
+        <span class="property-type"><a href="#inputs">EventHubArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -334,11 +334,11 @@ const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
 
 ## EventHub Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The EventHub resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The EventHub resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1836,7 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:eventhub/latest:EventHub sdk-EventHub-10 /subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-NotificationHubs-AustraliaEast/providers/Microsoft.EventHub/namespaces/sdk-Namespace-716/eventhubs/sdk-EventHub-10 
+$ pulumi import azure-nextgen:eventhub:EventHub sdk-EventHub-10 /subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-NotificationHubs-AustraliaEast/providers/Microsoft.EventHub/namespaces/sdk-Namespace-716/eventhubs/sdk-EventHub-10 
 ```
 
 

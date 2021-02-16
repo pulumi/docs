@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.LoadBalancerBackendAddre
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Pool of backend IP addresses.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,25 +27,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var loadBalancerBackendAddressPool = new AzureNextGen.Network.Latest.LoadBalancerBackendAddressPool("loadBalancerBackendAddressPool", new AzureNextGen.Network.Latest.LoadBalancerBackendAddressPoolArgs
+        var loadBalancerBackendAddressPool = new AzureNextGen.Network.LoadBalancerBackendAddressPool("loadBalancerBackendAddressPool", new AzureNextGen.Network.LoadBalancerBackendAddressPoolArgs
         {
             BackendAddressPoolName = "backend",
             LoadBalancerBackendAddresses = 
             {
-                new AzureNextGen.Network.Latest.Inputs.LoadBalancerBackendAddressArgs
+                new AzureNextGen.Network.Inputs.LoadBalancerBackendAddressArgs
                 {
                     IpAddress = "10.0.0.4",
                     Name = "address1",
-                    VirtualNetwork = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    VirtualNetwork = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
                     },
                 },
-                new AzureNextGen.Network.Latest.Inputs.LoadBalancerBackendAddressArgs
+                new AzureNextGen.Network.Inputs.LoadBalancerBackendAddressArgs
                 {
                     IpAddress = "10.0.0.5",
                     Name = "address2",
-                    VirtualNetwork = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    VirtualNetwork = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
                     },
@@ -68,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -112,20 +112,20 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-load_balancer_backend_address_pool = azure_nextgen.network.latest.LoadBalancerBackendAddressPool("loadBalancerBackendAddressPool",
+load_balancer_backend_address_pool = azure_nextgen.network.LoadBalancerBackendAddressPool("loadBalancerBackendAddressPool",
     backend_address_pool_name="backend",
     load_balancer_backend_addresses=[
-        azure_nextgen.network.latest.LoadBalancerBackendAddressArgs(
+        azure_nextgen.network.LoadBalancerBackendAddressArgs(
             ip_address="10.0.0.4",
             name="address1",
-            virtual_network=azure_nextgen.network.latest.SubResourceArgs(
+            virtual_network=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
             ),
         ),
-        azure_nextgen.network.latest.LoadBalancerBackendAddressArgs(
+        azure_nextgen.network.LoadBalancerBackendAddressArgs(
             ip_address="10.0.0.5",
             name="address2",
-            virtual_network=azure_nextgen.network.latest.SubResourceArgs(
+            virtual_network=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
             ),
         ),
@@ -143,7 +143,7 @@ load_balancer_backend_address_pool = azure_nextgen.network.latest.LoadBalancerBa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const loadBalancerBackendAddressPool = new azure_nextgen.network.latest.LoadBalancerBackendAddressPool("loadBalancerBackendAddressPool", {
+const loadBalancerBackendAddressPool = new azure_nextgen.network.LoadBalancerBackendAddressPool("loadBalancerBackendAddressPool", {
     backendAddressPoolName: "backend",
     loadBalancerBackendAddresses: [
         {
@@ -177,7 +177,7 @@ const loadBalancerBackendAddressPool = new azure_nextgen.network.latest.LoadBala
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancerBackendAddressPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">LoadBalancerBackendAddressPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancerBackendAddressPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoadBalancerBackendAddressPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -185,11 +185,11 @@ const loadBalancerBackendAddressPool = new azure_nextgen.network.latest.LoadBala
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancerBackendAddressPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">LoadBalancerBackendAddressPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancerBackendAddressPool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancerBackendAddressPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LoadBalancerBackendAddressPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancerBackendAddressPool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancerBackendAddressPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">LoadBalancerBackendAddressPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancerBackendAddressPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LoadBalancerBackendAddressPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -210,7 +210,7 @@ const loadBalancerBackendAddressPool = new azure_nextgen.network.latest.LoadBala
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LoadBalancerBackendAddressPoolArgs</span>
+        <span class="property-type"><a href="#inputs">LoadBalancerBackendAddressPoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -279,7 +279,7 @@ const loadBalancerBackendAddressPool = new azure_nextgen.network.latest.LoadBala
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LoadBalancerBackendAddressPoolArgs</span>
+        <span class="property-type"><a href="#inputs">LoadBalancerBackendAddressPoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -318,7 +318,7 @@ const loadBalancerBackendAddressPool = new azure_nextgen.network.latest.LoadBala
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LoadBalancerBackendAddressPoolArgs</span>
+        <span class="property-type"><a href="#inputs">LoadBalancerBackendAddressPoolArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -341,11 +341,11 @@ const loadBalancerBackendAddressPool = new azure_nextgen.network.latest.LoadBala
 
 ## LoadBalancerBackendAddressPool Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LoadBalancerBackendAddressPool resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The LoadBalancerBackendAddressPool resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -14487,7 +14487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:LoadBalancerBackendAddressPool backend /subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/backend 
+$ pulumi import azure-nextgen:network:LoadBalancerBackendAddressPool backend /subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/backend 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.StorageAccountCreden
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The storage account credential.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageAccountCredential = new AzureNextGen.DataBoxEdge.Latest.StorageAccountCredential("storageAccountCredential", new AzureNextGen.DataBoxEdge.Latest.StorageAccountCredentialArgs
+        var storageAccountCredential = new AzureNextGen.DataBoxEdge.StorageAccountCredential("storageAccountCredential", new AzureNextGen.DataBoxEdge.StorageAccountCredentialArgs
         {
-            AccountKey = new AzureNextGen.DataBoxEdge.Latest.Inputs.AsymmetricEncryptedSecretArgs
+            AccountKey = new AzureNextGen.DataBoxEdge.Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "AES256",
                 EncryptionCertThumbprint = "2A9D8D6BE51574B5461230AEF02F162C5F01AD31",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge/latest"
+	databoxedge "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,8 +94,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_account_credential = azure_nextgen.databoxedge.latest.StorageAccountCredential("storageAccountCredential",
-    account_key=azure_nextgen.databoxedge.latest.AsymmetricEncryptedSecretArgs(
+storage_account_credential = azure_nextgen.databoxedge.StorageAccountCredential("storageAccountCredential",
+    account_key=azure_nextgen.databoxedge.AsymmetricEncryptedSecretArgs(
         encryption_algorithm="AES256",
         encryption_cert_thumbprint="2A9D8D6BE51574B5461230AEF02F162C5F01AD31",
         value="lAeZEYi6rNP1/EyNaVUYmTSZEYyaIaWmwUsGwek0+xiZj54GM9Ue9/UA2ed/ClC03wuSit2XzM/cLRU5eYiFBwks23rGwiQOr3sruEL2a74EjPD050xYjA6M1I2hu/w2yjVHhn5j+DbXS4Xzi+rHHNZK3DgfDO3PkbECjPck+PbpSBjy9+6Mrjcld5DIZhUAeMlMHrFlg+WKRKB14o/og56u5/xX6WKlrMLEQ+y6E18dUwvWs2elTNoVO8PBE8SM/CfooX4AMNvaNdSObNBPdP+F6Lzc556nFNWXrBLRt0vC7s9qTiVRO4x/qCNaK/B4y7IqXMllwQFf4Np9UQ2ECA==",
@@ -118,7 +118,7 @@ storage_account_credential = azure_nextgen.databoxedge.latest.StorageAccountCred
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const storageAccountCredential = new azure_nextgen.databoxedge.latest.StorageAccountCredential("storageAccountCredential", {
+const storageAccountCredential = new azure_nextgen.databoxedge.StorageAccountCredential("storageAccountCredential", {
     accountKey: {
         encryptionAlgorithm: "AES256",
         encryptionCertThumbprint: "2A9D8D6BE51574B5461230AEF02F162C5F01AD31",
@@ -145,7 +145,7 @@ const storageAccountCredential = new azure_nextgen.databoxedge.latest.StorageAcc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageAccountCredential</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">StorageAccountCredentialArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageAccountCredential</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StorageAccountCredentialArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -153,11 +153,11 @@ const storageAccountCredential = new azure_nextgen.databoxedge.latest.StorageAcc
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageAccountCredential</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">StorageAccountCredentialArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageAccountCredential</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageAccountCredential</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StorageAccountCredentialArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageAccountCredential</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageAccountCredential</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">StorageAccountCredentialArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageAccountCredential</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StorageAccountCredentialArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -178,7 +178,7 @@ const storageAccountCredential = new azure_nextgen.databoxedge.latest.StorageAcc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageAccountCredentialArgs</span>
+        <span class="property-type"><a href="#inputs">StorageAccountCredentialArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -247,7 +247,7 @@ const storageAccountCredential = new azure_nextgen.databoxedge.latest.StorageAcc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageAccountCredentialArgs</span>
+        <span class="property-type"><a href="#inputs">StorageAccountCredentialArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -286,7 +286,7 @@ const storageAccountCredential = new azure_nextgen.databoxedge.latest.StorageAcc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageAccountCredentialArgs</span>
+        <span class="property-type"><a href="#inputs">StorageAccountCredentialArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -309,11 +309,11 @@ const storageAccountCredential = new azure_nextgen.databoxedge.latest.StorageAcc
 
 ## StorageAccountCredential Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The StorageAccountCredential resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The StorageAccountCredential resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1523,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:databoxedge/latest:StorageAccountCredential sac1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1 
+$ pulumi import azure-nextgen:databoxedge:StorageAccountCredential sac1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1 
 ```
 
 

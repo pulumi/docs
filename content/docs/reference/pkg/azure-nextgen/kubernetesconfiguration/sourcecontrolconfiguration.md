@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.kubernetesconfiguration.SourceCo
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The SourceControl Configuration object returned in Get & Put response.
-Latest API Version: 2021-03-01.
+API Version: 2021-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sourceControlConfiguration = new AzureNextGen.KubernetesConfiguration.Latest.SourceControlConfiguration("sourceControlConfiguration", new AzureNextGen.KubernetesConfiguration.Latest.SourceControlConfigurationArgs
+        var sourceControlConfiguration = new AzureNextGen.KubernetesConfiguration.SourceControlConfiguration("sourceControlConfiguration", new AzureNextGen.KubernetesConfiguration.SourceControlConfigurationArgs
         {
             ClusterName = "clusterName1",
             ClusterResourceName = "connectedClusters",
@@ -37,7 +37,7 @@ class MyStack : Stack
                 { "protectedSetting1Key", "protectedSetting1Value" },
             },
             EnableHelmOperator = true,
-            HelmOperatorProperties = new AzureNextGen.KubernetesConfiguration.Latest.Inputs.HelmOperatorPropertiesArgs
+            HelmOperatorProperties = new AzureNextGen.KubernetesConfiguration.Inputs.HelmOperatorPropertiesArgs
             {
                 ChartValues = "--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system",
                 ChartVersion = "0.3.0",
@@ -66,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	kubernetesconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kubernetesconfiguration/latest"
+	kubernetesconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kubernetesconfiguration"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -111,7 +111,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-source_control_configuration = azure_nextgen.kubernetesconfiguration.latest.SourceControlConfiguration("sourceControlConfiguration",
+source_control_configuration = azure_nextgen.kubernetesconfiguration.SourceControlConfiguration("sourceControlConfiguration",
     cluster_name="clusterName1",
     cluster_resource_name="connectedClusters",
     cluster_rp="Microsoft.Kubernetes",
@@ -119,7 +119,7 @@ source_control_configuration = azure_nextgen.kubernetesconfiguration.latest.Sour
         "protectedSetting1Key": "protectedSetting1Value",
     },
     enable_helm_operator=True,
-    helm_operator_properties=azure_nextgen.kubernetesconfiguration.latest.HelmOperatorPropertiesArgs(
+    helm_operator_properties=azure_nextgen.kubernetesconfiguration.HelmOperatorPropertiesArgs(
         chart_values="--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system",
         chart_version="0.3.0",
     ),
@@ -143,7 +143,7 @@ source_control_configuration = azure_nextgen.kubernetesconfiguration.latest.Sour
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.latest.SourceControlConfiguration("sourceControlConfiguration", {
+const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.SourceControlConfiguration("sourceControlConfiguration", {
     clusterName: "clusterName1",
     clusterResourceName: "connectedClusters",
     clusterRp: "Microsoft.Kubernetes",
@@ -178,7 +178,7 @@ const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.lat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SourceControlConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SourceControlConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -186,11 +186,11 @@ const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.lat
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSourceControlConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SourceControlConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SourceControlConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSourceControlConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SourceControlConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SourceControlConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SourceControlConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SourceControlConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -211,7 +211,7 @@ const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.lat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SourceControlConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">SourceControlConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -280,7 +280,7 @@ const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.lat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SourceControlConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">SourceControlConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -319,7 +319,7 @@ const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.lat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SourceControlConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">SourceControlConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -342,11 +342,11 @@ const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.lat
 
 ## SourceControlConfiguration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SourceControlConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SourceControlConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1888,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kubernetesconfiguration/latest:SourceControlConfiguration SRS_GitHubConfig /subscriptions/subId1/resourceGroups/rg1/providers/Microsoft.Kubernetes/connectedClusters/clusterName1/providers/Microsoft.KubernetesConfiguration/sourceControlConfigurations/SRS_GitHubConfig 
+$ pulumi import azure-nextgen:kubernetesconfiguration:SourceControlConfiguration SRS_GitHubConfig /subscriptions/subId1/resourceGroups/rg1/providers/Microsoft.Kubernetes/connectedClusters/clusterName1/providers/Microsoft.KubernetesConfiguration/sourceControlConfigurations/SRS_GitHubConfig 
 ```
 
 

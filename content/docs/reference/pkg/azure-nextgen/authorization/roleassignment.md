@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.authorization.RoleAssignment res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Role Assignments
-Latest API Version: 2015-07-01.
+API Version: 2015-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var roleAssignment = new AzureNextGen.Authorization.Latest.RoleAssignment("roleAssignment", new AzureNextGen.Authorization.Latest.RoleAssignmentArgs
+        var roleAssignment = new AzureNextGen.Authorization.RoleAssignment("roleAssignment", new AzureNextGen.Authorization.RoleAssignmentArgs
         {
-            Properties = new AzureNextGen.Authorization.Latest.Inputs.RoleAssignmentPropertiesArgs
+            Properties = new AzureNextGen.Authorization.Inputs.RoleAssignmentPropertiesArgs
             {
                 PrincipalId = "d93a38bc-d029-4160-bfb0-fbda779ac214",
                 RoleDefinitionId = "/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization/latest"
+	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,8 +82,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-role_assignment = azure_nextgen.authorization.latest.RoleAssignment("roleAssignment",
-    properties=azure_nextgen.authorization.latest.RoleAssignmentPropertiesArgs(
+role_assignment = azure_nextgen.authorization.RoleAssignment("roleAssignment",
+    properties=azure_nextgen.authorization.RoleAssignmentPropertiesArgs(
         principal_id="d93a38bc-d029-4160-bfb0-fbda779ac214",
         role_definition_id="/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
     ),
@@ -100,7 +100,7 @@ role_assignment = azure_nextgen.authorization.latest.RoleAssignment("roleAssignm
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const roleAssignment = new azure_nextgen.authorization.latest.RoleAssignment("roleAssignment", {
+const roleAssignment = new azure_nextgen.authorization.RoleAssignment("roleAssignment", {
     properties: {
         principalId: "d93a38bc-d029-4160-bfb0-fbda779ac214",
         roleDefinitionId: "/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
@@ -121,7 +121,7 @@ const roleAssignment = new azure_nextgen.authorization.latest.RoleAssignment("ro
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RoleAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoleAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -129,11 +129,11 @@ const roleAssignment = new azure_nextgen.authorization.latest.RoleAssignment("ro
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoleAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RoleAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RoleAssignment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoleAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RoleAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RoleAssignment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RoleAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RoleAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -154,7 +154,7 @@ const roleAssignment = new azure_nextgen.authorization.latest.RoleAssignment("ro
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RoleAssignmentArgs</span>
+        <span class="property-type"><a href="#inputs">RoleAssignmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -223,7 +223,7 @@ const roleAssignment = new azure_nextgen.authorization.latest.RoleAssignment("ro
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RoleAssignmentArgs</span>
+        <span class="property-type"><a href="#inputs">RoleAssignmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -262,7 +262,7 @@ const roleAssignment = new azure_nextgen.authorization.latest.RoleAssignment("ro
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RoleAssignmentArgs</span>
+        <span class="property-type"><a href="#inputs">RoleAssignmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -285,11 +285,11 @@ const roleAssignment = new azure_nextgen.authorization.latest.RoleAssignment("ro
 
 ## RoleAssignment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RoleAssignment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RoleAssignment resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -811,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:authorization/latest:RoleAssignment roleassignmentId /subscriptions/subId/resourcegroups/rgname/providers/Microsoft.Authorization/roleAssignments/roleassignmentId 
+$ pulumi import azure-nextgen:authorization:RoleAssignment roleassignmentId /subscriptions/subId/resourcegroups/rgname/providers/Microsoft.Authorization/roleAssignments/roleassignmentId 
 ```
 
 

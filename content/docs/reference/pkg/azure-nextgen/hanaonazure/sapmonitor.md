@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.hanaonazure.SapMonitor resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 SAP monitor info on Azure (ARM properties and SAP monitor properties)
+API Version: 2020-02-07-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sapMonitor = new AzureNextGen.HanaOnAzure.V20200207Preview.SapMonitor("sapMonitor", new AzureNextGen.HanaOnAzure.V20200207Preview.SapMonitorArgs
+        var sapMonitor = new AzureNextGen.HanaOnAzure.SapMonitor("sapMonitor", new AzureNextGen.HanaOnAzure.SapMonitorArgs
         {
             EnableCustomerAnalytics = true,
             Location = "westus",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	hanaonazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure/v20200207preview"
+	hanaonazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +92,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sap_monitor = azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sapMonitor",
+sap_monitor = azure_nextgen.hanaonazure.SapMonitor("sapMonitor",
     enable_customer_analytics=True,
     location="westus",
     log_analytics_workspace_arm_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
@@ -114,7 +115,7 @@ sap_monitor = azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sapMonitor"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sapMonitor = new azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sapMonitor", {
+const sapMonitor = new azure_nextgen.hanaonazure.SapMonitor("sapMonitor", {
     enableCustomerAnalytics: true,
     location: "westus",
     logAnalyticsWorkspaceArmId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
@@ -140,7 +141,7 @@ const sapMonitor = new azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sa
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SapMonitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SapMonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SapMonitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SapMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -148,11 +149,11 @@ const sapMonitor = new azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sa
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSapMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SapMonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SapMonitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSapMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SapMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SapMonitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SapMonitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SapMonitorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SapMonitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SapMonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -173,7 +174,7 @@ const sapMonitor = new azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SapMonitorArgs</span>
+        <span class="property-type"><a href="#inputs">SapMonitorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -242,7 +243,7 @@ const sapMonitor = new azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SapMonitorArgs</span>
+        <span class="property-type"><a href="#inputs">SapMonitorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,7 +282,7 @@ const sapMonitor = new azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SapMonitorArgs</span>
+        <span class="property-type"><a href="#inputs">SapMonitorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -304,11 +305,11 @@ const sapMonitor = new azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sa
 
 ## SapMonitor Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SapMonitor resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SapMonitor resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -918,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:hanaonazure/v20200207preview:SapMonitor myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
+$ pulumi import azure-nextgen:hanaonazure:SapMonitor myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
 ```
 
 

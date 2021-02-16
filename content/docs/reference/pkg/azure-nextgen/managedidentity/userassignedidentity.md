@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.managedidentity.UserAssignedIden
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes an identity resource.
-Latest API Version: 2018-11-30.
+API Version: 2018-11-30.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var userAssignedIdentity = new AzureNextGen.ManagedIdentity.Latest.UserAssignedIdentity("userAssignedIdentity", new AzureNextGen.ManagedIdentity.Latest.UserAssignedIdentityArgs
+        var userAssignedIdentity = new AzureNextGen.ManagedIdentity.UserAssignedIdentity("userAssignedIdentity", new AzureNextGen.ManagedIdentity.UserAssignedIdentityArgs
         {
             Location = "eastus",
             ResourceGroupName = "rgName",
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	managedidentity "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedidentity/latest"
+	managedidentity "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedidentity"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-user_assigned_identity = azure_nextgen.managedidentity.latest.UserAssignedIdentity("userAssignedIdentity",
+user_assigned_identity = azure_nextgen.managedidentity.UserAssignedIdentity("userAssignedIdentity",
     location="eastus",
     resource_group_name="rgName",
     resource_name="resourceName",
@@ -103,7 +103,7 @@ user_assigned_identity = azure_nextgen.managedidentity.latest.UserAssignedIdenti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const userAssignedIdentity = new azure_nextgen.managedidentity.latest.UserAssignedIdentity("userAssignedIdentity", {
+const userAssignedIdentity = new azure_nextgen.managedidentity.UserAssignedIdentity("userAssignedIdentity", {
     location: "eastus",
     resourceGroupName: "rgName",
     resourceName: "resourceName",
@@ -125,7 +125,7 @@ const userAssignedIdentity = new azure_nextgen.managedidentity.latest.UserAssign
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserAssignedIdentity</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">UserAssignedIdentityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserAssignedIdentity</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserAssignedIdentityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -133,11 +133,11 @@ const userAssignedIdentity = new azure_nextgen.managedidentity.latest.UserAssign
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserAssignedIdentity</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">UserAssignedIdentityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserAssignedIdentity</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserAssignedIdentity</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserAssignedIdentityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserAssignedIdentity</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserAssignedIdentity</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">UserAssignedIdentityArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserAssignedIdentity</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserAssignedIdentityArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -158,7 +158,7 @@ const userAssignedIdentity = new azure_nextgen.managedidentity.latest.UserAssign
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">UserAssignedIdentityArgs</span>
+        <span class="property-type"><a href="#inputs">UserAssignedIdentityArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -227,7 +227,7 @@ const userAssignedIdentity = new azure_nextgen.managedidentity.latest.UserAssign
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">UserAssignedIdentityArgs</span>
+        <span class="property-type"><a href="#inputs">UserAssignedIdentityArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -266,7 +266,7 @@ const userAssignedIdentity = new azure_nextgen.managedidentity.latest.UserAssign
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">UserAssignedIdentityArgs</span>
+        <span class="property-type"><a href="#inputs">UserAssignedIdentityArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -289,11 +289,11 @@ const userAssignedIdentity = new azure_nextgen.managedidentity.latest.UserAssign
 
 ## UserAssignedIdentity Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The UserAssignedIdentity resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The UserAssignedIdentity resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -723,7 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:managedidentity/latest:UserAssignedIdentity identityName /subscriptions/subid/resourcegroups/rgName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identityName 
+$ pulumi import azure-nextgen:managedidentity:UserAssignedIdentity identityName /subscriptions/subid/resourcegroups/rgName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identityName 
 ```
 
 

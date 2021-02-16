@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.providerhub.NotificationRegistra
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The notification registration definition.
-Latest API Version: 2020-11-20.
+API Version: 2020-11-20.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var notificationRegistration = new AzureNextGen.ProviderHub.Latest.NotificationRegistration("notificationRegistration", new AzureNextGen.ProviderHub.Latest.NotificationRegistrationArgs
+        var notificationRegistration = new AzureNextGen.ProviderHub.NotificationRegistration("notificationRegistration", new AzureNextGen.ProviderHub.NotificationRegistrationArgs
         {
             NotificationRegistrationName = "fooNotificationRegistration",
             ProviderNamespace = "Microsoft.Contoso",
@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	providerhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/providerhub/latest"
+	providerhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/providerhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -73,7 +73,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-notification_registration = azure_nextgen.providerhub.latest.NotificationRegistration("notificationRegistration",
+notification_registration = azure_nextgen.providerhub.NotificationRegistration("notificationRegistration",
     notification_registration_name="fooNotificationRegistration",
     provider_namespace="Microsoft.Contoso")
 
@@ -87,7 +87,7 @@ notification_registration = azure_nextgen.providerhub.latest.NotificationRegistr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const notificationRegistration = new azure_nextgen.providerhub.latest.NotificationRegistration("notificationRegistration", {
+const notificationRegistration = new azure_nextgen.providerhub.NotificationRegistration("notificationRegistration", {
     notificationRegistrationName: "fooNotificationRegistration",
     providerNamespace: "Microsoft.Contoso",
 });
@@ -104,7 +104,7 @@ const notificationRegistration = new azure_nextgen.providerhub.latest.Notificati
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NotificationRegistration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">NotificationRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NotificationRegistration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NotificationRegistrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -112,11 +112,11 @@ const notificationRegistration = new azure_nextgen.providerhub.latest.Notificati
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNotificationRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">NotificationRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NotificationRegistration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNotificationRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NotificationRegistrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NotificationRegistration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NotificationRegistration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">NotificationRegistrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NotificationRegistration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NotificationRegistrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -137,7 +137,7 @@ const notificationRegistration = new azure_nextgen.providerhub.latest.Notificati
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NotificationRegistrationArgs</span>
+        <span class="property-type"><a href="#inputs">NotificationRegistrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -206,7 +206,7 @@ const notificationRegistration = new azure_nextgen.providerhub.latest.Notificati
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NotificationRegistrationArgs</span>
+        <span class="property-type"><a href="#inputs">NotificationRegistrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -245,7 +245,7 @@ const notificationRegistration = new azure_nextgen.providerhub.latest.Notificati
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NotificationRegistrationArgs</span>
+        <span class="property-type"><a href="#inputs">NotificationRegistrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -268,11 +268,11 @@ const notificationRegistration = new azure_nextgen.providerhub.latest.Notificati
 
 ## NotificationRegistration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NotificationRegistration resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NotificationRegistration resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -830,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:providerhub/latest:NotificationRegistration fooNotificationRegistration /subscriptions/ab7a8701-f7ef-471a-a2f4-d0ebbf494f77providers/Microsoft.ProviderHub/providerRegistrations/Microsoft.Contoso/notificationregistrations/fooNotificationRegistration 
+$ pulumi import azure-nextgen:providerhub:NotificationRegistration fooNotificationRegistration /subscriptions/ab7a8701-f7ef-471a-a2f4-d0ebbf494f77providers/Microsoft.ProviderHub/providerRegistrations/Microsoft.Contoso/notificationregistrations/fooNotificationRegistration 
 ```
 
 

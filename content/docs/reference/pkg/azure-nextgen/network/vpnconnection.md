@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VpnConnection resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 VpnConnection Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,25 +27,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vpnConnection = new AzureNextGen.Network.Latest.VpnConnection("vpnConnection", new AzureNextGen.Network.Latest.VpnConnectionArgs
+        var vpnConnection = new AzureNextGen.Network.VpnConnection("vpnConnection", new AzureNextGen.Network.VpnConnectionArgs
         {
             ConnectionName = "vpnConnection1",
             GatewayName = "gateway1",
-            RemoteVpnSite = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            RemoteVpnSite = new AzureNextGen.Network.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
             },
             ResourceGroupName = "rg1",
             VpnLinkConnections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.VpnSiteLinkConnectionArgs
+                new AzureNextGen.Network.Inputs.VpnSiteLinkConnectionArgs
                 {
                     ConnectionBandwidth = 200,
                     Name = "Connection-Link1",
                     SharedKey = "key",
                     VpnConnectionProtocolType = "IKEv2",
                     VpnLinkConnectionMode = "Default",
-                    VpnSiteLink = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    VpnSiteLink = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1",
                     },
@@ -66,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -109,20 +109,20 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vpn_connection = azure_nextgen.network.latest.VpnConnection("vpnConnection",
+vpn_connection = azure_nextgen.network.VpnConnection("vpnConnection",
     connection_name="vpnConnection1",
     gateway_name="gateway1",
-    remote_vpn_site=azure_nextgen.network.latest.SubResourceArgs(
+    remote_vpn_site=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
     ),
     resource_group_name="rg1",
-    vpn_link_connections=[azure_nextgen.network.latest.VpnSiteLinkConnectionArgs(
+    vpn_link_connections=[azure_nextgen.network.VpnSiteLinkConnectionArgs(
         connection_bandwidth=200,
         name="Connection-Link1",
         shared_key="key",
         vpn_connection_protocol_type="IKEv2",
         vpn_link_connection_mode="Default",
-        vpn_site_link=azure_nextgen.network.latest.SubResourceArgs(
+        vpn_site_link=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1",
         ),
     )])
@@ -137,7 +137,7 @@ vpn_connection = azure_nextgen.network.latest.VpnConnection("vpnConnection",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const vpnConnection = new azure_nextgen.network.latest.VpnConnection("vpnConnection", {
+const vpnConnection = new azure_nextgen.network.VpnConnection("vpnConnection", {
     connectionName: "vpnConnection1",
     gatewayName: "gateway1",
     remoteVpnSite: {
@@ -168,7 +168,7 @@ const vpnConnection = new azure_nextgen.network.latest.VpnConnection("vpnConnect
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VpnConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -176,11 +176,11 @@ const vpnConnection = new azure_nextgen.network.latest.VpnConnection("vpnConnect
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VpnConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VpnConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -201,7 +201,7 @@ const vpnConnection = new azure_nextgen.network.latest.VpnConnection("vpnConnect
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VpnConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">VpnConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -270,7 +270,7 @@ const vpnConnection = new azure_nextgen.network.latest.VpnConnection("vpnConnect
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VpnConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">VpnConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -309,7 +309,7 @@ const vpnConnection = new azure_nextgen.network.latest.VpnConnection("vpnConnect
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VpnConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">VpnConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -332,11 +332,11 @@ const vpnConnection = new azure_nextgen.network.latest.VpnConnection("vpnConnect
 
 ## VpnConnection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VpnConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VpnConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4842,7 +4842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:VpnConnection vpnConnection1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/vpnConnections/vpnConnection1 
+$ pulumi import azure-nextgen:network:VpnConnection vpnConnection1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/vpnConnections/vpnConnection1 
 ```
 
 

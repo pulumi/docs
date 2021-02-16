@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.desktopvirtualization.ScalingPla
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a scaling plan definition.
+API Version: 2021-01-14-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scalingPlan = new AzureNextGen.DesktopVirtualization.V20210114Preview.ScalingPlan("scalingPlan", new AzureNextGen.DesktopVirtualization.V20210114Preview.ScalingPlanArgs
+        var scalingPlan = new AzureNextGen.DesktopVirtualization.ScalingPlan("scalingPlan", new AzureNextGen.DesktopVirtualization.ScalingPlanArgs
         {
             Description = "des1",
             ExclusionTag = "value",
             FriendlyName = "friendly",
             HostPoolReferences = 
             {
-                new AzureNextGen.DesktopVirtualization.V20210114Preview.Inputs.ScalingHostPoolReferenceArgs
+                new AzureNextGen.DesktopVirtualization.Inputs.ScalingHostPoolReferenceArgs
                 {
                     HostPoolArmPath = "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
                     ScalingPlanEnabled = true,
@@ -45,7 +46,7 @@ class MyStack : Stack
             ScalingPlanName = "scalingPlan1",
             Schedules = 
             {
-                new AzureNextGen.DesktopVirtualization.V20210114Preview.Inputs.ScalingScheduleArgs
+                new AzureNextGen.DesktopVirtualization.Inputs.ScalingScheduleArgs
                 {
                     DaysOfWeek = 
                     {
@@ -94,7 +95,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20210114preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -164,11 +165,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scaling_plan = azure_nextgen.desktopvirtualization.v20210114preview.ScalingPlan("scalingPlan",
+scaling_plan = azure_nextgen.desktopvirtualization.ScalingPlan("scalingPlan",
     description="des1",
     exclusion_tag="value",
     friendly_name="friendly",
-    host_pool_references=[azure_nextgen.desktopvirtualization.v20210114preview.ScalingHostPoolReferenceArgs(
+    host_pool_references=[azure_nextgen.desktopvirtualization.ScalingHostPoolReferenceArgs(
         host_pool_arm_path="/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
         scaling_plan_enabled=True,
     )],
@@ -176,7 +177,7 @@ scaling_plan = azure_nextgen.desktopvirtualization.v20210114preview.ScalingPlan(
     location="centralus",
     resource_group_name="resourceGroup1",
     scaling_plan_name="scalingPlan1",
-    schedules=[azure_nextgen.desktopvirtualization.v20210114preview.ScalingScheduleArgs(
+    schedules=[azure_nextgen.desktopvirtualization.ScalingScheduleArgs(
         days_of_week=[
             "Monday",
             "Tuesday",
@@ -217,7 +218,7 @@ scaling_plan = azure_nextgen.desktopvirtualization.v20210114preview.ScalingPlan(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const scalingPlan = new azure_nextgen.desktopvirtualization.v20210114preview.ScalingPlan("scalingPlan", {
+const scalingPlan = new azure_nextgen.desktopvirtualization.ScalingPlan("scalingPlan", {
     description: "des1",
     exclusionTag: "value",
     friendlyName: "friendly",
@@ -273,7 +274,7 @@ const scalingPlan = new azure_nextgen.desktopvirtualization.v20210114preview.Sca
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ScalingPlanArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScalingPlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -281,11 +282,11 @@ const scalingPlan = new azure_nextgen.desktopvirtualization.v20210114preview.Sca
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScalingPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ScalingPlanArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScalingPlan</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScalingPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScalingPlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScalingPlan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ScalingPlanArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ScalingPlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -306,7 +307,7 @@ const scalingPlan = new azure_nextgen.desktopvirtualization.v20210114preview.Sca
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ScalingPlanArgs</span>
+        <span class="property-type"><a href="#inputs">ScalingPlanArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -375,7 +376,7 @@ const scalingPlan = new azure_nextgen.desktopvirtualization.v20210114preview.Sca
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ScalingPlanArgs</span>
+        <span class="property-type"><a href="#inputs">ScalingPlanArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -414,7 +415,7 @@ const scalingPlan = new azure_nextgen.desktopvirtualization.v20210114preview.Sca
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ScalingPlanArgs</span>
+        <span class="property-type"><a href="#inputs">ScalingPlanArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -437,11 +438,11 @@ const scalingPlan = new azure_nextgen.desktopvirtualization.v20210114preview.Sca
 
 ## ScalingPlan Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2677,7 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:desktopvirtualization/v20210114preview:ScalingPlan scalingPlan1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/scalingPlans/scalingPlan1 
+$ pulumi import azure-nextgen:desktopvirtualization:ScalingPlan scalingPlan1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/scalingPlans/scalingPlan1 
 ```
 
 

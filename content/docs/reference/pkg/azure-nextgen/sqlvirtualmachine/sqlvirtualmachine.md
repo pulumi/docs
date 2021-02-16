@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sqlvirtualmachine.SqlVirtualMach
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SQL virtual machine.
+API Version: 2017-03-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.SqlVirtualMachineArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
             SqlVirtualMachineGroupResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
             SqlVirtualMachineName = "testvm",
             VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2",
-            WsfcDomainCredentials = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.WsfcDomainCredentialsArgs
+            WsfcDomainCredentials = new AzureNextGen.SqlVirtualMachine.Inputs.WsfcDomainCredentialsArgs
             {
                 ClusterBootstrapAccountPassword = "<Password>",
                 ClusterOperatorAccountPassword = "<Password>",
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine/v20170301preview"
+	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,13 +90,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_group_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
     sql_virtual_machine_name="testvm",
     virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2",
-    wsfc_domain_credentials=azure_nextgen.sqlvirtualmachine.v20170301preview.WsfcDomainCredentialsArgs(
+    wsfc_domain_credentials=azure_nextgen.sqlvirtualmachine.WsfcDomainCredentialsArgs(
         cluster_bootstrap_account_password="<Password>",
         cluster_operator_account_password="<Password>",
         sql_service_account_password="<Password>",
@@ -111,7 +112,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlVirtualMachineGroupResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
@@ -138,15 +139,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.SqlVirtualMachineArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
             SqlVirtualMachineName = "testvm",
-            StorageConfigurationSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.StorageConfigurationSettingsArgs
+            StorageConfigurationSettings = new AzureNextGen.SqlVirtualMachine.Inputs.StorageConfigurationSettingsArgs
             {
                 DiskConfigurationType = "EXTEND",
-                SqlDataSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
+                SqlDataSettings = new AzureNextGen.SqlVirtualMachine.Inputs.SQLStorageSettingsArgs
                 {
                     Luns = 
                     {
@@ -174,13 +175,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_name="testvm",
-    storage_configuration_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.StorageConfigurationSettingsArgs(
+    storage_configuration_settings=azure_nextgen.sqlvirtualmachine.StorageConfigurationSettingsArgs(
         disk_configuration_type="EXTEND",
-        sql_data_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SQLStorageSettingsArgs(
+        sql_data_settings=azure_nextgen.sqlvirtualmachine.SQLStorageSettingsArgs(
             luns=[2],
         ),
     ),
@@ -196,7 +197,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlVirtualMachineName: "testvm",
@@ -223,15 +224,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.SqlVirtualMachineArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
             SqlVirtualMachineName = "testvm",
-            StorageConfigurationSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.StorageConfigurationSettingsArgs
+            StorageConfigurationSettings = new AzureNextGen.SqlVirtualMachine.Inputs.StorageConfigurationSettingsArgs
             {
                 DiskConfigurationType = "NEW",
-                SqlDataSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
+                SqlDataSettings = new AzureNextGen.SqlVirtualMachine.Inputs.SQLStorageSettingsArgs
                 {
                     DefaultFilePath = "F:\\folderpath\\",
                     Luns = 
@@ -239,7 +240,7 @@ class MyStack : Stack
                         0,
                     },
                 },
-                SqlLogSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
+                SqlLogSettings = new AzureNextGen.SqlVirtualMachine.Inputs.SQLStorageSettingsArgs
                 {
                     DefaultFilePath = "G:\\folderpath\\",
                     Luns = 
@@ -247,7 +248,7 @@ class MyStack : Stack
                         1,
                     },
                 },
-                SqlTempDbSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
+                SqlTempDbSettings = new AzureNextGen.SqlVirtualMachine.Inputs.SQLStorageSettingsArgs
                 {
                     DefaultFilePath = "D:\\TEMP",
                 },
@@ -273,21 +274,21 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_name="testvm",
-    storage_configuration_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.StorageConfigurationSettingsArgs(
+    storage_configuration_settings=azure_nextgen.sqlvirtualmachine.StorageConfigurationSettingsArgs(
         disk_configuration_type="NEW",
-        sql_data_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SQLStorageSettingsArgs(
+        sql_data_settings=azure_nextgen.sqlvirtualmachine.SQLStorageSettingsArgs(
             default_file_path="F:\\folderpath\\",
             luns=[0],
         ),
-        sql_log_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SQLStorageSettingsArgs(
+        sql_log_settings=azure_nextgen.sqlvirtualmachine.SQLStorageSettingsArgs(
             default_file_path="G:\\folderpath\\",
             luns=[1],
         ),
-        sql_temp_db_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SQLStorageSettingsArgs(
+        sql_temp_db_settings=azure_nextgen.sqlvirtualmachine.SQLStorageSettingsArgs(
             default_file_path="D:\\TEMP",
         ),
         storage_workload_type="OLTP",
@@ -304,7 +305,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlVirtualMachineName: "testvm",
@@ -340,9 +341,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.SqlVirtualMachineArgs
         {
-            AutoBackupSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.AutoBackupSettingsArgs
+            AutoBackupSettings = new AzureNextGen.SqlVirtualMachine.Inputs.AutoBackupSettingsArgs
             {
                 BackupScheduleType = "Manual",
                 BackupSystemDbs = true,
@@ -357,39 +358,39 @@ class MyStack : Stack
                 StorageAccessKey = "<primary storage access key>",
                 StorageAccountUrl = "https://teststorage.blob.core.windows.net/",
             },
-            AutoPatchingSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.AutoPatchingSettingsArgs
+            AutoPatchingSettings = new AzureNextGen.SqlVirtualMachine.Inputs.AutoPatchingSettingsArgs
             {
                 DayOfWeek = "Sunday",
                 Enable = true,
                 MaintenanceWindowDuration = 60,
                 MaintenanceWindowStartingHour = 2,
             },
-            KeyVaultCredentialSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.KeyVaultCredentialSettingsArgs
+            KeyVaultCredentialSettings = new AzureNextGen.SqlVirtualMachine.Inputs.KeyVaultCredentialSettingsArgs
             {
                 Enable = false,
             },
             Location = "northeurope",
             ResourceGroupName = "testrg",
-            ServerConfigurationsManagementSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.ServerConfigurationsManagementSettingsArgs
+            ServerConfigurationsManagementSettings = new AzureNextGen.SqlVirtualMachine.Inputs.ServerConfigurationsManagementSettingsArgs
             {
-                AdditionalFeaturesServerConfigurations = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.AdditionalFeaturesServerConfigurationsArgs
+                AdditionalFeaturesServerConfigurations = new AzureNextGen.SqlVirtualMachine.Inputs.AdditionalFeaturesServerConfigurationsArgs
                 {
                     IsRServicesEnabled = false,
                 },
-                SqlConnectivityUpdateSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SqlConnectivityUpdateSettingsArgs
+                SqlConnectivityUpdateSettings = new AzureNextGen.SqlVirtualMachine.Inputs.SqlConnectivityUpdateSettingsArgs
                 {
                     ConnectivityType = "PRIVATE",
                     Port = 1433,
                     SqlAuthUpdatePassword = "<password>",
                     SqlAuthUpdateUserName = "sqllogin",
                 },
-                SqlStorageUpdateSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SqlStorageUpdateSettingsArgs
+                SqlStorageUpdateSettings = new AzureNextGen.SqlVirtualMachine.Inputs.SqlStorageUpdateSettingsArgs
                 {
                     DiskConfigurationType = "NEW",
                     DiskCount = 1,
                     StartingDeviceId = 2,
                 },
-                SqlWorkloadTypeUpdateSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SqlWorkloadTypeUpdateSettingsArgs
+                SqlWorkloadTypeUpdateSettings = new AzureNextGen.SqlVirtualMachine.Inputs.SqlWorkloadTypeUpdateSettingsArgs
                 {
                     SqlWorkloadType = "OLTP",
                 },
@@ -414,7 +415,7 @@ class MyStack : Stack
 package main
 
 import (
-	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine/v20170301preview"
+	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -488,8 +489,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
-    auto_backup_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.AutoBackupSettingsArgs(
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
+    auto_backup_settings=azure_nextgen.sqlvirtualmachine.AutoBackupSettingsArgs(
         backup_schedule_type="Manual",
         backup_system_dbs=True,
         enable=True,
@@ -503,33 +504,33 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
         storage_access_key="<primary storage access key>",
         storage_account_url="https://teststorage.blob.core.windows.net/",
     ),
-    auto_patching_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.AutoPatchingSettingsArgs(
+    auto_patching_settings=azure_nextgen.sqlvirtualmachine.AutoPatchingSettingsArgs(
         day_of_week="Sunday",
         enable=True,
         maintenance_window_duration=60,
         maintenance_window_starting_hour=2,
     ),
-    key_vault_credential_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.KeyVaultCredentialSettingsArgs(
+    key_vault_credential_settings=azure_nextgen.sqlvirtualmachine.KeyVaultCredentialSettingsArgs(
         enable=False,
     ),
     location="northeurope",
     resource_group_name="testrg",
-    server_configurations_management_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.ServerConfigurationsManagementSettingsArgs(
-        additional_features_server_configurations=azure_nextgen.sqlvirtualmachine.v20170301preview.AdditionalFeaturesServerConfigurationsArgs(
+    server_configurations_management_settings=azure_nextgen.sqlvirtualmachine.ServerConfigurationsManagementSettingsArgs(
+        additional_features_server_configurations=azure_nextgen.sqlvirtualmachine.AdditionalFeaturesServerConfigurationsArgs(
             is_r_services_enabled=False,
         ),
-        sql_connectivity_update_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SqlConnectivityUpdateSettingsArgs(
+        sql_connectivity_update_settings=azure_nextgen.sqlvirtualmachine.SqlConnectivityUpdateSettingsArgs(
             connectivity_type="PRIVATE",
             port=1433,
             sql_auth_update_password="<password>",
             sql_auth_update_user_name="sqllogin",
         ),
-        sql_storage_update_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SqlStorageUpdateSettingsArgs(
+        sql_storage_update_settings=azure_nextgen.sqlvirtualmachine.SqlStorageUpdateSettingsArgs(
             disk_configuration_type="NEW",
             disk_count=1,
             starting_device_id=2,
         ),
-        sql_workload_type_update_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SqlWorkloadTypeUpdateSettingsArgs(
+        sql_workload_type_update_settings=azure_nextgen.sqlvirtualmachine.SqlWorkloadTypeUpdateSettingsArgs(
             sql_workload_type="OLTP",
         ),
     ),
@@ -549,7 +550,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
     autoBackupSettings: {
         backupScheduleType: "Manual",
         backupSystemDbs: true,
@@ -615,7 +616,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.SqlVirtualMachineArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
@@ -636,7 +637,7 @@ class MyStack : Stack
 package main
 
 import (
-	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine/v20170301preview"
+	sqlvirtualmachine "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -665,7 +666,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_name="testvm",
@@ -681,7 +682,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlVirtualMachineName: "testvm",
@@ -700,7 +701,7 @@ const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.S
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SqlVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -708,11 +709,11 @@ const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.S
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SqlVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlVirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlVirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SqlVirtualMachineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -733,7 +734,7 @@ const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.S
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlVirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">SqlVirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -802,7 +803,7 @@ const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.S
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlVirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">SqlVirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -841,7 +842,7 @@ const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.S
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SqlVirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">SqlVirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -864,11 +865,11 @@ const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.S
 
 ## SqlVirtualMachine Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -6156,7 +6157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sqlvirtualmachine/v20170301preview:SqlVirtualMachine testvm /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm 
+$ pulumi import azure-nextgen:sqlvirtualmachine:SqlVirtualMachine testvm /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm 
 ```
 
 

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.ConnectedRegis
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a connected registry for a container registry.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectedRegistry = new AzureNextGen.ContainerRegistry.V20201101Preview.ConnectedRegistry("connectedRegistry", new AzureNextGen.ContainerRegistry.V20201101Preview.ConnectedRegistryArgs
+        var connectedRegistry = new AzureNextGen.ContainerRegistry.ConnectedRegistry("connectedRegistry", new AzureNextGen.ContainerRegistry.ConnectedRegistryArgs
         {
             ClientTokenIds = 
             {
@@ -34,9 +35,9 @@ class MyStack : Stack
             },
             ConnectedRegistryName = "myConnectedRegistry",
             Mode = "Registry",
-            Parent = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.ParentPropertiesArgs
+            Parent = new AzureNextGen.ContainerRegistry.Inputs.ParentPropertiesArgs
             {
-                SyncProperties = new AzureNextGen.ContainerRegistry.V20201101Preview.Inputs.SyncPropertiesArgs
+                SyncProperties = new AzureNextGen.ContainerRegistry.Inputs.SyncPropertiesArgs
                 {
                     MessageTtl = "P2D",
                     Schedule = "0 9 * * *",
@@ -61,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20201101preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,12 +102,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connected_registry = azure_nextgen.containerregistry.v20201101preview.ConnectedRegistry("connectedRegistry",
+connected_registry = azure_nextgen.containerregistry.ConnectedRegistry("connectedRegistry",
     client_token_ids=["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/client1Token"],
     connected_registry_name="myConnectedRegistry",
     mode="Registry",
-    parent=azure_nextgen.containerregistry.v20201101preview.ParentPropertiesArgs(
-        sync_properties=azure_nextgen.containerregistry.v20201101preview.SyncPropertiesArgs(
+    parent=azure_nextgen.containerregistry.ParentPropertiesArgs(
+        sync_properties=azure_nextgen.containerregistry.SyncPropertiesArgs(
             message_ttl="P2D",
             schedule="0 9 * * *",
             sync_window="PT3H",
@@ -126,7 +127,7 @@ connected_registry = azure_nextgen.containerregistry.v20201101preview.ConnectedR
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const connectedRegistry = new azure_nextgen.containerregistry.v20201101preview.ConnectedRegistry("connectedRegistry", {
+const connectedRegistry = new azure_nextgen.containerregistry.ConnectedRegistry("connectedRegistry", {
     clientTokenIds: ["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/client1Token"],
     connectedRegistryName: "myConnectedRegistry",
     mode: "Registry",
@@ -154,7 +155,7 @@ const connectedRegistry = new azure_nextgen.containerregistry.v20201101preview.C
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectedRegistry</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ConnectedRegistryArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectedRegistry</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectedRegistryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -162,11 +163,11 @@ const connectedRegistry = new azure_nextgen.containerregistry.v20201101preview.C
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectedRegistry</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ConnectedRegistryArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectedRegistry</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectedRegistry</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectedRegistryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectedRegistry</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectedRegistry</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ConnectedRegistryArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectedRegistry</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectedRegistryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -187,7 +188,7 @@ const connectedRegistry = new azure_nextgen.containerregistry.v20201101preview.C
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectedRegistryArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectedRegistryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -256,7 +257,7 @@ const connectedRegistry = new azure_nextgen.containerregistry.v20201101preview.C
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectedRegistryArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectedRegistryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -295,7 +296,7 @@ const connectedRegistry = new azure_nextgen.containerregistry.v20201101preview.C
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ConnectedRegistryArgs</span>
+        <span class="property-type"><a href="#inputs">ConnectedRegistryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -318,11 +319,11 @@ const connectedRegistry = new azure_nextgen.containerregistry.v20201101preview.C
 
 ## ConnectedRegistry Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2790,7 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20201101preview:ConnectedRegistry myConnectedRegistry /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/connectedRegistries/myConnectedRegistry 
+$ pulumi import azure-nextgen:containerregistry:ConnectedRegistry myConnectedRegistry /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/connectedRegistries/myConnectedRegistry 
 ```
 
 

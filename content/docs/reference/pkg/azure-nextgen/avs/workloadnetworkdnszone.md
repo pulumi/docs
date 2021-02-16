@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkDnsZone resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NSX DNS Zone
+API Version: 2020-07-17-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadNetworkDnsZone = new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkDnsZone("workloadNetworkDnsZone", new AzureNextGen.AVS.V20200717Preview.WorkloadNetworkDnsZoneArgs
+        var workloadNetworkDnsZone = new AzureNextGen.AVS.WorkloadNetworkDnsZone("workloadNetworkDnsZone", new AzureNextGen.AVS.WorkloadNetworkDnsZoneArgs
         {
             DisplayName = "dnsZone1",
             DnsServerIps = 
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/v20200717preview"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,7 +90,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_network_dns_zone = azure_nextgen.avs.v20200717preview.WorkloadNetworkDnsZone("workloadNetworkDnsZone",
+workload_network_dns_zone = azure_nextgen.avs.WorkloadNetworkDnsZone("workloadNetworkDnsZone",
     display_name="dnsZone1",
     dns_server_ips=["1.1.1.1"],
     dns_zone_id="dnsZone1",
@@ -109,7 +110,7 @@ workload_network_dns_zone = azure_nextgen.avs.v20200717preview.WorkloadNetworkDn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadNetworkDnsZone = new azure_nextgen.avs.v20200717preview.WorkloadNetworkDnsZone("workloadNetworkDnsZone", {
+const workloadNetworkDnsZone = new azure_nextgen.avs.WorkloadNetworkDnsZone("workloadNetworkDnsZone", {
     displayName: "dnsZone1",
     dnsServerIps: ["1.1.1.1"],
     dnsZoneId: "dnsZone1",
@@ -132,7 +133,7 @@ const workloadNetworkDnsZone = new azure_nextgen.avs.v20200717preview.WorkloadNe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkloadNetworkDnsZone</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WorkloadNetworkDnsZoneArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkloadNetworkDnsZone</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkloadNetworkDnsZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -140,11 +141,11 @@ const workloadNetworkDnsZone = new azure_nextgen.avs.v20200717preview.WorkloadNe
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkloadNetworkDnsZone</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WorkloadNetworkDnsZoneArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkloadNetworkDnsZone</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkloadNetworkDnsZone</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkloadNetworkDnsZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkloadNetworkDnsZone</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkloadNetworkDnsZone</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WorkloadNetworkDnsZoneArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkloadNetworkDnsZone</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkloadNetworkDnsZoneArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -165,7 +166,7 @@ const workloadNetworkDnsZone = new azure_nextgen.avs.v20200717preview.WorkloadNe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkloadNetworkDnsZoneArgs</span>
+        <span class="property-type"><a href="#inputs">WorkloadNetworkDnsZoneArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -234,7 +235,7 @@ const workloadNetworkDnsZone = new azure_nextgen.avs.v20200717preview.WorkloadNe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkloadNetworkDnsZoneArgs</span>
+        <span class="property-type"><a href="#inputs">WorkloadNetworkDnsZoneArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -273,7 +274,7 @@ const workloadNetworkDnsZone = new azure_nextgen.avs.v20200717preview.WorkloadNe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkloadNetworkDnsZoneArgs</span>
+        <span class="property-type"><a href="#inputs">WorkloadNetworkDnsZoneArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -296,11 +297,11 @@ const workloadNetworkDnsZone = new azure_nextgen.avs.v20200717preview.WorkloadNe
 
 ## WorkloadNetworkDnsZone Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The WorkloadNetworkDnsZone resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The WorkloadNetworkDnsZone resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -838,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkDnsZone dnsZone1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/dnsZones/dnsZone1 
+$ pulumi import azure-nextgen:avs:WorkloadNetworkDnsZone dnsZone1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/dnsZones/dnsZone1 
 ```
 
 

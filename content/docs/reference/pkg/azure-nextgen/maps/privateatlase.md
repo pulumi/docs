@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.maps.PrivateAtlase resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure resource which represents which will provision the ability to create private location data.
+API Version: 2020-02-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateAtlase = new AzureNextGen.Maps.V20200201Preview.PrivateAtlase("privateAtlase", new AzureNextGen.Maps.V20200201Preview.PrivateAtlaseArgs
+        var privateAtlase = new AzureNextGen.Maps.PrivateAtlase("privateAtlase", new AzureNextGen.Maps.PrivateAtlaseArgs
         {
             AccountName = "myMapsAccount",
             Location = "unitedstates",
@@ -51,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	maps "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maps/v20200201preview"
+	maps "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maps"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -83,7 +84,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_atlase = azure_nextgen.maps.v20200201preview.PrivateAtlase("privateAtlase",
+private_atlase = azure_nextgen.maps.PrivateAtlase("privateAtlase",
     account_name="myMapsAccount",
     location="unitedstates",
     private_atlas_name="myPrivateAtlas",
@@ -102,7 +103,7 @@ private_atlase = azure_nextgen.maps.v20200201preview.PrivateAtlase("privateAtlas
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateAtlase = new azure_nextgen.maps.v20200201preview.PrivateAtlase("privateAtlase", {
+const privateAtlase = new azure_nextgen.maps.PrivateAtlase("privateAtlase", {
     accountName: "myMapsAccount",
     location: "unitedstates",
     privateAtlasName: "myPrivateAtlas",
@@ -124,7 +125,7 @@ const privateAtlase = new azure_nextgen.maps.v20200201preview.PrivateAtlase("pri
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateAtlase</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PrivateAtlaseArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateAtlase</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateAtlaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -132,11 +133,11 @@ const privateAtlase = new azure_nextgen.maps.v20200201preview.PrivateAtlase("pri
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateAtlase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PrivateAtlaseArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateAtlase</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateAtlase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateAtlaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateAtlase</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateAtlase</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PrivateAtlaseArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateAtlase</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateAtlaseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -157,7 +158,7 @@ const privateAtlase = new azure_nextgen.maps.v20200201preview.PrivateAtlase("pri
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateAtlaseArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateAtlaseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -226,7 +227,7 @@ const privateAtlase = new azure_nextgen.maps.v20200201preview.PrivateAtlase("pri
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateAtlaseArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateAtlaseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -265,7 +266,7 @@ const privateAtlase = new azure_nextgen.maps.v20200201preview.PrivateAtlase("pri
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateAtlaseArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateAtlaseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -288,11 +289,11 @@ const privateAtlase = new azure_nextgen.maps.v20200201preview.PrivateAtlase("pri
 
 ## PrivateAtlase Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PrivateAtlase resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PrivateAtlase resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -752,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:maps/v20200201preview:PrivateAtlase myPrivateAtlas /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/myResourceGroup/providers/Microsoft.Maps/accounts/myMapsAccount/privateAtlases/myPrivateAtlas 
+$ pulumi import azure-nextgen:maps:PrivateAtlase myPrivateAtlas /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/myResourceGroup/providers/Microsoft.Maps/accounts/myMapsAccount/privateAtlases/myPrivateAtlas 
 ```
 
 

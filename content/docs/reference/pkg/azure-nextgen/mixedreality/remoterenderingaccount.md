@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.mixedreality.RemoteRenderingAcco
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 RemoteRenderingAccount Response.
-Latest API Version: 2021-01-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var remoteRenderingAccount = new AzureNextGen.MixedReality.Latest.RemoteRenderingAccount("remoteRenderingAccount", new AzureNextGen.MixedReality.Latest.RemoteRenderingAccountArgs
+        var remoteRenderingAccount = new AzureNextGen.MixedReality.RemoteRenderingAccount("remoteRenderingAccount", new AzureNextGen.MixedReality.RemoteRenderingAccountArgs
         {
             AccountName = "MyAccount",
-            Identity = new AzureNextGen.MixedReality.Latest.Inputs.IdentityArgs
+            Identity = new AzureNextGen.MixedReality.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	mixedreality "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/mixedreality/latest"
+	mixedreality "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/mixedreality"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,9 +82,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-remote_rendering_account = azure_nextgen.mixedreality.latest.RemoteRenderingAccount("remoteRenderingAccount",
+remote_rendering_account = azure_nextgen.mixedreality.RemoteRenderingAccount("remoteRenderingAccount",
     account_name="MyAccount",
-    identity=azure_nextgen.mixedreality.latest.IdentityArgs(
+    identity=azure_nextgen.mixedreality.IdentityArgs(
         type="SystemAssigned",
     ),
     location="eastus2euap",
@@ -100,7 +100,7 @@ remote_rendering_account = azure_nextgen.mixedreality.latest.RemoteRenderingAcco
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const remoteRenderingAccount = new azure_nextgen.mixedreality.latest.RemoteRenderingAccount("remoteRenderingAccount", {
+const remoteRenderingAccount = new azure_nextgen.mixedreality.RemoteRenderingAccount("remoteRenderingAccount", {
     accountName: "MyAccount",
     identity: {
         type: "SystemAssigned",
@@ -121,7 +121,7 @@ const remoteRenderingAccount = new azure_nextgen.mixedreality.latest.RemoteRende
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RemoteRenderingAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RemoteRenderingAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RemoteRenderingAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RemoteRenderingAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -129,11 +129,11 @@ const remoteRenderingAccount = new azure_nextgen.mixedreality.latest.RemoteRende
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRemoteRenderingAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RemoteRenderingAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RemoteRenderingAccount</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRemoteRenderingAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RemoteRenderingAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RemoteRenderingAccount</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RemoteRenderingAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RemoteRenderingAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RemoteRenderingAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RemoteRenderingAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -154,7 +154,7 @@ const remoteRenderingAccount = new azure_nextgen.mixedreality.latest.RemoteRende
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RemoteRenderingAccountArgs</span>
+        <span class="property-type"><a href="#inputs">RemoteRenderingAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -223,7 +223,7 @@ const remoteRenderingAccount = new azure_nextgen.mixedreality.latest.RemoteRende
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RemoteRenderingAccountArgs</span>
+        <span class="property-type"><a href="#inputs">RemoteRenderingAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -262,7 +262,7 @@ const remoteRenderingAccount = new azure_nextgen.mixedreality.latest.RemoteRende
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RemoteRenderingAccountArgs</span>
+        <span class="property-type"><a href="#inputs">RemoteRenderingAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -285,11 +285,11 @@ const remoteRenderingAccount = new azure_nextgen.mixedreality.latest.RemoteRende
 
 ## RemoteRenderingAccount Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RemoteRenderingAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RemoteRenderingAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1837,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:mixedreality/latest:RemoteRenderingAccount MyAccount /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Microsoft.MixedReality/remoteRenderingAccounts/MyAccount 
+$ pulumi import azure-nextgen:mixedreality:RemoteRenderingAccount MyAccount /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Microsoft.MixedReality/remoteRenderingAccounts/MyAccount 
 ```
 
 

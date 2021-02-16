@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.MachineL
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Machine Learning dataset object wrapped into ARM resource envelope.
+API Version: 2020-05-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,22 +27,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningDataset = new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDataset("machineLearningDataset", new AzureNextGen.MachineLearningServices.V20200501Preview.MachineLearningDatasetArgs
+        var machineLearningDataset = new AzureNextGen.MachineLearningServices.MachineLearningDataset("machineLearningDataset", new AzureNextGen.MachineLearningServices.MachineLearningDatasetArgs
         {
             DatasetName = "datasetName123",
             DatasetType = "file",
-            Parameters = new AzureNextGen.MachineLearningServices.V20200501Preview.Inputs.DatasetCreateRequestParametersArgs
+            Parameters = new AzureNextGen.MachineLearningServices.Inputs.DatasetCreateRequestParametersArgs
             {
-                Path = new AzureNextGen.MachineLearningServices.V20200501Preview.Inputs.DatasetCreateRequestPathArgs
+                Path = new AzureNextGen.MachineLearningServices.Inputs.DatasetCreateRequestPathArgs
                 {
-                    DataPath = new AzureNextGen.MachineLearningServices.V20200501Preview.Inputs.DatasetCreateRequestDataPathArgs
+                    DataPath = new AzureNextGen.MachineLearningServices.Inputs.DatasetCreateRequestDataPathArgs
                     {
                         DatastoreName = "testblobfromarm",
                         RelativePath = "UI/03-26-2020_083359_UTC/latin1encoding.csv",
                     },
                 },
             },
-            Registration = new AzureNextGen.MachineLearningServices.V20200501Preview.Inputs.DatasetCreateRequestRegistrationArgs
+            Registration = new AzureNextGen.MachineLearningServices.Inputs.DatasetCreateRequestRegistrationArgs
             {
                 Description = "test description",
                 Name = "datasetName123",
@@ -64,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -106,18 +107,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_dataset = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDataset("machineLearningDataset",
+machine_learning_dataset = azure_nextgen.machinelearningservices.MachineLearningDataset("machineLearningDataset",
     dataset_name="datasetName123",
     dataset_type="file",
-    parameters=azure_nextgen.machinelearningservices.v20200501preview.DatasetCreateRequestParametersArgs(
-        path=azure_nextgen.machinelearningservices.v20200501preview.DatasetCreateRequestPathArgs(
-            data_path=azure_nextgen.machinelearningservices.v20200501preview.DatasetCreateRequestDataPathArgs(
+    parameters=azure_nextgen.machinelearningservices.DatasetCreateRequestParametersArgs(
+        path=azure_nextgen.machinelearningservices.DatasetCreateRequestPathArgs(
+            data_path=azure_nextgen.machinelearningservices.DatasetCreateRequestDataPathArgs(
                 datastore_name="testblobfromarm",
                 relative_path="UI/03-26-2020_083359_UTC/latin1encoding.csv",
             ),
         ),
     ),
-    registration=azure_nextgen.machinelearningservices.v20200501preview.DatasetCreateRequestRegistrationArgs(
+    registration=azure_nextgen.machinelearningservices.DatasetCreateRequestRegistrationArgs(
         description="test description",
         name="datasetName123",
     ),
@@ -135,7 +136,7 @@ machine_learning_dataset = azure_nextgen.machinelearningservices.v20200501previe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const machineLearningDataset = new azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDataset("machineLearningDataset", {
+const machineLearningDataset = new azure_nextgen.machinelearningservices.MachineLearningDataset("machineLearningDataset", {
     datasetName: "datasetName123",
     datasetType: "file",
     parameters: {
@@ -167,7 +168,7 @@ const machineLearningDataset = new azure_nextgen.machinelearningservices.v202005
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">MachineLearningDatasetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -175,11 +176,11 @@ const machineLearningDataset = new azure_nextgen.machinelearningservices.v202005
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningDataset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">MachineLearningDatasetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningDataset</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningDataset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningDataset</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">MachineLearningDatasetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -200,7 +201,7 @@ const machineLearningDataset = new azure_nextgen.machinelearningservices.v202005
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MachineLearningDatasetArgs</span>
+        <span class="property-type"><a href="#inputs">MachineLearningDatasetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -269,7 +270,7 @@ const machineLearningDataset = new azure_nextgen.machinelearningservices.v202005
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MachineLearningDatasetArgs</span>
+        <span class="property-type"><a href="#inputs">MachineLearningDatasetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -308,7 +309,7 @@ const machineLearningDataset = new azure_nextgen.machinelearningservices.v202005
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MachineLearningDatasetArgs</span>
+        <span class="property-type"><a href="#inputs">MachineLearningDatasetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -331,11 +332,11 @@ const machineLearningDataset = new azure_nextgen.machinelearningservices.v202005
 
 ## MachineLearningDataset Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The MachineLearningDataset resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The MachineLearningDataset resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4491,7 +4492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningservices/v20200501preview:MachineLearningDataset datasetName123 /subscriptions/35f16a99-532a-4a47-9e93-00305f6c40f2/resourceGroups/acjain-mleastUS2/providers/Microsoft.MachineLearningServices/workspaces/acjain-mleastUS2/datasets/datasetName123 
+$ pulumi import azure-nextgen:machinelearningservices:MachineLearningDataset datasetName123 /subscriptions/35f16a99-532a-4a47-9e93-00305f6c40f2/resourceGroups/acjain-mleastUS2/providers/Microsoft.MachineLearningServices/workspaces/acjain-mleastUS2/datasets/datasetName123 
 ```
 
 

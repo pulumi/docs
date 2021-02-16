@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batchai.Job resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about a Job.
-Latest API Version: 2018-05-01.
+API Version: 2018-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,27 +27,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.BatchAI.Latest.Job("job", new AzureNextGen.BatchAI.Latest.JobArgs
+        var job = new AzureNextGen.BatchAI.Job("job", new AzureNextGen.BatchAI.JobArgs
         {
-            Cluster = new AzureNextGen.BatchAI.Latest.Inputs.ResourceIdArgs
+            Cluster = new AzureNextGen.BatchAI.Inputs.ResourceIdArgs
             {
                 Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
             },
-            ContainerSettings = new AzureNextGen.BatchAI.Latest.Inputs.ContainerSettingsArgs
+            ContainerSettings = new AzureNextGen.BatchAI.Inputs.ContainerSettingsArgs
             {
-                ImageSourceRegistry = new AzureNextGen.BatchAI.Latest.Inputs.ImageSourceRegistryArgs
+                ImageSourceRegistry = new AzureNextGen.BatchAI.Inputs.ImageSourceRegistryArgs
                 {
                     Image = "ubuntu",
                 },
             },
-            CustomToolkitSettings = new AzureNextGen.BatchAI.Latest.Inputs.CustomToolkitSettingsArgs
+            CustomToolkitSettings = new AzureNextGen.BatchAI.Inputs.CustomToolkitSettingsArgs
             {
                 CommandLine = "echo hi | tee $AZ_BATCHAI_OUTPUT_OUTPUTS/hi.txt",
             },
             ExperimentName = "demo_experiment",
             InputDirectories = 
             {
-                new AzureNextGen.BatchAI.Latest.Inputs.InputDirectoryArgs
+                new AzureNextGen.BatchAI.Inputs.InputDirectoryArgs
                 {
                     Id = "INPUT",
                     Path = "$AZ_BATCHAI_MOUNT_ROOT/azfiles/input",
@@ -57,7 +57,7 @@ class MyStack : Stack
             NodeCount = 1,
             OutputDirectories = 
             {
-                new AzureNextGen.BatchAI.Latest.Inputs.OutputDirectoryArgs
+                new AzureNextGen.BatchAI.Inputs.OutputDirectoryArgs
                 {
                     Id = "OUTPUTS",
                     PathPrefix = "$AZ_BATCHAI_MOUNT_ROOT/azfiles/",
@@ -85,7 +85,7 @@ package main
 import (
 	"fmt"
 
-	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai/latest"
+	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -141,26 +141,26 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.batchai.latest.Job("job",
-    cluster=azure_nextgen.batchai.latest.ResourceIdArgs(
+job = azure_nextgen.batchai.Job("job",
+    cluster=azure_nextgen.batchai.ResourceIdArgs(
         id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
     ),
-    container_settings=azure_nextgen.batchai.latest.ContainerSettingsArgs(
-        image_source_registry=azure_nextgen.batchai.latest.ImageSourceRegistryArgs(
+    container_settings=azure_nextgen.batchai.ContainerSettingsArgs(
+        image_source_registry=azure_nextgen.batchai.ImageSourceRegistryArgs(
             image="ubuntu",
         ),
     ),
-    custom_toolkit_settings=azure_nextgen.batchai.latest.CustomToolkitSettingsArgs(
+    custom_toolkit_settings=azure_nextgen.batchai.CustomToolkitSettingsArgs(
         command_line="echo hi | tee $AZ_BATCHAI_OUTPUT_OUTPUTS/hi.txt",
     ),
     experiment_name="demo_experiment",
-    input_directories=[azure_nextgen.batchai.latest.InputDirectoryArgs(
+    input_directories=[azure_nextgen.batchai.InputDirectoryArgs(
         id="INPUT",
         path="$AZ_BATCHAI_MOUNT_ROOT/azfiles/input",
     )],
     job_name="demo_job",
     node_count=1,
-    output_directories=[azure_nextgen.batchai.latest.OutputDirectoryArgs(
+    output_directories=[azure_nextgen.batchai.OutputDirectoryArgs(
         id="OUTPUTS",
         path_prefix="$AZ_BATCHAI_MOUNT_ROOT/azfiles/",
         path_suffix="files",
@@ -180,7 +180,7 @@ job = azure_nextgen.batchai.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.batchai.latest.Job("job", {
+const job = new azure_nextgen.batchai.Job("job", {
     cluster: {
         id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
     },
@@ -222,7 +222,7 @@ const job = new azure_nextgen.batchai.latest.Job("job", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">JobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -230,11 +230,11 @@ const job = new azure_nextgen.batchai.latest.Job("job", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">JobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">JobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -255,7 +255,7 @@ const job = new azure_nextgen.batchai.latest.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobArgs</span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -324,7 +324,7 @@ const job = new azure_nextgen.batchai.latest.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobArgs</span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -363,7 +363,7 @@ const job = new azure_nextgen.batchai.latest.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobArgs</span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -386,11 +386,11 @@ const job = new azure_nextgen.batchai.latest.Job("job", {
 
 ## Job Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -9536,7 +9536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:batchai/latest:Job demo_job /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/experiments/demo_experiment/jobs/demo_job 
+$ pulumi import azure-nextgen:batchai:Job demo_job /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/experiments/demo_experiment/jobs/demo_job 
 ```
 
 

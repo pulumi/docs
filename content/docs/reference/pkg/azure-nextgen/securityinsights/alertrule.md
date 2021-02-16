@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.AlertRule resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Alert rule.
-Latest API Version: 2020-01-01.
+API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.SecurityInsights.Latest.AlertRule("alertRule", new AzureNextGen.SecurityInsights.Latest.AlertRuleArgs
+        var alertRule = new AzureNextGen.SecurityInsights.AlertRule("alertRule", new AzureNextGen.SecurityInsights.AlertRuleArgs
         {
             Etag = "3d00c3ca-0000-0100-0000-5d42d5010000",
             Kind = "Fusion",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/latest"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.securityinsights.latest.AlertRule("alertRule",
+alert_rule = azure_nextgen.securityinsights.AlertRule("alertRule",
     etag="3d00c3ca-0000-0100-0000-5d42d5010000",
     kind="Fusion",
     resource_group_name="myRg",
@@ -96,7 +96,7 @@ alert_rule = azure_nextgen.securityinsights.latest.AlertRule("alertRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alertRule = new azure_nextgen.securityinsights.latest.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.securityinsights.AlertRule("alertRule", {
     etag: "3d00c3ca-0000-0100-0000-5d42d5010000",
     kind: "Fusion",
     resourceGroupName: "myRg",
@@ -118,7 +118,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.SecurityInsights.Latest.AlertRule("alertRule", new AzureNextGen.SecurityInsights.Latest.AlertRuleArgs
+        var alertRule = new AzureNextGen.SecurityInsights.AlertRule("alertRule", new AzureNextGen.SecurityInsights.AlertRuleArgs
         {
             Etag = "\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
             Kind = "MicrosoftSecurityIncidentCreation",
@@ -140,7 +140,7 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/latest"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -170,7 +170,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.securityinsights.latest.AlertRule("alertRule",
+alert_rule = azure_nextgen.securityinsights.AlertRule("alertRule",
     etag="\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
     kind="MicrosoftSecurityIncidentCreation",
     resource_group_name="myRg",
@@ -187,7 +187,7 @@ alert_rule = azure_nextgen.securityinsights.latest.AlertRule("alertRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alertRule = new azure_nextgen.securityinsights.latest.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.securityinsights.AlertRule("alertRule", {
     etag: "\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
     kind: "MicrosoftSecurityIncidentCreation",
     resourceGroupName: "myRg",
@@ -209,7 +209,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.SecurityInsights.Latest.AlertRule("alertRule", new AzureNextGen.SecurityInsights.Latest.AlertRuleArgs
+        var alertRule = new AzureNextGen.SecurityInsights.AlertRule("alertRule", new AzureNextGen.SecurityInsights.AlertRuleArgs
         {
             Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
             Kind = "Scheduled",
@@ -231,7 +231,7 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/latest"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -261,7 +261,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.securityinsights.latest.AlertRule("alertRule",
+alert_rule = azure_nextgen.securityinsights.AlertRule("alertRule",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind="Scheduled",
     resource_group_name="myRg",
@@ -278,7 +278,7 @@ alert_rule = azure_nextgen.securityinsights.latest.AlertRule("alertRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alertRule = new azure_nextgen.securityinsights.latest.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.securityinsights.AlertRule("alertRule", {
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind: "Scheduled",
     resourceGroupName: "myRg",
@@ -298,7 +298,7 @@ const alertRule = new azure_nextgen.securityinsights.latest.AlertRule("alertRule
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AlertRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -306,11 +306,11 @@ const alertRule = new azure_nextgen.securityinsights.latest.AlertRule("alertRule
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AlertRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AlertRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -331,7 +331,7 @@ const alertRule = new azure_nextgen.securityinsights.latest.AlertRule("alertRule
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AlertRuleArgs</span>
+        <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -400,7 +400,7 @@ const alertRule = new azure_nextgen.securityinsights.latest.AlertRule("alertRule
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AlertRuleArgs</span>
+        <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -439,7 +439,7 @@ const alertRule = new azure_nextgen.securityinsights.latest.AlertRule("alertRule
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AlertRuleArgs</span>
+        <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -462,11 +462,11 @@ const alertRule = new azure_nextgen.securityinsights.latest.AlertRule("alertRule
 
 ## AlertRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AlertRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AlertRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -874,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:securityinsights/latest:AlertRule 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
+$ pulumi import azure-nextgen:securityinsights:AlertRule 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
 ```
 
 

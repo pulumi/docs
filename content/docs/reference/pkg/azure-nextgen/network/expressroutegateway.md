@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRouteGateway reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 ExpressRoute gateway resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRouteGateway = new AzureNextGen.Network.Latest.ExpressRouteGateway("expressRouteGateway", new AzureNextGen.Network.Latest.ExpressRouteGatewayArgs
+        var expressRouteGateway = new AzureNextGen.Network.ExpressRouteGateway("expressRouteGateway", new AzureNextGen.Network.ExpressRouteGatewayArgs
         {
-            AutoScaleConfiguration = new AzureNextGen.Network.Latest.Inputs.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs
+            AutoScaleConfiguration = new AzureNextGen.Network.Inputs.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs
             {
-                Bounds = new AzureNextGen.Network.Latest.Inputs.ExpressRouteGatewayPropertiesBoundsArgs
+                Bounds = new AzureNextGen.Network.Inputs.ExpressRouteGatewayPropertiesBoundsArgs
                 {
                     Min = 3,
                 },
@@ -39,7 +39,7 @@ class MyStack : Stack
             ExpressRouteGatewayName = "gateway-2",
             Location = "westus",
             ResourceGroupName = "resourceGroupName",
-            VirtualHub = new AzureNextGen.Network.Latest.Inputs.VirtualHubIdArgs
+            VirtualHub = new AzureNextGen.Network.Inputs.VirtualHubIdArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
             },
@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,16 +94,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_gateway = azure_nextgen.network.latest.ExpressRouteGateway("expressRouteGateway",
-    auto_scale_configuration=azure_nextgen.network.latest.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(
-        bounds=azure_nextgen.network.latest.ExpressRouteGatewayPropertiesBoundsArgs(
+express_route_gateway = azure_nextgen.network.ExpressRouteGateway("expressRouteGateway",
+    auto_scale_configuration=azure_nextgen.network.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(
+        bounds=azure_nextgen.network.ExpressRouteGatewayPropertiesBoundsArgs(
             min=3,
         ),
     ),
     express_route_gateway_name="gateway-2",
     location="westus",
     resource_group_name="resourceGroupName",
-    virtual_hub=azure_nextgen.network.latest.VirtualHubIdArgs(
+    virtual_hub=azure_nextgen.network.VirtualHubIdArgs(
         id="/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
     ))
 
@@ -117,7 +117,7 @@ express_route_gateway = azure_nextgen.network.latest.ExpressRouteGateway("expres
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const expressRouteGateway = new azure_nextgen.network.latest.ExpressRouteGateway("expressRouteGateway", {
+const expressRouteGateway = new azure_nextgen.network.ExpressRouteGateway("expressRouteGateway", {
     autoScaleConfiguration: {
         bounds: {
             min: 3,
@@ -143,7 +143,7 @@ const expressRouteGateway = new azure_nextgen.network.latest.ExpressRouteGateway
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ExpressRouteGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -151,11 +151,11 @@ const expressRouteGateway = new azure_nextgen.network.latest.ExpressRouteGateway
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ExpressRouteGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRouteGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ExpressRouteGatewayArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExpressRouteGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -176,7 +176,7 @@ const expressRouteGateway = new azure_nextgen.network.latest.ExpressRouteGateway
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExpressRouteGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">ExpressRouteGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -245,7 +245,7 @@ const expressRouteGateway = new azure_nextgen.network.latest.ExpressRouteGateway
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExpressRouteGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">ExpressRouteGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -284,7 +284,7 @@ const expressRouteGateway = new azure_nextgen.network.latest.ExpressRouteGateway
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ExpressRouteGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">ExpressRouteGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -307,11 +307,11 @@ const expressRouteGateway = new azure_nextgen.network.latest.ExpressRouteGateway
 
 ## ExpressRouteGateway Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ExpressRouteGateway resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ExpressRouteGateway resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2199,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ExpressRouteGateway gateway-2 /subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2 
+$ pulumi import azure-nextgen:network:ExpressRouteGateway gateway-2 /subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2 
 ```
 
 

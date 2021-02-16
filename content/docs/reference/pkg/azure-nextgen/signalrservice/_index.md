@@ -29,9 +29,6 @@ Explore the resources and functions of the signalrservice module in the Azure Ne
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.6.1</dd>
+	<dd>0.7.0</dd>
 </dl>
-
-
-
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datalakestore.TrustedIdProvider 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data Lake Store trusted identity provider information.
-Latest API Version: 2016-11-01.
+API Version: 2016-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trustedIdProvider = new AzureNextGen.DataLakeStore.Latest.TrustedIdProvider("trustedIdProvider", new AzureNextGen.DataLakeStore.Latest.TrustedIdProviderArgs
+        var trustedIdProvider = new AzureNextGen.DataLakeStore.TrustedIdProvider("trustedIdProvider", new AzureNextGen.DataLakeStore.TrustedIdProviderArgs
         {
             AccountName = "contosoadla",
             IdProvider = "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore/latest"
+	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-trusted_id_provider = azure_nextgen.datalakestore.latest.TrustedIdProvider("trustedIdProvider",
+trusted_id_provider = azure_nextgen.datalakestore.TrustedIdProvider("trustedIdProvider",
     account_name="contosoadla",
     id_provider="https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
     resource_group_name="contosorg",
@@ -93,7 +93,7 @@ trusted_id_provider = azure_nextgen.datalakestore.latest.TrustedIdProvider("trus
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const trustedIdProvider = new azure_nextgen.datalakestore.latest.TrustedIdProvider("trustedIdProvider", {
+const trustedIdProvider = new azure_nextgen.datalakestore.TrustedIdProvider("trustedIdProvider", {
     accountName: "contosoadla",
     idProvider: "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
     resourceGroupName: "contosorg",
@@ -112,7 +112,7 @@ const trustedIdProvider = new azure_nextgen.datalakestore.latest.TrustedIdProvid
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TrustedIdProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">TrustedIdProviderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TrustedIdProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TrustedIdProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -120,11 +120,11 @@ const trustedIdProvider = new azure_nextgen.datalakestore.latest.TrustedIdProvid
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrustedIdProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">TrustedIdProviderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TrustedIdProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrustedIdProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TrustedIdProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TrustedIdProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TrustedIdProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">TrustedIdProviderArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TrustedIdProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TrustedIdProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -145,7 +145,7 @@ const trustedIdProvider = new azure_nextgen.datalakestore.latest.TrustedIdProvid
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TrustedIdProviderArgs</span>
+        <span class="property-type"><a href="#inputs">TrustedIdProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -214,7 +214,7 @@ const trustedIdProvider = new azure_nextgen.datalakestore.latest.TrustedIdProvid
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TrustedIdProviderArgs</span>
+        <span class="property-type"><a href="#inputs">TrustedIdProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -253,7 +253,7 @@ const trustedIdProvider = new azure_nextgen.datalakestore.latest.TrustedIdProvid
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TrustedIdProviderArgs</span>
+        <span class="property-type"><a href="#inputs">TrustedIdProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -276,11 +276,11 @@ const trustedIdProvider = new azure_nextgen.datalakestore.latest.TrustedIdProvid
 
 ## TrustedIdProvider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The TrustedIdProvider resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The TrustedIdProvider resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -602,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datalakestore/latest:TrustedIdProvider test_trusted_id_provider_name 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
+$ pulumi import azure-nextgen:datalakestore:TrustedIdProvider test_trusted_id_provider_name 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
 ```
 
 

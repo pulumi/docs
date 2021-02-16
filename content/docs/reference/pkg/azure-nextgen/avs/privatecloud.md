@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.avs.PrivateCloud resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private cloud resource
-Latest API Version: 2020-03-20.
+API Version: 2020-03-20.
 
 {{% examples %}}
 ## Example Usage
@@ -27,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateCloud = new AzureNextGen.AVS.Latest.PrivateCloud("privateCloud", new AzureNextGen.AVS.Latest.PrivateCloudArgs
+        var privateCloud = new AzureNextGen.AVS.PrivateCloud("privateCloud", new AzureNextGen.AVS.PrivateCloudArgs
         {
             Location = "eastus2",
-            ManagementCluster = new AzureNextGen.AVS.Latest.Inputs.ManagementClusterArgs
+            ManagementCluster = new AzureNextGen.AVS.Inputs.ManagementClusterArgs
             {
                 ClusterSize = 4,
             },
             NetworkBlock = "192.168.48.0/22",
             PrivateCloudName = "cloud1",
             ResourceGroupName = "group1",
-            Sku = new AzureNextGen.AVS.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.AVS.Inputs.SkuArgs
             {
                 Name = "AV36",
             },
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/latest"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,15 +93,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_cloud = azure_nextgen.avs.latest.PrivateCloud("privateCloud",
+private_cloud = azure_nextgen.avs.PrivateCloud("privateCloud",
     location="eastus2",
-    management_cluster=azure_nextgen.avs.latest.ManagementClusterArgs(
+    management_cluster=azure_nextgen.avs.ManagementClusterArgs(
         cluster_size=4,
     ),
     network_block="192.168.48.0/22",
     private_cloud_name="cloud1",
     resource_group_name="group1",
-    sku=azure_nextgen.avs.latest.SkuArgs(
+    sku=azure_nextgen.avs.SkuArgs(
         name="AV36",
     ),
     tags={})
@@ -116,7 +116,7 @@ private_cloud = azure_nextgen.avs.latest.PrivateCloud("privateCloud",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
+const privateCloud = new azure_nextgen.avs.PrivateCloud("privateCloud", {
     location: "eastus2",
     managementCluster: {
         clusterSize: 4,
@@ -142,7 +142,7 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PrivateCloudArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -150,11 +150,11 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateCloud</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PrivateCloudArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateCloud</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateCloud</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateCloud</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PrivateCloudArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -175,7 +175,7 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateCloudArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateCloudArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -244,7 +244,7 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateCloudArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateCloudArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,7 +283,7 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateCloudArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateCloudArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -306,11 +306,11 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
 
 ## PrivateCloud Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2684,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:avs/latest:PrivateCloud cloud1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1 
+$ pulumi import azure-nextgen:avs:PrivateCloud cloud1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ApplicationGateway resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Application gateway resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,20 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationGateway = new AzureNextGen.Network.Latest.ApplicationGateway("applicationGateway", new AzureNextGen.Network.Latest.ApplicationGatewayArgs
+        var applicationGateway = new AzureNextGen.Network.ApplicationGateway("applicationGateway", new AzureNextGen.Network.ApplicationGatewayArgs
         {
             ApplicationGatewayName = "appgw",
             BackendAddressPools = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayBackendAddressPoolArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayBackendAddressPoolArgs
                 {
                     BackendAddresses = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayBackendAddressArgs
+                        new AzureNextGen.Network.Inputs.ApplicationGatewayBackendAddressArgs
                         {
                             IpAddress = "10.0.1.1",
                         },
-                        new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayBackendAddressArgs
+                        new AzureNextGen.Network.Inputs.ApplicationGatewayBackendAddressArgs
                         {
                             IpAddress = "10.0.1.2",
                         },
@@ -50,7 +50,7 @@ class MyStack : Stack
             },
             BackendHttpSettingsCollection = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayBackendHttpSettingsArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayBackendHttpSettingsArgs
                 {
                     CookieBasedAffinity = "Disabled",
                     Name = "appgwbhs",
@@ -61,10 +61,10 @@ class MyStack : Stack
             },
             FrontendIPConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayFrontendIPConfigurationArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayFrontendIPConfigurationArgs
                 {
                     Name = "appgwfip",
-                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    PublicIPAddress = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/appgwpip",
                     },
@@ -72,12 +72,12 @@ class MyStack : Stack
             },
             FrontendPorts = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayFrontendPortArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayFrontendPortArgs
                 {
                     Name = "appgwfp",
                     Port = 443,
                 },
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayFrontendPortArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayFrontendPortArgs
                 {
                     Name = "appgwfp80",
                     Port = 80,
@@ -85,10 +85,10 @@ class MyStack : Stack
             },
             GatewayIPConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayIPConfigurationArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayIPConfigurationArgs
                 {
                     Name = "appgwipc",
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Subnet = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet/subnets/appgwsubnet",
                     },
@@ -96,35 +96,35 @@ class MyStack : Stack
             },
             HttpListeners = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayHttpListenerArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayHttpListenerArgs
                 {
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
                     },
-                    FrontendPort = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendPort = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp",
                     },
                     Name = "appgwhl",
                     Protocol = "Https",
                     RequireServerNameIndication = false,
-                    SslCertificate = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    SslCertificate = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslCertificates/sslcert",
                     },
-                    SslProfile = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    SslProfile = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslProfiles/sslProfile1",
                     },
                 },
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayHttpListenerArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayHttpListenerArgs
                 {
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
                     },
-                    FrontendPort = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendPort = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp80",
                     },
@@ -132,7 +132,7 @@ class MyStack : Stack
                     Protocol = "Http",
                 },
             },
-            Identity = new AzureNextGen.Network.Latest.Inputs.ManagedServiceIdentityArgs
+            Identity = new AzureNextGen.Network.Inputs.ManagedServiceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -143,38 +143,38 @@ class MyStack : Stack
             Location = "eastus",
             RequestRoutingRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayRequestRoutingRuleArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayRequestRoutingRuleArgs
                 {
-                    BackendAddressPool = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    BackendAddressPool = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
                     },
-                    BackendHttpSettings = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    BackendHttpSettings = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
                     },
-                    HttpListener = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    HttpListener = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhl",
                     },
                     Name = "appgwrule",
                     Priority = 10,
-                    RewriteRuleSet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    RewriteRuleSet = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
                     },
                     RuleType = "Basic",
                 },
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayRequestRoutingRuleArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayRequestRoutingRuleArgs
                 {
-                    HttpListener = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    HttpListener = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhttplistener",
                     },
                     Name = "appgwPathBasedRule",
                     Priority = 20,
                     RuleType = "PathBasedRouting",
-                    UrlPathMap = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    UrlPathMap = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/urlPathMaps/pathMap1",
                     },
@@ -183,18 +183,18 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             RewriteRuleSets = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayRewriteRuleSetArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayRewriteRuleSetArgs
                 {
                     Name = "rewriteRuleSet1",
                     RewriteRules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayRewriteRuleArgs
+                        new AzureNextGen.Network.Inputs.ApplicationGatewayRewriteRuleArgs
                         {
-                            ActionSet = new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayRewriteRuleActionSetArgs
+                            ActionSet = new AzureNextGen.Network.Inputs.ApplicationGatewayRewriteRuleActionSetArgs
                             {
                                 RequestHeaderConfigurations = 
                                 {
-                                    new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayHeaderConfigurationArgs
+                                    new AzureNextGen.Network.Inputs.ApplicationGatewayHeaderConfigurationArgs
                                     {
                                         HeaderName = "X-Forwarded-For",
                                         HeaderValue = "{var_add_x_forwarded_for_proxy}",
@@ -202,20 +202,20 @@ class MyStack : Stack
                                 },
                                 ResponseHeaderConfigurations = 
                                 {
-                                    new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayHeaderConfigurationArgs
+                                    new AzureNextGen.Network.Inputs.ApplicationGatewayHeaderConfigurationArgs
                                     {
                                         HeaderName = "Strict-Transport-Security",
                                         HeaderValue = "max-age=31536000",
                                     },
                                 },
-                                UrlConfiguration = new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayUrlConfigurationArgs
+                                UrlConfiguration = new AzureNextGen.Network.Inputs.ApplicationGatewayUrlConfigurationArgs
                                 {
                                     ModifiedPath = "/abc",
                                 },
                             },
                             Conditions = 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayRewriteRuleConditionArgs
+                                new AzureNextGen.Network.Inputs.ApplicationGatewayRewriteRuleConditionArgs
                                 {
                                     IgnoreCase = true,
                                     Negate = false,
@@ -229,7 +229,7 @@ class MyStack : Stack
                     },
                 },
             },
-            Sku = new AzureNextGen.Network.Latest.Inputs.ApplicationGatewaySkuArgs
+            Sku = new AzureNextGen.Network.Inputs.ApplicationGatewaySkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_v2",
@@ -237,13 +237,13 @@ class MyStack : Stack
             },
             SslCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewaySslCertificateArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewaySslCertificateArgs
                 {
                     Data = "****",
                     Name = "sslcert",
                     Password = "****",
                 },
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewaySslCertificateArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewaySslCertificateArgs
                 {
                     KeyVaultSecretId = "https://kv/secret",
                     Name = "sslcert2",
@@ -251,14 +251,14 @@ class MyStack : Stack
             },
             SslProfiles = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewaySslProfileArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewaySslProfileArgs
                 {
-                    ClientAuthConfiguration = new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayClientAuthConfigurationArgs
+                    ClientAuthConfiguration = new AzureNextGen.Network.Inputs.ApplicationGatewayClientAuthConfigurationArgs
                     {
                         VerifyClientCertIssuerDN = true,
                     },
                     Name = "sslProfile1",
-                    SslPolicy = new AzureNextGen.Network.Latest.Inputs.ApplicationGatewaySslPolicyArgs
+                    SslPolicy = new AzureNextGen.Network.Inputs.ApplicationGatewaySslPolicyArgs
                     {
                         CipherSuites = 
                         {
@@ -269,7 +269,7 @@ class MyStack : Stack
                     },
                     TrustedClientCertificates = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        new AzureNextGen.Network.Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/trustedClientCertificates/clientcert",
                         },
@@ -278,7 +278,7 @@ class MyStack : Stack
             },
             TrustedClientCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayTrustedClientCertificateArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayTrustedClientCertificateArgs
                 {
                     Data = "****",
                     Name = "clientcert",
@@ -286,12 +286,12 @@ class MyStack : Stack
             },
             TrustedRootCertificates = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayTrustedRootCertificateArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayTrustedRootCertificateArgs
                 {
                     Data = "****",
                     Name = "rootcert",
                 },
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayTrustedRootCertificateArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayTrustedRootCertificateArgs
                 {
                     KeyVaultSecretId = "https://kv/secret",
                     Name = "rootcert1",
@@ -299,30 +299,30 @@ class MyStack : Stack
             },
             UrlPathMaps = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayUrlPathMapArgs
+                new AzureNextGen.Network.Inputs.ApplicationGatewayUrlPathMapArgs
                 {
-                    DefaultBackendAddressPool = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    DefaultBackendAddressPool = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
                     },
-                    DefaultBackendHttpSettings = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    DefaultBackendHttpSettings = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
                     },
-                    DefaultRewriteRuleSet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    DefaultRewriteRuleSet = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
                     },
                     Name = "pathMap1",
                     PathRules = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.ApplicationGatewayPathRuleArgs
+                        new AzureNextGen.Network.Inputs.ApplicationGatewayPathRuleArgs
                         {
-                            BackendAddressPool = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                            BackendAddressPool = new AzureNextGen.Network.Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
                             },
-                            BackendHttpSettings = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                            BackendHttpSettings = new AzureNextGen.Network.Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
                             },
@@ -332,7 +332,7 @@ class MyStack : Stack
                                 "/api",
                                 "/v1/api",
                             },
-                            RewriteRuleSet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                            RewriteRuleSet = new AzureNextGen.Network.Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
                             },
@@ -355,7 +355,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -616,78 +616,78 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_gateway = azure_nextgen.network.latest.ApplicationGateway("applicationGateway",
+application_gateway = azure_nextgen.network.ApplicationGateway("applicationGateway",
     application_gateway_name="appgw",
-    backend_address_pools=[azure_nextgen.network.latest.ApplicationGatewayBackendAddressPoolArgs(
+    backend_address_pools=[azure_nextgen.network.ApplicationGatewayBackendAddressPoolArgs(
         backend_addresses=[
-            azure_nextgen.network.latest.ApplicationGatewayBackendAddressArgs(
+            azure_nextgen.network.ApplicationGatewayBackendAddressArgs(
                 ip_address="10.0.1.1",
             ),
-            azure_nextgen.network.latest.ApplicationGatewayBackendAddressArgs(
+            azure_nextgen.network.ApplicationGatewayBackendAddressArgs(
                 ip_address="10.0.1.2",
             ),
         ],
         name="appgwpool",
     )],
-    backend_http_settings_collection=[azure_nextgen.network.latest.ApplicationGatewayBackendHttpSettingsArgs(
+    backend_http_settings_collection=[azure_nextgen.network.ApplicationGatewayBackendHttpSettingsArgs(
         cookie_based_affinity="Disabled",
         name="appgwbhs",
         port=80,
         protocol="Http",
         request_timeout=30,
     )],
-    frontend_ip_configurations=[azure_nextgen.network.latest.ApplicationGatewayFrontendIPConfigurationArgs(
+    frontend_ip_configurations=[azure_nextgen.network.ApplicationGatewayFrontendIPConfigurationArgs(
         name="appgwfip",
-        public_ip_address=azure_nextgen.network.latest.SubResourceArgs(
+        public_ip_address=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/appgwpip",
         ),
     )],
     frontend_ports=[
-        azure_nextgen.network.latest.ApplicationGatewayFrontendPortArgs(
+        azure_nextgen.network.ApplicationGatewayFrontendPortArgs(
             name="appgwfp",
             port=443,
         ),
-        azure_nextgen.network.latest.ApplicationGatewayFrontendPortArgs(
+        azure_nextgen.network.ApplicationGatewayFrontendPortArgs(
             name="appgwfp80",
             port=80,
         ),
     ],
-    gateway_ip_configurations=[azure_nextgen.network.latest.ApplicationGatewayIPConfigurationArgs(
+    gateway_ip_configurations=[azure_nextgen.network.ApplicationGatewayIPConfigurationArgs(
         name="appgwipc",
-        subnet=azure_nextgen.network.latest.SubResourceArgs(
+        subnet=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet/subnets/appgwsubnet",
         ),
     )],
     http_listeners=[
-        azure_nextgen.network.latest.ApplicationGatewayHttpListenerArgs(
-            frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        azure_nextgen.network.ApplicationGatewayHttpListenerArgs(
+            frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
             ),
-            frontend_port=azure_nextgen.network.latest.SubResourceArgs(
+            frontend_port=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp",
             ),
             name="appgwhl",
             protocol="Https",
             require_server_name_indication=False,
-            ssl_certificate=azure_nextgen.network.latest.SubResourceArgs(
+            ssl_certificate=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslCertificates/sslcert",
             ),
-            ssl_profile=azure_nextgen.network.latest.SubResourceArgs(
+            ssl_profile=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslProfiles/sslProfile1",
             ),
         ),
-        azure_nextgen.network.latest.ApplicationGatewayHttpListenerArgs(
-            frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        azure_nextgen.network.ApplicationGatewayHttpListenerArgs(
+            frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
             ),
-            frontend_port=azure_nextgen.network.latest.SubResourceArgs(
+            frontend_port=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp80",
             ),
             name="appgwhttplistener",
             protocol="Http",
         ),
     ],
-    identity=azure_nextgen.network.latest.ManagedServiceIdentityArgs(
+    identity=azure_nextgen.network.ManagedServiceIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
@@ -695,53 +695,53 @@ application_gateway = azure_nextgen.network.latest.ApplicationGateway("applicati
     ),
     location="eastus",
     request_routing_rules=[
-        azure_nextgen.network.latest.ApplicationGatewayRequestRoutingRuleArgs(
-            backend_address_pool=azure_nextgen.network.latest.SubResourceArgs(
+        azure_nextgen.network.ApplicationGatewayRequestRoutingRuleArgs(
+            backend_address_pool=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
             ),
-            backend_http_settings=azure_nextgen.network.latest.SubResourceArgs(
+            backend_http_settings=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
             ),
-            http_listener=azure_nextgen.network.latest.SubResourceArgs(
+            http_listener=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhl",
             ),
             name="appgwrule",
             priority=10,
-            rewrite_rule_set=azure_nextgen.network.latest.SubResourceArgs(
+            rewrite_rule_set=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
             ),
             rule_type="Basic",
         ),
-        azure_nextgen.network.latest.ApplicationGatewayRequestRoutingRuleArgs(
-            http_listener=azure_nextgen.network.latest.SubResourceArgs(
+        azure_nextgen.network.ApplicationGatewayRequestRoutingRuleArgs(
+            http_listener=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhttplistener",
             ),
             name="appgwPathBasedRule",
             priority=20,
             rule_type="PathBasedRouting",
-            url_path_map=azure_nextgen.network.latest.SubResourceArgs(
+            url_path_map=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/urlPathMaps/pathMap1",
             ),
         ),
     ],
     resource_group_name="rg1",
-    rewrite_rule_sets=[azure_nextgen.network.latest.ApplicationGatewayRewriteRuleSetArgs(
+    rewrite_rule_sets=[azure_nextgen.network.ApplicationGatewayRewriteRuleSetArgs(
         name="rewriteRuleSet1",
-        rewrite_rules=[azure_nextgen.network.latest.ApplicationGatewayRewriteRuleArgs(
-            action_set=azure_nextgen.network.latest.ApplicationGatewayRewriteRuleActionSetArgs(
-                request_header_configurations=[azure_nextgen.network.latest.ApplicationGatewayHeaderConfigurationArgs(
+        rewrite_rules=[azure_nextgen.network.ApplicationGatewayRewriteRuleArgs(
+            action_set=azure_nextgen.network.ApplicationGatewayRewriteRuleActionSetArgs(
+                request_header_configurations=[azure_nextgen.network.ApplicationGatewayHeaderConfigurationArgs(
                     header_name="X-Forwarded-For",
                     header_value="{var_add_x_forwarded_for_proxy}",
                 )],
-                response_header_configurations=[azure_nextgen.network.latest.ApplicationGatewayHeaderConfigurationArgs(
+                response_header_configurations=[azure_nextgen.network.ApplicationGatewayHeaderConfigurationArgs(
                     header_name="Strict-Transport-Security",
                     header_value="max-age=31536000",
                 )],
-                url_configuration=azure_nextgen.network.latest.ApplicationGatewayUrlConfigurationArgs(
+                url_configuration=azure_nextgen.network.ApplicationGatewayUrlConfigurationArgs(
                     modified_path="/abc",
                 ),
             ),
-            conditions=[azure_nextgen.network.latest.ApplicationGatewayRewriteRuleConditionArgs(
+            conditions=[azure_nextgen.network.ApplicationGatewayRewriteRuleConditionArgs(
                 ignore_case=True,
                 negate=False,
                 pattern="^Bearer",
@@ -751,66 +751,66 @@ application_gateway = azure_nextgen.network.latest.ApplicationGateway("applicati
             rule_sequence=102,
         )],
     )],
-    sku=azure_nextgen.network.latest.ApplicationGatewaySkuArgs(
+    sku=azure_nextgen.network.ApplicationGatewaySkuArgs(
         capacity=3,
         name="Standard_v2",
         tier="Standard_v2",
     ),
     ssl_certificates=[
-        azure_nextgen.network.latest.ApplicationGatewaySslCertificateArgs(
+        azure_nextgen.network.ApplicationGatewaySslCertificateArgs(
             data="****",
             name="sslcert",
             password="****",
         ),
-        azure_nextgen.network.latest.ApplicationGatewaySslCertificateArgs(
+        azure_nextgen.network.ApplicationGatewaySslCertificateArgs(
             key_vault_secret_id="https://kv/secret",
             name="sslcert2",
         ),
     ],
-    ssl_profiles=[azure_nextgen.network.latest.ApplicationGatewaySslProfileArgs(
-        client_auth_configuration=azure_nextgen.network.latest.ApplicationGatewayClientAuthConfigurationArgs(
+    ssl_profiles=[azure_nextgen.network.ApplicationGatewaySslProfileArgs(
+        client_auth_configuration=azure_nextgen.network.ApplicationGatewayClientAuthConfigurationArgs(
             verify_client_cert_issuer_dn=True,
         ),
         name="sslProfile1",
-        ssl_policy=azure_nextgen.network.latest.ApplicationGatewaySslPolicyArgs(
+        ssl_policy=azure_nextgen.network.ApplicationGatewaySslPolicyArgs(
             cipher_suites=["TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"],
             min_protocol_version="TLSv1_1",
             policy_type="Custom",
         ),
-        trusted_client_certificates=[azure_nextgen.network.latest.SubResourceArgs(
+        trusted_client_certificates=[azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/trustedClientCertificates/clientcert",
         )],
     )],
-    trusted_client_certificates=[azure_nextgen.network.latest.ApplicationGatewayTrustedClientCertificateArgs(
+    trusted_client_certificates=[azure_nextgen.network.ApplicationGatewayTrustedClientCertificateArgs(
         data="****",
         name="clientcert",
     )],
     trusted_root_certificates=[
-        azure_nextgen.network.latest.ApplicationGatewayTrustedRootCertificateArgs(
+        azure_nextgen.network.ApplicationGatewayTrustedRootCertificateArgs(
             data="****",
             name="rootcert",
         ),
-        azure_nextgen.network.latest.ApplicationGatewayTrustedRootCertificateArgs(
+        azure_nextgen.network.ApplicationGatewayTrustedRootCertificateArgs(
             key_vault_secret_id="https://kv/secret",
             name="rootcert1",
         ),
     ],
-    url_path_maps=[azure_nextgen.network.latest.ApplicationGatewayUrlPathMapArgs(
-        default_backend_address_pool=azure_nextgen.network.latest.SubResourceArgs(
+    url_path_maps=[azure_nextgen.network.ApplicationGatewayUrlPathMapArgs(
+        default_backend_address_pool=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
         ),
-        default_backend_http_settings=azure_nextgen.network.latest.SubResourceArgs(
+        default_backend_http_settings=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
         ),
-        default_rewrite_rule_set=azure_nextgen.network.latest.SubResourceArgs(
+        default_rewrite_rule_set=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
         ),
         name="pathMap1",
-        path_rules=[azure_nextgen.network.latest.ApplicationGatewayPathRuleArgs(
-            backend_address_pool=azure_nextgen.network.latest.SubResourceArgs(
+        path_rules=[azure_nextgen.network.ApplicationGatewayPathRuleArgs(
+            backend_address_pool=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
             ),
-            backend_http_settings=azure_nextgen.network.latest.SubResourceArgs(
+            backend_http_settings=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
             ),
             name="apiPaths",
@@ -818,7 +818,7 @@ application_gateway = azure_nextgen.network.latest.ApplicationGateway("applicati
                 "/api",
                 "/v1/api",
             ],
-            rewrite_rule_set=azure_nextgen.network.latest.SubResourceArgs(
+            rewrite_rule_set=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
             ),
         )],
@@ -834,7 +834,7 @@ application_gateway = azure_nextgen.network.latest.ApplicationGateway("applicati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const applicationGateway = new azure_nextgen.network.latest.ApplicationGateway("applicationGateway", {
+const applicationGateway = new azure_nextgen.network.ApplicationGateway("applicationGateway", {
     applicationGatewayName: "appgw",
     backendAddressPools: [{
         backendAddresses: [
@@ -1055,7 +1055,7 @@ const applicationGateway = new azure_nextgen.network.latest.ApplicationGateway("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApplicationGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ApplicationGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApplicationGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1063,11 +1063,11 @@ const applicationGateway = new azure_nextgen.network.latest.ApplicationGateway("
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplicationGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ApplicationGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApplicationGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplicationGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApplicationGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApplicationGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ApplicationGatewayArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApplicationGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1088,7 +1088,7 @@ const applicationGateway = new azure_nextgen.network.latest.ApplicationGateway("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1157,7 +1157,7 @@ const applicationGateway = new azure_nextgen.network.latest.ApplicationGateway("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1196,7 +1196,7 @@ const applicationGateway = new azure_nextgen.network.latest.ApplicationGateway("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationGatewayArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1219,11 +1219,11 @@ const applicationGateway = new azure_nextgen.network.latest.ApplicationGateway("
 
 ## ApplicationGateway Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ApplicationGateway resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ApplicationGateway resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -33535,7 +33535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ApplicationGateway appgw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw 
+$ pulumi import azure-nextgen:network:ApplicationGateway appgw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw 
 ```
 
 

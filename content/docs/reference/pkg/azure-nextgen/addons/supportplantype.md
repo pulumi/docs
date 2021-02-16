@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.addons.SupportPlanType resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The status of the Canonical support plan.
-Latest API Version: 2018-03-01.
+API Version: 2018-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var supportPlanType = new AzureNextGen.Addons.Latest.SupportPlanType("supportPlanType", new AzureNextGen.Addons.Latest.SupportPlanTypeArgs
+        var supportPlanType = new AzureNextGen.Addons.SupportPlanType("supportPlanType", new AzureNextGen.Addons.SupportPlanTypeArgs
         {
             PlanTypeName = "Standard",
             ProviderName = "Canonical",
@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	addons "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/addons/latest"
+	addons "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/addons"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -73,7 +73,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-support_plan_type = azure_nextgen.addons.latest.SupportPlanType("supportPlanType",
+support_plan_type = azure_nextgen.addons.SupportPlanType("supportPlanType",
     plan_type_name="Standard",
     provider_name="Canonical")
 
@@ -87,7 +87,7 @@ support_plan_type = azure_nextgen.addons.latest.SupportPlanType("supportPlanType
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const supportPlanType = new azure_nextgen.addons.latest.SupportPlanType("supportPlanType", {
+const supportPlanType = new azure_nextgen.addons.SupportPlanType("supportPlanType", {
     planTypeName: "Standard",
     providerName: "Canonical",
 });
@@ -104,7 +104,7 @@ const supportPlanType = new azure_nextgen.addons.latest.SupportPlanType("support
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SupportPlanType</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SupportPlanTypeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SupportPlanType</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SupportPlanTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -112,11 +112,11 @@ const supportPlanType = new azure_nextgen.addons.latest.SupportPlanType("support
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSupportPlanType</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SupportPlanTypeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SupportPlanType</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSupportPlanType</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SupportPlanTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SupportPlanType</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SupportPlanType</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SupportPlanTypeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SupportPlanType</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SupportPlanTypeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -137,7 +137,7 @@ const supportPlanType = new azure_nextgen.addons.latest.SupportPlanType("support
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SupportPlanTypeArgs</span>
+        <span class="property-type"><a href="#inputs">SupportPlanTypeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -206,7 +206,7 @@ const supportPlanType = new azure_nextgen.addons.latest.SupportPlanType("support
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SupportPlanTypeArgs</span>
+        <span class="property-type"><a href="#inputs">SupportPlanTypeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -245,7 +245,7 @@ const supportPlanType = new azure_nextgen.addons.latest.SupportPlanType("support
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SupportPlanTypeArgs</span>
+        <span class="property-type"><a href="#inputs">SupportPlanTypeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -268,11 +268,11 @@ const supportPlanType = new azure_nextgen.addons.latest.SupportPlanType("support
 
 ## SupportPlanType Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SupportPlanType resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SupportPlanType resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -558,7 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:addons/latest:SupportPlanType Standard subscriptions/d18d258f-bdba-4de1-8b51-e79d6c181d5e/providers/Microsoft.Addons/supportProviders/canonical/supportPlanTypes/Standard 
+$ pulumi import azure-nextgen:addons:SupportPlanType Standard subscriptions/d18d258f-bdba-4de1-8b51-e79d6c181d5e/providers/Microsoft.Addons/supportProviders/canonical/supportPlanTypes/Standard 
 ```
 
 

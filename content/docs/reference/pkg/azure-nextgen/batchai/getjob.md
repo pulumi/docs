@@ -19,7 +19,7 @@ meta_desc: "Explore the GetJob function of the batchai module, including example
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetJobResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetJobResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetJob function of the batchai module, including example
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupJobResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupJobResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupJob` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetJob function of the batchai module, including example
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetJob </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetJobResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1410,9 +1410,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1618,9 +1615,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azurefilesharereferenceresponse">Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 
@@ -1868,9 +1862,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1968,9 +1959,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="batchaierrorresponse">Batch<wbr>AIError<wbr>Response</h4>
-
-
-
 
 
 
@@ -2107,9 +2095,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="cntksettingsresponse">CNTKsettings<wbr>Response</h4>
-
-
-
 
 
 
@@ -2357,9 +2342,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2493,9 +2475,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="caffesettingsresponse">Caffe<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -2707,9 +2686,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2882,9 +2858,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2982,9 +2955,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="custommpisettingsresponse">Custom<wbr>Mpi<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -3088,9 +3058,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3152,9 +3119,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="environmentvariableresponse">Environment<wbr>Variable<wbr>Response</h4>
-
-
-
 
 
 
@@ -3255,9 +3219,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="environmentvariablewithsecretvalueresponse">Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response</h4>
-
-
-
 
 
 
@@ -3394,9 +3355,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="fileserverreferenceresponse">File<wbr>Server<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 
@@ -3572,9 +3530,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3747,9 +3702,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3886,9 +3838,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3989,9 +3938,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4056,9 +4002,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4120,9 +4063,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="jobpropertiesresponseexecutioninfo">Job<wbr>Properties<wbr>Response<wbr>Execution<wbr>Info</h4>
-
-
-
 
 
 
@@ -4298,9 +4238,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4398,9 +4335,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mountvolumesresponse">Mount<wbr>Volumes<wbr>Response</h4>
-
-
-
 
 
 
@@ -4576,9 +4510,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4676,9 +4607,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="outputdirectoryresponse">Output<wbr>Directory<wbr>Response</h4>
-
-
-
 
 
 
@@ -4818,9 +4746,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4954,9 +4879,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="pytorchsettingsresponse">Py<wbr>Torch<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -5168,9 +5090,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5232,9 +5151,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="tensorflowsettingsresponse">Tensor<wbr>Flow<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -5515,9 +5431,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="unmanagedfilesystemreferenceresponse">Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 

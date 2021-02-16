@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.GuestDiagnosticsSetting
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Virtual machine guest diagnostics settings resource.
+API Version: 2018-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,22 +27,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var guestDiagnosticsSetting = new AzureNextGen.Insights.V20180601Preview.GuestDiagnosticsSetting("guestDiagnosticsSetting", new AzureNextGen.Insights.V20180601Preview.GuestDiagnosticsSettingArgs
+        var guestDiagnosticsSetting = new AzureNextGen.Insights.GuestDiagnosticsSetting("guestDiagnosticsSetting", new AzureNextGen.Insights.GuestDiagnosticsSettingArgs
         {
             DataSources = 
             {
-                new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceArgs
+                new AzureNextGen.Insights.Inputs.DataSourceArgs
                 {
-                    Configuration = new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceConfigurationArgs
+                    Configuration = new AzureNextGen.Insights.Inputs.DataSourceConfigurationArgs
                     {
                         PerfCounters = 
                         {
-                            new AzureNextGen.Insights.V20180601Preview.Inputs.PerformanceCounterConfigurationArgs
+                            new AzureNextGen.Insights.Inputs.PerformanceCounterConfigurationArgs
                             {
                                 Name = "\\Process(_Total)\\%Processor Time",
                                 SamplingPeriod = "PT1M",
                             },
-                            new AzureNextGen.Insights.V20180601Preview.Inputs.PerformanceCounterConfigurationArgs
+                            new AzureNextGen.Insights.Inputs.PerformanceCounterConfigurationArgs
                             {
                                 Name = "\\Process(_Total)\\Working Set",
                                 SamplingPeriod = "PT1M",
@@ -51,23 +52,23 @@ class MyStack : Stack
                     Kind = "PerformanceCounter",
                     Sinks = 
                     {
-                        new AzureNextGen.Insights.V20180601Preview.Inputs.SinkConfigurationArgs
+                        new AzureNextGen.Insights.Inputs.SinkConfigurationArgs
                         {
                             Kind = "LogAnalytics",
                         },
                     },
                 },
-                new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceArgs
+                new AzureNextGen.Insights.Inputs.DataSourceArgs
                 {
-                    Configuration = new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceConfigurationArgs
+                    Configuration = new AzureNextGen.Insights.Inputs.DataSourceConfigurationArgs
                     {
                         Providers = 
                         {
-                            new AzureNextGen.Insights.V20180601Preview.Inputs.EtwProviderConfigurationArgs
+                            new AzureNextGen.Insights.Inputs.EtwProviderConfigurationArgs
                             {
                                 Id = "1",
                             },
-                            new AzureNextGen.Insights.V20180601Preview.Inputs.EtwProviderConfigurationArgs
+                            new AzureNextGen.Insights.Inputs.EtwProviderConfigurationArgs
                             {
                                 Id = "2",
                             },
@@ -76,24 +77,24 @@ class MyStack : Stack
                     Kind = "ETWProviders",
                     Sinks = 
                     {
-                        new AzureNextGen.Insights.V20180601Preview.Inputs.SinkConfigurationArgs
+                        new AzureNextGen.Insights.Inputs.SinkConfigurationArgs
                         {
                             Kind = "LogAnalytics",
                         },
                     },
                 },
-                new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceArgs
+                new AzureNextGen.Insights.Inputs.DataSourceArgs
                 {
-                    Configuration = new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceConfigurationArgs
+                    Configuration = new AzureNextGen.Insights.Inputs.DataSourceConfigurationArgs
                     {
                         EventLogs = 
                         {
-                            new AzureNextGen.Insights.V20180601Preview.Inputs.EventLogConfigurationArgs
+                            new AzureNextGen.Insights.Inputs.EventLogConfigurationArgs
                             {
                                 Filter = "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"CatWoman\"",
                                 LogName = "Application",
                             },
-                            new AzureNextGen.Insights.V20180601Preview.Inputs.EventLogConfigurationArgs
+                            new AzureNextGen.Insights.Inputs.EventLogConfigurationArgs
                             {
                                 Filter = "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"BatMan\"",
                                 LogName = "Application",
@@ -103,7 +104,7 @@ class MyStack : Stack
                     Kind = "WindowsEventLogs",
                     Sinks = 
                     {
-                        new AzureNextGen.Insights.V20180601Preview.Inputs.SinkConfigurationArgs
+                        new AzureNextGen.Insights.Inputs.SinkConfigurationArgs
                         {
                             Kind = "LogAnalytics",
                         },
@@ -132,7 +133,7 @@ package main
 import (
 	"fmt"
 
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20180601preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -222,57 +223,57 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-guest_diagnostics_setting = azure_nextgen.insights.v20180601preview.GuestDiagnosticsSetting("guestDiagnosticsSetting",
+guest_diagnostics_setting = azure_nextgen.insights.GuestDiagnosticsSetting("guestDiagnosticsSetting",
     data_sources=[
-        azure_nextgen.insights.v20180601preview.DataSourceArgs(
-            configuration=azure_nextgen.insights.v20180601preview.DataSourceConfigurationArgs(
+        azure_nextgen.insights.DataSourceArgs(
+            configuration=azure_nextgen.insights.DataSourceConfigurationArgs(
                 perf_counters=[
-                    azure_nextgen.insights.v20180601preview.PerformanceCounterConfigurationArgs(
+                    azure_nextgen.insights.PerformanceCounterConfigurationArgs(
                         name="\\Process(_Total)\\%Processor Time",
                         sampling_period="PT1M",
                     ),
-                    azure_nextgen.insights.v20180601preview.PerformanceCounterConfigurationArgs(
+                    azure_nextgen.insights.PerformanceCounterConfigurationArgs(
                         name="\\Process(_Total)\\Working Set",
                         sampling_period="PT1M",
                     ),
                 ],
             ),
             kind="PerformanceCounter",
-            sinks=[azure_nextgen.insights.v20180601preview.SinkConfigurationArgs(
+            sinks=[azure_nextgen.insights.SinkConfigurationArgs(
                 kind="LogAnalytics",
             )],
         ),
-        azure_nextgen.insights.v20180601preview.DataSourceArgs(
-            configuration=azure_nextgen.insights.v20180601preview.DataSourceConfigurationArgs(
+        azure_nextgen.insights.DataSourceArgs(
+            configuration=azure_nextgen.insights.DataSourceConfigurationArgs(
                 providers=[
-                    azure_nextgen.insights.v20180601preview.EtwProviderConfigurationArgs(
+                    azure_nextgen.insights.EtwProviderConfigurationArgs(
                         id="1",
                     ),
-                    azure_nextgen.insights.v20180601preview.EtwProviderConfigurationArgs(
+                    azure_nextgen.insights.EtwProviderConfigurationArgs(
                         id="2",
                     ),
                 ],
             ),
             kind="ETWProviders",
-            sinks=[azure_nextgen.insights.v20180601preview.SinkConfigurationArgs(
+            sinks=[azure_nextgen.insights.SinkConfigurationArgs(
                 kind="LogAnalytics",
             )],
         ),
-        azure_nextgen.insights.v20180601preview.DataSourceArgs(
-            configuration=azure_nextgen.insights.v20180601preview.DataSourceConfigurationArgs(
+        azure_nextgen.insights.DataSourceArgs(
+            configuration=azure_nextgen.insights.DataSourceConfigurationArgs(
                 event_logs=[
-                    azure_nextgen.insights.v20180601preview.EventLogConfigurationArgs(
+                    azure_nextgen.insights.EventLogConfigurationArgs(
                         filter="SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"CatWoman\"",
                         log_name="Application",
                     ),
-                    azure_nextgen.insights.v20180601preview.EventLogConfigurationArgs(
+                    azure_nextgen.insights.EventLogConfigurationArgs(
                         filter="SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"BatMan\"",
                         log_name="Application",
                     ),
                 ],
             ),
             kind="WindowsEventLogs",
-            sinks=[azure_nextgen.insights.v20180601preview.SinkConfigurationArgs(
+            sinks=[azure_nextgen.insights.SinkConfigurationArgs(
                 kind="LogAnalytics",
             )],
         ),
@@ -293,7 +294,7 @@ guest_diagnostics_setting = azure_nextgen.insights.v20180601preview.GuestDiagnos
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const guestDiagnosticsSetting = new azure_nextgen.insights.v20180601preview.GuestDiagnosticsSetting("guestDiagnosticsSetting", {
+const guestDiagnosticsSetting = new azure_nextgen.insights.GuestDiagnosticsSetting("guestDiagnosticsSetting", {
     dataSources: [
         {
             configuration: {
@@ -367,7 +368,7 @@ const guestDiagnosticsSetting = new azure_nextgen.insights.v20180601preview.Gues
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GuestDiagnosticsSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">GuestDiagnosticsSettingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GuestDiagnosticsSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GuestDiagnosticsSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -375,11 +376,11 @@ const guestDiagnosticsSetting = new azure_nextgen.insights.v20180601preview.Gues
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGuestDiagnosticsSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">GuestDiagnosticsSettingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestDiagnosticsSetting</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGuestDiagnosticsSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GuestDiagnosticsSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestDiagnosticsSetting</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GuestDiagnosticsSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">GuestDiagnosticsSettingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GuestDiagnosticsSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GuestDiagnosticsSettingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -400,7 +401,7 @@ const guestDiagnosticsSetting = new azure_nextgen.insights.v20180601preview.Gues
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GuestDiagnosticsSettingArgs</span>
+        <span class="property-type"><a href="#inputs">GuestDiagnosticsSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -469,7 +470,7 @@ const guestDiagnosticsSetting = new azure_nextgen.insights.v20180601preview.Gues
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GuestDiagnosticsSettingArgs</span>
+        <span class="property-type"><a href="#inputs">GuestDiagnosticsSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -508,7 +509,7 @@ const guestDiagnosticsSetting = new azure_nextgen.insights.v20180601preview.Gues
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">GuestDiagnosticsSettingArgs</span>
+        <span class="property-type"><a href="#inputs">GuestDiagnosticsSettingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -531,11 +532,11 @@ const guestDiagnosticsSetting = new azure_nextgen.insights.v20180601preview.Gues
 
 ## GuestDiagnosticsSetting Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The GuestDiagnosticsSetting resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The GuestDiagnosticsSetting resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2557,7 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/v20180601preview:guestDiagnosticsSetting SampleDiagSetting /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ResourceGroup/providers/microsoft.insights/guestDiagnosticSettings/SampleDiagSetting 
+$ pulumi import azure-nextgen:insights:guestDiagnosticsSetting SampleDiagSetting /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ResourceGroup/providers/microsoft.insights/guestDiagnosticSettings/SampleDiagSetting 
 ```
 
 

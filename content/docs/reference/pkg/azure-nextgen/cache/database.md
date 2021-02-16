@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cache.Database resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a database on the RedisEnterprise cluster
+API Version: 2020-10-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Cache.V20201001Preview.Database("database", new AzureNextGen.Cache.V20201001Preview.DatabaseArgs
+        var database = new AzureNextGen.Cache.Database("database", new AzureNextGen.Cache.DatabaseArgs
         {
             ClientProtocol = "Encrypted",
             ClusterName = "cache1",
@@ -35,17 +36,17 @@ class MyStack : Stack
             EvictionPolicy = "AllKeysLRU",
             Modules = 
             {
-                new AzureNextGen.Cache.V20201001Preview.Inputs.ModuleArgs
+                new AzureNextGen.Cache.Inputs.ModuleArgs
                 {
                     Args = "ERROR_RATE 0.00 INITIAL_SIZE 400",
                     Name = "RedisBloom",
                 },
-                new AzureNextGen.Cache.V20201001Preview.Inputs.ModuleArgs
+                new AzureNextGen.Cache.Inputs.ModuleArgs
                 {
                     Args = "RETENTION_POLICY 20",
                     Name = "RedisTimeSeries",
                 },
-                new AzureNextGen.Cache.V20201001Preview.Inputs.ModuleArgs
+                new AzureNextGen.Cache.Inputs.ModuleArgs
                 {
                     Name = "RediSearch",
                 },
@@ -67,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache/v20201001preview"
+	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -112,22 +113,22 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.cache.v20201001preview.Database("database",
+database = azure_nextgen.cache.Database("database",
     client_protocol="Encrypted",
     cluster_name="cache1",
     clustering_policy="EnterpriseCluster",
     database_name="default",
     eviction_policy="AllKeysLRU",
     modules=[
-        azure_nextgen.cache.v20201001preview.ModuleArgs(
+        azure_nextgen.cache.ModuleArgs(
             args="ERROR_RATE 0.00 INITIAL_SIZE 400",
             name="RedisBloom",
         ),
-        azure_nextgen.cache.v20201001preview.ModuleArgs(
+        azure_nextgen.cache.ModuleArgs(
             args="RETENTION_POLICY 20",
             name="RedisTimeSeries",
         ),
-        azure_nextgen.cache.v20201001preview.ModuleArgs(
+        azure_nextgen.cache.ModuleArgs(
             name="RediSearch",
         ),
     ],
@@ -144,7 +145,7 @@ database = azure_nextgen.cache.v20201001preview.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const database = new azure_nextgen.cache.v20201001preview.Database("database", {
+const database = new azure_nextgen.cache.Database("database", {
     clientProtocol: "Encrypted",
     clusterName: "cache1",
     clusteringPolicy: "EnterpriseCluster",
@@ -179,7 +180,7 @@ const database = new azure_nextgen.cache.v20201001preview.Database("database", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Database</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DatabaseArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Database</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -187,11 +188,11 @@ const database = new azure_nextgen.cache.v20201001preview.Database("database", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DatabaseArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Database</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DatabaseArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Database</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -212,7 +213,7 @@ const database = new azure_nextgen.cache.v20201001preview.Database("database", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DatabaseArgs</span>
+        <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,7 +282,7 @@ const database = new azure_nextgen.cache.v20201001preview.Database("database", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DatabaseArgs</span>
+        <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -320,7 +321,7 @@ const database = new azure_nextgen.cache.v20201001preview.Database("database", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DatabaseArgs</span>
+        <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -343,11 +344,11 @@ const database = new azure_nextgen.cache.v20201001preview.Database("database", {
 
 ## Database Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Database resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Database resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1283,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cache/v20201001preview:Database cache1/db1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1/databases/db1 
+$ pulumi import azure-nextgen:cache:Database cache1/db1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1/databases/db1 
 ```
 
 

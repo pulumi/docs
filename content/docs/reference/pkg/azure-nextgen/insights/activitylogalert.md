@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.ActivityLogAlert resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Activity Log Alert rule resource.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var activityLogAlert = new AzureNextGen.Insights.Latest.ActivityLogAlert("activityLogAlert", new AzureNextGen.Insights.Latest.ActivityLogAlertArgs
+        var activityLogAlert = new AzureNextGen.Insights.ActivityLogAlert("activityLogAlert", new AzureNextGen.Insights.ActivityLogAlertArgs
         {
-            Actions = new AzureNextGen.Insights.Latest.Inputs.ActionListArgs
+            Actions = new AzureNextGen.Insights.Inputs.ActionListArgs
             {
                 ActionGroups = 
                 {
-                    new AzureNextGen.Insights.Latest.Inputs.ActionGroupArgs
+                    new AzureNextGen.Insights.Inputs.ActionGroupArgs
                     {
                         ActionGroupId = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup",
                         WebhookProperties = 
@@ -44,16 +44,16 @@ class MyStack : Stack
                 },
             },
             ActivityLogAlertName = "SampleActivityLogAlertRule",
-            Condition = new AzureNextGen.Insights.Latest.Inputs.AlertRuleAllOfConditionArgs
+            Condition = new AzureNextGen.Insights.Inputs.AlertRuleAllOfConditionArgs
             {
                 AllOf = 
                 {
-                    new AzureNextGen.Insights.Latest.Inputs.AlertRuleAnyOfOrLeafConditionArgs
+                    new AzureNextGen.Insights.Inputs.AlertRuleAnyOfOrLeafConditionArgs
                     {
                         Equals = "Administrative",
                         Field = "category",
                     },
-                    new AzureNextGen.Insights.Latest.Inputs.AlertRuleAnyOfOrLeafConditionArgs
+                    new AzureNextGen.Insights.Inputs.AlertRuleAnyOfOrLeafConditionArgs
                     {
                         Equals = "Error",
                         Field = "level",
@@ -84,7 +84,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -140,9 +140,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLogAlert",
-    actions=azure_nextgen.insights.latest.ActionListArgs(
-        action_groups=[azure_nextgen.insights.latest.ActionGroupArgs(
+activity_log_alert = azure_nextgen.insights.ActivityLogAlert("activityLogAlert",
+    actions=azure_nextgen.insights.ActionListArgs(
+        action_groups=[azure_nextgen.insights.ActionGroupArgs(
             action_group_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup",
             webhook_properties={
                 "sampleWebhookProperty": "SamplePropertyValue",
@@ -150,13 +150,13 @@ activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLog
         )],
     ),
     activity_log_alert_name="SampleActivityLogAlertRule",
-    condition=azure_nextgen.insights.latest.AlertRuleAllOfConditionArgs(
+    condition=azure_nextgen.insights.AlertRuleAllOfConditionArgs(
         all_of=[
-            azure_nextgen.insights.latest.AlertRuleAnyOfOrLeafConditionArgs(
+            azure_nextgen.insights.AlertRuleAnyOfOrLeafConditionArgs(
                 equals="Administrative",
                 field="category",
             ),
-            azure_nextgen.insights.latest.AlertRuleAnyOfOrLeafConditionArgs(
+            azure_nextgen.insights.AlertRuleAnyOfOrLeafConditionArgs(
                 equals="Error",
                 field="level",
             ),
@@ -179,7 +179,7 @@ activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLog
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("activityLogAlert", {
+const activityLogAlert = new azure_nextgen.insights.ActivityLogAlert("activityLogAlert", {
     actions: {
         actionGroups: [{
             actionGroupId: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup",
@@ -223,13 +223,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var activityLogAlert = new AzureNextGen.Insights.Latest.ActivityLogAlert("activityLogAlert", new AzureNextGen.Insights.Latest.ActivityLogAlertArgs
+        var activityLogAlert = new AzureNextGen.Insights.ActivityLogAlert("activityLogAlert", new AzureNextGen.Insights.ActivityLogAlertArgs
         {
-            Actions = new AzureNextGen.Insights.Latest.Inputs.ActionListArgs
+            Actions = new AzureNextGen.Insights.Inputs.ActionListArgs
             {
                 ActionGroups = 
                 {
-                    new AzureNextGen.Insights.Latest.Inputs.ActionGroupArgs
+                    new AzureNextGen.Insights.Inputs.ActionGroupArgs
                     {
                         ActionGroupId = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup",
                         WebhookProperties = 
@@ -240,25 +240,25 @@ class MyStack : Stack
                 },
             },
             ActivityLogAlertName = "SampleActivityLogAlertRuleWithAnyOfCondition",
-            Condition = new AzureNextGen.Insights.Latest.Inputs.AlertRuleAllOfConditionArgs
+            Condition = new AzureNextGen.Insights.Inputs.AlertRuleAllOfConditionArgs
             {
                 AllOf = 
                 {
-                    new AzureNextGen.Insights.Latest.Inputs.AlertRuleAnyOfOrLeafConditionArgs
+                    new AzureNextGen.Insights.Inputs.AlertRuleAnyOfOrLeafConditionArgs
                     {
                         Equals = "ServiceHealth",
                         Field = "category",
                     },
-                    new AzureNextGen.Insights.Latest.Inputs.AlertRuleAnyOfOrLeafConditionArgs
+                    new AzureNextGen.Insights.Inputs.AlertRuleAnyOfOrLeafConditionArgs
                     {
                         AnyOf = 
                         {
-                            new AzureNextGen.Insights.Latest.Inputs.AlertRuleLeafConditionArgs
+                            new AzureNextGen.Insights.Inputs.AlertRuleLeafConditionArgs
                             {
                                 Equals = "Incident",
                                 Field = "properties.incidentType",
                             },
-                            new AzureNextGen.Insights.Latest.Inputs.AlertRuleLeafConditionArgs
+                            new AzureNextGen.Insights.Inputs.AlertRuleLeafConditionArgs
                             {
                                 Equals = "Maintenance",
                                 Field = "properties.incidentType",
@@ -291,7 +291,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -355,9 +355,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLogAlert",
-    actions=azure_nextgen.insights.latest.ActionListArgs(
-        action_groups=[azure_nextgen.insights.latest.ActionGroupArgs(
+activity_log_alert = azure_nextgen.insights.ActivityLogAlert("activityLogAlert",
+    actions=azure_nextgen.insights.ActionListArgs(
+        action_groups=[azure_nextgen.insights.ActionGroupArgs(
             action_group_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup",
             webhook_properties={
                 "sampleWebhookProperty": "SamplePropertyValue",
@@ -365,19 +365,19 @@ activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLog
         )],
     ),
     activity_log_alert_name="SampleActivityLogAlertRuleWithAnyOfCondition",
-    condition=azure_nextgen.insights.latest.AlertRuleAllOfConditionArgs(
+    condition=azure_nextgen.insights.AlertRuleAllOfConditionArgs(
         all_of=[
-            azure_nextgen.insights.latest.AlertRuleAnyOfOrLeafConditionArgs(
+            azure_nextgen.insights.AlertRuleAnyOfOrLeafConditionArgs(
                 equals="ServiceHealth",
                 field="category",
             ),
-            azure_nextgen.insights.latest.AlertRuleAnyOfOrLeafConditionArgs(
+            azure_nextgen.insights.AlertRuleAnyOfOrLeafConditionArgs(
                 any_of=[
-                    azure_nextgen.insights.latest.AlertRuleLeafConditionArgs(
+                    azure_nextgen.insights.AlertRuleLeafConditionArgs(
                         equals="Incident",
                         field="properties.incidentType",
                     ),
-                    azure_nextgen.insights.latest.AlertRuleLeafConditionArgs(
+                    azure_nextgen.insights.AlertRuleLeafConditionArgs(
                         equals="Maintenance",
                         field="properties.incidentType",
                     ),
@@ -402,7 +402,7 @@ activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLog
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("activityLogAlert", {
+const activityLogAlert = new azure_nextgen.insights.ActivityLogAlert("activityLogAlert", {
     actions: {
         actionGroups: [{
             actionGroupId: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup",
@@ -454,13 +454,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var activityLogAlert = new AzureNextGen.Insights.Latest.ActivityLogAlert("activityLogAlert", new AzureNextGen.Insights.Latest.ActivityLogAlertArgs
+        var activityLogAlert = new AzureNextGen.Insights.ActivityLogAlert("activityLogAlert", new AzureNextGen.Insights.ActivityLogAlertArgs
         {
-            Actions = new AzureNextGen.Insights.Latest.Inputs.ActionListArgs
+            Actions = new AzureNextGen.Insights.Inputs.ActionListArgs
             {
                 ActionGroups = 
                 {
-                    new AzureNextGen.Insights.Latest.Inputs.ActionGroupArgs
+                    new AzureNextGen.Insights.Inputs.ActionGroupArgs
                     {
                         ActionGroupId = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup",
                         WebhookProperties = 
@@ -471,16 +471,16 @@ class MyStack : Stack
                 },
             },
             ActivityLogAlertName = "SampleActivityLogAlertRuleWithContainsAny",
-            Condition = new AzureNextGen.Insights.Latest.Inputs.AlertRuleAllOfConditionArgs
+            Condition = new AzureNextGen.Insights.Inputs.AlertRuleAllOfConditionArgs
             {
                 AllOf = 
                 {
-                    new AzureNextGen.Insights.Latest.Inputs.AlertRuleAnyOfOrLeafConditionArgs
+                    new AzureNextGen.Insights.Inputs.AlertRuleAnyOfOrLeafConditionArgs
                     {
                         Equals = "ServiceHealth",
                         Field = "category",
                     },
-                    new AzureNextGen.Insights.Latest.Inputs.AlertRuleAnyOfOrLeafConditionArgs
+                    new AzureNextGen.Insights.Inputs.AlertRuleAnyOfOrLeafConditionArgs
                     {
                         ContainsAny = 
                         {
@@ -515,7 +515,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -574,9 +574,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLogAlert",
-    actions=azure_nextgen.insights.latest.ActionListArgs(
-        action_groups=[azure_nextgen.insights.latest.ActionGroupArgs(
+activity_log_alert = azure_nextgen.insights.ActivityLogAlert("activityLogAlert",
+    actions=azure_nextgen.insights.ActionListArgs(
+        action_groups=[azure_nextgen.insights.ActionGroupArgs(
             action_group_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup",
             webhook_properties={
                 "sampleWebhookProperty": "SamplePropertyValue",
@@ -584,13 +584,13 @@ activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLog
         )],
     ),
     activity_log_alert_name="SampleActivityLogAlertRuleWithContainsAny",
-    condition=azure_nextgen.insights.latest.AlertRuleAllOfConditionArgs(
+    condition=azure_nextgen.insights.AlertRuleAllOfConditionArgs(
         all_of=[
-            azure_nextgen.insights.latest.AlertRuleAnyOfOrLeafConditionArgs(
+            azure_nextgen.insights.AlertRuleAnyOfOrLeafConditionArgs(
                 equals="ServiceHealth",
                 field="category",
             ),
-            azure_nextgen.insights.latest.AlertRuleAnyOfOrLeafConditionArgs(
+            azure_nextgen.insights.AlertRuleAnyOfOrLeafConditionArgs(
                 contains_any=[
                     "North Europe",
                     "West Europe",
@@ -616,7 +616,7 @@ activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLog
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("activityLogAlert", {
+const activityLogAlert = new azure_nextgen.insights.ActivityLogAlert("activityLogAlert", {
     actions: {
         actionGroups: [{
             actionGroupId: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup",
@@ -661,7 +661,7 @@ const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("act
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ActivityLogAlertArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActivityLogAlertArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -669,11 +669,11 @@ const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("act
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActivityLogAlert</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ActivityLogAlertArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActivityLogAlert</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActivityLogAlert</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActivityLogAlertArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActivityLogAlert</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ActivityLogAlertArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ActivityLogAlertArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -694,7 +694,7 @@ const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("act
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ActivityLogAlertArgs</span>
+        <span class="property-type"><a href="#inputs">ActivityLogAlertArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -763,7 +763,7 @@ const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("act
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ActivityLogAlertArgs</span>
+        <span class="property-type"><a href="#inputs">ActivityLogAlertArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -802,7 +802,7 @@ const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("act
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ActivityLogAlertArgs</span>
+        <span class="property-type"><a href="#inputs">ActivityLogAlertArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -825,11 +825,11 @@ const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("act
 
 ## ActivityLogAlert Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2403,7 +2403,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:ActivityLogAlert SampleActivityLogAlertRuleWithContainsAny /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/microsoft.insights/activityLogAlerts/SampleActivityLogAlertRuleWithContainsAny 
+$ pulumi import azure-nextgen:insights:ActivityLogAlert SampleActivityLogAlertRuleWithContainsAny /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/microsoft.insights/activityLogAlerts/SampleActivityLogAlertRuleWithContainsAny 
 ```
 
 

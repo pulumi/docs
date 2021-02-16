@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batch.BatchAccount resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contains information about an Azure Batch account.
-Latest API Version: 2021-01-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var batchAccount = new AzureNextGen.Batch.Latest.BatchAccount("batchAccount", new AzureNextGen.Batch.Latest.BatchAccountArgs
+        var batchAccount = new AzureNextGen.Batch.BatchAccount("batchAccount", new AzureNextGen.Batch.BatchAccountArgs
         {
             AccountName = "sampleacct",
-            AutoStorage = new AzureNextGen.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
+            AutoStorage = new AzureNextGen.Batch.Inputs.AutoStorageBasePropertiesArgs
             {
                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
             },
-            KeyVaultReference = new AzureNextGen.Batch.Latest.Inputs.KeyVaultReferenceArgs
+            KeyVaultReference = new AzureNextGen.Batch.Inputs.KeyVaultReferenceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
                 Url = "http://sample.vault.azure.net/",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -93,12 +93,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
+batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
     account_name="sampleacct",
-    auto_storage=azure_nextgen.batch.latest.AutoStorageBasePropertiesArgs(
+    auto_storage=azure_nextgen.batch.AutoStorageBasePropertiesArgs(
         storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
     ),
-    key_vault_reference=azure_nextgen.batch.latest.KeyVaultReferenceArgs(
+    key_vault_reference=azure_nextgen.batch.KeyVaultReferenceArgs(
         id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
         url="http://sample.vault.azure.net/",
     ),
@@ -116,7 +116,7 @@ batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount", {
+const batchAccount = new azure_nextgen.batch.BatchAccount("batchAccount", {
     accountName: "sampleacct",
     autoStorage: {
         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
@@ -144,10 +144,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var batchAccount = new AzureNextGen.Batch.Latest.BatchAccount("batchAccount", new AzureNextGen.Batch.Latest.BatchAccountArgs
+        var batchAccount = new AzureNextGen.Batch.BatchAccount("batchAccount", new AzureNextGen.Batch.BatchAccountArgs
         {
             AccountName = "sampleacct",
-            AutoStorage = new AzureNextGen.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
+            AutoStorage = new AzureNextGen.Batch.Inputs.AutoStorageBasePropertiesArgs
             {
                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
             },
@@ -168,7 +168,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -199,9 +199,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
+batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
     account_name="sampleacct",
-    auto_storage=azure_nextgen.batch.latest.AutoStorageBasePropertiesArgs(
+    auto_storage=azure_nextgen.batch.AutoStorageBasePropertiesArgs(
         storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
     ),
     location="japaneast",
@@ -217,7 +217,7 @@ batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount", {
+const batchAccount = new azure_nextgen.batch.BatchAccount("batchAccount", {
     accountName: "sampleacct",
     autoStorage: {
         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
@@ -240,14 +240,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var batchAccount = new AzureNextGen.Batch.Latest.BatchAccount("batchAccount", new AzureNextGen.Batch.Latest.BatchAccountArgs
+        var batchAccount = new AzureNextGen.Batch.BatchAccount("batchAccount", new AzureNextGen.Batch.BatchAccountArgs
         {
             AccountName = "sampleacct",
-            AutoStorage = new AzureNextGen.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
+            AutoStorage = new AzureNextGen.Batch.Inputs.AutoStorageBasePropertiesArgs
             {
                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
             },
-            Identity = new AzureNextGen.Batch.Latest.Inputs.BatchAccountIdentityArgs
+            Identity = new AzureNextGen.Batch.Inputs.BatchAccountIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -268,7 +268,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -302,12 +302,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
+batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
     account_name="sampleacct",
-    auto_storage=azure_nextgen.batch.latest.AutoStorageBasePropertiesArgs(
+    auto_storage=azure_nextgen.batch.AutoStorageBasePropertiesArgs(
         storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
     ),
-    identity=azure_nextgen.batch.latest.BatchAccountIdentityArgs(
+    identity=azure_nextgen.batch.BatchAccountIdentityArgs(
         type="SystemAssigned",
     ),
     location="japaneast",
@@ -323,7 +323,7 @@ batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount", {
+const batchAccount = new azure_nextgen.batch.BatchAccount("batchAccount", {
     accountName: "sampleacct",
     autoStorage: {
         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
@@ -349,14 +349,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var batchAccount = new AzureNextGen.Batch.Latest.BatchAccount("batchAccount", new AzureNextGen.Batch.Latest.BatchAccountArgs
+        var batchAccount = new AzureNextGen.Batch.BatchAccount("batchAccount", new AzureNextGen.Batch.BatchAccountArgs
         {
             AccountName = "sampleacct",
-            AutoStorage = new AzureNextGen.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
+            AutoStorage = new AzureNextGen.Batch.Inputs.AutoStorageBasePropertiesArgs
             {
                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
             },
-            Identity = new AzureNextGen.Batch.Latest.Inputs.BatchAccountIdentityArgs
+            Identity = new AzureNextGen.Batch.Inputs.BatchAccountIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -381,7 +381,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -418,12 +418,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
+batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
     account_name="sampleacct",
-    auto_storage=azure_nextgen.batch.latest.AutoStorageBasePropertiesArgs(
+    auto_storage=azure_nextgen.batch.AutoStorageBasePropertiesArgs(
         storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
     ),
-    identity=azure_nextgen.batch.latest.BatchAccountIdentityArgs(
+    identity=azure_nextgen.batch.BatchAccountIdentityArgs(
         type="UserAssigned",
         user_assigned_identities={
             "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
@@ -442,7 +442,7 @@ batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount", {
+const batchAccount = new azure_nextgen.batch.BatchAccount("batchAccount", {
     accountName: "sampleacct",
     autoStorage: {
         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
@@ -471,14 +471,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var batchAccount = new AzureNextGen.Batch.Latest.BatchAccount("batchAccount", new AzureNextGen.Batch.Latest.BatchAccountArgs
+        var batchAccount = new AzureNextGen.Batch.BatchAccount("batchAccount", new AzureNextGen.Batch.BatchAccountArgs
         {
             AccountName = "sampleacct",
-            AutoStorage = new AzureNextGen.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
+            AutoStorage = new AzureNextGen.Batch.Inputs.AutoStorageBasePropertiesArgs
             {
                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
             },
-            KeyVaultReference = new AzureNextGen.Batch.Latest.Inputs.KeyVaultReferenceArgs
+            KeyVaultReference = new AzureNextGen.Batch.Inputs.KeyVaultReferenceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
                 Url = "http://sample.vault.azure.net/",
@@ -501,7 +501,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -537,12 +537,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
+batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
     account_name="sampleacct",
-    auto_storage=azure_nextgen.batch.latest.AutoStorageBasePropertiesArgs(
+    auto_storage=azure_nextgen.batch.AutoStorageBasePropertiesArgs(
         storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
     ),
-    key_vault_reference=azure_nextgen.batch.latest.KeyVaultReferenceArgs(
+    key_vault_reference=azure_nextgen.batch.KeyVaultReferenceArgs(
         id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
         url="http://sample.vault.azure.net/",
     ),
@@ -560,7 +560,7 @@ batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount", {
+const batchAccount = new azure_nextgen.batch.BatchAccount("batchAccount", {
     accountName: "sampleacct",
     autoStorage: {
         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
@@ -586,7 +586,7 @@ const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BatchAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BatchAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -594,11 +594,11 @@ const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount",
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBatchAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BatchAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BatchAccount</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBatchAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BatchAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BatchAccount</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BatchAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BatchAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -619,7 +619,7 @@ const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BatchAccountArgs</span>
+        <span class="property-type"><a href="#inputs">BatchAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -688,7 +688,7 @@ const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BatchAccountArgs</span>
+        <span class="property-type"><a href="#inputs">BatchAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -727,7 +727,7 @@ const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BatchAccountArgs</span>
+        <span class="property-type"><a href="#inputs">BatchAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -750,11 +750,11 @@ const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount",
 
 ## BatchAccount Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3426,7 +3426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:batch/latest:BatchAccount sampleacct /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct 
+$ pulumi import azure-nextgen:batch:BatchAccount sampleacct /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct 
 ```
 
 

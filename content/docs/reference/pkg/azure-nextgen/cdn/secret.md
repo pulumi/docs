@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.cdn.Secret resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Friendly Secret name mapping to the any Secret or secret related information.
-Latest API Version: 2020-09-01.
+API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,23 +27,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var secret = new AzureNextGen.Cdn.Latest.Secret("secret", new AzureNextGen.Cdn.Latest.SecretArgs
+        var secret = new AzureNextGen.Cdn.Secret("secret", new AzureNextGen.Cdn.SecretArgs
         {
-            Parameters = 
+            Parameters = new AzureNextGen.Cdn.Inputs.CustomerCertificateParametersArgs
             {
-                { "certificateAuthority", "Symantec" },
-                { "secretSource", new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
+                CertificateAuthority = "Symantec",
+                SecretSource = new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.KeyVault/vault/kvName/certificate/certName",
-                } },
-                { "secretVersion", "67c452f83c804aed80aa3a21e523c226" },
-                { "subjectAlternativeNames", 
+                },
+                SecretVersion = "67c452f83c804aed80aa3a21e523c226",
+                SubjectAlternativeNames = 
                 {
                     "foo.contoso.com",
                     "www3.foo.contoso.com",
-                } },
-                { "type", "CustomerCertificate" },
-                { "useLatestVersion", false },
+                },
+                Type = "CustomerCertificate",
+                UseLatestVersion = false,
             },
             ProfileName = "profile1",
             ResourceGroupName = "RG",
@@ -58,7 +58,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cdn.NewSecret(ctx, "secret", &cdn.SecretArgs{
+			Parameters: &cdn.CustomerCertificateParametersArgs{
+				CertificateAuthority: pulumi.String("Symantec"),
+				SecretSource: &cdn.ResourceReferenceArgs{
+					Id: pulumi.String("/subscriptions/subid/resourcegroups/RG/providers/Microsoft.KeyVault/vault/kvName/certificate/certName"),
+				},
+				SecretVersion: pulumi.String("67c452f83c804aed80aa3a21e523c226"),
+				SubjectAlternativeNames: pulumi.StringArray{
+					pulumi.String("foo.contoso.com"),
+					pulumi.String("www3.foo.contoso.com"),
+				},
+				Type:             pulumi.String("CustomerCertificate"),
+				UseLatestVersion: pulumi.Bool(false),
+			},
+			ProfileName:       pulumi.String("profile1"),
+			ResourceGroupName: pulumi.String("RG"),
+			SecretName:        pulumi.String("secret1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,20 +104,20 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-secret = azure_nextgen.cdn.latest.Secret("secret",
-    parameters={
-        "certificateAuthority": "Symantec",
-        "secretSource": azure_nextgen.cdn.latest.ResourceReferenceArgs(
+secret = azure_nextgen.cdn.Secret("secret",
+    parameters=azure_nextgen.cdn.CustomerCertificateParametersArgs(
+        certificate_authority="Symantec",
+        secret_source=azure_nextgen.cdn.ResourceReferenceArgs(
             id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.KeyVault/vault/kvName/certificate/certName",
         ),
-        "secretVersion": "67c452f83c804aed80aa3a21e523c226",
-        "subjectAlternativeNames": [
+        secret_version="67c452f83c804aed80aa3a21e523c226",
+        subject_alternative_names=[
             "foo.contoso.com",
             "www3.foo.contoso.com",
         ],
-        "type": "CustomerCertificate",
-        "useLatestVersion": False,
-    },
+        type="CustomerCertificate",
+        use_latest_version=False,
+    ),
     profile_name="profile1",
     resource_group_name="RG",
     secret_name="secret1")
@@ -95,7 +132,7 @@ secret = azure_nextgen.cdn.latest.Secret("secret",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const secret = new azure_nextgen.cdn.latest.Secret("secret", {
+const secret = new azure_nextgen.cdn.Secret("secret", {
     parameters: {
         certificateAuthority: "Symantec",
         secretSource: {
@@ -126,7 +163,7 @@ const secret = new azure_nextgen.cdn.latest.Secret("secret", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SecretArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -134,11 +171,11 @@ const secret = new azure_nextgen.cdn.latest.Secret("secret", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecret</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SecretArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Secret</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecret</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Secret</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SecretArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -159,7 +196,7 @@ const secret = new azure_nextgen.cdn.latest.Secret("secret", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SecretArgs</span>
+        <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -228,7 +265,7 @@ const secret = new azure_nextgen.cdn.latest.Secret("secret", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SecretArgs</span>
+        <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -267,7 +304,7 @@ const secret = new azure_nextgen.cdn.latest.Secret("secret", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SecretArgs</span>
+        <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -290,11 +327,11 @@ const secret = new azure_nextgen.cdn.latest.Secret("secret", {
 
 ## Secret Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Secret resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Secret resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1826,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cdn/latest:Secret secret1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/secrets/secret1 
+$ pulumi import azure-nextgen:cdn:Secret secret1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/secrets/secret1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.NetworkInterfaceTapConfi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Tap configuration in a Network Interface.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var networkInterfaceTapConfiguration = new AzureNextGen.Network.Latest.NetworkInterfaceTapConfiguration("networkInterfaceTapConfiguration", new AzureNextGen.Network.Latest.NetworkInterfaceTapConfigurationArgs
+        var networkInterfaceTapConfiguration = new AzureNextGen.Network.NetworkInterfaceTapConfiguration("networkInterfaceTapConfiguration", new AzureNextGen.Network.NetworkInterfaceTapConfigurationArgs
         {
             NetworkInterfaceName = "mynic",
             ResourceGroupName = "testrg",
             TapConfigurationName = "tapconfiguration1",
-            VirtualNetworkTap = new AzureNextGen.Network.Latest.Inputs.VirtualNetworkTapArgs
+            VirtualNetworkTap = new AzureNextGen.Network.Inputs.VirtualNetworkTapArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworkTaps/testvtap",
             },
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,11 +82,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network_interface_tap_configuration = azure_nextgen.network.latest.NetworkInterfaceTapConfiguration("networkInterfaceTapConfiguration",
+network_interface_tap_configuration = azure_nextgen.network.NetworkInterfaceTapConfiguration("networkInterfaceTapConfiguration",
     network_interface_name="mynic",
     resource_group_name="testrg",
     tap_configuration_name="tapconfiguration1",
-    virtual_network_tap=azure_nextgen.network.latest.VirtualNetworkTapArgs(
+    virtual_network_tap=azure_nextgen.network.VirtualNetworkTapArgs(
         id="/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworkTaps/testvtap",
     ))
 
@@ -100,7 +100,7 @@ network_interface_tap_configuration = azure_nextgen.network.latest.NetworkInterf
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const networkInterfaceTapConfiguration = new azure_nextgen.network.latest.NetworkInterfaceTapConfiguration("networkInterfaceTapConfiguration", {
+const networkInterfaceTapConfiguration = new azure_nextgen.network.NetworkInterfaceTapConfiguration("networkInterfaceTapConfiguration", {
     networkInterfaceName: "mynic",
     resourceGroupName: "testrg",
     tapConfigurationName: "tapconfiguration1",
@@ -121,7 +121,7 @@ const networkInterfaceTapConfiguration = new azure_nextgen.network.latest.Networ
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkInterfaceTapConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">NetworkInterfaceTapConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkInterfaceTapConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkInterfaceTapConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -129,11 +129,11 @@ const networkInterfaceTapConfiguration = new azure_nextgen.network.latest.Networ
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkInterfaceTapConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">NetworkInterfaceTapConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkInterfaceTapConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkInterfaceTapConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkInterfaceTapConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkInterfaceTapConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkInterfaceTapConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">NetworkInterfaceTapConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkInterfaceTapConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NetworkInterfaceTapConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -154,7 +154,7 @@ const networkInterfaceTapConfiguration = new azure_nextgen.network.latest.Networ
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkInterfaceTapConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">NetworkInterfaceTapConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -223,7 +223,7 @@ const networkInterfaceTapConfiguration = new azure_nextgen.network.latest.Networ
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkInterfaceTapConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">NetworkInterfaceTapConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -262,7 +262,7 @@ const networkInterfaceTapConfiguration = new azure_nextgen.network.latest.Networ
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkInterfaceTapConfigurationArgs</span>
+        <span class="property-type"><a href="#inputs">NetworkInterfaceTapConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -285,11 +285,11 @@ const networkInterfaceTapConfiguration = new azure_nextgen.network.latest.Networ
 
 ## NetworkInterfaceTapConfiguration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NetworkInterfaceTapConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NetworkInterfaceTapConfiguration resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -20219,7 +20219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:NetworkInterfaceTapConfiguration tapConfiguration1 /subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/networkInterfaces/mynic/tapConfigurations/tapConfiguration1 
+$ pulumi import azure-nextgen:network:NetworkInterfaceTapConfiguration tapConfiguration1 /subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/networkInterfaces/mynic/tapConfigurations/tapConfiguration1 
 ```
 
 

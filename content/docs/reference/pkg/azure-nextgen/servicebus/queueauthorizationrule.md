@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.QueueAuthorizationRul
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Description of a namespace authorization rule.
-Latest API Version: 2017-04-01.
+API Version: 2017-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var queueAuthorizationRule = new AzureNextGen.ServiceBus.Latest.QueueAuthorizationRule("queueAuthorizationRule", new AzureNextGen.ServiceBus.Latest.QueueAuthorizationRuleArgs
+        var queueAuthorizationRule = new AzureNextGen.ServiceBus.QueueAuthorizationRule("queueAuthorizationRule", new AzureNextGen.ServiceBus.QueueAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-AuthRules-5800",
             NamespaceName = "sdk-Namespace-7982",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-queue_authorization_rule = azure_nextgen.servicebus.latest.QueueAuthorizationRule("queueAuthorizationRule",
+queue_authorization_rule = azure_nextgen.servicebus.QueueAuthorizationRule("queueAuthorizationRule",
     authorization_rule_name="sdk-AuthRules-5800",
     namespace_name="sdk-Namespace-7982",
     queue_name="sdk-Queues-2317",
@@ -77,7 +77,7 @@ queue_authorization_rule = azure_nextgen.servicebus.latest.QueueAuthorizationRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const queueAuthorizationRule = new azure_nextgen.servicebus.latest.QueueAuthorizationRule("queueAuthorizationRule", {
+const queueAuthorizationRule = new azure_nextgen.servicebus.QueueAuthorizationRule("queueAuthorizationRule", {
     authorizationRuleName: "sdk-AuthRules-5800",
     namespaceName: "sdk-Namespace-7982",
     queueName: "sdk-Queues-2317",
@@ -100,7 +100,7 @@ const queueAuthorizationRule = new azure_nextgen.servicebus.latest.QueueAuthoriz
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">QueueAuthorizationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">QueueAuthorizationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">QueueAuthorizationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueAuthorizationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -108,11 +108,11 @@ const queueAuthorizationRule = new azure_nextgen.servicebus.latest.QueueAuthoriz
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewQueueAuthorizationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">QueueAuthorizationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">QueueAuthorizationRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewQueueAuthorizationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">QueueAuthorizationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">QueueAuthorizationRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">QueueAuthorizationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">QueueAuthorizationRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">QueueAuthorizationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">QueueAuthorizationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -133,7 +133,7 @@ const queueAuthorizationRule = new azure_nextgen.servicebus.latest.QueueAuthoriz
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">QueueAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">QueueAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -202,7 +202,7 @@ const queueAuthorizationRule = new azure_nextgen.servicebus.latest.QueueAuthoriz
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">QueueAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">QueueAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -241,7 +241,7 @@ const queueAuthorizationRule = new azure_nextgen.servicebus.latest.QueueAuthoriz
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">QueueAuthorizationRuleArgs</span>
+        <span class="property-type"><a href="#inputs">QueueAuthorizationRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -264,11 +264,11 @@ const queueAuthorizationRule = new azure_nextgen.servicebus.latest.QueueAuthoriz
 
 ## QueueAuthorizationRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The QueueAuthorizationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The QueueAuthorizationRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:servicebus/latest:QueueAuthorizationRule sdk-AuthRules-5800 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-7982/queues/sdk-Queues-2317/authorizationRules/sdk-AuthRules-5800 
+$ pulumi import azure-nextgen:servicebus:QueueAuthorizationRule sdk-AuthRules-5800 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-7982/queues/sdk-Queues-2317/authorizationRules/sdk-AuthRules-5800 
 ```
 
 

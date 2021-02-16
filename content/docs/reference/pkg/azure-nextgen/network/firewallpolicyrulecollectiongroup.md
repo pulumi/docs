@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.FirewallPolicyRuleCollec
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Rule Collection Group resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
+        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.FirewallPolicyRuleCollectionGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
             Priority = 100,
@@ -35,16 +35,16 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    { "action", 
                     {
-                        Type = "DNAT",
-                    },
-                    Name = "Example-Nat-Rule-Collection",
-                    Priority = 100,
-                    RuleCollectionType = "FirewallPolicyNatRuleCollection",
-                    Rules = 
+                        { "type", "DNAT" },
+                    } },
+                    { "name", "Example-Nat-Rule-Collection" },
+                    { "priority", 100 },
+                    { "ruleCollectionType", "FirewallPolicyNatRuleCollection" },
+                    { "rules", 
                     {
                         
                         {
@@ -71,7 +71,7 @@ class MyStack : Stack
                             { "translatedFqdn", "internalhttp.server.net" },
                             { "translatedPort", "8080" },
                         },
-                    },
+                    } },
                 },
             },
         });
@@ -93,19 +93,19 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
     firewall_policy_name="firewallPolicy",
     priority=100,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
-        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
-            type="DNAT",
-        ),
-        name="Example-Nat-Rule-Collection",
-        priority=100,
-        rule_collection_type="FirewallPolicyNatRuleCollection",
-        rules=[{
+    rule_collections=[{
+        "action": {
+            "type": "DNAT",
+        },
+        "name": "Example-Nat-Rule-Collection",
+        "priority": 100,
+        "ruleCollectionType": "FirewallPolicyNatRuleCollection",
+        "rules": [{
             "destinationAddresses": ["152.23.32.23"],
             "destinationPorts": ["8080"],
             "ipProtocols": [
@@ -119,7 +119,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
             "translatedFqdn": "internalhttp.server.net",
             "translatedPort": "8080",
         }],
-    )])
+    }])
 
 ```
 
@@ -131,7 +131,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",
     priority: 100,
     resourceGroupName: "rg1",
@@ -174,7 +174,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
+        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.FirewallPolicyRuleCollectionGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
             Priority = 100,
@@ -182,9 +182,9 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                new AzureNextGen.Network.Inputs.FirewallPolicyFilterRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    Action = new AzureNextGen.Network.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
                     {
                         Type = "Deny",
                     },
@@ -193,26 +193,26 @@ class MyStack : Stack
                     RuleCollectionType = "FirewallPolicyFilterRuleCollection",
                     Rules = 
                     {
-                        
+                        new AzureNextGen.Network.Inputs.NetworkRuleArgs
                         {
-                            { "destinationAddresses", 
+                            DestinationAddresses = 
                             {
                                 "*",
-                            } },
-                            { "destinationPorts", 
+                            },
+                            DestinationPorts = 
                             {
                                 "*",
-                            } },
-                            { "ipProtocols", 
+                            },
+                            IpProtocols = 
                             {
                                 "TCP",
-                            } },
-                            { "name", "network-rule1" },
-                            { "ruleType", "NetworkRule" },
-                            { "sourceAddresses", 
+                            },
+                            Name = "network-rule1",
+                            RuleType = "NetworkRule",
+                            SourceAddresses = 
                             {
                                 "10.1.25.0/24",
-                            } },
+                            },
                         },
                     },
                 },
@@ -236,26 +236,26 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
     firewall_policy_name="firewallPolicy",
     priority=100,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
-        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
+    rule_collections=[azure_nextgen.network.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_nextgen.network.FirewallPolicyFilterRuleCollectionActionArgs(
             type="Deny",
         ),
         name="Example-Filter-Rule-Collection",
         priority=100,
         rule_collection_type="FirewallPolicyFilterRuleCollection",
-        rules=[{
-            "destinationAddresses": ["*"],
-            "destinationPorts": ["*"],
-            "ipProtocols": ["TCP"],
-            "name": "network-rule1",
-            "ruleType": "NetworkRule",
-            "sourceAddresses": ["10.1.25.0/24"],
-        }],
+        rules=[azure_nextgen.network.NetworkRuleArgs(
+            destination_addresses=["*"],
+            destination_ports=["*"],
+            ip_protocols=["TCP"],
+            name="network-rule1",
+            rule_type="NetworkRule",
+            source_addresses=["10.1.25.0/24"],
+        )],
     )])
 
 ```
@@ -268,7 +268,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",
     priority: 100,
     resourceGroupName: "rg1",
@@ -305,7 +305,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
+        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.FirewallPolicyRuleCollectionGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
             Priority = 110,
@@ -313,9 +313,9 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                new AzureNextGen.Network.Inputs.FirewallPolicyFilterRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    Action = new AzureNextGen.Network.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
                     {
                         Type = "Deny",
                     },
@@ -323,26 +323,26 @@ class MyStack : Stack
                     RuleCollectionType = "FirewallPolicyFilterRuleCollection",
                     Rules = 
                     {
-                        
+                        new AzureNextGen.Network.Inputs.NetworkRuleArgs
                         {
-                            { "destinationIpGroups", 
+                            DestinationIpGroups = 
                             {
                                 "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2",
-                            } },
-                            { "destinationPorts", 
+                            },
+                            DestinationPorts = 
                             {
                                 "*",
-                            } },
-                            { "ipProtocols", 
+                            },
+                            IpProtocols = 
                             {
                                 "TCP",
-                            } },
-                            { "name", "network-1" },
-                            { "ruleType", "NetworkRule" },
-                            { "sourceIpGroups", 
+                            },
+                            Name = "network-1",
+                            RuleType = "NetworkRule",
+                            SourceIpGroups = 
                             {
                                 "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
-                            } },
+                            },
                         },
                     },
                 },
@@ -366,25 +366,25 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
     firewall_policy_name="firewallPolicy",
     priority=110,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
-        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
+    rule_collections=[azure_nextgen.network.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_nextgen.network.FirewallPolicyFilterRuleCollectionActionArgs(
             type="Deny",
         ),
         name="Example-Filter-Rule-Collection",
         rule_collection_type="FirewallPolicyFilterRuleCollection",
-        rules=[{
-            "destinationIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
-            "destinationPorts": ["*"],
-            "ipProtocols": ["TCP"],
-            "name": "network-1",
-            "ruleType": "NetworkRule",
-            "sourceIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
-        }],
+        rules=[azure_nextgen.network.NetworkRuleArgs(
+            destination_ip_groups=["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
+            destination_ports=["*"],
+            ip_protocols=["TCP"],
+            name="network-1",
+            rule_type="NetworkRule",
+            source_ip_groups=["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
+        )],
     )])
 
 ```
@@ -397,7 +397,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",
     priority: 110,
     resourceGroupName: "rg1",
@@ -433,7 +433,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
+        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.FirewallPolicyRuleCollectionGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
             Priority = 110,
@@ -441,9 +441,9 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                new AzureNextGen.Network.Inputs.FirewallPolicyFilterRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    Action = new AzureNextGen.Network.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
                     {
                         Type = "Deny",
                     },
@@ -451,28 +451,28 @@ class MyStack : Stack
                     RuleCollectionType = "FirewallPolicyFilterRuleCollection",
                     Rules = 
                     {
-                        
+                        new AzureNextGen.Network.Inputs.ApplicationRuleArgs
                         {
-                            { "description", "Deny inbound rule" },
-                            { "name", "rule1" },
-                            { "protocols", 
+                            Description = "Deny inbound rule",
+                            Name = "rule1",
+                            Protocols = 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyRuleApplicationProtocolArgs
+                                new AzureNextGen.Network.Inputs.FirewallPolicyRuleApplicationProtocolArgs
                                 {
                                     Port = 443,
                                     ProtocolType = "Https",
                                 },
-                            } },
-                            { "ruleType", "ApplicationRule" },
-                            { "sourceAddresses", 
+                            },
+                            RuleType = "ApplicationRule",
+                            SourceAddresses = 
                             {
                                 "216.58.216.164",
                                 "10.0.0.0/24",
-                            } },
-                            { "webCategories", 
+                            },
+                            WebCategories = 
                             {
                                 "Hacking",
-                            } },
+                            },
                         },
                     },
                 },
@@ -496,31 +496,31 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
     firewall_policy_name="firewallPolicy",
     priority=110,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
-        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
+    rule_collections=[azure_nextgen.network.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_nextgen.network.FirewallPolicyFilterRuleCollectionActionArgs(
             type="Deny",
         ),
         name="Example-Filter-Rule-Collection",
         rule_collection_type="FirewallPolicyFilterRuleCollection",
-        rules=[{
-            "description": "Deny inbound rule",
-            "name": "rule1",
-            "protocols": [azure_nextgen.network.latest.FirewallPolicyRuleApplicationProtocolArgs(
+        rules=[azure_nextgen.network.ApplicationRuleArgs(
+            description="Deny inbound rule",
+            name="rule1",
+            protocols=[azure_nextgen.network.FirewallPolicyRuleApplicationProtocolArgs(
                 port=443,
                 protocol_type="Https",
             )],
-            "ruleType": "ApplicationRule",
-            "sourceAddresses": [
+            rule_type="ApplicationRule",
+            source_addresses=[
                 "216.58.216.164",
                 "10.0.0.0/24",
             ],
-            "webCategories": ["Hacking"],
-        }],
+            web_categories=["Hacking"],
+        )],
     )])
 
 ```
@@ -533,7 +533,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",
     priority: 110,
     resourceGroupName: "rg1",
@@ -573,7 +573,7 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FirewallPolicyRuleCollectionGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyRuleCollectionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -581,11 +581,11 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FirewallPolicyRuleCollectionGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicyRuleCollectionGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallPolicyRuleCollectionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicyRuleCollectionGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FirewallPolicyRuleCollectionGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FirewallPolicyRuleCollectionGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -606,7 +606,7 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FirewallPolicyRuleCollectionGroupArgs</span>
+        <span class="property-type"><a href="#inputs">FirewallPolicyRuleCollectionGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -675,7 +675,7 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FirewallPolicyRuleCollectionGroupArgs</span>
+        <span class="property-type"><a href="#inputs">FirewallPolicyRuleCollectionGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -714,7 +714,7 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FirewallPolicyRuleCollectionGroupArgs</span>
+        <span class="property-type"><a href="#inputs">FirewallPolicyRuleCollectionGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -737,11 +737,11 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
 
 ## FirewallPolicyRuleCollectionGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4811,7 +4811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:FirewallPolicyRuleCollectionGroup ruleCollectionGroup1 /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy/ruleCollectionGroups/ruleCollectionGroup1 
+$ pulumi import azure-nextgen:network:FirewallPolicyRuleCollectionGroup ruleCollectionGroup1 /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy/ruleCollectionGroups/ruleCollectionGroup1 
 ```
 
 

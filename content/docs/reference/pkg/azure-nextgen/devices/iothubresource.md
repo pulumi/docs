@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devices.IotHubResource resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The description of the IoT hub.
-Latest API Version: 2020-08-31.
+API Version: 2020-08-31.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotHubResource = new AzureNextGen.Devices.Latest.IotHubResource("iotHubResource", new AzureNextGen.Devices.Latest.IotHubResourceArgs
+        var iotHubResource = new AzureNextGen.Devices.IotHubResource("iotHubResource", new AzureNextGen.Devices.IotHubResourceArgs
         {
             Etag = "AAAAAAFD6M4=",
             Location = "centraluseuap",
-            Properties = new AzureNextGen.Devices.Latest.Inputs.IotHubPropertiesArgs
+            Properties = new AzureNextGen.Devices.Inputs.IotHubPropertiesArgs
             {
-                CloudToDevice = new AzureNextGen.Devices.Latest.Inputs.CloudToDevicePropertiesArgs
+                CloudToDevice = new AzureNextGen.Devices.Inputs.CloudToDevicePropertiesArgs
                 {
                     DefaultTtlAsIso8601 = "PT1H",
-                    Feedback = new AzureNextGen.Devices.Latest.Inputs.FeedbackPropertiesArgs
+                    Feedback = new AzureNextGen.Devices.Inputs.FeedbackPropertiesArgs
                     {
                         LockDurationAsIso8601 = "PT1M",
                         MaxDeliveryCount = 10,
@@ -47,7 +47,7 @@ class MyStack : Stack
                 EnableFileUploadNotifications = false,
                 EventHubEndpoints = 
                 {
-                    { "events", new AzureNextGen.Devices.Latest.Inputs.EventHubPropertiesArgs
+                    { "events", new AzureNextGen.Devices.Inputs.EventHubPropertiesArgs
                     {
                         PartitionCount = 2,
                         RetentionTimeInDays = 1,
@@ -57,7 +57,7 @@ class MyStack : Stack
                 IpFilterRules = {},
                 MessagingEndpoints = 
                 {
-                    { "fileNotifications", new AzureNextGen.Devices.Latest.Inputs.MessagingEndpointPropertiesArgs
+                    { "fileNotifications", new AzureNextGen.Devices.Inputs.MessagingEndpointPropertiesArgs
                     {
                         LockDurationAsIso8601 = "PT1M",
                         MaxDeliveryCount = 10,
@@ -65,19 +65,19 @@ class MyStack : Stack
                     } },
                 },
                 MinTlsVersion = "1.2",
-                NetworkRuleSets = new AzureNextGen.Devices.Latest.Inputs.NetworkRuleSetPropertiesArgs
+                NetworkRuleSets = new AzureNextGen.Devices.Inputs.NetworkRuleSetPropertiesArgs
                 {
                     ApplyToBuiltInEventHubEndpoint = true,
                     DefaultAction = "Deny",
                     IpRules = 
                     {
-                        new AzureNextGen.Devices.Latest.Inputs.NetworkRuleSetIpRuleArgs
+                        new AzureNextGen.Devices.Inputs.NetworkRuleSetIpRuleArgs
                         {
                             Action = "Allow",
                             FilterName = "rule1",
                             IpMask = "131.117.159.53",
                         },
-                        new AzureNextGen.Devices.Latest.Inputs.NetworkRuleSetIpRuleArgs
+                        new AzureNextGen.Devices.Inputs.NetworkRuleSetIpRuleArgs
                         {
                             Action = "Allow",
                             FilterName = "rule2",
@@ -85,16 +85,16 @@ class MyStack : Stack
                         },
                     },
                 },
-                Routing = new AzureNextGen.Devices.Latest.Inputs.RoutingPropertiesArgs
+                Routing = new AzureNextGen.Devices.Inputs.RoutingPropertiesArgs
                 {
-                    Endpoints = new AzureNextGen.Devices.Latest.Inputs.RoutingEndpointsArgs
+                    Endpoints = new AzureNextGen.Devices.Inputs.RoutingEndpointsArgs
                     {
                         EventHubs = {},
                         ServiceBusQueues = {},
                         ServiceBusTopics = {},
                         StorageContainers = {},
                     },
-                    FallbackRoute = new AzureNextGen.Devices.Latest.Inputs.FallbackRoutePropertiesArgs
+                    FallbackRoute = new AzureNextGen.Devices.Inputs.FallbackRoutePropertiesArgs
                     {
                         Condition = "true",
                         EndpointNames = 
@@ -109,7 +109,7 @@ class MyStack : Stack
                 },
                 StorageEndpoints = 
                 {
-                    { "$default", new AzureNextGen.Devices.Latest.Inputs.StorageEndpointPropertiesArgs
+                    { "$default", new AzureNextGen.Devices.Inputs.StorageEndpointPropertiesArgs
                     {
                         ConnectionString = "",
                         ContainerName = "",
@@ -119,7 +119,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "myResourceGroup",
             ResourceName = "testHub",
-            Sku = new AzureNextGen.Devices.Latest.Inputs.IotHubSkuInfoArgs
+            Sku = new AzureNextGen.Devices.Inputs.IotHubSkuInfoArgs
             {
                 Capacity = 1,
                 Name = "S1",
@@ -144,13 +144,13 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_hub_resource = azure_nextgen.devices.latest.IotHubResource("iotHubResource",
+iot_hub_resource = azure_nextgen.devices.IotHubResource("iotHubResource",
     etag="AAAAAAFD6M4=",
     location="centraluseuap",
-    properties=azure_nextgen.devices.latest.IotHubPropertiesArgs(
-        cloud_to_device=azure_nextgen.devices.latest.CloudToDevicePropertiesArgs(
+    properties=azure_nextgen.devices.IotHubPropertiesArgs(
+        cloud_to_device=azure_nextgen.devices.CloudToDevicePropertiesArgs(
             default_ttl_as_iso8601="PT1H",
-            feedback=azure_nextgen.devices.latest.FeedbackPropertiesArgs(
+            feedback=azure_nextgen.devices.FeedbackPropertiesArgs(
                 lock_duration_as_iso8601="PT1M",
                 max_delivery_count=10,
                 ttl_as_iso8601="PT1H",
@@ -159,7 +159,7 @@ iot_hub_resource = azure_nextgen.devices.latest.IotHubResource("iotHubResource",
         ),
         enable_file_upload_notifications=False,
         event_hub_endpoints={
-            "events": azure_nextgen.devices.latest.EventHubPropertiesArgs(
+            "events": azure_nextgen.devices.EventHubPropertiesArgs(
                 partition_count=2,
                 retention_time_in_days=1,
             ),
@@ -167,37 +167,37 @@ iot_hub_resource = azure_nextgen.devices.latest.IotHubResource("iotHubResource",
         features="None",
         ip_filter_rules=[],
         messaging_endpoints={
-            "fileNotifications": azure_nextgen.devices.latest.MessagingEndpointPropertiesArgs(
+            "fileNotifications": azure_nextgen.devices.MessagingEndpointPropertiesArgs(
                 lock_duration_as_iso8601="PT1M",
                 max_delivery_count=10,
                 ttl_as_iso8601="PT1H",
             ),
         },
         min_tls_version="1.2",
-        network_rule_sets=azure_nextgen.devices.latest.NetworkRuleSetPropertiesArgs(
+        network_rule_sets=azure_nextgen.devices.NetworkRuleSetPropertiesArgs(
             apply_to_built_in_event_hub_endpoint=True,
             default_action="Deny",
             ip_rules=[
-                azure_nextgen.devices.latest.NetworkRuleSetIpRuleArgs(
+                azure_nextgen.devices.NetworkRuleSetIpRuleArgs(
                     action="Allow",
                     filter_name="rule1",
                     ip_mask="131.117.159.53",
                 ),
-                azure_nextgen.devices.latest.NetworkRuleSetIpRuleArgs(
+                azure_nextgen.devices.NetworkRuleSetIpRuleArgs(
                     action="Allow",
                     filter_name="rule2",
                     ip_mask="157.55.59.128/25",
                 ),
             ],
         ),
-        routing=azure_nextgen.devices.latest.RoutingPropertiesArgs(
-            endpoints=azure_nextgen.devices.latest.RoutingEndpointsArgs(
+        routing=azure_nextgen.devices.RoutingPropertiesArgs(
+            endpoints=azure_nextgen.devices.RoutingEndpointsArgs(
                 event_hubs=[],
                 service_bus_queues=[],
                 service_bus_topics=[],
                 storage_containers=[],
             ),
-            fallback_route=azure_nextgen.devices.latest.FallbackRoutePropertiesArgs(
+            fallback_route=azure_nextgen.devices.FallbackRoutePropertiesArgs(
                 condition="true",
                 endpoint_names=["events"],
                 is_enabled=True,
@@ -207,7 +207,7 @@ iot_hub_resource = azure_nextgen.devices.latest.IotHubResource("iotHubResource",
             routes=[],
         ),
         storage_endpoints={
-            "$default": azure_nextgen.devices.latest.StorageEndpointPropertiesArgs(
+            "$default": azure_nextgen.devices.StorageEndpointPropertiesArgs(
                 connection_string="",
                 container_name="",
                 sas_ttl_as_iso8601="PT1H",
@@ -216,7 +216,7 @@ iot_hub_resource = azure_nextgen.devices.latest.IotHubResource("iotHubResource",
     ),
     resource_group_name="myResourceGroup",
     resource_name="testHub",
-    sku=azure_nextgen.devices.latest.IotHubSkuInfoArgs(
+    sku=azure_nextgen.devices.IotHubSkuInfoArgs(
         capacity=1,
         name="S1",
     ),
@@ -232,7 +232,7 @@ iot_hub_resource = azure_nextgen.devices.latest.IotHubResource("iotHubResource",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iotHubResource = new azure_nextgen.devices.latest.IotHubResource("iotHubResource", {
+const iotHubResource = new azure_nextgen.devices.IotHubResource("iotHubResource", {
     etag: "AAAAAAFD6M4=",
     location: "centraluseuap",
     properties: {
@@ -323,7 +323,7 @@ const iotHubResource = new azure_nextgen.devices.latest.IotHubResource("iotHubRe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotHubResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IotHubResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotHubResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IotHubResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -331,11 +331,11 @@ const iotHubResource = new azure_nextgen.devices.latest.IotHubResource("iotHubRe
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotHubResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IotHubResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotHubResource</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotHubResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IotHubResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotHubResource</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotHubResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IotHubResourceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotHubResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IotHubResourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -356,7 +356,7 @@ const iotHubResource = new azure_nextgen.devices.latest.IotHubResource("iotHubRe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotHubResourceArgs</span>
+        <span class="property-type"><a href="#inputs">IotHubResourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -425,7 +425,7 @@ const iotHubResource = new azure_nextgen.devices.latest.IotHubResource("iotHubRe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotHubResourceArgs</span>
+        <span class="property-type"><a href="#inputs">IotHubResourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -464,7 +464,7 @@ const iotHubResource = new azure_nextgen.devices.latest.IotHubResource("iotHubRe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotHubResourceArgs</span>
+        <span class="property-type"><a href="#inputs">IotHubResourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -487,11 +487,11 @@ const iotHubResource = new azure_nextgen.devices.latest.IotHubResource("iotHubRe
 
 ## IotHubResource Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IotHubResource resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IotHubResource resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -10901,7 +10901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devices/latest:IotHubResource testHub /subscriptions/ae24ff83-d2ca-4fc8-9717-05dae4bba489/resourceGroups/myResourceGroup/providers/Microsoft.Devices/IotHubs/testHub 
+$ pulumi import azure-nextgen:devices:IotHubResource testHub /subscriptions/ae24ff83-d2ca-4fc8-9717-05dae4bba489/resourceGroups/myResourceGroup/providers/Microsoft.Devices/IotHubs/testHub 
 ```
 
 

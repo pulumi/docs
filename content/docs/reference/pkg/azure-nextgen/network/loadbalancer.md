@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.LoadBalancer resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 LoadBalancer resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var loadBalancer = new AzureNextGen.Network.Latest.LoadBalancer("loadBalancer", new AzureNextGen.Network.Latest.LoadBalancerArgs
+        var loadBalancer = new AzureNextGen.Network.LoadBalancer("loadBalancer", new AzureNextGen.Network.LoadBalancerArgs
         {
             BackendAddressPools = 
             {
-                new AzureNextGen.Network.Latest.Inputs.BackendAddressPoolArgs
+                new AzureNextGen.Network.Inputs.BackendAddressPoolArgs
                 {
                     Name = "be-lb",
                 },
             },
             FrontendIPConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FrontendIPConfigurationArgs
+                new AzureNextGen.Network.Inputs.FrontendIPConfigurationArgs
                 {
                     Name = "fe-lb",
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.Network.Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
                     },
@@ -50,12 +50,12 @@ class MyStack : Stack
             InboundNatPools = {},
             InboundNatRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.InboundNatRuleArgs
+                new AzureNextGen.Network.Inputs.InboundNatRuleArgs
                 {
                     BackendPort = 3389,
                     EnableFloatingIP = true,
                     EnableTcpReset = false,
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
                     },
@@ -68,16 +68,16 @@ class MyStack : Stack
             LoadBalancerName = "lb",
             LoadBalancingRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.Network.Inputs.LoadBalancingRuleArgs
                 {
-                    BackendAddressPool = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    BackendAddressPool = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb",
                     },
                     BackendPort = 80,
                     EnableFloatingIP = true,
                     EnableTcpReset = false,
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
                     },
@@ -85,7 +85,7 @@ class MyStack : Stack
                     IdleTimeoutInMinutes = 15,
                     LoadDistribution = "Default",
                     Name = "rulelb",
-                    Probe = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Probe = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb",
                     },
@@ -95,7 +95,7 @@ class MyStack : Stack
             Location = "eastus",
             Probes = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ProbeArgs
+                new AzureNextGen.Network.Inputs.ProbeArgs
                 {
                     IntervalInSeconds = 15,
                     Name = "probe-lb",
@@ -121,7 +121,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -208,22 +208,22 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
-    backend_address_pools=[azure_nextgen.network.latest.BackendAddressPoolArgs(
+load_balancer = azure_nextgen.network.LoadBalancer("loadBalancer",
+    backend_address_pools=[azure_nextgen.network.BackendAddressPoolArgs(
         name="be-lb",
     )],
-    frontend_ip_configurations=[azure_nextgen.network.latest.FrontendIPConfigurationArgs(
+    frontend_ip_configurations=[azure_nextgen.network.FrontendIPConfigurationArgs(
         name="fe-lb",
-        subnet=azure_nextgen.network.latest.SubnetArgs(
+        subnet=azure_nextgen.network.SubnetArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
         ),
     )],
     inbound_nat_pools=[],
-    inbound_nat_rules=[azure_nextgen.network.latest.InboundNatRuleArgs(
+    inbound_nat_rules=[azure_nextgen.network.InboundNatRuleArgs(
         backend_port=3389,
         enable_floating_ip=True,
         enable_tcp_reset=False,
-        frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
         ),
         frontend_port=3389,
@@ -232,27 +232,27 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
         protocol="Tcp",
     )],
     load_balancer_name="lb",
-    load_balancing_rules=[azure_nextgen.network.latest.LoadBalancingRuleArgs(
-        backend_address_pool=azure_nextgen.network.latest.SubResourceArgs(
+    load_balancing_rules=[azure_nextgen.network.LoadBalancingRuleArgs(
+        backend_address_pool=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb",
         ),
         backend_port=80,
         enable_floating_ip=True,
         enable_tcp_reset=False,
-        frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
         ),
         frontend_port=80,
         idle_timeout_in_minutes=15,
         load_distribution="Default",
         name="rulelb",
-        probe=azure_nextgen.network.latest.SubResourceArgs(
+        probe=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb",
         ),
         protocol="Tcp",
     )],
     location="eastus",
-    probes=[azure_nextgen.network.latest.ProbeArgs(
+    probes=[azure_nextgen.network.ProbeArgs(
         interval_in_seconds=15,
         name="probe-lb",
         number_of_probes=2,
@@ -272,7 +272,7 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const loadBalancer = new azure_nextgen.network.latest.LoadBalancer("loadBalancer", {
+const loadBalancer = new azure_nextgen.network.LoadBalancer("loadBalancer", {
     backendAddressPools: [{
         name: "be-lb",
     }],
@@ -341,21 +341,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var loadBalancer = new AzureNextGen.Network.Latest.LoadBalancer("loadBalancer", new AzureNextGen.Network.Latest.LoadBalancerArgs
+        var loadBalancer = new AzureNextGen.Network.LoadBalancer("loadBalancer", new AzureNextGen.Network.LoadBalancerArgs
         {
             BackendAddressPools = 
             {
-                new AzureNextGen.Network.Latest.Inputs.BackendAddressPoolArgs
+                new AzureNextGen.Network.Inputs.BackendAddressPoolArgs
                 {
                     Name = "be-lb",
                 },
             },
             FrontendIPConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FrontendIPConfigurationArgs
+                new AzureNextGen.Network.Inputs.FrontendIPConfigurationArgs
                 {
                     Name = "fe-lb",
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.Network.Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
                     },
@@ -368,11 +368,11 @@ class MyStack : Stack
             InboundNatPools = {},
             InboundNatRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.InboundNatRuleArgs
+                new AzureNextGen.Network.Inputs.InboundNatRuleArgs
                 {
                     BackendPort = 3389,
                     EnableFloatingIP = true,
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
                     },
@@ -385,15 +385,15 @@ class MyStack : Stack
             LoadBalancerName = "lb",
             LoadBalancingRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.Network.Inputs.LoadBalancingRuleArgs
                 {
-                    BackendAddressPool = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    BackendAddressPool = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb",
                     },
                     BackendPort = 80,
                     EnableFloatingIP = true,
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
                     },
@@ -401,7 +401,7 @@ class MyStack : Stack
                     IdleTimeoutInMinutes = 15,
                     LoadDistribution = "Default",
                     Name = "rulelb",
-                    Probe = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Probe = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb",
                     },
@@ -412,7 +412,7 @@ class MyStack : Stack
             OutboundRules = {},
             Probes = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ProbeArgs
+                new AzureNextGen.Network.Inputs.ProbeArgs
                 {
                     IntervalInSeconds = 15,
                     Name = "probe-lb",
@@ -423,7 +423,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.LoadBalancerSkuArgs
+            Sku = new AzureNextGen.Network.Inputs.LoadBalancerSkuArgs
             {
                 Name = "Standard",
             },
@@ -442,7 +442,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -534,22 +534,22 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
-    backend_address_pools=[azure_nextgen.network.latest.BackendAddressPoolArgs(
+load_balancer = azure_nextgen.network.LoadBalancer("loadBalancer",
+    backend_address_pools=[azure_nextgen.network.BackendAddressPoolArgs(
         name="be-lb",
     )],
-    frontend_ip_configurations=[azure_nextgen.network.latest.FrontendIPConfigurationArgs(
+    frontend_ip_configurations=[azure_nextgen.network.FrontendIPConfigurationArgs(
         name="fe-lb",
-        subnet=azure_nextgen.network.latest.SubnetArgs(
+        subnet=azure_nextgen.network.SubnetArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
         ),
         zones=["1"],
     )],
     inbound_nat_pools=[],
-    inbound_nat_rules=[azure_nextgen.network.latest.InboundNatRuleArgs(
+    inbound_nat_rules=[azure_nextgen.network.InboundNatRuleArgs(
         backend_port=3389,
         enable_floating_ip=True,
-        frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
         ),
         frontend_port=3389,
@@ -558,27 +558,27 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
         protocol="Tcp",
     )],
     load_balancer_name="lb",
-    load_balancing_rules=[azure_nextgen.network.latest.LoadBalancingRuleArgs(
-        backend_address_pool=azure_nextgen.network.latest.SubResourceArgs(
+    load_balancing_rules=[azure_nextgen.network.LoadBalancingRuleArgs(
+        backend_address_pool=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb",
         ),
         backend_port=80,
         enable_floating_ip=True,
-        frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
         ),
         frontend_port=80,
         idle_timeout_in_minutes=15,
         load_distribution="Default",
         name="rulelb",
-        probe=azure_nextgen.network.latest.SubResourceArgs(
+        probe=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb",
         ),
         protocol="Tcp",
     )],
     location="eastus",
     outbound_rules=[],
-    probes=[azure_nextgen.network.latest.ProbeArgs(
+    probes=[azure_nextgen.network.ProbeArgs(
         interval_in_seconds=15,
         name="probe-lb",
         number_of_probes=2,
@@ -587,7 +587,7 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
         request_path="healthcheck.aspx",
     )],
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.LoadBalancerSkuArgs(
+    sku=azure_nextgen.network.LoadBalancerSkuArgs(
         name="Standard",
     ))
 
@@ -601,7 +601,7 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const loadBalancer = new azure_nextgen.network.latest.LoadBalancer("loadBalancer", {
+const loadBalancer = new azure_nextgen.network.LoadBalancer("loadBalancer", {
     backendAddressPools: [{
         name: "be-lb",
     }],
@@ -673,17 +673,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var loadBalancer = new AzureNextGen.Network.Latest.LoadBalancer("loadBalancer", new AzureNextGen.Network.Latest.LoadBalancerArgs
+        var loadBalancer = new AzureNextGen.Network.LoadBalancer("loadBalancer", new AzureNextGen.Network.LoadBalancerArgs
         {
             BackendAddressPools = 
             {
-                new AzureNextGen.Network.Latest.Inputs.BackendAddressPoolArgs
+                new AzureNextGen.Network.Inputs.BackendAddressPoolArgs
                 {
                     LoadBalancerBackendAddresses = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.LoadBalancerBackendAddressArgs
+                        new AzureNextGen.Network.Inputs.LoadBalancerBackendAddressArgs
                         {
-                            LoadBalancerFrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                            LoadBalancerFrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/regional-lb-rg1/providers/Microsoft.Network/loadBalancers/regional-lb/frontendIPConfigurations/fe-rlb",
                             },
@@ -695,10 +695,10 @@ class MyStack : Stack
             },
             FrontendIPConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FrontendIPConfigurationArgs
+                new AzureNextGen.Network.Inputs.FrontendIPConfigurationArgs
                 {
                     Name = "fe-lb",
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.Network.Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
                     },
@@ -707,15 +707,15 @@ class MyStack : Stack
             LoadBalancerName = "lb",
             LoadBalancingRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.Network.Inputs.LoadBalancingRuleArgs
                 {
-                    BackendAddressPool = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    BackendAddressPool = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb",
                     },
                     BackendPort = 80,
                     EnableFloatingIP = false,
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
                     },
@@ -723,7 +723,7 @@ class MyStack : Stack
                     IdleTimeoutInMinutes = 15,
                     LoadDistribution = "Default",
                     Name = "rulelb",
-                    Probe = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Probe = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb",
                     },
@@ -733,7 +733,7 @@ class MyStack : Stack
             Location = "eastus",
             Probes = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ProbeArgs
+                new AzureNextGen.Network.Inputs.ProbeArgs
                 {
                     IntervalInSeconds = 15,
                     Name = "probe-lb",
@@ -744,7 +744,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.LoadBalancerSkuArgs
+            Sku = new AzureNextGen.Network.Inputs.LoadBalancerSkuArgs
             {
                 Name = "Standard",
                 Tier = "Global",
@@ -764,7 +764,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -847,43 +847,43 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
-    backend_address_pools=[azure_nextgen.network.latest.BackendAddressPoolArgs(
-        load_balancer_backend_addresses=[azure_nextgen.network.latest.LoadBalancerBackendAddressArgs(
-            load_balancer_frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+load_balancer = azure_nextgen.network.LoadBalancer("loadBalancer",
+    backend_address_pools=[azure_nextgen.network.BackendAddressPoolArgs(
+        load_balancer_backend_addresses=[azure_nextgen.network.LoadBalancerBackendAddressArgs(
+            load_balancer_frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/regional-lb-rg1/providers/Microsoft.Network/loadBalancers/regional-lb/frontendIPConfigurations/fe-rlb",
             ),
             name="regional-lb1-address",
         )],
         name="be-lb",
     )],
-    frontend_ip_configurations=[azure_nextgen.network.latest.FrontendIPConfigurationArgs(
+    frontend_ip_configurations=[azure_nextgen.network.FrontendIPConfigurationArgs(
         name="fe-lb",
-        subnet=azure_nextgen.network.latest.SubnetArgs(
+        subnet=azure_nextgen.network.SubnetArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
         ),
     )],
     load_balancer_name="lb",
-    load_balancing_rules=[azure_nextgen.network.latest.LoadBalancingRuleArgs(
-        backend_address_pool=azure_nextgen.network.latest.SubResourceArgs(
+    load_balancing_rules=[azure_nextgen.network.LoadBalancingRuleArgs(
+        backend_address_pool=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb",
         ),
         backend_port=80,
         enable_floating_ip=False,
-        frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
         ),
         frontend_port=80,
         idle_timeout_in_minutes=15,
         load_distribution="Default",
         name="rulelb",
-        probe=azure_nextgen.network.latest.SubResourceArgs(
+        probe=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb",
         ),
         protocol="Tcp",
     )],
     location="eastus",
-    probes=[azure_nextgen.network.latest.ProbeArgs(
+    probes=[azure_nextgen.network.ProbeArgs(
         interval_in_seconds=15,
         name="probe-lb",
         number_of_probes=2,
@@ -892,7 +892,7 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
         request_path="healthcheck.aspx",
     )],
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.LoadBalancerSkuArgs(
+    sku=azure_nextgen.network.LoadBalancerSkuArgs(
         name="Standard",
         tier="Global",
     ))
@@ -907,7 +907,7 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const loadBalancer = new azure_nextgen.network.latest.LoadBalancer("loadBalancer", {
+const loadBalancer = new azure_nextgen.network.LoadBalancer("loadBalancer", {
     backendAddressPools: [{
         loadBalancerBackendAddresses: [{
             loadBalancerFrontendIPConfiguration: {
@@ -972,21 +972,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var loadBalancer = new AzureNextGen.Network.Latest.LoadBalancer("loadBalancer", new AzureNextGen.Network.Latest.LoadBalancerArgs
+        var loadBalancer = new AzureNextGen.Network.LoadBalancer("loadBalancer", new AzureNextGen.Network.LoadBalancerArgs
         {
             BackendAddressPools = 
             {
-                new AzureNextGen.Network.Latest.Inputs.BackendAddressPoolArgs
+                new AzureNextGen.Network.Inputs.BackendAddressPoolArgs
                 {
                     Name = "be-lb",
                 },
             },
             FrontendIPConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FrontendIPConfigurationArgs
+                new AzureNextGen.Network.Inputs.FrontendIPConfigurationArgs
                 {
                     Name = "fe-lb",
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.Network.Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
                     },
@@ -995,11 +995,11 @@ class MyStack : Stack
             InboundNatPools = {},
             InboundNatRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.InboundNatRuleArgs
+                new AzureNextGen.Network.Inputs.InboundNatRuleArgs
                 {
                     BackendPort = 3389,
                     EnableFloatingIP = true,
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
                     },
@@ -1012,15 +1012,15 @@ class MyStack : Stack
             LoadBalancerName = "lb",
             LoadBalancingRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.Network.Inputs.LoadBalancingRuleArgs
                 {
-                    BackendAddressPool = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    BackendAddressPool = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb",
                     },
                     BackendPort = 80,
                     EnableFloatingIP = true,
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
                     },
@@ -1028,7 +1028,7 @@ class MyStack : Stack
                     IdleTimeoutInMinutes = 15,
                     LoadDistribution = "Default",
                     Name = "rulelb",
-                    Probe = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Probe = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb",
                     },
@@ -1039,7 +1039,7 @@ class MyStack : Stack
             OutboundRules = {},
             Probes = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ProbeArgs
+                new AzureNextGen.Network.Inputs.ProbeArgs
                 {
                     IntervalInSeconds = 15,
                     Name = "probe-lb",
@@ -1050,7 +1050,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.LoadBalancerSkuArgs
+            Sku = new AzureNextGen.Network.Inputs.LoadBalancerSkuArgs
             {
                 Name = "Standard",
             },
@@ -1064,92 +1064,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewLoadBalancer(ctx, "loadBalancer", &network.LoadBalancerArgs{
-			BackendAddressPools: network.BackendAddressPoolArray{
-				&network.BackendAddressPoolArgs{
-					Name: pulumi.String("be-lb"),
-				},
-			},
-			FrontendIPConfigurations: network.FrontendIPConfigurationArray{
-				&network.FrontendIPConfigurationArgs{
-					Name: pulumi.String("fe-lb"),
-					Subnet: &network.SubnetArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb"),
-					},
-				},
-			},
-			InboundNatPools: network.InboundNatPoolArray{},
-			InboundNatRules: network.InboundNatRuleArray{
-				&network.InboundNatRuleArgs{
-					BackendPort:      pulumi.Int(3389),
-					EnableFloatingIP: pulumi.Bool(true),
-					FrontendIPConfiguration: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
-					},
-					FrontendPort:         pulumi.Int(3389),
-					IdleTimeoutInMinutes: pulumi.Int(15),
-					Name:                 pulumi.String("in-nat-rule"),
-					Protocol:             pulumi.String("Tcp"),
-				},
-			},
-			LoadBalancerName: pulumi.String("lb"),
-			LoadBalancingRules: network.LoadBalancingRuleArray{
-				&network.LoadBalancingRuleArgs{
-					BackendAddressPool: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb"),
-					},
-					BackendPort:      pulumi.Int(80),
-					EnableFloatingIP: pulumi.Bool(true),
-					FrontendIPConfiguration: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
-					},
-					FrontendPort:         pulumi.Int(80),
-					IdleTimeoutInMinutes: pulumi.Int(15),
-					LoadDistribution:     pulumi.String("Default"),
-					Name:                 pulumi.String("rulelb"),
-					Probe: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb"),
-					},
-					Protocol: pulumi.String("Tcp"),
-				},
-			},
-			Location:      pulumi.String("eastus"),
-			OutboundRules: network.OutboundRuleArray{},
-			Probes: network.ProbeArray{
-				&network.ProbeArgs{
-					IntervalInSeconds: pulumi.Int(15),
-					Name:              pulumi.String("probe-lb"),
-					NumberOfProbes:    pulumi.Int(2),
-					Port:              pulumi.Int(80),
-					Protocol:          pulumi.String("Http"),
-					RequestPath:       pulumi.String("healthcheck.aspx"),
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			Sku: &network.LoadBalancerSkuArgs{
-				Name: pulumi.String("Standard"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -1158,21 +1073,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
-    backend_address_pools=[azure_nextgen.network.latest.BackendAddressPoolArgs(
+load_balancer = azure_nextgen.network.LoadBalancer("loadBalancer",
+    backend_address_pools=[azure_nextgen.network.BackendAddressPoolArgs(
         name="be-lb",
     )],
-    frontend_ip_configurations=[azure_nextgen.network.latest.FrontendIPConfigurationArgs(
+    frontend_ip_configurations=[azure_nextgen.network.FrontendIPConfigurationArgs(
         name="fe-lb",
-        subnet=azure_nextgen.network.latest.SubnetArgs(
+        subnet=azure_nextgen.network.SubnetArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
         ),
     )],
     inbound_nat_pools=[],
-    inbound_nat_rules=[azure_nextgen.network.latest.InboundNatRuleArgs(
+    inbound_nat_rules=[azure_nextgen.network.InboundNatRuleArgs(
         backend_port=3389,
         enable_floating_ip=True,
-        frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
         ),
         frontend_port=3389,
@@ -1181,27 +1096,27 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
         protocol="Tcp",
     )],
     load_balancer_name="lb",
-    load_balancing_rules=[azure_nextgen.network.latest.LoadBalancingRuleArgs(
-        backend_address_pool=azure_nextgen.network.latest.SubResourceArgs(
+    load_balancing_rules=[azure_nextgen.network.LoadBalancingRuleArgs(
+        backend_address_pool=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb",
         ),
         backend_port=80,
         enable_floating_ip=True,
-        frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
         ),
         frontend_port=80,
         idle_timeout_in_minutes=15,
         load_distribution="Default",
         name="rulelb",
-        probe=azure_nextgen.network.latest.SubResourceArgs(
+        probe=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb",
         ),
         protocol="Tcp",
     )],
     location="eastus",
     outbound_rules=[],
-    probes=[azure_nextgen.network.latest.ProbeArgs(
+    probes=[azure_nextgen.network.ProbeArgs(
         interval_in_seconds=15,
         name="probe-lb",
         number_of_probes=2,
@@ -1210,7 +1125,7 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
         request_path="healthcheck.aspx",
     )],
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.LoadBalancerSkuArgs(
+    sku=azure_nextgen.network.LoadBalancerSkuArgs(
         name="Standard",
     ))
 
@@ -1224,7 +1139,7 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const loadBalancer = new azure_nextgen.network.latest.LoadBalancer("loadBalancer", {
+const loadBalancer = new azure_nextgen.network.LoadBalancer("loadBalancer", {
     backendAddressPools: [{
         name: "be-lb",
     }],
@@ -1295,17 +1210,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var loadBalancer = new AzureNextGen.Network.Latest.LoadBalancer("loadBalancer", new AzureNextGen.Network.Latest.LoadBalancerArgs
+        var loadBalancer = new AzureNextGen.Network.LoadBalancer("loadBalancer", new AzureNextGen.Network.LoadBalancerArgs
         {
             BackendAddressPools = {},
             FrontendIPConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FrontendIPConfigurationArgs
+                new AzureNextGen.Network.Inputs.FrontendIPConfigurationArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test",
                     Name = "test",
                     PrivateIPAllocationMethod = "Dynamic",
-                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                    Subnet = new AzureNextGen.Network.Inputs.SubnetArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/lbvnet/subnets/lbsubnet",
                     },
@@ -1314,12 +1229,12 @@ class MyStack : Stack
             },
             InboundNatPools = 
             {
-                new AzureNextGen.Network.Latest.Inputs.InboundNatPoolArgs
+                new AzureNextGen.Network.Inputs.InboundNatPoolArgs
                 {
                     BackendPort = 8888,
                     EnableFloatingIP = true,
                     EnableTcpReset = true,
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test",
                     },
@@ -1338,7 +1253,7 @@ class MyStack : Stack
             OutboundRules = {},
             Probes = {},
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.LoadBalancerSkuArgs
+            Sku = new AzureNextGen.Network.Inputs.LoadBalancerSkuArgs
             {
                 Name = "Standard",
             },
@@ -1357,7 +1272,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1420,22 +1335,22 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
+load_balancer = azure_nextgen.network.LoadBalancer("loadBalancer",
     backend_address_pools=[],
-    frontend_ip_configurations=[azure_nextgen.network.latest.FrontendIPConfigurationArgs(
+    frontend_ip_configurations=[azure_nextgen.network.FrontendIPConfigurationArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test",
         name="test",
         private_ip_allocation_method="Dynamic",
-        subnet=azure_nextgen.network.latest.SubnetArgs(
+        subnet=azure_nextgen.network.SubnetArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/lbvnet/subnets/lbsubnet",
         ),
         zones=[],
     )],
-    inbound_nat_pools=[azure_nextgen.network.latest.InboundNatPoolArgs(
+    inbound_nat_pools=[azure_nextgen.network.InboundNatPoolArgs(
         backend_port=8888,
         enable_floating_ip=True,
         enable_tcp_reset=True,
-        frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test",
         ),
         frontend_port_range_end=8085,
@@ -1452,7 +1367,7 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
     outbound_rules=[],
     probes=[],
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.LoadBalancerSkuArgs(
+    sku=azure_nextgen.network.LoadBalancerSkuArgs(
         name="Standard",
     ))
 
@@ -1466,7 +1381,7 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const loadBalancer = new azure_nextgen.network.latest.LoadBalancer("loadBalancer", {
+const loadBalancer = new azure_nextgen.network.LoadBalancer("loadBalancer", {
     backendAddressPools: [],
     frontendIPConfigurations: [{
         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test",
@@ -1517,21 +1432,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var loadBalancer = new AzureNextGen.Network.Latest.LoadBalancer("loadBalancer", new AzureNextGen.Network.Latest.LoadBalancerArgs
+        var loadBalancer = new AzureNextGen.Network.LoadBalancer("loadBalancer", new AzureNextGen.Network.LoadBalancerArgs
         {
             BackendAddressPools = 
             {
-                new AzureNextGen.Network.Latest.Inputs.BackendAddressPoolArgs
+                new AzureNextGen.Network.Inputs.BackendAddressPoolArgs
                 {
                     Name = "be-lb",
                 },
             },
             FrontendIPConfigurations = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FrontendIPConfigurationArgs
+                new AzureNextGen.Network.Inputs.FrontendIPConfigurationArgs
                 {
                     Name = "fe-lb",
-                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.PublicIPAddressArgs
+                    PublicIPAddress = new AzureNextGen.Network.Inputs.PublicIPAddressArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pip",
                     },
@@ -1540,11 +1455,11 @@ class MyStack : Stack
             InboundNatPools = {},
             InboundNatRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.InboundNatRuleArgs
+                new AzureNextGen.Network.Inputs.InboundNatRuleArgs
                 {
                     BackendPort = 3389,
                     EnableFloatingIP = true,
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
                     },
@@ -1557,16 +1472,16 @@ class MyStack : Stack
             LoadBalancerName = "lb",
             LoadBalancingRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.Network.Inputs.LoadBalancingRuleArgs
                 {
-                    BackendAddressPool = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    BackendAddressPool = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb",
                     },
                     BackendPort = 80,
                     DisableOutboundSnat = true,
                     EnableFloatingIP = true,
-                    FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    FrontendIPConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
                     },
@@ -1574,7 +1489,7 @@ class MyStack : Stack
                     IdleTimeoutInMinutes = 15,
                     LoadDistribution = "Default",
                     Name = "rulelb",
-                    Probe = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    Probe = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb",
                     },
@@ -1584,15 +1499,15 @@ class MyStack : Stack
             Location = "eastus",
             OutboundRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.OutboundRuleArgs
+                new AzureNextGen.Network.Inputs.OutboundRuleArgs
                 {
-                    BackendAddressPool = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    BackendAddressPool = new AzureNextGen.Network.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb",
                     },
                     FrontendIPConfigurations = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        new AzureNextGen.Network.Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
                         },
@@ -1603,7 +1518,7 @@ class MyStack : Stack
             },
             Probes = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ProbeArgs
+                new AzureNextGen.Network.Inputs.ProbeArgs
                 {
                     IntervalInSeconds = 15,
                     Name = "probe-lb",
@@ -1614,7 +1529,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Latest.Inputs.LoadBalancerSkuArgs
+            Sku = new AzureNextGen.Network.Inputs.LoadBalancerSkuArgs
             {
                 Name = "Standard",
             },
@@ -1633,7 +1548,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1736,21 +1651,21 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
-    backend_address_pools=[azure_nextgen.network.latest.BackendAddressPoolArgs(
+load_balancer = azure_nextgen.network.LoadBalancer("loadBalancer",
+    backend_address_pools=[azure_nextgen.network.BackendAddressPoolArgs(
         name="be-lb",
     )],
-    frontend_ip_configurations=[azure_nextgen.network.latest.FrontendIPConfigurationArgs(
+    frontend_ip_configurations=[azure_nextgen.network.FrontendIPConfigurationArgs(
         name="fe-lb",
-        public_ip_address=azure_nextgen.network.latest.PublicIPAddressArgs(
+        public_ip_address=azure_nextgen.network.PublicIPAddressArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pip",
         ),
     )],
     inbound_nat_pools=[],
-    inbound_nat_rules=[azure_nextgen.network.latest.InboundNatRuleArgs(
+    inbound_nat_rules=[azure_nextgen.network.InboundNatRuleArgs(
         backend_port=3389,
         enable_floating_ip=True,
-        frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
         ),
         frontend_port=3389,
@@ -1759,37 +1674,37 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
         protocol="Tcp",
     )],
     load_balancer_name="lb",
-    load_balancing_rules=[azure_nextgen.network.latest.LoadBalancingRuleArgs(
-        backend_address_pool=azure_nextgen.network.latest.SubResourceArgs(
+    load_balancing_rules=[azure_nextgen.network.LoadBalancingRuleArgs(
+        backend_address_pool=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb",
         ),
         backend_port=80,
         disable_outbound_snat=True,
         enable_floating_ip=True,
-        frontend_ip_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        frontend_ip_configuration=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
         ),
         frontend_port=80,
         idle_timeout_in_minutes=15,
         load_distribution="Default",
         name="rulelb",
-        probe=azure_nextgen.network.latest.SubResourceArgs(
+        probe=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb",
         ),
         protocol="Tcp",
     )],
     location="eastus",
-    outbound_rules=[azure_nextgen.network.latest.OutboundRuleArgs(
-        backend_address_pool=azure_nextgen.network.latest.SubResourceArgs(
+    outbound_rules=[azure_nextgen.network.OutboundRuleArgs(
+        backend_address_pool=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb",
         ),
-        frontend_ip_configurations=[azure_nextgen.network.latest.SubResourceArgs(
+        frontend_ip_configurations=[azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
         )],
         name="rule1",
         protocol="All",
     )],
-    probes=[azure_nextgen.network.latest.ProbeArgs(
+    probes=[azure_nextgen.network.ProbeArgs(
         interval_in_seconds=15,
         name="probe-lb",
         number_of_probes=2,
@@ -1798,7 +1713,7 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
         request_path="healthcheck.aspx",
     )],
     resource_group_name="rg1",
-    sku=azure_nextgen.network.latest.LoadBalancerSkuArgs(
+    sku=azure_nextgen.network.LoadBalancerSkuArgs(
         name="Standard",
     ))
 
@@ -1812,7 +1727,7 @@ load_balancer = azure_nextgen.network.latest.LoadBalancer("loadBalancer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const loadBalancer = new azure_nextgen.network.latest.LoadBalancer("loadBalancer", {
+const loadBalancer = new azure_nextgen.network.LoadBalancer("loadBalancer", {
     backendAddressPools: [{
         name: "be-lb",
     }],
@@ -1891,7 +1806,7 @@ const loadBalancer = new azure_nextgen.network.latest.LoadBalancer("loadBalancer
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">LoadBalancerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1899,11 +1814,11 @@ const loadBalancer = new azure_nextgen.network.latest.LoadBalancer("loadBalancer
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">LoadBalancerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">LoadBalancerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1924,7 +1839,7 @@ const loadBalancer = new azure_nextgen.network.latest.LoadBalancer("loadBalancer
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LoadBalancerArgs</span>
+        <span class="property-type"><a href="#inputs">LoadBalancerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1993,7 +1908,7 @@ const loadBalancer = new azure_nextgen.network.latest.LoadBalancer("loadBalancer
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LoadBalancerArgs</span>
+        <span class="property-type"><a href="#inputs">LoadBalancerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -2032,7 +1947,7 @@ const loadBalancer = new azure_nextgen.network.latest.LoadBalancer("loadBalancer
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LoadBalancerArgs</span>
+        <span class="property-type"><a href="#inputs">LoadBalancerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -2055,11 +1970,11 @@ const loadBalancer = new azure_nextgen.network.latest.LoadBalancer("loadBalancer
 
 ## LoadBalancer Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -25203,7 +25118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:LoadBalancer lb /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb 
+$ pulumi import azure-nextgen:network:LoadBalancer lb /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb 
 ```
 
 

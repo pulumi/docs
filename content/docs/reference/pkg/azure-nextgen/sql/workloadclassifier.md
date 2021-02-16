@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.WorkloadClassifier resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Workload classifier operations for a data warehouse
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadClassifier = new AzureNextGen.Sql.V20200801Preview.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.V20200801Preview.WorkloadClassifierArgs
+        var workloadClassifier = new AzureNextGen.Sql.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.WorkloadClassifierArgs
         {
             Context = "test_context",
             DatabaseName = "testdb",
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_classifier = azure_nextgen.sql.v20200801preview.WorkloadClassifier("workloadClassifier",
+workload_classifier = azure_nextgen.sql.WorkloadClassifier("workloadClassifier",
     context="test_context",
     database_name="testdb",
     end_time="14:00",
@@ -113,7 +114,7 @@ workload_classifier = azure_nextgen.sql.v20200801preview.WorkloadClassifier("wor
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadClassifier = new azure_nextgen.sql.v20200801preview.WorkloadClassifier("workloadClassifier", {
+const workloadClassifier = new azure_nextgen.sql.WorkloadClassifier("workloadClassifier", {
     context: "test_context",
     databaseName: "testdb",
     endTime: "14:00",
@@ -141,7 +142,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadClassifier = new AzureNextGen.Sql.V20200801Preview.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.V20200801Preview.WorkloadClassifierArgs
+        var workloadClassifier = new AzureNextGen.Sql.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.WorkloadClassifierArgs
         {
             DatabaseName = "testdb",
             MemberName = "dbo",
@@ -164,7 +165,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -195,7 +196,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_classifier = azure_nextgen.sql.v20200801preview.WorkloadClassifier("workloadClassifier",
+workload_classifier = azure_nextgen.sql.WorkloadClassifier("workloadClassifier",
     database_name="testdb",
     member_name="dbo",
     resource_group_name="Default-SQL-SouthEastAsia",
@@ -213,7 +214,7 @@ workload_classifier = azure_nextgen.sql.v20200801preview.WorkloadClassifier("wor
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workloadClassifier = new azure_nextgen.sql.v20200801preview.WorkloadClassifier("workloadClassifier", {
+const workloadClassifier = new azure_nextgen.sql.WorkloadClassifier("workloadClassifier", {
     databaseName: "testdb",
     memberName: "dbo",
     resourceGroupName: "Default-SQL-SouthEastAsia",
@@ -234,7 +235,7 @@ const workloadClassifier = new azure_nextgen.sql.v20200801preview.WorkloadClassi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkloadClassifier</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WorkloadClassifierArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkloadClassifier</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkloadClassifierArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -242,11 +243,11 @@ const workloadClassifier = new azure_nextgen.sql.v20200801preview.WorkloadClassi
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkloadClassifier</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WorkloadClassifierArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkloadClassifier</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkloadClassifier</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkloadClassifierArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkloadClassifier</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkloadClassifier</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WorkloadClassifierArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkloadClassifier</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkloadClassifierArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -267,7 +268,7 @@ const workloadClassifier = new azure_nextgen.sql.v20200801preview.WorkloadClassi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkloadClassifierArgs</span>
+        <span class="property-type"><a href="#inputs">WorkloadClassifierArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -336,7 +337,7 @@ const workloadClassifier = new azure_nextgen.sql.v20200801preview.WorkloadClassi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkloadClassifierArgs</span>
+        <span class="property-type"><a href="#inputs">WorkloadClassifierArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -375,7 +376,7 @@ const workloadClassifier = new azure_nextgen.sql.v20200801preview.WorkloadClassi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkloadClassifierArgs</span>
+        <span class="property-type"><a href="#inputs">WorkloadClassifierArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -398,11 +399,11 @@ const workloadClassifier = new azure_nextgen.sql.v20200801preview.WorkloadClassi
 
 ## WorkloadClassifier Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The WorkloadClassifier resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The WorkloadClassifier resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -976,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:WorkloadClassifier wlm_workloadclassifier /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb/workloadGroups/wlm_workloadgroup/workloadClassifiers/wlm_workloadclassifier 
+$ pulumi import azure-nextgen:sql:WorkloadClassifier wlm_workloadclassifier /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb/workloadGroups/wlm_workloadgroup/workloadClassifiers/wlm_workloadclassifier 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.policyinsights.RemediationAtReso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The remediation definition.
-Latest API Version: 2019-07-01.
+API Version: 2019-07-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var remediationAtResourceGroup = new AzureNextGen.PolicyInsights.Latest.RemediationAtResourceGroup("remediationAtResourceGroup", new AzureNextGen.PolicyInsights.Latest.RemediationAtResourceGroupArgs
+        var remediationAtResourceGroup = new AzureNextGen.PolicyInsights.RemediationAtResourceGroup("remediationAtResourceGroup", new AzureNextGen.PolicyInsights.RemediationAtResourceGroupArgs
         {
             PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
             RemediationName = "storageRemediation",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	policyinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/policyinsights/latest"
+	policyinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/policyinsights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -75,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-remediation_at_resource_group = azure_nextgen.policyinsights.latest.RemediationAtResourceGroup("remediationAtResourceGroup",
+remediation_at_resource_group = azure_nextgen.policyinsights.RemediationAtResourceGroup("remediationAtResourceGroup",
     policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
     remediation_name="storageRemediation",
     resource_group_name="myResourceGroup")
@@ -90,7 +90,7 @@ remediation_at_resource_group = azure_nextgen.policyinsights.latest.RemediationA
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const remediationAtResourceGroup = new azure_nextgen.policyinsights.latest.RemediationAtResourceGroup("remediationAtResourceGroup", {
+const remediationAtResourceGroup = new azure_nextgen.policyinsights.RemediationAtResourceGroup("remediationAtResourceGroup", {
     policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
     remediationName: "storageRemediation",
     resourceGroupName: "myResourceGroup",
@@ -108,7 +108,7 @@ const remediationAtResourceGroup = new azure_nextgen.policyinsights.latest.Remed
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RemediationAtResourceGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RemediationAtResourceGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RemediationAtResourceGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RemediationAtResourceGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -116,11 +116,11 @@ const remediationAtResourceGroup = new azure_nextgen.policyinsights.latest.Remed
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRemediationAtResourceGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RemediationAtResourceGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RemediationAtResourceGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRemediationAtResourceGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RemediationAtResourceGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RemediationAtResourceGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RemediationAtResourceGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RemediationAtResourceGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RemediationAtResourceGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RemediationAtResourceGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -141,7 +141,7 @@ const remediationAtResourceGroup = new azure_nextgen.policyinsights.latest.Remed
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RemediationAtResourceGroupArgs</span>
+        <span class="property-type"><a href="#inputs">RemediationAtResourceGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -210,7 +210,7 @@ const remediationAtResourceGroup = new azure_nextgen.policyinsights.latest.Remed
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RemediationAtResourceGroupArgs</span>
+        <span class="property-type"><a href="#inputs">RemediationAtResourceGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -249,7 +249,7 @@ const remediationAtResourceGroup = new azure_nextgen.policyinsights.latest.Remed
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RemediationAtResourceGroupArgs</span>
+        <span class="property-type"><a href="#inputs">RemediationAtResourceGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -272,11 +272,11 @@ const remediationAtResourceGroup = new azure_nextgen.policyinsights.latest.Remed
 
 ## RemediationAtResourceGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RemediationAtResourceGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RemediationAtResourceGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1114,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:policyinsights/latest:RemediationAtResourceGroup storageRemediation /subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.policyinsights/remediations/storageRemediation 
+$ pulumi import azure-nextgen:policyinsights:RemediationAtResourceGroup storageRemediation /subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.policyinsights/remediations/storageRemediation 
 ```
 
 

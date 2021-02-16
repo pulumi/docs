@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.importexport.Job resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contains the job information.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.ImportExport.Latest.Job("job", new AzureNextGen.ImportExport.Latest.JobArgs
+        var job = new AzureNextGen.ImportExport.Job("job", new AzureNextGen.ImportExport.JobArgs
         {
             JobName = "myExportJob",
             Location = "West US",
-            Properties = new AzureNextGen.ImportExport.Latest.Inputs.JobDetailsArgs
+            Properties = new AzureNextGen.ImportExport.Inputs.JobDetailsArgs
             {
                 BackupDriveManifest = true,
                 DiagnosticsPath = "waimportexport",
-                Export = new AzureNextGen.ImportExport.Latest.Inputs.ExportArgs
+                Export = new AzureNextGen.ImportExport.Inputs.ExportArgs
                 {
                     BlobPathPrefix = 
                     {
@@ -44,7 +44,7 @@ class MyStack : Stack
                 },
                 JobType = "Export",
                 LogLevel = "Verbose",
-                ReturnAddress = new AzureNextGen.ImportExport.Latest.Inputs.ReturnAddressArgs
+                ReturnAddress = new AzureNextGen.ImportExport.Inputs.ReturnAddressArgs
                 {
                     City = "Redmond",
                     CountryOrRegion = "USA",
@@ -56,7 +56,7 @@ class MyStack : Stack
                     StreetAddress1 = "Street1",
                     StreetAddress2 = "street2",
                 },
-                ReturnShipping = new AzureNextGen.ImportExport.Latest.Inputs.ReturnShippingArgs
+                ReturnShipping = new AzureNextGen.ImportExport.Inputs.ReturnShippingArgs
                 {
                     CarrierAccountNumber = "989ffff",
                     CarrierName = "FedEx",
@@ -79,7 +79,7 @@ class MyStack : Stack
 package main
 
 import (
-	importexport "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/importexport/latest"
+	importexport "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/importexport"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -134,18 +134,18 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.importexport.latest.Job("job",
+job = azure_nextgen.importexport.Job("job",
     job_name="myExportJob",
     location="West US",
-    properties=azure_nextgen.importexport.latest.JobDetailsArgs(
+    properties=azure_nextgen.importexport.JobDetailsArgs(
         backup_drive_manifest=True,
         diagnostics_path="waimportexport",
-        export=azure_nextgen.importexport.latest.ExportArgs(
+        export=azure_nextgen.importexport.ExportArgs(
             blob_path_prefix=["/"],
         ),
         job_type="Export",
         log_level="Verbose",
-        return_address=azure_nextgen.importexport.latest.ReturnAddressArgs(
+        return_address=azure_nextgen.importexport.ReturnAddressArgs(
             city="Redmond",
             country_or_region="USA",
             email="Test@contoso.com",
@@ -156,7 +156,7 @@ job = azure_nextgen.importexport.latest.Job("job",
             street_address1="Street1",
             street_address2="street2",
         ),
-        return_shipping=azure_nextgen.importexport.latest.ReturnShippingArgs(
+        return_shipping=azure_nextgen.importexport.ReturnShippingArgs(
             carrier_account_number="989ffff",
             carrier_name="FedEx",
         ),
@@ -174,7 +174,7 @@ job = azure_nextgen.importexport.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.importexport.latest.Job("job", {
+const job = new azure_nextgen.importexport.Job("job", {
     jobName: "myExportJob",
     location: "West US",
     properties: {
@@ -219,17 +219,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.ImportExport.Latest.Job("job", new AzureNextGen.ImportExport.Latest.JobArgs
+        var job = new AzureNextGen.ImportExport.Job("job", new AzureNextGen.ImportExport.JobArgs
         {
             JobName = "myJob",
             Location = "West US",
-            Properties = new AzureNextGen.ImportExport.Latest.Inputs.JobDetailsArgs
+            Properties = new AzureNextGen.ImportExport.Inputs.JobDetailsArgs
             {
                 BackupDriveManifest = true,
                 DiagnosticsPath = "waimportexport",
                 DriveList = 
                 {
-                    new AzureNextGen.ImportExport.Latest.Inputs.DriveStatusArgs
+                    new AzureNextGen.ImportExport.Inputs.DriveStatusArgs
                     {
                         BitLockerKey = "238810-662376-448998-450120-652806-203390-606320-483076",
                         DriveHeaderHash = "0:1048576:FB6B6ED500D49DA6E0D723C98D42C657F2881CC13357C28DCECA6A524F1292501571A321238540E621AB5BD9C9A32637615919A75593E6CB5C1515DAE341CABF;135266304:143360:C957A189AFC38C4E80731252301EB91427CE55E61448FA3C73C6FDDE70ABBC197947EC8D0249A2C639BB10B95957D5820A4BE8DFBBF76FFFA688AE5CE0D42EC3",
@@ -240,7 +240,7 @@ class MyStack : Stack
                 },
                 JobType = "Import",
                 LogLevel = "Verbose",
-                ReturnAddress = new AzureNextGen.ImportExport.Latest.Inputs.ReturnAddressArgs
+                ReturnAddress = new AzureNextGen.ImportExport.Inputs.ReturnAddressArgs
                 {
                     City = "Redmond",
                     CountryOrRegion = "USA",
@@ -252,7 +252,7 @@ class MyStack : Stack
                     StreetAddress1 = "Street1",
                     StreetAddress2 = "street2",
                 },
-                ReturnShipping = new AzureNextGen.ImportExport.Latest.Inputs.ReturnShippingArgs
+                ReturnShipping = new AzureNextGen.ImportExport.Inputs.ReturnShippingArgs
                 {
                     CarrierAccountNumber = "989ffff",
                     CarrierName = "FedEx",
@@ -275,7 +275,7 @@ class MyStack : Stack
 package main
 
 import (
-	importexport "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/importexport/latest"
+	importexport "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/importexport"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -334,13 +334,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.importexport.latest.Job("job",
+job = azure_nextgen.importexport.Job("job",
     job_name="myJob",
     location="West US",
-    properties=azure_nextgen.importexport.latest.JobDetailsArgs(
+    properties=azure_nextgen.importexport.JobDetailsArgs(
         backup_drive_manifest=True,
         diagnostics_path="waimportexport",
-        drive_list=[azure_nextgen.importexport.latest.DriveStatusArgs(
+        drive_list=[azure_nextgen.importexport.DriveStatusArgs(
             bit_locker_key="238810-662376-448998-450120-652806-203390-606320-483076",
             drive_header_hash="0:1048576:FB6B6ED500D49DA6E0D723C98D42C657F2881CC13357C28DCECA6A524F1292501571A321238540E621AB5BD9C9A32637615919A75593E6CB5C1515DAE341CABF;135266304:143360:C957A189AFC38C4E80731252301EB91427CE55E61448FA3C73C6FDDE70ABBC197947EC8D0249A2C639BB10B95957D5820A4BE8DFBBF76FFFA688AE5CE0D42EC3",
             drive_id="9CA995BB",
@@ -349,7 +349,7 @@ job = azure_nextgen.importexport.latest.Job("job",
         )],
         job_type="Import",
         log_level="Verbose",
-        return_address=azure_nextgen.importexport.latest.ReturnAddressArgs(
+        return_address=azure_nextgen.importexport.ReturnAddressArgs(
             city="Redmond",
             country_or_region="USA",
             email="Test@contoso.com",
@@ -360,7 +360,7 @@ job = azure_nextgen.importexport.latest.Job("job",
             street_address1="Street1",
             street_address2="street2",
         ),
-        return_shipping=azure_nextgen.importexport.latest.ReturnShippingArgs(
+        return_shipping=azure_nextgen.importexport.ReturnShippingArgs(
             carrier_account_number="989ffff",
             carrier_name="FedEx",
         ),
@@ -378,7 +378,7 @@ job = azure_nextgen.importexport.latest.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const job = new azure_nextgen.importexport.latest.Job("job", {
+const job = new azure_nextgen.importexport.Job("job", {
     jobName: "myJob",
     location: "West US",
     properties: {
@@ -425,7 +425,7 @@ const job = new azure_nextgen.importexport.latest.Job("job", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">JobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -433,11 +433,11 @@ const job = new azure_nextgen.importexport.latest.Job("job", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">JobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">JobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -458,7 +458,7 @@ const job = new azure_nextgen.importexport.latest.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobArgs</span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -527,7 +527,7 @@ const job = new azure_nextgen.importexport.latest.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobArgs</span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -566,7 +566,7 @@ const job = new azure_nextgen.importexport.latest.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JobArgs</span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -589,11 +589,11 @@ const job = new azure_nextgen.importexport.latest.Job("job", {
 
 ## Job Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -6559,7 +6559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:importexport/latest:Job myJob /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ImportExport/jobs/myJob 
+$ pulumi import azure-nextgen:importexport:Job myJob /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ImportExport/jobs/myJob 
 ```
 
 

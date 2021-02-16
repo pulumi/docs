@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.sql.ManagedInstance resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure SQL managed instance.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstance = new AzureNextGen.Sql.V20200801Preview.ManagedInstance("managedInstance", new AzureNextGen.Sql.V20200801Preview.ManagedInstanceArgs
+        var managedInstance = new AzureNextGen.Sql.ManagedInstance("managedInstance", new AzureNextGen.Sql.ManagedInstanceArgs
         {
             AdministratorLogin = "dummylogin",
             AdministratorLoginPassword = "<administratorLoginPassword>",
@@ -40,7 +41,7 @@ class MyStack : Stack
             ProxyOverride = "Redirect",
             PublicDataEndpointEnabled = false,
             ResourceGroupName = "testrg",
-            Sku = new AzureNextGen.Sql.V20200801Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql.Inputs.SkuArgs
             {
                 Name = "GP_Gen5",
                 Tier = "GeneralPurpose",
@@ -69,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -118,7 +119,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance = azure_nextgen.sql.v20200801preview.ManagedInstance("managedInstance",
+managed_instance = azure_nextgen.sql.ManagedInstance("managedInstance",
     administrator_login="dummylogin",
     administrator_login_password="<administratorLoginPassword>",
     collation="SQL_Latin1_General_CP1_CI_AS",
@@ -131,7 +132,7 @@ managed_instance = azure_nextgen.sql.v20200801preview.ManagedInstance("managedIn
     proxy_override="Redirect",
     public_data_endpoint_enabled=False,
     resource_group_name="testrg",
-    sku=azure_nextgen.sql.v20200801preview.SkuArgs(
+    sku=azure_nextgen.sql.SkuArgs(
         name="GP_Gen5",
         tier="GeneralPurpose",
     ),
@@ -154,7 +155,7 @@ managed_instance = azure_nextgen.sql.v20200801preview.ManagedInstance("managedIn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedInstance = new azure_nextgen.sql.v20200801preview.ManagedInstance("managedInstance", {
+const managedInstance = new azure_nextgen.sql.ManagedInstance("managedInstance", {
     administratorLogin: "dummylogin",
     administratorLoginPassword: "<administratorLoginPassword>",
     collation: "SQL_Latin1_General_CP1_CI_AS",
@@ -195,7 +196,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstance = new AzureNextGen.Sql.V20200801Preview.ManagedInstance("managedInstance", new AzureNextGen.Sql.V20200801Preview.ManagedInstanceArgs
+        var managedInstance = new AzureNextGen.Sql.ManagedInstance("managedInstance", new AzureNextGen.Sql.ManagedInstanceArgs
         {
             AdministratorLogin = "dummylogin",
             AdministratorLoginPassword = "<administratorLoginPassword>",
@@ -203,7 +204,7 @@ class MyStack : Stack
             Location = "Japan East",
             ManagedInstanceName = "testinstance",
             ResourceGroupName = "testrg",
-            Sku = new AzureNextGen.Sql.V20200801Preview.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql.Inputs.SkuArgs
             {
                 Name = "GP_Gen4",
                 Tier = "GeneralPurpose",
@@ -226,7 +227,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -264,14 +265,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance = azure_nextgen.sql.v20200801preview.ManagedInstance("managedInstance",
+managed_instance = azure_nextgen.sql.ManagedInstance("managedInstance",
     administrator_login="dummylogin",
     administrator_login_password="<administratorLoginPassword>",
     license_type="LicenseIncluded",
     location="Japan East",
     managed_instance_name="testinstance",
     resource_group_name="testrg",
-    sku=azure_nextgen.sql.v20200801preview.SkuArgs(
+    sku=azure_nextgen.sql.SkuArgs(
         name="GP_Gen4",
         tier="GeneralPurpose",
     ),
@@ -289,7 +290,7 @@ managed_instance = azure_nextgen.sql.v20200801preview.ManagedInstance("managedIn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const managedInstance = new azure_nextgen.sql.v20200801preview.ManagedInstance("managedInstance", {
+const managedInstance = new azure_nextgen.sql.ManagedInstance("managedInstance", {
     administratorLogin: "dummylogin",
     administratorLoginPassword: "<administratorLoginPassword>",
     licenseType: "LicenseIncluded",
@@ -317,7 +318,7 @@ const managedInstance = new azure_nextgen.sql.v20200801preview.ManagedInstance("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagedInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -325,11 +326,11 @@ const managedInstance = new azure_nextgen.sql.v20200801preview.ManagedInstance("
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagedInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedInstance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedInstance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagedInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -350,7 +351,7 @@ const managedInstance = new azure_nextgen.sql.v20200801preview.ManagedInstance("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedInstanceArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedInstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -419,7 +420,7 @@ const managedInstance = new azure_nextgen.sql.v20200801preview.ManagedInstance("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedInstanceArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedInstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -458,7 +459,7 @@ const managedInstance = new azure_nextgen.sql.v20200801preview.ManagedInstance("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedInstanceArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedInstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -481,11 +482,11 @@ const managedInstance = new azure_nextgen.sql.v20200801preview.ManagedInstance("
 
 ## ManagedInstance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ManagedInstance resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ManagedInstance resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3033,7 +3034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:ManagedInstance testinstance /subscriptions/20d7082a-0fc7-4468-82bd-542694d5042b/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance 
+$ pulumi import azure-nextgen:sql:ManagedInstance testinstance /subscriptions/20d7082a-0fc7-4468-82bd-542694d5042b/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance 
 ```
 
 

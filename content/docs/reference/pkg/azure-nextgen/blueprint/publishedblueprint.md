@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.blueprint.PublishedBlueprint res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a published blueprint.
+API Version: 2018-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publishedBlueprint = new AzureNextGen.Blueprint.V20181101Preview.PublishedBlueprint("publishedBlueprint", new AzureNextGen.Blueprint.V20181101Preview.PublishedBlueprintArgs
+        var publishedBlueprint = new AzureNextGen.Blueprint.PublishedBlueprint("publishedBlueprint", new AzureNextGen.Blueprint.PublishedBlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,7 +75,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-published_blueprint = azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint",
+published_blueprint = azure_nextgen.blueprint.PublishedBlueprint("publishedBlueprint",
     blueprint_name="simpleBlueprint",
     resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
     version_id="v2")
@@ -89,7 +90,7 @@ published_blueprint = azure_nextgen.blueprint.v20181101preview.PublishedBlueprin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint", {
+const publishedBlueprint = new azure_nextgen.blueprint.PublishedBlueprint("publishedBlueprint", {
     blueprintName: "simpleBlueprint",
     resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
     versionId: "v2",
@@ -109,7 +110,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publishedBlueprint = new AzureNextGen.Blueprint.V20181101Preview.PublishedBlueprint("publishedBlueprint", new AzureNextGen.Blueprint.V20181101Preview.PublishedBlueprintArgs
+        var publishedBlueprint = new AzureNextGen.Blueprint.PublishedBlueprint("publishedBlueprint", new AzureNextGen.Blueprint.PublishedBlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
@@ -129,7 +130,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -157,7 +158,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-published_blueprint = azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint",
+published_blueprint = azure_nextgen.blueprint.PublishedBlueprint("publishedBlueprint",
     blueprint_name="simpleBlueprint",
     resource_scope="subscriptions/00000000-0000-0000-0000-000000000000",
     version_id="v2")
@@ -172,7 +173,7 @@ published_blueprint = azure_nextgen.blueprint.v20181101preview.PublishedBlueprin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint", {
+const publishedBlueprint = new azure_nextgen.blueprint.PublishedBlueprint("publishedBlueprint", {
     blueprintName: "simpleBlueprint",
     resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
     versionId: "v2",
@@ -190,7 +191,7 @@ const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.Publishe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PublishedBlueprint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PublishedBlueprintArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PublishedBlueprint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PublishedBlueprintArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -198,11 +199,11 @@ const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.Publishe
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPublishedBlueprint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PublishedBlueprintArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PublishedBlueprint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPublishedBlueprint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PublishedBlueprintArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PublishedBlueprint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PublishedBlueprint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PublishedBlueprintArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PublishedBlueprint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PublishedBlueprintArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -223,7 +224,7 @@ const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.Publishe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PublishedBlueprintArgs</span>
+        <span class="property-type"><a href="#inputs">PublishedBlueprintArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -292,7 +293,7 @@ const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.Publishe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PublishedBlueprintArgs</span>
+        <span class="property-type"><a href="#inputs">PublishedBlueprintArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -331,7 +332,7 @@ const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.Publishe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PublishedBlueprintArgs</span>
+        <span class="property-type"><a href="#inputs">PublishedBlueprintArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -354,11 +355,11 @@ const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.Publishe
 
 ## PublishedBlueprint Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2154,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:blueprint/v20181101preview:PublishedBlueprint v2 /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint 
+$ pulumi import azure-nextgen:blueprint:PublishedBlueprint v2 /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint 
 ```
 
 

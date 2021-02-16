@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.insights.Workbook resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Application Insights workbook definition.
-Latest API Version: 2020-10-20.
+API Version: 2020-10-20.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workbook = new AzureNextGen.Insights.Latest.Workbook("workbook", new AzureNextGen.Insights.Latest.WorkbookArgs
+        var workbook = new AzureNextGen.Insights.Workbook("workbook", new AzureNextGen.Insights.WorkbookArgs
         {
             Category = "workbook",
             DisplayName = "tttt",
@@ -63,7 +63,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workbook = azure_nextgen.insights.latest.Workbook("workbook",
+workbook = azure_nextgen.insights.Workbook("workbook",
     category="workbook",
     display_name="tttt",
     id="c0deea5e-3344-40f2-96f8-6f8e1c3b5722",
@@ -89,7 +89,7 @@ workbook = azure_nextgen.insights.latest.Workbook("workbook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
+const workbook = new azure_nextgen.insights.Workbook("workbook", {
     category: "workbook",
     displayName: "tttt",
     id: "c0deea5e-3344-40f2-96f8-6f8e1c3b5722",
@@ -120,13 +120,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workbook = new AzureNextGen.Insights.Latest.Workbook("workbook", new AzureNextGen.Insights.Latest.WorkbookArgs
+        var workbook = new AzureNextGen.Insights.Workbook("workbook", new AzureNextGen.Insights.WorkbookArgs
         {
             Category = "workbook",
             DisplayName = "tttt",
             Etag = "\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
             Id = "/subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/e378d137-1243-4256-b5c4-ad2a937cae79",
-            Identity = new AzureNextGen.Insights.Latest.Inputs.ManagedIdentityArgs
+            Identity = new AzureNextGen.Insights.Inputs.ManagedIdentityArgs
             {
                 Type = "UserAssigned",
             },
@@ -158,7 +158,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/latest"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -202,12 +202,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workbook = azure_nextgen.insights.latest.Workbook("workbook",
+workbook = azure_nextgen.insights.Workbook("workbook",
     category="workbook",
     display_name="tttt",
     etag="\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
     id="/subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/e378d137-1243-4256-b5c4-ad2a937cae79",
-    identity=azure_nextgen.insights.latest.ManagedIdentityArgs(
+    identity=azure_nextgen.insights.ManagedIdentityArgs(
         type="UserAssigned",
     ),
     kind="shared",
@@ -233,7 +233,7 @@ workbook = azure_nextgen.insights.latest.Workbook("workbook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
+const workbook = new azure_nextgen.insights.Workbook("workbook", {
     category: "workbook",
     displayName: "tttt",
     etag: "\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
@@ -267,7 +267,7 @@ const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WorkbookArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkbookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -275,11 +275,11 @@ const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkbook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WorkbookArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workbook</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkbook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkbookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workbook</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WorkbookArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkbookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -300,7 +300,7 @@ const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkbookArgs</span>
+        <span class="property-type"><a href="#inputs">WorkbookArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -369,7 +369,7 @@ const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkbookArgs</span>
+        <span class="property-type"><a href="#inputs">WorkbookArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -408,7 +408,7 @@ const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkbookArgs</span>
+        <span class="property-type"><a href="#inputs">WorkbookArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -431,11 +431,11 @@ const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
 
 ## Workbook Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Workbook resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Workbook resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1489,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:Workbook e378d137-1243-4256-b5c4-ad2a937cae79 /subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/72377f0c-b7e7-4044-a882-471bcbd9696e 
+$ pulumi import azure-nextgen:insights:Workbook e378d137-1243-4256-b5c4-ad2a937cae79 /subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/72377f0c-b7e7-4044-a882-471bcbd9696e 
 ```
 
 

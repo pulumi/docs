@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningcompute.Operation
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Instance of an Azure ML Operationalization Cluster resource.
+API Version: 2017-08-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,15 +27,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var operationalizationCluster = new AzureNextGen.MachineLearningCompute.V20170801Preview.OperationalizationCluster("operationalizationCluster", new AzureNextGen.MachineLearningCompute.V20170801Preview.OperationalizationClusterArgs
+        var operationalizationCluster = new AzureNextGen.MachineLearningCompute.OperationalizationCluster("operationalizationCluster", new AzureNextGen.MachineLearningCompute.OperationalizationClusterArgs
         {
             ClusterName = "myCluster",
             ClusterType = "ACS",
-            ContainerService = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.AcsClusterPropertiesArgs
+            ContainerService = new AzureNextGen.MachineLearningCompute.Inputs.AcsClusterPropertiesArgs
             {
-                OrchestratorProperties = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.KubernetesClusterPropertiesArgs
+                OrchestratorProperties = new AzureNextGen.MachineLearningCompute.Inputs.KubernetesClusterPropertiesArgs
                 {
-                    ServicePrincipal = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.ServicePrincipalPropertiesArgs
+                    ServicePrincipal = new AzureNextGen.MachineLearningCompute.Inputs.ServicePrincipalPropertiesArgs
                     {
                         ClientId = "abcdefghijklmnopqrt",
                         Secret = "<secret>",
@@ -43,9 +44,9 @@ class MyStack : Stack
                 OrchestratorType = "Kubernetes",
             },
             Description = "My Operationalization Cluster",
-            GlobalServiceConfiguration = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.GlobalServiceConfigurationArgs
+            GlobalServiceConfiguration = new AzureNextGen.MachineLearningCompute.Inputs.GlobalServiceConfigurationArgs
             {
-                Ssl = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.SslConfigurationArgs
+                Ssl = new AzureNextGen.MachineLearningCompute.Inputs.SslConfigurationArgs
                 {
                     Cert = "afjdklq2131casfakld=",
                     Cname = "foo.bar.com",
@@ -75,7 +76,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningcompute/v20170801preview"
+	machinelearningcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningcompute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -126,12 +127,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-operationalization_cluster = azure_nextgen.machinelearningcompute.v20170801preview.OperationalizationCluster("operationalizationCluster",
+operationalization_cluster = azure_nextgen.machinelearningcompute.OperationalizationCluster("operationalizationCluster",
     cluster_name="myCluster",
     cluster_type="ACS",
-    container_service=azure_nextgen.machinelearningcompute.v20170801preview.AcsClusterPropertiesArgs(
-        orchestrator_properties=azure_nextgen.machinelearningcompute.v20170801preview.KubernetesClusterPropertiesArgs(
-            service_principal=azure_nextgen.machinelearningcompute.v20170801preview.ServicePrincipalPropertiesArgs(
+    container_service=azure_nextgen.machinelearningcompute.AcsClusterPropertiesArgs(
+        orchestrator_properties=azure_nextgen.machinelearningcompute.KubernetesClusterPropertiesArgs(
+            service_principal=azure_nextgen.machinelearningcompute.ServicePrincipalPropertiesArgs(
                 client_id="abcdefghijklmnopqrt",
                 secret="<secret>",
             ),
@@ -139,8 +140,8 @@ operationalization_cluster = azure_nextgen.machinelearningcompute.v20170801previ
         orchestrator_type="Kubernetes",
     ),
     description="My Operationalization Cluster",
-    global_service_configuration=azure_nextgen.machinelearningcompute.v20170801preview.GlobalServiceConfigurationArgs(
-        ssl=azure_nextgen.machinelearningcompute.v20170801preview.SslConfigurationArgs(
+    global_service_configuration=azure_nextgen.machinelearningcompute.GlobalServiceConfigurationArgs(
+        ssl=azure_nextgen.machinelearningcompute.SslConfigurationArgs(
             cert="afjdklq2131casfakld=",
             cname="foo.bar.com",
             key="flksdafkldsajf=",
@@ -164,7 +165,7 @@ operationalization_cluster = azure_nextgen.machinelearningcompute.v20170801previ
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const operationalizationCluster = new azure_nextgen.machinelearningcompute.v20170801preview.OperationalizationCluster("operationalizationCluster", {
+const operationalizationCluster = new azure_nextgen.machinelearningcompute.OperationalizationCluster("operationalizationCluster", {
     clusterName: "myCluster",
     clusterType: "ACS",
     containerService: {
@@ -205,7 +206,7 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">OperationalizationClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -213,11 +214,11 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOperationalizationCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">OperationalizationClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OperationalizationCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOperationalizationCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OperationalizationCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">OperationalizationClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -238,7 +239,7 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OperationalizationClusterArgs</span>
+        <span class="property-type"><a href="#inputs">OperationalizationClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -307,7 +308,7 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OperationalizationClusterArgs</span>
+        <span class="property-type"><a href="#inputs">OperationalizationClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -346,7 +347,7 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OperationalizationClusterArgs</span>
+        <span class="property-type"><a href="#inputs">OperationalizationClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -369,11 +370,11 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
 
 ## OperationalizationCluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The OperationalizationCluster resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The OperationalizationCluster resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4643,7 +4644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:machinelearningcompute/v20170801preview:OperationalizationCluster MyCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningCompute/operationalizationClusters/MyCluster 
+$ pulumi import azure-nextgen:machinelearningcompute:OperationalizationCluster MyCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningCompute/operationalizationClusters/MyCluster 
 ```
 
 

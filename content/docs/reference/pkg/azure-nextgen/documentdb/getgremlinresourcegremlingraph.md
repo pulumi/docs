@@ -19,7 +19,7 @@ meta_desc: "Explore the GetGremlinResourceGremlinGraph function of the documentd
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGremlinResourceGremlinGraph<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGremlinResourceGremlinGraphArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetGremlinResourceGremlinGraphResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGremlinResourceGremlinGraph<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGremlinResourceGremlinGraphArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGremlinResourceGremlinGraphResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetGremlinResourceGremlinGraph function of the documentd
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGremlinResourceGremlinGraph<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGremlinResourceGremlinGraphArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupGremlinResourceGremlinGraphResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGremlinResourceGremlinGraph<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGremlinResourceGremlinGraphArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupGremlinResourceGremlinGraphResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupGremlinResourceGremlinGraph` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetGremlinResourceGremlinGraph function of the documentd
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGremlinResourceGremlinGraph </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetGremlinResourceGremlinGraphResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetGremlinResourceGremlinGraphArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGremlinResourceGremlinGraphResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGremlinResourceGremlinGraphArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -510,9 +510,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -574,9 +571,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="compositepathresponse">Composite<wbr>Path<wbr>Response</h4>
-
-
-
 
 
 
@@ -677,9 +671,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -819,12 +810,18 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="systemkey_csharp">
+<a href="#systemkey_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the container is using a system generated partition key{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
@@ -833,7 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="paths_csharp">
@@ -858,6 +855,15 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="systemkey_go">
+<a href="#systemkey_go" style="color: inherit; text-decoration: inherit;">System<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the container is using a system generated partition key{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kind_go">
@@ -866,7 +872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="paths_go">
@@ -891,6 +897,15 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="systemkey_nodejs">
+<a href="#systemkey_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the container is using a system generated partition key{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
@@ -899,7 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="paths_nodejs">
@@ -924,6 +939,15 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="system_key_python">
+<a href="#system_key_python" style="color: inherit; text-decoration: inherit;">system_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the container is using a system generated partition key{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kind_python">
@@ -932,7 +956,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="paths_python">
@@ -955,9 +979,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="excludedpathresponse">Excluded<wbr>Path<wbr>Response</h4>
-
-
-
 
 
 
@@ -1022,9 +1043,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="gremlingraphgetpropertiesresponseoptions">Gremlin<wbr>Graph<wbr>Get<wbr>Properties<wbr>Response<wbr>Options</h4>
-
-
-
 
 
 
@@ -1125,9 +1143,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="gremlingraphgetpropertiesresponseresource">Gremlin<wbr>Graph<wbr>Get<wbr>Properties<wbr>Response<wbr>Resource</h4>
-
-
-
 
 
 
@@ -1483,9 +1498,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1583,9 +1595,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="indexesresponse">Indexes<wbr>Response</h4>
-
-
-
 
 
 
@@ -1722,9 +1731,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -1972,9 +1978,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2075,9 +2078,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2139,9 +2139,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="uniquekeyresponse">Unique<wbr>Key<wbr>Response</h4>
-
-
-
 
 
 

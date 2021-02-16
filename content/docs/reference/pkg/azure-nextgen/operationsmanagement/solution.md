@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.operationsmanagement.Solution re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The container for solution.
+API Version: 2015-11-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -26,17 +27,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var solution = new AzureNextGen.OperationsManagement.V20151101Preview.Solution("solution", new AzureNextGen.OperationsManagement.V20151101Preview.SolutionArgs
+        var solution = new AzureNextGen.OperationsManagement.Solution("solution", new AzureNextGen.OperationsManagement.SolutionArgs
         {
             Location = "East US",
-            Plan = new AzureNextGen.OperationsManagement.V20151101Preview.Inputs.SolutionPlanArgs
+            Plan = new AzureNextGen.OperationsManagement.Inputs.SolutionPlanArgs
             {
                 Name = "name1",
                 Product = "product1",
                 PromotionCode = "promocode1",
                 Publisher = "publisher1",
             },
-            Properties = new AzureNextGen.OperationsManagement.V20151101Preview.Inputs.SolutionPropertiesArgs
+            Properties = new AzureNextGen.OperationsManagement.Inputs.SolutionPropertiesArgs
             {
                 ContainedResources = 
                 {
@@ -67,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement/v20151101preview"
+	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -112,15 +113,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-solution = azure_nextgen.operationsmanagement.v20151101preview.Solution("solution",
+solution = azure_nextgen.operationsmanagement.Solution("solution",
     location="East US",
-    plan=azure_nextgen.operationsmanagement.v20151101preview.SolutionPlanArgs(
+    plan=azure_nextgen.operationsmanagement.SolutionPlanArgs(
         name="name1",
         product="product1",
         promotion_code="promocode1",
         publisher="publisher1",
     ),
-    properties=azure_nextgen.operationsmanagement.v20151101preview.SolutionPropertiesArgs(
+    properties=azure_nextgen.operationsmanagement.SolutionPropertiesArgs(
         contained_resources=[
             "/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource1",
             "/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource2",
@@ -144,7 +145,7 @@ solution = azure_nextgen.operationsmanagement.v20151101preview.Solution("solutio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const solution = new azure_nextgen.operationsmanagement.v20151101preview.Solution("solution", {
+const solution = new azure_nextgen.operationsmanagement.Solution("solution", {
     location: "East US",
     plan: {
         name: "name1",
@@ -179,7 +180,7 @@ const solution = new azure_nextgen.operationsmanagement.v20151101preview.Solutio
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SolutionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -187,11 +188,11 @@ const solution = new azure_nextgen.operationsmanagement.v20151101preview.Solutio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SolutionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Solution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Solution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SolutionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -212,7 +213,7 @@ const solution = new azure_nextgen.operationsmanagement.v20151101preview.Solutio
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SolutionArgs</span>
+        <span class="property-type"><a href="#inputs">SolutionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,7 +282,7 @@ const solution = new azure_nextgen.operationsmanagement.v20151101preview.Solutio
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SolutionArgs</span>
+        <span class="property-type"><a href="#inputs">SolutionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -320,7 +321,7 @@ const solution = new azure_nextgen.operationsmanagement.v20151101preview.Solutio
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SolutionArgs</span>
+        <span class="property-type"><a href="#inputs">SolutionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -343,11 +344,11 @@ const solution = new azure_nextgen.operationsmanagement.v20151101preview.Solutio
 
 ## Solution Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Solution resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Solution resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1389,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:operationsmanagement/v20151101preview:Solution solution1 subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationsManagement/solutions/solution1 
+$ pulumi import azure-nextgen:operationsmanagement:Solution solution1 subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationsManagement/solutions/solution1 
 ```
 
 

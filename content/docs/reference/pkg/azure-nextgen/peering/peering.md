@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.peering.Peering resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Peering is a logical representation of a set of connections to the Microsoft Cloud Edge at a location.
-Latest API Version: 2020-10-01.
+API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var peering = new AzureNextGen.Peering.Latest.Peering("peering", new AzureNextGen.Peering.Latest.PeeringArgs
+        var peering = new AzureNextGen.Peering.Peering("peering", new AzureNextGen.Peering.PeeringArgs
         {
-            Direct = new AzureNextGen.Peering.Latest.Inputs.PeeringPropertiesDirectArgs
+            Direct = new AzureNextGen.Peering.Inputs.PeeringPropertiesDirectArgs
             {
                 Connections = 
                 {
-                    new AzureNextGen.Peering.Latest.Inputs.DirectConnectionArgs
+                    new AzureNextGen.Peering.Inputs.DirectConnectionArgs
                     {
                         BandwidthInMbps = 10000,
-                        BgpSession = new AzureNextGen.Peering.Latest.Inputs.BgpSessionArgs
+                        BgpSession = new AzureNextGen.Peering.Inputs.BgpSessionArgs
                         {
                             MaxPrefixesAdvertisedV4 = 1000,
                             MaxPrefixesAdvertisedV6 = 100,
@@ -49,7 +49,7 @@ class MyStack : Stack
                         SessionAddressProvider = "Peer",
                         UseForPeeringService = false,
                     },
-                    new AzureNextGen.Peering.Latest.Inputs.DirectConnectionArgs
+                    new AzureNextGen.Peering.Inputs.DirectConnectionArgs
                     {
                         BandwidthInMbps = 10000,
                         ConnectionIdentifier = "8AB00818-D533-4504-A25A-03A17F61201C",
@@ -59,7 +59,7 @@ class MyStack : Stack
                     },
                 },
                 DirectPeeringType = "Edge",
-                PeerAsn = new AzureNextGen.Peering.Latest.Inputs.SubResourceArgs
+                PeerAsn = new AzureNextGen.Peering.Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
                 },
@@ -69,7 +69,7 @@ class MyStack : Stack
             PeeringLocation = "peeringLocation0",
             PeeringName = "peeringName",
             ResourceGroupName = "rgName",
-            Sku = new AzureNextGen.Peering.Latest.Inputs.PeeringSkuArgs
+            Sku = new AzureNextGen.Peering.Inputs.PeeringSkuArgs
             {
                 Name = "Basic_Direct_Free",
             },
@@ -88,7 +88,7 @@ class MyStack : Stack
 package main
 
 import (
-	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering/latest"
+	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -150,12 +150,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-peering = azure_nextgen.peering.latest.Peering("peering",
-    direct=azure_nextgen.peering.latest.PeeringPropertiesDirectArgs(
+peering = azure_nextgen.peering.Peering("peering",
+    direct=azure_nextgen.peering.PeeringPropertiesDirectArgs(
         connections=[
-            azure_nextgen.peering.latest.DirectConnectionArgs(
+            azure_nextgen.peering.DirectConnectionArgs(
                 bandwidth_in_mbps=10000,
-                bgp_session=azure_nextgen.peering.latest.BgpSessionArgs(
+                bgp_session=azure_nextgen.peering.BgpSessionArgs(
                     max_prefixes_advertised_v4=1000,
                     max_prefixes_advertised_v6=100,
                     md5_authentication_key="test-md5-auth-key",
@@ -167,7 +167,7 @@ peering = azure_nextgen.peering.latest.Peering("peering",
                 session_address_provider="Peer",
                 use_for_peering_service=False,
             ),
-            azure_nextgen.peering.latest.DirectConnectionArgs(
+            azure_nextgen.peering.DirectConnectionArgs(
                 bandwidth_in_mbps=10000,
                 connection_identifier="8AB00818-D533-4504-A25A-03A17F61201C",
                 peering_db_facility_id=99999,
@@ -176,7 +176,7 @@ peering = azure_nextgen.peering.latest.Peering("peering",
             ),
         ],
         direct_peering_type="Edge",
-        peer_asn=azure_nextgen.peering.latest.SubResourceArgs(
+        peer_asn=azure_nextgen.peering.SubResourceArgs(
             id="/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
         ),
     ),
@@ -185,7 +185,7 @@ peering = azure_nextgen.peering.latest.Peering("peering",
     peering_location="peeringLocation0",
     peering_name="peeringName",
     resource_group_name="rgName",
-    sku=azure_nextgen.peering.latest.PeeringSkuArgs(
+    sku=azure_nextgen.peering.PeeringSkuArgs(
         name="Basic_Direct_Free",
     ))
 
@@ -199,7 +199,7 @@ peering = azure_nextgen.peering.latest.Peering("peering",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const peering = new azure_nextgen.peering.latest.Peering("peering", {
+const peering = new azure_nextgen.peering.Peering("peering", {
     direct: {
         connections: [
             {
@@ -253,16 +253,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var peering = new AzureNextGen.Peering.Latest.Peering("peering", new AzureNextGen.Peering.Latest.PeeringArgs
+        var peering = new AzureNextGen.Peering.Peering("peering", new AzureNextGen.Peering.PeeringArgs
         {
-            Direct = new AzureNextGen.Peering.Latest.Inputs.PeeringPropertiesDirectArgs
+            Direct = new AzureNextGen.Peering.Inputs.PeeringPropertiesDirectArgs
             {
                 Connections = 
                 {
-                    new AzureNextGen.Peering.Latest.Inputs.DirectConnectionArgs
+                    new AzureNextGen.Peering.Inputs.DirectConnectionArgs
                     {
                         BandwidthInMbps = 10000,
-                        BgpSession = new AzureNextGen.Peering.Latest.Inputs.BgpSessionArgs
+                        BgpSession = new AzureNextGen.Peering.Inputs.BgpSessionArgs
                         {
                             MaxPrefixesAdvertisedV4 = 1000,
                             MaxPrefixesAdvertisedV6 = 100,
@@ -277,7 +277,7 @@ class MyStack : Stack
                     },
                 },
                 DirectPeeringType = "IxRs",
-                PeerAsn = new AzureNextGen.Peering.Latest.Inputs.SubResourceArgs
+                PeerAsn = new AzureNextGen.Peering.Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
                 },
@@ -287,7 +287,7 @@ class MyStack : Stack
             PeeringLocation = "peeringLocation0",
             PeeringName = "peeringName",
             ResourceGroupName = "rgName",
-            Sku = new AzureNextGen.Peering.Latest.Inputs.PeeringSkuArgs
+            Sku = new AzureNextGen.Peering.Inputs.PeeringSkuArgs
             {
                 Name = "Premium_Direct_Free",
             },
@@ -306,7 +306,7 @@ class MyStack : Stack
 package main
 
 import (
-	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering/latest"
+	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -361,11 +361,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-peering = azure_nextgen.peering.latest.Peering("peering",
-    direct=azure_nextgen.peering.latest.PeeringPropertiesDirectArgs(
-        connections=[azure_nextgen.peering.latest.DirectConnectionArgs(
+peering = azure_nextgen.peering.Peering("peering",
+    direct=azure_nextgen.peering.PeeringPropertiesDirectArgs(
+        connections=[azure_nextgen.peering.DirectConnectionArgs(
             bandwidth_in_mbps=10000,
-            bgp_session=azure_nextgen.peering.latest.BgpSessionArgs(
+            bgp_session=azure_nextgen.peering.BgpSessionArgs(
                 max_prefixes_advertised_v4=1000,
                 max_prefixes_advertised_v6=100,
                 microsoft_session_i_pv4_address="192.168.0.123",
@@ -378,7 +378,7 @@ peering = azure_nextgen.peering.latest.Peering("peering",
             use_for_peering_service=True,
         )],
         direct_peering_type="IxRs",
-        peer_asn=azure_nextgen.peering.latest.SubResourceArgs(
+        peer_asn=azure_nextgen.peering.SubResourceArgs(
             id="/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
         ),
     ),
@@ -387,7 +387,7 @@ peering = azure_nextgen.peering.latest.Peering("peering",
     peering_location="peeringLocation0",
     peering_name="peeringName",
     resource_group_name="rgName",
-    sku=azure_nextgen.peering.latest.PeeringSkuArgs(
+    sku=azure_nextgen.peering.PeeringSkuArgs(
         name="Premium_Direct_Free",
     ))
 
@@ -401,7 +401,7 @@ peering = azure_nextgen.peering.latest.Peering("peering",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const peering = new azure_nextgen.peering.latest.Peering("peering", {
+const peering = new azure_nextgen.peering.Peering("peering", {
     direct: {
         connections: [{
             bandwidthInMbps: 10000,
@@ -446,15 +446,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var peering = new AzureNextGen.Peering.Latest.Peering("peering", new AzureNextGen.Peering.Latest.PeeringArgs
+        var peering = new AzureNextGen.Peering.Peering("peering", new AzureNextGen.Peering.PeeringArgs
         {
-            Exchange = new AzureNextGen.Peering.Latest.Inputs.PeeringPropertiesExchangeArgs
+            Exchange = new AzureNextGen.Peering.Inputs.PeeringPropertiesExchangeArgs
             {
                 Connections = 
                 {
-                    new AzureNextGen.Peering.Latest.Inputs.ExchangeConnectionArgs
+                    new AzureNextGen.Peering.Inputs.ExchangeConnectionArgs
                     {
-                        BgpSession = new AzureNextGen.Peering.Latest.Inputs.BgpSessionArgs
+                        BgpSession = new AzureNextGen.Peering.Inputs.BgpSessionArgs
                         {
                             MaxPrefixesAdvertisedV4 = 1000,
                             MaxPrefixesAdvertisedV6 = 100,
@@ -465,9 +465,9 @@ class MyStack : Stack
                         ConnectionIdentifier = "CE495334-0E94-4E51-8164-8116D6CD284D",
                         PeeringDBFacilityId = 99999,
                     },
-                    new AzureNextGen.Peering.Latest.Inputs.ExchangeConnectionArgs
+                    new AzureNextGen.Peering.Inputs.ExchangeConnectionArgs
                     {
-                        BgpSession = new AzureNextGen.Peering.Latest.Inputs.BgpSessionArgs
+                        BgpSession = new AzureNextGen.Peering.Inputs.BgpSessionArgs
                         {
                             MaxPrefixesAdvertisedV4 = 1000,
                             MaxPrefixesAdvertisedV6 = 100,
@@ -479,7 +479,7 @@ class MyStack : Stack
                         PeeringDBFacilityId = 99999,
                     },
                 },
-                PeerAsn = new AzureNextGen.Peering.Latest.Inputs.SubResourceArgs
+                PeerAsn = new AzureNextGen.Peering.Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
                 },
@@ -489,7 +489,7 @@ class MyStack : Stack
             PeeringLocation = "peeringLocation0",
             PeeringName = "peeringName",
             ResourceGroupName = "rgName",
-            Sku = new AzureNextGen.Peering.Latest.Inputs.PeeringSkuArgs
+            Sku = new AzureNextGen.Peering.Inputs.PeeringSkuArgs
             {
                 Name = "Basic_Exchange_Free",
             },
@@ -508,7 +508,7 @@ class MyStack : Stack
 package main
 
 import (
-	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering/latest"
+	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -570,11 +570,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-peering = azure_nextgen.peering.latest.Peering("peering",
-    exchange=azure_nextgen.peering.latest.PeeringPropertiesExchangeArgs(
+peering = azure_nextgen.peering.Peering("peering",
+    exchange=azure_nextgen.peering.PeeringPropertiesExchangeArgs(
         connections=[
-            azure_nextgen.peering.latest.ExchangeConnectionArgs(
-                bgp_session=azure_nextgen.peering.latest.BgpSessionArgs(
+            azure_nextgen.peering.ExchangeConnectionArgs(
+                bgp_session=azure_nextgen.peering.BgpSessionArgs(
                     max_prefixes_advertised_v4=1000,
                     max_prefixes_advertised_v6=100,
                     md5_authentication_key="test-md5-auth-key",
@@ -584,8 +584,8 @@ peering = azure_nextgen.peering.latest.Peering("peering",
                 connection_identifier="CE495334-0E94-4E51-8164-8116D6CD284D",
                 peering_db_facility_id=99999,
             ),
-            azure_nextgen.peering.latest.ExchangeConnectionArgs(
-                bgp_session=azure_nextgen.peering.latest.BgpSessionArgs(
+            azure_nextgen.peering.ExchangeConnectionArgs(
+                bgp_session=azure_nextgen.peering.BgpSessionArgs(
                     max_prefixes_advertised_v4=1000,
                     max_prefixes_advertised_v6=100,
                     md5_authentication_key="test-md5-auth-key",
@@ -596,7 +596,7 @@ peering = azure_nextgen.peering.latest.Peering("peering",
                 peering_db_facility_id=99999,
             ),
         ],
-        peer_asn=azure_nextgen.peering.latest.SubResourceArgs(
+        peer_asn=azure_nextgen.peering.SubResourceArgs(
             id="/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
         ),
     ),
@@ -605,7 +605,7 @@ peering = azure_nextgen.peering.latest.Peering("peering",
     peering_location="peeringLocation0",
     peering_name="peeringName",
     resource_group_name="rgName",
-    sku=azure_nextgen.peering.latest.PeeringSkuArgs(
+    sku=azure_nextgen.peering.PeeringSkuArgs(
         name="Basic_Exchange_Free",
     ))
 
@@ -619,7 +619,7 @@ peering = azure_nextgen.peering.latest.Peering("peering",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const peering = new azure_nextgen.peering.latest.Peering("peering", {
+const peering = new azure_nextgen.peering.Peering("peering", {
     exchange: {
         connections: [
             {
@@ -671,7 +671,7 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -679,11 +679,11 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Peering</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Peering</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PeeringArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -704,7 +704,7 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PeeringArgs</span>
+        <span class="property-type"><a href="#inputs">PeeringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -773,7 +773,7 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PeeringArgs</span>
+        <span class="property-type"><a href="#inputs">PeeringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -812,7 +812,7 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PeeringArgs</span>
+        <span class="property-type"><a href="#inputs">PeeringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -835,11 +835,11 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
 
 ## Peering Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Peering resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Peering resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4353,7 +4353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:peering/latest:Peering peeringName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peerings/peeringName 
+$ pulumi import azure-nextgen:peering:Peering peeringName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peerings/peeringName 
 ```
 
 

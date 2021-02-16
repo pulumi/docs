@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.MongoDBResourceMongoD
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB MongoDB collection.
-Latest API Version: 2020-09-01.
+API Version: 2021-01-15.
 
 {{% examples %}}
 ## Example Usage
@@ -27,28 +27,28 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var mongoDBResourceMongoDBCollection = new AzureNextGen.DocumentDB.Latest.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection", new AzureNextGen.DocumentDB.Latest.MongoDBResourceMongoDBCollectionArgs
+        var mongoDBResourceMongoDBCollection = new AzureNextGen.DocumentDB.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection", new AzureNextGen.DocumentDB.MongoDBResourceMongoDBCollectionArgs
         {
             AccountName = "ddb1",
             CollectionName = "collectionName",
             DatabaseName = "databaseName",
             Location = "West US",
             Options = ,
-            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.MongoDBCollectionResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Inputs.MongoDBCollectionResourceArgs
             {
                 Id = "collectionName",
                 Indexes = 
                 {
-                    new AzureNextGen.DocumentDB.Latest.Inputs.MongoIndexArgs
+                    new AzureNextGen.DocumentDB.Inputs.MongoIndexArgs
                     {
-                        Key = new AzureNextGen.DocumentDB.Latest.Inputs.MongoIndexKeysArgs
+                        Key = new AzureNextGen.DocumentDB.Inputs.MongoIndexKeysArgs
                         {
                             Keys = 
                             {
                                 "testKey",
                             },
                         },
-                        Options = new AzureNextGen.DocumentDB.Latest.Inputs.MongoIndexOptionsArgs
+                        Options = new AzureNextGen.DocumentDB.Inputs.MongoIndexOptionsArgs
                         {
                             ExpireAfterSeconds = 100,
                             Unique = true,
@@ -77,7 +77,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -128,19 +128,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-mongo_db_resource_mongo_db_collection = azure_nextgen.documentdb.latest.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection",
+mongo_db_resource_mongo_db_collection = azure_nextgen.documentdb.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection",
     account_name="ddb1",
     collection_name="collectionName",
     database_name="databaseName",
     location="West US",
-    options=azure_nextgen.documentdb.latest.CreateUpdateOptionsArgs(),
-    resource=azure_nextgen.documentdb.latest.MongoDBCollectionResourceArgs(
+    options=azure_nextgen.documentdb.CreateUpdateOptionsArgs(),
+    resource=azure_nextgen.documentdb.MongoDBCollectionResourceArgs(
         id="collectionName",
-        indexes=[azure_nextgen.documentdb.latest.MongoIndexArgs(
-            key=azure_nextgen.documentdb.latest.MongoIndexKeysArgs(
+        indexes=[azure_nextgen.documentdb.MongoIndexArgs(
+            key=azure_nextgen.documentdb.MongoIndexKeysArgs(
                 keys=["testKey"],
             ),
-            options=azure_nextgen.documentdb.latest.MongoIndexOptionsArgs(
+            options=azure_nextgen.documentdb.MongoIndexOptionsArgs(
                 expire_after_seconds=100,
                 unique=True,
             ),
@@ -162,7 +162,7 @@ mongo_db_resource_mongo_db_collection = azure_nextgen.documentdb.latest.MongoDBR
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const mongoDBResourceMongoDBCollection = new azure_nextgen.documentdb.latest.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection", {
+const mongoDBResourceMongoDBCollection = new azure_nextgen.documentdb.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection", {
     accountName: "ddb1",
     collectionName: "collectionName",
     databaseName: "databaseName",
@@ -199,7 +199,7 @@ const mongoDBResourceMongoDBCollection = new azure_nextgen.documentdb.latest.Mon
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MongoDBResourceMongoDBCollection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">MongoDBResourceMongoDBCollectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MongoDBResourceMongoDBCollection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MongoDBResourceMongoDBCollectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -207,11 +207,11 @@ const mongoDBResourceMongoDBCollection = new azure_nextgen.documentdb.latest.Mon
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMongoDBResourceMongoDBCollection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">MongoDBResourceMongoDBCollectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MongoDBResourceMongoDBCollection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMongoDBResourceMongoDBCollection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MongoDBResourceMongoDBCollectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MongoDBResourceMongoDBCollection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MongoDBResourceMongoDBCollection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">MongoDBResourceMongoDBCollectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MongoDBResourceMongoDBCollection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MongoDBResourceMongoDBCollectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -232,7 +232,7 @@ const mongoDBResourceMongoDBCollection = new azure_nextgen.documentdb.latest.Mon
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MongoDBResourceMongoDBCollectionArgs</span>
+        <span class="property-type"><a href="#inputs">MongoDBResourceMongoDBCollectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,7 +301,7 @@ const mongoDBResourceMongoDBCollection = new azure_nextgen.documentdb.latest.Mon
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MongoDBResourceMongoDBCollectionArgs</span>
+        <span class="property-type"><a href="#inputs">MongoDBResourceMongoDBCollectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -340,7 +340,7 @@ const mongoDBResourceMongoDBCollection = new azure_nextgen.documentdb.latest.Mon
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">MongoDBResourceMongoDBCollectionArgs</span>
+        <span class="property-type"><a href="#inputs">MongoDBResourceMongoDBCollectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -363,11 +363,11 @@ const mongoDBResourceMongoDBCollection = new azure_nextgen.documentdb.latest.Mon
 
 ## MongoDBResourceMongoDBCollection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The MongoDBResourceMongoDBCollection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The MongoDBResourceMongoDBCollection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2121,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:documentdb/latest:MongoDBResourceMongoDBCollection collectionName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/mongodbDatabases/databaseName/mongodbCollections/collectionName 
+$ pulumi import azure-nextgen:documentdb:MongoDBResourceMongoDBCollection collectionName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/mongodbDatabases/databaseName/mongodbCollections/collectionName 
 ```
 
 

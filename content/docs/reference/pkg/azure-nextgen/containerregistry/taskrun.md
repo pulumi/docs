@@ -12,6 +12,7 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.TaskRun resour
 
 The task run that has the ARM resource and properties.
 The task run will have the information of request and result of a run.
+API Version: 2019-06-01-preview.
 
 {{% examples %}}
 ## Example Usage
@@ -27,23 +28,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var taskRun = new AzureNextGen.ContainerRegistry.V20190601Preview.TaskRun("taskRun", new AzureNextGen.ContainerRegistry.V20190601Preview.TaskRunArgs
+        var taskRun = new AzureNextGen.ContainerRegistry.TaskRun("taskRun", new AzureNextGen.ContainerRegistry.TaskRunArgs
         {
             ForceUpdateTag = "test",
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
-            RunRequest = 
+            RunRequest = new AzureNextGen.ContainerRegistry.Inputs.EncodedTaskRunRequestArgs
             {
-                { "credentials",  },
-                { "encodedTaskContent", "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K" },
-                { "encodedValuesContent", "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==" },
-                { "platform", new AzureNextGen.ContainerRegistry.V20190601Preview.Inputs.PlatformPropertiesArgs
+                Credentials = ,
+                EncodedTaskContent = "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
+                EncodedValuesContent = "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
+                Platform = new AzureNextGen.ContainerRegistry.Inputs.PlatformPropertiesArgs
                 {
                     Architecture = "amd64",
                     Os = "Linux",
-                } },
-                { "type", "EncodedTaskRunRequest" },
-                { "values", {} },
+                },
+                Type = "EncodedTaskRunRequest",
+                Values = {},
             },
             TaskRunName = "myRun",
         });
@@ -56,7 +57,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerregistry.NewTaskRun(ctx, "taskRun", &containerregistry.TaskRunArgs{
+			ForceUpdateTag:    pulumi.String("test"),
+			RegistryName:      pulumi.String("myRegistry"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			RunRequest: &containerregistry.EncodedTaskRunRequestArgs{
+				Credentials:          nil,
+				EncodedTaskContent:   pulumi.String("c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K"),
+				EncodedValuesContent: pulumi.String("Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg=="),
+				Platform: &containerregistry.PlatformPropertiesArgs{
+					Architecture: pulumi.String("amd64"),
+					Os:           pulumi.String("Linux"),
+				},
+				Type:   pulumi.String("EncodedTaskRunRequest"),
+				Values: containerregistry.SetValueArray{},
+			},
+			TaskRunName: pulumi.String("myRun"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -65,21 +102,21 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-task_run = azure_nextgen.containerregistry.v20190601preview.TaskRun("taskRun",
+task_run = azure_nextgen.containerregistry.TaskRun("taskRun",
     force_update_tag="test",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
-    run_request={
-        "credentials": azure_nextgen.containerregistry.v20190601preview.CredentialsArgs(),
-        "encodedTaskContent": "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
-        "encodedValuesContent": "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
-        "platform": azure_nextgen.containerregistry.v20190601preview.PlatformPropertiesArgs(
+    run_request=azure_nextgen.containerregistry.EncodedTaskRunRequestArgs(
+        credentials=azure_nextgen.containerregistry.CredentialsArgs(),
+        encoded_task_content="c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
+        encoded_values_content="Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
+        platform=azure_nextgen.containerregistry.PlatformPropertiesArgs(
             architecture="amd64",
             os="Linux",
         ),
-        "type": "EncodedTaskRunRequest",
-        "values": [],
-    },
+        type="EncodedTaskRunRequest",
+        values=[],
+    ),
     task_run_name="myRun")
 
 ```
@@ -92,7 +129,7 @@ task_run = azure_nextgen.containerregistry.v20190601preview.TaskRun("taskRun",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const taskRun = new azure_nextgen.containerregistry.v20190601preview.TaskRun("taskRun", {
+const taskRun = new azure_nextgen.containerregistry.TaskRun("taskRun", {
     forceUpdateTag: "test",
     registryName: "myRegistry",
     resourceGroupName: "myResourceGroup",
@@ -122,7 +159,7 @@ const taskRun = new azure_nextgen.containerregistry.v20190601preview.TaskRun("ta
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">TaskRunArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskRunArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -130,11 +167,11 @@ const taskRun = new azure_nextgen.containerregistry.v20190601preview.TaskRun("ta
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTaskRun</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">TaskRunArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TaskRun</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTaskRun</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TaskRunArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TaskRun</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">TaskRunArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TaskRunArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -155,7 +192,7 @@ const taskRun = new azure_nextgen.containerregistry.v20190601preview.TaskRun("ta
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TaskRunArgs</span>
+        <span class="property-type"><a href="#inputs">TaskRunArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -224,7 +261,7 @@ const taskRun = new azure_nextgen.containerregistry.v20190601preview.TaskRun("ta
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TaskRunArgs</span>
+        <span class="property-type"><a href="#inputs">TaskRunArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -263,7 +300,7 @@ const taskRun = new azure_nextgen.containerregistry.v20190601preview.TaskRun("ta
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">TaskRunArgs</span>
+        <span class="property-type"><a href="#inputs">TaskRunArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -286,11 +323,11 @@ const taskRun = new azure_nextgen.containerregistry.v20190601preview.TaskRun("ta
 
 ## TaskRun Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The TaskRun resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The TaskRun resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -9036,7 +9073,7 @@ the source registry during the run.{{% /md %}}</dd>
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:containerregistry/v20190601preview:TaskRun myrun /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/taskRuns/myRun 
+$ pulumi import azure-nextgen:containerregistry:TaskRun myrun /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/taskRuns/myRun 
 ```
 
 

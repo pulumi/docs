@@ -19,7 +19,7 @@ meta_desc: "Explore the GetContentKeyPolicyPropertiesWithSecrets function of the
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getContentKeyPolicyPropertiesWithSecrets<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetContentKeyPolicyPropertiesWithSecretsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetContentKeyPolicyPropertiesWithSecretsResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getContentKeyPolicyPropertiesWithSecrets<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetContentKeyPolicyPropertiesWithSecretsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetContentKeyPolicyPropertiesWithSecretsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,14 @@ meta_desc: "Explore the GetContentKeyPolicyPropertiesWithSecrets function of the
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContentKeyPolicyPropertiesWithSecrets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetContentKeyPolicyPropertiesWithSecretsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">GetContentKeyPolicyPropertiesWithSecretsResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContentKeyPolicyPropertiesWithSecrets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetContentKeyPolicyPropertiesWithSecretsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetContentKeyPolicyPropertiesWithSecretsResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetContentKeyPolicyPropertiesWithSecrets </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetContentKeyPolicyPropertiesWithSecretsResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetContentKeyPolicyPropertiesWithSecretsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetContentKeyPolicyPropertiesWithSecretsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetContentKeyPolicyPropertiesWithSecretsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -400,9 +400,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -428,9 +425,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contentkeypolicyfairplayconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 
@@ -678,9 +672,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -781,9 +772,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -809,9 +797,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contentkeypolicyoptionresponse">Content<wbr>Key<wbr>Policy<wbr>Option<wbr>Response</h4>
-
-
-
 
 
 
@@ -987,9 +972,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1090,9 +1072,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1118,9 +1097,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response</h4>
-
-
-
 
 
 
@@ -1185,9 +1161,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response</h4>
-
-
-
 
 
 
@@ -1288,9 +1261,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contentkeypolicyplayreadylicenseresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response</h4>
-
-
-
 
 
 
@@ -1679,9 +1649,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contentkeypolicyplayreadyplayrightresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response</h4>
-
-
-
 
 
 
@@ -2181,9 +2148,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2284,9 +2248,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2348,9 +2309,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contentkeypolicytokenclaimresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response</h4>
-
-
-
 
 
 
@@ -2451,9 +2409,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contentkeypolicytokenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response</h4>
-
-
-
 
 
 
@@ -2737,9 +2692,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2768,9 +2720,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2796,9 +2745,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contentkeypolicywidevineconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 
@@ -2863,9 +2809,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contentkeypolicyx509certificatetokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response</h4>
-
-
-
 
 
 

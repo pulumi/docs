@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.RecordSet resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
-Latest API Version: 2020-06-01.
+API Version: 2020-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
         {
             ARecords = 
             {
-                new AzureNextGen.Network.Latest.Inputs.ARecordArgs
+                new AzureNextGen.Network.Inputs.ARecordArgs
                 {
                     Ipv4Address = "1.2.3.4",
                 },
@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,8 +98,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.latest.RecordSet("recordSet",
-    a_records=[azure_nextgen.network.latest.ARecordArgs(
+record_set = azure_nextgen.network.RecordSet("recordSet",
+    a_records=[azure_nextgen.network.ARecordArgs(
         ipv4_address="1.2.3.4",
     )],
     metadata={
@@ -121,7 +121,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
     aRecords: [{
         ipv4Address: "1.2.3.4",
     }],
@@ -149,11 +149,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
         {
             AaaaRecords = 
             {
-                new AzureNextGen.Network.Latest.Inputs.AaaaRecordArgs
+                new AzureNextGen.Network.Inputs.AaaaRecordArgs
                 {
                     Ipv6Address = "::1",
                 },
@@ -182,7 +182,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -220,8 +220,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.latest.RecordSet("recordSet",
-    aaaa_records=[azure_nextgen.network.latest.AaaaRecordArgs(
+record_set = azure_nextgen.network.RecordSet("recordSet",
+    aaaa_records=[azure_nextgen.network.AaaaRecordArgs(
         ipv6_address="::1",
     )],
     metadata={
@@ -243,7 +243,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
     aaaaRecords: [{
         ipv6Address: "::1",
     }],
@@ -271,9 +271,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
         {
-            CnameRecord = new AzureNextGen.Network.Latest.Inputs.CnameRecordArgs
+            CnameRecord = new AzureNextGen.Network.Inputs.CnameRecordArgs
             {
                 Cname = "contoso.com",
             },
@@ -301,7 +301,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -337,8 +337,8 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.latest.RecordSet("recordSet",
-    cname_record=azure_nextgen.network.latest.CnameRecordArgs(
+record_set = azure_nextgen.network.RecordSet("recordSet",
+    cname_record=azure_nextgen.network.CnameRecordArgs(
         cname="contoso.com",
     ),
     metadata={
@@ -360,7 +360,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
     cnameRecord: {
         cname: "contoso.com",
     },
@@ -388,7 +388,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
         {
             Metadata = 
             {
@@ -396,7 +396,7 @@ class MyStack : Stack
             },
             MxRecords = 
             {
-                new AzureNextGen.Network.Latest.Inputs.MxRecordArgs
+                new AzureNextGen.Network.Inputs.MxRecordArgs
                 {
                     Exchange = "mail.privatezone1.com",
                     Preference = 0,
@@ -422,7 +422,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -461,11 +461,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.latest.RecordSet("recordSet",
+record_set = azure_nextgen.network.RecordSet("recordSet",
     metadata={
         "key1": "value1",
     },
-    mx_records=[azure_nextgen.network.latest.MxRecordArgs(
+    mx_records=[azure_nextgen.network.MxRecordArgs(
         exchange="mail.privatezone1.com",
         preference=0,
     )],
@@ -485,7 +485,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
     metadata: {
         key1: "value1",
     },
@@ -514,7 +514,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
         {
             Metadata = 
             {
@@ -523,7 +523,7 @@ class MyStack : Stack
             PrivateZoneName = "0.0.127.in-addr.arpa",
             PtrRecords = 
             {
-                new AzureNextGen.Network.Latest.Inputs.PtrRecordArgs
+                new AzureNextGen.Network.Inputs.PtrRecordArgs
                 {
                     Ptrdname = "localhost",
                 },
@@ -547,7 +547,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -585,12 +585,12 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.latest.RecordSet("recordSet",
+record_set = azure_nextgen.network.RecordSet("recordSet",
     metadata={
         "key1": "value1",
     },
     private_zone_name="0.0.127.in-addr.arpa",
-    ptr_records=[azure_nextgen.network.latest.PtrRecordArgs(
+    ptr_records=[azure_nextgen.network.PtrRecordArgs(
         ptrdname="localhost",
     )],
     record_type="PTR",
@@ -608,7 +608,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
     metadata: {
         key1: "value1",
     },
@@ -636,7 +636,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
         {
             Metadata = 
             {
@@ -646,7 +646,7 @@ class MyStack : Stack
             RecordType = "SOA",
             RelativeRecordSetName = "@",
             ResourceGroupName = "resourceGroup1",
-            SoaRecord = new AzureNextGen.Network.Latest.Inputs.SoaRecordArgs
+            SoaRecord = new AzureNextGen.Network.Inputs.SoaRecordArgs
             {
                 Email = "azureprivatedns-hostmaster.microsoft.com",
                 ExpireTime = 2419200,
@@ -671,7 +671,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -712,7 +712,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.latest.RecordSet("recordSet",
+record_set = azure_nextgen.network.RecordSet("recordSet",
     metadata={
         "key1": "value1",
     },
@@ -720,7 +720,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     record_type="SOA",
     relative_record_set_name="@",
     resource_group_name="resourceGroup1",
-    soa_record=azure_nextgen.network.latest.SoaRecordArgs(
+    soa_record=azure_nextgen.network.SoaRecordArgs(
         email="azureprivatedns-hostmaster.microsoft.com",
         expire_time=2419200,
         host="azureprivatedns.net",
@@ -740,7 +740,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
     metadata: {
         key1: "value1",
     },
@@ -773,7 +773,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
         {
             Metadata = 
             {
@@ -785,7 +785,7 @@ class MyStack : Stack
             ResourceGroupName = "resourceGroup1",
             SrvRecords = 
             {
-                new AzureNextGen.Network.Latest.Inputs.SrvRecordArgs
+                new AzureNextGen.Network.Inputs.SrvRecordArgs
                 {
                     Port = 80,
                     Priority = 0,
@@ -809,7 +809,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -850,7 +850,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.latest.RecordSet("recordSet",
+record_set = azure_nextgen.network.RecordSet("recordSet",
     metadata={
         "key1": "value1",
     },
@@ -858,7 +858,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     record_type="SRV",
     relative_record_set_name="recordSRV",
     resource_group_name="resourceGroup1",
-    srv_records=[azure_nextgen.network.latest.SrvRecordArgs(
+    srv_records=[azure_nextgen.network.SrvRecordArgs(
         port=80,
         priority=0,
         target="contoso.com",
@@ -876,7 +876,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
     metadata: {
         key1: "value1",
     },
@@ -907,7 +907,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
         {
             Metadata = 
             {
@@ -920,7 +920,7 @@ class MyStack : Stack
             Ttl = 3600,
             TxtRecords = 
             {
-                new AzureNextGen.Network.Latest.Inputs.TxtRecordArgs
+                new AzureNextGen.Network.Inputs.TxtRecordArgs
                 {
                     Value = 
                     {
@@ -944,7 +944,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -985,7 +985,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.latest.RecordSet("recordSet",
+record_set = azure_nextgen.network.RecordSet("recordSet",
     metadata={
         "key1": "value1",
     },
@@ -994,7 +994,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     relative_record_set_name="recordTXT",
     resource_group_name="resourceGroup1",
     ttl=3600,
-    txt_records=[azure_nextgen.network.latest.TxtRecordArgs(
+    txt_records=[azure_nextgen.network.TxtRecordArgs(
         value=[
             "string1",
             "string2",
@@ -1011,7 +1011,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
     metadata: {
         key1: "value1",
     },
@@ -1040,7 +1040,7 @@ const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RecordSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RecordSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RecordSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RecordSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1048,11 +1048,11 @@ const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRecordSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RecordSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RecordSet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRecordSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RecordSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RecordSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RecordSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RecordSetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RecordSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RecordSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1073,7 +1073,7 @@ const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RecordSetArgs</span>
+        <span class="property-type"><a href="#inputs">RecordSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1142,7 +1142,7 @@ const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RecordSetArgs</span>
+        <span class="property-type"><a href="#inputs">RecordSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1181,7 +1181,7 @@ const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RecordSetArgs</span>
+        <span class="property-type"><a href="#inputs">RecordSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1204,11 +1204,11 @@ const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
 
 ## RecordSet Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RecordSet resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RecordSet resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3714,7 +3714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:RecordSet recordtxt /subscriptions/subscriptionId/resourceGroups/resourceGroup1/providers/Microsoft.Network/privateDnsZones/privatezone1.com/TXT/recordtxt 
+$ pulumi import azure-nextgen:network:RecordSet recordtxt /subscriptions/subscriptionId/resourceGroups/resourceGroup1/providers/Microsoft.Network/privateDnsZones/privatezone1.com/TXT/recordtxt 
 ```
 
 

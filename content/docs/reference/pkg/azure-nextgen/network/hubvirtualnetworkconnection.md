@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.HubVirtualNetworkConnect
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 HubVirtualNetworkConnection Resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,26 +27,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hubVirtualNetworkConnection = new AzureNextGen.Network.Latest.HubVirtualNetworkConnection("hubVirtualNetworkConnection", new AzureNextGen.Network.Latest.HubVirtualNetworkConnectionArgs
+        var hubVirtualNetworkConnection = new AzureNextGen.Network.HubVirtualNetworkConnection("hubVirtualNetworkConnection", new AzureNextGen.Network.HubVirtualNetworkConnectionArgs
         {
             ConnectionName = "connection1",
             EnableInternetSecurity = false,
-            RemoteVirtualNetwork = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            RemoteVirtualNetwork = new AzureNextGen.Network.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/SpokeVnet1",
             },
             ResourceGroupName = "rg1",
-            RoutingConfiguration = new AzureNextGen.Network.Latest.Inputs.RoutingConfigurationArgs
+            RoutingConfiguration = new AzureNextGen.Network.Inputs.RoutingConfigurationArgs
             {
-                AssociatedRouteTable = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                AssociatedRouteTable = new AzureNextGen.Network.Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
                 },
-                PropagatedRouteTables = new AzureNextGen.Network.Latest.Inputs.PropagatedRouteTableArgs
+                PropagatedRouteTables = new AzureNextGen.Network.Inputs.PropagatedRouteTableArgs
                 {
                     Ids = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        new AzureNextGen.Network.Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
                         },
@@ -57,11 +57,11 @@ class MyStack : Stack
                         "label2",
                     },
                 },
-                VnetRoutes = new AzureNextGen.Network.Latest.Inputs.VnetRouteArgs
+                VnetRoutes = new AzureNextGen.Network.Inputs.VnetRouteArgs
                 {
                     StaticRoutes = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.StaticRouteArgs
+                        new AzureNextGen.Network.Inputs.StaticRouteArgs
                         {
                             AddressPrefixes = 
                             {
@@ -71,7 +71,7 @@ class MyStack : Stack
                             Name = "route1",
                             NextHopIpAddress = "10.0.0.68",
                         },
-                        new AzureNextGen.Network.Latest.Inputs.StaticRouteArgs
+                        new AzureNextGen.Network.Inputs.StaticRouteArgs
                         {
                             AddressPrefixes = 
                             {
@@ -100,7 +100,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -168,19 +168,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hub_virtual_network_connection = azure_nextgen.network.latest.HubVirtualNetworkConnection("hubVirtualNetworkConnection",
+hub_virtual_network_connection = azure_nextgen.network.HubVirtualNetworkConnection("hubVirtualNetworkConnection",
     connection_name="connection1",
     enable_internet_security=False,
-    remote_virtual_network=azure_nextgen.network.latest.SubResourceArgs(
+    remote_virtual_network=azure_nextgen.network.SubResourceArgs(
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/SpokeVnet1",
     ),
     resource_group_name="rg1",
-    routing_configuration=azure_nextgen.network.latest.RoutingConfigurationArgs(
-        associated_route_table=azure_nextgen.network.latest.SubResourceArgs(
+    routing_configuration=azure_nextgen.network.RoutingConfigurationArgs(
+        associated_route_table=azure_nextgen.network.SubResourceArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
         ),
-        propagated_route_tables=azure_nextgen.network.latest.PropagatedRouteTableArgs(
-            ids=[azure_nextgen.network.latest.SubResourceArgs(
+        propagated_route_tables=azure_nextgen.network.PropagatedRouteTableArgs(
+            ids=[azure_nextgen.network.SubResourceArgs(
                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
             )],
             labels=[
@@ -188,9 +188,9 @@ hub_virtual_network_connection = azure_nextgen.network.latest.HubVirtualNetworkC
                 "label2",
             ],
         ),
-        vnet_routes=azure_nextgen.network.latest.VnetRouteArgs(
+        vnet_routes=azure_nextgen.network.VnetRouteArgs(
             static_routes=[
-                azure_nextgen.network.latest.StaticRouteArgs(
+                azure_nextgen.network.StaticRouteArgs(
                     address_prefixes=[
                         "10.1.0.0/16",
                         "10.2.0.0/16",
@@ -198,7 +198,7 @@ hub_virtual_network_connection = azure_nextgen.network.latest.HubVirtualNetworkC
                     name="route1",
                     next_hop_ip_address="10.0.0.68",
                 ),
-                azure_nextgen.network.latest.StaticRouteArgs(
+                azure_nextgen.network.StaticRouteArgs(
                     address_prefixes=[
                         "10.3.0.0/16",
                         "10.4.0.0/16",
@@ -221,7 +221,7 @@ hub_virtual_network_connection = azure_nextgen.network.latest.HubVirtualNetworkC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hubVirtualNetworkConnection = new azure_nextgen.network.latest.HubVirtualNetworkConnection("hubVirtualNetworkConnection", {
+const hubVirtualNetworkConnection = new azure_nextgen.network.HubVirtualNetworkConnection("hubVirtualNetworkConnection", {
     connectionName: "connection1",
     enableInternetSecurity: false,
     remoteVirtualNetwork: {
@@ -277,7 +277,7 @@ const hubVirtualNetworkConnection = new azure_nextgen.network.latest.HubVirtualN
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HubVirtualNetworkConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">HubVirtualNetworkConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HubVirtualNetworkConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HubVirtualNetworkConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -285,11 +285,11 @@ const hubVirtualNetworkConnection = new azure_nextgen.network.latest.HubVirtualN
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHubVirtualNetworkConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">HubVirtualNetworkConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HubVirtualNetworkConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHubVirtualNetworkConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HubVirtualNetworkConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HubVirtualNetworkConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HubVirtualNetworkConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">HubVirtualNetworkConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HubVirtualNetworkConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HubVirtualNetworkConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -310,7 +310,7 @@ const hubVirtualNetworkConnection = new azure_nextgen.network.latest.HubVirtualN
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HubVirtualNetworkConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">HubVirtualNetworkConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -379,7 +379,7 @@ const hubVirtualNetworkConnection = new azure_nextgen.network.latest.HubVirtualN
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HubVirtualNetworkConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">HubVirtualNetworkConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -418,7 +418,7 @@ const hubVirtualNetworkConnection = new azure_nextgen.network.latest.HubVirtualN
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HubVirtualNetworkConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">HubVirtualNetworkConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -441,11 +441,11 @@ const hubVirtualNetworkConnection = new azure_nextgen.network.latest.HubVirtualN
 
 ## HubVirtualNetworkConnection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The HubVirtualNetworkConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The HubVirtualNetworkConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1967,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:HubVirtualNetworkConnection connection1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubVirtualNetworkConnections/connection1 
+$ pulumi import azure-nextgen:network:HubVirtualNetworkConnection connection1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubVirtualNetworkConnections/connection1 
 ```
 
 

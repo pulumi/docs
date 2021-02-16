@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devices.IotDpsResourcePrivateEnd
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The private endpoint connection of a provisioning service
-Latest API Version: 2020-03-01.
+API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,12 +27,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotDpsResourcePrivateEndpointConnection = new AzureNextGen.Devices.Latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", new AzureNextGen.Devices.Latest.IotDpsResourcePrivateEndpointConnectionArgs
+        var iotDpsResourcePrivateEndpointConnection = new AzureNextGen.Devices.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", new AzureNextGen.Devices.IotDpsResourcePrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "myPrivateEndpointConnection",
-            Properties = new AzureNextGen.Devices.Latest.Inputs.PrivateEndpointConnectionPropertiesArgs
+            Properties = new AzureNextGen.Devices.Inputs.PrivateEndpointConnectionPropertiesArgs
             {
-                PrivateLinkServiceConnectionState = new AzureNextGen.Devices.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+                PrivateLinkServiceConnectionState = new AzureNextGen.Devices.Inputs.PrivateLinkServiceConnectionStateArgs
                 {
                     Description = "Approved by johndoe@contoso.com",
                     Status = "Approved",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,10 +89,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_dps_resource_private_endpoint_connection = azure_nextgen.devices.latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection",
+iot_dps_resource_private_endpoint_connection = azure_nextgen.devices.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection",
     private_endpoint_connection_name="myPrivateEndpointConnection",
-    properties=azure_nextgen.devices.latest.PrivateEndpointConnectionPropertiesArgs(
-        private_link_service_connection_state=azure_nextgen.devices.latest.PrivateLinkServiceConnectionStateArgs(
+    properties=azure_nextgen.devices.PrivateEndpointConnectionPropertiesArgs(
+        private_link_service_connection_state=azure_nextgen.devices.PrivateLinkServiceConnectionStateArgs(
             description="Approved by johndoe@contoso.com",
             status="Approved",
         ),
@@ -110,7 +110,7 @@ iot_dps_resource_private_endpoint_connection = azure_nextgen.devices.latest.IotD
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", {
+const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", {
     privateEndpointConnectionName: "myPrivateEndpointConnection",
     properties: {
         privateLinkServiceConnectionState: {
@@ -134,7 +134,7 @@ const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.latest
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotDpsResourcePrivateEndpointConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IotDpsResourcePrivateEndpointConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotDpsResourcePrivateEndpointConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IotDpsResourcePrivateEndpointConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -142,11 +142,11 @@ const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.latest
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotDpsResourcePrivateEndpointConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IotDpsResourcePrivateEndpointConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotDpsResourcePrivateEndpointConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotDpsResourcePrivateEndpointConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IotDpsResourcePrivateEndpointConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotDpsResourcePrivateEndpointConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotDpsResourcePrivateEndpointConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IotDpsResourcePrivateEndpointConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotDpsResourcePrivateEndpointConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IotDpsResourcePrivateEndpointConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -167,7 +167,7 @@ const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.latest
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotDpsResourcePrivateEndpointConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">IotDpsResourcePrivateEndpointConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -236,7 +236,7 @@ const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.latest
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotDpsResourcePrivateEndpointConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">IotDpsResourcePrivateEndpointConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -275,7 +275,7 @@ const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.latest
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">IotDpsResourcePrivateEndpointConnectionArgs</span>
+        <span class="property-type"><a href="#inputs">IotDpsResourcePrivateEndpointConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -298,11 +298,11 @@ const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.latest
 
 ## IotDpsResourcePrivateEndpointConnection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IotDpsResourcePrivateEndpointConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IotDpsResourcePrivateEndpointConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1172,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:devices/latest:IotDpsResourcePrivateEndpointConnection myPrivateEndpointConnection /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups/myResourceGroup/providers/Microsoft.Devices/ProvisioningServices/myFirstProvisioningService/PrivateEndpointConnections/myPrivateEndpointConnection 
+$ pulumi import azure-nextgen:devices:IotDpsResourcePrivateEndpointConnection myPrivateEndpointConnection /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups/myResourceGroup/providers/Microsoft.Devices/ProvisioningServices/myFirstProvisioningService/PrivateEndpointConnections/myPrivateEndpointConnection 
 ```
 
 

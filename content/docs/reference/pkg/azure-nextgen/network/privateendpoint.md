@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.PrivateEndpoint resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Private endpoint resource.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpoint = new AzureNextGen.Network.Latest.PrivateEndpoint("privateEndpoint", new AzureNextGen.Network.Latest.PrivateEndpointArgs
+        var privateEndpoint = new AzureNextGen.Network.PrivateEndpoint("privateEndpoint", new AzureNextGen.Network.PrivateEndpointArgs
         {
             Location = "eastus2euap",
             PrivateEndpointName = "testPe",
             PrivateLinkServiceConnections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.PrivateLinkServiceConnectionArgs
+                new AzureNextGen.Network.Inputs.PrivateLinkServiceConnectionArgs
                 {
                     GroupIds = 
                     {
@@ -44,7 +44,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+            Subnet = new AzureNextGen.Network.Inputs.SubnetArgs
             {
                 Id = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
             },
@@ -63,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,16 +103,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint = azure_nextgen.network.latest.PrivateEndpoint("privateEndpoint",
+private_endpoint = azure_nextgen.network.PrivateEndpoint("privateEndpoint",
     location="eastus2euap",
     private_endpoint_name="testPe",
-    private_link_service_connections=[azure_nextgen.network.latest.PrivateLinkServiceConnectionArgs(
+    private_link_service_connections=[azure_nextgen.network.PrivateLinkServiceConnectionArgs(
         group_ids=["groupIdFromResource"],
         private_link_service_id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
         request_message="Please approve my connection.",
     )],
     resource_group_name="rg1",
-    subnet=azure_nextgen.network.latest.SubnetArgs(
+    subnet=azure_nextgen.network.SubnetArgs(
         id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
     ))
 
@@ -126,7 +126,7 @@ private_endpoint = azure_nextgen.network.latest.PrivateEndpoint("privateEndpoint
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpoint = new azure_nextgen.network.latest.PrivateEndpoint("privateEndpoint", {
+const privateEndpoint = new azure_nextgen.network.PrivateEndpoint("privateEndpoint", {
     location: "eastus2euap",
     privateEndpointName: "testPe",
     privateLinkServiceConnections: [{
@@ -154,12 +154,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpoint = new AzureNextGen.Network.Latest.PrivateEndpoint("privateEndpoint", new AzureNextGen.Network.Latest.PrivateEndpointArgs
+        var privateEndpoint = new AzureNextGen.Network.PrivateEndpoint("privateEndpoint", new AzureNextGen.Network.PrivateEndpointArgs
         {
             Location = "eastus",
             ManualPrivateLinkServiceConnections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.PrivateLinkServiceConnectionArgs
+                new AzureNextGen.Network.Inputs.PrivateLinkServiceConnectionArgs
                 {
                     GroupIds = 
                     {
@@ -171,7 +171,7 @@ class MyStack : Stack
             },
             PrivateEndpointName = "testPe",
             ResourceGroupName = "rg1",
-            Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+            Subnet = new AzureNextGen.Network.Inputs.SubnetArgs
             {
                 Id = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
             },
@@ -190,7 +190,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -230,16 +230,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint = azure_nextgen.network.latest.PrivateEndpoint("privateEndpoint",
+private_endpoint = azure_nextgen.network.PrivateEndpoint("privateEndpoint",
     location="eastus",
-    manual_private_link_service_connections=[azure_nextgen.network.latest.PrivateLinkServiceConnectionArgs(
+    manual_private_link_service_connections=[azure_nextgen.network.PrivateLinkServiceConnectionArgs(
         group_ids=["groupIdFromResource"],
         private_link_service_id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
         request_message="Please manually approve my connection.",
     )],
     private_endpoint_name="testPe",
     resource_group_name="rg1",
-    subnet=azure_nextgen.network.latest.SubnetArgs(
+    subnet=azure_nextgen.network.SubnetArgs(
         id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
     ))
 
@@ -253,7 +253,7 @@ private_endpoint = azure_nextgen.network.latest.PrivateEndpoint("privateEndpoint
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpoint = new azure_nextgen.network.latest.PrivateEndpoint("privateEndpoint", {
+const privateEndpoint = new azure_nextgen.network.PrivateEndpoint("privateEndpoint", {
     location: "eastus",
     manualPrivateLinkServiceConnections: [{
         groupIds: ["groupIdFromResource"],
@@ -279,7 +279,7 @@ const privateEndpoint = new azure_nextgen.network.latest.PrivateEndpoint("privat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PrivateEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -287,11 +287,11 @@ const privateEndpoint = new azure_nextgen.network.latest.PrivateEndpoint("privat
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PrivateEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateEndpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateEndpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PrivateEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -312,7 +312,7 @@ const privateEndpoint = new azure_nextgen.network.latest.PrivateEndpoint("privat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateEndpointArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -381,7 +381,7 @@ const privateEndpoint = new azure_nextgen.network.latest.PrivateEndpoint("privat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateEndpointArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -420,7 +420,7 @@ const privateEndpoint = new azure_nextgen.network.latest.PrivateEndpoint("privat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PrivateEndpointArgs</span>
+        <span class="property-type"><a href="#inputs">PrivateEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -443,11 +443,11 @@ const privateEndpoint = new azure_nextgen.network.latest.PrivateEndpoint("privat
 
 ## PrivateEndpoint Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -17829,7 +17829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:PrivateEndpoint testPe /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateEndpoints/testPe 
+$ pulumi import azure-nextgen:network:PrivateEndpoint testPe /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateEndpoints/testPe 
 ```
 
 

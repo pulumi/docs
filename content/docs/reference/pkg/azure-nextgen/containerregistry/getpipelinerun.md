@@ -19,7 +19,7 @@ meta_desc: "Explore the GetPipelineRun function of the containerregistry module,
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPipelineRun<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPipelineRunArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetPipelineRunResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPipelineRun<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPipelineRunArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPipelineRunResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetPipelineRun function of the containerregistry module,
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPipelineRun<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPipelineRunArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupPipelineRunResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPipelineRun<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPipelineRunArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPipelineRunResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPipelineRun` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetPipelineRun function of the containerregistry module,
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPipelineRun </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetPipelineRunResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetPipelineRunArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPipelineRunResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPipelineRunArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -510,9 +510,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -657,9 +654,6 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -801,9 +795,6 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 {{% /choosable %}}
 
 <h4 id="pipelinerunrequestresponse">Pipeline<wbr>Run<wbr>Request<wbr>Response</h4>
-
-
-
 
 
 
@@ -1024,9 +1015,6 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 {{% /choosable %}}
 
 <h4 id="pipelinerunresponseresponse">Pipeline<wbr>Run<wbr>Response<wbr>Response</h4>
-
-
-
 
 
 
@@ -1418,9 +1406,6 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1518,9 +1503,6 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 {{% /choosable %}}
 
 <h4 id="pipelineruntargetpropertiesresponse">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1624,9 +1606,6 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1688,9 +1667,6 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 {{% /choosable %}}
 
 <h4 id="pipelinetriggerdescriptorresponse">Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response</h4>
-
-
-
 
 
 
@@ -1758,9 +1734,6 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1822,9 +1795,6 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 

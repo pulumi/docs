@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.QueueServiceProperties r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The properties of a storage account’s Queue service.
-Latest API Version: 2019-06-01.
+API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var queueServiceProperties = new AzureNextGen.Storage.Latest.QueueServiceProperties("queueServiceProperties", new AzureNextGen.Storage.Latest.QueueServicePropertiesArgs
+        var queueServiceProperties = new AzureNextGen.Storage.QueueServiceProperties("queueServiceProperties", new AzureNextGen.Storage.QueueServicePropertiesArgs
         {
             AccountName = "sto8607",
-            Cors = new AzureNextGen.Storage.Latest.Inputs.CorsRulesArgs
+            Cors = new AzureNextGen.Storage.Inputs.CorsRulesArgs
             {
                 CorsRules = 
                 {
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage.Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -62,7 +62,7 @@ class MyStack : Stack
                         },
                         MaxAgeInSeconds = 100,
                     },
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage.Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -82,7 +82,7 @@ class MyStack : Stack
                         },
                         MaxAgeInSeconds = 2,
                     },
-                    new AzureNextGen.Storage.Latest.Inputs.CorsRuleArgs
+                    new AzureNextGen.Storage.Inputs.CorsRuleArgs
                     {
                         AllowedHeaders = 
                         {
@@ -125,7 +125,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -214,11 +214,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-queue_service_properties = azure_nextgen.storage.latest.QueueServiceProperties("queueServiceProperties",
+queue_service_properties = azure_nextgen.storage.QueueServiceProperties("queueServiceProperties",
     account_name="sto8607",
-    cors=azure_nextgen.storage.latest.CorsRulesArgs(
+    cors=azure_nextgen.storage.CorsRulesArgs(
         cors_rules=[
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=[
                     "x-ms-meta-abc",
                     "x-ms-meta-data*",
@@ -239,14 +239,14 @@ queue_service_properties = azure_nextgen.storage.latest.QueueServiceProperties("
                 exposed_headers=["x-ms-meta-*"],
                 max_age_in_seconds=100,
             ),
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=["*"],
                 allowed_methods=["GET"],
                 allowed_origins=["*"],
                 exposed_headers=["*"],
                 max_age_in_seconds=2,
             ),
-            azure_nextgen.storage.latest.CorsRuleArgs(
+            azure_nextgen.storage.CorsRuleArgs(
                 allowed_headers=["x-ms-meta-12345675754564*"],
                 allowed_methods=[
                     "GET",
@@ -278,7 +278,7 @@ queue_service_properties = azure_nextgen.storage.latest.QueueServiceProperties("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const queueServiceProperties = new azure_nextgen.storage.latest.QueueServiceProperties("queueServiceProperties", {
+const queueServiceProperties = new azure_nextgen.storage.QueueServiceProperties("queueServiceProperties", {
     accountName: "sto8607",
     cors: {
         corsRules: [
@@ -345,7 +345,7 @@ const queueServiceProperties = new azure_nextgen.storage.latest.QueueServiceProp
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">QueueServiceProperties</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">QueueServicePropertiesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">QueueServiceProperties</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueServicePropertiesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -353,11 +353,11 @@ const queueServiceProperties = new azure_nextgen.storage.latest.QueueServiceProp
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewQueueServiceProperties</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">QueueServicePropertiesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">QueueServiceProperties</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewQueueServiceProperties</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">QueueServicePropertiesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">QueueServiceProperties</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">QueueServiceProperties</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">QueueServicePropertiesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">QueueServiceProperties</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">QueueServicePropertiesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -378,7 +378,7 @@ const queueServiceProperties = new azure_nextgen.storage.latest.QueueServiceProp
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">QueueServicePropertiesArgs</span>
+        <span class="property-type"><a href="#inputs">QueueServicePropertiesArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -447,7 +447,7 @@ const queueServiceProperties = new azure_nextgen.storage.latest.QueueServiceProp
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">QueueServicePropertiesArgs</span>
+        <span class="property-type"><a href="#inputs">QueueServicePropertiesArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -486,7 +486,7 @@ const queueServiceProperties = new azure_nextgen.storage.latest.QueueServiceProp
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">QueueServicePropertiesArgs</span>
+        <span class="property-type"><a href="#inputs">QueueServicePropertiesArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -509,11 +509,11 @@ const queueServiceProperties = new azure_nextgen.storage.latest.QueueServiceProp
 
 ## QueueServiceProperties Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The QueueServiceProperties resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The QueueServiceProperties resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1375,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/latest:QueueServiceProperties default /subscriptions/{subscription-id}/resourceGroups/res4410/providers/Microsoft.Storage/storageAccounts/sto8607/queueServices/default 
+$ pulumi import azure-nextgen:storage:QueueServiceProperties default /subscriptions/{subscription-id}/resourceGroups/res4410/providers/Microsoft.Storage/storageAccounts/sto8607/queueServices/default 
 ```
 
 

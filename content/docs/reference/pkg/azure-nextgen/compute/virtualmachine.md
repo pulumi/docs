@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.VirtualMachine resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a Virtual Machine.
-Latest API Version: 2020-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,32 +27,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D2s_v3",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
-                LinuxConfiguration = new AzureNextGen.Compute.Latest.Inputs.LinuxConfigurationArgs
+                LinuxConfiguration = new AzureNextGen.Compute.Inputs.LinuxConfigurationArgs
                 {
-                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.LinuxPatchSettingsArgs
+                    PatchSettings = new AzureNextGen.Compute.Inputs.LinuxPatchSettingsArgs
                     {
                         PatchMode = "AutomaticByPlatform",
                     },
@@ -60,20 +60,20 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "UbuntuServer",
                     Publisher = "Canonical",
                     Sku = "16.04-LTS",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Premium_LRS",
                     },
@@ -96,7 +96,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -162,40 +162,40 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D2s_v3",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
-        linux_configuration=azure_nextgen.compute.latest.LinuxConfigurationArgs(
-            patch_settings=azure_nextgen.compute.latest.LinuxPatchSettingsArgs(
+        linux_configuration=azure_nextgen.compute.LinuxConfigurationArgs(
+            patch_settings=azure_nextgen.compute.LinuxPatchSettingsArgs(
                 patch_mode="AutomaticByPlatform",
             ),
             provision_vm_agent=True,
         ),
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="UbuntuServer",
             publisher="Canonical",
             sku="16.04-LTS",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Premium_LRS",
             ),
             name="myVMosdisk",
@@ -213,7 +213,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D2s_v3",
     },
@@ -269,32 +269,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D2s_v3",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
-                LinuxConfiguration = new AzureNextGen.Compute.Latest.Inputs.LinuxConfigurationArgs
+                LinuxConfiguration = new AzureNextGen.Compute.Inputs.LinuxConfigurationArgs
                 {
-                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.LinuxPatchSettingsArgs
+                    PatchSettings = new AzureNextGen.Compute.Inputs.LinuxPatchSettingsArgs
                     {
                         PatchMode = "ImageDefault",
                     },
@@ -302,20 +302,20 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "UbuntuServer",
                     Publisher = "Canonical",
                     Sku = "16.04-LTS",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Premium_LRS",
                     },
@@ -338,7 +338,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -404,40 +404,40 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D2s_v3",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
-        linux_configuration=azure_nextgen.compute.latest.LinuxConfigurationArgs(
-            patch_settings=azure_nextgen.compute.latest.LinuxPatchSettingsArgs(
+        linux_configuration=azure_nextgen.compute.LinuxConfigurationArgs(
+            patch_settings=azure_nextgen.compute.LinuxPatchSettingsArgs(
                 patch_mode="ImageDefault",
             ),
             provision_vm_agent=True,
         ),
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="UbuntuServer",
             publisher="Canonical",
             sku="16.04-LTS",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Premium_LRS",
             ),
             name="myVMosdisk",
@@ -455,7 +455,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D2s_v3",
     },
@@ -511,54 +511,54 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D2s_v3",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
             ResourceGroupName = "myResourceGroup",
-            SecurityProfile = new AzureNextGen.Compute.Latest.Inputs.SecurityProfileArgs
+            SecurityProfile = new AzureNextGen.Compute.Inputs.SecurityProfileArgs
             {
                 SecurityType = "TrustedLaunch",
-                UefiSettings = new AzureNextGen.Compute.Latest.Inputs.UefiSettingsArgs
+                UefiSettings = new AzureNextGen.Compute.Inputs.UefiSettingsArgs
                 {
                     SecureBootEnabled = true,
                     VTpmEnabled = true,
                 },
             },
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "windowsserver-gen2preview-preview",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "windows10-tvm",
                     Version = "18363.592.2001092016",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadOnly",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "StandardSSD_LRS",
                     },
@@ -581,7 +581,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -648,41 +648,41 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D2s_v3",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     resource_group_name="myResourceGroup",
-    security_profile=azure_nextgen.compute.latest.SecurityProfileArgs(
+    security_profile=azure_nextgen.compute.SecurityProfileArgs(
         security_type="TrustedLaunch",
-        uefi_settings=azure_nextgen.compute.latest.UefiSettingsArgs(
+        uefi_settings=azure_nextgen.compute.UefiSettingsArgs(
             secure_boot_enabled=True,
             v_tpm_enabled=True,
         ),
     ),
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="windowsserver-gen2preview-preview",
             publisher="MicrosoftWindowsServer",
             sku="windows10-tvm",
             version="18363.592.2001092016",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadOnly",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="StandardSSD_LRS",
             ),
             name="myVMosdisk",
@@ -700,7 +700,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D2s_v3",
     },
@@ -757,33 +757,33 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
-                WindowsConfiguration = new AzureNextGen.Compute.Latest.Inputs.WindowsConfigurationArgs
+                WindowsConfiguration = new AzureNextGen.Compute.Inputs.WindowsConfigurationArgs
                 {
                     EnableAutomaticUpdates = true,
-                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.PatchSettingsArgs
+                    PatchSettings = new AzureNextGen.Compute.Inputs.PatchSettingsArgs
                     {
                         PatchMode = "AutomaticByOS",
                     },
@@ -791,20 +791,20 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Premium_LRS",
                     },
@@ -827,7 +827,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -894,41 +894,41 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
-        windows_configuration=azure_nextgen.compute.latest.WindowsConfigurationArgs(
+        windows_configuration=azure_nextgen.compute.WindowsConfigurationArgs(
             enable_automatic_updates=True,
-            patch_settings=azure_nextgen.compute.latest.PatchSettingsArgs(
+            patch_settings=azure_nextgen.compute.PatchSettingsArgs(
                 patch_mode="AutomaticByOS",
             ),
             provision_vm_agent=True,
         ),
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Premium_LRS",
             ),
             name="myVMosdisk",
@@ -946,7 +946,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D1_v2",
     },
@@ -1003,33 +1003,33 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
-                WindowsConfiguration = new AzureNextGen.Compute.Latest.Inputs.WindowsConfigurationArgs
+                WindowsConfiguration = new AzureNextGen.Compute.Inputs.WindowsConfigurationArgs
                 {
                     EnableAutomaticUpdates = true,
-                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.PatchSettingsArgs
+                    PatchSettings = new AzureNextGen.Compute.Inputs.PatchSettingsArgs
                     {
                         EnableHotpatching = true,
                         PatchMode = "AutomaticByPlatform",
@@ -1038,20 +1038,20 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Premium_LRS",
                     },
@@ -1074,7 +1074,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1142,24 +1142,24 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
-        windows_configuration=azure_nextgen.compute.latest.WindowsConfigurationArgs(
+        windows_configuration=azure_nextgen.compute.WindowsConfigurationArgs(
             enable_automatic_updates=True,
-            patch_settings=azure_nextgen.compute.latest.PatchSettingsArgs(
+            patch_settings=azure_nextgen.compute.PatchSettingsArgs(
                 enable_hotpatching=True,
                 patch_mode="AutomaticByPlatform",
             ),
@@ -1167,17 +1167,17 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
         ),
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Premium_LRS",
             ),
             name="myVMosdisk",
@@ -1195,7 +1195,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D1_v2",
     },
@@ -1253,33 +1253,33 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
-                WindowsConfiguration = new AzureNextGen.Compute.Latest.Inputs.WindowsConfigurationArgs
+                WindowsConfiguration = new AzureNextGen.Compute.Inputs.WindowsConfigurationArgs
                 {
                     EnableAutomaticUpdates = true,
-                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.PatchSettingsArgs
+                    PatchSettings = new AzureNextGen.Compute.Inputs.PatchSettingsArgs
                     {
                         PatchMode = "AutomaticByPlatform",
                     },
@@ -1287,20 +1287,20 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Premium_LRS",
                     },
@@ -1323,7 +1323,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1390,41 +1390,41 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
-        windows_configuration=azure_nextgen.compute.latest.WindowsConfigurationArgs(
+        windows_configuration=azure_nextgen.compute.WindowsConfigurationArgs(
             enable_automatic_updates=True,
-            patch_settings=azure_nextgen.compute.latest.PatchSettingsArgs(
+            patch_settings=azure_nextgen.compute.PatchSettingsArgs(
                 patch_mode="AutomaticByPlatform",
             ),
             provision_vm_agent=True,
         ),
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Premium_LRS",
             ),
             name="myVMosdisk",
@@ -1442,7 +1442,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D1_v2",
     },
@@ -1499,33 +1499,33 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
-                WindowsConfiguration = new AzureNextGen.Compute.Latest.Inputs.WindowsConfigurationArgs
+                WindowsConfiguration = new AzureNextGen.Compute.Inputs.WindowsConfigurationArgs
                 {
                     EnableAutomaticUpdates = true,
-                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.PatchSettingsArgs
+                    PatchSettings = new AzureNextGen.Compute.Inputs.PatchSettingsArgs
                     {
                         PatchMode = "Manual",
                     },
@@ -1533,20 +1533,20 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Premium_LRS",
                     },
@@ -1569,7 +1569,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1636,41 +1636,41 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
-        windows_configuration=azure_nextgen.compute.latest.WindowsConfigurationArgs(
+        windows_configuration=azure_nextgen.compute.WindowsConfigurationArgs(
             enable_automatic_updates=True,
-            patch_settings=azure_nextgen.compute.latest.PatchSettingsArgs(
+            patch_settings=azure_nextgen.compute.PatchSettingsArgs(
                 patch_mode="Manual",
             ),
             provision_vm_agent=True,
         ),
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Premium_LRS",
             ),
             name="myVMosdisk",
@@ -1688,7 +1688,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D1_v2",
     },
@@ -1745,44 +1745,44 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    Image = new AzureNextGen.Compute.Latest.Inputs.VirtualHardDiskArgs
+                    Image = new AzureNextGen.Compute.Inputs.VirtualHardDiskArgs
                     {
                         Uri = "http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd",
                     },
                     Name = "myVMosdisk",
                     OsType = "Windows",
-                    Vhd = new AzureNextGen.Compute.Latest.Inputs.VirtualHardDiskArgs
+                    Vhd = new AzureNextGen.Compute.Inputs.VirtualHardDiskArgs
                     {
                         Uri = "http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk.vhd",
                     },
@@ -1804,7 +1804,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1862,33 +1862,33 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            image=azure_nextgen.compute.latest.VirtualHardDiskArgs(
+            image=azure_nextgen.compute.VirtualHardDiskArgs(
                 uri="http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd",
             ),
             name="myVMosdisk",
             os_type="Windows",
-            vhd=azure_nextgen.compute.latest.VirtualHardDiskArgs(
+            vhd=azure_nextgen.compute.VirtualHardDiskArgs(
                 uri="http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk.vhd",
             ),
         ),
@@ -1905,7 +1905,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D1_v2",
     },
@@ -1953,69 +1953,69 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D2_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
                 DataDisks = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.DataDiskArgs
+                    new AzureNextGen.Compute.Inputs.DataDiskArgs
                     {
                         CreateOption = "Empty",
                         DiskSizeGB = 1023,
                         Lun = 0,
-                        Vhd = new AzureNextGen.Compute.Latest.Inputs.VirtualHardDiskArgs
+                        Vhd = new AzureNextGen.Compute.Inputs.VirtualHardDiskArgs
                         {
                             Uri = "http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk0.vhd",
                         },
                     },
-                    new AzureNextGen.Compute.Latest.Inputs.DataDiskArgs
+                    new AzureNextGen.Compute.Inputs.DataDiskArgs
                     {
                         CreateOption = "Empty",
                         DiskSizeGB = 1023,
                         Lun = 1,
-                        Vhd = new AzureNextGen.Compute.Latest.Inputs.VirtualHardDiskArgs
+                        Vhd = new AzureNextGen.Compute.Inputs.VirtualHardDiskArgs
                         {
                             Uri = "http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk1.vhd",
                         },
                     },
                 },
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
                     Name = "myVMosdisk",
-                    Vhd = new AzureNextGen.Compute.Latest.Inputs.VirtualHardDiskArgs
+                    Vhd = new AzureNextGen.Compute.Inputs.VirtualHardDiskArgs
                     {
                         Uri = "http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk.vhd",
                     },
@@ -2037,7 +2037,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2115,53 +2115,53 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D2_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
         data_disks=[
-            azure_nextgen.compute.latest.DataDiskArgs(
+            azure_nextgen.compute.DataDiskArgs(
                 create_option="Empty",
                 disk_size_gb=1023,
                 lun=0,
-                vhd=azure_nextgen.compute.latest.VirtualHardDiskArgs(
+                vhd=azure_nextgen.compute.VirtualHardDiskArgs(
                     uri="http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk0.vhd",
                 ),
             ),
-            azure_nextgen.compute.latest.DataDiskArgs(
+            azure_nextgen.compute.DataDiskArgs(
                 create_option="Empty",
                 disk_size_gb=1023,
                 lun=1,
-                vhd=azure_nextgen.compute.latest.VirtualHardDiskArgs(
+                vhd=azure_nextgen.compute.VirtualHardDiskArgs(
                     uri="http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk1.vhd",
                 ),
             ),
         ],
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
             name="myVMosdisk",
-            vhd=azure_nextgen.compute.latest.VirtualHardDiskArgs(
+            vhd=azure_nextgen.compute.VirtualHardDiskArgs(
                 uri="http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk.vhd",
             ),
         ),
@@ -2178,7 +2178,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D2_v2",
     },
@@ -2246,42 +2246,42 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -2304,7 +2304,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2361,31 +2361,31 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -2403,7 +2403,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D1_v2",
     },
@@ -2450,25 +2450,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
@@ -2476,27 +2476,27 @@ class MyStack : Stack
             },
             PlatformFaultDomain = 1,
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
                     Name = "myVMosdisk",
                 },
             },
-            VirtualMachineScaleSet = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+            VirtualMachineScaleSet = new AzureNextGen.Compute.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/{existing-flex-vmss-name-with-platformFaultDomainCount-greater-than-1}",
             },
@@ -2516,7 +2516,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2580,41 +2580,41 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     platform_fault_domain=1,
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
         ),
     ),
-    virtual_machine_scale_set=azure_nextgen.compute.latest.SubResourceArgs(
+    virtual_machine_scale_set=azure_nextgen.compute.SubResourceArgs(
         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/{existing-flex-vmss-name-with-platformFaultDomainCount-greater-than-1}",
     ),
     vm_name="myVM")
@@ -2629,7 +2629,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D1_v2",
     },
@@ -2683,49 +2683,49 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            AvailabilitySet = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+            AvailabilitySet = new AzureNextGen.Compute.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/availabilitySets/{existing-availability-set-name}",
             },
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -2748,7 +2748,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2811,37 +2811,37 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    availability_set=azure_nextgen.compute.latest.SubResourceArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    availability_set=azure_nextgen.compute.SubResourceArgs(
         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/availabilitySets/{existing-availability-set-name}",
     ),
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -2859,7 +2859,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     availabilitySet: {
         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/availabilitySets/{existing-availability-set-name}",
     },
@@ -2912,59 +2912,59 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
                 DataDisks = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.DataDiskArgs
+                    new AzureNextGen.Compute.Inputs.DataDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "Empty",
                         DiskSizeGB = 1023,
                         Lun = 0,
-                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                         {
-                            DiskEncryptionSet = new AzureNextGen.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
+                            DiskEncryptionSet = new AzureNextGen.Compute.Inputs.DiskEncryptionSetParametersArgs
                             {
                                 Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                             },
                             StorageAccountType = "Standard_LRS",
                         },
                     },
-                    new AzureNextGen.Compute.Latest.Inputs.DataDiskArgs
+                    new AzureNextGen.Compute.Inputs.DataDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "Attach",
                         DiskSizeGB = 1023,
                         Lun = 1,
-                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                         {
-                            DiskEncryptionSet = new AzureNextGen.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
+                            DiskEncryptionSet = new AzureNextGen.Compute.Inputs.DiskEncryptionSetParametersArgs
                             {
                                 Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                             },
@@ -2973,17 +2973,17 @@ class MyStack : Stack
                         },
                     },
                 },
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
-                        DiskEncryptionSet = new AzureNextGen.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
+                        DiskEncryptionSet = new AzureNextGen.Compute.Inputs.DiskEncryptionSetParametersArgs
                         {
                             Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                         },
@@ -3008,7 +3008,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3095,44 +3095,44 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
         data_disks=[
-            azure_nextgen.compute.latest.DataDiskArgs(
+            azure_nextgen.compute.DataDiskArgs(
                 caching="ReadWrite",
                 create_option="Empty",
                 disk_size_gb=1023,
                 lun=0,
-                managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
-                    disk_encryption_set=azure_nextgen.compute.latest.DiskEncryptionSetParametersArgs(
+                managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
+                    disk_encryption_set=azure_nextgen.compute.DiskEncryptionSetParametersArgs(
                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                     ),
                     storage_account_type="Standard_LRS",
                 ),
             ),
-            azure_nextgen.compute.latest.DataDiskArgs(
+            azure_nextgen.compute.DataDiskArgs(
                 caching="ReadWrite",
                 create_option="Attach",
                 disk_size_gb=1023,
                 lun=1,
-                managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
-                    disk_encryption_set=azure_nextgen.compute.latest.DiskEncryptionSetParametersArgs(
+                managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
+                    disk_encryption_set=azure_nextgen.compute.DiskEncryptionSetParametersArgs(
                         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                     ),
                     id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/{existing-managed-disk-name}",
@@ -3140,14 +3140,14 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
                 ),
             ),
         ],
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
-                disk_encryption_set=azure_nextgen.compute.latest.DiskEncryptionSetParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
+                disk_encryption_set=azure_nextgen.compute.DiskEncryptionSetParametersArgs(
                     id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                 ),
                 storage_account_type="Standard_LRS",
@@ -3167,7 +3167,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D1_v2",
     },
@@ -3244,55 +3244,55 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_DS1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
-            Plan = new AzureNextGen.Compute.Latest.Inputs.PlanArgs
+            Plan = new AzureNextGen.Compute.Inputs.PlanArgs
             {
                 Name = "windows2016",
                 Product = "windows-data-science-vm",
                 Publisher = "microsoft-ads",
             },
             ResourceGroupName = "myResourceGroup",
-            SecurityProfile = new AzureNextGen.Compute.Latest.Inputs.SecurityProfileArgs
+            SecurityProfile = new AzureNextGen.Compute.Inputs.SecurityProfileArgs
             {
                 EncryptionAtHost = true,
             },
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "windows-data-science-vm",
                     Publisher = "microsoft-ads",
                     Sku = "windows2016",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadOnly",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -3315,7 +3315,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3383,42 +3383,42 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_DS1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
-    plan=azure_nextgen.compute.latest.PlanArgs(
+    plan=azure_nextgen.compute.PlanArgs(
         name="windows2016",
         product="windows-data-science-vm",
         publisher="microsoft-ads",
     ),
     resource_group_name="myResourceGroup",
-    security_profile=azure_nextgen.compute.latest.SecurityProfileArgs(
+    security_profile=azure_nextgen.compute.SecurityProfileArgs(
         encryption_at_host=True,
     ),
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="windows-data-science-vm",
             publisher="microsoft-ads",
             sku="windows2016",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadOnly",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -3436,7 +3436,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_DS1_v2",
     },
@@ -3494,51 +3494,51 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
-            Plan = new AzureNextGen.Compute.Latest.Inputs.PlanArgs
+            Plan = new AzureNextGen.Compute.Inputs.PlanArgs
             {
                 Name = "windows2016",
                 Product = "windows-data-science-vm",
                 Publisher = "microsoft-ads",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "windows-data-science-vm",
                     Publisher = "microsoft-ads",
                     Sku = "windows2016",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -3561,7 +3561,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3626,39 +3626,39 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
-    plan=azure_nextgen.compute.latest.PlanArgs(
+    plan=azure_nextgen.compute.PlanArgs(
         name="windows2016",
         product="windows-data-science-vm",
         publisher="microsoft-ads",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="windows-data-science-vm",
             publisher="microsoft-ads",
             sku="windows2016",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -3676,7 +3676,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D1_v2",
     },
@@ -3731,54 +3731,54 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            DiagnosticsProfile = new AzureNextGen.Compute.Latest.Inputs.DiagnosticsProfileArgs
+            DiagnosticsProfile = new AzureNextGen.Compute.Inputs.DiagnosticsProfileArgs
             {
-                BootDiagnostics = new AzureNextGen.Compute.Latest.Inputs.BootDiagnosticsArgs
+                BootDiagnostics = new AzureNextGen.Compute.Inputs.BootDiagnosticsArgs
                 {
                     Enabled = true,
                     StorageUri = "http://{existing-storage-account-name}.blob.core.windows.net",
                 },
             },
             ExtensionsTimeBudget = "PT30M",
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -3801,7 +3801,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3868,41 +3868,41 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    diagnostics_profile=azure_nextgen.compute.latest.DiagnosticsProfileArgs(
-        boot_diagnostics=azure_nextgen.compute.latest.BootDiagnosticsArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    diagnostics_profile=azure_nextgen.compute.DiagnosticsProfileArgs(
+        boot_diagnostics=azure_nextgen.compute.BootDiagnosticsArgs(
             enabled=True,
             storage_uri="http://{existing-storage-account-name}.blob.core.windows.net",
         ),
     ),
     extensions_time_budget="PT30M",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -3920,7 +3920,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     diagnosticsProfile: {
         bootDiagnostics: {
             enabled: true,
@@ -3977,53 +3977,53 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            DiagnosticsProfile = new AzureNextGen.Compute.Latest.Inputs.DiagnosticsProfileArgs
+            DiagnosticsProfile = new AzureNextGen.Compute.Inputs.DiagnosticsProfileArgs
             {
-                BootDiagnostics = new AzureNextGen.Compute.Latest.Inputs.BootDiagnosticsArgs
+                BootDiagnostics = new AzureNextGen.Compute.Inputs.BootDiagnosticsArgs
                 {
                     Enabled = true,
                     StorageUri = "http://{existing-storage-account-name}.blob.core.windows.net",
                 },
             },
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -4046,7 +4046,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4112,40 +4112,40 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    diagnostics_profile=azure_nextgen.compute.latest.DiagnosticsProfileArgs(
-        boot_diagnostics=azure_nextgen.compute.latest.BootDiagnosticsArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    diagnostics_profile=azure_nextgen.compute.DiagnosticsProfileArgs(
+        boot_diagnostics=azure_nextgen.compute.BootDiagnosticsArgs(
             enabled=True,
             storage_uri="http://{existing-storage-account-name}.blob.core.windows.net",
         ),
     ),
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -4163,7 +4163,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     diagnosticsProfile: {
         bootDiagnostics: {
             enabled: true,
@@ -4219,60 +4219,60 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D2_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
                 DataDisks = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.DataDiskArgs
+                    new AzureNextGen.Compute.Inputs.DataDiskArgs
                     {
                         CreateOption = "Empty",
                         DiskSizeGB = 1023,
                         Lun = 0,
                     },
-                    new AzureNextGen.Compute.Latest.Inputs.DataDiskArgs
+                    new AzureNextGen.Compute.Inputs.DataDiskArgs
                     {
                         CreateOption = "Empty",
                         DiskSizeGB = 1023,
                         Lun = 1,
                     },
                 },
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -4295,7 +4295,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4367,46 +4367,46 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D2_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
         data_disks=[
-            azure_nextgen.compute.latest.DataDiskArgs(
+            azure_nextgen.compute.DataDiskArgs(
                 create_option="Empty",
                 disk_size_gb=1023,
                 lun=0,
             ),
-            azure_nextgen.compute.latest.DataDiskArgs(
+            azure_nextgen.compute.DataDiskArgs(
                 create_option="Empty",
                 disk_size_gb=1023,
                 lun=1,
             ),
         ],
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -4424,7 +4424,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D2_v2",
     },
@@ -4486,56 +4486,56 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_DS1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
-            Plan = new AzureNextGen.Compute.Latest.Inputs.PlanArgs
+            Plan = new AzureNextGen.Compute.Inputs.PlanArgs
             {
                 Name = "windows2016",
                 Product = "windows-data-science-vm",
                 Publisher = "microsoft-ads",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "windows-data-science-vm",
                     Publisher = "microsoft-ads",
                     Sku = "windows2016",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadOnly",
                     CreateOption = "FromImage",
-                    DiffDiskSettings = new AzureNextGen.Compute.Latest.Inputs.DiffDiskSettingsArgs
+                    DiffDiskSettings = new AzureNextGen.Compute.Inputs.DiffDiskSettingsArgs
                     {
                         Option = "Local",
                         Placement = "CacheDisk",
                     },
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -4558,7 +4558,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4627,43 +4627,43 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_DS1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
-    plan=azure_nextgen.compute.latest.PlanArgs(
+    plan=azure_nextgen.compute.PlanArgs(
         name="windows2016",
         product="windows-data-science-vm",
         publisher="microsoft-ads",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="windows-data-science-vm",
             publisher="microsoft-ads",
             sku="windows2016",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadOnly",
             create_option="FromImage",
-            diff_disk_settings=azure_nextgen.compute.latest.DiffDiskSettingsArgs(
+            diff_disk_settings=azure_nextgen.compute.DiffDiskSettingsArgs(
                 option="Local",
                 placement="CacheDisk",
             ),
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -4681,7 +4681,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_DS1_v2",
     },
@@ -4740,56 +4740,56 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_DS1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
-            Plan = new AzureNextGen.Compute.Latest.Inputs.PlanArgs
+            Plan = new AzureNextGen.Compute.Inputs.PlanArgs
             {
                 Name = "windows2016",
                 Product = "windows-data-science-vm",
                 Publisher = "microsoft-ads",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "windows-data-science-vm",
                     Publisher = "microsoft-ads",
                     Sku = "windows2016",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadOnly",
                     CreateOption = "FromImage",
-                    DiffDiskSettings = new AzureNextGen.Compute.Latest.Inputs.DiffDiskSettingsArgs
+                    DiffDiskSettings = new AzureNextGen.Compute.Inputs.DiffDiskSettingsArgs
                     {
                         Option = "Local",
                         Placement = "ResourceDisk",
                     },
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -4812,7 +4812,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4881,43 +4881,43 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_DS1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
-    plan=azure_nextgen.compute.latest.PlanArgs(
+    plan=azure_nextgen.compute.PlanArgs(
         name="windows2016",
         product="windows-data-science-vm",
         publisher="microsoft-ads",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="windows-data-science-vm",
             publisher="microsoft-ads",
             sku="windows2016",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadOnly",
             create_option="FromImage",
-            diff_disk_settings=azure_nextgen.compute.latest.DiffDiskSettingsArgs(
+            diff_disk_settings=azure_nextgen.compute.DiffDiskSettingsArgs(
                 option="Local",
                 placement="ResourceDisk",
             ),
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -4935,7 +4935,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_DS1_v2",
     },
@@ -4994,55 +4994,55 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_DS1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
-            Plan = new AzureNextGen.Compute.Latest.Inputs.PlanArgs
+            Plan = new AzureNextGen.Compute.Inputs.PlanArgs
             {
                 Name = "windows2016",
                 Product = "windows-data-science-vm",
                 Publisher = "microsoft-ads",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "windows-data-science-vm",
                     Publisher = "microsoft-ads",
                     Sku = "windows2016",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadOnly",
                     CreateOption = "FromImage",
-                    DiffDiskSettings = new AzureNextGen.Compute.Latest.Inputs.DiffDiskSettingsArgs
+                    DiffDiskSettings = new AzureNextGen.Compute.Inputs.DiffDiskSettingsArgs
                     {
                         Option = "Local",
                     },
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -5065,7 +5065,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -5133,42 +5133,42 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_DS1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
-    plan=azure_nextgen.compute.latest.PlanArgs(
+    plan=azure_nextgen.compute.PlanArgs(
         name="windows2016",
         product="windows-data-science-vm",
         publisher="microsoft-ads",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="windows-data-science-vm",
             publisher="microsoft-ads",
             sku="windows2016",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadOnly",
             create_option="FromImage",
-            diff_disk_settings=azure_nextgen.compute.latest.DiffDiskSettingsArgs(
+            diff_disk_settings=azure_nextgen.compute.DiffDiskSettingsArgs(
                 option="Local",
             ),
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -5186,7 +5186,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_DS1_v2",
     },
@@ -5244,52 +5244,52 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            DiagnosticsProfile = new AzureNextGen.Compute.Latest.Inputs.DiagnosticsProfileArgs
+            DiagnosticsProfile = new AzureNextGen.Compute.Inputs.DiagnosticsProfileArgs
             {
-                BootDiagnostics = new AzureNextGen.Compute.Latest.Inputs.BootDiagnosticsArgs
+                BootDiagnostics = new AzureNextGen.Compute.Inputs.BootDiagnosticsArgs
                 {
                     Enabled = true,
                 },
             },
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -5312,7 +5312,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -5377,39 +5377,39 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    diagnostics_profile=azure_nextgen.compute.latest.DiagnosticsProfileArgs(
-        boot_diagnostics=azure_nextgen.compute.latest.BootDiagnosticsArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    diagnostics_profile=azure_nextgen.compute.DiagnosticsProfileArgs(
+        boot_diagnostics=azure_nextgen.compute.BootDiagnosticsArgs(
             enabled=True,
         ),
     ),
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -5427,7 +5427,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     diagnosticsProfile: {
         bootDiagnostics: {
             enabled: true,
@@ -5482,45 +5482,45 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -5543,7 +5543,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -5603,34 +5603,34 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -5648,7 +5648,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D1_v2",
     },
@@ -5698,45 +5698,45 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminPassword = "{your-password}",
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "WindowsServer",
                     Publisher = "MicrosoftWindowsServer",
                     Sku = "2016-Datacenter",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Premium_LRS",
                     },
@@ -5759,7 +5759,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -5819,34 +5819,34 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_password="{your-password}",
         admin_username="{your-username}",
         computer_name="myVM",
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="WindowsServer",
             publisher="MicrosoftWindowsServer",
             sku="2016-Datacenter",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Premium_LRS",
             ),
             name="myVMosdisk",
@@ -5864,7 +5864,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D1_v2",
     },
@@ -5914,36 +5914,36 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.Compute.VirtualMachine("virtualMachine", new AzureNextGen.Compute.VirtualMachineArgs
         {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            HardwareProfile = new AzureNextGen.Compute.Inputs.HardwareProfileArgs
             {
                 VmSize = "Standard_D1_v2",
             },
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.Compute.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    new AzureNextGen.Compute.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
                         Primary = true,
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.Compute.Inputs.OSProfileArgs
             {
                 AdminUsername = "{your-username}",
                 ComputerName = "myVM",
-                LinuxConfiguration = new AzureNextGen.Compute.Latest.Inputs.LinuxConfigurationArgs
+                LinuxConfiguration = new AzureNextGen.Compute.Inputs.LinuxConfigurationArgs
                 {
                     DisablePasswordAuthentication = true,
-                    Ssh = new AzureNextGen.Compute.Latest.Inputs.SshConfigurationArgs
+                    Ssh = new AzureNextGen.Compute.Inputs.SshConfigurationArgs
                     {
                         PublicKeys = 
                         {
-                            new AzureNextGen.Compute.Latest.Inputs.SshPublicKeyArgs
+                            new AzureNextGen.Compute.Inputs.SshPublicKeyArgs
                             {
                                 KeyData = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1",
                                 Path = "/home/{your-username}/.ssh/authorized_keys",
@@ -5953,20 +5953,20 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Inputs.StorageProfileArgs
             {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
                 {
                     Offer = "{image_offer}",
                     Publisher = "{image_publisher}",
                     Sku = "{image_sku}",
                     Version = "latest",
                 },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Inputs.OSDiskArgs
                 {
                     Caching = "ReadWrite",
                     CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    ManagedDisk = new AzureNextGen.Compute.Inputs.ManagedDiskParametersArgs
                     {
                         StorageAccountType = "Standard_LRS",
                     },
@@ -5989,7 +5989,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -6059,24 +6059,24 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+virtual_machine = azure_nextgen.compute.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.HardwareProfileArgs(
         vm_size="Standard_D1_v2",
     ),
     location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+    network_profile=azure_nextgen.compute.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.NetworkInterfaceReferenceArgs(
             id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
             primary=True,
         )],
     ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+    os_profile=azure_nextgen.compute.OSProfileArgs(
         admin_username="{your-username}",
         computer_name="myVM",
-        linux_configuration=azure_nextgen.compute.latest.LinuxConfigurationArgs(
+        linux_configuration=azure_nextgen.compute.LinuxConfigurationArgs(
             disable_password_authentication=True,
-            ssh=azure_nextgen.compute.latest.SshConfigurationArgs(
-                public_keys=[azure_nextgen.compute.latest.SshPublicKeyArgs(
+            ssh=azure_nextgen.compute.SshConfigurationArgs(
+                public_keys=[azure_nextgen.compute.SshPublicKeyArgs(
                     key_data="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1",
                     path="/home/{your-username}/.ssh/authorized_keys",
                 )],
@@ -6084,17 +6084,17 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
         ),
     ),
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+    storage_profile=azure_nextgen.compute.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.ImageReferenceArgs(
             offer="{image_offer}",
             publisher="{image_publisher}",
             sku="{image_sku}",
             version="latest",
         ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+        os_disk=azure_nextgen.compute.OSDiskArgs(
             caching="ReadWrite",
             create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+            managed_disk=azure_nextgen.compute.ManagedDiskParametersArgs(
                 storage_account_type="Standard_LRS",
             ),
             name="myVMosdisk",
@@ -6112,7 +6112,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.compute.VirtualMachine("virtualMachine", {
     hardwareProfile: {
         vmSize: "Standard_D1_v2",
     },
@@ -6168,7 +6168,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6176,11 +6176,11 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualMachineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6201,7 +6201,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -6270,7 +6270,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -6309,7 +6309,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -6332,11 +6332,11 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
 
 ## VirtualMachine Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualMachine resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualMachine resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -22942,7 +22942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:VirtualMachine myVM /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM 
+$ pulumi import azure-nextgen:compute:VirtualMachine myVM /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.RulesEngine resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,30 +27,30 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rulesEngine = new AzureNextGen.Network.Latest.RulesEngine("rulesEngine", new AzureNextGen.Network.Latest.RulesEngineArgs
+        var rulesEngine = new AzureNextGen.Network.RulesEngine("rulesEngine", new AzureNextGen.Network.RulesEngineArgs
         {
             FrontDoorName = "frontDoor1",
             ResourceGroupName = "rg1",
             Rules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.RulesEngineRuleArgs
+                new AzureNextGen.Network.Inputs.RulesEngineRuleArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.RulesEngineActionArgs
+                    Action = new AzureNextGen.Network.Inputs.RulesEngineActionArgs
                     {
-                        RouteConfigurationOverride = 
+                        RouteConfigurationOverride = new AzureNextGen.Network.Inputs.RedirectConfigurationArgs
                         {
-                            { "customFragment", "fragment" },
-                            { "customHost", "www.bing.com" },
-                            { "customPath", "/api" },
-                            { "customQueryString", "a=b" },
-                            { "odataType", "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration" },
-                            { "redirectProtocol", "HttpsOnly" },
-                            { "redirectType", "Moved" },
+                            CustomFragment = "fragment",
+                            CustomHost = "www.bing.com",
+                            CustomPath = "/api",
+                            CustomQueryString = "a=b",
+                            OdataType = "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
+                            RedirectProtocol = "HttpsOnly",
+                            RedirectType = "Moved",
                         },
                     },
                     MatchConditions = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.RulesEngineMatchConditionArgs
+                        new AzureNextGen.Network.Inputs.RulesEngineMatchConditionArgs
                         {
                             RulesEngineMatchValue = 
                             {
@@ -64,13 +64,13 @@ class MyStack : Stack
                     Name = "Rule1",
                     Priority = 1,
                 },
-                new AzureNextGen.Network.Latest.Inputs.RulesEngineRuleArgs
+                new AzureNextGen.Network.Inputs.RulesEngineRuleArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.RulesEngineActionArgs
+                    Action = new AzureNextGen.Network.Inputs.RulesEngineActionArgs
                     {
                         ResponseHeaderActions = 
                         {
-                            new AzureNextGen.Network.Latest.Inputs.HeaderActionArgs
+                            new AzureNextGen.Network.Inputs.HeaderActionArgs
                             {
                                 HeaderActionType = "Overwrite",
                                 HeaderName = "Cache-Control",
@@ -80,7 +80,7 @@ class MyStack : Stack
                     },
                     MatchConditions = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.RulesEngineMatchConditionArgs
+                        new AzureNextGen.Network.Inputs.RulesEngineMatchConditionArgs
                         {
                             RulesEngineMatchValue = 
                             {
@@ -97,30 +97,30 @@ class MyStack : Stack
                     Name = "Rule2",
                     Priority = 2,
                 },
-                new AzureNextGen.Network.Latest.Inputs.RulesEngineRuleArgs
+                new AzureNextGen.Network.Inputs.RulesEngineRuleArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.RulesEngineActionArgs
+                    Action = new AzureNextGen.Network.Inputs.RulesEngineActionArgs
                     {
-                        RouteConfigurationOverride = 
+                        RouteConfigurationOverride = new AzureNextGen.Network.Inputs.ForwardingConfigurationArgs
                         {
-                            { "backendPool", new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                            BackendPool = new AzureNextGen.Network.Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
-                            } },
-                            { "cacheConfiguration", new AzureNextGen.Network.Latest.Inputs.CacheConfigurationArgs
+                            },
+                            CacheConfiguration = new AzureNextGen.Network.Inputs.CacheConfigurationArgs
                             {
                                 CacheDuration = "P1DT12H20M30S",
                                 DynamicCompression = "Disabled",
                                 QueryParameterStripDirective = "StripOnly",
                                 QueryParameters = "a=b,p=q",
-                            } },
-                            { "forwardingProtocol", "HttpsOnly" },
-                            { "odataType", "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration" },
+                            },
+                            ForwardingProtocol = "HttpsOnly",
+                            OdataType = "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
                         },
                     },
                     MatchConditions = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.RulesEngineMatchConditionArgs
+                        new AzureNextGen.Network.Inputs.RulesEngineMatchConditionArgs
                         {
                             NegateCondition = false,
                             RulesEngineMatchValue = 
@@ -151,7 +151,116 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewRulesEngine(ctx, "rulesEngine", &network.RulesEngineArgs{
+			FrontDoorName:     pulumi.String("frontDoor1"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Rules: network.RulesEngineRuleArray{
+				&network.RulesEngineRuleArgs{
+					Action: &network.RulesEngineActionArgs{
+						RouteConfigurationOverride: &network.RedirectConfigurationArgs{
+							CustomFragment:    pulumi.String("fragment"),
+							CustomHost:        pulumi.String("www.bing.com"),
+							CustomPath:        pulumi.String("/api"),
+							CustomQueryString: pulumi.String("a=b"),
+							OdataType:         pulumi.String("#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration"),
+							RedirectProtocol:  pulumi.String("HttpsOnly"),
+							RedirectType:      pulumi.String("Moved"),
+						},
+					},
+					MatchConditions: network.RulesEngineMatchConditionArray{
+						&network.RulesEngineMatchConditionArgs{
+							RulesEngineMatchValue: pulumi.StringArray{
+								pulumi.String("CH"),
+							},
+							RulesEngineMatchVariable: pulumi.String("RemoteAddr"),
+							RulesEngineOperator:      pulumi.String("GeoMatch"),
+						},
+					},
+					MatchProcessingBehavior: pulumi.String("Stop"),
+					Name:                    pulumi.String("Rule1"),
+					Priority:                pulumi.Int(1),
+				},
+				&network.RulesEngineRuleArgs{
+					Action: &network.RulesEngineActionArgs{
+						ResponseHeaderActions: network.HeaderActionArray{
+							&network.HeaderActionArgs{
+								HeaderActionType: pulumi.String("Overwrite"),
+								HeaderName:       pulumi.String("Cache-Control"),
+								Value:            pulumi.String("public, max-age=31536000"),
+							},
+						},
+					},
+					MatchConditions: network.RulesEngineMatchConditionArray{
+						&network.RulesEngineMatchConditionArgs{
+							RulesEngineMatchValue: pulumi.StringArray{
+								pulumi.String("jpg"),
+							},
+							RulesEngineMatchVariable: pulumi.String("RequestFilenameExtension"),
+							RulesEngineOperator:      pulumi.String("Equal"),
+							Transforms: pulumi.StringArray{
+								pulumi.String("Lowercase"),
+							},
+						},
+					},
+					Name:     pulumi.String("Rule2"),
+					Priority: pulumi.Int(2),
+				},
+				&network.RulesEngineRuleArgs{
+					Action: &network.RulesEngineActionArgs{
+						RouteConfigurationOverride: &network.ForwardingConfigurationArgs{
+							BackendPool: &network.SubResourceArgs{
+								Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1"),
+							},
+							CacheConfiguration: &network.CacheConfigurationArgs{
+								CacheDuration:                pulumi.String("P1DT12H20M30S"),
+								DynamicCompression:           pulumi.String("Disabled"),
+								QueryParameterStripDirective: pulumi.String("StripOnly"),
+								QueryParameters:              pulumi.String("a=b,p=q"),
+							},
+							ForwardingProtocol: pulumi.String("HttpsOnly"),
+							OdataType:          pulumi.String("#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration"),
+						},
+					},
+					MatchConditions: network.RulesEngineMatchConditionArray{
+						&network.RulesEngineMatchConditionArgs{
+							NegateCondition: pulumi.Bool(false),
+							RulesEngineMatchValue: pulumi.StringArray{
+								pulumi.String("allowoverride"),
+							},
+							RulesEngineMatchVariable: pulumi.String("RequestHeader"),
+							RulesEngineOperator:      pulumi.String("Equal"),
+							Selector:                 pulumi.String("Rules-Engine-Route-Forward"),
+							Transforms: pulumi.StringArray{
+								pulumi.String("Lowercase"),
+							},
+						},
+					},
+					Name:     pulumi.String("Rule3"),
+					Priority: pulumi.Int(3),
+				},
+			},
+			RulesEngineName: pulumi.String("rulesEngine1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -160,23 +269,23 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
+rules_engine = azure_nextgen.network.RulesEngine("rulesEngine",
     front_door_name="frontDoor1",
     resource_group_name="rg1",
     rules=[
-        azure_nextgen.network.latest.RulesEngineRuleArgs(
-            action=azure_nextgen.network.latest.RulesEngineActionArgs(
-                route_configuration_override={
-                    "customFragment": "fragment",
-                    "customHost": "www.bing.com",
-                    "customPath": "/api",
-                    "customQueryString": "a=b",
-                    "odataType": "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
-                    "redirectProtocol": "HttpsOnly",
-                    "redirectType": "Moved",
-                },
+        azure_nextgen.network.RulesEngineRuleArgs(
+            action=azure_nextgen.network.RulesEngineActionArgs(
+                route_configuration_override=azure_nextgen.network.RedirectConfigurationArgs(
+                    custom_fragment="fragment",
+                    custom_host="www.bing.com",
+                    custom_path="/api",
+                    custom_query_string="a=b",
+                    odata_type="#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
+                    redirect_protocol="HttpsOnly",
+                    redirect_type="Moved",
+                ),
             ),
-            match_conditions=[azure_nextgen.network.latest.RulesEngineMatchConditionArgs(
+            match_conditions=[azure_nextgen.network.RulesEngineMatchConditionArgs(
                 rules_engine_match_value=["CH"],
                 rules_engine_match_variable="RemoteAddr",
                 rules_engine_operator="GeoMatch",
@@ -185,15 +294,15 @@ rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
             name="Rule1",
             priority=1,
         ),
-        azure_nextgen.network.latest.RulesEngineRuleArgs(
-            action=azure_nextgen.network.latest.RulesEngineActionArgs(
-                response_header_actions=[azure_nextgen.network.latest.HeaderActionArgs(
+        azure_nextgen.network.RulesEngineRuleArgs(
+            action=azure_nextgen.network.RulesEngineActionArgs(
+                response_header_actions=[azure_nextgen.network.HeaderActionArgs(
                     header_action_type="Overwrite",
                     header_name="Cache-Control",
                     value="public, max-age=31536000",
                 )],
             ),
-            match_conditions=[azure_nextgen.network.latest.RulesEngineMatchConditionArgs(
+            match_conditions=[azure_nextgen.network.RulesEngineMatchConditionArgs(
                 rules_engine_match_value=["jpg"],
                 rules_engine_match_variable="RequestFilenameExtension",
                 rules_engine_operator="Equal",
@@ -202,23 +311,23 @@ rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
             name="Rule2",
             priority=2,
         ),
-        azure_nextgen.network.latest.RulesEngineRuleArgs(
-            action=azure_nextgen.network.latest.RulesEngineActionArgs(
-                route_configuration_override={
-                    "backendPool": azure_nextgen.network.latest.SubResourceArgs(
+        azure_nextgen.network.RulesEngineRuleArgs(
+            action=azure_nextgen.network.RulesEngineActionArgs(
+                route_configuration_override=azure_nextgen.network.ForwardingConfigurationArgs(
+                    backend_pool=azure_nextgen.network.SubResourceArgs(
                         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
                     ),
-                    "cacheConfiguration": azure_nextgen.network.latest.CacheConfigurationArgs(
+                    cache_configuration=azure_nextgen.network.CacheConfigurationArgs(
                         cache_duration="P1DT12H20M30S",
                         dynamic_compression="Disabled",
                         query_parameter_strip_directive="StripOnly",
                         query_parameters="a=b,p=q",
                     ),
-                    "forwardingProtocol": "HttpsOnly",
-                    "odataType": "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
-                },
+                    forwarding_protocol="HttpsOnly",
+                    odata_type="#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+                ),
             ),
-            match_conditions=[azure_nextgen.network.latest.RulesEngineMatchConditionArgs(
+            match_conditions=[azure_nextgen.network.RulesEngineMatchConditionArgs(
                 negate_condition=False,
                 rules_engine_match_value=["allowoverride"],
                 rules_engine_match_variable="RequestHeader",
@@ -242,7 +351,7 @@ rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", {
+const rulesEngine = new azure_nextgen.network.RulesEngine("rulesEngine", {
     frontDoorName: "frontDoor1",
     resourceGroupName: "rg1",
     rules: [
@@ -327,7 +436,7 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RulesEngine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RulesEngineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RulesEngine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RulesEngineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -335,11 +444,11 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRulesEngine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RulesEngineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RulesEngine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRulesEngine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RulesEngineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RulesEngine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RulesEngine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RulesEngineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RulesEngine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RulesEngineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -360,7 +469,7 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RulesEngineArgs</span>
+        <span class="property-type"><a href="#inputs">RulesEngineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -429,7 +538,7 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RulesEngineArgs</span>
+        <span class="property-type"><a href="#inputs">RulesEngineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -468,7 +577,7 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RulesEngineArgs</span>
+        <span class="property-type"><a href="#inputs">RulesEngineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -491,11 +600,11 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
 
 ## RulesEngine Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4197,7 +4306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:RulesEngine rulesEngine1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1 
+$ pulumi import azure-nextgen:network:RulesEngine rulesEngine1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1 
 ```
 
 

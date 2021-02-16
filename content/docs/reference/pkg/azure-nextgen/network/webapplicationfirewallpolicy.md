@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.WebApplicationFirewallPo
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Defines web application firewall policy.
-Latest API Version: 2020-08-01.
+API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,16 +27,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var webApplicationFirewallPolicy = new AzureNextGen.Network.Latest.WebApplicationFirewallPolicy("webApplicationFirewallPolicy", new AzureNextGen.Network.Latest.WebApplicationFirewallPolicyArgs
+        var webApplicationFirewallPolicy = new AzureNextGen.Network.WebApplicationFirewallPolicy("webApplicationFirewallPolicy", new AzureNextGen.Network.WebApplicationFirewallPolicyArgs
         {
             CustomRules = 
             {
-                new AzureNextGen.Network.Latest.Inputs.WebApplicationFirewallCustomRuleArgs
+                new AzureNextGen.Network.Inputs.WebApplicationFirewallCustomRuleArgs
                 {
                     Action = "Block",
                     MatchConditions = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.MatchConditionArgs
+                        new AzureNextGen.Network.Inputs.MatchConditionArgs
                         {
                             MatchValues = 
                             {
@@ -45,7 +45,7 @@ class MyStack : Stack
                             },
                             MatchVariables = 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.MatchVariableArgs
+                                new AzureNextGen.Network.Inputs.MatchVariableArgs
                                 {
                                     VariableName = "RemoteAddr",
                                 },
@@ -57,12 +57,12 @@ class MyStack : Stack
                     Priority = 1,
                     RuleType = "MatchRule",
                 },
-                new AzureNextGen.Network.Latest.Inputs.WebApplicationFirewallCustomRuleArgs
+                new AzureNextGen.Network.Inputs.WebApplicationFirewallCustomRuleArgs
                 {
                     Action = "Block",
                     MatchConditions = 
                     {
-                        new AzureNextGen.Network.Latest.Inputs.MatchConditionArgs
+                        new AzureNextGen.Network.Inputs.MatchConditionArgs
                         {
                             MatchValues = 
                             {
@@ -70,14 +70,14 @@ class MyStack : Stack
                             },
                             MatchVariables = 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.MatchVariableArgs
+                                new AzureNextGen.Network.Inputs.MatchVariableArgs
                                 {
                                     VariableName = "RemoteAddr",
                                 },
                             },
                             Operator = "IPMatch",
                         },
-                        new AzureNextGen.Network.Latest.Inputs.MatchConditionArgs
+                        new AzureNextGen.Network.Inputs.MatchConditionArgs
                         {
                             MatchValues = 
                             {
@@ -85,7 +85,7 @@ class MyStack : Stack
                             },
                             MatchVariables = 
                             {
-                                new AzureNextGen.Network.Latest.Inputs.MatchVariableArgs
+                                new AzureNextGen.Network.Inputs.MatchVariableArgs
                                 {
                                     Selector = "UserAgent",
                                     VariableName = "RequestHeaders",
@@ -100,11 +100,11 @@ class MyStack : Stack
                 },
             },
             Location = "WestUs",
-            ManagedRules = new AzureNextGen.Network.Latest.Inputs.ManagedRulesDefinitionArgs
+            ManagedRules = new AzureNextGen.Network.Inputs.ManagedRulesDefinitionArgs
             {
                 ManagedRuleSets = 
                 {
-                    new AzureNextGen.Network.Latest.Inputs.ManagedRuleSetArgs
+                    new AzureNextGen.Network.Inputs.ManagedRuleSetArgs
                     {
                         RuleSetType = "OWASP",
                         RuleSetVersion = "3.0",
@@ -128,7 +128,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -217,16 +217,16 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-web_application_firewall_policy = azure_nextgen.network.latest.WebApplicationFirewallPolicy("webApplicationFirewallPolicy",
+web_application_firewall_policy = azure_nextgen.network.WebApplicationFirewallPolicy("webApplicationFirewallPolicy",
     custom_rules=[
-        azure_nextgen.network.latest.WebApplicationFirewallCustomRuleArgs(
+        azure_nextgen.network.WebApplicationFirewallCustomRuleArgs(
             action="Block",
-            match_conditions=[azure_nextgen.network.latest.MatchConditionArgs(
+            match_conditions=[azure_nextgen.network.MatchConditionArgs(
                 match_values=[
                     "192.168.1.0/24",
                     "10.0.0.0/24",
                 ],
-                match_variables=[azure_nextgen.network.latest.MatchVariableArgs(
+                match_variables=[azure_nextgen.network.MatchVariableArgs(
                     variable_name="RemoteAddr",
                 )],
                 operator="IPMatch",
@@ -235,19 +235,19 @@ web_application_firewall_policy = azure_nextgen.network.latest.WebApplicationFir
             priority=1,
             rule_type="MatchRule",
         ),
-        azure_nextgen.network.latest.WebApplicationFirewallCustomRuleArgs(
+        azure_nextgen.network.WebApplicationFirewallCustomRuleArgs(
             action="Block",
             match_conditions=[
-                azure_nextgen.network.latest.MatchConditionArgs(
+                azure_nextgen.network.MatchConditionArgs(
                     match_values=["192.168.1.0/24"],
-                    match_variables=[azure_nextgen.network.latest.MatchVariableArgs(
+                    match_variables=[azure_nextgen.network.MatchVariableArgs(
                         variable_name="RemoteAddr",
                     )],
                     operator="IPMatch",
                 ),
-                azure_nextgen.network.latest.MatchConditionArgs(
+                azure_nextgen.network.MatchConditionArgs(
                     match_values=["Windows"],
-                    match_variables=[azure_nextgen.network.latest.MatchVariableArgs(
+                    match_variables=[azure_nextgen.network.MatchVariableArgs(
                         selector="UserAgent",
                         variable_name="RequestHeaders",
                     )],
@@ -260,8 +260,8 @@ web_application_firewall_policy = azure_nextgen.network.latest.WebApplicationFir
         ),
     ],
     location="WestUs",
-    managed_rules=azure_nextgen.network.latest.ManagedRulesDefinitionArgs(
-        managed_rule_sets=[azure_nextgen.network.latest.ManagedRuleSetArgs(
+    managed_rules=azure_nextgen.network.ManagedRulesDefinitionArgs(
+        managed_rule_sets=[azure_nextgen.network.ManagedRuleSetArgs(
             rule_set_type="OWASP",
             rule_set_version="3.0",
         )],
@@ -279,7 +279,7 @@ web_application_firewall_policy = azure_nextgen.network.latest.WebApplicationFir
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const webApplicationFirewallPolicy = new azure_nextgen.network.latest.WebApplicationFirewallPolicy("webApplicationFirewallPolicy", {
+const webApplicationFirewallPolicy = new azure_nextgen.network.WebApplicationFirewallPolicy("webApplicationFirewallPolicy", {
     customRules: [
         {
             action: "Block",
@@ -344,7 +344,7 @@ const webApplicationFirewallPolicy = new azure_nextgen.network.latest.WebApplica
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebApplicationFirewallPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WebApplicationFirewallPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebApplicationFirewallPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebApplicationFirewallPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -352,11 +352,11 @@ const webApplicationFirewallPolicy = new azure_nextgen.network.latest.WebApplica
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebApplicationFirewallPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WebApplicationFirewallPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebApplicationFirewallPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebApplicationFirewallPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebApplicationFirewallPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebApplicationFirewallPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebApplicationFirewallPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WebApplicationFirewallPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebApplicationFirewallPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebApplicationFirewallPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -377,7 +377,7 @@ const webApplicationFirewallPolicy = new azure_nextgen.network.latest.WebApplica
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WebApplicationFirewallPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">WebApplicationFirewallPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -446,7 +446,7 @@ const webApplicationFirewallPolicy = new azure_nextgen.network.latest.WebApplica
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WebApplicationFirewallPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">WebApplicationFirewallPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -485,7 +485,7 @@ const webApplicationFirewallPolicy = new azure_nextgen.network.latest.WebApplica
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WebApplicationFirewallPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">WebApplicationFirewallPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -508,11 +508,11 @@ const webApplicationFirewallPolicy = new azure_nextgen.network.latest.WebApplica
 
 ## WebApplicationFirewallPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The WebApplicationFirewallPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The WebApplicationFirewallPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -28404,7 +28404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:WebApplicationFirewallPolicy Policy1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/Policy1 
+$ pulumi import azure-nextgen:network:WebApplicationFirewallPolicy Policy1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/Policy1 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.media.LiveEvent resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The live event.
-Latest API Version: 2020-05-01.
+API Version: 2020-05-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,19 +27,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var liveEvent = new AzureNextGen.Media.Latest.LiveEvent("liveEvent", new AzureNextGen.Media.Latest.LiveEventArgs
+        var liveEvent = new AzureNextGen.Media.LiveEvent("liveEvent", new AzureNextGen.Media.LiveEventArgs
         {
             AccountName = "slitestmedia10",
             Description = "test event 1",
-            Input = new AzureNextGen.Media.Latest.Inputs.LiveEventInputArgs
+            Input = new AzureNextGen.Media.Inputs.LiveEventInputArgs
             {
-                AccessControl = new AzureNextGen.Media.Latest.Inputs.LiveEventInputAccessControlArgs
+                AccessControl = new AzureNextGen.Media.Inputs.LiveEventInputAccessControlArgs
                 {
-                    Ip = new AzureNextGen.Media.Latest.Inputs.IPAccessControlArgs
+                    Ip = new AzureNextGen.Media.Inputs.IPAccessControlArgs
                     {
                         Allow = 
                         {
-                            new AzureNextGen.Media.Latest.Inputs.IPRangeArgs
+                            new AzureNextGen.Media.Inputs.IPRangeArgs
                             {
                                 Address = "0.0.0.0",
                                 Name = "AllowAll",
@@ -53,15 +53,15 @@ class MyStack : Stack
             },
             LiveEventName = "myLiveEvent1",
             Location = "West US",
-            Preview = new AzureNextGen.Media.Latest.Inputs.LiveEventPreviewArgs
+            Preview = new AzureNextGen.Media.Inputs.LiveEventPreviewArgs
             {
-                AccessControl = new AzureNextGen.Media.Latest.Inputs.LiveEventPreviewAccessControlArgs
+                AccessControl = new AzureNextGen.Media.Inputs.LiveEventPreviewAccessControlArgs
                 {
-                    Ip = new AzureNextGen.Media.Latest.Inputs.IPAccessControlArgs
+                    Ip = new AzureNextGen.Media.Inputs.IPAccessControlArgs
                     {
                         Allow = 
                         {
-                            new AzureNextGen.Media.Latest.Inputs.IPRangeArgs
+                            new AzureNextGen.Media.Inputs.IPRangeArgs
                             {
                                 Address = "0.0.0.0",
                                 Name = "AllowAll",
@@ -92,7 +92,7 @@ class MyStack : Stack
 package main
 
 import (
-	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media/latest"
+	media "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -154,13 +154,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-live_event = azure_nextgen.media.latest.LiveEvent("liveEvent",
+live_event = azure_nextgen.media.LiveEvent("liveEvent",
     account_name="slitestmedia10",
     description="test event 1",
-    input=azure_nextgen.media.latest.LiveEventInputArgs(
-        access_control=azure_nextgen.media.latest.LiveEventInputAccessControlArgs(
-            ip=azure_nextgen.media.latest.IPAccessControlArgs(
-                allow=[azure_nextgen.media.latest.IPRangeArgs(
+    input=azure_nextgen.media.LiveEventInputArgs(
+        access_control=azure_nextgen.media.LiveEventInputAccessControlArgs(
+            ip=azure_nextgen.media.IPAccessControlArgs(
+                allow=[azure_nextgen.media.IPRangeArgs(
                     address="0.0.0.0",
                     name="AllowAll",
                     subnet_prefix_length=0,
@@ -172,10 +172,10 @@ live_event = azure_nextgen.media.latest.LiveEvent("liveEvent",
     ),
     live_event_name="myLiveEvent1",
     location="West US",
-    preview=azure_nextgen.media.latest.LiveEventPreviewArgs(
-        access_control=azure_nextgen.media.latest.LiveEventPreviewAccessControlArgs(
-            ip=azure_nextgen.media.latest.IPAccessControlArgs(
-                allow=[azure_nextgen.media.latest.IPRangeArgs(
+    preview=azure_nextgen.media.LiveEventPreviewArgs(
+        access_control=azure_nextgen.media.LiveEventPreviewAccessControlArgs(
+            ip=azure_nextgen.media.IPAccessControlArgs(
+                allow=[azure_nextgen.media.IPRangeArgs(
                     address="0.0.0.0",
                     name="AllowAll",
                     subnet_prefix_length=0,
@@ -199,7 +199,7 @@ live_event = azure_nextgen.media.latest.LiveEvent("liveEvent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const liveEvent = new azure_nextgen.media.latest.LiveEvent("liveEvent", {
+const liveEvent = new azure_nextgen.media.LiveEvent("liveEvent", {
     accountName: "slitestmedia10",
     description: "test event 1",
     input: {
@@ -247,7 +247,7 @@ const liveEvent = new azure_nextgen.media.latest.LiveEvent("liveEvent", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">LiveEventArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LiveEventArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -255,11 +255,11 @@ const liveEvent = new azure_nextgen.media.latest.LiveEvent("liveEvent", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLiveEvent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">LiveEventArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LiveEvent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLiveEvent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LiveEventArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LiveEvent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">LiveEventArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LiveEventArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -280,7 +280,7 @@ const liveEvent = new azure_nextgen.media.latest.LiveEvent("liveEvent", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LiveEventArgs</span>
+        <span class="property-type"><a href="#inputs">LiveEventArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -349,7 +349,7 @@ const liveEvent = new azure_nextgen.media.latest.LiveEvent("liveEvent", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LiveEventArgs</span>
+        <span class="property-type"><a href="#inputs">LiveEventArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -388,7 +388,7 @@ const liveEvent = new azure_nextgen.media.latest.LiveEvent("liveEvent", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">LiveEventArgs</span>
+        <span class="property-type"><a href="#inputs">LiveEventArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -411,11 +411,11 @@ const liveEvent = new azure_nextgen.media.latest.LiveEvent("liveEvent", {
 
 ## LiveEvent Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -4583,7 +4583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/latest:LiveEvent myLiveEvent1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/liveevents/myLiveEvent1 
+$ pulumi import azure-nextgen:media:LiveEvent myLiveEvent1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/liveevents/myLiveEvent1 
 ```
 
 
