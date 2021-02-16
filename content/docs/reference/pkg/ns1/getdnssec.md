@@ -50,7 +50,6 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-ns1/sdk/go/ns1"
-	"github.com/pulumi/pulumi-ns1/sdk/go/ns1/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -111,7 +110,7 @@ const exampleDNSSec = exampleZone.zone.apply(zone => ns1.getDNSSec({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDNSSec<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/ns1/#GetDNSSecArgs">GetDNSSecArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/ns1/#GetDNSSecResult">GetDNSSecResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDNSSec<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDNSSecArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDNSSecResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -121,14 +120,14 @@ const exampleDNSSec = exampleZone.zone.apply(zone => ns1.getDNSSec({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDNSSec<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#GetDNSSecArgs">GetDNSSecArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#GetDNSSecResult">GetDNSSecResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDNSSec<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDNSSecArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDNSSecResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDNSSec </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.GetDNSSecResult.html">GetDNSSecResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.GetDNSSecArgs.html">GetDNSSecArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDNSSecResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDNSSecArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -401,16 +400,6 @@ below.
 
 
 <h4 id="getdnssecdelegation">Get<wbr>DNSSec<wbr>Delegation</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#GetDNSSecDelegation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#GetDNSSecDelegation">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Outputs.GetDNSSecDelegation.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -559,16 +548,6 @@ below.
 {{% /choosable %}}
 
 <h4 id="getdnssecdelegationd">Get<wbr>DNSSec<wbr>Delegation<wbr>D</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#GetDNSSecDelegationD">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#GetDNSSecDelegationD">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Outputs.GetDNSSecDelegationD.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -757,16 +736,6 @@ below.
 {{% /choosable %}}
 
 <h4 id="getdnssecdelegationdnskey">Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#GetDNSSecDelegationDnskey">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#GetDNSSecDelegationDnskey">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Outputs.GetDNSSecDelegationDnskey.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -955,16 +924,6 @@ below.
 {{% /choosable %}}
 
 <h4 id="getdnsseckeys">Get<wbr>DNSSec<wbr>Keys</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#GetDNSSecKeys">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#GetDNSSecKeys">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Outputs.GetDNSSecKeys.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1073,16 +1032,6 @@ below.
 {{% /choosable %}}
 
 <h4 id="getdnsseckeysdnskey">Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#GetDNSSecKeysDnskey">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#GetDNSSecKeysDnskey">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Outputs.GetDNSSecKeysDnskey.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
