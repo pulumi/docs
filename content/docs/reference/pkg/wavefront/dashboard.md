@@ -95,19 +95,19 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#Dashboard">Dashboard</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#DashboardArgs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_wavefront/#pulumi_wavefront.Dashboard">Dashboard</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_modifies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">can_views</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_query_parameters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_section_table_of_contents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_details</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardParameterDetailArgs]]</span> = None<span class="p">, </span><span class="nx">sections</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardSectionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_modifies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">can_views</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_query_parameters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_section_table_of_contents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_details</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardParameterDetailArgs]]</span> = None<span class="p">, </span><span class="nx">sections</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardSectionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#Dashboard">NewDashboard</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardArgs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#Dashboard">Dashboard</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Dashboard.html">Dashboard</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.DashboardArgs.html">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -128,7 +128,7 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#DashboardArgs">DashboardArgs</a></span>
+        <span class="property-type"><a href="#inputs">DashboardArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -197,7 +197,7 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardArgs">DashboardArgs</a></span>
+        <span class="property-type"><a href="#inputs">DashboardArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -236,7 +236,7 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.DashboardArgs.html">DashboardArgs</a></span>
+        <span class="property-type"><a href="#inputs">DashboardArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -259,11 +259,11 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
 
 ## Dashboard Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Dashboard resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Dashboard resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -818,7 +818,7 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#DashboardState">DashboardState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#Dashboard">Dashboard</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DashboardState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Dashboard</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -827,11 +827,11 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardState">DashboardState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#Dashboard">Dashboard</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DashboardState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Dashboard.html">Dashboard</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront..DashboardState.html">DashboardState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Dashboard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DashboardState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1419,18 +1419,6 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 
 
 <h4 id="dashboardparameterdetail">Dashboard<wbr>Parameter<wbr>Detail</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#DashboardParameterDetail">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/wavefront/types/output/#DashboardParameterDetail">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardParameterDetailArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardParameterDetailOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Inputs.DashboardParameterDetailArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Outputs.DashboardParameterDetail.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1825,18 +1813,6 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 {{% /choosable %}}
 
 <h4 id="dashboardsection">Dashboard<wbr>Section</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#DashboardSection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/wavefront/types/output/#DashboardSection">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Inputs.DashboardSectionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Outputs.DashboardSection.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1943,18 +1919,6 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 {{% /choosable %}}
 
 <h4 id="dashboardsectionrow">Dashboard<wbr>Section<wbr>Row</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#DashboardSectionRow">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/wavefront/types/output/#DashboardSectionRow">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Inputs.DashboardSectionRowArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Outputs.DashboardSectionRow.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2021,18 +1985,6 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 {{% /choosable %}}
 
 <h4 id="dashboardsectionrowchart">Dashboard<wbr>Section<wbr>Row<wbr>Chart</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#DashboardSectionRowChart">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/wavefront/types/output/#DashboardSectionRowChart">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowChartArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowChartOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Inputs.DashboardSectionRowChartArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Outputs.DashboardSectionRowChart.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2379,18 +2331,6 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 {{% /choosable %}}
 
 <h4 id="dashboardsectionrowchartchartsetting">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Chart<wbr>Setting</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#DashboardSectionRowChartChartSetting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/wavefront/types/output/#DashboardSectionRowChartChartSetting">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowChartChartSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowChartChartSettingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Inputs.DashboardSectionRowChartChartSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Outputs.DashboardSectionRowChartChartSetting.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4801,18 +4741,6 @@ Valid options are `full` or `last`
 {{% /choosable %}}
 
 <h4 id="dashboardsectionrowchartsource">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#DashboardSectionRowChartSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/wavefront/types/output/#DashboardSectionRowChartSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowChartSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowChartSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Inputs.DashboardSectionRowChartSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Outputs.DashboardSectionRowChartSource.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
