@@ -23,6 +23,6 @@ Explore the resources and functions of the opsgenie module in the SignalFx packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>4.3.0</dd>
+	<dd>4.3.1</dd>
 </dl>
 
