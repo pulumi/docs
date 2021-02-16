@@ -11,14 +11,17 @@ Explore the resources and functions of the cloudfront module in the AWS package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="cachepolicy" title="CachePolicy"><span class="symbol resource"></span>CachePolicy</a></li>
     <li><a href="distribution" title="Distribution"><span class="symbol resource"></span>Distribution</a></li>
     <li><a href="originaccessidentity" title="OriginAccessIdentity"><span class="symbol resource"></span>OriginAccessIdentity</a></li>
     <li><a href="originrequestpolicy" title="OriginRequestPolicy"><span class="symbol resource"></span>OriginRequestPolicy</a></li>
     <li><a href="publickey" title="PublicKey"><span class="symbol resource"></span>PublicKey</a></li>
+    <li><a href="realtimelogconfig" title="RealtimeLogConfig"><span class="symbol resource"></span>RealtimeLogConfig</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcachepolicy" title="GetCachePolicy"><span class="symbol function"></span>GetCachePolicy</a></li>
     <li><a href="getdistribution" title="GetDistribution"><span class="symbol function"></span>GetDistribution</a></li>
     <li><a href="getoriginrequestpolicy" title="GetOriginRequestPolicy"><span class="symbol function"></span>GetOriginRequestPolicy</a></li>
 </ul>
@@ -32,6 +35,6 @@ Explore the resources and functions of the cloudfront module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.28.1</dd>
+	<dd>3.29.0</dd>
 </dl>
 

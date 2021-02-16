@@ -19,6 +19,8 @@ Provides an IAM policy attached to a user.
 
 {{% example csharp %}}
 ```csharp
+using System.Collections.Generic;
+using System.Text.Json;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
@@ -33,19 +35,24 @@ class MyStack : Stack
         var lbRo = new Aws.Iam.UserPolicy("lbRo", new Aws.Iam.UserPolicyArgs
         {
             User = lbUser.Name,
-            Policy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {
-      ""Action"": [
-        ""ec2:Describe*""
-      ],
-      ""Effect"": ""Allow"",
-      ""Resource"": ""*""
-    }
-  ]
-}
-",
+            Policy = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Version", "2012-10-17" },
+                { "Statement", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", new[]
+                                {
+                                    "ec2:Describe*",
+                                }
+                             },
+                            { "Effect", "Allow" },
+                            { "Resource", "*" },
+                        },
+                    }
+                 },
+            }),
         });
         var lbAccessKey = new Aws.Iam.AccessKey("lbAccessKey", new Aws.Iam.AccessKeyArgs
         {
@@ -63,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
+	"encoding/json"
 
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
@@ -77,9 +84,25 @@ func main() {
 		if err != nil {
 			return err
 		}
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"Version": "2012-10-17",
+			"Statement": []map[string]interface{}{
+				map[string]interface{}{
+					"Action": []string{
+						"ec2:Describe*",
+					},
+					"Effect":   "Allow",
+					"Resource": "*",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
 		_, err = iam.NewUserPolicy(ctx, "lbRo", &iam.UserPolicyArgs{
 			User:   lbUser.Name,
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
+			Policy: pulumi.String(json0),
 		})
 		if err != nil {
 			return err
@@ -100,24 +123,20 @@ func main() {
 {{% example python %}}
 ```python
 import pulumi
+import json
 import pulumi_aws as aws
 
 lb_user = aws.iam.User("lbUser", path="/system/")
 lb_ro = aws.iam.UserPolicy("lbRo",
     user=lb_user.name,
-    policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "ec2:Describe*"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-""")
+    policy=json.dumps({
+        "Version": "2012-10-17",
+        "Statement": [{
+            "Action": ["ec2:Describe*"],
+            "Effect": "Allow",
+            "Resource": "*",
+        }],
+    }))
 lb_access_key = aws.iam.AccessKey("lbAccessKey", user=lb_user.name)
 ```
 
@@ -132,19 +151,14 @@ import * as aws from "@pulumi/aws";
 const lbUser = new aws.iam.User("lbUser", {path: "/system/"});
 const lbRo = new aws.iam.UserPolicy("lbRo", {
     user: lbUser.name,
-    policy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "ec2:Describe*"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-`,
+    policy: JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [{
+            Action: ["ec2:Describe*"],
+            Effect: "Allow",
+            Resource: "*",
+        }],
+    }),
 });
 const lbAccessKey = new aws.iam.AccessKey("lbAccessKey", {user: lbUser.name});
 ```

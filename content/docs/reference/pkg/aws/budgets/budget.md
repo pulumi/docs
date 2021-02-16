@@ -388,7 +388,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
+    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -408,7 +408,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -418,7 +418,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -514,7 +514,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
+    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -534,7 +534,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -544,7 +544,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -640,7 +640,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
+    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -660,7 +660,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -670,7 +670,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -766,7 +766,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
+    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -786,7 +786,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -796,7 +796,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -853,6 +853,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the budget.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -866,6 +876,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the budget.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -883,6 +903,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the budget.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -896,6 +926,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the budget.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -921,7 +961,7 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cost_filters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">cost_types</span><span class="p">:</span> <span class="nx">Optional[BudgetCostTypesArgs]</span> = None<span class="p">, </span><span class="nx">limit_amount</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">limit_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[BudgetNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">time_period_end</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_period_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Budget</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cost_filters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">cost_types</span><span class="p">:</span> <span class="nx">Optional[BudgetCostTypesArgs]</span> = None<span class="p">, </span><span class="nx">limit_amount</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">limit_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[BudgetNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">time_period_end</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_period_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Budget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1046,6 +1086,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the budget.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_budgettype_csharp">
 <a href="#state_budgettype_csharp" style="color: inherit; text-decoration: inherit;">Budget<wbr>Type</a>
 </span>
@@ -1062,7 +1112,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1072,7 +1122,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1152,7 +1202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
+    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1172,6 +1222,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the budget.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_budgettype_go">
 <a href="#state_budgettype_go" style="color: inherit; text-decoration: inherit;">Budget<wbr>Type</a>
 </span>
@@ -1188,7 +1248,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1198,7 +1258,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1278,7 +1338,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
+    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1298,6 +1358,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the budget.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_budgettype_nodejs">
 <a href="#state_budgettype_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Type</a>
 </span>
@@ -1314,7 +1384,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1324,7 +1394,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1404,7 +1474,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
+    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1424,6 +1494,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the budget.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_budget_type_python">
 <a href="#state_budget_type_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>type</a>
 </span>
@@ -1440,7 +1520,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1450,7 +1530,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1530,7 +1610,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
+    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

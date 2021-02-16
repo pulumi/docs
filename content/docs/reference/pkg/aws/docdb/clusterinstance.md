@@ -364,12 +364,19 @@ The ClusterInstance resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
 supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
+- db.r5.large
+- db.r5.xlarge
+- db.r5.2xlarge
+- db.r5.4xlarge
+- db.r5.12xlarge
+- db.r5.24xlarge
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
 - db.r4.4xlarge
 - db.r4.8xlarge
 - db.r4.16xlarge
+- db.t3.medium
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -499,12 +506,19 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
 supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
+- db.r5.large
+- db.r5.xlarge
+- db.r5.2xlarge
+- db.r5.4xlarge
+- db.r5.12xlarge
+- db.r5.24xlarge
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
 - db.r4.4xlarge
 - db.r4.8xlarge
 - db.r4.16xlarge
+- db.t3.medium
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -634,12 +648,19 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
 supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
+- db.r5.large
+- db.r5.xlarge
+- db.r5.2xlarge
+- db.r5.4xlarge
+- db.r5.12xlarge
+- db.r5.24xlarge
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
 - db.r4.4xlarge
 - db.r4.8xlarge
 - db.r4.16xlarge
+- db.t3.medium
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -769,12 +790,19 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
 supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
+- db.r5.large
+- db.r5.xlarge
+- db.r5.2xlarge
+- db.r5.4xlarge
+- db.r5.12xlarge
+- db.r5.24xlarge
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
 - db.r4.4xlarge
 - db.r4.8xlarge
 - db.r4.16xlarge
+- db.t3.medium
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1651,12 +1679,19 @@ are applied immediately, or during the next maintenance window. Default is`false
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
 supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
+- db.r5.large
+- db.r5.xlarge
+- db.r5.2xlarge
+- db.r5.4xlarge
+- db.r5.12xlarge
+- db.r5.24xlarge
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
 - db.r4.4xlarge
 - db.r4.8xlarge
 - db.r4.16xlarge
+- db.t3.medium
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1895,12 +1930,19 @@ are applied immediately, or during the next maintenance window. Default is`false
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
 supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
+- db.r5.large
+- db.r5.xlarge
+- db.r5.2xlarge
+- db.r5.4xlarge
+- db.r5.12xlarge
+- db.r5.24xlarge
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
 - db.r4.4xlarge
 - db.r4.8xlarge
 - db.r4.16xlarge
+- db.t3.medium
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2139,12 +2181,19 @@ are applied immediately, or during the next maintenance window. Default is`false
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
 supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
+- db.r5.large
+- db.r5.xlarge
+- db.r5.2xlarge
+- db.r5.4xlarge
+- db.r5.12xlarge
+- db.r5.24xlarge
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
 - db.r4.4xlarge
 - db.r4.8xlarge
 - db.r4.16xlarge
+- db.t3.medium
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2383,12 +2432,19 @@ are applied immediately, or during the next maintenance window. Default is`false
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
 supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
+- db.r5.large
+- db.r5.xlarge
+- db.r5.2xlarge
+- db.r5.4xlarge
+- db.r5.12xlarge
+- db.r5.24xlarge
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
 - db.r4.4xlarge
 - db.r4.8xlarge
 - db.r4.16xlarge
+- db.t3.medium
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

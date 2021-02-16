@@ -44,7 +44,7 @@ class MyStack : Stack
             exampleAmazonsesDkimRecord.Add(new Aws.Route53.Record($"exampleAmazonsesDkimRecord-{range.Value}", new Aws.Route53.RecordArgs
             {
                 ZoneId = "ABCDEFGHIJ123",
-                Name = exampleDomainDkim.DkimTokens[range.Value].Apply(dkimTokens => $"{dkimTokens}._domainkey.example.com"),
+                Name = exampleDomainDkim.DkimTokens[range.Value].Apply(dkimTokens => $"{dkimTokens}._domainkey"),
                 Type = "CNAME",
                 Ttl = 600,
                 Records = 
@@ -75,7 +75,7 @@ example_amazonses_dkim_record = []
 for range in [{"value": i} for i in range(0, 3)]:
     example_amazonses_dkim_record.append(aws.route53.Record(f"exampleAmazonsesDkimRecord-{range['value']}",
         zone_id="ABCDEFGHIJ123",
-        name=example_domain_dkim.dkim_tokens[range["value"]].apply(lambda dkim_tokens: f"{dkim_tokens}._domainkey.example.com"),
+        name=example_domain_dkim.dkim_tokens[range["value"]].apply(lambda dkim_tokens: f"{dkim_tokens}._domainkey"),
         type="CNAME",
         ttl=600,
         records=[example_domain_dkim.dkim_tokens[range["value"]].apply(lambda dkim_tokens: f"{dkim_tokens}.dkim.amazonses.com")]))
@@ -95,7 +95,7 @@ const exampleAmazonsesDkimRecord: aws.route53.Record[];
 for (const range = {value: 0}; range.value < 3; range.value++) {
     exampleAmazonsesDkimRecord.push(new aws.route53.Record(`exampleAmazonsesDkimRecord-${range.value}`, {
         zoneId: "ABCDEFGHIJ123",
-        name: exampleDomainDkim.dkimTokens[range.value].apply(dkimTokens => `${dkimTokens}._domainkey.example.com`),
+        name: exampleDomainDkim.dkimTokens[range.value].apply(dkimTokens => `${dkimTokens}._domainkey`),
         type: "CNAME",
         ttl: "600",
         records: [exampleDomainDkim.dkimTokens[range.value].apply(dkimTokens => `${dkimTokens}.dkim.amazonses.com`)],

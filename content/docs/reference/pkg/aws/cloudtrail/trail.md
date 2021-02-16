@@ -240,12 +240,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+        });
         var example = new Aws.CloudTrail.Trail("example", new Aws.CloudTrail.TrailArgs
         {
+            S3BucketName = bucket.Id,
+            S3KeyPrefix = "prefix",
             EventSelectors = 
             {
                 new Aws.CloudTrail.Inputs.TrailEventSelectorArgs
                 {
+                    ReadWriteType = "All",
+                    IncludeManagementEvents = true,
                     DataResources = 
                     {
                         new Aws.CloudTrail.Inputs.TrailEventSelectorDataResourceArgs
@@ -257,8 +264,6 @@ class MyStack : Stack
                             },
                         },
                     },
-                    IncludeManagementEvents = true,
-                    ReadWriteType = "All",
                 },
             },
         });
@@ -275,14 +280,23 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cloudtrail.NewTrail(ctx, "example", &cloudtrail.TrailArgs{
+		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		_, err = cloudtrail.NewTrail(ctx, "example", &cloudtrail.TrailArgs{
+			S3BucketName: bucket.ID(),
+			S3KeyPrefix:  pulumi.String("prefix"),
 			EventSelectors: cloudtrail.TrailEventSelectorArray{
 				&cloudtrail.TrailEventSelectorArgs{
+					ReadWriteType:           pulumi.String("All"),
+					IncludeManagementEvents: pulumi.Bool(true),
 					DataResources: cloudtrail.TrailEventSelectorDataResourceArray{
 						&cloudtrail.TrailEventSelectorDataResourceArgs{
 							Type: pulumi.String("AWS::Lambda::Function"),
@@ -291,8 +305,6 @@ func main() {
 							},
 						},
 					},
-					IncludeManagementEvents: pulumi.Bool(true),
-					ReadWriteType:           pulumi.String("All"),
 				},
 			},
 		})
@@ -311,14 +323,18 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
-    data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
-        type="AWS::Lambda::Function",
-        values=["arn:aws:lambda"],
-    )],
-    include_management_events=True,
-    read_write_type="All",
-)])
+bucket = aws.s3.Bucket("bucket")
+example = aws.cloudtrail.Trail("example",
+    s3_bucket_name=bucket.id,
+    s3_key_prefix="prefix",
+    event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
+        read_write_type="All",
+        include_management_events=True,
+        data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
+            type="AWS::Lambda::Function",
+            values=["arn:aws:lambda"],
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -329,14 +345,17 @@ example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailE
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const bucket = new aws.s3.Bucket("bucket", {});
 const example = new aws.cloudtrail.Trail("example", {
+    s3BucketName: bucket.id,
+    s3KeyPrefix: "prefix",
     eventSelectors: [{
+        readWriteType: "All",
+        includeManagementEvents: true,
         dataResources: [{
             type: "AWS::Lambda::Function",
             values: ["arn:aws:lambda"],
         }],
-        includeManagementEvents: true,
-        readWriteType: "All",
     }],
 });
 ```
@@ -353,12 +372,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+        });
         var example = new Aws.CloudTrail.Trail("example", new Aws.CloudTrail.TrailArgs
         {
+            S3BucketName = bucket.Id,
+            S3KeyPrefix = "prefix",
             EventSelectors = 
             {
                 new Aws.CloudTrail.Inputs.TrailEventSelectorArgs
                 {
+                    ReadWriteType = "All",
+                    IncludeManagementEvents = true,
                     DataResources = 
                     {
                         new Aws.CloudTrail.Inputs.TrailEventSelectorDataResourceArgs
@@ -370,8 +396,6 @@ class MyStack : Stack
                             },
                         },
                     },
-                    IncludeManagementEvents = true,
-                    ReadWriteType = "All",
                 },
             },
         });
@@ -388,14 +412,23 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cloudtrail.NewTrail(ctx, "example", &cloudtrail.TrailArgs{
+		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		_, err = cloudtrail.NewTrail(ctx, "example", &cloudtrail.TrailArgs{
+			S3BucketName: bucket.ID(),
+			S3KeyPrefix:  pulumi.String("prefix"),
 			EventSelectors: cloudtrail.TrailEventSelectorArray{
 				&cloudtrail.TrailEventSelectorArgs{
+					ReadWriteType:           pulumi.String("All"),
+					IncludeManagementEvents: pulumi.Bool(true),
 					DataResources: cloudtrail.TrailEventSelectorDataResourceArray{
 						&cloudtrail.TrailEventSelectorDataResourceArgs{
 							Type: pulumi.String("AWS::S3::Object"),
@@ -404,8 +437,6 @@ func main() {
 							},
 						},
 					},
-					IncludeManagementEvents: pulumi.Bool(true),
-					ReadWriteType:           pulumi.String("All"),
 				},
 			},
 		})
@@ -424,14 +455,18 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
-    data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
-        type="AWS::S3::Object",
-        values=["arn:aws:s3:::"],
-    )],
-    include_management_events=True,
-    read_write_type="All",
-)])
+bucket = aws.s3.Bucket("bucket")
+example = aws.cloudtrail.Trail("example",
+    s3_bucket_name=bucket.id,
+    s3_key_prefix="prefix",
+    event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
+        read_write_type="All",
+        include_management_events=True,
+        data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
+            type="AWS::S3::Object",
+            values=["arn:aws:s3:::"],
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -442,14 +477,17 @@ example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailE
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const bucket = new aws.s3.Bucket("bucket", {});
 const example = new aws.cloudtrail.Trail("example", {
+    s3BucketName: bucket.id,
+    s3KeyPrefix: "prefix",
     eventSelectors: [{
+        readWriteType: "All",
+        includeManagementEvents: true,
         dataResources: [{
             type: "AWS::S3::Object",
             values: ["arn:aws:s3:::"],
         }],
-        includeManagementEvents: true,
-        readWriteType: "All",
     }],
 });
 ```
@@ -472,10 +510,14 @@ class MyStack : Stack
         }));
         var example = new Aws.CloudTrail.Trail("example", new Aws.CloudTrail.TrailArgs
         {
+            S3BucketName = important_bucket.Apply(important_bucket => important_bucket.Id),
+            S3KeyPrefix = "prefix",
             EventSelectors = 
             {
                 new Aws.CloudTrail.Inputs.TrailEventSelectorArgs
                 {
+                    ReadWriteType = "All",
+                    IncludeManagementEvents = true,
                     DataResources = 
                     {
                         new Aws.CloudTrail.Inputs.TrailEventSelectorDataResourceArgs
@@ -487,8 +529,6 @@ class MyStack : Stack
                             },
                         },
                     },
-                    IncludeManagementEvents = true,
-                    ReadWriteType = "All",
                 },
             },
         });
@@ -520,8 +560,12 @@ func main() {
 			return err
 		}
 		_, err = cloudtrail.NewTrail(ctx, "example", &cloudtrail.TrailArgs{
+			S3BucketName: pulumi.String(important_bucket.Id),
+			S3KeyPrefix:  pulumi.String("prefix"),
 			EventSelectors: cloudtrail.TrailEventSelectorArray{
 				&cloudtrail.TrailEventSelectorArgs{
+					ReadWriteType:           pulumi.String("All"),
+					IncludeManagementEvents: pulumi.Bool(true),
 					DataResources: cloudtrail.TrailEventSelectorDataResourceArray{
 						&cloudtrail.TrailEventSelectorDataResourceArgs{
 							Type: pulumi.String("AWS::S3::Object"),
@@ -530,8 +574,6 @@ func main() {
 							},
 						},
 					},
-					IncludeManagementEvents: pulumi.Bool(true),
-					ReadWriteType:           pulumi.String("All"),
 				},
 			},
 		})
@@ -551,14 +593,17 @@ import pulumi
 import pulumi_aws as aws
 
 important_bucket = aws.s3.get_bucket(bucket="important-bucket")
-example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
-    data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
-        type="AWS::S3::Object",
-        values=[f"{important_bucket.arn}/"],
-    )],
-    include_management_events=True,
-    read_write_type="All",
-)])
+example = aws.cloudtrail.Trail("example",
+    s3_bucket_name=important_bucket.id,
+    s3_key_prefix="prefix",
+    event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
+        read_write_type="All",
+        include_management_events=True,
+        data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
+            type="AWS::S3::Object",
+            values=[f"{important_bucket.arn}/"],
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -569,19 +614,19 @@ example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailE
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const important_bucket = pulumi.output(aws.s3.getBucket({
+const important-bucket = aws.s3.getBucket({
     bucket: "important-bucket",
-}, { async: true }));
+});
 const example = new aws.cloudtrail.Trail("example", {
+    s3BucketName: important_bucket.then(important_bucket => important_bucket.id),
+    s3KeyPrefix: "prefix",
     eventSelectors: [{
+        readWriteType: "All",
+        includeManagementEvents: true,
         dataResources: [{
             type: "AWS::S3::Object",
-            // Make sure to append a trailing '/' to your ARN if you want
-            // to monitor all objects in a bucket.
-            values: [pulumi.interpolate`${important_bucket.arn}/`],
+            values: [important_bucket.then(important_bucket => `${important_bucket.arn}/`)],
         }],
-        includeManagementEvents: true,
-        readWriteType: "All",
     }],
 });
 ```
@@ -638,9 +683,13 @@ class MyStack : Stack
 }}
 ",
         });
-        // ... other configuration ...
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+        });
         var exampleTrail = new Aws.CloudTrail.Trail("exampleTrail", new Aws.CloudTrail.TrailArgs
         {
+            S3BucketName = data.Aws_s3_bucket.Important_bucket.Id,
+            S3KeyPrefix = "prefix",
             CloudWatchLogsRoleArn = testRole.Arn,
             CloudWatchLogsGroupArn = exampleLogGroup.Arn.Apply(arn => $"{arn}:*"),
         });
@@ -663,6 +712,7 @@ import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -689,7 +739,13 @@ func main() {
 		if err != nil {
 			return err
 		}
+		_, err = s3.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
 		_, err = cloudtrail.NewTrail(ctx, "exampleTrail", &cloudtrail.TrailArgs{
+			S3BucketName:          pulumi.Any(data.Aws_s3_bucket.Important - bucket.Id),
+			S3KeyPrefix:           pulumi.String("prefix"),
 			CloudWatchLogsRoleArn: testRole.Arn,
 			CloudWatchLogsGroupArn: exampleLogGroup.Arn.ApplyT(func(arn string) (string, error) {
 				return fmt.Sprintf("%v%v", arn, ":*"), nil
@@ -743,8 +799,10 @@ test_role_policy = aws.iam.RolePolicy("testRolePolicy",
   ]
 }}
 """)
-# ... other configuration ...
+bucket = aws.s3.Bucket("bucket")
 example_trail = aws.cloudtrail.Trail("exampleTrail",
+    s3_bucket_name=data["aws_s3_bucket"]["important-bucket"]["id"],
+    s3_key_prefix="prefix",
     cloud_watch_logs_role_arn=test_role.arn,
     cloud_watch_logs_group_arn=example_log_group.arn.apply(lambda arn: f"{arn}:*"))
 # CloudTrail requires the Log Stream wildcard
@@ -792,8 +850,10 @@ const testRolePolicy = new aws.iam.RolePolicy("testRolePolicy", {
 }
 `,
 });
-// ... other configuration ...
+const bucket = new aws.s3.Bucket("bucket", {});
 const exampleTrail = new aws.cloudtrail.Trail("exampleTrail", {
+    s3BucketName: data.aws_s3_bucket["important-bucket"].id,
+    s3KeyPrefix: "prefix",
     cloudWatchLogsRoleArn: testRole.arn,
     cloudWatchLogsGroupArn: pulumi.interpolate`${exampleLogGroup.arn}:*`,
 });

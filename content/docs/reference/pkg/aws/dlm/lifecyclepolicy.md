@@ -53,7 +53,9 @@ class MyStack : Stack
          ""Effect"": ""Allow"",
          ""Action"": [
             ""ec2:CreateSnapshot"",
+            ""ec2:CreateSnapshots"",
             ""ec2:DeleteSnapshot"",
+            ""ec2:DescribeInstances"",
             ""ec2:DescribeVolumes"",
             ""ec2:DescribeSnapshots""
          ],
@@ -141,7 +143,7 @@ func main() {
 		}
 		_, err = iam.NewRolePolicy(ctx, "dlmLifecycle", &iam.RolePolicyArgs{
 			Role:   dlmLifecycleRole.ID(),
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "   \"Version\": \"2012-10-17\",\n", "   \"Statement\": [\n", "      {\n", "         \"Effect\": \"Allow\",\n", "         \"Action\": [\n", "            \"ec2:CreateSnapshot\",\n", "            \"ec2:DeleteSnapshot\",\n", "            \"ec2:DescribeVolumes\",\n", "            \"ec2:DescribeSnapshots\"\n", "         ],\n", "         \"Resource\": \"*\"\n", "      },\n", "      {\n", "         \"Effect\": \"Allow\",\n", "         \"Action\": [\n", "            \"ec2:CreateTags\"\n", "         ],\n", "         \"Resource\": \"arn:aws:ec2:*::snapshot/*\"\n", "      }\n", "   ]\n", "}\n")),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "   \"Version\": \"2012-10-17\",\n", "   \"Statement\": [\n", "      {\n", "         \"Effect\": \"Allow\",\n", "         \"Action\": [\n", "            \"ec2:CreateSnapshot\",\n", "            \"ec2:CreateSnapshots\",\n", "            \"ec2:DeleteSnapshot\",\n", "            \"ec2:DescribeInstances\",\n", "            \"ec2:DescribeVolumes\",\n", "            \"ec2:DescribeSnapshots\"\n", "         ],\n", "         \"Resource\": \"*\"\n", "      },\n", "      {\n", "         \"Effect\": \"Allow\",\n", "         \"Action\": [\n", "            \"ec2:CreateTags\"\n", "         ],\n", "         \"Resource\": \"arn:aws:ec2:*::snapshot/*\"\n", "      }\n", "   ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -216,7 +218,9 @@ dlm_lifecycle = aws.iam.RolePolicy("dlmLifecycle",
          "Effect": "Allow",
          "Action": [
             "ec2:CreateSnapshot",
+            "ec2:CreateSnapshots",
             "ec2:DeleteSnapshot",
+            "ec2:DescribeInstances",
             "ec2:DescribeVolumes",
             "ec2:DescribeSnapshots"
          ],
@@ -290,7 +294,9 @@ const dlmLifecycle = new aws.iam.RolePolicy("dlmLifecycle", {
          "Effect": "Allow",
          "Action": [
             "ec2:CreateSnapshot",
+            "ec2:CreateSnapshots",
             "ec2:DeleteSnapshot",
+            "ec2:DescribeInstances",
             "ec2:DescribeVolumes",
             "ec2:DescribeSnapshots"
          ],

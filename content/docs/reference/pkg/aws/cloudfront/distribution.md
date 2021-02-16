@@ -3813,17 +3813,6 @@ response to requests using the specified HTTP methods.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="forwardedvalues_csharp">
-<a href="#forwardedvalues_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
-handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="targetoriginid_csharp">
 <a href="#targetoriginid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Origin<wbr>Id</a>
 </span>
@@ -3849,6 +3838,17 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cachepolicyid_csharp">
+<a href="#cachepolicyid_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier of the cache policy that
+is attached to the cache behavior.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compress_csharp">
 <a href="#compress_csharp" style="color: inherit; text-decoration: inherit;">Compress</a>
 </span>
@@ -3869,8 +3869,7 @@ the request header (default: `false`).
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
-in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
-1 day.
+in the absence of an `Cache-Control max-age` or `Expires` header.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3881,6 +3880,17 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedvalues_csharp">
+<a href="#forwardedvalues_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3905,7 +3915,7 @@ specific actions. Defined below, maximum 4.
 object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
-s-maxage`, and `Expires` headers. Defaults to 365 days.
+s-maxage`, and `Expires` headers.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3928,6 +3938,17 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="realtimelogconfigarn_csharp">
+<a href="#realtimelogconfigarn_csharp" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Log<wbr>Config<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the real-time log configuration
+that is attached to this cache behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_csharp">
@@ -3981,17 +4002,6 @@ response to requests using the specified HTTP methods.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="forwardedvalues_go">
-<a href="#forwardedvalues_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
-    </dt>
-    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
-handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="targetoriginid_go">
 <a href="#targetoriginid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Origin<wbr>Id</a>
 </span>
@@ -4017,6 +4027,17 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cachepolicyid_go">
+<a href="#cachepolicyid_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier of the cache policy that
+is attached to the cache behavior.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compress_go">
 <a href="#compress_go" style="color: inherit; text-decoration: inherit;">Compress</a>
 </span>
@@ -4037,8 +4058,7 @@ the request header (default: `false`).
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
-in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
-1 day.
+in the absence of an `Cache-Control max-age` or `Expires` header.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4049,6 +4069,17 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedvalues_go">
+<a href="#forwardedvalues_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
+    </dt>
+    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4073,7 +4104,7 @@ specific actions. Defined below, maximum 4.
 object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
-s-maxage`, and `Expires` headers. Defaults to 365 days.
+s-maxage`, and `Expires` headers.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4096,6 +4127,17 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="realtimelogconfigarn_go">
+<a href="#realtimelogconfigarn_go" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Log<wbr>Config<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the real-time log configuration
+that is attached to this cache behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_go">
@@ -4149,17 +4191,6 @@ response to requests using the specified HTTP methods.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="forwardedvalues_nodejs">
-<a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
-    </dt>
-    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
-handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="targetoriginid_nodejs">
 <a href="#targetoriginid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Origin<wbr>Id</a>
 </span>
@@ -4185,6 +4216,17 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cachepolicyid_nodejs">
+<a href="#cachepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier of the cache policy that
+is attached to the cache behavior.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compress_nodejs">
 <a href="#compress_nodejs" style="color: inherit; text-decoration: inherit;">compress</a>
 </span>
@@ -4205,8 +4247,7 @@ the request header (default: `false`).
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
-in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
-1 day.
+in the absence of an `Cache-Control max-age` or `Expires` header.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4217,6 +4258,17 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedvalues_nodejs">
+<a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
+    </dt>
+    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4241,7 +4293,7 @@ specific actions. Defined below, maximum 4.
 object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
-s-maxage`, and `Expires` headers. Defaults to 365 days.
+s-maxage`, and `Expires` headers.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4264,6 +4316,17 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="realtimelogconfigarn_nodejs">
+<a href="#realtimelogconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">realtime<wbr>Log<wbr>Config<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the real-time log configuration
+that is attached to this cache behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_nodejs">
@@ -4317,17 +4380,6 @@ response to requests using the specified HTTP methods.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="forwarded_values_python">
-<a href="#forwarded_values_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
-handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="target_origin_id_python">
 <a href="#target_origin_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>origin_<wbr>id</a>
 </span>
@@ -4353,6 +4405,17 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cache_policy_id_python">
+<a href="#cache_policy_id_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier of the cache policy that
+is attached to the cache behavior.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compress_python">
 <a href="#compress_python" style="color: inherit; text-decoration: inherit;">compress</a>
 </span>
@@ -4373,8 +4436,7 @@ the request header (default: `false`).
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
-in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
-1 day.
+in the absence of an `Cache-Control max-age` or `Expires` header.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4385,6 +4447,17 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_values_python">
+<a href="#forwarded_values_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4409,7 +4482,7 @@ specific actions. Defined below, maximum 4.
 object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
-s-maxage`, and `Expires` headers. Defaults to 365 days.
+s-maxage`, and `Expires` headers.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4432,6 +4505,17 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="realtime_log_config_arn_python">
+<a href="#realtime_log_config_arn_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>log_<wbr>config_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the real-time log configuration
+that is attached to this cache behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="smooth_streaming_python">
@@ -5139,17 +5223,6 @@ response to requests using the specified HTTP methods.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="forwardedvalues_csharp">
-<a href="#forwardedvalues_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
-handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="pathpattern_csharp">
 <a href="#pathpattern_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
 </span>
@@ -5186,6 +5259,17 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cachepolicyid_csharp">
+<a href="#cachepolicyid_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier of the cache policy that
+is attached to the cache behavior.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compress_csharp">
 <a href="#compress_csharp" style="color: inherit; text-decoration: inherit;">Compress</a>
 </span>
@@ -5206,8 +5290,7 @@ the request header (default: `false`).
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
-in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
-1 day.
+in the absence of an `Cache-Control max-age` or `Expires` header.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5218,6 +5301,17 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedvalues_csharp">
+<a href="#forwardedvalues_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5242,7 +5336,7 @@ specific actions. Defined below, maximum 4.
 object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
-s-maxage`, and `Expires` headers. Defaults to 365 days.
+s-maxage`, and `Expires` headers.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5265,6 +5359,17 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="realtimelogconfigarn_csharp">
+<a href="#realtimelogconfigarn_csharp" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Log<wbr>Config<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the real-time log configuration
+that is attached to this cache behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_csharp">
@@ -5318,17 +5423,6 @@ response to requests using the specified HTTP methods.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="forwardedvalues_go">
-<a href="#forwardedvalues_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
-    </dt>
-    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
-handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="pathpattern_go">
 <a href="#pathpattern_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
 </span>
@@ -5365,6 +5459,17 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cachepolicyid_go">
+<a href="#cachepolicyid_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier of the cache policy that
+is attached to the cache behavior.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compress_go">
 <a href="#compress_go" style="color: inherit; text-decoration: inherit;">Compress</a>
 </span>
@@ -5385,8 +5490,7 @@ the request header (default: `false`).
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
-in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
-1 day.
+in the absence of an `Cache-Control max-age` or `Expires` header.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5397,6 +5501,17 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedvalues_go">
+<a href="#forwardedvalues_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
+    </dt>
+    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5421,7 +5536,7 @@ specific actions. Defined below, maximum 4.
 object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
-s-maxage`, and `Expires` headers. Defaults to 365 days.
+s-maxage`, and `Expires` headers.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5444,6 +5559,17 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="realtimelogconfigarn_go">
+<a href="#realtimelogconfigarn_go" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Log<wbr>Config<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the real-time log configuration
+that is attached to this cache behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_go">
@@ -5497,17 +5623,6 @@ response to requests using the specified HTTP methods.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="forwardedvalues_nodejs">
-<a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
-    </dt>
-    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
-handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="pathpattern_nodejs">
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
 </span>
@@ -5544,6 +5659,17 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cachepolicyid_nodejs">
+<a href="#cachepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier of the cache policy that
+is attached to the cache behavior.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compress_nodejs">
 <a href="#compress_nodejs" style="color: inherit; text-decoration: inherit;">compress</a>
 </span>
@@ -5564,8 +5690,7 @@ the request header (default: `false`).
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
-in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
-1 day.
+in the absence of an `Cache-Control max-age` or `Expires` header.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5576,6 +5701,17 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedvalues_nodejs">
+<a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
+    </dt>
+    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5600,7 +5736,7 @@ specific actions. Defined below, maximum 4.
 object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
-s-maxage`, and `Expires` headers. Defaults to 365 days.
+s-maxage`, and `Expires` headers.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5623,6 +5759,17 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="realtimelogconfigarn_nodejs">
+<a href="#realtimelogconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">realtime<wbr>Log<wbr>Config<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the real-time log configuration
+that is attached to this cache behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_nodejs">
@@ -5676,17 +5823,6 @@ response to requests using the specified HTTP methods.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="forwarded_values_python">
-<a href="#forwarded_values_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
-handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="path_pattern_python">
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span>
@@ -5723,6 +5859,17 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cache_policy_id_python">
+<a href="#cache_policy_id_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier of the cache policy that
+is attached to the cache behavior.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compress_python">
 <a href="#compress_python" style="color: inherit; text-decoration: inherit;">compress</a>
 </span>
@@ -5743,8 +5890,7 @@ the request header (default: `false`).
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
-in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
-1 day.
+in the absence of an `Cache-Control max-age` or `Expires` header.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5755,6 +5901,17 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_values_python">
+<a href="#forwarded_values_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5779,7 +5936,7 @@ specific actions. Defined below, maximum 4.
 object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
-s-maxage`, and `Expires` headers. Defaults to 365 days.
+s-maxage`, and `Expires` headers.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5802,6 +5959,17 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="realtime_log_config_arn_python">
+<a href="#realtime_log_config_arn_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>log_<wbr>config_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the real-time log configuration
+that is attached to this cache behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="smooth_streaming_python">

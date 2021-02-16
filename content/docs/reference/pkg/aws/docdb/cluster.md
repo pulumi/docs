@@ -498,7 +498,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="skipfinalsnapshot_csharp">
@@ -752,7 +753,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="skipfinalsnapshot_go">
@@ -1006,7 +1008,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="skipfinalsnapshot_nodejs">
@@ -1260,7 +1263,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="skip_final_snapshot_python">
@@ -1944,7 +1948,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_readerendpoint_csharp">
@@ -2248,7 +2253,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_readerendpoint_go">
@@ -2552,7 +2558,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_readerendpoint_nodejs">
@@ -2856,7 +2863,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_reader_endpoint_python">

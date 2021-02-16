@@ -402,7 +402,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Destination CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -412,7 +412,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
+    <dd>{{% md %}}Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -422,7 +422,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+    <dd>{{% md %}}Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -432,7 +432,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Source CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -442,7 +442,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The direction of traffic to be captured. Valid values are `ingress` and `egress`
+    <dd>{{% md %}}Direction of traffic to be captured. Valid values are `ingress` and `egress`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -462,7 +462,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of the traffic mirror filter rule.
+    <dd>{{% md %}}Description of the traffic mirror filter rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -472,7 +472,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -482,7 +482,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
+    <dd>{{% md %}}Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -492,7 +492,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -508,7 +508,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Destination CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -518,7 +518,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
+    <dd>{{% md %}}Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -528,7 +528,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+    <dd>{{% md %}}Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -538,7 +538,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Source CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -548,7 +548,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The direction of traffic to be captured. Valid values are `ingress` and `egress`
+    <dd>{{% md %}}Direction of traffic to be captured. Valid values are `ingress` and `egress`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -568,7 +568,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of the traffic mirror filter rule.
+    <dd>{{% md %}}Description of the traffic mirror filter rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -578,7 +578,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -588,7 +588,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
+    <dd>{{% md %}}Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -598,7 +598,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -614,7 +614,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Destination CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -624,7 +624,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
+    <dd>{{% md %}}Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -634,7 +634,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+    <dd>{{% md %}}Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -644,7 +644,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Source CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -654,7 +654,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The direction of traffic to be captured. Valid values are `ingress` and `egress`
+    <dd>{{% md %}}Direction of traffic to be captured. Valid values are `ingress` and `egress`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -674,7 +674,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of the traffic mirror filter rule.
+    <dd>{{% md %}}Description of the traffic mirror filter rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -684,7 +684,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -694,7 +694,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
+    <dd>{{% md %}}Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -704,7 +704,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -720,7 +720,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The destination CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Destination CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -730,7 +730,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
+    <dd>{{% md %}}Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -740,7 +740,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+    <dd>{{% md %}}Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -750,7 +750,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Source CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -760,7 +760,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The direction of traffic to be captured. Valid values are `ingress` and `egress`
+    <dd>{{% md %}}Direction of traffic to be captured. Valid values are `ingress` and `egress`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -780,7 +780,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A description of the traffic mirror filter rule.
+    <dd>{{% md %}}Description of the traffic mirror filter rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -790,7 +790,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -800,7 +800,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
+    <dd>{{% md %}}Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -810,7 +810,7 @@ The TrafficMirrorFilterRule resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -825,6 +825,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the traffic mirror filter rule.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -842,6 +852,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the traffic mirror filter rule.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -857,6 +877,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the traffic mirror filter rule.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -870,6 +900,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARN of the traffic mirror filter rule.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -895,7 +935,7 @@ Get an existing TrafficMirrorFilterRule resource's state with the given name, ID
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_port_range</span><span class="p">:</span> <span class="nx">Optional[TrafficMirrorFilterRuleDestinationPortRangeArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rule_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">source_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port_range</span><span class="p">:</span> <span class="nx">Optional[TrafficMirrorFilterRuleSourcePortRangeArgs]</span> = None<span class="p">, </span><span class="nx">traffic_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_mirror_filter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TrafficMirrorFilterRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_port_range</span><span class="p">:</span> <span class="nx">Optional[TrafficMirrorFilterRuleDestinationPortRangeArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rule_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">source_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port_range</span><span class="p">:</span> <span class="nx">Optional[TrafficMirrorFilterRuleSourcePortRangeArgs]</span> = None<span class="p">, </span><span class="nx">traffic_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_mirror_filter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TrafficMirrorFilterRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1010,13 +1050,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the traffic mirror filter rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of the traffic mirror filter rule.
+    <dd>{{% md %}}Description of the traffic mirror filter rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1026,7 +1076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Destination CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1036,7 +1086,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1046,7 +1096,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
+    <dd>{{% md %}}Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1056,7 +1106,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
+    <dd>{{% md %}}Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1066,7 +1116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+    <dd>{{% md %}}Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1076,7 +1126,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Source CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1086,7 +1136,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1096,7 +1146,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The direction of traffic to be captured. Valid values are `ingress` and `egress`
+    <dd>{{% md %}}Direction of traffic to be captured. Valid values are `ingress` and `egress`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1116,13 +1166,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the traffic mirror filter rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of the traffic mirror filter rule.
+    <dd>{{% md %}}Description of the traffic mirror filter rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1132,7 +1192,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Destination CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1142,7 +1202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1152,7 +1212,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
+    <dd>{{% md %}}Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1162,7 +1222,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
+    <dd>{{% md %}}Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1172,7 +1232,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+    <dd>{{% md %}}Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1182,7 +1242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Source CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1192,7 +1252,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1202,7 +1262,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The direction of traffic to be captured. Valid values are `ingress` and `egress`
+    <dd>{{% md %}}Direction of traffic to be captured. Valid values are `ingress` and `egress`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1222,13 +1282,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the traffic mirror filter rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of the traffic mirror filter rule.
+    <dd>{{% md %}}Description of the traffic mirror filter rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1238,7 +1308,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Destination CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1248,7 +1318,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1258,7 +1328,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
+    <dd>{{% md %}}Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1268,7 +1338,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
+    <dd>{{% md %}}Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1278,7 +1348,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+    <dd>{{% md %}}Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1288,7 +1358,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Source CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1298,7 +1368,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1308,7 +1378,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The direction of traffic to be captured. Valid values are `ingress` and `egress`
+    <dd>{{% md %}}Direction of traffic to be captured. Valid values are `ingress` and `egress`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1328,13 +1398,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARN of the traffic mirror filter rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A description of the traffic mirror filter rule.
+    <dd>{{% md %}}Description of the traffic mirror filter rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1344,7 +1424,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The destination CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Destination CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1354,7 +1434,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterruledestinationportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1364,7 +1444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
+    <dd>{{% md %}}Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1374,7 +1454,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
+    <dd>{{% md %}}Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1384,7 +1464,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+    <dd>{{% md %}}Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1394,7 +1474,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source CIDR block to assign to the Traffic Mirror rule.
+    <dd>{{% md %}}Source CIDR block to assign to the Traffic Mirror rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1404,7 +1484,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficmirrorfilterrulesourceportrange">Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+    <dd>{{% md %}}Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1414,7 +1494,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The direction of traffic to be captured. Valid values are `ingress` and `egress`
+    <dd>{{% md %}}Direction of traffic to be captured. Valid values are `ingress` and `egress`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

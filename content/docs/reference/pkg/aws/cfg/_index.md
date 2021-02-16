@@ -13,6 +13,7 @@ Explore the resources and functions of the cfg module in the AWS package.
 <ul class="api">
     <li><a href="aggregateauthorization" title="AggregateAuthorization"><span class="symbol resource"></span>AggregateAuthorization</a></li>
     <li><a href="configurationaggregator" title="ConfigurationAggregator"><span class="symbol resource"></span>ConfigurationAggregator</a></li>
+    <li><a href="conformancepack" title="ConformancePack"><span class="symbol resource"></span>ConformancePack</a></li>
     <li><a href="deliverychannel" title="DeliveryChannel"><span class="symbol resource"></span>DeliveryChannel</a></li>
     <li><a href="organizationcustomrule" title="OrganizationCustomRule"><span class="symbol resource"></span>OrganizationCustomRule</a></li>
     <li><a href="organizationmanagedrule" title="OrganizationManagedRule"><span class="symbol resource"></span>OrganizationManagedRule</a></li>
@@ -31,6 +32,6 @@ Explore the resources and functions of the cfg module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.28.1</dd>
+	<dd>3.29.0</dd>
 </dl>
 
