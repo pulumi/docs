@@ -28,24 +28,6 @@ Explore the resources and functions of the multai module in the Spotinst package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/spotinst/terraform-provider-spotinst).</dd>
 	<dt>Version</dt>
-	<dd>2.16.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Multai.html" title="Pulumi.SpotInst.Multai">Pulumi.SpotInst.Multai</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/multai?tab=doc#" title="spotinst/multai">spotinst/multai</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#" title="@pulumi/spotinst/multai">@pulumi/spotinst/multai</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_spotinst/multai" title="pulumi_spotinst/multai">pulumi_spotinst/multai</a></dd>
-
+	<dd>2.16.1</dd>
 </dl>
 

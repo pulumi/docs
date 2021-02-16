@@ -24,24 +24,6 @@ Explore the resources and functions of the ecs module in the Spotinst package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/spotinst/terraform-provider-spotinst).</dd>
 	<dt>Version</dt>
-	<dd>2.16.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Ecs.html" title="Pulumi.SpotInst.Ecs">Pulumi.SpotInst.Ecs</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/ecs?tab=doc#" title="spotinst/ecs">spotinst/ecs</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/ecs/#" title="@pulumi/spotinst/ecs">@pulumi/spotinst/ecs</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_spotinst/ecs" title="pulumi_spotinst/ecs">pulumi_spotinst/ecs</a></dd>
-
+	<dd>2.16.1</dd>
 </dl>
 

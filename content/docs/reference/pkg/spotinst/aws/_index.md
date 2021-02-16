@@ -29,24 +29,6 @@ Explore the resources and functions of the aws module in the Spotinst package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/spotinst/terraform-provider-spotinst).</dd>
 	<dt>Version</dt>
-	<dd>2.16.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.html" title="Pulumi.SpotInst.Aws">Pulumi.SpotInst.Aws</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#" title="spotinst/aws">spotinst/aws</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#" title="@pulumi/spotinst/aws">@pulumi/spotinst/aws</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_spotinst/aws" title="pulumi_spotinst/aws">pulumi_spotinst/aws</a></dd>
-
+	<dd>2.16.1</dd>
 </dl>
 
