@@ -1,8 +1,8 @@
 
 ---
-title: "GetEncryptionScope"
-title_tag: "Function GetEncryptionScope | Module storage | Package Azure"
-meta_desc: "Explore the GetEncryptionScope function of the storage module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Storage Encryption Scope."
+title: "getEncryptionScope"
+title_tag: "azure.storage.getEncryptionScope"
+meta_desc: "Documentation for the azure.storage.getEncryptionScope function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -117,13 +117,13 @@ export const id = exampleEncryptionScope.then(exampleEncryptionScope => exampleE
 {{% /examples %}}
 
 
-## Using GetEncryptionScope {#using}
+## Using getEncryptionScope {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEncryptionScope<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#GetEncryptionScopeArgs">GetEncryptionScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#GetEncryptionScopeResult">GetEncryptionScopeResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEncryptionScope<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEncryptionScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEncryptionScopeResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -133,7 +133,7 @@ export const id = exampleEncryptionScope.then(exampleEncryptionScope => exampleE
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEncryptionScope<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#LookupEncryptionScopeArgs">LookupEncryptionScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#LookupEncryptionScopeResult">LookupEncryptionScopeResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEncryptionScope<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEncryptionScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupEncryptionScopeResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupEncryptionScope` in the Go SDK.
 
@@ -142,7 +142,7 @@ export const id = exampleEncryptionScope.then(exampleEncryptionScope => exampleE
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEncryptionScope </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.GetEncryptionScopeResult.html">GetEncryptionScopeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.GetEncryptionScopeArgs.html">GetEncryptionScopeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEncryptionScopeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEncryptionScopeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -258,7 +258,7 @@ The following arguments are supported:
 
 
 
-## GetEncryptionScope Result {#result}
+## getEncryptionScope Result {#result}
 
 The following output properties are available:
 

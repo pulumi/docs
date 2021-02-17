@@ -23,6 +23,7 @@ Explore the resources and functions of the iot module in the Azure package.
     <li><a href="iothubcertificate" title="IotHubCertificate"><span class="symbol resource"></span>IotHubCertificate</a></li>
     <li><a href="iothubdps" title="IotHubDps"><span class="symbol resource"></span>IotHubDps</a></li>
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
+    <li><a href="securitydevicegroup" title="SecurityDeviceGroup"><span class="symbol resource"></span>SecurityDeviceGroup</a></li>
     <li><a href="securitysolution" title="SecuritySolution"><span class="symbol resource"></span>SecuritySolution</a></li>
     <li><a href="sharedaccesspolicy" title="SharedAccessPolicy"><span class="symbol resource"></span>SharedAccessPolicy</a></li>
     <li><a href="timeseriesinsightsaccesspolicy" title="TimeSeriesInsightsAccessPolicy"><span class="symbol resource"></span>TimeSeriesInsightsAccessPolicy</a></li>
@@ -48,24 +49,6 @@ Explore the resources and functions of the iot module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.46.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Iot.html" title="Pulumi.Azure.Iot">Pulumi.Azure.Iot</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#" title="azure/iot">azure/iot</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/iot/#" title="@pulumi/azure/iot">@pulumi/azure/iot</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure/iot" title="pulumi_azure/iot">pulumi_azure/iot</a></dd>
-
+	<dd>3.47.0</dd>
 </dl>
 

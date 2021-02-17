@@ -1,8 +1,8 @@
 
 ---
-title: "GetTrafficManagerProfile"
-title_tag: "Function GetTrafficManagerProfile | Module network | Package Azure"
-meta_desc: "Explore the GetTrafficManagerProfile function of the network module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Traffic Manager Profile."
+title: "getTrafficManagerProfile"
+title_tag: "azure.network.getTrafficManagerProfile"
+meta_desc: "Documentation for the azure.network.getTrafficManagerProfile function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,13 +98,13 @@ export const trafficRoutingMethod = data.azurerm_traffic_manager_profile.traffic
 {{% /examples %}}
 
 
-## Using GetTrafficManagerProfile {#using}
+## Using getTrafficManagerProfile {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTrafficManagerProfile<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#GetTrafficManagerProfileArgs">GetTrafficManagerProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#GetTrafficManagerProfileResult">GetTrafficManagerProfileResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTrafficManagerProfile<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTrafficManagerProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTrafficManagerProfileResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -114,7 +114,7 @@ export const trafficRoutingMethod = data.azurerm_traffic_manager_profile.traffic
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTrafficManagerProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#LookupTrafficManagerProfileArgs">LookupTrafficManagerProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#LookupTrafficManagerProfileResult">LookupTrafficManagerProfileResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTrafficManagerProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTrafficManagerProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTrafficManagerProfileResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupTrafficManagerProfile` in the Go SDK.
 
@@ -123,7 +123,7 @@ export const trafficRoutingMethod = data.azurerm_traffic_manager_profile.traffic
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTrafficManagerProfile </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.GetTrafficManagerProfileResult.html">GetTrafficManagerProfileResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.GetTrafficManagerProfileArgs.html">GetTrafficManagerProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetTrafficManagerProfileResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTrafficManagerProfileArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -153,7 +153,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the resource group the Traffic Manager Profile is located in.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -198,7 +199,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the resource group the Traffic Manager Profile is located in.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -243,7 +245,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the resource group the Traffic Manager Profile is located in.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -288,7 +291,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the resource group the Traffic Manager Profile is located in.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -315,7 +319,7 @@ The following arguments are supported:
 
 
 
-## GetTrafficManagerProfile Result {#result}
+## getTrafficManagerProfile Result {#result}
 
 The following output properties are available:
 
@@ -748,16 +752,6 @@ The following output properties are available:
 
 
 <h4 id="gettrafficmanagerprofilednsconfig">Get<wbr>Traffic<wbr>Manager<wbr>Profile<wbr>Dns<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetTrafficManagerProfileDnsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetTrafficManagerProfileDnsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetTrafficManagerProfileDnsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -866,16 +860,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="gettrafficmanagerprofilemonitorconfig">Get<wbr>Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetTrafficManagerProfileMonitorConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetTrafficManagerProfileMonitorConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetTrafficManagerProfileMonitorConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1224,16 +1208,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="gettrafficmanagerprofilemonitorconfigcustomheader">Get<wbr>Traffic<wbr>Manager<wbr>Profile<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetTrafficManagerProfileMonitorConfigCustomHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetTrafficManagerProfileMonitorConfigCustomHeader">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetTrafficManagerProfileMonitorConfigCustomHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

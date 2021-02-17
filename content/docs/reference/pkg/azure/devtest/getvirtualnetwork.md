@@ -1,8 +1,8 @@
 
 ---
-title: "GetVirtualNetwork"
-title_tag: "Function GetVirtualNetwork | Module devtest | Package Azure"
-meta_desc: "Explore the GetVirtualNetwork function of the devtest module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Dev Test Lab Virtual Network."
+title: "getVirtualNetwork"
+title_tag: "azure.devtest.getVirtualNetwork"
+meta_desc: "Documentation for the azure.devtest.getVirtualNetwork function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -102,13 +102,13 @@ export const labSubnetName = example.then(example => example.allowedSubnets[0].l
 {{% /examples %}}
 
 
-## Using GetVirtualNetwork {#using}
+## Using getVirtualNetwork {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualNetwork<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/devtest/#GetVirtualNetworkArgs">GetVirtualNetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/devtest/#GetVirtualNetworkResult">GetVirtualNetworkResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualNetwork<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualNetworkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualNetworkResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -118,7 +118,7 @@ export const labSubnetName = example.then(example => example.allowedSubnets[0].l
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualNetwork<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest?tab=doc#LookupVirtualNetworkArgs">LookupVirtualNetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest?tab=doc#LookupVirtualNetworkResult">LookupVirtualNetworkResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualNetwork<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualNetworkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualNetworkResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVirtualNetwork` in the Go SDK.
 
@@ -127,7 +127,7 @@ export const labSubnetName = example.then(example => example.allowedSubnets[0].l
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualNetwork </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Devtest.GetVirtualNetworkResult.html">GetVirtualNetworkResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DevTest.GetVirtualNetworkArgs.html">GetVirtualNetworkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualNetworkResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualNetworkArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -283,7 +283,7 @@ The following arguments are supported:
 
 
 
-## GetVirtualNetwork Result {#result}
+## getVirtualNetwork Result {#result}
 
 The following output properties are available:
 
@@ -588,16 +588,6 @@ The following output properties are available:
 
 
 <h4 id="getvirtualnetworkallowedsubnet">Get<wbr>Virtual<wbr>Network<wbr>Allowed<wbr>Subnet</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkAllowedSubnet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest?tab=doc#GetVirtualNetworkAllowedSubnet">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DevTest.Outputs.GetVirtualNetworkAllowedSubnet.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -746,16 +736,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getvirtualnetworksubnetoverride">Get<wbr>Virtual<wbr>Network<wbr>Subnet<wbr>Override</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkSubnetOverride">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest?tab=doc#GetVirtualNetworkSubnetOverride">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DevTest.Outputs.GetVirtualNetworkSubnetOverride.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

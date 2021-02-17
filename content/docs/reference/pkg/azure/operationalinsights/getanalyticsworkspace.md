@@ -1,8 +1,8 @@
 
 ---
-title: "GetAnalyticsWorkspace"
-title_tag: "Function GetAnalyticsWorkspace | Module operationalinsights | Package Azure"
-meta_desc: "Explore the GetAnalyticsWorkspace function of the operationalinsights module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Log Analytics (formally Operational Insights) Workspace."
+title: "getAnalyticsWorkspace"
+title_tag: "azure.operationalinsights.getAnalyticsWorkspace"
+meta_desc: "Documentation for the azure.operationalinsights.getAnalyticsWorkspace function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,13 +98,13 @@ export const logAnalyticsWorkspaceId = example.then(example => example.workspace
 {{% /examples %}}
 
 
-## Using GetAnalyticsWorkspace {#using}
+## Using getAnalyticsWorkspace {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAnalyticsWorkspace<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/operationalinsights/#GetAnalyticsWorkspaceArgs">GetAnalyticsWorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/operationalinsights/#GetAnalyticsWorkspaceResult">GetAnalyticsWorkspaceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAnalyticsWorkspace<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAnalyticsWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAnalyticsWorkspaceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -114,7 +114,7 @@ export const logAnalyticsWorkspaceId = example.then(example => example.workspace
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAnalyticsWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/operationalinsights?tab=doc#LookupAnalyticsWorkspaceArgs">LookupAnalyticsWorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/operationalinsights?tab=doc#LookupAnalyticsWorkspaceResult">LookupAnalyticsWorkspaceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAnalyticsWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAnalyticsWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAnalyticsWorkspaceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAnalyticsWorkspace` in the Go SDK.
 
@@ -123,7 +123,7 @@ export const logAnalyticsWorkspaceId = example.then(example => example.workspace
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAnalyticsWorkspace </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Operationalinsights.GetAnalyticsWorkspaceResult.html">GetAnalyticsWorkspaceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.OperationalInsights.GetAnalyticsWorkspaceArgs.html">GetAnalyticsWorkspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAnalyticsWorkspaceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAnalyticsWorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -239,7 +239,7 @@ The following arguments are supported:
 
 
 
-## GetAnalyticsWorkspace Result {#result}
+## getAnalyticsWorkspace Result {#result}
 
 The following output properties are available:
 

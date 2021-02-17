@@ -21,7 +21,9 @@ Explore the resources and functions of the datafactory module in the Azure packa
     <li><a href="datasetsqlservertable" title="DatasetSqlServerTable"><span class="symbol resource"></span>DatasetSqlServerTable</a></li>
     <li><a href="factory" title="Factory"><span class="symbol resource"></span>Factory</a></li>
     <li><a href="integrationruntimemanaged" title="IntegrationRuntimeManaged"><span class="symbol resource"></span>IntegrationRuntimeManaged</a></li>
+    <li><a href="integrationruntimerule" title="IntegrationRuntimeRule"><span class="symbol resource"></span>IntegrationRuntimeRule</a></li>
     <li><a href="integrationruntimeselfhosted" title="IntegrationRuntimeSelfHosted"><span class="symbol resource"></span>IntegrationRuntimeSelfHosted</a></li>
+    <li><a href="integrationruntimessis" title="IntegrationRuntimeSsis"><span class="symbol resource"></span>IntegrationRuntimeSsis</a></li>
     <li><a href="linkedserviceazureblobstorage" title="LinkedServiceAzureBlobStorage"><span class="symbol resource"></span>LinkedServiceAzureBlobStorage</a></li>
     <li><a href="linkedserviceazurefilestorage" title="LinkedServiceAzureFileStorage"><span class="symbol resource"></span>LinkedServiceAzureFileStorage</a></li>
     <li><a href="linkedserviceazurefunction" title="LinkedServiceAzureFunction"><span class="symbol resource"></span>LinkedServiceAzureFunction</a></li>
@@ -55,24 +57,6 @@ Explore the resources and functions of the datafactory module in the Azure packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.46.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.html" title="Pulumi.Azure.DataFactory">Pulumi.Azure.DataFactory</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#" title="azure/datafactory">azure/datafactory</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#" title="@pulumi/azure/datafactory">@pulumi/azure/datafactory</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure/datafactory" title="pulumi_azure/datafactory">pulumi_azure/datafactory</a></dd>
-
+	<dd>3.47.0</dd>
 </dl>
 

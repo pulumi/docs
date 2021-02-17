@@ -1,8 +1,8 @@
 
 ---
-title: "GetCertificate"
-title_tag: "Function GetCertificate | Module keyvault | Package Azure"
-meta_desc: "Explore the GetCertificate function of the keyvault module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Key Vault Certificate."
+title: "getCertificate"
+title_tag: "azure.keyvault.getCertificate"
+meta_desc: "Documentation for the azure.keyvault.getCertificate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -119,13 +119,13 @@ export const certificateThumbprint = exampleCertificate.then(exampleCertificate 
 {{% /examples %}}
 
 
-## Using GetCertificate {#using}
+## Using getCertificate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCertificate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/keyvault/#GetCertificateArgs">GetCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/keyvault/#GetCertificateResult">GetCertificateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCertificate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCertificateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCertificateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -135,7 +135,7 @@ export const certificateThumbprint = exampleCertificate.then(exampleCertificate 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#LookupCertificateArgs">LookupCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#LookupCertificateResult">LookupCertificateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCertificateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCertificateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCertificate` in the Go SDK.
 
@@ -144,7 +144,7 @@ export const certificateThumbprint = exampleCertificate.then(exampleCertificate 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCertificate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Keyvault.GetCertificateResult.html">GetCertificateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.GetCertificateArgs.html">GetCertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCertificateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCertificateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -300,7 +300,7 @@ The following arguments are supported:
 
 
 
-## GetCertificate Result {#result}
+## getCertificate Result {#result}
 
 The following output properties are available:
 
@@ -733,16 +733,6 @@ The following output properties are available:
 
 
 <h4 id="getcertificatecertificatepolicy">Get<wbr>Certificate<wbr>Certificate<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCertificateCertificatePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#GetCertificateCertificatePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.GetCertificateCertificatePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -971,16 +961,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcertificatecertificatepolicyissuerparameter">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCertificateCertificatePolicyIssuerParameter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#GetCertificateCertificatePolicyIssuerParameter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.GetCertificateCertificatePolicyIssuerParameter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1049,16 +1029,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcertificatecertificatepolicykeyproperty">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCertificateCertificatePolicyKeyProperty">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#GetCertificateCertificatePolicyKeyProperty">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.GetCertificateCertificatePolicyKeyProperty.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1247,16 +1217,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcertificatecertificatepolicylifetimeaction">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCertificateCertificatePolicyLifetimeAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#GetCertificateCertificatePolicyLifetimeAction">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.GetCertificateCertificatePolicyLifetimeAction.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1365,16 +1325,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcertificatecertificatepolicylifetimeactionaction">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCertificateCertificatePolicyLifetimeActionAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#GetCertificateCertificatePolicyLifetimeActionAction">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.GetCertificateCertificatePolicyLifetimeActionAction.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1443,16 +1393,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcertificatecertificatepolicylifetimeactiontrigger">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCertificateCertificatePolicyLifetimeActionTrigger">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#GetCertificateCertificatePolicyLifetimeActionTrigger">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.GetCertificateCertificatePolicyLifetimeActionTrigger.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1561,16 +1501,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcertificatecertificatepolicysecretproperty">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCertificateCertificatePolicySecretProperty">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#GetCertificateCertificatePolicySecretProperty">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.GetCertificateCertificatePolicySecretProperty.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1639,16 +1569,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcertificatecertificatepolicyx509certificateproperty">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCertificateCertificatePolicyX509CertificateProperty">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#GetCertificateCertificatePolicyX509CertificateProperty">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.GetCertificateCertificatePolicyX509CertificateProperty.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1877,16 +1797,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCertificateCertificatePolicyX509CertificatePropertySubjectAlternativeName">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#GetCertificateCertificatePolicyX509CertificatePropertySubjectAlternativeName">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.GetCertificateCertificatePolicyX509CertificatePropertySubjectAlternativeName.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

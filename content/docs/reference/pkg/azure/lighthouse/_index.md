@@ -24,24 +24,6 @@ Explore the resources and functions of the lighthouse module in the Azure packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.46.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lighthouse.html" title="Pulumi.Azure.Lighthouse">Pulumi.Azure.Lighthouse</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lighthouse?tab=doc#" title="azure/lighthouse">azure/lighthouse</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/lighthouse/#" title="@pulumi/azure/lighthouse">@pulumi/azure/lighthouse</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure/lighthouse" title="pulumi_azure/lighthouse">pulumi_azure/lighthouse</a></dd>
-
+	<dd>3.47.0</dd>
 </dl>
 
