@@ -24,24 +24,6 @@ Explore the resources and functions of the cm module in the f5 BIG-IP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.CM.html" title="Pulumi.F5BigIP.CM">Pulumi.F5BigIP.CM</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/cm?tab=doc#" title="f5bigip/cm">f5bigip/cm</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/cm/#" title="@pulumi/f5bigip/cm">@pulumi/f5bigip/cm</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_f5bigip/cm" title="pulumi_f5bigip/cm">pulumi_f5bigip/cm</a></dd>
-
+	<dd>2.8.1</dd>
 </dl>
 
