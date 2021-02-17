@@ -89,7 +89,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode/"
+	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -244,7 +244,6 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
-	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -411,19 +410,19 @@ const web = new linode.Instance("web", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[InstanceAlertsArgs]</span> = None<span class="p">, </span><span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceDiskArgs]]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[InstanceAlertsArgs]</span> = None<span class="p">, </span><span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceDiskArgs]]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#Instance">NewInstance</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Instance.html">Instance</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.InstanceArgs.html">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -444,7 +443,7 @@ const web = new linode.Instance("web", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#InstanceArgs">InstanceArgs</a></span>
+        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -513,7 +512,7 @@ const web = new linode.Instance("web", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceArgs">InstanceArgs</a></span>
+        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -552,7 +551,7 @@ const web = new linode.Instance("web", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.InstanceArgs.html">InstanceArgs</a></span>
+        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -575,11 +574,11 @@ const web = new linode.Instance("web", {
 
 ## Instance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Instance resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Instance resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1762,7 +1761,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#Instance">Instance</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Instance</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1771,11 +1770,11 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Instance</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InstanceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2991,18 +2990,6 @@ Instances in a region.
 
 
 <h4 id="instancealerts">Instance<wbr>Alerts</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceAlerts">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceAlerts">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceAlertsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceAlertsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceAlertsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceAlerts.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3209,18 +3196,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instancebackups">Instance<wbr>Backups</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceBackups">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceBackupsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceBackups.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3319,18 +3294,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceBackupsSchedule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceBackupsScheduleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceBackupsSchedule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3429,18 +3392,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instanceconfig">Instance<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3827,18 +3778,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instanceconfigdevices">Instance<wbr>Config<wbr>Devices</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevices">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevices">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevices.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4157,18 +4096,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSda">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSda">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSda.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4315,18 +4242,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdb">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdb">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdbOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSdb.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4473,18 +4388,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdc">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdc">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdcOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSdc.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4631,18 +4534,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdd">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdd">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSddOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSddArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSdd.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4789,18 +4680,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSde">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSde">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSde.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4947,18 +4826,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdf">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdf">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdfArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdfOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdfArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSdf.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5105,18 +4972,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdg">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdg">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdgArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdgOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdgArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSdg.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5263,18 +5118,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdh">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdh">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdhArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdhOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdhArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSdh.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5421,18 +5264,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instanceconfighelpers">Instance<wbr>Config<wbr>Helpers</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigHelpers">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigHelpers">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigHelpersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigHelpersOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigHelpersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigHelpers.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5655,18 +5486,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instancedisk">Instance<wbr>Disk</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceDisk">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceDiskOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceDisk.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6129,18 +5948,6 @@ Instances in a region.
 {{% /choosable %}}
 
 <h4 id="instancespecs">Instance<wbr>Specs</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceSpecs">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceSpecsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceSpecs.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
