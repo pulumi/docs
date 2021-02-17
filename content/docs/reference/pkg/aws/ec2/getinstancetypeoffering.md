@@ -1,8 +1,8 @@
 
 ---
-title: "GetInstanceTypeOffering"
-title_tag: "Function GetInstanceTypeOffering | Module ec2 | Package AWS"
-meta_desc: "Explore the GetInstanceTypeOffering function of the ec2 module, including examples, input properties, output properties, and supporting types. Information about single EC2 Instance Type Offering."
+title: "getInstanceTypeOffering"
+title_tag: "aws.ec2.getInstanceTypeOffering"
+meta_desc: "Documentation for the aws.ec2.getInstanceTypeOffering function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -136,7 +136,7 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOffering({
 {{% /examples %}}
 
 
-## Using GetInstanceTypeOffering {#using}
+## Using getInstanceTypeOffering {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -153,6 +153,8 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOffering({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceTypeOffering<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceTypeOfferingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceTypeOfferingResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetInstanceTypeOffering` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -315,7 +317,7 @@ The following arguments are supported:
 
 
 
-## GetInstanceTypeOffering Result {#result}
+## getInstanceTypeOffering Result {#result}
 
 The following output properties are available:
 

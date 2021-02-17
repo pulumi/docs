@@ -1,8 +1,8 @@
 
 ---
-title: "GetUser"
-title_tag: "Function GetUser | Module identitystore | Package AWS"
-meta_desc: "Explore the GetUser function of the identitystore module, including examples, input properties, output properties, and supporting types. Use this data source to get an Identity Store User."
+title: "getUser"
+title_tag: "aws.identitystore.getUser"
+meta_desc: "Documentation for the aws.identitystore.getUser function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -15,7 +15,7 @@ Use this data source to get an Identity Store User.
 
 
 
-## Using GetUser {#using}
+## Using getUser {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -32,6 +32,8 @@ Use this data source to get an Identity Store User.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetUserArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetUserResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetUser` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -194,7 +196,7 @@ The following arguments are supported:
 
 
 
-## GetUser Result {#result}
+## getUser Result {#result}
 
 The following output properties are available:
 

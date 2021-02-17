@@ -1,8 +1,8 @@
 
 ---
-title: "GetReportDefinition"
-title_tag: "Function GetReportDefinition | Module cur | Package AWS"
-meta_desc: "Explore the GetReportDefinition function of the cur module, including examples, input properties, output properties, and supporting types. Use this data source to get information on an AWS Cost and Usage Report Definition."
+title: "getReportDefinition"
+title_tag: "aws.cur.getReportDefinition"
+meta_desc: "Documentation for the aws.cur.getReportDefinition function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const reportDefinition = pulumi.output(aws.cur.getReportDefinition({
 {{% /examples %}}
 
 
-## Using GetReportDefinition {#using}
+## Using getReportDefinition {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -193,7 +193,7 @@ The following arguments are supported:
 
 
 
-## GetReportDefinition Result {#result}
+## getReportDefinition Result {#result}
 
 The following output properties are available:
 

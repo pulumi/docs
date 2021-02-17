@@ -1,8 +1,8 @@
 
 ---
-title: "GetCluster"
-title_tag: "Function GetCluster | Module ecs | Package AWS"
-meta_desc: "Explore the GetCluster function of the ecs module, including examples, input properties, output properties, and supporting types. The ECS Cluster data source allows access to details of a specific"
+title: "getCluster"
+title_tag: "aws.ecs.getCluster"
+meta_desc: "Documentation for the aws.ecs.getCluster function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const ecs_mongo = pulumi.output(aws.ecs.getCluster({
 {{% /examples %}}
 
 
-## Using GetCluster {#using}
+## Using getCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -190,7 +190,7 @@ The following arguments are supported:
 
 
 
-## GetCluster Result {#result}
+## getCluster Result {#result}
 
 The following output properties are available:
 

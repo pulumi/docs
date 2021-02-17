@@ -1,8 +1,8 @@
 
 ---
-title: "GetLoadBalancer"
-title_tag: "Function GetLoadBalancer | Module elasticloadbalancingv2 | Package AWS"
-meta_desc: "Explore the GetLoadBalancer function of the elasticloadbalancingv2 module, including examples, input properties, output properties, and supporting types. &gt; **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical."
+title: "getLoadBalancer"
+title_tag: "aws.elasticloadbalancingv2.getLoadBalancer"
+meta_desc: "Documentation for the aws.elasticloadbalancingv2.getLoadBalancer function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -124,7 +124,7 @@ const test = aws.lb.getLoadBalancer({
 {{% /examples %}}
 
 
-## Using GetLoadBalancer {#using}
+## Using getLoadBalancer {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -301,7 +301,7 @@ The following arguments are supported:
 
 
 
-## GetLoadBalancer Result {#result}
+## getLoadBalancer Result {#result}
 
 The following output properties are available:
 

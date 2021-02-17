@@ -1,8 +1,8 @@
 
 ---
-title: "GetWorkspace"
-title_tag: "Function GetWorkspace | Module workspaces | Package AWS"
-meta_desc: "Explore the GetWorkspace function of the workspaces module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a workspace in [AWS Workspaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html) Service."
+title: "getWorkspace"
+title_tag: "aws.workspaces.getWorkspace"
+meta_desc: "Documentation for the aws.workspaces.getWorkspace function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -163,7 +163,7 @@ const example = pulumi.output(aws.workspaces.getWorkspace({
 {{% /examples %}}
 
 
-## Using GetWorkspace {#using}
+## Using getWorkspace {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -384,7 +384,7 @@ The following arguments are supported:
 
 
 
-## GetWorkspace Result {#result}
+## getWorkspace Result {#result}
 
 The following output properties are available:
 

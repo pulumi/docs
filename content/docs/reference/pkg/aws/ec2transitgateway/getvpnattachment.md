@@ -1,8 +1,8 @@
 
 ---
-title: "GetVpnAttachment"
-title_tag: "Function GetVpnAttachment | Module ec2transitgateway | Package AWS"
-meta_desc: "Explore the GetVpnAttachment function of the ec2transitgateway module, including examples, input properties, output properties, and supporting types. Get information on an EC2 Transit Gateway VPN Attachment."
+title: "getVpnAttachment"
+title_tag: "aws.ec2transitgateway.getVpnAttachment"
+meta_desc: "Documentation for the aws.ec2transitgateway.getVpnAttachment function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -187,7 +187,7 @@ const test = pulumi.output(aws.ec2transitgateway.getVpnAttachment({
 {{% /examples %}}
 
 
-## Using GetVpnAttachment {#using}
+## Using getVpnAttachment {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -204,6 +204,8 @@ const test = pulumi.output(aws.ec2transitgateway.getVpnAttachment({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetVpnAttachmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetVpnAttachmentResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetVpnAttachment` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -406,7 +408,7 @@ The following arguments are supported:
 
 
 
-## GetVpnAttachment Result {#result}
+## getVpnAttachment Result {#result}
 
 The following output properties are available:
 

@@ -1,6 +1,6 @@
 ---
 title: "events"
-title_tag: "Package events"
+title_tag: "events Package"
 meta_desc: ""
 ---
 

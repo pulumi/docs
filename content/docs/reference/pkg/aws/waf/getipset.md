@@ -1,8 +1,8 @@
 
 ---
-title: "GetIpset"
-title_tag: "Function GetIpset | Module waf | Package AWS"
-meta_desc: "Explore the GetIpset function of the waf module, including examples, input properties, output properties, and supporting types. `aws.waf.IpSet` Retrieves a WAF IP Set Resource Id."
+title: "getIpset"
+title_tag: "aws.waf.getIpset"
+meta_desc: "Documentation for the aws.waf.getIpset function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.waf.getIpset({
 {{% /examples %}}
 
 
-## Using GetIpset {#using}
+## Using getIpset {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -105,6 +105,8 @@ const example = pulumi.output(aws.waf.getIpset({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIpset<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetIpsetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIpsetResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetIpset` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -187,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetIpset Result {#result}
+## getIpset Result {#result}
 
 The following output properties are available:
 

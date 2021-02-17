@@ -1,8 +1,8 @@
 
 ---
-title: "GetRepositoryEndpoint"
-title_tag: "Function GetRepositoryEndpoint | Module codeartifact | Package AWS"
-meta_desc: "Explore the GetRepositoryEndpoint function of the codeartifact module, including examples, input properties, output properties, and supporting types. The CodeArtifact Repository Endpoint data source returns the endpoint of a repository for a specific package format."
+title: "getRepositoryEndpoint"
+title_tag: "aws.codeartifact.getRepositoryEndpoint"
+meta_desc: "Documentation for the aws.codeartifact.getRepositoryEndpoint function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -96,7 +96,7 @@ const test = aws.codeartifact.getRepositoryEndpoint({
 {{% /examples %}}
 
 
-## Using GetRepositoryEndpoint {#using}
+## Using getRepositoryEndpoint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -113,6 +113,8 @@ const test = aws.codeartifact.getRepositoryEndpoint({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRepositoryEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRepositoryEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRepositoryEndpointResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRepositoryEndpoint` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -315,7 +317,7 @@ The following arguments are supported:
 
 
 
-## GetRepositoryEndpoint Result {#result}
+## getRepositoryEndpoint Result {#result}
 
 The following output properties are available:
 

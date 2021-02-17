@@ -1,6 +1,6 @@
 ---
 title: "discovery"
-title_tag: "Package discovery"
+title_tag: "discovery Package"
 meta_desc: ""
 ---
 
