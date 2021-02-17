@@ -35,43 +35,43 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                
+                new AzureNextGen.Network.Inputs.FirewallPolicyNatRuleCollectionArgs
                 {
-                    { "action", 
+                    Action = new AzureNextGen.Network.Inputs.FirewallPolicyNatRuleCollectionActionArgs
                     {
-                        { "type", "DNAT" },
-                    } },
-                    { "name", "Example-Nat-Rule-Collection" },
-                    { "priority", 100 },
-                    { "ruleCollectionType", "FirewallPolicyNatRuleCollection" },
-                    { "rules", 
+                        Type = "DNAT",
+                    },
+                    Name = "Example-Nat-Rule-Collection",
+                    Priority = 100,
+                    RuleCollectionType = "FirewallPolicyNatRuleCollection",
+                    Rules = 
                     {
-                        
+                        new AzureNextGen.Network.Inputs.NatRuleArgs
                         {
-                            { "destinationAddresses", 
+                            DestinationAddresses = 
                             {
                                 "152.23.32.23",
-                            } },
-                            { "destinationPorts", 
+                            },
+                            DestinationPorts = 
                             {
                                 "8080",
-                            } },
-                            { "ipProtocols", 
+                            },
+                            IpProtocols = 
                             {
                                 "TCP",
                                 "UDP",
-                            } },
-                            { "name", "nat-rule1" },
-                            { "ruleType", "NatRule" },
-                            { "sourceAddresses", 
+                            },
+                            Name = "nat-rule1",
+                            RuleType = "NatRule",
+                            SourceAddresses = 
                             {
                                 "2.2.2.2",
-                            } },
-                            { "sourceIpGroups", {} },
-                            { "translatedFqdn", "internalhttp.server.net" },
-                            { "translatedPort", "8080" },
+                            },
+                            SourceIpGroups = {},
+                            TranslatedFqdn = "internalhttp.server.net",
+                            TranslatedPort = "8080",
                         },
-                    } },
+                    },
                 },
             },
         });
@@ -98,28 +98,28 @@ firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRule
     priority=100,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[{
-        "action": {
-            "type": "DNAT",
-        },
-        "name": "Example-Nat-Rule-Collection",
-        "priority": 100,
-        "ruleCollectionType": "FirewallPolicyNatRuleCollection",
-        "rules": [{
-            "destinationAddresses": ["152.23.32.23"],
-            "destinationPorts": ["8080"],
-            "ipProtocols": [
+    rule_collections=[azure_nextgen.network.FirewallPolicyNatRuleCollectionArgs(
+        action=azure_nextgen.network.FirewallPolicyNatRuleCollectionActionArgs(
+            type="DNAT",
+        ),
+        name="Example-Nat-Rule-Collection",
+        priority=100,
+        rule_collection_type="FirewallPolicyNatRuleCollection",
+        rules=[azure_nextgen.network.NatRuleArgs(
+            destination_addresses=["152.23.32.23"],
+            destination_ports=["8080"],
+            ip_protocols=[
                 "TCP",
                 "UDP",
             ],
-            "name": "nat-rule1",
-            "ruleType": "NatRule",
-            "sourceAddresses": ["2.2.2.2"],
-            "sourceIpGroups": [],
-            "translatedFqdn": "internalhttp.server.net",
-            "translatedPort": "8080",
-        }],
-    }])
+            name="nat-rule1",
+            rule_type="NatRule",
+            source_addresses=["2.2.2.2"],
+            source_ip_groups=[],
+            translated_fqdn="internalhttp.server.net",
+            translated_port="8080",
+        )],
+    )])
 
 ```
 
@@ -4811,7 +4811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network:FirewallPolicyRuleCollectionGroup ruleCollectionGroup1 /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy/ruleCollectionGroups/ruleCollectionGroup1 
+$ pulumi import azure-nextgen:network:FirewallPolicyRuleCollectionGroup firewallPolicy /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy 
 ```
 
 

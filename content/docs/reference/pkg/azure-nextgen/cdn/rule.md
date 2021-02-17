@@ -31,33 +31,33 @@ class MyStack : Stack
         {
             Actions = 
             {
-                
+                new AzureNextGen.Cdn.Inputs.DeliveryRuleResponseHeaderActionArgs
                 {
-                    { "name", "ModifyResponseHeader" },
-                    { "parameters", 
+                    Name = "ModifyResponseHeader",
+                    Parameters = new AzureNextGen.Cdn.Inputs.HeaderActionParametersArgs
                     {
-                        { "headerAction", "Overwrite" },
-                        { "headerName", "X-CDN" },
-                        { "odataType", "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters" },
-                        { "value", "MSFT" },
-                    } },
+                        HeaderAction = "Overwrite",
+                        HeaderName = "X-CDN",
+                        OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+                        Value = "MSFT",
+                    },
                 },
             },
             Conditions = 
             {
-                
+                new AzureNextGen.Cdn.Inputs.DeliveryRuleRequestMethodConditionArgs
                 {
-                    { "name", "RequestMethod" },
-                    { "parameters", 
+                    Name = "RequestMethod",
+                    Parameters = new AzureNextGen.Cdn.Inputs.RequestMethodMatchConditionParametersArgs
                     {
-                        { "matchValues", 
+                        MatchValues = 
                         {
                             "GET",
-                        } },
-                        { "negateCondition", false },
-                        { "odataType", "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters" },
-                        { "operator", "Equal" },
-                    } },
+                        },
+                        NegateCondition = false,
+                        OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters",
+                        Operator = "Equal",
+                    },
                 },
             },
             Order = 1,
@@ -85,24 +85,24 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 rule = azure_nextgen.cdn.Rule("rule",
-    actions=[{
-        "name": "ModifyResponseHeader",
-        "parameters": {
-            "headerAction": "Overwrite",
-            "headerName": "X-CDN",
-            "odataType": "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-            "value": "MSFT",
-        },
-    }],
-    conditions=[{
-        "name": "RequestMethod",
-        "parameters": {
-            "matchValues": ["GET"],
-            "negateCondition": False,
-            "odataType": "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters",
-            "operator": "Equal",
-        },
-    }],
+    actions=[azure_nextgen.cdn.DeliveryRuleResponseHeaderActionArgs(
+        name="ModifyResponseHeader",
+        parameters=azure_nextgen.cdn.HeaderActionParametersArgs(
+            header_action="Overwrite",
+            header_name="X-CDN",
+            odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+            value="MSFT",
+        ),
+    )],
+    conditions=[azure_nextgen.cdn.DeliveryRuleRequestMethodConditionArgs(
+        name="RequestMethod",
+        parameters=azure_nextgen.cdn.RequestMethodMatchConditionParametersArgs(
+            match_values=["GET"],
+            negate_condition=False,
+            odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters",
+            operator="Equal",
+        ),
+    )],
     order=1,
     profile_name="profile1",
     resource_group_name="RG",

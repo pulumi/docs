@@ -339,10 +339,10 @@ class MyStack : Stack
         var server = new AzureNextGen.DBforMariaDB.Server("server", new AzureNextGen.DBforMariaDB.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNextGen.DBforMariaDB.Inputs.ServerPropertiesForReplicaArgs
             {
-                { "createMode", "Replica" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver" },
+                CreateMode = "Replica",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -356,7 +356,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformariadb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformariadb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: &dbformariadb.ServerPropertiesForReplicaArgs{
+				CreateMode:     pulumi.String("Replica"),
+				SourceServerId: pulumi.String("/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver"),
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -367,10 +395,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.dbformariadb.Server("server",
     location="westus",
-    properties={
-        "createMode": "Replica",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver",
-    },
+    properties=azure_nextgen.dbformariadb.ServerPropertiesForReplicaArgs(
+        create_mode="Replica",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver")
 

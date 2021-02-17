@@ -58,16 +58,16 @@ class MyStack : Stack
                                     OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
                                 },
                             },
-                            
+                            new AzureNextGen.Cdn.Inputs.DeliveryRuleResponseHeaderActionArgs
                             {
-                                { "name", "ModifyResponseHeader" },
-                                { "parameters", 
+                                Name = "ModifyResponseHeader",
+                                Parameters = new AzureNextGen.Cdn.Inputs.HeaderActionParametersArgs
                                 {
-                                    { "headerAction", "Overwrite" },
-                                    { "headerName", "Access-Control-Allow-Origin" },
-                                    { "odataType", "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters" },
-                                    { "value", "*" },
-                                } },
+                                    HeaderAction = "Overwrite",
+                                    HeaderName = "Access-Control-Allow-Origin",
+                                    OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+                                    Value = "*",
+                                },
                             },
                             new AzureNextGen.Cdn.Inputs.DeliveryRuleRequestHeaderActionArgs
                             {
@@ -83,20 +83,20 @@ class MyStack : Stack
                         },
                         Conditions = 
                         {
-                            
+                            new AzureNextGen.Cdn.Inputs.DeliveryRuleRemoteAddressConditionArgs
                             {
-                                { "name", "RemoteAddress" },
-                                { "parameters", 
+                                Name = "RemoteAddress",
+                                Parameters = new AzureNextGen.Cdn.Inputs.RemoteAddressMatchConditionParametersArgs
                                 {
-                                    { "matchValues", 
+                                    MatchValues = 
                                     {
                                         "192.168.1.0/24",
                                         "10.0.0.0/24",
-                                    } },
-                                    { "negateCondition", true },
-                                    { "odataType", "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters" },
-                                    { "operator", "IPMatch" },
-                                } },
+                                    },
+                                    NegateCondition = true,
+                                    OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters",
+                                    Operator = "IPMatch",
+                                },
                             },
                         },
                         Name = "rule1",
@@ -213,15 +213,15 @@ endpoint = azure_nextgen.cdn.Endpoint("endpoint",
                         odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
                     ),
                 ),
-                {
-                    "name": "ModifyResponseHeader",
-                    "parameters": {
-                        "headerAction": "Overwrite",
-                        "headerName": "Access-Control-Allow-Origin",
-                        "odataType": "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                        "value": "*",
-                    },
-                },
+                azure_nextgen.cdn.DeliveryRuleResponseHeaderActionArgs(
+                    name="ModifyResponseHeader",
+                    parameters=azure_nextgen.cdn.HeaderActionParametersArgs(
+                        header_action="Overwrite",
+                        header_name="Access-Control-Allow-Origin",
+                        odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
+                        value="*",
+                    ),
+                ),
                 azure_nextgen.cdn.DeliveryRuleRequestHeaderActionArgs(
                     name="ModifyRequestHeader",
                     parameters=azure_nextgen.cdn.HeaderActionParametersArgs(
@@ -232,18 +232,18 @@ endpoint = azure_nextgen.cdn.Endpoint("endpoint",
                     ),
                 ),
             ],
-            conditions=[{
-                "name": "RemoteAddress",
-                "parameters": {
-                    "matchValues": [
+            conditions=[azure_nextgen.cdn.DeliveryRuleRemoteAddressConditionArgs(
+                name="RemoteAddress",
+                parameters=azure_nextgen.cdn.RemoteAddressMatchConditionParametersArgs(
+                    match_values=[
                         "192.168.1.0/24",
                         "10.0.0.0/24",
                     ],
-                    "negateCondition": True,
-                    "odataType": "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters",
-                    "operator": "IPMatch",
-                },
-            }],
+                    negate_condition=True,
+                    odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters",
+                    operator="IPMatch",
+                ),
+            )],
             name="rule1",
             order=1,
         )],

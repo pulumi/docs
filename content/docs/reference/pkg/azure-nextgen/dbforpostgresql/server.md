@@ -343,10 +343,10 @@ class MyStack : Stack
         var server = new AzureNextGen.DBforPostgreSQL.Server("server", new AzureNextGen.DBforPostgreSQL.ServerArgs
         {
             Location = "westcentralus",
-            Properties = 
+            Properties = new AzureNextGen.DBforPostgreSQL.Inputs.ServerPropertiesForReplicaArgs
             {
-                { "createMode", "Replica" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master" },
+                CreateMode = "Replica",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
             },
             ResourceGroupName = "TestGroup_WestCentralUS",
             ServerName = "testserver-replica1",
@@ -367,7 +367,41 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbforpostgresql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
+			Location: pulumi.String("westcentralus"),
+			Properties: &dbforpostgresql.ServerPropertiesForReplicaArgs{
+				CreateMode:     pulumi.String("Replica"),
+				SourceServerId: pulumi.String("/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master"),
+			},
+			ResourceGroupName: pulumi.String("TestGroup_WestCentralUS"),
+			ServerName:        pulumi.String("testserver-replica1"),
+			Sku: &dbforpostgresql.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("GP_Gen5_2"),
+				Tier:     pulumi.String("GeneralPurpose"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -378,10 +412,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.dbforpostgresql.Server("server",
     location="westcentralus",
-    properties={
-        "createMode": "Replica",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
-    },
+    properties=azure_nextgen.dbforpostgresql.ServerPropertiesForReplicaArgs(
+        create_mode="Replica",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
+    ),
     resource_group_name="TestGroup_WestCentralUS",
     server_name="testserver-replica1",
     sku=azure_nextgen.dbforpostgresql.SkuArgs(

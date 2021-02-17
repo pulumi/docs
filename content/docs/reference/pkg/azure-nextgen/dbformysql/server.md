@@ -339,10 +339,10 @@ class MyStack : Stack
         var server = new AzureNextGen.DBforMySQL.Server("server", new AzureNextGen.DBforMySQL.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNextGen.DBforMySQL.Inputs.ServerPropertiesForReplicaArgs
             {
-                { "createMode", "Replica" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver" },
+                CreateMode = "Replica",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -356,7 +356,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: &dbformysql.ServerPropertiesForReplicaArgs{
+				CreateMode:     pulumi.String("Replica"),
+				SourceServerId: pulumi.String("/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver"),
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -367,10 +395,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.dbformysql.Server("server",
     location="westus",
-    properties={
-        "createMode": "Replica",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver",
-    },
+    properties=azure_nextgen.dbformysql.ServerPropertiesForReplicaArgs(
+        create_mode="Replica",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver")
 
