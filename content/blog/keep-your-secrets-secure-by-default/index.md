@@ -13,6 +13,8 @@ tags:
 
 An unauthorized user gaining access to your infrastructure can be catastrophic: data can be stolen or leaked, security holes can be exploited, and more. That risk makes it critical to keep the infrastructure secrets—the passwords, access tokens, keys, and so on—well-protected. This is particularly true in automated systems, like continuous integration and delivery and infrastructure-as-code systems.
 
+<!--more-->
+
 ## Pulumi’s built-in secret storage
 
 Pulumi takes these risks seriously. That’s why we built the Pulumi platform to be secure by default. It protects all secret data using Pulumi’s built-in [secret storage](https://www.pulumi.com/docs/intro/concepts/secrets/). This secret store “just works”, regardless of whether you use our hosted [Pulumi Service](https://www.pulumi.com/product/#teams), the [Self-Hosted Pulumi Service](https://www.pulumi.com/docs/guides/self-hosted/), or the [self-managed backend](https://www.pulumi.com/docs/intro/concepts/state/#backends). The Pulumi Service protects secrets automatically when you create a stack with `pulumi new` or `pulumi stack init`. If you use a self-managed backend like AWS S3 or Google Cloud Storage, secrets are protected by a passphrase that you choose when you start a new stack with `pulumi new`. In all cases, every Pulumi [stack](https://www.pulumi.com/docs/intro/concepts/stack/) gets its own unique encryption key.
