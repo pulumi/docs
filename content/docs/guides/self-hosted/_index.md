@@ -74,8 +74,8 @@ Regardless of the quickstart option you choose below, `run-ee.sh` will be the wa
 ### Quickstart Option #1 - Using the all-in-one approach
 
 {{% notes type="warning" %}}
-If you are running this option on a macOS, then ensure that the Docker for Mac experimental
-feature "Use gRPC FUSE for file sharing" is not enabled.
+If you are running this option on a macOS, then ensure that the experimental feature "Use gRPC FUSE for file sharing" is
+not enabled. You can find this setting in your Docker Desktop's preferences window under Experimental Features.
 {{% /notes %}}
 
 If you would like to use Pulumi’s all-in-one solution, you just need to run the run-ee.sh like this: `run-ee.sh -f ./all-in-one/docker-compose.yml`.
