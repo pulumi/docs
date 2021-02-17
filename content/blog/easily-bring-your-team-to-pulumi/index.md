@@ -1,6 +1,6 @@
 ---
 title: Easily bring your team to Pulumi with SAML SSO and SCIM
-date: 2021-01-26
+date: 2021-02-26
 meta_desc: Pulumi has full support for enterprise authentication standards like SAML and SCIM
 authors:
     - alex-mullans
@@ -12,13 +12,11 @@ tags:
 
 The Pulumi Console helps teams of all sizes deliver and manage cloud apps and infrastructure. In the console, everyone on the team can see the infrastructure the team is responsible for, when it was last deployed, how it’s configured, and more. They can see a full breakdown of the infrastructure as well, so they can understand how the team brings together individual cloud services to create their applications. When you bring your teams together on the Pulumi Console, you can provide a “single pane of glass” over all the infrastructure that you manage with Pulumi.
 
-<!--more-->
-
-Most teams larger than a few people define their team members, and the groups they’re a part of, using an Identity Provider (IdP) like [Okta](https://www.okta.com/products/single-sign-on/), Microsoft’s [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/), or [Google Cloud Identity & Access Management](https://cloud.google.com/iam/). The Pulumi Console works seamlessly with these IdPs (and many more) by providing [Single Sign-On with SAML](https://www.pulumi.com/docs/guides/saml/) and [user and group synchronization via SCIM 2.0](https://www.pulumi.com/docs/guides/scim/). When you use both SAML SSO and SCIM, you can manage the users who should have access to Pulumi and the [Pulumi teams](https://www.pulumi.com/docs/intro/console/collaboration/teams/) they belong to entirely from your IdP. Managing users and teams this way helps keep your organization more secure by ensuring a single point of control over the users who have access to manage and update your infrastructure. It also saves you time by centralizing all of your identity and access management workflows in your identity provider.
+Most teams larger than a few people define their team members, and the groups they’re a part of, using an Identity Provider (IdP) like [Okta](https://www.okta.com/products/single-sign-on/), Microsoft’s [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/), or [Google Cloud Identity & Access Management](https://cloud.google.com/iam/). The Pulumi Console works seamlessly with these IdPs (and many more) by providing [Single Sign-On with SAML](https://www.pulumi.com/docs/guides/saml/) and [user and group synchronization via SCIM 2.0](https://www.pulumi.com/docs/guides/scim/). <!--more-->When you use both SAML SSO and SCIM, you can manage the users who should have access to Pulumi and the [Pulumi teams](https://www.pulumi.com/docs/intro/console/collaboration/teams/) they belong to entirely from your IdP. Managing users and teams this way helps keep your organization more secure by ensuring a single point of control over the users who have access to manage and update your infrastructure. It also saves you time by centralizing all of your identity and access management workflows in your identity provider.
 
 ## SAML SSO
 
-In a world of many cloud applications and service providers, IT departments can use single sign-on with SAML to make it easier for their employees to sign in and be productive. In addition,if an employee leaves, all of that employee’s access can be disabled from a single pane of glass, rather than having to manually update each application and service provider separately. The Pulumi Console’s support for single sign-on with SAML provides this functionality. We support most IdPs that implement the SAML 2.0 specification.
+In a world of many cloud applications and service providers, IT departments can use single sign-on with SAML to make it easier for their employees to sign in and be productive. In addition, if an employee leaves, all of that employee’s access can be disabled from a single pane of glass, rather than having to manually update each application and service provider separately. The Pulumi Console’s support for single sign-on with SAML provides this functionality. We support most IdPs that implement the SAML 2.0 specification.
 
 To configure single sign-on with SAML for your Pulumi organization, use the guide that matches your IdP:
 
