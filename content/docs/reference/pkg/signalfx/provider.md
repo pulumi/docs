@@ -217,7 +217,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SignalFx auth token
- It can also be sourced from the following environment variable: `SFX_AUTH_TOKEN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customappurl_csharp">
@@ -263,7 +263,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SignalFx auth token
- It can also be sourced from the following environment variable: `SFX_AUTH_TOKEN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customappurl_go">
@@ -309,7 +309,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SignalFx auth token
- It can also be sourced from the following environment variable: `SFX_AUTH_TOKEN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customappurl_nodejs">
@@ -355,7 +355,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SignalFx auth token
- It can also be sourced from the following environment variable: `SFX_AUTH_TOKEN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="custom_app_url_python">
