@@ -7,7 +7,7 @@ meta_desc: "In this workshop, we’ll examine how Pulumi can accelerate provisio
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -60,12 +60,14 @@ main:
     # Duration of the webinar.
     duration: "2 hours"
     # Datetime of the webinar.
-    datetime: ""
+    datetime: "February 17th, 2021"
     # Description of the webinar.
     description: |
         In this workshop, we’ll examine how Pulumi can rapidly accelerate provisioning of cloud infrastructure. We’ll focus on AWS Lambda, and build an example set of microservices utilizing AWS’s newest Lambda features.
 
         Attendees will be guided through the process of provisioning a set of example Lambda resources in AWS and see real time examples of how Pulumi’s innovative programming model helps turbocharge cloud engineering.
+
+        You can view the content of this workshop [here](https://pulumi.awsworkshop.io/40_lambda_microservices_ts.html).
 
         **Target Audience**
 
@@ -80,8 +82,6 @@ main:
     presenters:
         - name: Lee Briggs
           role: Community Engineer, Pulumi
-        - name: Yaniv Bossem
-          role: Partner Solutions Architect, DevOps at Amazon Web Services (AWS)
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
@@ -89,6 +89,6 @@ main:
         - How to provision infrastructure such as DynamoDB & API Gateway to support your microservice applications
         - Learn how to take advantage of some of the newest Lambda features
 
-form:
-    hubspot_form_id: "67f667cd-2fca-4834-b16a-cf0289009c77"
+# form:
+#     hubspot_form_id: "67f667cd-2fca-4834-b16a-cf0289009c77"
 ---
