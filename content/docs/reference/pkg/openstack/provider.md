@@ -218,7 +218,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential ID to login with.
- It can also be sourced from the following environment variable: `OS_APPLICATION_CREDENTIAL_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialname_csharp">
@@ -228,7 +228,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential name to login with.
- It can also be sourced from the following environment variable: `OS_APPLICATION_CREDENTIAL_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialsecret_csharp">
@@ -238,7 +238,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential secret to login with.
- It can also be sourced from the following environment variable: `OS_APPLICATION_CREDENTIAL_SECRET`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="authurl_csharp">
@@ -248,7 +248,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identity authentication URL.
- It can also be sourced from the following environment variable: `OS_AUTH_URL`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cacertfile_csharp">
@@ -258,7 +258,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Custom CA certificate.
- It can also be sourced from the following environment variable: `OS_CACERT`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cert_csharp">
@@ -268,7 +268,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A client certificate to authenticate with.
- It can also be sourced from the following environment variable: `OS_CERT`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cloud_csharp">
@@ -288,7 +288,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
- It can also be sourced from the following environment variable: `OS_DEFAULT_DOMAIN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="delayedauth_csharp">
@@ -319,7 +319,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to scope to (Identity v3).
- It can also be sourced from the following environment variable: `OS_DOMAIN_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="domainname_csharp">
@@ -329,7 +329,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Domain to scope to (Identity v3).
- It can also be sourced from the following environment variable: `OS_DOMAIN_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="endpointoverrides_csharp">
@@ -368,7 +368,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A client private key to authenticate with.
- It can also be sourced from the following environment variable: `OS_KEY`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxretries_csharp">
@@ -388,7 +388,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to login with.
- It can also be sourced from the following environment variable: `OS_PASSWORD`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="projectdomainid_csharp">
@@ -398,7 +398,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the proejct resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_PROJECT_DOMAIN_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="projectdomainname_csharp">
@@ -408,7 +408,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the project resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_PROJECT_DOMAIN_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
@@ -438,7 +438,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
- It can also be sourced from the following environment variables: `OS_TENANT_ID`, `OS_PROJECT_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenantname_csharp">
@@ -448,7 +448,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
- It can also be sourced from the following environment variables: `OS_TENANT_NAME`, `OS_PROJECT_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
@@ -458,7 +458,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication token to use as an alternative to username/password.
- It can also be sourced from the following environment variables: `OS_TOKEN`, `OS_AUTH_TOKEN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="useoctavia_csharp">
@@ -478,7 +478,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the user resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_USER_DOMAIN_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userdomainname_csharp">
@@ -488,7 +488,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the user resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_USER_DOMAIN_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userid_csharp">
@@ -498,7 +498,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to login with.
- It can also be sourced from the following environment variable: `OS_USER_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
@@ -508,7 +508,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to login with.
- It can also be sourced from the following environment variable: `OS_USERNAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -535,7 +535,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential ID to login with.
- It can also be sourced from the following environment variable: `OS_APPLICATION_CREDENTIAL_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialname_go">
@@ -545,7 +545,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential name to login with.
- It can also be sourced from the following environment variable: `OS_APPLICATION_CREDENTIAL_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialsecret_go">
@@ -555,7 +555,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential secret to login with.
- It can also be sourced from the following environment variable: `OS_APPLICATION_CREDENTIAL_SECRET`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="authurl_go">
@@ -565,7 +565,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identity authentication URL.
- It can also be sourced from the following environment variable: `OS_AUTH_URL`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cacertfile_go">
@@ -575,7 +575,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Custom CA certificate.
- It can also be sourced from the following environment variable: `OS_CACERT`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cert_go">
@@ -585,7 +585,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A client certificate to authenticate with.
- It can also be sourced from the following environment variable: `OS_CERT`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cloud_go">
@@ -605,7 +605,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
- It can also be sourced from the following environment variable: `OS_DEFAULT_DOMAIN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="delayedauth_go">
@@ -636,7 +636,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to scope to (Identity v3).
- It can also be sourced from the following environment variable: `OS_DOMAIN_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="domainname_go">
@@ -646,7 +646,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Domain to scope to (Identity v3).
- It can also be sourced from the following environment variable: `OS_DOMAIN_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="endpointoverrides_go">
@@ -685,7 +685,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A client private key to authenticate with.
- It can also be sourced from the following environment variable: `OS_KEY`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxretries_go">
@@ -705,7 +705,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to login with.
- It can also be sourced from the following environment variable: `OS_PASSWORD`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="projectdomainid_go">
@@ -715,7 +715,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the proejct resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_PROJECT_DOMAIN_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="projectdomainname_go">
@@ -725,7 +725,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the project resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_PROJECT_DOMAIN_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
@@ -755,7 +755,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
- It can also be sourced from the following environment variables: `OS_TENANT_ID`, `OS_PROJECT_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenantname_go">
@@ -765,7 +765,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
- It can also be sourced from the following environment variables: `OS_TENANT_NAME`, `OS_PROJECT_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="token_go">
@@ -775,7 +775,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication token to use as an alternative to username/password.
- It can also be sourced from the following environment variables: `OS_TOKEN`, `OS_AUTH_TOKEN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="useoctavia_go">
@@ -795,7 +795,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the user resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_USER_DOMAIN_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userdomainname_go">
@@ -805,7 +805,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the user resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_USER_DOMAIN_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userid_go">
@@ -815,7 +815,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to login with.
- It can also be sourced from the following environment variable: `OS_USER_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="username_go">
@@ -825,7 +825,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to login with.
- It can also be sourced from the following environment variable: `OS_USERNAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -852,7 +852,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential ID to login with.
- It can also be sourced from the following environment variable: `OS_APPLICATION_CREDENTIAL_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialname_nodejs">
@@ -862,7 +862,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential name to login with.
- It can also be sourced from the following environment variable: `OS_APPLICATION_CREDENTIAL_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialsecret_nodejs">
@@ -872,7 +872,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential secret to login with.
- It can also be sourced from the following environment variable: `OS_APPLICATION_CREDENTIAL_SECRET`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="authurl_nodejs">
@@ -882,7 +882,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identity authentication URL.
- It can also be sourced from the following environment variable: `OS_AUTH_URL`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cacertfile_nodejs">
@@ -892,7 +892,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Custom CA certificate.
- It can also be sourced from the following environment variable: `OS_CACERT`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cert_nodejs">
@@ -902,7 +902,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A client certificate to authenticate with.
- It can also be sourced from the following environment variable: `OS_CERT`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cloud_nodejs">
@@ -922,7 +922,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
- It can also be sourced from the following environment variable: `OS_DEFAULT_DOMAIN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="delayedauth_nodejs">
@@ -953,7 +953,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to scope to (Identity v3).
- It can also be sourced from the following environment variable: `OS_DOMAIN_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="domainname_nodejs">
@@ -963,7 +963,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Domain to scope to (Identity v3).
- It can also be sourced from the following environment variable: `OS_DOMAIN_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="endpointoverrides_nodejs">
@@ -1002,7 +1002,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A client private key to authenticate with.
- It can also be sourced from the following environment variable: `OS_KEY`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxretries_nodejs">
@@ -1022,7 +1022,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to login with.
- It can also be sourced from the following environment variable: `OS_PASSWORD`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="projectdomainid_nodejs">
@@ -1032,7 +1032,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the proejct resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_PROJECT_DOMAIN_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="projectdomainname_nodejs">
@@ -1042,7 +1042,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the project resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_PROJECT_DOMAIN_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
@@ -1072,7 +1072,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
- It can also be sourced from the following environment variables: `OS_TENANT_ID`, `OS_PROJECT_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenantname_nodejs">
@@ -1082,7 +1082,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
- It can also be sourced from the following environment variables: `OS_TENANT_NAME`, `OS_PROJECT_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
@@ -1092,7 +1092,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication token to use as an alternative to username/password.
- It can also be sourced from the following environment variables: `OS_TOKEN`, `OS_AUTH_TOKEN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="useoctavia_nodejs">
@@ -1112,7 +1112,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the user resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_USER_DOMAIN_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userdomainname_nodejs">
@@ -1122,7 +1122,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the user resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_USER_DOMAIN_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userid_nodejs">
@@ -1132,7 +1132,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to login with.
- It can also be sourced from the following environment variable: `OS_USER_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
@@ -1142,7 +1142,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to login with.
- It can also be sourced from the following environment variable: `OS_USERNAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1169,7 +1169,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Credential ID to login with.
- It can also be sourced from the following environment variable: `OS_APPLICATION_CREDENTIAL_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="application_credential_name_python">
@@ -1179,7 +1179,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Credential name to login with.
- It can also be sourced from the following environment variable: `OS_APPLICATION_CREDENTIAL_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="application_credential_secret_python">
@@ -1189,7 +1189,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Credential secret to login with.
- It can also be sourced from the following environment variable: `OS_APPLICATION_CREDENTIAL_SECRET`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="auth_url_python">
@@ -1199,7 +1199,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Identity authentication URL.
- It can also be sourced from the following environment variable: `OS_AUTH_URL`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cacert_file_python">
@@ -1209,7 +1209,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Custom CA certificate.
- It can also be sourced from the following environment variable: `OS_CACERT`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cert_python">
@@ -1219,7 +1219,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A client certificate to authenticate with.
- It can also be sourced from the following environment variable: `OS_CERT`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cloud_python">
@@ -1239,7 +1239,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
- It can also be sourced from the following environment variable: `OS_DEFAULT_DOMAIN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="delayed_auth_python">
@@ -1270,7 +1270,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to scope to (Identity v3).
- It can also be sourced from the following environment variable: `OS_DOMAIN_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="domain_name_python">
@@ -1280,7 +1280,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Domain to scope to (Identity v3).
- It can also be sourced from the following environment variable: `OS_DOMAIN_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="endpoint_overrides_python">
@@ -1319,7 +1319,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A client private key to authenticate with.
- It can also be sourced from the following environment variable: `OS_KEY`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_retries_python">
@@ -1339,7 +1339,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password to login with.
- It can also be sourced from the following environment variable: `OS_PASSWORD`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="project_domain_id_python">
@@ -1349,7 +1349,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the proejct resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_PROJECT_DOMAIN_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="project_domain_name_python">
@@ -1359,7 +1359,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the project resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_PROJECT_DOMAIN_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
@@ -1389,7 +1389,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
- It can also be sourced from the following environment variables: `OS_TENANT_ID`, `OS_PROJECT_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenant_name_python">
@@ -1399,7 +1399,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
- It can also be sourced from the following environment variables: `OS_TENANT_NAME`, `OS_PROJECT_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="token_python">
@@ -1409,7 +1409,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authentication token to use as an alternative to username/password.
- It can also be sourced from the following environment variables: `OS_TOKEN`, `OS_AUTH_TOKEN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="use_octavia_python">
@@ -1429,7 +1429,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the user resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_USER_DOMAIN_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="user_domain_name_python">
@@ -1439,7 +1439,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the user resides (Identity v3).
- It can also be sourced from the following environment variable: `OS_USER_DOMAIN_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="user_id_python">
@@ -1449,7 +1449,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username to login with.
- It can also be sourced from the following environment variable: `OS_USER_ID`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="user_name_python">
@@ -1459,7 +1459,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username to login with.
- It can also be sourced from the following environment variable: `OS_USERNAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
