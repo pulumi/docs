@@ -34,25 +34,14 @@ This example deploys two GCP virtual machines:
     $ pulumi stack init gcp-instance-nginx
     ```
 
-2. Create a Python virtualenv, activate it, and install dependencies:
-
-    This installs the dependent packages [needed](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/) for our Pulumi program.
-
-
-    ```bash
-    $ python3 -m venv venv
-    $ source venv/bin/activate
-    $ pip3 install -r requirements.txt
-    ```
-
-3. Configure the project:
+1. Configure the project:
 
     ```bash
     $ export GOOGLE_PROJECT=YOURPROJECTID; export GOOGLE_REGION=asia-east1; export GOOGLE_ZONE=asia-east1-a;
     $ export GOOGLE_CREDENTIALS=YOURGCPCREDENTIALS
     ```
 
-4. Run `pulumi up` to preview and deploy changes:
+1. Run `pulumi up` to preview and deploy changes:
 
     ```bash
     $ pulumi up
@@ -92,7 +81,7 @@ This example deploys two GCP virtual machines:
     Duration: 59s
     ```
 
-5. Curl the HTTP server:
+1. Curl the HTTP server:
 
     ```bash
     $ curl $(pulumi stack output instance_external_ip)
@@ -214,7 +203,7 @@ This example deploys two GCP virtual machines:
     </html>
     ```
 
-6. Destroy the created resources:
+1. Destroy the created resources:
 
     ```bash
     $ pulumi destroy
@@ -260,7 +249,7 @@ This example deploys two GCP virtual machines:
     Duration: 3m9s
     ```
 
-7. Destroy the stack:
+1. Destroy the stack:
 
     ```bash
     $ pulumi stack rm
