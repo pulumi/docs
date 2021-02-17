@@ -73,12 +73,23 @@ Regardless of the quickstart option you choose below, `run-ee.sh` will be the wa
 
 ### Quickstart Option #1 - Using the all-in-one approach
 
-If you would like to use Pulumi’s all-in-one solution, you just need to run the run-ee.sh like this: `run-ee.sh -f ./all-in-one/docker-compose.yml`. This will start all of the necessary components using working defaults, including a DB container that is migrated using our DB scripts.
+{{% notes type="warning" %}}
+If you are running this option on a macOS, then ensure that the experimental feature "Use gRPC FUSE for file sharing" is
+not enabled. You can find this setting in your Docker Desktop's preferences window under Experimental Features.
+{{% /notes %}}
 
-> **Note**: Values for the environment variables used by the each of the containers in this approach should be set in the `./all-in-one/docker-compose.yml` file.
+If you would like to use Pulumi’s all-in-one solution, you just need to run the run-ee.sh like this: `run-ee.sh -f ./all-in-one/docker-compose.yml`.
+This will start all components using working defaults, including a DB container that is migrated using our DB scripts.
+
+{{% notes "info" %}}
+Environment variables should be set in the `./all-in-one/docker-compose.yml` file.
+{{% /notes %}}
 
 ### Quickstart Option #2 - Provide your own Database
 
-The service is tested against a MySQL version 5.6 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-ee`. If your DB instance uses a different port, be sure to update
+The service is tested against a MySQL version 5.6 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-ee`.
 
-> **Note**: You will need the `migrations` folder downloaded locally, which contains the DB scripts that need to be applied against your DB instance. Your Pulumi sales contact should be able to provide you with this.
+{{% notes "info" %}}
+You will need the `migrations` folder downloaded locally, which contains the DB scripts that need to be applied against your DB instance.
+Your Pulumi sales contact should be able to provide you with this.
+{{% /notes %}}
