@@ -3,6 +3,7 @@ title: "Keep your secrets secure, by default"
 date: 2021-02-16
 draft: false
 meta_desc: Pulumi keeps your infrastructure passwords, tokens, keys, and more secure, by default.
+meta_image: secure_by_default.png
 authors:
     - infin8x
 tags:
