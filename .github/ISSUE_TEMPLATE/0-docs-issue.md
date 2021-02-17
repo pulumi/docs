@@ -1,6 +1,6 @@
 ---
-name: Default template
-title: ''
+name: Documentation issue
+about: Report an issue with the Pulumi docs
 labels: needs-triage
 
 ---
@@ -27,4 +27,4 @@ labels: needs-triage
 <!--If you have specific ideas about how we can fix this, let us know, or [create a pull request](https://github.com/pulumi/docs/pull/new/. :) -->
 
 
-<!-- To improve this template, edit the .github/ISSUE_TEMPLATE.md file -->
+<!-- To improve this template, edit the .github/ISSUE_TEMPLATE/0-docs-issue.md file -->
