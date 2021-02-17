@@ -55,6 +55,6 @@ A Pulumi package for creating and managing equinix-metal cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).</dd>
 	<dt>Version</dt>
-	<dd>1.1.1</dd>
+	<dd>1.1.2</dd>
 </dl>
 
