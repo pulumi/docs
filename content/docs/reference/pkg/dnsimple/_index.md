@@ -27,24 +27,6 @@ A Pulumi package for creating and managing dnsimple cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/terraform-providers/terraform-provider-dnsimple).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.DNSimple/Pulumi.DNSimple.html" title="Pulumi.DNSimple">Pulumi.DNSimple</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-dnsimple/sdk/v2/go/dnsimple/?tab=doc#" title="dnsimple">dnsimple</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/dnsimple/#" title="@pulumi/dnsimple">@pulumi/dnsimple</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_dnsimple" title="pulumi_dnsimple">pulumi_dnsimple</a></dd>
-
+	<dd>2.5.1</dd>
 </dl>
 
