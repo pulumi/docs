@@ -1,8 +1,8 @@
 
 ---
-title: "GetHostedZoneId"
-title_tag: "Function GetHostedZoneId | Module elasticloadbalancing | Package AWS"
-meta_desc: "Explore the GetHostedZoneId function of the elasticloadbalancing module, including examples, input properties, output properties, and supporting types. Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId"
+title: "getHostedZoneId"
+title_tag: "aws.elasticloadbalancing.getHostedZoneId"
+meta_desc: "Documentation for the aws.elasticloadbalancing.getHostedZoneId function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -133,7 +133,7 @@ const www = new aws.route53.Record("www", {
 {{% /examples %}}
 
 
-## Using GetHostedZoneId {#using}
+## Using getHostedZoneId {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -150,6 +150,8 @@ const www = new aws.route53.Record("www", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostedZoneId<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetHostedZoneIdArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetHostedZoneIdResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetHostedZoneId` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -236,7 +238,7 @@ Defaults to the region from the AWS provider configuration.
 
 
 
-## GetHostedZoneId Result {#result}
+## getHostedZoneId Result {#result}
 
 The following output properties are available:
 

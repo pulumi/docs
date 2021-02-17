@@ -1,8 +1,8 @@
 
 ---
-title: "GetEncryptionByDefault"
-title_tag: "Function GetEncryptionByDefault | Module ebs | Package AWS"
-meta_desc: "Explore the GetEncryptionByDefault function of the ebs module, including examples, input properties, output properties, and supporting types. Provides a way to check whether default EBS encryption is enabled for your AWS account in the current AWS region."
+title: "getEncryptionByDefault"
+title_tag: "aws.ebs.getEncryptionByDefault"
+meta_desc: "Documentation for the aws.ebs.getEncryptionByDefault function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -81,7 +81,7 @@ const current = pulumi.output(aws.ebs.getEncryptionByDefault({ async: true }));
 {{% /examples %}}
 
 
-## Using GetEncryptionByDefault {#using}
+## Using getEncryptionByDefault {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -113,7 +113,7 @@ const current = pulumi.output(aws.ebs.getEncryptionByDefault({ async: true }));
 
 
 
-## GetEncryptionByDefault Result {#result}
+## getEncryptionByDefault Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetArn"
-title_tag: "Function GetArn | Package AWS"
-meta_desc: "Explore the GetArn function of the AWS package, including examples, input properties, output properties, and supporting types. Parses an Amazon Resource Name (ARN) into its constituent parts."
+title: "getArn"
+title_tag: "aws.getArn"
+meta_desc: "Documentation for the aws.getArn function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const dbInstance = pulumi.output(aws.getArn({
 {{% /examples %}}
 
 
-## Using GetArn {#using}
+## Using getArn {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -105,6 +105,8 @@ const dbInstance = pulumi.output(aws.getArn({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetArn<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetArnArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetArnResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetArn` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -187,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetArn Result {#result}
+## getArn Result {#result}
 
 The following output properties are available:
 

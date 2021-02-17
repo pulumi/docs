@@ -1,8 +1,8 @@
 
 ---
-title: "GetLayerVersion"
-title_tag: "Function GetLayerVersion | Module lambda | Package AWS"
-meta_desc: "Explore the GetLayerVersion function of the lambda module, including examples, input properties, output properties, and supporting types. Provides information about a Lambda Layer Version."
+title: "getLayerVersion"
+title_tag: "aws.lambda.getLayerVersion"
+meta_desc: "Documentation for the aws.lambda.getLayerVersion function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -97,7 +97,7 @@ const existing = aws.lambda.getLayerVersion({
 {{% /examples %}}
 
 
-## Using GetLayerVersion {#using}
+## Using getLayerVersion {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -278,7 +278,7 @@ The following arguments are supported:
 
 
 
-## GetLayerVersion Result {#result}
+## getLayerVersion Result {#result}
 
 The following output properties are available:
 

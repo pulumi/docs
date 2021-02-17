@@ -1,8 +1,8 @@
 
 ---
-title: "GetLocalGateway"
-title_tag: "Function GetLocalGateway | Module ec2 | Package AWS"
-meta_desc: "Explore the GetLocalGateway function of the ec2 module, including examples, input properties, output properties, and supporting types. Provides details about an EC2 Local Gateway."
+title: "getLocalGateway"
+title_tag: "aws.ec2.getLocalGateway"
+meta_desc: "Documentation for the aws.ec2.getLocalGateway function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,7 +98,7 @@ const selected = aws.ec2.getLocalGateway({
 {{% /examples %}}
 
 
-## Using GetLocalGateway {#using}
+## Using getLocalGateway {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -115,6 +115,8 @@ const selected = aws.ec2.getLocalGateway({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLocalGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetLocalGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetLocalGatewayResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetLocalGateway` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -325,7 +327,7 @@ a pair on the desired Local Gateway.
 
 
 
-## GetLocalGateway Result {#result}
+## getLocalGateway Result {#result}
 
 The following output properties are available:
 

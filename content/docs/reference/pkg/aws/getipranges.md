@@ -1,8 +1,8 @@
 
 ---
-title: "GetIpRanges"
-title_tag: "Function GetIpRanges | Package AWS"
-meta_desc: "Explore the GetIpRanges function of the AWS package, including examples, input properties, output properties, and supporting types. Use this data source to get the IP ranges of various AWS products and services. For more information about the contents of this data source and required JSON syntax if referencing a custom URL, see the [AWS IP Address Ranges documentation](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html)."
+title: "getIpRanges"
+title_tag: "aws.getIpRanges"
+meta_desc: "Documentation for the aws.getIpRanges function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -128,7 +128,7 @@ const fromEurope = new aws.ec2.SecurityGroup("fromEurope", {
 {{% /examples %}}
 
 
-## Using GetIpRanges {#using}
+## Using getIpRanges {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -145,6 +145,8 @@ const fromEurope = new aws.ec2.SecurityGroup("fromEurope", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetIpRangesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIpRangesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetIpRanges` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -331,7 +333,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
 
 
 
-## GetIpRanges Result {#result}
+## getIpRanges Result {#result}
 
 The following output properties are available:
 

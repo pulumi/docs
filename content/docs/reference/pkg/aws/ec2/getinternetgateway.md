@@ -1,8 +1,8 @@
 
 ---
-title: "GetInternetGateway"
-title_tag: "Function GetInternetGateway | Module ec2 | Package AWS"
-meta_desc: "Explore the GetInternetGateway function of the ec2 module, including examples, input properties, output properties, and supporting types. `aws.ec2.InternetGateway` provides details about a specific Internet Gateway."
+title: "getInternetGateway"
+title_tag: "aws.ec2.getInternetGateway"
+meta_desc: "Documentation for the aws.ec2.getInternetGateway function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,7 +90,7 @@ const default = aws.ec2.getInternetGateway({
 {{% /examples %}}
 
 
-## Using GetInternetGateway {#using}
+## Using getInternetGateway {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -275,7 +275,7 @@ a pair on the desired Internet Gateway.
 
 
 
-## GetInternetGateway Result {#result}
+## getInternetGateway Result {#result}
 
 The following output properties are available:
 

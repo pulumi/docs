@@ -1,8 +1,8 @@
 
 ---
-title: "GetRulesPackages"
-title_tag: "Function GetRulesPackages | Module inspector | Package AWS"
-meta_desc: "Explore the GetRulesPackages function of the inspector module, including examples, input properties, output properties, and supporting types. The AWS Inspector Rules Packages data source allows access to the list of AWS"
+title: "getRulesPackages"
+title_tag: "aws.inspector.getRulesPackages"
+meta_desc: "Documentation for the aws.inspector.getRulesPackages function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -149,7 +149,7 @@ const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("asses
 {{% /examples %}}
 
 
-## Using GetRulesPackages {#using}
+## Using getRulesPackages {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -167,6 +167,8 @@ const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("asses
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRulesPackages<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRulesPackagesResult</a></span>, error)</span></code></pre></div>
 
+> Note: This function is named `GetRulesPackages` in the Go SDK.
+
 {{% /choosable %}}
 
 
@@ -179,7 +181,7 @@ const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("asses
 
 
 
-## GetRulesPackages Result {#result}
+## getRulesPackages Result {#result}
 
 The following output properties are available:
 

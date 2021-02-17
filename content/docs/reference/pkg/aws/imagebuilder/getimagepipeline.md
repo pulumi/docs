@@ -1,8 +1,8 @@
 
 ---
-title: "GetImagePipeline"
-title_tag: "Function GetImagePipeline | Module imagebuilder | Package AWS"
-meta_desc: "Explore the GetImagePipeline function of the imagebuilder module, including examples, input properties, output properties, and supporting types. Provides details about an Image Builder Image Pipeline."
+title: "getImagePipeline"
+title_tag: "aws.imagebuilder.getImagePipeline"
+meta_desc: "Documentation for the aws.imagebuilder.getImagePipeline function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.imagebuilder.getImagePipeline({
 {{% /examples %}}
 
 
-## Using GetImagePipeline {#using}
+## Using getImagePipeline {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## GetImagePipeline Result {#result}
+## getImagePipeline Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetStateMachine"
-title_tag: "Function GetStateMachine | Module sfn | Package AWS"
-meta_desc: "Explore the GetStateMachine function of the sfn module, including examples, input properties, output properties, and supporting types. Use this data source to get the ARN of a State Machine in AWS Step"
+title: "getStateMachine"
+title_tag: "aws.sfn.getStateMachine"
+meta_desc: "Documentation for the aws.sfn.getStateMachine function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,7 +90,7 @@ const example = pulumi.output(aws.sfn.getStateMachine({
 {{% /examples %}}
 
 
-## Using GetStateMachine {#using}
+## Using getStateMachine {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -191,7 +191,7 @@ The following arguments are supported:
 
 
 
-## GetStateMachine Result {#result}
+## getStateMachine Result {#result}
 
 The following output properties are available:
 

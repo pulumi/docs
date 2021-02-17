@@ -1,8 +1,8 @@
 
 ---
-title: "GetScript"
-title_tag: "Function GetScript | Module glue | Package AWS"
-meta_desc: "Explore the GetScript function of the glue module, including examples, input properties, output properties, and supporting types. Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG)."
+title: "getScript"
+title_tag: "aws.glue.getScript"
+meta_desc: "Documentation for the aws.glue.getScript function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -896,7 +896,7 @@ export const scalaCode = example.then(example => example.scalaCode);
 {{% /examples %}}
 
 
-## Using GetScript {#using}
+## Using getScript {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -913,6 +913,8 @@ export const scalaCode = example.then(example => example.scalaCode);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScript<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetScriptArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetScriptResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetScript` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -1075,7 +1077,7 @@ The following arguments are supported:
 
 
 
-## GetScript Result {#result}
+## getScript Result {#result}
 
 The following output properties are available:
 

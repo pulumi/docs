@@ -1,8 +1,8 @@
 
 ---
-title: "GetWebAcl"
-title_tag: "Function GetWebAcl | Module waf | Package AWS"
-meta_desc: "Explore the GetWebAcl function of the waf module, including examples, input properties, output properties, and supporting types. `aws.waf.WebAcl` Retrieves a WAF Web ACL Resource Id."
+title: "getWebAcl"
+title_tag: "aws.waf.getWebAcl"
+meta_desc: "Documentation for the aws.waf.getWebAcl function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.waf.getWebAcl({
 {{% /examples %}}
 
 
-## Using GetWebAcl {#using}
+## Using getWebAcl {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetWebAcl Result {#result}
+## getWebAcl Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetVpcAttachment"
-title_tag: "Function GetVpcAttachment | Module ec2transitgateway | Package AWS"
-meta_desc: "Explore the GetVpcAttachment function of the ec2transitgateway module, including examples, input properties, output properties, and supporting types. Get information on an EC2 Transit Gateway VPC Attachment."
+title: "getVpcAttachment"
+title_tag: "aws.ec2transitgateway.getVpcAttachment"
+meta_desc: "Documentation for the aws.ec2transitgateway.getVpcAttachment function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -180,7 +180,7 @@ const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
 {{% /examples %}}
 
 
-## Using GetVpcAttachment {#using}
+## Using getVpcAttachment {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -361,7 +361,7 @@ The following arguments are supported:
 
 
 
-## GetVpcAttachment Result {#result}
+## getVpcAttachment Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetGroup"
-title_tag: "Function GetGroup | Module autoscaling | Package AWS"
-meta_desc: "Explore the GetGroup function of the autoscaling module, including examples, input properties, output properties, and supporting types. Use this data source to get information on an existing autoscaling group."
+title: "getGroup"
+title_tag: "aws.autoscaling.getGroup"
+meta_desc: "Documentation for the aws.autoscaling.getGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const foo = pulumi.output(aws.autoscaling.getGroup({
 {{% /examples %}}
 
 
-## Using GetGroup {#using}
+## Using getGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetGroup Result {#result}
+## getGroup Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetReplicationGroup"
-title_tag: "Function GetReplicationGroup | Module elasticache | Package AWS"
-meta_desc: "Explore the GetReplicationGroup function of the elasticache module, including examples, input properties, output properties, and supporting types. Use this data source to get information about an Elasticache Replication Group."
+title: "getReplicationGroup"
+title_tag: "aws.elasticache.getReplicationGroup"
+meta_desc: "Documentation for the aws.elasticache.getReplicationGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const bar = pulumi.output(aws.elasticache.getReplicationGroup({
 {{% /examples %}}
 
 
-## Using GetReplicationGroup {#using}
+## Using getReplicationGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetReplicationGroup Result {#result}
+## getReplicationGroup Result {#result}
 
 The following output properties are available:
 

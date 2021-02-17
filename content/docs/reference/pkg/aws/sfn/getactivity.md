@@ -1,8 +1,8 @@
 
 ---
-title: "GetActivity"
-title_tag: "Function GetActivity | Module sfn | Package AWS"
-meta_desc: "Explore the GetActivity function of the sfn module, including examples, input properties, output properties, and supporting types. Provides a Step Functions Activity data source"
+title: "getActivity"
+title_tag: "aws.sfn.getActivity"
+meta_desc: "Documentation for the aws.sfn.getActivity function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const sfnActivity = pulumi.output(aws.sfn.getActivity({
 {{% /examples %}}
 
 
-## Using GetActivity {#using}
+## Using getActivity {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -230,7 +230,7 @@ The following arguments are supported:
 
 
 
-## GetActivity Result {#result}
+## getActivity Result {#result}
 
 The following output properties are available:
 
