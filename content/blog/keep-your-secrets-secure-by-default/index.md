@@ -5,7 +5,7 @@ draft: false
 meta_desc: Pulumi keeps your infrastructure passwords, tokens, keys, and more secure, by default.
 meta_image: secure_by_default.png
 authors:
-    - infin8x
+    - alex-mullans
 tags:
     - secrets
     - security
