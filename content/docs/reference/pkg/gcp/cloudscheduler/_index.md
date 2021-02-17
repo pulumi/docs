@@ -23,6 +23,6 @@ Explore the resources and functions of the cloudscheduler module in the GCP pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.11.0</dd>
+	<dd>4.11.1</dd>
 </dl>
 
