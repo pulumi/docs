@@ -68,24 +68,6 @@ A Pulumi package for creating and managing GitLab resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).</dd>
 	<dt>Version</dt>
-	<dd>3.6.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.html" title="Pulumi.GitLab">Pulumi.GitLab</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#" title="gitlab">gitlab</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#" title="@pulumi/gitlab">@pulumi/gitlab</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gitlab" title="pulumi_gitlab">pulumi_gitlab</a></dd>
-
+	<dd>3.6.1</dd>
 </dl>
 
