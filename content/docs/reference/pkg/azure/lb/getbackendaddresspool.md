@@ -1,8 +1,8 @@
 
 ---
-title: "GetBackendAddressPool"
-title_tag: "Function GetBackendAddressPool | Module lb | Package Azure"
-meta_desc: "Explore the GetBackendAddressPool function of the lb module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Load Balancer&#39;s Backend Address Pool."
+title: "getBackendAddressPool"
+title_tag: "azure.lb.getBackendAddressPool"
+meta_desc: "Documentation for the azure.lb.getBackendAddressPool function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -127,13 +127,13 @@ export const backendIpConfigurationIds = data.azurerm_lb_backend_address_pool.be
 {{% /examples %}}
 
 
-## Using GetBackendAddressPool {#using}
+## Using getBackendAddressPool {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackendAddressPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#GetBackendAddressPoolArgs">GetBackendAddressPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#GetBackendAddressPoolResult">GetBackendAddressPoolResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackendAddressPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackendAddressPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackendAddressPoolResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -143,7 +143,7 @@ export const backendIpConfigurationIds = data.azurerm_lb_backend_address_pool.be
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackendAddressPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#LookupBackendAddressPoolArgs">LookupBackendAddressPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#LookupBackendAddressPoolResult">LookupBackendAddressPoolResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackendAddressPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackendAddressPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackendAddressPoolResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBackendAddressPool` in the Go SDK.
 
@@ -152,7 +152,7 @@ export const backendIpConfigurationIds = data.azurerm_lb_backend_address_pool.be
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBackendAddressPool </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.GetBackendAddressPoolResult.html">GetBackendAddressPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.GetBackendAddressPoolArgs.html">GetBackendAddressPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackendAddressPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackendAddressPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -268,7 +268,7 @@ The following arguments are supported:
 
 
 
-## GetBackendAddressPool Result {#result}
+## getBackendAddressPool Result {#result}
 
 The following output properties are available:
 
@@ -285,7 +285,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendaddresspoolbackendaddress">List&lt;Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of `backend_address` block as defined below.
+    <dd>{{% md %}}A list of `backend_address` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -295,7 +295,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendaddresspoolbackendipconfiguration">List&lt;Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of references to IP addresses defined in network interfaces.
+    <dd>{{% md %}}A list of references to IP addresses defined in network interfaces.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -315,7 +315,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}An array of the Load Balancing Rules associated with this Backend Address Pool.
+    <dd>{{% md %}}A list of the Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -344,7 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.
+    <dd>{{% md %}}A list of the Load Balancing Outbound Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -360,7 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendaddresspoolbackendaddress">[]Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}An array of `backend_address` block as defined below.
+    <dd>{{% md %}}A list of `backend_address` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -370,7 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendaddresspoolbackendipconfiguration">[]Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}An array of references to IP addresses defined in network interfaces.
+    <dd>{{% md %}}A list of references to IP addresses defined in network interfaces.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -390,7 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}An array of the Load Balancing Rules associated with this Backend Address Pool.
+    <dd>{{% md %}}A list of the Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -419,7 +419,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.
+    <dd>{{% md %}}A list of the Load Balancing Outbound Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -435,7 +435,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendaddresspoolbackendaddress">Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of `backend_address` block as defined below.
+    <dd>{{% md %}}A list of `backend_address` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -445,7 +445,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendaddresspoolbackendipconfiguration">Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of references to IP addresses defined in network interfaces.
+    <dd>{{% md %}}A list of references to IP addresses defined in network interfaces.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -465,7 +465,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}An array of the Load Balancing Rules associated with this Backend Address Pool.
+    <dd>{{% md %}}A list of the Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -494,7 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.
+    <dd>{{% md %}}A list of the Load Balancing Outbound Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -510,7 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendaddresspoolbackendaddress">Sequence[Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address]</a></span>
     </dt>
-    <dd>{{% md %}}An array of `backend_address` block as defined below.
+    <dd>{{% md %}}A list of `backend_address` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -520,7 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendaddresspoolbackendipconfiguration">Sequence[Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
-    <dd>{{% md %}}An array of references to IP addresses defined in network interfaces.
+    <dd>{{% md %}}A list of references to IP addresses defined in network interfaces.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -540,7 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}An array of the Load Balancing Rules associated with this Backend Address Pool.
+    <dd>{{% md %}}A list of the Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -569,7 +569,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.
+    <dd>{{% md %}}A list of the Load Balancing Outbound Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -581,16 +581,6 @@ The following output properties are available:
 
 
 <h4 id="getbackendaddresspoolbackendaddress">Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetBackendAddressPoolBackendAddress">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#GetBackendAddressPoolBackendAddress">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.Outputs.GetBackendAddressPoolBackendAddress.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -605,7 +595,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address pre-allocated for this Backend Address with in the Virtual Network of `virtual_network_id`.
+    <dd>{{% md %}}The Static IP address for this Load Balancer within the Virtual Network.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -625,7 +615,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Network that is pre-allocated for this Backend Address.
+    <dd>{{% md %}}The ID of the Virtual Network where the Backend Address of the Load Balancer exists.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -641,7 +631,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address pre-allocated for this Backend Address with in the Virtual Network of `virtual_network_id`.
+    <dd>{{% md %}}The Static IP address for this Load Balancer within the Virtual Network.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -661,7 +651,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Network that is pre-allocated for this Backend Address.
+    <dd>{{% md %}}The ID of the Virtual Network where the Backend Address of the Load Balancer exists.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -677,7 +667,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address pre-allocated for this Backend Address with in the Virtual Network of `virtual_network_id`.
+    <dd>{{% md %}}The Static IP address for this Load Balancer within the Virtual Network.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -697,7 +687,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Network that is pre-allocated for this Backend Address.
+    <dd>{{% md %}}The ID of the Virtual Network where the Backend Address of the Load Balancer exists.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -713,7 +703,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address pre-allocated for this Backend Address with in the Virtual Network of `virtual_network_id`.
+    <dd>{{% md %}}The Static IP address for this Load Balancer within the Virtual Network.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -733,22 +723,12 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Virtual Network that is pre-allocated for this Backend Address.
+    <dd>{{% md %}}The ID of the Virtual Network where the Backend Address of the Load Balancer exists.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="getbackendaddresspoolbackendipconfiguration">Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetBackendAddressPoolBackendIpConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#GetBackendAddressPoolBackendIpConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.Outputs.GetBackendAddressPoolBackendIpConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

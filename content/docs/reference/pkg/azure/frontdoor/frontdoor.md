@@ -309,19 +309,19 @@ const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/frontdoor/#Frontdoor">Frontdoor</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/frontdoor/#FrontdoorArgs">FrontdoorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Frontdoor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FrontdoorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.Frontdoor">Frontdoor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolHealthProbeArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolLoadBalancingArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorFrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Frontdoor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolHealthProbeArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolLoadBalancingArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorFrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#Frontdoor">NewFrontdoor</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorArgs">FrontdoorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#Frontdoor">Frontdoor</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFrontdoor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FrontdoorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Frontdoor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Frontdoor.html">Frontdoor</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.FrontdoorArgs.html">FrontdoorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Frontdoor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FrontdoorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -342,7 +342,7 @@ const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure/frontdoor/#FrontdoorArgs">FrontdoorArgs</a></span>
+        <span class="property-type"><a href="#inputs">FrontdoorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -411,7 +411,7 @@ const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorArgs">FrontdoorArgs</a></span>
+        <span class="property-type"><a href="#inputs">FrontdoorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -450,7 +450,7 @@ const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.FrontdoorArgs.html">FrontdoorArgs</a></span>
+        <span class="property-type"><a href="#inputs">FrontdoorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -473,11 +473,11 @@ const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
 
 ## Frontdoor Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1037,6 +1037,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="backendpoolhealthprobesmap_csharp">
+<a href="#backendpoolhealthprobesmap_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Health<wbr>Probes<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Health Probe Names (key) to the Backend Pool Health Probe ID (value)
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="backendpoolloadbalancingsettingsmap_csharp">
+<a href="#backendpoolloadbalancingsettingsmap_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Settings<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Load Balancing Setting Names (key) to the Backend Pool Load Balancing Setting ID (value)
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="backendpoolsmap_csharp">
+<a href="#backendpoolsmap_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Names (key) to the Backend Pool ID (value)
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="cname_csharp">
 <a href="#cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
 </span>
@@ -1044,6 +1074,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that each frontendEndpoint must CNAME to.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="frontendendpointsmap_csharp">
+<a href="#frontendendpointsmap_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1064,12 +1104,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="routingrulesmap_csharp">
+<a href="#routingrulesmap_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Routing Rule Names (key) to the Routing Rule ID (value)
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="backendpoolhealthprobesmap_go">
+<a href="#backendpoolhealthprobesmap_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Health<wbr>Probes<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Health Probe Names (key) to the Backend Pool Health Probe ID (value)
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="backendpoolloadbalancingsettingsmap_go">
+<a href="#backendpoolloadbalancingsettingsmap_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Settings<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Load Balancing Setting Names (key) to the Backend Pool Load Balancing Setting ID (value)
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="backendpoolsmap_go">
+<a href="#backendpoolsmap_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Names (key) to the Backend Pool ID (value)
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="cname_go">
@@ -1079,6 +1159,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that each frontendEndpoint must CNAME to.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="frontendendpointsmap_go">
+<a href="#frontendendpointsmap_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1099,12 +1189,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="routingrulesmap_go">
+<a href="#routingrulesmap_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Routing Rule Names (key) to the Routing Rule ID (value)
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="backendpoolhealthprobesmap_nodejs">
+<a href="#backendpoolhealthprobesmap_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Health<wbr>Probes<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Health Probe Names (key) to the Backend Pool Health Probe ID (value)
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="backendpoolloadbalancingsettingsmap_nodejs">
+<a href="#backendpoolloadbalancingsettingsmap_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Settings<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Load Balancing Setting Names (key) to the Backend Pool Load Balancing Setting ID (value)
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="backendpoolsmap_nodejs">
+<a href="#backendpoolsmap_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Names (key) to the Backend Pool ID (value)
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="cname_nodejs">
@@ -1114,6 +1244,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that each frontendEndpoint must CNAME to.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="frontendendpointsmap_nodejs">
+<a href="#frontendendpointsmap_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoints<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1134,12 +1274,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="routingrulesmap_nodejs">
+<a href="#routingrulesmap_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Routing Rule Names (key) to the Routing Rule ID (value)
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="backend_pool_health_probes_map_python">
+<a href="#backend_pool_health_probes_map_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>health_<wbr>probes_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Health Probe Names (key) to the Backend Pool Health Probe ID (value)
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="backend_pool_load_balancing_settings_map_python">
+<a href="#backend_pool_load_balancing_settings_map_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>load_<wbr>balancing_<wbr>settings_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Load Balancing Setting Names (key) to the Backend Pool Load Balancing Setting ID (value)
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="backend_pools_map_python">
+<a href="#backend_pools_map_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Names (key) to the Backend Pool ID (value)
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="cname_python">
@@ -1149,6 +1329,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host that each frontendEndpoint must CNAME to.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="frontend_endpoints_map_python">
+<a href="#frontend_endpoints_map_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1169,6 +1359,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="routing_rules_map_python">
+<a href="#routing_rules_map_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Routing Rule Names (key) to the Routing Rule ID (value)
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1180,20 +1380,20 @@ Get an existing Frontdoor resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/frontdoor/#FrontdoorState">FrontdoorState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/frontdoor/#Frontdoor">Frontdoor</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FrontdoorState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Frontdoor</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolHealthProbeArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolLoadBalancingArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorFrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">header_frontdoor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Frontdoor</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolHealthProbeArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancing_settings_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolLoadBalancingArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorFrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">header_frontdoor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">routing_rules_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Frontdoor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFrontdoor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorState">FrontdoorState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#Frontdoor">Frontdoor</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFrontdoor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FrontdoorState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Frontdoor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Frontdoor.html">Frontdoor</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.FrontdoorState.html">FrontdoorState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Frontdoor</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FrontdoorState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1310,6 +1510,26 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_backendpoolhealthprobesmap_csharp">
+<a href="#state_backendpoolhealthprobesmap_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Health<wbr>Probes<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Health Probe Names (key) to the Backend Pool Health Probe ID (value)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_backendpoolloadbalancingsettingsmap_csharp">
+<a href="#state_backendpoolloadbalancingsettingsmap_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Settings<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Load Balancing Setting Names (key) to the Backend Pool Load Balancing Setting ID (value)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_backendpoolloadbalancings_csharp">
 <a href="#state_backendpoolloadbalancings_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
 </span>
@@ -1327,6 +1547,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#frontdoorbackendpool">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_backendpoolsmap_csharp">
+<a href="#state_backendpoolsmap_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Names (key) to the Backend Pool ID (value)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1377,6 +1607,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#frontdoorfrontendendpoint">List&lt;Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frontendendpointsmap_csharp">
+<a href="#state_frontendendpointsmap_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1440,6 +1680,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_routingrulesmap_csharp">
+<a href="#state_routingrulesmap_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Routing Rule Names (key) to the Routing Rule ID (value)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1466,6 +1716,26 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_backendpoolhealthprobesmap_go">
+<a href="#state_backendpoolhealthprobesmap_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Health<wbr>Probes<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Health Probe Names (key) to the Backend Pool Health Probe ID (value)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_backendpoolloadbalancingsettingsmap_go">
+<a href="#state_backendpoolloadbalancingsettingsmap_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Settings<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Load Balancing Setting Names (key) to the Backend Pool Load Balancing Setting ID (value)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_backendpoolloadbalancings_go">
 <a href="#state_backendpoolloadbalancings_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
 </span>
@@ -1483,6 +1753,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#frontdoorbackendpool">[]Frontdoor<wbr>Backend<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_backendpoolsmap_go">
+<a href="#state_backendpoolsmap_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Names (key) to the Backend Pool ID (value)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1533,6 +1813,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#frontdoorfrontendendpoint">[]Frontdoor<wbr>Frontend<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frontendendpointsmap_go">
+<a href="#state_frontendendpointsmap_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1596,6 +1886,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_routingrulesmap_go">
+<a href="#state_routingrulesmap_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Routing Rule Names (key) to the Routing Rule ID (value)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1622,6 +1922,26 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_backendpoolhealthprobesmap_nodejs">
+<a href="#state_backendpoolhealthprobesmap_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Health<wbr>Probes<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Health Probe Names (key) to the Backend Pool Health Probe ID (value)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_backendpoolloadbalancingsettingsmap_nodejs">
+<a href="#state_backendpoolloadbalancingsettingsmap_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Settings<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Load Balancing Setting Names (key) to the Backend Pool Load Balancing Setting ID (value)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_backendpoolloadbalancings_nodejs">
 <a href="#state_backendpoolloadbalancings_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
 </span>
@@ -1639,6 +1959,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#frontdoorbackendpool">Frontdoor<wbr>Backend<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_backendpoolsmap_nodejs">
+<a href="#state_backendpoolsmap_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Names (key) to the Backend Pool ID (value)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1689,6 +2019,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#frontdoorfrontendendpoint">Frontdoor<wbr>Frontend<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frontendendpointsmap_nodejs">
+<a href="#state_frontendendpointsmap_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoints<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1752,6 +2092,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_routingrulesmap_nodejs">
+<a href="#state_routingrulesmap_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Routing Rule Names (key) to the Routing Rule ID (value)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1778,6 +2128,26 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_backend_pool_health_probes_map_python">
+<a href="#state_backend_pool_health_probes_map_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>health_<wbr>probes_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Health Probe Names (key) to the Backend Pool Health Probe ID (value)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_backend_pool_load_balancing_settings_map_python">
+<a href="#state_backend_pool_load_balancing_settings_map_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>load_<wbr>balancing_<wbr>settings_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Load Balancing Setting Names (key) to the Backend Pool Load Balancing Setting ID (value)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_backend_pool_load_balancings_python">
 <a href="#state_backend_pool_load_balancings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>load_<wbr>balancings</a>
 </span>
@@ -1795,6 +2165,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#frontdoorbackendpool">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_backend_pools_map_python">
+<a href="#state_backend_pools_map_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Backend Pool Names (key) to the Backend Pool ID (value)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1845,6 +2225,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#frontdoorfrontendendpoint">Sequence[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frontend_endpoints_map_python">
+<a href="#state_frontend_endpoints_map_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1908,6 +2298,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_routing_rules_map_python">
+<a href="#state_routing_rules_map_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map/dictionary of Routing Rule Names (key) to the Routing Rule ID (value)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1929,18 +2329,6 @@ The following state arguments are supported:
 
 
 <h4 id="frontdoorbackendpool">Frontdoor<wbr>Backend<wbr>Pool</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPool">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPool">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorBackendPoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorBackendPoolOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FrontdoorBackendPoolArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FrontdoorBackendPool.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2167,18 +2555,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="frontdoorbackendpoolbackend">Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolBackend">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolBackend">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorBackendPoolBackendArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorBackendPoolBackendOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FrontdoorBackendPoolBackendArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FrontdoorBackendPoolBackend.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2485,18 +2861,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="frontdoorbackendpoolhealthprobe">Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolHealthProbe">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolHealthProbe">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorBackendPoolHealthProbeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorBackendPoolHealthProbeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FrontdoorBackendPoolHealthProbeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FrontdoorBackendPoolHealthProbe.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2803,18 +3167,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="frontdoorbackendpoolloadbalancing">Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolLoadBalancing">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolLoadBalancing">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorBackendPoolLoadBalancingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorBackendPoolLoadBalancingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FrontdoorBackendPoolLoadBalancingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FrontdoorBackendPoolLoadBalancing.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3041,18 +3393,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="frontdoorfrontendendpoint">Frontdoor<wbr>Frontend<wbr>Endpoint</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorFrontendEndpoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorFrontendEndpoint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorFrontendEndpointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorFrontendEndpointOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FrontdoorFrontendEndpointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FrontdoorFrontendEndpoint.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3399,18 +3739,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="frontdoorfrontendendpointcustomhttpsconfiguration">Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorFrontendEndpointCustomHttpsConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorFrontendEndpointCustomHttpsConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorFrontendEndpointCustomHttpsConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorFrontendEndpointCustomHttpsConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FrontdoorFrontendEndpointCustomHttpsConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FrontdoorFrontendEndpointCustomHttpsConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3717,18 +4045,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="frontdoorroutingrule">Frontdoor<wbr>Routing<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorRoutingRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorRoutingRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorRoutingRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorRoutingRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FrontdoorRoutingRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FrontdoorRoutingRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4075,18 +4391,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorRoutingRuleForwardingConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorRoutingRuleForwardingConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorRoutingRuleForwardingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorRoutingRuleForwardingConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FrontdoorRoutingRuleForwardingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FrontdoorRoutingRuleForwardingConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4353,18 +4657,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorRoutingRuleRedirectConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorRoutingRuleRedirectConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorRoutingRuleRedirectConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FrontdoorRoutingRuleRedirectConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FrontdoorRoutingRuleRedirectConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FrontdoorRoutingRuleRedirectConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

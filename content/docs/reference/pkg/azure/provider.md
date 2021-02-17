@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Azure"
-meta_desc: "Explore the Provider resource of the Azure package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the azurerm package. By default, resources use package-wide configuration"
+title_tag: "azure.Provider"
+meta_desc: "Documentation for the azure.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -23,19 +23,19 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/#pulumi_azure.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auxiliary_tenant_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_certificate_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_certificate_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_correlation_request_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disable_terraform_partner_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[ProviderFeaturesArgs]</span> = None<span class="p">, </span><span class="nx">metadata_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">msi_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_credentials_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_provider_registration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_use_azuread</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_msi</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auxiliary_tenant_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_certificate_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_certificate_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_correlation_request_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disable_terraform_partner_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[ProviderFeaturesArgs]</span> = None<span class="p">, </span><span class="nx">metadata_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">msi_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_credentials_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_provider_registration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_use_azuread</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_msi</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Provider.html">Provider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Pulumi.AzureArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -56,7 +56,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure/#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -125,7 +125,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -164,7 +164,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Pulumi.AzureArgs.html">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -187,11 +187,11 @@ construction to achieve fine-grained programmatic control over provider settings
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -279,7 +279,7 @@ Principal using a Client Certificate.
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to
 public.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variables: `AZURE_ENVIRONMENT`, `ARM_ENVIRONMENT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="features_csharp">
@@ -298,7 +298,7 @@ public.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="metadataurl_csharp">
@@ -308,7 +308,7 @@ public.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated - replaced by `metadata_host`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd>
+ It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_csharp">
@@ -330,16 +330,16 @@ automatically.
     </dt>
     <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="skipcredentialsvalidation_csharp">
 <a href="#skipcredentialsvalidation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Credentials<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
-{{% /md %}}</dd>
+    <dd>{{% md %}}[DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="skipproviderregistration_csharp">
@@ -350,7 +350,7 @@ automatically.
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already
 registered?
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_SKIP_PROVIDER_REGISTRATION`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storageuseazuread_csharp">
@@ -360,7 +360,7 @@ registered?
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
@@ -370,7 +370,7 @@ registered?
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Subscription ID which should be used.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
@@ -478,7 +478,7 @@ Principal using a Client Certificate.
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to
 public.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variables: `AZURE_ENVIRONMENT`, `ARM_ENVIRONMENT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="features_go">
@@ -497,7 +497,7 @@ public.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="metadataurl_go">
@@ -507,7 +507,7 @@ public.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated - replaced by `metadata_host`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd>
+ It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_go">
@@ -529,16 +529,16 @@ automatically.
     </dt>
     <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="skipcredentialsvalidation_go">
 <a href="#skipcredentialsvalidation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Credentials<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
-{{% /md %}}</dd>
+    <dd>{{% md %}}[DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="skipproviderregistration_go">
@@ -549,7 +549,7 @@ automatically.
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already
 registered?
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_SKIP_PROVIDER_REGISTRATION`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storageuseazuread_go">
@@ -559,7 +559,7 @@ registered?
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
@@ -569,7 +569,7 @@ registered?
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Subscription ID which should be used.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
@@ -677,7 +677,7 @@ Principal using a Client Certificate.
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to
 public.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variables: `AZURE_ENVIRONMENT`, `ARM_ENVIRONMENT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="features_nodejs">
@@ -696,7 +696,7 @@ public.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="metadataurl_nodejs">
@@ -706,7 +706,7 @@ public.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated - replaced by `metadata_host`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd>
+ It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_nodejs">
@@ -728,16 +728,16 @@ automatically.
     </dt>
     <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="skipcredentialsvalidation_nodejs">
 <a href="#skipcredentialsvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Credentials<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
-{{% /md %}}</dd>
+    <dd>{{% md %}}[DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="skipproviderregistration_nodejs">
@@ -748,7 +748,7 @@ automatically.
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already
 registered?
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_SKIP_PROVIDER_REGISTRATION`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storageuseazuread_nodejs">
@@ -758,7 +758,7 @@ registered?
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
@@ -768,7 +768,7 @@ registered?
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Subscription ID which should be used.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
@@ -876,7 +876,7 @@ Principal using a Client Certificate.
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to
 public.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variables: `AZURE_ENVIRONMENT`, `ARM_ENVIRONMENT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="features_python">
@@ -895,7 +895,7 @@ public.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="metadata_url_python">
@@ -905,7 +905,7 @@ public.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Deprecated - replaced by `metadata_host`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd>
+ It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="msi_endpoint_python">
@@ -927,16 +927,16 @@ automatically.
     </dt>
     <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="skip_credentials_validation_python">
 <a href="#skip_credentials_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>credentials_<wbr>validation</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
-{{% /md %}}</dd>
+    <dd>{{% md %}}[DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="skip_provider_registration_python">
@@ -947,7 +947,7 @@ automatically.
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already
 registered?
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_SKIP_PROVIDER_REGISTRATION`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storage_use_azuread_python">
@@ -957,7 +957,7 @@ registered?
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
@@ -967,7 +967,7 @@ registered?
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Subscription ID which should be used.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
@@ -1069,18 +1069,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="providerfeatures">Provider<wbr>Features</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProviderFeatures">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderFeaturesArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Inputs.ProviderFeaturesArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1287,18 +1275,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProviderFeaturesKeyVault">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderFeaturesKeyVaultArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Inputs.ProviderFeaturesKeyVaultArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1397,18 +1373,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProviderFeaturesNetwork">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderFeaturesNetworkArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Inputs.ProviderFeaturesNetworkArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1471,18 +1435,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProviderFeaturesTemplateDeployment">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderFeaturesTemplateDeploymentArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Inputs.ProviderFeaturesTemplateDeploymentArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1545,18 +1497,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProviderFeaturesVirtualMachine">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderFeaturesVirtualMachineArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Inputs.ProviderFeaturesVirtualMachineArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1655,18 +1595,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProviderFeaturesVirtualMachineScaleSet">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderFeaturesVirtualMachineScaleSetArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Inputs.ProviderFeaturesVirtualMachineScaleSetArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

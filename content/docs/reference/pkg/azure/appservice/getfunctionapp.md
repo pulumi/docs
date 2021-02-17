@@ -1,8 +1,8 @@
 
 ---
-title: "GetFunctionApp"
-title_tag: "Function GetFunctionApp | Module appservice | Package Azure"
-meta_desc: "Explore the GetFunctionApp function of the appservice module, including examples, input properties, output properties, and supporting types. Use this data source to access information about a Function App."
+title: "getFunctionApp"
+title_tag: "azure.appservice.getFunctionApp"
+meta_desc: "Documentation for the azure.appservice.getFunctionApp function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,13 +92,13 @@ const example = azure.appservice.getFunctionApp({
 {{% /examples %}}
 
 
-## Using GetFunctionApp {#using}
+## Using getFunctionApp {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFunctionApp<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#GetFunctionAppArgs">GetFunctionAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#GetFunctionAppResult">GetFunctionAppResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFunctionApp<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFunctionAppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFunctionAppResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -108,7 +108,7 @@ const example = azure.appservice.getFunctionApp({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunctionApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#LookupFunctionAppArgs">LookupFunctionAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#LookupFunctionAppResult">LookupFunctionAppResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunctionApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFunctionAppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFunctionAppResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupFunctionApp` in the Go SDK.
 
@@ -117,7 +117,7 @@ const example = azure.appservice.getFunctionApp({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFunctionApp </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.GetFunctionAppResult.html">GetFunctionAppResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.GetFunctionAppArgs.html">GetFunctionAppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFunctionAppResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFunctionAppArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -269,7 +269,7 @@ The following arguments are supported:
 
 
 
-## GetFunctionApp Result {#result}
+## getFunctionApp Result {#result}
 
 The following output properties are available:
 
@@ -1010,16 +1010,6 @@ The following output properties are available:
 
 
 <h4 id="getfunctionappconnectionstring">Get<wbr>Function<wbr>App<wbr>Connection<wbr>String</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppConnectionString">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppConnectionString">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppConnectionString.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1168,16 +1158,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getfunctionappidentity">Get<wbr>Function<wbr>App<wbr>Identity</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppIdentity">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppIdentity">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppIdentity.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1326,16 +1306,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getfunctionappsiteconfig">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSiteConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppSiteConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppSiteConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1956,16 +1926,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getfunctionappsiteconfigcors">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSiteConfigCors">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppSiteConfigCors">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppSiteConfigCors.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2066,16 +2026,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getfunctionappsiteconfigiprestriction">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSiteConfigIpRestriction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppSiteConfigIpRestriction">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppSiteConfigIpRestriction.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2380,16 +2330,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getfunctionappsiteconfigscmiprestriction">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSiteConfigScmIpRestriction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppSiteConfigScmIpRestriction">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppSiteConfigScmIpRestriction.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2694,16 +2634,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getfunctionappsitecredential">Get<wbr>Function<wbr>App<wbr>Site<wbr>Credential</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSiteCredential">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppSiteCredential">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppSiteCredential.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2812,16 +2742,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getfunctionappsourcecontrol">Get<wbr>Function<wbr>App<wbr>Source<wbr>Control</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSourceControl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppSourceControl">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppSourceControl.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

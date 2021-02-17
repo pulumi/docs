@@ -29,24 +29,6 @@ Explore the resources and functions of the blueprint module in the Azure package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.46.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Blueprint.html" title="Pulumi.Azure.Blueprint">Pulumi.Azure.Blueprint</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/blueprint?tab=doc#" title="azure/blueprint">azure/blueprint</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/blueprint/#" title="@pulumi/azure/blueprint">@pulumi/azure/blueprint</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure/blueprint" title="pulumi_azure/blueprint">pulumi_azure/blueprint</a></dd>
-
+	<dd>3.47.0</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetRecommendations"
-title_tag: "Function GetRecommendations | Module advisor | Package Azure"
-meta_desc: "Explore the GetRecommendations function of the advisor module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Advisor Recommendations."
+title: "getRecommendations"
+title_tag: "azure.advisor.getRecommendations"
+meta_desc: "Documentation for the azure.advisor.getRecommendations function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -116,13 +116,13 @@ export const recommendations = example.then(example => example.recommendations);
 {{% /examples %}}
 
 
-## Using GetRecommendations {#using}
+## Using getRecommendations {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRecommendations<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/advisor/#GetRecommendationsArgs">GetRecommendationsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/advisor/#GetRecommendationsResult">GetRecommendationsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRecommendations<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRecommendationsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRecommendationsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -132,14 +132,16 @@ export const recommendations = example.then(example => example.recommendations);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRecommendations<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/advisor?tab=doc#GetRecommendationsArgs">GetRecommendationsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/advisor?tab=doc#GetRecommendationsResult">GetRecommendationsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRecommendations<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRecommendationsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRecommendationsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRecommendations` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRecommendations </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Advisor.GetRecommendationsResult.html">GetRecommendationsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Advisor.GetRecommendationsArgs.html">GetRecommendationsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRecommendationsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRecommendationsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -255,7 +257,7 @@ The following arguments are supported:
 
 
 
-## GetRecommendations Result {#result}
+## getRecommendations Result {#result}
 
 The following output properties are available:
 
@@ -444,16 +446,6 @@ The following output properties are available:
 
 
 <h4 id="getrecommendationsrecommendation">Get<wbr>Recommendations<wbr>Recommendation</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetRecommendationsRecommendation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/advisor?tab=doc#GetRecommendationsRecommendation">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Advisor.Outputs.GetRecommendationsRecommendation.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

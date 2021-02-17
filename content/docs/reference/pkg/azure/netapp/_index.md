@@ -34,24 +34,6 @@ Explore the resources and functions of the netapp module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.46.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.NetApp.html" title="Pulumi.Azure.NetApp">Pulumi.Azure.NetApp</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp?tab=doc#" title="azure/netapp">azure/netapp</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/netapp/#" title="@pulumi/azure/netapp">@pulumi/azure/netapp</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure/netapp" title="pulumi_azure/netapp">pulumi_azure/netapp</a></dd>
-
+	<dd>3.47.0</dd>
 </dl>
 
