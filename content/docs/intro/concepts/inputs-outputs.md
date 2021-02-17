@@ -12,9 +12,9 @@ aliases: "/docs/reference/inputs-outputs/"
 
 Resource properties are treated specially in Pulumi, both for purposes of input and output.
 
-All resource arguments accept *inputs*. Inputs are values of type [Input<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}), a type that permits either a raw value of a given type (such as string, integer, boolean, list, map, and so on), an asynchronously computed value (i.e., a `Promise` or `Task`), or an output read from another resource’s properties.
+All resource arguments accept *inputs*. Inputs are values of type {{< pulumi-input >}}, a type that permits either a raw value of a given type (such as string, integer, boolean, list, map, and so on), an asynchronously computed value (i.e., a `Promise` or `Task`), or an output read from another resource’s properties.
 
-All resource properties on the instance object itself are *outputs*. Outputs are values of type [Output<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}), which behave very much like [promises](https://en.wikipedia.org/wiki/Futures_and_promises). This is necessary because outputs are not fully known until the infrastructure resource has actually completed provisioning, which happens asynchronously. Outputs are also how Pulumi tracks dependencies between resources.
+All resource properties on the instance object itself are *outputs*. Outputs are values of type {{< pulumi-output >}}, which behave very much like [promises](https://en.wikipedia.org/wiki/Futures_and_promises). This is necessary because outputs are not fully known until the infrastructure resource has actually completed provisioning, which happens asynchronously. Outputs are also how Pulumi tracks dependencies between resources.
 
 Outputs, therefore, represent two things:
 
@@ -31,7 +31,7 @@ Because outputs are asynchronous, their actual raw values are not immediately av
 
 ## Apply
 
-To access the raw value of an output and transform that value into a new value, use [apply]({{> relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" }}). This method accepts a callback that will be invoked with the raw value, once that value is available.
+To access the raw value of an output and transform that value into a new value, use {{< pulumi-apply >}}. This method accepts a callback that will be invoked with the raw value, once that value is available.
 
 For example, the following code creates an HTTPS URL from the DNS name (the raw value) of a virtual machine:
 
@@ -79,13 +79,15 @@ var url = virtualmachine.DnsName.Apply(dnsName => "https://" + dnsName);
 
 {{< /chooser >}}
 
-The result of the call to [apply]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) is a new Output<T>. So in this example, the url variable is also an [Output<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}). It will resolve to the new value returned from the callback, and carries the dependencies of the original [Output<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}). If the callback itself returns an Output<T>, the dependencies of that output are also kept in the resulting [Output<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}).
+The result of the call to {{< pulumi-apply >}} is a new Output<T>. So in this example, the url variable is also an {{< pulumi-output >}}. It will resolve to the new value returned from the callback, and carries the dependencies of the original Output<T>. If the callback itself returns an Output<T>, the dependencies of that output are also kept in the resulting Output<T>.
 
-Note: during some program executions, [apply]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) doesn’t run. For example, it won’t run during a preview, when resource output values may be unknown. Therefore, you should avoid side-effects within the callbacks. For this reason, you should not allocate new resources inside of your callbacks either, as it could lead to `pulumi preview` being wrong.
+{{% notes %}}
+During some program executions, `apply` doesn’t run. For example, it won’t run during a preview, when resource output values may be unknown. Therefore, you should avoid side-effects within the callbacks. For this reason, you should not allocate new resources inside of your callbacks either, as it could lead to `pulumi preview` being wrong.
+{{% /notes %}}
 
 ## All
 
-If you have multiple outputs and need to join them, the `all` function acts like an `apply` over many resources. This function joins over an entire list of outputs. It waits for all of them to become available and then provides them to the supplied callback. This function can be used to compute an entirely new output value, such as by adding or concatenating outputs from two different resources together, or by creating a new data structure that uses them. Just like with [apply]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}), the result of  [Output.all]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Output.all" >}}) is itself an [Output<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}).
+If you have multiple outputs and need to join them, the `all` function acts like an `apply` over many resources. This function joins over an entire list of outputs. It waits for all of them to become available and then provides them to the supplied callback. This function can be used to compute an entirely new output value, such as by adding or concatenating outputs from two different resources together, or by creating a new data structure that uses them. Just like with `apply`, the result of [Output.all]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Output.all" >}}) is itself an Output<T>.
 
 For example, let’s use a server and a database name to create a database connection string:
 
@@ -161,9 +163,9 @@ Notice that [Output.all]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Ou
 
 ## Accessing Properties of an Output by Lifting {#lifting}
 
-If you just need to access a property of an [Output<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) value in order to pass that property’s value as an argument to another resource’s constructor, you can often just directly access it.
+If you just need to access a property of an {{< pulumi-output >}} value in order to pass that property’s value as an argument to another resource’s constructor, you can often just directly access it.
 
-For example, to read a domain record from an ACM certificate, you need to access a resource’s property value. Because that value is an output, we would normally need to use [apply]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}):
+For example, to read a domain record from an ACM certificate, you need to access a resource’s property value. Because that value is an output, we would normally need to use {{< pulumi-apply >}}:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
@@ -261,7 +263,7 @@ var record = new Record("validation", new RecordArgs
 {
     Records = {
         cert.DomainValidationOptions.Apply(opts => opts[0].ResourceRecordValue!)
-    },  
+    },
     ...
 });
 ```
@@ -270,7 +272,7 @@ var record = new Record("validation", new RecordArgs
 
 {{< /chooser >}}
 
-Instead, to make it easier to access simple property and array elements, an [Output<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) lifts the properties of the underlying value, behaving very much like an instance of it. Lift allows you to access properties and elements directly from the [Output<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) itself without needing [apply]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}). If we return to the above example, we can now simplify it:
+Instead, to make it easier to access simple property and array elements, an {{< pulumi-output >}} lifts the properties of the underlying value, behaving very much like an instance of it. Lift allows you to access properties and elements directly from the {{< pulumi-output >}} itself without needing {{< pulumi-apply >}}. If we return to the above example, we can now simplify it:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
@@ -400,7 +402,7 @@ let certValidation = new aws.route53.Record("cert_validation", {
 
 ## Working with Outputs and Strings {#outputs-and-strings}
 
-Outputs that contain strings cannot be used directly in operations such as string concatenation. String interpolation lets you more easily build a string out of various output values, without needing [apply]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) or [Output.all]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Output.all" >}}). You can use string interpolation to export a stack output, provide a dynamically computed string as a new resource argument, or even simply for diagnostic purposes.
+Outputs that contain strings cannot be used directly in operations such as string concatenation. String interpolation lets you more easily build a string out of various output values, without needing {{< pulumi-apply >}} or [Output.all]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Output.all" >}}). You can use string interpolation to export a stack output, provide a dynamically computed string as a new resource argument, or even simply for diagnostic purposes.
 
 For example, say you want to create a URL from `hostname` and `port` output values. You can do this using `apply` and `all`.
 
@@ -516,9 +518,9 @@ var url = Output.Format($"http://{hostname}:{port}/");
 
 ## Convert Input to Output through Interpolation
 
-It is possible to turn an [Input<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) into an [Output<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) value. Resource arguments already accept outputs as input values however, in some cases you need to know that a value is definitely an [Output<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) at runtime. Knowing this can be helpful because, since [Input<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) values have many possible representations—a raw value, a promise, or an output—you would normally need to handle all possible cases. By first transforming that value into an [Output<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}), you can treat it uniformly instead.
+It is possible to turn an {{< pulumi-input >}} into an {{< pulumi-output >}} value. Resource arguments already accept outputs as input values however, in some cases you need to know that a value is definitely an {{< pulumi-output >}} at runtime. Knowing this can be helpful because, since {{< pulumi-input >}} values have many possible representations—a raw value, a promise, or an output—you would normally need to handle all possible cases. By first transforming that value into an {{< pulumi-output >}}, you can treat it uniformly instead.
 
-For example, this code transforms an [Input<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) into an [Output<T>]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) so that it can use the `apply` function:
+For example, this code transforms an {{< pulumi-input >}} into an {{< pulumi-output >}} so that it can use the `apply` function:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
