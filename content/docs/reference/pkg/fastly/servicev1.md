@@ -26,19 +26,19 @@ Fastly Service can be imported using their service ID, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/fastly/#Servicev1">Servicev1</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/fastly/#Servicev1Args">Servicev1Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.Servicev1">Servicev1</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1AclArgs]]</span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1CacheSettingArgs]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ConditionArgs]]</span> = None<span class="p">, </span><span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DictionaryArgs]]</span> = None<span class="p">, </span><span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DirectorArgs]]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DomainArgs]]</span> = None<span class="p">, </span><span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GzipArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HeaderArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKineseArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1PapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1RequestSettingArgs]]</span> = None<span class="p">, </span><span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ResponseObjectArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">, </span><span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[Servicev1WafArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1AclArgs]]</span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1CacheSettingArgs]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ConditionArgs]]</span> = None<span class="p">, </span><span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DictionaryArgs]]</span> = None<span class="p">, </span><span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DirectorArgs]]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DomainArgs]]</span> = None<span class="p">, </span><span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GzipArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HeaderArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKineseArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1PapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1RequestSettingArgs]]</span> = None<span class="p">, </span><span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ResponseObjectArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">, </span><span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[Servicev1WafArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1">NewServicev1</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1Args">Servicev1Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1">Servicev1</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServicev1</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Servicev1</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Servicev1.html">Servicev1</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Servicev1Args.html">Servicev1Args</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -59,7 +59,7 @@ Fastly Service can be imported using their service ID, e.g.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/fastly/#Servicev1Args">Servicev1Args</a></span>
+        <span class="property-type"><a href="#inputs">Servicev1Args</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -128,7 +128,7 @@ Fastly Service can be imported using their service ID, e.g.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1Args">Servicev1Args</a></span>
+        <span class="property-type"><a href="#inputs">Servicev1Args</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -167,7 +167,7 @@ Fastly Service can be imported using their service ID, e.g.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Servicev1Args.html">Servicev1Args</a></span>
+        <span class="property-type"><a href="#inputs">Servicev1Args</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -190,11 +190,11 @@ Fastly Service can be imported using their service ID, e.g.
 
 ## Servicev1 Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -2509,7 +2509,7 @@ Get an existing Servicev1 resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/fastly/#Servicev1State">Servicev1State</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/fastly/#Servicev1">Servicev1</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">Servicev1State</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Servicev1</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2518,11 +2518,11 @@ Get an existing Servicev1 resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServicev1<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1State">Servicev1State</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1">Servicev1</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServicev1<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">Servicev1State</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Servicev1</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Servicev1.html">Servicev1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly..Servicev1State.html">Servicev1State</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Servicev1</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">Servicev1State</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4870,18 +4870,6 @@ Defined below.
 
 
 <h4 id="servicev1acl">Servicev1Acl</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Acl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Acl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1AclArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1AclOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1AclArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Acl.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4988,18 +4976,6 @@ Defined below.
 {{% /choosable %}}
 
 <h4 id="servicev1backend">Servicev1Backend</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Backend">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Backend">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1BackendArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1BackendOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1BackendArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Backend.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6042,18 +6018,6 @@ Default `200`.
 {{% /choosable %}}
 
 <h4 id="servicev1bigquerylogging">Servicev1Bigquerylogging</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Bigquerylogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Bigquerylogging">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1BigqueryloggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1BigqueryloggingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1BigqueryloggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Bigquerylogging.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6480,18 +6444,6 @@ Default `200`.
 {{% /choosable %}}
 
 <h4 id="servicev1blobstoragelogging">Servicev1Blobstoragelogging</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Blobstoragelogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Blobstoragelogging">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1BlobstorageloggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1BlobstorageloggingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1BlobstorageloggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Blobstoragelogging.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7078,18 +7030,6 @@ Default `200`.
 {{% /choosable %}}
 
 <h4 id="servicev1cachesetting">Servicev1Cache<wbr>Setting</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1CacheSetting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1CacheSetting">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1CacheSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1CacheSettingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1CacheSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1CacheSetting.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7324,18 +7264,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 {{% /choosable %}}
 
 <h4 id="servicev1condition">Servicev1Condition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Condition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Condition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1ConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1ConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1ConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Condition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7522,18 +7450,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 {{% /choosable %}}
 
 <h4 id="servicev1dictionary">Servicev1Dictionary</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Dictionary">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Dictionary">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DictionaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DictionaryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1DictionaryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Dictionary.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7692,18 +7608,6 @@ the items are managed outside of the provider.
 {{% /choosable %}}
 
 <h4 id="servicev1director">Servicev1Director</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Director">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Director">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DirectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DirectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1DirectorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Director.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8050,18 +7954,6 @@ the items are managed outside of the provider.
 {{% /choosable %}}
 
 <h4 id="servicev1domain">Servicev1Domain</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Domain">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Domain">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DomainArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DomainOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1DomainArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Domain.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8168,18 +8060,6 @@ the items are managed outside of the provider.
 {{% /choosable %}}
 
 <h4 id="servicev1dynamicsnippet">Servicev1Dynamicsnippet</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Dynamicsnippet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Dynamicsnippet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DynamicsnippetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DynamicsnippetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1DynamicsnippetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Dynamicsnippet.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8366,18 +8246,6 @@ the items are managed outside of the provider.
 {{% /choosable %}}
 
 <h4 id="servicev1gcslogging">Servicev1Gcslogging</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Gcslogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Gcslogging">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1GcsloggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1GcsloggingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1GcsloggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Gcslogging.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8884,18 +8752,6 @@ the items are managed outside of the provider.
 {{% /choosable %}}
 
 <h4 id="servicev1gzip">Servicev1Gzip</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Gzip">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Gzip">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1GzipArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1GzipOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1GzipArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Gzip.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9094,18 +8950,6 @@ gzip. Example: `["css", "js"]`.
 {{% /choosable %}}
 
 <h4 id="servicev1header">Servicev1Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Header">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Header">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1HeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1HeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1HeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Header.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9624,18 +9468,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1healthcheck">Servicev1Healthcheck</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Healthcheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Healthcheck">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1HealthcheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1HealthcheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1HealthcheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Healthcheck.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10102,18 +9934,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1httpslogging">Servicev1Httpslogging</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Httpslogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Httpslogging">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1HttpsloggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1HttpsloggingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1HttpsloggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Httpslogging.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10860,18 +10680,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1logentry">Servicev1Logentry</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Logentry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Logentry">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LogentryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LogentryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LogentryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Logentry.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11218,18 +11026,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingcloudfile">Servicev1Logging<wbr>Cloudfile</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingCloudfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingCloudfile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingCloudfileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingCloudfileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingCloudfileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingCloudfile.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11856,18 +11652,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingdatadog">Servicev1Logging<wbr>Datadog</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingDatadog">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingDatadog">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingDatadogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingDatadogOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingDatadogArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingDatadog.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12174,18 +11958,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingdigitalocean">Servicev1Logging<wbr>Digitalocean</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingDigitalocean">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingDigitalocean">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingDigitaloceanArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingDigitaloceanOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingDigitaloceanArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingDigitalocean.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12812,18 +12584,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingelasticsearch">Servicev1Logging<wbr>Elasticsearch</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingElasticsearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingElasticsearch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingElasticsearchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingElasticsearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingElasticsearch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13490,18 +13250,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingftp">Servicev1Logging<wbr>Ftp</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingFtp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingFtp">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingFtpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingFtpOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingFtpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingFtp.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14128,18 +13876,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1logginggooglepubsub">Servicev1Logging<wbr>Googlepubsub</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingGooglepubsub">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingGooglepubsub">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingGooglepubsubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingGooglepubsubOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingGooglepubsubArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingGooglepubsub.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14526,18 +14262,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingheroku">Servicev1Logging<wbr>Heroku</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingHeroku">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingHeroku">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingHerokuArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingHerokuOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingHerokuArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingHeroku.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14844,18 +14568,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1logginghoneycomb">Servicev1Logging<wbr>Honeycomb</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingHoneycomb">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingHoneycomb">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingHoneycombArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingHoneycombOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingHoneycombArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingHoneycomb.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15162,18 +14874,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingkafka">Servicev1Logging<wbr>Kafka</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingKafka">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingKafka">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingKafkaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingKafkaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingKafkaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingKafka.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15952,18 +15652,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingkinese">Servicev1Logging<wbr>Kinese</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingKinese">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingKinese">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingKineseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingKineseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingKineseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingKinese.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16350,18 +16038,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingloggly">Servicev1Logging<wbr>Loggly</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingLoggly">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingLoggly">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingLogglyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingLogglyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingLogglyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingLoggly.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16628,18 +16304,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1logginglogshuttle">Servicev1Logging<wbr>Logshuttle</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingLogshuttle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingLogshuttle">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingLogshuttleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingLogshuttleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingLogshuttleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingLogshuttle.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16946,18 +16610,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingnewrelic">Servicev1Logging<wbr>Newrelic</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingNewrelic">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingNewrelic">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingNewrelicArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingNewrelicOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingNewrelicArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingNewrelic.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17224,18 +16876,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingopenstack">Servicev1Logging<wbr>Openstack</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingOpenstack">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingOpenstack">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingOpenstackArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingOpenstackOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingOpenstackArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingOpenstack.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17862,18 +17502,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingscalyr">Servicev1Logging<wbr>Scalyr</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingScalyr">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingScalyr">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingScalyrArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingScalyrOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingScalyrArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingScalyr.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18180,18 +17808,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1loggingsftp">Servicev1Logging<wbr>Sftp</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingSftp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingSftp">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingSftpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingSftpOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingSftpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingSftp.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18898,18 +18514,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1papertrail">Servicev1Papertrail</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Papertrail">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Papertrail">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1PapertrailArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1PapertrailOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1PapertrailArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Papertrail.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -19176,18 +18780,6 @@ content. (Does not apply to the `delete` action.)
 {{% /choosable %}}
 
 <h4 id="servicev1requestsetting">Servicev1Request<wbr>Setting</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1RequestSetting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1RequestSetting">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1RequestSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1RequestSettingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1RequestSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1RequestSetting.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -19726,18 +19318,6 @@ viewing origin fetch durations.
 {{% /choosable %}}
 
 <h4 id="servicev1responseobject">Servicev1Response<wbr>Object</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1ResponseObject">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1ResponseObject">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1ResponseObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1ResponseObjectOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1ResponseObjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1ResponseObject.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20048,18 +19628,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 {{% /choosable %}}
 
 <h4 id="servicev1s3logging">Servicev1S3logging</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1S3logging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1S3logging">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1S3loggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1S3loggingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1S3loggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1S3logging.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20830,18 +20398,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 {{% /choosable %}}
 
 <h4 id="servicev1snippet">Servicev1Snippet</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Snippet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Snippet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SnippetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SnippetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1SnippetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Snippet.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -21028,18 +20584,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 {{% /choosable %}}
 
 <h4 id="servicev1splunk">Servicev1Splunk</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Splunk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Splunk">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SplunkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SplunkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1SplunkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Splunk.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -21426,18 +20970,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 {{% /choosable %}}
 
 <h4 id="servicev1sumologic">Servicev1Sumologic</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Sumologic">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Sumologic">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SumologicArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SumologicOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1SumologicArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Sumologic.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -21744,18 +21276,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 {{% /choosable %}}
 
 <h4 id="servicev1syslog">Servicev1Syslog</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Syslog">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Syslog">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SyslogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SyslogOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1SyslogArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Syslog.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -22342,18 +21862,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 {{% /choosable %}}
 
 <h4 id="servicev1vcl">Servicev1Vcl</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Vcl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Vcl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1VclArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1VclOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1VclArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Vcl.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -22508,18 +22016,6 @@ marked as the main block. Default is `false`.
 {{% /choosable %}}
 
 <h4 id="servicev1waf">Servicev1Waf</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Waf">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Waf">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1WafArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1WafOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1WafArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Waf.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
