@@ -1,6 +1,6 @@
 ---
 title: "Keep your secrets secure, by default"
-date: 2021-02-16
+date: 2021-02-18
 draft: false
 meta_desc: Pulumi keeps your infrastructure passwords, tokens, keys, and more secure, by default.
 meta_image: secure_by_default.png
@@ -17,13 +17,13 @@ An unauthorized user gaining access to your infrastructure can be catastrophic: 
 
 ## Pulumi’s built-in secret storage
 
-Pulumi takes these risks seriously. That’s why we built the Pulumi platform to be secure by default. It protects all secret data using Pulumi’s built-in [secret storage](https://www.pulumi.com/docs/intro/concepts/secrets/). This secret store “just works”, regardless of whether you use our hosted [Pulumi Service](https://www.pulumi.com/product/#teams), the [Self-Hosted Pulumi Service](https://www.pulumi.com/docs/guides/self-hosted/), or the [self-managed backend](https://www.pulumi.com/docs/intro/concepts/state/#backends). The Pulumi Service protects secrets automatically when you create a stack with `pulumi new` or `pulumi stack init`. If you use a self-managed backend like AWS S3 or Google Cloud Storage, secrets are protected by a passphrase that you choose when you start a new stack with `pulumi new`. In all cases, every Pulumi [stack](https://www.pulumi.com/docs/intro/concepts/stack/) gets its own unique encryption key.
+Pulumi takes these risks seriously. That’s why we built the Pulumi platform to be secure by default. It protects all secret data using Pulumi’s built-in [secret storage](https://www.pulumi.com/docs/intro/concepts/secrets/). This secret store “just works”, regardless of whether you use our hosted [Pulumi Service](https://www.pulumi.com/product/#teams), the [Self-Hosted Pulumi Service](https://www.pulumi.com/docs/guides/self-hosted/), or the [self-managed backend](https://www.pulumi.com/docs/intro/concepts/state/#backends). The Pulumi Service protects secrets automatically when you create a stack with `pulumi new` or `pulumi stack init`. If you use a self-managed backend like AWS S3 or Google Cloud Storage, secrets are protected by a passphrase that you choose when you start a new stack with `pulumi new`. In all cases, every Pulumi [stack](https://www.pulumi.com/docs/intro/concepts/stack/) gets a unique encryption key.
 
 ## What secrets are protected
 
 Pulumi protects all of the [`state`](https://www.pulumi.com/docs/intro/concepts/state/) metadata that it knows about your infrastructure with encryption: encryption in transit when it’s sent to your backend and encryption at rest (if you’re using the hosted or self-hosted Pulumi Service). This base layer of protection applies to all state, including both non-secret and secret metadata. Secret storage is the next level of protection. It ensures that secret values are never exposed in plaintext in any file that Pulumi writes to your disk. Secrets are identified in a few ways:
 
-- All Pulumi providers—both native providers like [`azure-native`](https://github.com/pulumi/pulumi-azure-nextgen/) and Terraform-based providers like [datadog](https://github.com/pulumi/terraform-provider-datadog)—know which of their outputs should be secret, and mark them as such. This ensures that you're secure by default  when you start using a new provider. There's no need to pick which outputs are secret or worry that you’ve missed one.
+- All Pulumi providers—both native providers like [`azure-native`](https://github.com/pulumi/pulumi-azure-nextgen/) and Terraform-based providers like [Datadog](https://github.com/pulumi/terraform-provider-datadog)—know which of their outputs should be secret and mark them as such. This ensures that you're secure by default  when you start using a new provider. There's no need to pick which outputs are secret or worry that you’ve missed one.
 - You can mark other Pulumi outputs [as secret](https://www.pulumi.com/docs/intro/concepts/secrets/#explicitly-marking-resource-outputs-as-secrets).
 - In addition to Pulumi inputs and outputs, you can also mark Pulumi configuration values [as secret](https://www.pulumi.com/docs/intro/concepts/secrets/#secrets).
 
