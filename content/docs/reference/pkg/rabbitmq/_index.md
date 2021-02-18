@@ -36,24 +36,6 @@ A Pulumi package for creating and managing RabbitMQ resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`rabbitmq` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rabbitmq).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.html" title="Pulumi.RabbitMQ">Pulumi.RabbitMQ</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#" title="rabbitmq">rabbitmq</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#" title="@pulumi/rabbitmq">@pulumi/rabbitmq</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_rabbitmq" title="pulumi_rabbitmq">pulumi_rabbitmq</a></dd>
-
+	<dd>2.5.1</dd>
 </dl>
 
