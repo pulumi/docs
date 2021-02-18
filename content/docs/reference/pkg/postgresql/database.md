@@ -1,8 +1,8 @@
 
 ---
 title: "Database"
-title_tag: "Resource Database | Package PostgreSQL"
-meta_desc: "Explore the Database resource of the PostgreSQL package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "postgresql.Database"
+meta_desc: "Documentation for the postgresql.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

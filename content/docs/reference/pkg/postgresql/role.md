@@ -1,8 +1,8 @@
 
 ---
 title: "Role"
-title_tag: "Resource Role | Package PostgreSQL"
-meta_desc: "Explore the Role resource of the PostgreSQL package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "postgresql.Role"
+meta_desc: "Documentation for the postgresql.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

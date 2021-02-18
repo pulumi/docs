@@ -1,8 +1,8 @@
 
 ---
 title: "GrantRole"
-title_tag: "Resource GrantRole | Package PostgreSQL"
-meta_desc: "Explore the GrantRole resource of the PostgreSQL package, including examples, input properties, output properties, lookup functions, and supporting types. The ``postgresql.GrantRole`` resource creates and manages membership in a role to one or more other roles in a non-authoritative way."
+title_tag: "postgresql.GrantRole"
+meta_desc: "Documentation for the postgresql.GrantRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Schema"
-title_tag: "Resource Schema | Package PostgreSQL"
-meta_desc: "Explore the Schema resource of the PostgreSQL package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "postgresql.Schema"
+meta_desc: "Documentation for the postgresql.Schema resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
