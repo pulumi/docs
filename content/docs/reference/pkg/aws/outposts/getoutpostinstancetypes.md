@@ -1,8 +1,8 @@
 
 ---
-title: "GetOutpostInstanceTypes"
-title_tag: "Function GetOutpostInstanceTypes | Module outposts | Package AWS"
-meta_desc: "Explore the GetOutpostInstanceTypes function of the outposts module, including examples, input properties, output properties, and supporting types. Information about Outposts Instance Types."
+title: "getOutpostInstanceTypes"
+title_tag: "aws.outposts.getOutpostInstanceTypes"
+meta_desc: "Documentation for the aws.outposts.getOutpostInstanceTypes function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = aws.outposts.getOutpostInstanceTypes({
 {{% /examples %}}
 
 
-## Using GetOutpostInstanceTypes {#using}
+## Using getOutpostInstanceTypes {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -105,6 +105,8 @@ const example = aws.outposts.getOutpostInstanceTypes({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOutpostInstanceTypes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetOutpostInstanceTypesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetOutpostInstanceTypesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetOutpostInstanceTypes` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -187,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetOutpostInstanceTypes Result {#result}
+## getOutpostInstanceTypes Result {#result}
 
 The following output properties are available:
 

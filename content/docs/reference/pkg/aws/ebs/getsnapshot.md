@@ -1,8 +1,8 @@
 
 ---
-title: "GetSnapshot"
-title_tag: "Function GetSnapshot | Module ebs | Package AWS"
-meta_desc: "Explore the GetSnapshot function of the ebs module, including examples, input properties, output properties, and supporting types. Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes"
+title: "getSnapshot"
+title_tag: "aws.ebs.getSnapshot"
+meta_desc: "Documentation for the aws.ebs.getSnapshot function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -151,7 +151,7 @@ const ebsVolume = pulumi.output(aws.ebs.getSnapshot({
 {{% /examples %}}
 
 
-## Using GetSnapshot {#using}
+## Using getSnapshot {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -460,7 +460,7 @@ several valid keys, for a full reference, check out
 
 
 
-## GetSnapshot Result {#result}
+## getSnapshot Result {#result}
 
 The following output properties are available:
 

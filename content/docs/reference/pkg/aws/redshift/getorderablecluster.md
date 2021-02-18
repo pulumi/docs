@@ -1,8 +1,8 @@
 
 ---
-title: "GetOrderableCluster"
-title_tag: "Function GetOrderableCluster | Module redshift | Package AWS"
-meta_desc: "Explore the GetOrderableCluster function of the redshift module, including examples, input properties, output properties, and supporting types. Information about Redshift Orderable Clusters and valid parameter combinations."
+title: "getOrderableCluster"
+title_tag: "aws.redshift.getOrderableCluster"
+meta_desc: "Documentation for the aws.redshift.getOrderableCluster function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -106,7 +106,7 @@ const test = pulumi.output(aws.redshift.getOrderableCluster({
 {{% /examples %}}
 
 
-## Using GetOrderableCluster {#using}
+## Using getOrderableCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -123,6 +123,8 @@ const test = pulumi.output(aws.redshift.getOrderableCluster({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrderableCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetOrderableClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetOrderableClusterResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetOrderableCluster` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -325,7 +327,7 @@ The following arguments are supported:
 
 
 
-## GetOrderableCluster Result {#result}
+## getOrderableCluster Result {#result}
 
 The following output properties are available:
 

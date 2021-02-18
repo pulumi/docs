@@ -1,8 +1,8 @@
 
 ---
-title: "GetAmi"
-title_tag: "Function GetAmi | Package AWS"
-meta_desc: "Explore the GetAmi function of the AWS package, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of a registered AMI for use in other"
+title: "getAmi"
+title_tag: "aws.getAmi"
+meta_desc: "Documentation for the aws.getAmi function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -188,7 +188,7 @@ const example = pulumi.output(aws.getAmi({
 {{% /examples %}}
 
 
-## Using GetAmi {#using}
+## Using getAmi {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -205,6 +205,8 @@ const example = pulumi.output(aws.getAmi({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAmi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAmiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAmiResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAmi` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -527,7 +529,7 @@ options to narrow down the list AWS returns.
 
 
 
-## GetAmi Result {#result}
+## getAmi Result {#result}
 
 The following output properties are available:
 

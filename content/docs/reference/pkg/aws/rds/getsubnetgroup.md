@@ -1,8 +1,8 @@
 
 ---
-title: "GetSubnetGroup"
-title_tag: "Function GetSubnetGroup | Module rds | Package AWS"
-meta_desc: "Explore the GetSubnetGroup function of the rds module, including examples, input properties, output properties, and supporting types. Use this data source to get information about an RDS subnet group."
+title: "getSubnetGroup"
+title_tag: "aws.rds.getSubnetGroup"
+meta_desc: "Documentation for the aws.rds.getSubnetGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const database = pulumi.output(aws.rds.getSubnetGroup({
 {{% /examples %}}
 
 
-## Using GetSubnetGroup {#using}
+## Using getSubnetGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetSubnetGroup Result {#result}
+## getSubnetGroup Result {#result}
 
 The following output properties are available:
 

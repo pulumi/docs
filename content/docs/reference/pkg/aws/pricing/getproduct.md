@@ -1,8 +1,8 @@
 
 ---
-title: "GetProduct"
-title_tag: "Function GetProduct | Module pricing | Package AWS"
-meta_desc: "Explore the GetProduct function of the pricing module, including examples, input properties, output properties, and supporting types. Use this data source to get the pricing information of all products in AWS."
+title: "getProduct"
+title_tag: "aws.pricing.getProduct"
+meta_desc: "Documentation for the aws.pricing.getProduct function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -217,7 +217,7 @@ const example = pulumi.output(aws.pricing.getProduct({
 {{% /examples %}}
 
 
-## Using GetProduct {#using}
+## Using getProduct {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -234,6 +234,8 @@ const example = pulumi.output(aws.pricing.getProduct({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProduct<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetProductArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProductResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetProduct` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -356,7 +358,7 @@ The following arguments are supported:
 
 
 
-## GetProduct Result {#result}
+## getProduct Result {#result}
 
 The following output properties are available:
 

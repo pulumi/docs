@@ -1,8 +1,8 @@
 
 ---
-title: "GetSecurityGroup"
-title_tag: "Function GetSecurityGroup | Module ec2 | Package AWS"
-meta_desc: "Explore the GetSecurityGroup function of the ec2 module, including examples, input properties, output properties, and supporting types. `aws.ec2.SecurityGroup` provides details about a specific Security Group."
+title: "getSecurityGroup"
+title_tag: "aws.ec2.getSecurityGroup"
+meta_desc: "Documentation for the aws.ec2.getSecurityGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -121,7 +121,7 @@ const subnet = new aws.ec2.Subnet("subnet", {
 {{% /examples %}}
 
 
-## Using GetSecurityGroup {#using}
+## Using getSecurityGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -390,7 +390,7 @@ a pair on the desired security group.
 
 
 
-## GetSecurityGroup Result {#result}
+## getSecurityGroup Result {#result}
 
 The following output properties are available:
 

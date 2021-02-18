@@ -1,8 +1,8 @@
 
 ---
-title: "GetPermissions"
-title_tag: "Function GetPermissions | Module lakeformation | Package AWS"
-meta_desc: "Explore the GetPermissions function of the lakeformation module, including examples, input properties, output properties, and supporting types. Get permissions for a principal to access metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3. Permissions are granted to a principal, in a Data Catalog, relative to a Lake Formation resource, which includes the Data Catalog, databases, and tables. For more information, see [Security and Access Control to Metadata and Data in Lake Formation](https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html)."
+title: "getPermissions"
+title_tag: "aws.lakeformation.getPermissions"
+meta_desc: "Documentation for the aws.lakeformation.getPermissions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,7 +107,7 @@ const test = aws.lakeformation.getPermissions({
 {{% /examples %}}
 
 
-## Using GetPermissions {#using}
+## Using getPermissions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -448,7 +448,7 @@ The following arguments are supported:
 
 
 
-## GetPermissions Result {#result}
+## getPermissions Result {#result}
 
 The following output properties are available:
 

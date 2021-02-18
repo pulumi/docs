@@ -1,8 +1,8 @@
 
 ---
-title: "GetCoipPool"
-title_tag: "Function GetCoipPool | Module ec2 | Package AWS"
-meta_desc: "Explore the GetCoipPool function of the ec2 module, including examples, input properties, output properties, and supporting types. Provides details about a specific EC2 Customer-Owned IP Pool."
+title: "getCoipPool"
+title_tag: "aws.ec2.getCoipPool"
+meta_desc: "Documentation for the aws.ec2.getCoipPool function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -101,7 +101,7 @@ const selected = aws.ec2.getCoipPool({
 {{% /examples %}}
 
 
-## Using GetCoipPool {#using}
+## Using getCoipPool {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -118,6 +118,8 @@ const selected = aws.ec2.getCoipPool({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCoipPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCoipPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCoipPoolResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetCoipPool` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -320,7 +322,7 @@ a pair on the desired COIP Pool.
 
 
 
-## GetCoipPool Result {#result}
+## getCoipPool Result {#result}
 
 The following output properties are available:
 

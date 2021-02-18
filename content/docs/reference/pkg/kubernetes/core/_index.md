@@ -1,6 +1,6 @@
 ---
 title: "core"
-title_tag: "Package core"
+title_tag: "core Package"
 meta_desc: ""
 ---
 

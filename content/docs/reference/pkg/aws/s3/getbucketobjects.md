@@ -1,8 +1,8 @@
 
 ---
-title: "GetBucketObjects"
-title_tag: "Function GetBucketObjects | Module s3 | Package AWS"
-meta_desc: "Explore the GetBucketObjects function of the s3 module, including examples, input properties, output properties, and supporting types. &gt; **NOTE on `max_keys`:** Retrieving very large numbers of keys can adversely affect this provider&#39;s performance."
+title: "getBucketObjects"
+title_tag: "aws.s3.getBucketObjects"
+meta_desc: "Documentation for the aws.s3.getBucketObjects function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -60,7 +60,7 @@ const objectInfo = .map(__index => aws.s3.getBucketObject({
 {{% /examples %}}
 
 
-## Using GetBucketObjects {#using}
+## Using getBucketObjects {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -77,6 +77,8 @@ const objectInfo = .map(__index => aws.s3.getBucketObject({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucketObjects<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetBucketObjectsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBucketObjectsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetBucketObjects` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -399,7 +401,7 @@ The following arguments are supported:
 
 
 
-## GetBucketObjects Result {#result}
+## getBucketObjects Result {#result}
 
 The following output properties are available:
 

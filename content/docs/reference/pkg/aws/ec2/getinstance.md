@@ -1,8 +1,8 @@
 
 ---
-title: "GetInstance"
-title_tag: "Function GetInstance | Module ec2 | Package AWS"
-meta_desc: "Explore the GetInstance function of the ec2 module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an Amazon EC2 Instance for use in other"
+title: "getInstance"
+title_tag: "aws.ec2.getInstance"
+meta_desc: "Documentation for the aws.ec2.getInstance function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -143,7 +143,7 @@ const foo = pulumi.output(aws.ec2.getInstance({
 {{% /examples %}}
 
 
-## Using GetInstance {#using}
+## Using getInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -456,7 +456,7 @@ exactly match a pair on the desired Instance.
 
 
 
-## GetInstance Result {#result}
+## getInstance Result {#result}
 
 The following output properties are available:
 

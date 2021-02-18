@@ -1,8 +1,8 @@
 
 ---
-title: "GetSigningProfile"
-title_tag: "Function GetSigningProfile | Module signer | Package AWS"
-meta_desc: "Explore the GetSigningProfile function of the signer module, including examples, input properties, output properties, and supporting types. Provides information about a Signer Signing Profile."
+title: "getSigningProfile"
+title_tag: "aws.signer.getSigningProfile"
+meta_desc: "Documentation for the aws.signer.getSigningProfile function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const productionSigningProfile = pulumi.output(aws.signer.getSigningProfile({
 {{% /examples %}}
 
 
-## Using GetSigningProfile {#using}
+## Using getSigningProfile {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## GetSigningProfile Result {#result}
+## getSigningProfile Result {#result}
 
 The following output properties are available:
 

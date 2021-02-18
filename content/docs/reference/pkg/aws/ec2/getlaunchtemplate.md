@@ -1,8 +1,8 @@
 
 ---
-title: "GetLaunchTemplate"
-title_tag: "Function GetLaunchTemplate | Module ec2 | Package AWS"
-meta_desc: "Explore the GetLaunchTemplate function of the ec2 module, including examples, input properties, output properties, and supporting types. Provides information about a Launch Template."
+title: "getLaunchTemplate"
+title_tag: "aws.ec2.getLaunchTemplate"
+meta_desc: "Documentation for the aws.ec2.getLaunchTemplate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -180,7 +180,7 @@ const test = pulumi.output(aws.ec2.getLaunchTemplate({
 {{% /examples %}}
 
 
-## Using GetLaunchTemplate {#using}
+## Using getLaunchTemplate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -401,7 +401,7 @@ The following arguments are supported:
 
 
 
-## GetLaunchTemplate Result {#result}
+## getLaunchTemplate Result {#result}
 
 The following output properties are available:
 

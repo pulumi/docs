@@ -1,8 +1,8 @@
 
 ---
-title: "GetLocalGatewayVirtualInterface"
-title_tag: "Function GetLocalGatewayVirtualInterface | Module ec2 | Package AWS"
-meta_desc: "Explore the GetLocalGatewayVirtualInterface function of the ec2 module, including examples, input properties, output properties, and supporting types. Provides details about an EC2 Local Gateway Virtual Interface. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing)."
+title: "getLocalGatewayVirtualInterface"
+title_tag: "aws.ec2.getLocalGatewayVirtualInterface"
+meta_desc: "Documentation for the aws.ec2.getLocalGatewayVirtualInterface function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -52,7 +52,7 @@ const example = .map(([, ]) => aws.ec2.getLocalGatewayVirtualInterface({
 {{% /examples %}}
 
 
-## Using GetLocalGatewayVirtualInterface {#using}
+## Using getLocalGatewayVirtualInterface {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -69,6 +69,8 @@ const example = .map(([, ]) => aws.ec2.getLocalGatewayVirtualInterface({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLocalGatewayVirtualInterface<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetLocalGatewayVirtualInterfaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetLocalGatewayVirtualInterfaceResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetLocalGatewayVirtualInterface` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -231,7 +233,7 @@ The following arguments are supported:
 
 
 
-## GetLocalGatewayVirtualInterface Result {#result}
+## getLocalGatewayVirtualInterface Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package AWS"
-meta_desc: "Explore the Provider resource of the AWS package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the aws package. By default, resources use package-wide configuration"
+title_tag: "aws.Provider"
+meta_desc: "Documentation for the aws.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -187,7 +187,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

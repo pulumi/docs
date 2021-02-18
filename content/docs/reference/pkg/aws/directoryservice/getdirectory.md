@@ -1,8 +1,8 @@
 
 ---
-title: "GetDirectory"
-title_tag: "Function GetDirectory | Module directoryservice | Package AWS"
-meta_desc: "Explore the GetDirectory function of the directoryservice module, including examples, input properties, output properties, and supporting types. Get attributes of AWS Directory Service directory (SimpleAD, Managed AD, AD Connector). It&#39;s especially useful to refer AWS Managed AD or on-premise AD in AD Connector configuration."
+title: "getDirectory"
+title_tag: "aws.directoryservice.getDirectory"
+meta_desc: "Documentation for the aws.directoryservice.getDirectory function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = aws.directoryservice.getDirectory({
 {{% /examples %}}
 
 
-## Using GetDirectory {#using}
+## Using getDirectory {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## GetDirectory Result {#result}
+## getDirectory Result {#result}
 
 The following output properties are available:
 

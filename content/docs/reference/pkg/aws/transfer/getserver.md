@@ -1,8 +1,8 @@
 
 ---
-title: "GetServer"
-title_tag: "Function GetServer | Module transfer | Package AWS"
-meta_desc: "Explore the GetServer function of the transfer module, including examples, input properties, output properties, and supporting types. Use this data source to get the ARN of an AWS Transfer Server for use in other"
+title: "getServer"
+title_tag: "aws.transfer.getServer"
+meta_desc: "Documentation for the aws.transfer.getServer function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const example = pulumi.output(aws.transfer.getServer({
 {{% /examples %}}
 
 
-## Using GetServer {#using}
+## Using getServer {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -190,7 +190,7 @@ The following arguments are supported:
 
 
 
-## GetServer Result {#result}
+## getServer Result {#result}
 
 The following output properties are available:
 
