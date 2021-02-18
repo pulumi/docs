@@ -1,8 +1,8 @@
 
 ---
-title: "GetTensorflowVersions"
-title_tag: "Function GetTensorflowVersions | Module tpu | Package GCP"
-meta_desc: "Explore the GetTensorflowVersions function of the tpu module, including examples, input properties, output properties, and supporting types. Get TensorFlow versions available for a project. For more information see the [official documentation](https://cloud.google.com/tpu/docs/) and [API](https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.tensorflowVersions)."
+title: "getTensorflowVersions"
+title_tag: "gcp.tpu.getTensorflowVersions"
+meta_desc: "Documentation for the gcp.tpu.getTensorflowVersions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -169,7 +169,7 @@ const tpu = new gcp.tpu.Node("tpu", {
 {{% /examples %}}
 
 
-## Using GetTensorflowVersions {#using}
+## Using getTensorflowVersions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -186,6 +186,8 @@ const tpu = new gcp.tpu.Node("tpu", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTensorflowVersions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetTensorflowVersionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetTensorflowVersionsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetTensorflowVersions` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -316,7 +318,7 @@ is not provided, the provider zone is used.
 
 
 
-## GetTensorflowVersions Result {#result}
+## getTensorflowVersions Result {#result}
 
 The following output properties are available:
 

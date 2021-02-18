@@ -1,8 +1,8 @@
 
 ---
-title: "GetInstance"
-title_tag: "Function GetInstance | Module compute | Package GCP"
-meta_desc: "Explore the GetInstance function of the compute module, including examples, input properties, output properties, and supporting types. Get information about a VM instance resource within GCE. For more information see"
+title: "getInstance"
+title_tag: "gcp.compute.getInstance"
+meta_desc: "Documentation for the gcp.compute.getInstance function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -97,7 +97,7 @@ const appserver = pulumi.output(gcp.compute.getInstance({
 {{% /examples %}}
 
 
-## Using GetInstance {#using}
+## Using getInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -334,7 +334,7 @@ provider zone is used.
 
 
 
-## GetInstance Result {#result}
+## getInstance Result {#result}
 
 The following output properties are available:
 
@@ -2710,6 +2710,15 @@ instance can be accessed via the Internet. Structure documented below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="nictype_csharp">
+<a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
@@ -2785,6 +2794,15 @@ instance can be accessed via the Internet. Structure documented below.
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="nictype_go">
+<a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="subnetwork_go">
@@ -2864,6 +2882,15 @@ instance can be accessed via the Internet. Structure documented below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="nictype_nodejs">
+<a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
@@ -2939,6 +2966,15 @@ instance can be accessed via the Internet. Structure documented below.
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="nic_type_python">
+<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="subnetwork_python">

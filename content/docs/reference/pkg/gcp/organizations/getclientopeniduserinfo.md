@@ -1,8 +1,8 @@
 
 ---
-title: "GetClientOpenIdUserInfo"
-title_tag: "Function GetClientOpenIdUserInfo | Module organizations | Package GCP"
-meta_desc: "Explore the GetClientOpenIdUserInfo function of the organizations module, including examples, input properties, output properties, and supporting types. Get OpenID userinfo about the credentials used with the Google provider,"
+title: "getClientOpenIdUserInfo"
+title_tag: "gcp.organizations.getClientOpenIdUserInfo"
+meta_desc: "Documentation for the gcp.organizations.getClientOpenIdUserInfo function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -97,7 +97,7 @@ export const my_email = me.then(me => me.email);
 {{% /examples %}}
 
 
-## Using GetClientOpenIdUserInfo {#using}
+## Using getClientOpenIdUserInfo {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -115,6 +115,8 @@ export const my_email = me.then(me => me.email);
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClientOpenIdUserInfo<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetClientOpenIdUserInfoResult</a></span>, error)</span></code></pre></div>
 
+> Note: This function is named `GetClientOpenIdUserInfo` in the Go SDK.
+
 {{% /choosable %}}
 
 
@@ -127,7 +129,7 @@ export const my_email = me.then(me => me.email);
 
 
 
-## GetClientOpenIdUserInfo Result {#result}
+## getClientOpenIdUserInfo Result {#result}
 
 The following output properties are available:
 

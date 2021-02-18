@@ -1,8 +1,8 @@
 
 ---
-title: "GetInstanceTemplate"
-title_tag: "Function GetInstanceTemplate | Module compute | Package GCP"
-meta_desc: "Explore the GetInstanceTemplate function of the compute module, including examples, input properties, output properties, and supporting types. Get information about a VM instance template resource within GCE. For more information see"
+title: "getInstanceTemplate"
+title_tag: "gcp.compute.getInstanceTemplate"
+meta_desc: "Documentation for the gcp.compute.getInstanceTemplate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -55,7 +55,7 @@ const generic_regex = pulumi.output(gcp.compute.getInstanceTemplate({
 {{% /examples %}}
 
 
-## Using GetInstanceTemplate {#using}
+## Using getInstanceTemplate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -111,7 +111,7 @@ If `project` is not provideded, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A filter to retrieve the instance templates. 
+    <dd>{{% md %}}A filter to retrieve the instance templates.
 See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
 If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
 {{% /md %}}</dd>
@@ -160,7 +160,7 @@ If `project` is not provideded, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A filter to retrieve the instance templates. 
+    <dd>{{% md %}}A filter to retrieve the instance templates.
 See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
 If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ If `project` is not provideded, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A filter to retrieve the instance templates. 
+    <dd>{{% md %}}A filter to retrieve the instance templates.
 See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
 If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
 {{% /md %}}</dd>
@@ -258,7 +258,7 @@ If `project` is not provideded, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A filter to retrieve the instance templates. 
+    <dd>{{% md %}}A filter to retrieve the instance templates.
 See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
 If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
 
 
 
-## GetInstanceTemplate Result {#result}
+## getInstanceTemplate Result {#result}
 
 The following output properties are available:
 
@@ -1636,7 +1636,7 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
@@ -1664,6 +1664,15 @@ created from this template,
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcepolicies_csharp">
+<a href="#resourcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="source_csharp">
@@ -1793,7 +1802,7 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
@@ -1821,6 +1830,15 @@ created from this template,
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcepolicies_go">
+<a href="#resourcepolicies_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="source_go">
@@ -1950,7 +1968,7 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
@@ -1978,6 +1996,15 @@ created from this template,
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcepolicies_nodejs">
+<a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="source_nodejs">
@@ -2107,7 +2134,7 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
@@ -2135,6 +2162,15 @@ created from this template,
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_policies_python">
+<a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="source_python">
@@ -2415,6 +2451,15 @@ empty, the address will be automatically assigned.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="nictype_csharp">
+<a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
@@ -2496,6 +2541,15 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="nictype_go">
+<a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="subnetwork_go">
@@ -2581,6 +2635,15 @@ empty, the address will be automatically assigned.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="nictype_nodejs">
+<a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
@@ -2662,6 +2725,15 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="nic_type_python">
+<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="subnetwork_python">

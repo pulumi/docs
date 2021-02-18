@@ -1439,6 +1439,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="statuses_csharp">
+<a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatus">List&lt;Job<wbr>Status&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="useremail_csharp">
 <a href="#useremail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Email</a>
 </span>
@@ -1471,6 +1481,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the job.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="statuses_go">
+<a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatus">[]Job<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1509,6 +1529,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="statuses_nodejs">
+<a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatus">Job<wbr>Status[]</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="useremail_nodejs">
 <a href="#useremail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Email</a>
 </span>
@@ -1544,6 +1574,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="statuses_python">
+<a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatus">Sequence[Job<wbr>Status]</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="user_email_python">
 <a href="#user_email_python" style="color: inherit; text-decoration: inherit;">user_<wbr>email</a>
 </span>
@@ -1568,7 +1608,7 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">copy</span><span class="p">:</span> <span class="nx">Optional[JobCopyArgs]</span> = None<span class="p">, </span><span class="nx">extract</span><span class="p">:</span> <span class="nx">Optional[JobExtractArgs]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_timeout_ms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load</span><span class="p">:</span> <span class="nx">Optional[JobLoadArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[JobQueryArgs]</span> = None<span class="p">, </span><span class="nx">user_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">copy</span><span class="p">:</span> <span class="nx">Optional[JobCopyArgs]</span> = None<span class="p">, </span><span class="nx">extract</span><span class="p">:</span> <span class="nx">Optional[JobExtractArgs]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_timeout_ms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load</span><span class="p">:</span> <span class="nx">Optional[JobLoadArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[JobQueryArgs]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[JobStatusArgs]]</span> = None<span class="p">, </span><span class="nx">user_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1788,6 +1828,16 @@ Structure is documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_statuses_csharp">
+<a href="#state_statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatus">List&lt;Job<wbr>Status<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_useremail_csharp">
 <a href="#state_useremail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Email</a>
 </span>
@@ -1906,6 +1956,16 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Configures a query job.
 Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_statuses_go">
+<a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatus">[]Job<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2030,6 +2090,16 @@ Structure is documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_statuses_nodejs">
+<a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatus">Job<wbr>Status[]</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_useremail_nodejs">
 <a href="#state_useremail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Email</a>
 </span>
@@ -2148,6 +2218,16 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Configures a query job.
 Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_statuses_python">
+<a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatus">Sequence[Job<wbr>Status<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6298,6 +6378,416 @@ Providing a inline code resource is equivalent to providing a URI for a file con
     </dt>
     <dd>{{% md %}}A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
 {{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="jobstatus">Job<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorresults_csharp">
+<a href="#errorresults_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Results</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatuserrorresult">List&lt;Job<wbr>Status<wbr>Error<wbr>Result<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errors_csharp">
+<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatuserror">List&lt;Job<wbr>Status<wbr>Error<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorresults_go">
+<a href="#errorresults_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Results</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatuserrorresult">[]Job<wbr>Status<wbr>Error<wbr>Result</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errors_go">
+<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatuserror">[]Job<wbr>Status<wbr>Error</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorresults_nodejs">
+<a href="#errorresults_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Results</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatuserrorresult">Job<wbr>Status<wbr>Error<wbr>Result[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errors_nodejs">
+<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatuserror">Job<wbr>Status<wbr>Error[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_results_python">
+<a href="#error_results_python" style="color: inherit; text-decoration: inherit;">error_<wbr>results</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatuserrorresult">Sequence[Job<wbr>Status<wbr>Error<wbr>Result<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errors_python">
+<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobstatuserror">Sequence[Job<wbr>Status<wbr>Error<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="jobstatuserror">Job<wbr>Status<wbr>Error</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geographic location of the job. The default value is US.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reason_csharp">
+<a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geographic location of the job. The default value is US.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reason_go">
+<a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geographic location of the job. The default value is US.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reason_nodejs">
+<a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The geographic location of the job. The default value is US.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reason_python">
+<a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="jobstatuserrorresult">Job<wbr>Status<wbr>Error<wbr>Result</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geographic location of the job. The default value is US.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reason_csharp">
+<a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geographic location of the job. The default value is US.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reason_go">
+<a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geographic location of the job. The default value is US.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reason_nodejs">
+<a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The geographic location of the job. The default value is US.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reason_python">
+<a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 ## Import

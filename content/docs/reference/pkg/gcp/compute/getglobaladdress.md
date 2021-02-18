@@ -1,8 +1,8 @@
 
 ---
-title: "GetGlobalAddress"
-title_tag: "Function GetGlobalAddress | Module compute | Package GCP"
-meta_desc: "Explore the GetGlobalAddress function of the compute module, including examples, input properties, output properties, and supporting types. Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see"
+title: "getGlobalAddress"
+title_tag: "gcp.compute.getGlobalAddress"
+meta_desc: "Documentation for the gcp.compute.getGlobalAddress function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -142,7 +142,7 @@ const frontend = new gcp.dns.RecordSet("frontend", {
 {{% /examples %}}
 
 
-## Using GetGlobalAddress {#using}
+## Using getGlobalAddress {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -287,7 +287,7 @@ is not provided, the provider project is used.
 
 
 
-## GetGlobalAddress Result {#result}
+## getGlobalAddress Result {#result}
 
 The following output properties are available:
 

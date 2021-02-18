@@ -1,8 +1,8 @@
 
 ---
-title: "GetBucketObject"
-title_tag: "Function GetBucketObject | Module storage | Package GCP"
-meta_desc: "Explore the GetBucketObject function of the storage module, including examples, input properties, output properties, and supporting types. Gets an existing object inside an existing bucket in Google Cloud Storage service (GCS)."
+title: "getBucketObject"
+title_tag: "gcp.storage.getBucketObject"
+meta_desc: "Documentation for the gcp.storage.getBucketObject function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -97,7 +97,7 @@ const picture = pulumi.output(gcp.storage.getBucketObject({
 {{% /examples %}}
 
 
-## Using GetBucketObject {#using}
+## Using getBucketObject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -238,7 +238,7 @@ The following arguments are supported:
 
 
 
-## GetBucketObject Result {#result}
+## getBucketObject Result {#result}
 
 The following output properties are available:
 

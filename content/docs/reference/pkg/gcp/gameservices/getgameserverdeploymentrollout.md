@@ -1,8 +1,8 @@
 
 ---
-title: "GetGameServerDeploymentRollout"
-title_tag: "Function GetGameServerDeploymentRollout | Module gameservices | Package GCP"
-meta_desc: "Explore the GetGameServerDeploymentRollout function of the gameservices module, including examples, input properties, output properties, and supporting types. Use this data source to get the rollout state. "
+title: "getGameServerDeploymentRollout"
+title_tag: "gcp.gameservices.getGameServerDeploymentRollout"
+meta_desc: "Documentation for the gcp.gameservices.getGameServerDeploymentRollout function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,7 +90,7 @@ const qa = pulumi.output(gcp.gameservices.getGameServerDeploymentRollout({
 {{% /examples %}}
 
 
-## Using GetGameServerDeploymentRollout {#using}
+## Using getGameServerDeploymentRollout {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -191,7 +191,7 @@ The following arguments are supported:
 
 
 
-## GetGameServerDeploymentRollout Result {#result}
+## getGameServerDeploymentRollout Result {#result}
 
 The following output properties are available:
 

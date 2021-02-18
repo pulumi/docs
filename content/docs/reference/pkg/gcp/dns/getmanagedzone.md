@@ -1,8 +1,8 @@
 
 ---
-title: "GetManagedZone"
-title_tag: "Function GetManagedZone | Module dns | Package GCP"
-meta_desc: "Explore the GetManagedZone function of the dns module, including examples, input properties, output properties, and supporting types. Provides access to a zone&#39;s attributes within Google Cloud DNS."
+title: "getManagedZone"
+title_tag: "gcp.dns.getManagedZone"
+meta_desc: "Documentation for the gcp.dns.getManagedZone function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -108,7 +108,7 @@ func main() {
 
 
 
-## Using GetManagedZone {#using}
+## Using getManagedZone {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -249,7 +249,7 @@ The following arguments are supported:
 
 
 
-## GetManagedZone Result {#result}
+## getManagedZone Result {#result}
 
 The following output properties are available:
 

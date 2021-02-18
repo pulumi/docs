@@ -1,8 +1,8 @@
 
 ---
-title: "GetSSLPolicy"
-title_tag: "Function GetSSLPolicy | Module compute | Package GCP"
-meta_desc: "Explore the GetSSLPolicy function of the compute module, including examples, input properties, output properties, and supporting types. Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Target SSL Proxies."
+title: "getSSLPolicy"
+title_tag: "gcp.compute.getSSLPolicy"
+meta_desc: "Documentation for the gcp.compute.getSSLPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const my_ssl_policy = pulumi.output(gcp.compute.getSSLPolicy({
 {{% /examples %}}
 
 
-## Using GetSSLPolicy {#using}
+## Using getSSLPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -234,7 +234,7 @@ is not provided, the provider project is used.
 
 
 
-## GetSSLPolicy Result {#result}
+## getSSLPolicy Result {#result}
 
 The following output properties are available:
 

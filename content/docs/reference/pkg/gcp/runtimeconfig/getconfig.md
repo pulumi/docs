@@ -1,8 +1,8 @@
 
 ---
-title: "GetConfig"
-title_tag: "Function GetConfig | Module runtimeconfig | Package GCP"
-meta_desc: "Explore the GetConfig function of the runtimeconfig module, including examples, input properties, output properties, and supporting types. To get more information about RuntimeConfigs, see:"
+title: "getConfig"
+title_tag: "gcp.runtimeconfig.getConfig"
+meta_desc: "Documentation for the gcp.runtimeconfig.getConfig function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const run_service = pulumi.output(gcp.runtimeconfig.getConfig({
 {{% /examples %}}
 
 
-## Using GetConfig {#using}
+## Using getConfig {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -237,7 +237,7 @@ is not provided, the provider project is used.
 
 
 
-## GetConfig Result {#result}
+## getConfig Result {#result}
 
 The following output properties are available:
 

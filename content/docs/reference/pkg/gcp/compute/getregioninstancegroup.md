@@ -1,8 +1,8 @@
 
 ---
-title: "GetRegionInstanceGroup"
-title_tag: "Function GetRegionInstanceGroup | Module compute | Package GCP"
-meta_desc: "Explore the GetRegionInstanceGroup function of the compute module, including examples, input properties, output properties, and supporting types. Get a Compute Region Instance Group within GCE."
+title: "getRegionInstanceGroup"
+title_tag: "gcp.compute.getRegionInstanceGroup"
+meta_desc: "Documentation for the gcp.compute.getRegionInstanceGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -70,7 +70,7 @@ The most common use of this datasource will be to fetch information about the in
 
 
 
-## Using GetRegionInstanceGroup {#using}
+## Using getRegionInstanceGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -87,6 +87,8 @@ The most common use of this datasource will be to fetch information about the in
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionInstanceGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegionInstanceGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegionInstanceGroupResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRegionInstanceGroup` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -305,7 +307,7 @@ provided, the provider region is used.
 
 
 
-## GetRegionInstanceGroup Result {#result}
+## getRegionInstanceGroup Result {#result}
 
 The following output properties are available:
 

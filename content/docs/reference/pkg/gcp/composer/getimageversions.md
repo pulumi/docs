@@ -1,8 +1,8 @@
 
 ---
-title: "GetImageVersions"
-title_tag: "Function GetImageVersions | Module composer | Package GCP"
-meta_desc: "Explore the GetImageVersions function of the composer module, including examples, input properties, output properties, and supporting types. Provides access to available Cloud Composer versions in a region for a given project."
+title: "getImageVersions"
+title_tag: "gcp.composer.getImageVersions"
+meta_desc: "Documentation for the gcp.composer.getImageVersions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -118,7 +118,7 @@ const test = new gcp.composer.Environment("test", {
 {{% /examples %}}
 
 
-## Using GetImageVersions {#using}
+## Using getImageVersions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -135,6 +135,8 @@ const test = new gcp.composer.Environment("test", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImageVersions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetImageVersionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetImageVersionsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetImageVersions` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -265,7 +267,7 @@ If it is not provider, the provider region is used.
 
 
 
-## GetImageVersions Result {#result}
+## getImageVersions Result {#result}
 
 The following output properties are available:
 

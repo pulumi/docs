@@ -1,8 +1,8 @@
 
 ---
-title: "GetZones"
-title_tag: "Function GetZones | Module compute | Package GCP"
-meta_desc: "Explore the GetZones function of the compute module, including examples, input properties, output properties, and supporting types. Provides access to available Google Compute zones in a region for a given project."
+title: "getZones"
+title_tag: "gcp.compute.getZones"
+meta_desc: "Documentation for the gcp.compute.getZones function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -34,7 +34,7 @@ export = async () => {
 
 
 
-## Using GetZones {#using}
+## Using getZones {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -51,6 +51,8 @@ export = async () => {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetZonesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetZonesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetZones` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -217,7 +219,7 @@ Defaults to no filtering (all available zones - both `UP` and `DOWN`).
 
 
 
-## GetZones Result {#result}
+## getZones Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetUptimeCheckIPs"
-title_tag: "Function GetUptimeCheckIPs | Module monitoring | Package GCP"
-meta_desc: "Explore the GetUptimeCheckIPs function of the monitoring module, including examples, input properties, output properties, and supporting types. Returns the list of IP addresses that checkers run from. For more information see"
+title: "getUptimeCheckIPs"
+title_tag: "gcp.monitoring.getUptimeCheckIPs"
+meta_desc: "Documentation for the gcp.monitoring.getUptimeCheckIPs function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ export const ipList = ips.then(ips => ips.uptimeCheckIps);
 {{% /examples %}}
 
 
-## Using GetUptimeCheckIPs {#using}
+## Using getUptimeCheckIPs {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -106,6 +106,8 @@ export const ipList = ips.then(ips => ips.uptimeCheckIps);
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUptimeCheckIPs<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetUptimeCheckIPsResult</a></span>, error)</span></code></pre></div>
 
+> Note: This function is named `GetUptimeCheckIPs` in the Go SDK.
+
 {{% /choosable %}}
 
 
@@ -118,7 +120,7 @@ export const ipList = ips.then(ips => ips.uptimeCheckIps);
 
 
 
-## GetUptimeCheckIPs Result {#result}
+## getUptimeCheckIPs Result {#result}
 
 The following output properties are available:
 

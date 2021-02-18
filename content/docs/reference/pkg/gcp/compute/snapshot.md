@@ -871,15 +871,15 @@ encryption key.
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="sourcedisklink_csharp">
 <a href="#sourcedisklink_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of source_disk, which contains a compatible value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="storagebytes_csharp">
@@ -968,15 +968,15 @@ encryption key.
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="sourcedisklink_go">
 <a href="#sourcedisklink_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of source_disk, which contains a compatible value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="storagebytes_go">
@@ -1065,15 +1065,15 @@ encryption key.
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="sourcedisklink_nodejs">
 <a href="#sourcedisklink_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of source_disk, which contains a compatible value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="storagebytes_nodejs">
@@ -1162,15 +1162,15 @@ encryption key.
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="source_disk_link_python">
 <a href="#source_disk_link_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of source_disk, which contains a compatible value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="storage_bytes_python">
@@ -1455,15 +1455,15 @@ if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_sourcedisklink_csharp">
 <a href="#state_sourcedisklink_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of source_disk, which contains a compatible value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_storagebytes_csharp">
@@ -1645,15 +1645,15 @@ if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_sourcedisklink_go">
 <a href="#state_sourcedisklink_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of source_disk, which contains a compatible value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_storagebytes_go">
@@ -1835,15 +1835,15 @@ if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_sourcedisklink_nodejs">
 <a href="#state_sourcedisklink_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of source_disk, which contains a compatible value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_storagebytes_nodejs">
@@ -2025,15 +2025,15 @@ if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_source_disk_link_python">
 <a href="#state_source_disk_link_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of source_disk, which contains a compatible value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_storage_bytes_python">

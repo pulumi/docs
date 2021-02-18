@@ -1,8 +1,8 @@
 
 ---
-title: "GetRegionSslCertificate"
-title_tag: "Function GetRegionSslCertificate | Module compute | Package GCP"
-meta_desc: "Explore the GetRegionSslCertificate function of the compute module, including examples, input properties, output properties, and supporting types. Get info about a Region Google Compute SSL Certificate from its name."
+title: "getRegionSslCertificate"
+title_tag: "gcp.compute.getRegionSslCertificate"
+meta_desc: "Documentation for the gcp.compute.getRegionSslCertificate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -106,7 +106,7 @@ export const selfLink = myCert.then(myCert => myCert.selfLink);
 {{% /examples %}}
 
 
-## Using GetRegionSslCertificate {#using}
+## Using getRegionSslCertificate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -295,7 +295,7 @@ is not provided, the provider region is used.
 
 
 
-## GetRegionSslCertificate Result {#result}
+## getRegionSslCertificate Result {#result}
 
 The following output properties are available:
 

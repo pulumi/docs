@@ -1,8 +1,8 @@
 
 ---
-title: "GetOrganizationPolicy"
-title_tag: "Function GetOrganizationPolicy | Module folder | Package GCP"
-meta_desc: "Explore the GetOrganizationPolicy function of the folder module, including examples, input properties, output properties, and supporting types. Allows management of Organization policies for a Google Folder. For more information see"
+title: "getOrganizationPolicy"
+title_tag: "gcp.folder.getOrganizationPolicy"
+meta_desc: "Documentation for the gcp.folder.getOrganizationPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -100,7 +100,7 @@ export const version = policy.then(policy => policy.version);
 {{% /examples %}}
 
 
-## Using GetOrganizationPolicy {#using}
+## Using getOrganizationPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -241,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetOrganizationPolicy Result {#result}
+## getOrganizationPolicy Result {#result}
 
 The following output properties are available:
 

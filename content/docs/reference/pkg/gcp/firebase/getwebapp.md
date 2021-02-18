@@ -1,8 +1,8 @@
 
 ---
-title: "GetWebApp"
-title_tag: "Function GetWebApp | Module firebase | Package GCP"
-meta_desc: "Explore the GetWebApp function of the firebase module, including examples, input properties, output properties, and supporting types. A Google Cloud Firebase web application instance"
+title: "getWebApp"
+title_tag: "gcp.firebase.getWebApp"
+meta_desc: "Documentation for the gcp.firebase.getWebApp function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -15,7 +15,7 @@ A Google Cloud Firebase web application instance
 
 
 
-## Using GetWebApp {#using}
+## Using getWebApp {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -116,7 +116,7 @@ The following arguments are supported:
 
 
 
-## GetWebApp Result {#result}
+## getWebApp Result {#result}
 
 The following output properties are available:
 

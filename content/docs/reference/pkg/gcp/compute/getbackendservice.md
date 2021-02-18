@@ -1,8 +1,8 @@
 
 ---
-title: "GetBackendService"
-title_tag: "Function GetBackendService | Module compute | Package GCP"
-meta_desc: "Explore the GetBackendService function of the compute module, including examples, input properties, output properties, and supporting types. Provide access to a Backend Service&#39;s attribute. For more information"
+title: "getBackendService"
+title_tag: "gcp.compute.getBackendService"
+meta_desc: "Documentation for the gcp.compute.getBackendService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,7 +17,7 @@ and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServ
 
 
 
-## Using GetBackendService {#using}
+## Using getBackendService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -158,7 +158,7 @@ The following arguments are supported:
 
 
 
-## GetBackendService Result {#result}
+## getBackendService Result {#result}
 
 The following output properties are available:
 

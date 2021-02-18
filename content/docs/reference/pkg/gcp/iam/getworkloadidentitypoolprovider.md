@@ -1,8 +1,8 @@
 
 ---
-title: "GetWorkloadIdentityPoolProvider"
-title_tag: "Function GetWorkloadIdentityPoolProvider | Module iam | Package GCP"
-meta_desc: "Explore the GetWorkloadIdentityPoolProvider function of the iam module, including examples, input properties, output properties, and supporting types. "
+title: "getWorkloadIdentityPoolProvider"
+title_tag: "gcp.iam.getWorkloadIdentityPoolProvider"
+meta_desc: "Documentation for the gcp.iam.getWorkloadIdentityPoolProvider function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetWorkloadIdentityPoolProvider function of the iam modu
 
 
 
-## Using GetWorkloadIdentityPoolProvider {#using}
+## Using getWorkloadIdentityPoolProvider {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -206,7 +206,7 @@ is not provided, the provider project is used.
 
 
 
-## GetWorkloadIdentityPoolProvider Result {#result}
+## getWorkloadIdentityPoolProvider Result {#result}
 
 The following output properties are available:
 

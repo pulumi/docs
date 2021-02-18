@@ -1,8 +1,8 @@
 
 ---
-title: "GetDefaultServiceAccount"
-title_tag: "Function GetDefaultServiceAccount | Module appengine | Package GCP"
-meta_desc: "Explore the GetDefaultServiceAccount function of the appengine module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve the default App Engine service account for the specified project."
+title: "getDefaultServiceAccount"
+title_tag: "gcp.appengine.getDefaultServiceAccount"
+meta_desc: "Documentation for the gcp.appengine.getDefaultServiceAccount function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -87,7 +87,7 @@ export const defaultAccount = _default.then(_default => _default.email);
 {{% /examples %}}
 
 
-## Using GetDefaultServiceAccount {#using}
+## Using getDefaultServiceAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -104,6 +104,8 @@ export const defaultAccount = _default.then(_default => _default.email);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDefaultServiceAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDefaultServiceAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDefaultServiceAccountResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDefaultServiceAccount` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -186,7 +188,7 @@ The following arguments are supported:
 
 
 
-## GetDefaultServiceAccount Result {#result}
+## getDefaultServiceAccount Result {#result}
 
 The following output properties are available:
 

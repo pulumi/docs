@@ -1,8 +1,8 @@
 
 ---
-title: "GetTestablePermissions"
-title_tag: "Function GetTestablePermissions | Module iam | Package GCP"
-meta_desc: "Explore the GetTestablePermissions function of the iam module, including examples, input properties, output properties, and supporting types. Retrieve a list of testable permissions for a resource. Testable permissions mean the permissions that user can add or remove in a role at a given resource. The resource can be referenced either via the full resource name or via a URI."
+title: "getTestablePermissions"
+title_tag: "gcp.iam.getTestablePermissions"
+meta_desc: "Documentation for the gcp.iam.getTestablePermissions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -105,7 +105,7 @@ const perms = pulumi.output(gcp.iam.getTestablePermissions({
 {{% /examples %}}
 
 
-## Using GetTestablePermissions {#using}
+## Using getTestablePermissions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -122,6 +122,8 @@ const perms = pulumi.output(gcp.iam.getTestablePermissions({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTestablePermissions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetTestablePermissionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetTestablePermissionsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetTestablePermissions` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -284,7 +286,7 @@ The following arguments are supported:
 
 
 
-## GetTestablePermissions Result {#result}
+## getTestablePermissions Result {#result}
 
 The following output properties are available:
 

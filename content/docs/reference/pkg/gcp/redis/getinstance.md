@@ -1,8 +1,8 @@
 
 ---
-title: "GetInstance"
-title_tag: "Function GetInstance | Module redis | Package GCP"
-meta_desc: "Explore the GetInstance function of the redis module, including examples, input properties, output properties, and supporting types. Get info about a Google Cloud Redis instance."
+title: "getInstance"
+title_tag: "gcp.redis.getInstance"
+meta_desc: "Documentation for the gcp.redis.getInstance function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -106,7 +106,7 @@ export const instanceAuthorizedNetwork = myInstance.then(myInstance => myInstanc
 {{% /examples %}}
 
 
-## Using GetInstance {#using}
+## Using getInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -295,7 +295,7 @@ is not provided, the provider region is used.
 
 
 
-## GetInstance Result {#result}
+## getInstance Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetNotificationChannel"
-title_tag: "Function GetNotificationChannel | Module monitoring | Package GCP"
-meta_desc: "Explore the GetNotificationChannel function of the monitoring module, including examples, input properties, output properties, and supporting types. A NotificationChannel is a medium through which an alert is delivered"
+title: "getNotificationChannel"
+title_tag: "gcp.monitoring.getNotificationChannel"
+meta_desc: "Documentation for the gcp.monitoring.getNotificationChannel function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -188,7 +188,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alertPolicy", {
 {{% /examples %}}
 
 
-## Using GetNotificationChannel {#using}
+## Using getNotificationChannel {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -457,7 +457,7 @@ If it is not provided, the provider project is used.
 
 
 
-## GetNotificationChannel Result {#result}
+## getNotificationChannel Result {#result}
 
 The following output properties are available:
 

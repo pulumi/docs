@@ -1,8 +1,8 @@
 
 ---
-title: "GetBucketObjectContent"
-title_tag: "Function GetBucketObjectContent | Module storage | Package GCP"
-meta_desc: "Explore the GetBucketObjectContent function of the storage module, including examples, input properties, output properties, and supporting types. Gets an existing object content inside an existing bucket in Google Cloud Storage service (GCS)."
+title: "getBucketObjectContent"
+title_tag: "gcp.storage.getBucketObjectContent"
+meta_desc: "Documentation for the gcp.storage.getBucketObjectContent function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -103,7 +103,7 @@ export const encrypted = key.then(key => key.content);
 {{% /examples %}}
 
 
-## Using GetBucketObjectContent {#using}
+## Using getBucketObjectContent {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -120,6 +120,8 @@ export const encrypted = key.then(key => key.content);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucketObjectContent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetBucketObjectContentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBucketObjectContentResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetBucketObjectContent` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -282,7 +284,7 @@ The following arguments are supported:
 
 
 
-## GetBucketObjectContent Result {#result}
+## getBucketObjectContent Result {#result}
 
 The following output properties are available:
 

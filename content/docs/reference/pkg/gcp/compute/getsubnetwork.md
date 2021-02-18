@@ -1,8 +1,8 @@
 
 ---
-title: "GetSubnetwork"
-title_tag: "Function GetSubnetwork | Module compute | Package GCP"
-meta_desc: "Explore the GetSubnetwork function of the compute module, including examples, input properties, output properties, and supporting types. Get a subnetwork within GCE from its name and region."
+title: "getSubnetwork"
+title_tag: "gcp.compute.getSubnetwork"
+meta_desc: "Documentation for the gcp.compute.getSubnetwork function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const my_subnetwork = pulumi.output(gcp.compute.getSubnetwork({
 {{% /examples %}}
 
 
-## Using GetSubnetwork {#using}
+## Using getSubnetwork {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -331,7 +331,7 @@ specified, `name`, `project`, and `region` are ignored.
 
 
 
-## GetSubnetwork Result {#result}
+## getSubnetwork Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetIAMPolicy"
-title_tag: "Function GetIAMPolicy | Module organizations | Package GCP"
-meta_desc: "Explore the GetIAMPolicy function of the organizations module, including examples, input properties, output properties, and supporting types. Generates an IAM policy document that may be referenced by and applied to"
+title: "getIAMPolicy"
+title_tag: "gcp.organizations.getIAMPolicy"
+meta_desc: "Documentation for the gcp.organizations.getIAMPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -197,7 +197,7 @@ from another resource is the only way to apply an IAM policy to a resource.
 
 
 
-## Using GetIAMPolicy {#using}
+## Using getIAMPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -346,7 +346,7 @@ defining a binding to be included in the policy document. Multiple
 
 
 
-## GetIAMPolicy Result {#result}
+## getIAMPolicy Result {#result}
 
 The following output properties are available:
 

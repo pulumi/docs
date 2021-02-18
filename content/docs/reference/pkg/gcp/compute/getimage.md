@@ -1,8 +1,8 @@
 
 ---
-title: "GetImage"
-title_tag: "Function GetImage | Module compute | Package GCP"
-meta_desc: "Explore the GetImage function of the compute module, including examples, input properties, output properties, and supporting types. Get information about a Google Compute Image. Check that your service account has the `compute.imageUser` role if you want to share [custom images](https://cloud.google.com/compute/docs/images/sharing-images-across-projects) from another project. If you want to use [public images][pubimg], do not forget to specify the dedicated project. For more information see"
+title: "getImage"
+title_tag: "gcp.compute.getImage"
+meta_desc: "Documentation for the gcp.compute.getImage function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -128,7 +128,7 @@ const _default = new gcp.compute.Instance("default", {bootDisk: {
 {{% /examples %}}
 
 
-## Using GetImage {#using}
+## Using getImage {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -353,7 +353,7 @@ provided, the provider project is used. If you are using a
 
 
 
-## GetImage Result {#result}
+## getImage Result {#result}
 
 The following output properties are available:
 

@@ -1,6 +1,6 @@
 ---
 title: "GCP"
-title_tag: "Package GCP"
+title_tag: "GCP Package"
 meta_desc: "A Pulumi package for creating and managing Google Cloud Platform resources."
 menu:
     reference:
@@ -46,6 +46,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="diagflow/" title="diagflow"><span class="symbol module"></span>diagflow</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
     <li><a href="endpoints/" title="endpoints"><span class="symbol module"></span>endpoints</a></li>
+    <li><a href="essentialcontacts/" title="essentialcontacts"><span class="symbol module"></span>essentialcontacts</a></li>
     <li><a href="filestore/" title="filestore"><span class="symbol module"></span>filestore</a></li>
     <li><a href="firebase/" title="firebase"><span class="symbol module"></span>firebase</a></li>
     <li><a href="firestore/" title="firestore"><span class="symbol module"></span>firestore</a></li>
@@ -99,6 +100,6 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.11.1</dd>
+	<dd>4.12.0</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetNetwork"
-title_tag: "Function GetNetwork | Module compute | Package GCP"
-meta_desc: "Explore the GetNetwork function of the compute module, including examples, input properties, output properties, and supporting types. Get a network within GCE from its name."
+title: "getNetwork"
+title_tag: "gcp.compute.getNetwork"
+meta_desc: "Documentation for the gcp.compute.getNetwork function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const my_network = pulumi.output(gcp.compute.getNetwork({
 {{% /examples %}}
 
 
-## Using GetNetwork {#using}
+## Using getNetwork {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ is not provided, the provider project is used.
 
 
 
-## GetNetwork Result {#result}
+## getNetwork Result {#result}
 
 The following output properties are available:
 
