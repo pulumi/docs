@@ -73,7 +73,6 @@ import (
 	"fmt"
 
 	"github.com/pulumi/pulumi-auth0/sdk/go/auth0"
-	"github.com/pulumi/pulumi-auth0/sdk/go/auth0/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -181,19 +180,19 @@ const myConnection = new auth0.Connection("my_connection", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#Connection">Connection</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#ConnectionArgs">ConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Connection">Connection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validation</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validation</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#Connection">NewConnection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionArgs">ConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#Connection">Connection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Connection.html">Connection</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.ConnectionArgs.html">ConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -214,7 +213,7 @@ const myConnection = new auth0.Connection("my_connection", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#ConnectionArgs">ConnectionArgs</a></span>
+        <span class="property-type"><a href="#inputs">ConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,7 +282,7 @@ const myConnection = new auth0.Connection("my_connection", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionArgs">ConnectionArgs</a></span>
+        <span class="property-type"><a href="#inputs">ConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -322,7 +321,7 @@ const myConnection = new auth0.Connection("my_connection", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.ConnectionArgs.html">ConnectionArgs</a></span>
+        <span class="property-type"><a href="#inputs">ConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -345,11 +344,11 @@ const myConnection = new auth0.Connection("my_connection", {
 
 ## Connection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Connection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Connection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -812,7 +811,7 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#ConnectionState">ConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#Connection">Connection</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Connection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -821,11 +820,11 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionState">ConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#Connection">Connection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Connection.html">Connection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..ConnectionState.html">ConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Connection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1321,18 +1320,6 @@ The following state arguments are supported:
 
 
 <h4 id="connectionoptions">Connection<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4043,18 +4030,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="connectionoptionsidpinitiated">Connection<wbr>Options<wbr>Idp<wbr>Initiated</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsIdpInitiated">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsIdpInitiated">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsIdpInitiatedArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsIdpInitiatedOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsIdpInitiatedArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsIdpInitiated.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4193,18 +4168,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="connectionoptionsmfa">Connection<wbr>Options<wbr>Mfa</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsMfa">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsMfa">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsMfaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsMfaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsMfaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsMfa.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4311,18 +4274,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="connectionoptionspasswordcomplexityoptions">Connection<wbr>Options<wbr>Password<wbr>Complexity<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsPasswordComplexityOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsPasswordComplexityOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsPasswordComplexityOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsPasswordComplexityOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsPasswordComplexityOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsPasswordComplexityOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4389,18 +4340,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="connectionoptionspassworddictionary">Connection<wbr>Options<wbr>Password<wbr>Dictionary</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsPasswordDictionary">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsPasswordDictionary">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsPasswordDictionaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsPasswordDictionaryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsPasswordDictionaryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsPasswordDictionary.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4507,18 +4446,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="connectionoptionspasswordhistory">Connection<wbr>Options<wbr>Password<wbr>History</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsPasswordHistory">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsPasswordHistory">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsPasswordHistoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsPasswordHistoryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsPasswordHistoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsPasswordHistory.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4625,18 +4552,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="connectionoptionspasswordnopersonalinfo">Connection<wbr>Options<wbr>Password<wbr>No<wbr>Personal<wbr>Info</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsPasswordNoPersonalInfo">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsPasswordNoPersonalInfo">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsPasswordNoPersonalInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsPasswordNoPersonalInfoOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsPasswordNoPersonalInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsPasswordNoPersonalInfo.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4703,18 +4618,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="connectionoptionstotp">Connection<wbr>Options<wbr>Totp</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsTotp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsTotp">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsTotpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsTotpOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsTotpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsTotp.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4821,18 +4724,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="connectionoptionsvalidation">Connection<wbr>Options<wbr>Validation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsValidation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsValidation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsValidationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsValidationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsValidationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsValidation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4899,18 +4790,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="connectionoptionsvalidationusername">Connection<wbr>Options<wbr>Validation<wbr>Username</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsValidationUsername">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsValidationUsername">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsValidationUsernameArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsValidationUsernameOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsValidationUsernameArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsValidationUsername.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
