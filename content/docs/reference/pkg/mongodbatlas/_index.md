@@ -89,24 +89,6 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 	<dt>Version</dt>
-	<dd>1.5.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.html" title="Pulumi.Mongodbatlas">Pulumi.Mongodbatlas</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#" title="mongodbatlas">mongodbatlas</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#" title="@pulumi/mongodbatlas">@pulumi/mongodbatlas</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_mongodbatlas" title="pulumi_mongodbatlas">pulumi_mongodbatlas</a></dd>
-
+	<dd>1.5.2</dd>
 </dl>
 
