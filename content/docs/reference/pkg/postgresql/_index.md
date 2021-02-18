@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQL"
-title_tag: "Module PostgreSQL | Package PostgreSQL"
+title_tag: "postgresql.PostgreSQL"
 meta_desc: "A Pulumi package for creating and managing postgresql cloud resources."
 menu:
     reference:
@@ -34,6 +34,6 @@ A Pulumi package for creating and managing postgresql cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).</dd>
 	<dt>Version</dt>
-	<dd>2.7.1</dd>
+	<dd>2.7.2</dd>
 </dl>
 

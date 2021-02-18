@@ -1,8 +1,8 @@
 
 ---
 title: "DefaultPrivileges"
-title_tag: "Resource DefaultPrivileges | Package PostgreSQL"
-meta_desc: "Explore the DefaultPrivileges resource of the PostgreSQL package, including examples, input properties, output properties, lookup functions, and supporting types. The ``postgresql.DefaultPrivileges`` resource creates and manages default privileges given to a user for a database schema."
+title_tag: "postgresql.DefaultPrivileges"
+meta_desc: "Documentation for the postgresql.DefaultPrivileges resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

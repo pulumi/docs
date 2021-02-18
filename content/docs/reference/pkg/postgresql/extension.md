@@ -1,8 +1,8 @@
 
 ---
 title: "Extension"
-title_tag: "Resource Extension | Package PostgreSQL"
-meta_desc: "Explore the Extension resource of the PostgreSQL package, including examples, input properties, output properties, lookup functions, and supporting types. The ``postgresql.Extension`` resource creates and manages an extension on a PostgreSQL"
+title_tag: "postgresql.Extension"
+meta_desc: "Documentation for the postgresql.Extension resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

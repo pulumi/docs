@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package PostgreSQL"
-meta_desc: "Explore the Provider resource of the PostgreSQL package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the postgresql package. By default, resources use package-wide configuration"
+title_tag: "postgresql.Provider"
+meta_desc: "Documentation for the postgresql.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Grant"
-title_tag: "Resource Grant | Package PostgreSQL"
-meta_desc: "Explore the Grant resource of the PostgreSQL package, including examples, input properties, output properties, lookup functions, and supporting types. The ``postgresql.Grant`` resource creates and manages privileges given to a user for a database schema."
+title_tag: "postgresql.Grant"
+meta_desc: "Documentation for the postgresql.Grant resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
