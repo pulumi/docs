@@ -270,19 +270,19 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#RulesetRule">RulesetRule</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#RulesetRuleArgs">RulesetRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RulesetRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RulesetRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.RulesetRule">RulesetRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleConditionsArgs]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">position</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ruleset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_frame</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleTimeFrameArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RulesetRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleConditionsArgs]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">position</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ruleset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_frame</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleTimeFrameArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRule">NewRulesetRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleArgs">RulesetRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRule">RulesetRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRulesetRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RulesetRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RulesetRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.RulesetRule.html">RulesetRule</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.RulesetRuleArgs.html">RulesetRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RulesetRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RulesetRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -303,7 +303,7 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#RulesetRuleArgs">RulesetRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">RulesetRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -372,7 +372,7 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleArgs">RulesetRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">RulesetRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -411,7 +411,7 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.RulesetRuleArgs.html">RulesetRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">RulesetRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -434,11 +434,11 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
 
 ## RulesetRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -781,7 +781,7 @@ Get an existing RulesetRule resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#RulesetRuleState">RulesetRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#RulesetRule">RulesetRule</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RulesetRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RulesetRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -790,11 +790,11 @@ Get an existing RulesetRule resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRulesetRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleState">RulesetRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRule">RulesetRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRulesetRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RulesetRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RulesetRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.RulesetRule.html">RulesetRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..RulesetRuleState.html">RulesetRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RulesetRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RulesetRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1170,18 +1170,6 @@ The following state arguments are supported:
 
 
 <h4 id="rulesetruleactions">Ruleset<wbr>Rule<wbr>Actions</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleActions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleActions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleActionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleActions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1484,18 +1472,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruleactionsannotate">Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleActionsAnnotate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleActionsAnnotate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsAnnotateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsAnnotateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleActionsAnnotateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleActionsAnnotate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1562,18 +1538,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruleactionseventaction">Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleActionsEventAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleActionsEventAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsEventActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsEventActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleActionsEventActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleActionsEventAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1640,18 +1604,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruleactionsextraction">Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleActionsExtraction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleActionsExtraction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsExtractionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsExtractionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleActionsExtractionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleActionsExtraction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1802,18 +1754,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruleactionspriority">Ruleset<wbr>Rule<wbr>Actions<wbr>Priority</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleActionsPriority">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleActionsPriority">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsPriorityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsPriorityOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleActionsPriorityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleActionsPriority.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1880,18 +1820,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruleactionsroute">Ruleset<wbr>Rule<wbr>Actions<wbr>Route</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleActionsRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleActionsRoute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsRouteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleActionsRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleActionsRoute.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1958,18 +1886,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruleactionsseverity">Ruleset<wbr>Rule<wbr>Actions<wbr>Severity</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleActionsSeverity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleActionsSeverity">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsSeverityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsSeverityOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleActionsSeverityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleActionsSeverity.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2036,18 +1952,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruleactionssuppress">Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleActionsSuppress">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleActionsSuppress">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsSuppressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleActionsSuppressOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleActionsSuppressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleActionsSuppress.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2234,18 +2138,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruleconditions">Ruleset<wbr>Rule<wbr>Conditions</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleConditions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleConditions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleConditionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleConditionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleConditionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleConditions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2352,18 +2244,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruleconditionssubcondition">Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleConditionsSubcondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleConditionsSubcondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleConditionsSubconditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleConditionsSubconditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleConditionsSubconditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleConditionsSubcondition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2470,18 +2350,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruleconditionssubconditionparameter">Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleConditionsSubconditionParameter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleConditionsSubconditionParameter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleConditionsSubconditionParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleConditionsSubconditionParameterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleConditionsSubconditionParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleConditionsSubconditionParameter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2584,18 +2452,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleTimeFrame">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleTimeFrame">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleTimeFrameArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleTimeFrameOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleTimeFrameArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleTimeFrame.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2702,18 +2558,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruletimeframeactivebetween">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleTimeFrameActiveBetween">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleTimeFrameActiveBetween">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleTimeFrameActiveBetweenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleTimeFrameActiveBetweenOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleTimeFrameActiveBetweenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleTimeFrameActiveBetween.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2820,18 +2664,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulesetruletimeframescheduledweekly">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleTimeFrameScheduledWeekly">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleTimeFrameScheduledWeekly">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleTimeFrameScheduledWeeklyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#RulesetRuleTimeFrameScheduledWeeklyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.RulesetRuleTimeFrameScheduledWeeklyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.RulesetRuleTimeFrameScheduledWeekly.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
