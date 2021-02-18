@@ -1,8 +1,8 @@
 
 ---
-title: "GetObjectSignedUrl"
-title_tag: "Function GetObjectSignedUrl | Module storage | Package GCP"
-meta_desc: "Explore the GetObjectSignedUrl function of the storage module, including examples, input properties, output properties, and supporting types. The Google Cloud storage signed URL data source generates a signed URL for a given storage object. Signed URLs provide a way to give time-limited read or write access to anyone in possession of the URL, regardless of whether they have a Google account."
+title: "getObjectSignedUrl"
+title_tag: "gcp.storage.getObjectSignedUrl"
+meta_desc: "Documentation for the gcp.storage.getObjectSignedUrl function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -163,7 +163,7 @@ const vm = new gcp.compute.Instance("vm", {});
 {{% /examples %}}
 
 
-## Using GetObjectSignedUrl {#using}
+## Using getObjectSignedUrl {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -180,6 +180,8 @@ const vm = new gcp.compute.Instance("vm", {});
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetObjectSignedUrl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetObjectSignedUrlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetObjectSignedUrlResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetObjectSignedUrl` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -562,7 +564,7 @@ Any header starting with `x-goog-` is accepted but see the [Google Docs](https:/
 
 
 
-## GetObjectSignedUrl Result {#result}
+## getObjectSignedUrl Result {#result}
 
 The following output properties are available:
 

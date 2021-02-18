@@ -1,8 +1,8 @@
 
 ---
-title: "GetAccountKey"
-title_tag: "Function GetAccountKey | Module serviceAccount | Package GCP"
-meta_desc: "Explore the GetAccountKey function of the serviceAccount module, including examples, input properties, output properties, and supporting types. Get service account public key. For more information, see [the official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and [API](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys/get)."
+title: "getAccountKey"
+title_tag: "gcp.serviceAccount.getAccountKey"
+meta_desc: "Documentation for the gcp.serviceAccount.getAccountKey function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -109,7 +109,7 @@ const mykeyAccountKey = mykeyKey.name.apply(name => gcp.serviceAccount.getAccoun
 {{% /examples %}}
 
 
-## Using GetAccountKey {#using}
+## Using getAccountKey {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -126,6 +126,8 @@ const mykeyAccountKey = mykeyKey.name.apply(name => gcp.serviceAccount.getAccoun
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccountKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAccountKeyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAccountKeyResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAccountKey` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -300,7 +302,7 @@ Defaults to the provider project configuration.
 
 
 
-## GetAccountKey Result {#result}
+## getAccountKey Result {#result}
 
 The following output properties are available:
 

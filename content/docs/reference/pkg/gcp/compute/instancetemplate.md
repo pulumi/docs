@@ -275,6 +275,21 @@ class MyStack : Stack
             Type = "pd-ssd",
             Zone = "us-central1-a",
         });
+        var dailyBackup = new Gcp.Compute.ResourcePolicy("dailyBackup", new Gcp.Compute.ResourcePolicyArgs
+        {
+            Region = "us-central1",
+            SnapshotSchedulePolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs
+            {
+                Schedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs
+                {
+                    DailySchedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
+                    {
+                        DaysInCycle = 1,
+                        StartTime = "04:00",
+                    },
+                },
+            },
+        });
         var defaultInstanceTemplate = new Gcp.Compute.InstanceTemplate("defaultInstanceTemplate", new Gcp.Compute.InstanceTemplateArgs
         {
             Description = "This template is used to create app server instances.",
@@ -302,6 +317,10 @@ class MyStack : Stack
                     SourceImage = "debian-cloud/debian-9",
                     AutoDelete = true,
                     Boot = true,
+                    ResourcePolicies = 
+                    {
+                        dailyBackup.Id,
+                    },
                 },
                 new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
                 {
@@ -374,6 +393,20 @@ func main() {
 		if err != nil {
 			return err
 		}
+		dailyBackup, err := compute.NewResourcePolicy(ctx, "dailyBackup", &compute.ResourcePolicyArgs{
+			Region: pulumi.String("us-central1"),
+			SnapshotSchedulePolicy: &compute.ResourcePolicySnapshotSchedulePolicyArgs{
+				Schedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs{
+					DailySchedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs{
+						DaysInCycle: pulumi.Int(1),
+						StartTime:   pulumi.String("04:00"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
 		_, err = compute.NewInstanceTemplate(ctx, "defaultInstanceTemplate", &compute.InstanceTemplateArgs{
 			Description: pulumi.String("This template is used to create app server instances."),
 			Tags: pulumi.StringArray{
@@ -395,6 +428,9 @@ func main() {
 					SourceImage: pulumi.String("debian-cloud/debian-9"),
 					AutoDelete:  pulumi.Bool(true),
 					Boot:        pulumi.Bool(true),
+					ResourcePolicies: pulumi.String(pulumi.String{
+						dailyBackup.ID(),
+					}),
 				},
 				&compute.InstanceTemplateDiskArgs{
 					Source:     foobar.Name,
@@ -442,6 +478,16 @@ foobar = gcp.compute.Disk("foobar",
     size=10,
     type="pd-ssd",
     zone="us-central1-a")
+daily_backup = gcp.compute.ResourcePolicy("dailyBackup",
+    region="us-central1",
+    snapshot_schedule_policy=gcp.compute.ResourcePolicySnapshotSchedulePolicyArgs(
+        schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs(
+            daily_schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs(
+                days_in_cycle=1,
+                start_time="04:00",
+            ),
+        ),
+    ))
 default_instance_template = gcp.compute.InstanceTemplate("defaultInstanceTemplate",
     description="This template is used to create app server instances.",
     tags=[
@@ -463,6 +509,7 @@ default_instance_template = gcp.compute.InstanceTemplate("defaultInstanceTemplat
             source_image="debian-cloud/debian-9",
             auto_delete=True,
             boot=True,
+            resource_policies=[daily_backup.id],
         ),
         gcp.compute.InstanceTemplateDiskArgs(
             source=foobar.name,
@@ -504,6 +551,17 @@ const foobar = new gcp.compute.Disk("foobar", {
     type: "pd-ssd",
     zone: "us-central1-a",
 });
+const dailyBackup = new gcp.compute.ResourcePolicy("dailyBackup", {
+    region: "us-central1",
+    snapshotSchedulePolicy: {
+        schedule: {
+            dailySchedule: {
+                daysInCycle: 1,
+                startTime: "04:00",
+            },
+        },
+    },
+});
 const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanceTemplate", {
     description: "This template is used to create app server instances.",
     tags: [
@@ -525,6 +583,7 @@ const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanc
             sourceImage: "debian-cloud/debian-9",
             autoDelete: true,
             boot: true,
+            resourcePolicies: [dailyBackup.id],
         },
         {
             source: foobar.name,
@@ -3234,7 +3293,7 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
@@ -3261,6 +3320,16 @@ created from this template,
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcepolicies_csharp">
+<a href="#resourcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3391,7 +3460,7 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
@@ -3418,6 +3487,16 @@ created from this template,
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcepolicies_go">
+<a href="#resourcepolicies_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3548,7 +3627,7 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
@@ -3575,6 +3654,16 @@ created from this template,
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcepolicies_nodejs">
+<a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3705,7 +3794,7 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
@@ -3732,6 +3821,16 @@ created from this template,
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_policies_python">
+<a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}-- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4014,6 +4113,17 @@ empty, the address will be automatically assigned.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="nictype_csharp">
+<a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}) The type of vNIC to be used on this interface.
+Possible values: GVNIC, VIRTIO_NET.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
@@ -4101,6 +4211,17 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     </dt>
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nictype_go">
+<a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}) The type of vNIC to be used on this interface.
+Possible values: GVNIC, VIRTIO_NET.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4194,6 +4315,17 @@ empty, the address will be automatically assigned.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="nictype_nodejs">
+<a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}) The type of vNIC to be used on this interface.
+Possible values: GVNIC, VIRTIO_NET.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
@@ -4281,6 +4413,17 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     </dt>
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nic_type_python">
+<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}) The type of vNIC to be used on this interface.
+Possible values: GVNIC, VIRTIO_NET.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

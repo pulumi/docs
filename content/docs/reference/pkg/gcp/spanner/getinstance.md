@@ -1,8 +1,8 @@
 
 ---
-title: "GetInstance"
-title_tag: "Function GetInstance | Module spanner | Package GCP"
-meta_desc: "Explore the GetInstance function of the spanner module, including examples, input properties, output properties, and supporting types. Get a spanner instance from Google Cloud by its name."
+title: "getInstance"
+title_tag: "gcp.spanner.getInstance"
+meta_desc: "Documentation for the gcp.spanner.getInstance function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const foo = pulumi.output(gcp.spanner.getInstance({
 {{% /examples %}}
 
 
-## Using GetInstance {#using}
+## Using getInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -377,7 +377,7 @@ is not provided, the provider project is used.
 
 
 
-## GetInstance Result {#result}
+## getInstance Result {#result}
 
 The following output properties are available:
 

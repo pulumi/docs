@@ -1,8 +1,8 @@
 
 ---
-title: "GetFolder"
-title_tag: "Function GetFolder | Module organizations | Package GCP"
-meta_desc: "Explore the GetFolder function of the organizations module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a Google Cloud Folder."
+title: "getFolder"
+title_tag: "gcp.organizations.getFolder"
+meta_desc: "Documentation for the gcp.organizations.getFolder function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -97,7 +97,7 @@ func main() {
 
 
 
-## Using GetFolder {#using}
+## Using getFolder {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -238,7 +238,7 @@ The following arguments are supported:
 
 
 
-## GetFolder Result {#result}
+## getFolder Result {#result}
 
 The following output properties are available:
 

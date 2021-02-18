@@ -1,8 +1,8 @@
 
 ---
-title: "GetService"
-title_tag: "Function GetService | Module cloudrun | Package GCP"
-meta_desc: "Explore the GetService function of the cloudrun module, including examples, input properties, output properties, and supporting types. Get information about a Google Cloud Run Service. For more information see"
+title: "getService"
+title_tag: "gcp.cloudrun.getService"
+meta_desc: "Documentation for the gcp.cloudrun.getService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const run_service = pulumi.output(gcp.cloudrun.getService({
 {{% /examples %}}
 
 
-## Using GetService {#using}
+## Using getService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -279,7 +279,7 @@ is not provided, the provider project is used.
 
 
 
-## GetService Result {#result}
+## getService Result {#result}
 
 The following output properties are available:
 

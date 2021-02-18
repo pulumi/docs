@@ -1,8 +1,8 @@
 
 ---
-title: "GetCaCerts"
-title_tag: "Function GetCaCerts | Module sql | Package GCP"
-meta_desc: "Explore the GetCaCerts function of the sql module, including examples, input properties, output properties, and supporting types. Get all of the trusted Certificate Authorities (CAs) for the specified SQL database instance. For more information see the"
+title: "getCaCerts"
+title_tag: "gcp.sql.getCaCerts"
+meta_desc: "Documentation for the gcp.sql.getCaCerts function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -18,7 +18,7 @@ and
 
 
 
-## Using GetCaCerts {#using}
+## Using getCaCerts {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -35,6 +35,8 @@ and
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCaCerts<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCaCertsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCaCertsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetCaCerts` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -157,7 +159,7 @@ The following arguments are supported:
 
 
 
-## GetCaCerts Result {#result}
+## getCaCerts Result {#result}
 
 The following output properties are available:
 

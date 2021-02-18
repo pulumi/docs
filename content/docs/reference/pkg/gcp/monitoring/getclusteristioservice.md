@@ -1,8 +1,8 @@
 
 ---
-title: "GetClusterIstioService"
-title_tag: "Function GetClusterIstioService | Module monitoring | Package GCP"
-meta_desc: "Explore the GetClusterIstioService function of the monitoring module, including examples, input properties, output properties, and supporting types. A Monitoring Service is the root resource under which operational aspects of a"
+title: "getClusterIstioService"
+title_tag: "gcp.monitoring.getClusterIstioService"
+meta_desc: "Documentation for the gcp.monitoring.getClusterIstioService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -113,7 +113,7 @@ const defaultClusterIstioService = pulumi.output(gcp.monitoring.getClusterIstioS
 {{% /examples %}}
 
 
-## Using GetClusterIstioService {#using}
+## Using getClusterIstioService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -130,6 +130,8 @@ const defaultClusterIstioService = pulumi.output(gcp.monitoring.getClusterIstioS
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterIstioService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetClusterIstioServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetClusterIstioServiceResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetClusterIstioService` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -392,7 +394,7 @@ If it is not provided, the provider project is used.
 
 
 
-## GetClusterIstioService Result {#result}
+## getClusterIstioService Result {#result}
 
 The following output properties are available:
 

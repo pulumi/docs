@@ -1,8 +1,8 @@
 
 ---
-title: "GetRegistryRepository"
-title_tag: "Function GetRegistryRepository | Module container | Package GCP"
-meta_desc: "Explore the GetRegistryRepository function of the container module, including examples, input properties, output properties, and supporting types. This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project."
+title: "getRegistryRepository"
+title_tag: "gcp.container.getRegistryRepository"
+meta_desc: "Documentation for the gcp.container.getRegistryRepository function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ export const gcrLocation = foo.then(foo => foo.repositoryUrl);
 {{% /examples %}}
 
 
-## Using GetRegistryRepository {#using}
+## Using getRegistryRepository {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -106,6 +106,8 @@ export const gcrLocation = foo.then(foo => foo.repositoryUrl);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryRepository<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegistryRepositoryArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegistryRepositoryResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRegistryRepository` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -220,7 +222,7 @@ The following arguments are supported:
 
 
 
-## GetRegistryRepository Result {#result}
+## getRegistryRepository Result {#result}
 
 The following output properties are available:
 

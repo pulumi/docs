@@ -1,8 +1,8 @@
 
 ---
-title: "GetProject"
-title_tag: "Function GetProject | Module projects | Package GCP"
-meta_desc: "Explore the GetProject function of the projects module, including examples, input properties, output properties, and supporting types. Retrieve information about a set of projects based on a filter. See the"
+title: "getProject"
+title_tag: "gcp.projects.getProject"
+meta_desc: "Documentation for the gcp.projects.getProject function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -106,7 +106,7 @@ const deletion-candidate = my_org_projects.then(my_org_projects => gcp.organizat
 {{% /examples %}}
 
 
-## Using GetProject {#using}
+## Using getProject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -123,6 +123,8 @@ const deletion-candidate = my_org_projects.then(my_org_projects => gcp.organizat
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetProjectArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProjectResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetProject` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -205,7 +207,7 @@ The following arguments are supported:
 
 
 
-## GetProject Result {#result}
+## getProject Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetKMSKeyRing"
-title_tag: "Function GetKMSKeyRing | Module kms | Package GCP"
-meta_desc: "Explore the GetKMSKeyRing function of the kms module, including examples, input properties, output properties, and supporting types. Provides access to Google Cloud Platform KMS KeyRing. For more information see"
+title: "getKMSKeyRing"
+title_tag: "gcp.kms.getKMSKeyRing"
+meta_desc: "Documentation for the gcp.kms.getKMSKeyRing function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,7 +98,7 @@ const myKeyRing = pulumi.output(gcp.kms.getKMSKeyRing({
 {{% /examples %}}
 
 
-## Using GetKMSKeyRing {#using}
+## Using getKMSKeyRing {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -115,6 +115,8 @@ const myKeyRing = pulumi.output(gcp.kms.getKMSKeyRing({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSKeyRing<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetKMSKeyRingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetKMSKeyRingResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetKMSKeyRing` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -289,7 +291,7 @@ is not provided, the provider project is used.
 
 
 
-## GetKMSKeyRing Result {#result}
+## getKMSKeyRing Result {#result}
 
 The following output properties are available:
 

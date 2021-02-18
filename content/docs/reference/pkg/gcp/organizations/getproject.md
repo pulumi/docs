@@ -1,8 +1,8 @@
 
 ---
-title: "GetProject"
-title_tag: "Function GetProject | Module organizations | Package GCP"
-meta_desc: "Explore the GetProject function of the organizations module, including examples, input properties, output properties, and supporting types. Use this data source to get project details."
+title: "getProject"
+title_tag: "gcp.organizations.getProject"
+meta_desc: "Documentation for the gcp.organizations.getProject function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ export const projectNumber = project.then(project => project.number);
 {{% /examples %}}
 
 
-## Using GetProject {#using}
+## Using getProject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -190,7 +190,7 @@ The following arguments are supported:
 
 
 
-## GetProject Result {#result}
+## getProject Result {#result}
 
 The following output properties are available:
 

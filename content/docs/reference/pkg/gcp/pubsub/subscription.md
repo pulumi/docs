@@ -1412,15 +1412,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path of the subscription in the format projects/{project}/subscriptions/{name}
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -1436,15 +1437,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path of the subscription in the format projects/{project}/subscriptions/{name}
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -1460,15 +1462,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path of the subscription in the format projects/{project}/subscriptions/{name}
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -1484,15 +1487,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path of the subscription in the format projects/{project}/subscriptions/{name}
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -1742,15 +1746,16 @@ by 's'. Example: `"600.5s"`.
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_path_csharp">
 <a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path of the subscription in the format projects/{project}/subscriptions/{name}
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -1937,15 +1942,16 @@ by 's'. Example: `"600.5s"`.
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path of the subscription in the format projects/{project}/subscriptions/{name}
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -2132,15 +2138,16 @@ by 's'. Example: `"600.5s"`.
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path of the subscription in the format projects/{project}/subscriptions/{name}
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -2327,15 +2334,16 @@ by 's'. Example: `"600.5s"`.
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_path_python">
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path of the subscription in the format projects/{project}/subscriptions/{name}
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">

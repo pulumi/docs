@@ -1,8 +1,8 @@
 
 ---
-title: "GetNetworkEndpointGroup"
-title_tag: "Function GetNetworkEndpointGroup | Module compute | Package GCP"
-meta_desc: "Explore the GetNetworkEndpointGroup function of the compute module, including examples, input properties, output properties, and supporting types. Use this data source to access a Network Endpoint Group&#39;s attributes."
+title: "getNetworkEndpointGroup"
+title_tag: "gcp.compute.getNetworkEndpointGroup"
+meta_desc: "Documentation for the gcp.compute.getNetworkEndpointGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -111,7 +111,7 @@ const neg2 = pulumi.output(gcp.compute.getNetworkEndpointGroup({
 {{% /examples %}}
 
 
-## Using GetNetworkEndpointGroup {#using}
+## Using getNetworkEndpointGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -340,7 +340,7 @@ If it is not provided, the provider project is used.
 
 
 
-## GetNetworkEndpointGroup Result {#result}
+## getNetworkEndpointGroup Result {#result}
 
 The following output properties are available:
 

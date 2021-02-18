@@ -1,8 +1,8 @@
 
 ---
-title: "GetLBIPRanges"
-title_tag: "Function GetLBIPRanges | Module compute | Package GCP"
-meta_desc: "Explore the GetLBIPRanges function of the compute module, including examples, input properties, output properties, and supporting types. Use this data source to access IP ranges in your firewall rules."
+title: "getLBIPRanges"
+title_tag: "gcp.compute.getLBIPRanges"
+meta_desc: "Documentation for the gcp.compute.getLBIPRanges function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -145,7 +145,7 @@ const lb = new gcp.compute.Firewall("lb", {
 {{% /examples %}}
 
 
-## Using GetLBIPRanges {#using}
+## Using getLBIPRanges {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -163,6 +163,8 @@ const lb = new gcp.compute.Firewall("lb", {
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLBIPRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetLBIPRangesResult</a></span>, error)</span></code></pre></div>
 
+> Note: This function is named `GetLBIPRanges` in the Go SDK.
+
 {{% /choosable %}}
 
 
@@ -175,7 +177,7 @@ const lb = new gcp.compute.Firewall("lb", {
 
 
 
-## GetLBIPRanges Result {#result}
+## getLBIPRanges Result {#result}
 
 The following output properties are available:
 

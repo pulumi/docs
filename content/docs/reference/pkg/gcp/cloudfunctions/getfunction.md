@@ -1,8 +1,8 @@
 
 ---
-title: "GetFunction"
-title_tag: "Function GetFunction | Module cloudfunctions | Package GCP"
-meta_desc: "Explore the GetFunction function of the cloudfunctions module, including examples, input properties, output properties, and supporting types. Get information about a Google Cloud Function. For more information see"
+title: "getFunction"
+title_tag: "gcp.cloudfunctions.getFunction"
+meta_desc: "Documentation for the gcp.cloudfunctions.getFunction function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,7 +90,7 @@ const my_function = pulumi.output(gcp.cloudfunctions.getFunction({
 {{% /examples %}}
 
 
-## Using GetFunction {#using}
+## Using getFunction {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -279,7 +279,7 @@ is not provided, the provider region is used.
 
 
 
-## GetFunction Result {#result}
+## getFunction Result {#result}
 
 The following output properties are available:
 

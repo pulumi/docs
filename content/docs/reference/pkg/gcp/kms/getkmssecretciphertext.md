@@ -1,8 +1,8 @@
 
 ---
-title: "GetKMSSecretCiphertext"
-title_tag: "Function GetKMSSecretCiphertext | Module kms | Package GCP"
-meta_desc: "Explore the GetKMSSecretCiphertext function of the kms module, including examples, input properties, output properties, and supporting types. !&gt; **Warning:** This data source is deprecated. Use the `gcp.kms.SecretCiphertext` **resource** instead."
+title: "getKMSSecretCiphertext"
+title_tag: "gcp.kms.getKMSSecretCiphertext"
+meta_desc: "Documentation for the gcp.kms.getKMSSecretCiphertext function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -26,7 +26,7 @@ data outside of resource definitions.
 
 
 
-## Using GetKMSSecretCiphertext {#using}
+## Using getKMSSecretCiphertext {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -43,6 +43,8 @@ data outside of resource definitions.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSSecretCiphertext<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetKMSSecretCiphertextArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetKMSSecretCiphertextResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetKMSSecretCiphertext` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -173,7 +175,7 @@ encrypt the provided plaintext. This is represented by the format
 
 
 
-## GetKMSSecretCiphertext Result {#result}
+## getKMSSecretCiphertext Result {#result}
 
 The following output properties are available:
 

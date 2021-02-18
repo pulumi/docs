@@ -1,8 +1,8 @@
 
 ---
-title: "GetEngineVersions"
-title_tag: "Function GetEngineVersions | Module container | Package GCP"
-meta_desc: "Explore the GetEngineVersions function of the container module, including examples, input properties, output properties, and supporting types. Provides access to available Google Kubernetes Engine versions in a zone or region for a given project."
+title: "getEngineVersions"
+title_tag: "gcp.container.getEngineVersions"
+meta_desc: "Documentation for the gcp.container.getEngineVersions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -146,7 +146,7 @@ export const stableChannelVersion = central1b.then(central1b => central1b.releas
 {{% /examples %}}
 
 
-## Using GetEngineVersions {#using}
+## Using getEngineVersions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -163,6 +163,8 @@ export const stableChannelVersion = central1b.then(central1b => central1b.releas
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEngineVersions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEngineVersionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEngineVersionsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetEngineVersions` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -361,7 +363,7 @@ for full details on how version strings are formatted.
 
 
 
-## GetEngineVersions Result {#result}
+## getEngineVersions Result {#result}
 
 The following output properties are available:
 

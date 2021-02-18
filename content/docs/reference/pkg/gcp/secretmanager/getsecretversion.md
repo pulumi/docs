@@ -1,8 +1,8 @@
 
 ---
-title: "GetSecretVersion"
-title_tag: "Function GetSecretVersion | Module secretmanager | Package GCP"
-meta_desc: "Explore the GetSecretVersion function of the secretmanager module, including examples, input properties, output properties, and supporting types. Get a Secret Manager secret&#39;s version. For more information see the [official documentation](https://cloud.google.com/secret-manager/docs/) and [API](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets.versions)."
+title: "getSecretVersion"
+title_tag: "gcp.secretmanager.getSecretVersion"
+meta_desc: "Documentation for the gcp.secretmanager.getSecretVersion function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const basic = pulumi.output(gcp.secretmanager.getSecretVersion({
 {{% /examples %}}
 
 
-## Using GetSecretVersion {#using}
+## Using getSecretVersion {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -277,7 +277,7 @@ is not provided, the latest version is retrieved.
 
 
 
-## GetSecretVersion Result {#result}
+## getSecretVersion Result {#result}
 
 The following output properties are available:
 

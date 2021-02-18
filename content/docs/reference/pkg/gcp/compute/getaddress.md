@@ -1,8 +1,8 @@
 
 ---
-title: "GetAddress"
-title_tag: "Function GetAddress | Module compute | Package GCP"
-meta_desc: "Explore the GetAddress function of the compute module, including examples, input properties, output properties, and supporting types. Get the IP address from a static address. For more information see"
+title: "getAddress"
+title_tag: "gcp.compute.getAddress"
+meta_desc: "Documentation for the gcp.compute.getAddress function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -142,7 +142,7 @@ const frontend = new gcp.dns.RecordSet("frontend", {
 {{% /examples %}}
 
 
-## Using GetAddress {#using}
+## Using getAddress {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -331,7 +331,7 @@ If it is not provided, the provider region is used.
 
 
 
-## GetAddress Result {#result}
+## getAddress Result {#result}
 
 The following output properties are available:
 

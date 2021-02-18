@@ -1,8 +1,8 @@
 
 ---
-title: "GetGlobalForwardingRule"
-title_tag: "Function GetGlobalForwardingRule | Module compute | Package GCP"
-meta_desc: "Explore the GetGlobalForwardingRule function of the compute module, including examples, input properties, output properties, and supporting types. Get a global forwarding rule within GCE from its name."
+title: "getGlobalForwardingRule"
+title_tag: "gcp.compute.getGlobalForwardingRule"
+meta_desc: "Documentation for the gcp.compute.getGlobalForwardingRule function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const my_forwarding_rule = pulumi.output(gcp.compute.getGlobalForwardingRule({
 {{% /examples %}}
 
 
-## Using GetGlobalForwardingRule {#using}
+## Using getGlobalForwardingRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ is not provided, the provider project is used.
 
 
 
-## GetGlobalForwardingRule Result {#result}
+## getGlobalForwardingRule Result {#result}
 
 The following output properties are available:
 

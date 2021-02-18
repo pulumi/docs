@@ -1,8 +1,8 @@
 
 ---
-title: "GetBackendBucket"
-title_tag: "Function GetBackendBucket | Module compute | Package GCP"
-meta_desc: "Explore the GetBackendBucket function of the compute module, including examples, input properties, output properties, and supporting types. Get information about a BackendBucket."
+title: "getBackendBucket"
+title_tag: "gcp.compute.getBackendBucket"
+meta_desc: "Documentation for the gcp.compute.getBackendBucket function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const my_backend_bucket = pulumi.output(gcp.compute.getBackendBucket({
 {{% /examples %}}
 
 
-## Using GetBackendBucket {#using}
+## Using getBackendBucket {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ is not provided, the provider project is used.
 
 
 
-## GetBackendBucket Result {#result}
+## getBackendBucket Result {#result}
 
 The following output properties are available:
 

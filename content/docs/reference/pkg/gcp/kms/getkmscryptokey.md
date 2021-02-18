@@ -1,8 +1,8 @@
 
 ---
-title: "GetKMSCryptoKey"
-title_tag: "Function GetKMSCryptoKey | Module kms | Package GCP"
-meta_desc: "Explore the GetKMSCryptoKey function of the kms module, including examples, input properties, output properties, and supporting types. Provides access to a Google Cloud Platform KMS CryptoKey. For more information see"
+title: "getKMSCryptoKey"
+title_tag: "gcp.kms.getKMSCryptoKey"
+meta_desc: "Documentation for the gcp.kms.getKMSCryptoKey function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -116,7 +116,7 @@ const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
 {{% /examples %}}
 
 
-## Using GetKMSCryptoKey {#using}
+## Using getKMSCryptoKey {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -133,6 +133,8 @@ const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSCryptoKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetKMSCryptoKeyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetKMSCryptoKeyResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetKMSCryptoKey` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -259,7 +261,7 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 
 
 
-## GetKMSCryptoKey Result {#result}
+## getKMSCryptoKey Result {#result}
 
 The following output properties are available:
 

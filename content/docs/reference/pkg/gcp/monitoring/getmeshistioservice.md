@@ -1,8 +1,8 @@
 
 ---
-title: "GetMeshIstioService"
-title_tag: "Function GetMeshIstioService | Module monitoring | Package GCP"
-meta_desc: "Explore the GetMeshIstioService function of the monitoring module, including examples, input properties, output properties, and supporting types. A Monitoring Service is the root resource under which operational aspects of a"
+title: "getMeshIstioService"
+title_tag: "gcp.monitoring.getMeshIstioService"
+meta_desc: "Documentation for the gcp.monitoring.getMeshIstioService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -109,7 +109,7 @@ const defaultMeshIstioService = pulumi.output(gcp.monitoring.getMeshIstioService
 {{% /examples %}}
 
 
-## Using GetMeshIstioService {#using}
+## Using getMeshIstioService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -126,6 +126,8 @@ const defaultMeshIstioService = pulumi.output(gcp.monitoring.getMeshIstioService
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMeshIstioService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetMeshIstioServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetMeshIstioServiceResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetMeshIstioService` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -344,7 +346,7 @@ If it is not provided, the provider project is used.
 
 
 
-## GetMeshIstioService Result {#result}
+## getMeshIstioService Result {#result}
 
 The following output properties are available:
 

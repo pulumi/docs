@@ -1,8 +1,8 @@
 
 ---
-title: "GetVPNGateway"
-title_tag: "Function GetVPNGateway | Module compute | Package GCP"
-meta_desc: "Explore the GetVPNGateway function of the compute module, including examples, input properties, output properties, and supporting types. Get a VPN gateway within GCE from its name."
+title: "getVPNGateway"
+title_tag: "gcp.compute.getVPNGateway"
+meta_desc: "Documentation for the gcp.compute.getVPNGateway function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const my_vpn_gateway = pulumi.output(gcp.compute.getVPNGateway({
 {{% /examples %}}
 
 
-## Using GetVPNGateway {#using}
+## Using getVPNGateway {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -277,7 +277,7 @@ is not provided, the project region is used.
 
 
 
-## GetVPNGateway Result {#result}
+## getVPNGateway Result {#result}
 
 The following output properties are available:
 

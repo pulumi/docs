@@ -1,8 +1,8 @@
 
 ---
-title: "GetRule"
-title_tag: "Function GetRule | Module iam | Package GCP"
-meta_desc: "Explore the GetRule function of the iam module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a Google IAM Role."
+title: "getRule"
+title_tag: "gcp.iam.getRule"
+meta_desc: "Documentation for the gcp.iam.getRule function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -72,7 +72,7 @@ func main() {
 
 
 
-## Using GetRule {#using}
+## Using getRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -89,6 +89,8 @@ func main() {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRuleResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRule` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -171,7 +173,7 @@ The following arguments are supported:
 
 
 
-## GetRule Result {#result}
+## getRule Result {#result}
 
 The following output properties are available:
 

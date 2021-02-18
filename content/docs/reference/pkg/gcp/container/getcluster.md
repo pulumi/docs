@@ -1,8 +1,8 @@
 
 ---
-title: "GetCluster"
-title_tag: "Function GetCluster | Module container | Package GCP"
-meta_desc: "Explore the GetCluster function of the container module, including examples, input properties, output properties, and supporting types. Get info about a GKE cluster from its name and location."
+title: "getCluster"
+title_tag: "gcp.container.getCluster"
+meta_desc: "Documentation for the gcp.container.getCluster function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -129,7 +129,7 @@ export const nodePools = myCluster.then(myCluster => myCluster.nodePools);
 {{% /examples %}}
 
 
-## Using GetCluster {#using}
+## Using getCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -322,7 +322,7 @@ is not provided, the provider project is used.
 
 
 
-## GetCluster Result {#result}
+## getCluster Result {#result}
 
 The following output properties are available:
 

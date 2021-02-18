@@ -1,8 +1,8 @@
 
 ---
-title: "GetGroups"
-title_tag: "Function GetGroups | Module cloudidentity | Package GCP"
-meta_desc: "Explore the GetGroups function of the cloudidentity module, including examples, input properties, output properties, and supporting types. Use this data source to get list of the Cloud Identity Groups under a customer or namespace."
+title: "getGroups"
+title_tag: "gcp.cloudidentity.getGroups"
+meta_desc: "Documentation for the gcp.cloudidentity.getGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,7 +90,7 @@ const groups = pulumi.output(gcp.cloudidentity.getGroups({
 {{% /examples %}}
 
 
-## Using GetGroups {#using}
+## Using getGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -107,6 +107,8 @@ const groups = pulumi.output(gcp.cloudidentity.getGroups({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetGroups` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -189,7 +191,7 @@ The following arguments are supported:
 
 
 
-## GetGroups Result {#result}
+## getGroups Result {#result}
 
 The following output properties are available:
 

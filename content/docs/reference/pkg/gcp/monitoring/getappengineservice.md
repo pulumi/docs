@@ -1,8 +1,8 @@
 
 ---
-title: "GetAppEngineService"
-title_tag: "Function GetAppEngineService | Module monitoring | Package GCP"
-meta_desc: "Explore the GetAppEngineService function of the monitoring module, including examples, input properties, output properties, and supporting types. A Monitoring Service is the root resource under which operational aspects of a"
+title: "getAppEngineService"
+title_tag: "gcp.monitoring.getAppEngineService"
+meta_desc: "Documentation for the gcp.monitoring.getAppEngineService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -210,7 +210,7 @@ const srv = myapp.service.apply(service => gcp.monitoring.getAppEngineService({
 {{% /examples %}}
 
 
-## Using GetAppEngineService {#using}
+## Using getAppEngineService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -227,6 +227,8 @@ const srv = myapp.service.apply(service => gcp.monitoring.getAppEngineService({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAppEngineService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAppEngineServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAppEngineServiceResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAppEngineService` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -357,7 +359,7 @@ If it is not provided, the provider project is used.
 
 
 
-## GetAppEngineService Result {#result}
+## getAppEngineService Result {#result}
 
 The following output properties are available:
 

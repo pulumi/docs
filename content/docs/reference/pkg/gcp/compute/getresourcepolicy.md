@@ -1,8 +1,8 @@
 
 ---
-title: "GetResourcePolicy"
-title_tag: "Function GetResourcePolicy | Module compute | Package GCP"
-meta_desc: "Explore the GetResourcePolicy function of the compute module, including examples, input properties, output properties, and supporting types. Provide access to a Resource Policy&#39;s attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies)."
+title: "getResourcePolicy"
+title_tag: "gcp.compute.getResourcePolicy"
+meta_desc: "Documentation for the gcp.compute.getResourcePolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -71,7 +71,7 @@ func main() {
 
 
 
-## Using GetResourcePolicy {#using}
+## Using getResourcePolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -252,7 +252,7 @@ The following arguments are supported:
 
 
 
-## GetResourcePolicy Result {#result}
+## getResourcePolicy Result {#result}
 
 The following output properties are available:
 

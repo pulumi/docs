@@ -1,8 +1,8 @@
 
 ---
-title: "GetAccountAccessToken"
-title_tag: "Function GetAccountAccessToken | Module serviceAccount | Package GCP"
-meta_desc: "Explore the GetAccountAccessToken function of the serviceAccount module, including examples, input properties, output properties, and supporting types. This data source provides a google `oauth2` `access_token` for a different service account than the one initially running the script."
+title: "getAccountAccessToken"
+title_tag: "gcp.serviceAccount.getAccountAccessToken"
+meta_desc: "Documentation for the gcp.serviceAccount.getAccountAccessToken function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -18,7 +18,7 @@ For more information see
 
 
 
-## Using GetAccountAccessToken {#using}
+## Using getAccountAccessToken {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -35,6 +35,8 @@ For more information see
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccountAccessToken<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAccountAccessTokenArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAccountAccessTokenResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAccountAccessToken` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -237,7 +239,7 @@ The following arguments are supported:
 
 
 
-## GetAccountAccessToken Result {#result}
+## getAccountAccessToken Result {#result}
 
 The following output properties are available:
 

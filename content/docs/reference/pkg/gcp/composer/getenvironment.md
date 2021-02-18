@@ -1,8 +1,8 @@
 
 ---
-title: "GetEnvironment"
-title_tag: "Function GetEnvironment | Module composer | Package GCP"
-meta_desc: "Explore the GetEnvironment function of the composer module, including examples, input properties, output properties, and supporting types. Provides access to Cloud Composer environment configuration in a region for a given project."
+title: "getEnvironment"
+title_tag: "gcp.composer.getEnvironment"
+meta_desc: "Documentation for the gcp.composer.getEnvironment function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -15,7 +15,7 @@ Provides access to Cloud Composer environment configuration in a region for a gi
 
 
 
-## Using GetEnvironment {#using}
+## Using getEnvironment {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -200,7 +200,7 @@ If it is not provided, the provider project is used.
 
 
 
-## GetEnvironment Result {#result}
+## getEnvironment Result {#result}
 
 The following output properties are available:
 

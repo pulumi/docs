@@ -1,8 +1,8 @@
 
 ---
-title: "GetTopic"
-title_tag: "Function GetTopic | Module pubsub | Package GCP"
-meta_desc: "Explore the GetTopic function of the pubsub module, including examples, input properties, output properties, and supporting types. Get information about a Google Cloud Pub/Sub Topic. For more information see"
+title: "getTopic"
+title_tag: "gcp.pubsub.getTopic"
+meta_desc: "Documentation for the gcp.pubsub.getTopic function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,7 +90,7 @@ const my_pubsub_topic = pulumi.output(gcp.pubsub.getTopic({
 {{% /examples %}}
 
 
-## Using GetTopic {#using}
+## Using getTopic {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -235,7 +235,7 @@ is not provided, the provider project is used.
 
 
 
-## GetTopic Result {#result}
+## getTopic Result {#result}
 
 The following output properties are available:
 

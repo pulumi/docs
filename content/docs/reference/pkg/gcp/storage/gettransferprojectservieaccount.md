@@ -1,8 +1,8 @@
 
 ---
-title: "GetTransferProjectServieAccount"
-title_tag: "Function GetTransferProjectServieAccount | Module storage | Package GCP"
-meta_desc: "Explore the GetTransferProjectServieAccount function of the storage module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve Storage Transfer service account for this project"
+title: "getTransferProjectServieAccount"
+title_tag: "gcp.storage.getTransferProjectServieAccount"
+meta_desc: "Documentation for the gcp.storage.getTransferProjectServieAccount function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -87,7 +87,7 @@ export const defaultAccount = _default.then(_default => _default.email);
 {{% /examples %}}
 
 
-## Using GetTransferProjectServieAccount {#using}
+## Using getTransferProjectServieAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -104,6 +104,8 @@ export const defaultAccount = _default.then(_default => _default.email);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTransferProjectServieAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetTransferProjectServieAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetTransferProjectServieAccountResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetTransferProjectServieAccount` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -186,7 +188,7 @@ The following arguments are supported:
 
 
 
-## GetTransferProjectServieAccount Result {#result}
+## getTransferProjectServieAccount Result {#result}
 
 The following output properties are available:
 

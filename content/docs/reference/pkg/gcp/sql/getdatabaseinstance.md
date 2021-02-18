@@ -1,8 +1,8 @@
 
 ---
-title: "GetDatabaseInstance"
-title_tag: "Function GetDatabaseInstance | Module sql | Package GCP"
-meta_desc: "Explore the GetDatabaseInstance function of the sql module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a Cloud SQL instance"
+title: "getDatabaseInstance"
+title_tag: "gcp.sql.getDatabaseInstance"
+meta_desc: "Documentation for the gcp.sql.getDatabaseInstance function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const qa = pulumi.output(gcp.sql.getDatabaseInstance({
 {{% /examples %}}
 
 
-## Using GetDatabaseInstance {#using}
+## Using getDatabaseInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## GetDatabaseInstance Result {#result}
+## getDatabaseInstance Result {#result}
 
 The following output properties are available:
 

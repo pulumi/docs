@@ -1,8 +1,8 @@
 
 ---
-title: "GetNodeTypes"
-title_tag: "Function GetNodeTypes | Module compute | Package GCP"
-meta_desc: "Explore the GetNodeTypes function of the compute module, including examples, input properties, output properties, and supporting types. Provides available node types for Compute Engine sole-tenant nodes in a zone"
+title: "getNodeTypes"
+title_tag: "gcp.compute.getNodeTypes"
+meta_desc: "Documentation for the gcp.compute.getNodeTypes function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -109,7 +109,7 @@ const tmpl = new gcp.compute.NodeTemplate("tmpl", {
 {{% /examples %}}
 
 
-## Using GetNodeTypes {#using}
+## Using getNodeTypes {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -126,6 +126,8 @@ const tmpl = new gcp.compute.NodeTemplate("tmpl", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodeTypes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNodeTypesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNodeTypesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetNodeTypes` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -260,7 +262,7 @@ instead.
 
 
 
-## GetNodeTypes Result {#result}
+## getNodeTypes Result {#result}
 
 The following output properties are available:
 

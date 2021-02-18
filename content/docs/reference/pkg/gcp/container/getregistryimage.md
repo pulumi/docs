@@ -1,8 +1,8 @@
 
 ---
-title: "GetRegistryImage"
-title_tag: "Function GetRegistryImage | Module container | Package GCP"
-meta_desc: "Explore the GetRegistryImage function of the container module, including examples, input properties, output properties, and supporting types. This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project."
+title: "getRegistryImage"
+title_tag: "gcp.container.getRegistryImage"
+meta_desc: "Documentation for the gcp.container.getRegistryImage function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -96,7 +96,7 @@ export const gcrLocation = debian.then(debian => debian.imageUrl);
 {{% /examples %}}
 
 
-## Using GetRegistryImage {#using}
+## Using getRegistryImage {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -113,6 +113,8 @@ export const gcrLocation = debian.then(debian => debian.imageUrl);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegistryImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegistryImageResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRegistryImage` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -335,7 +337,7 @@ The following arguments are supported:
 
 
 
-## GetRegistryImage Result {#result}
+## getRegistryImage Result {#result}
 
 The following output properties are available:
 

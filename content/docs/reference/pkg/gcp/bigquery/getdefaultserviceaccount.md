@@ -1,8 +1,8 @@
 
 ---
-title: "GetDefaultServiceAccount"
-title_tag: "Function GetDefaultServiceAccount | Module bigquery | Package GCP"
-meta_desc: "Explore the GetDefaultServiceAccount function of the bigquery module, including examples, input properties, output properties, and supporting types. Get the email address of a project&#39;s unique BigQuery service account."
+title: "getDefaultServiceAccount"
+title_tag: "gcp.bigquery.getDefaultServiceAccount"
+meta_desc: "Documentation for the gcp.bigquery.getDefaultServiceAccount function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -115,7 +115,7 @@ const keySaUser = new gcp.kms.CryptoKeyIAMMember("keySaUser", {
 {{% /examples %}}
 
 
-## Using GetDefaultServiceAccount {#using}
+## Using getDefaultServiceAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -132,6 +132,8 @@ const keySaUser = new gcp.kms.CryptoKeyIAMMember("keySaUser", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDefaultServiceAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDefaultServiceAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDefaultServiceAccountResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDefaultServiceAccount` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -214,7 +216,7 @@ The following arguments are supported:
 
 
 
-## GetDefaultServiceAccount Result {#result}
+## getDefaultServiceAccount Result {#result}
 
 The following output properties are available:
 

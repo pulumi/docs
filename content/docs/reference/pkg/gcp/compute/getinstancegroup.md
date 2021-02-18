@@ -1,8 +1,8 @@
 
 ---
-title: "GetInstanceGroup"
-title_tag: "Function GetInstanceGroup | Module compute | Package GCP"
-meta_desc: "Explore the GetInstanceGroup function of the compute module, including examples, input properties, output properties, and supporting types. Get a Compute Instance Group within GCE."
+title: "getInstanceGroup"
+title_tag: "gcp.compute.getInstanceGroup"
+meta_desc: "Documentation for the gcp.compute.getInstanceGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -74,7 +74,7 @@ func main() {
 
 
 
-## Using GetInstanceGroup {#using}
+## Using getInstanceGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -303,7 +303,7 @@ and `zone` is not provided, the provider zone is used.
 
 
 
-## GetInstanceGroup Result {#result}
+## getInstanceGroup Result {#result}
 
 The following output properties are available:
 

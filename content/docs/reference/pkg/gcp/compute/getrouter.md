@@ -1,8 +1,8 @@
 
 ---
-title: "GetRouter"
-title_tag: "Function GetRouter | Module compute | Package GCP"
-meta_desc: "Explore the GetRouter function of the compute module, including examples, input properties, output properties, and supporting types. Get a router within GCE from its name and VPC."
+title: "getRouter"
+title_tag: "gcp.compute.getRouter"
+meta_desc: "Documentation for the gcp.compute.getRouter function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const my_router = pulumi.output(gcp.compute.getRouter({
 {{% /examples %}}
 
 
-## Using GetRouter {#using}
+## Using getRouter {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -321,7 +321,7 @@ unspecified, this defaults to the region configured in the provider.
 
 
 
-## GetRouter Result {#result}
+## getRouter Result {#result}
 
 The following output properties are available:
 

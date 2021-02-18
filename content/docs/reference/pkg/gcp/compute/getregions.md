@@ -1,8 +1,8 @@
 
 ---
-title: "GetRegions"
-title_tag: "Function GetRegions | Module compute | Package GCP"
-meta_desc: "Explore the GetRegions function of the compute module, including examples, input properties, output properties, and supporting types. Provides access to available Google Compute regions for a given project."
+title: "getRegions"
+title_tag: "gcp.compute.getRegions"
+meta_desc: "Documentation for the gcp.compute.getRegions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -80,7 +80,7 @@ class MyStack : Stack
 
 
 
-## Using GetRegions {#using}
+## Using getRegions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -97,6 +97,8 @@ class MyStack : Stack
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegionsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRegions` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -223,7 +225,7 @@ Defaults to no filtering (all available regions - both `UP` and `DOWN`).
 
 
 
-## GetRegions Result {#result}
+## getRegions Result {#result}
 
 The following output properties are available:
 
