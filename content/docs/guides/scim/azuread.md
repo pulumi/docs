@@ -1,5 +1,5 @@
 ---
-title: Configuring SCIM in Azure AD
+title: Configuring SCIM in Azure Active Directory
 meta_desc: This page describes how to support SCIM 2.0 functionality between Pulumi and Azure AD.
 menu:
     userguides:
@@ -7,15 +7,15 @@ menu:
         weight: 1
 ---
 
-This document covers steps to help you configure automatic provisioning/deprovisioning of your users in Pulumi using SCIM 2.0.
+This document outlines the steps required to configure automatic provisioning/deprovisioning of your users in Pulumi using SCIM 2.0.
 
-Please note that not all SCIM features are supported. For more information, see [Known Limitations]({{< relref "#known-limitations" >}}).
+Please note that some advanced SCIM features aren't supported yet. For more information, see [Known Limitations]({{< relref "#known-limitations" >}}).
 
 ## Prerequisites
 
 * Your organization must already be configured to use [SAML SSO]({{< relref "/docs/guides/saml/aad" >}}) with Pulumi.
-* You must be an admin of your organization.
-* (Optional) It is highly recommended that you have more than one admin for your org.
+* You must be an admin of your Pulumi organization.
+* (Optional, but highly recommended) You should have more than one admin for your Pulumi organization.
 
 ## Enabling Automatic Provisioning
 
@@ -77,7 +77,7 @@ Check the **required** checkbox for the **emails** attribute, and click **Save**
 
 ![email required](/images/docs/guides/scim/azuread/email_required.png)
 
-We are now done with the Mappings configuration. Click the **Save** and close the child windows (blades) until you get back to the main **Provisioning** window where you can see the **Provisioning Status** drop-down.
+You are now done with the Mappings configuration. Click **Save** and close the child windows/blades until you get back to the main **Provisioning** window where you can see the **Provisioning Status** drop-down.
 
 ## Enable Group Provisioning
 
@@ -110,7 +110,7 @@ Review the **Provisioning logs** to ensure there were no errors while provisioni
 
 ## Known Limitations
 
-Here’s a list of the features that are not currently supported:
+Some SCIM features are currently not supported:
 
 * Secondary emails
 * Password sync

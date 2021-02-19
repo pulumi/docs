@@ -7,15 +7,15 @@ menu:
         weight: 1
 ---
 
-This document covers steps to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.
+This document outlines the steps required to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.
 
-Please note that not all SCIM features are supported. For more information, see [Known Limitations]({{< relref "#known-limitations" >}}).
+Please note that some advanced SCIM features aren't supported yet. For more information, see [Known Limitations]({{< relref "#known-limitations" >}}).
 
 ## Prerequisites
 
-* Your organization must already be configured to use [SAML SSO]({{< relref "/docs/guides/saml/okta" >}}) with Pulumi.
-* You must be an admin of your organization.
-* (Optional) It is highly recommended that you have more than one admin for your org.
+* Your organization must already be configured to use [SAML SSO]({{< relref "/docs/guides/saml/aad" >}}) with Pulumi.
+* You must be an admin of your Pulumi organization.
+* (Optional, but highly recommended) You should have more than one admin for your Pulumi organization.
 
 ## Enabling SCIM For Your Okta Org
 
@@ -137,7 +137,7 @@ Click on that group and verify its membership. Note that the team’s membership
 
 ## Known Limitations
 
-Here’s a list of the features that are not currently supported:
+Some SCIM features are currently not supported:
 
 * Secondary emails
 * Password sync
