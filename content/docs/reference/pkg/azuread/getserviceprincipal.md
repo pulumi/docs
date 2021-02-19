@@ -1,8 +1,8 @@
 
 ---
-title: "GetServicePrincipal"
-title_tag: "Function GetServicePrincipal | Package Azure AD"
-meta_desc: "Explore the GetServicePrincipal function of the Azure AD package, including examples, input properties, output properties, and supporting types. Gets information about an existing Service Principal associated with an Application within Azure Active Directory."
+title: "getServicePrincipal"
+title_tag: "azuread.getServicePrincipal"
+meta_desc: "Documentation for the azuread.getServicePrincipal function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -229,7 +229,7 @@ const example = pulumi.output(azuread.getServicePrincipal({
 {{% /examples %}}
 
 
-## Using GetServicePrincipal {#using}
+## Using getServicePrincipal {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -450,7 +450,7 @@ The following arguments are supported:
 
 
 
-## GetServicePrincipal Result {#result}
+## getServicePrincipal Result {#result}
 
 The following output properties are available:
 

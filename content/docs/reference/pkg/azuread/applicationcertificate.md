@@ -1,8 +1,8 @@
 
 ---
 title: "ApplicationCertificate"
-title_tag: "Resource ApplicationCertificate | Package Azure AD"
-meta_desc: "Explore the ApplicationCertificate resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Certificate associated with an Application within Azure Active Directory."
+title_tag: "azuread.ApplicationCertificate"
+meta_desc: "Documentation for the azuread.ApplicationCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "ServicePrincipalPassword"
-title_tag: "Resource ServicePrincipalPassword | Package Azure AD"
-meta_desc: "Explore the ServicePrincipalPassword resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Password associated with a Service Principal within Azure Active Directory."
+title_tag: "azuread.ServicePrincipalPassword"
+meta_desc: "Documentation for the azuread.ServicePrincipalPassword resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -1110,7 +1110,7 @@ The following state arguments are supported:
 Passwords can be imported using the `object id` of a Service Principal and the `key id` of the password, e.g.
 
 ```sh
- $ pulumi import azuread:index/servicePrincipalPassword:ServicePrincipalPassword test 00000000-0000-0000-0000-000000000000/11111111-1111-1111-1111-111111111111
+ $ pulumi import azuread:index/servicePrincipalPassword:ServicePrincipalPassword test 00000000-0000-0000-0000-000000000000/password/11111111-1111-1111-1111-111111111111
 ```
 
 

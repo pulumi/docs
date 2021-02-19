@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Azure AD"
-meta_desc: "Explore the Provider resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the azuread package. By default, resources use package-wide configuration"
+title_tag: "azuread.Provider"
+meta_desc: "Documentation for the azuread.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "ApplicationAppRole"
-title_tag: "Resource ApplicationAppRole | Package Azure AD"
-meta_desc: "Explore the ApplicationAppRole resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. Manages an App Role associated with an Application within Azure Active Directory."
+title_tag: "azuread.ApplicationAppRole"
+meta_desc: "Documentation for the azuread.ApplicationAppRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
