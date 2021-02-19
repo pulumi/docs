@@ -1,8 +1,8 @@
 
 ---
-title: "GetMonitor"
-title_tag: "Function GetMonitor | Module ltm | Package f5 BIG-IP"
-meta_desc: "Explore the GetMonitor function of the ltm module, including examples, input properties, output properties, and supporting types. "
+title: "getMonitor"
+title_tag: "f5bigip.ltm.getMonitor"
+meta_desc: "Documentation for the f5bigip.ltm.getMonitor function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetMonitor function of the ltm module, including example
 
 
 
-## Using GetMonitor {#using}
+## Using getMonitor {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetMonitor Result {#result}
+## getMonitor Result {#result}
 
 The following output properties are available:
 

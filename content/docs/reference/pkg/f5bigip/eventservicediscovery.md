@@ -1,8 +1,8 @@
 
 ---
 title: "EventServiceDiscovery"
-title_tag: "Resource EventServiceDiscovery | Package f5 BIG-IP"
-meta_desc: "Explore the EventServiceDiscovery resource of the f5 BIG-IP package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "f5bigip.EventServiceDiscovery"
+meta_desc: "Documentation for the f5bigip.EventServiceDiscovery resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

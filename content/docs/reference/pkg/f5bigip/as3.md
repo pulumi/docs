@@ -1,8 +1,8 @@
 
 ---
 title: "As3"
-title_tag: "Resource As3 | Package f5 BIG-IP"
-meta_desc: "Explore the As3 resource of the f5 BIG-IP package, including examples, input properties, output properties, lookup functions, and supporting types. `f5bigip.As3` provides details about bigip as3 resource"
+title_tag: "f5bigip.As3"
+meta_desc: "Documentation for the f5bigip.As3 resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

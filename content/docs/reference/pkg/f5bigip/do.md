@@ -1,8 +1,8 @@
 
 ---
 title: "Do"
-title_tag: "Resource Do | Package f5 BIG-IP"
-meta_desc: "Explore the Do resource of the f5 BIG-IP package, including examples, input properties, output properties, lookup functions, and supporting types. `f5bigip.Do` provides details about bigip do resource"
+title_tag: "f5bigip.Do"
+meta_desc: "Documentation for the f5bigip.Do resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
