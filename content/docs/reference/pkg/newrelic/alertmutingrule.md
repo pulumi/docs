@@ -1,8 +1,8 @@
 
 ---
 title: "AlertMutingRule"
-title_tag: "Resource AlertMutingRule | Package New Relic"
-meta_desc: "Explore the AlertMutingRule resource of the New Relic package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "newrelic.AlertMutingRule"
+meta_desc: "Documentation for the newrelic.AlertMutingRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "AlertPolicy"
-title_tag: "Resource AlertPolicy | Package New Relic"
-meta_desc: "Explore the AlertPolicy resource of the New Relic package, including examples, input properties, output properties, lookup functions, and supporting types. Use this resource to create and manage New Relic alert policies."
+title_tag: "newrelic.AlertPolicy"
+meta_desc: "Documentation for the newrelic.AlertPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

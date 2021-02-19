@@ -1,8 +1,8 @@
 
 ---
-title: "GetMonitorLocation"
-title_tag: "Function GetMonitorLocation | Module synthetics | Package New Relic"
-meta_desc: "Explore the GetMonitorLocation function of the synthetics module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific Synthetics monitor location in New Relic that already exists."
+title: "getMonitorLocation"
+title_tag: "newrelic.synthetics.getMonitorLocation"
+meta_desc: "Documentation for the newrelic.synthetics.getMonitorLocation function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -135,7 +135,7 @@ const foo = new newrelic.synthetics.Monitor("foo", {
 {{% /examples %}}
 
 
-## Using GetMonitorLocation {#using}
+## Using getMonitorLocation {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -152,6 +152,8 @@ const foo = new newrelic.synthetics.Monitor("foo", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitorLocation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetMonitorLocationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetMonitorLocationResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetMonitorLocation` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -234,7 +236,7 @@ The following arguments are supported:
 
 
 
-## GetMonitorLocation Result {#result}
+## getMonitorLocation Result {#result}
 
 The following output properties are available:
 

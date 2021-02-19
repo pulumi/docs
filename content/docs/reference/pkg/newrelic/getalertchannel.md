@@ -1,8 +1,8 @@
 
 ---
-title: "GetAlertChannel"
-title_tag: "Function GetAlertChannel | Package New Relic"
-meta_desc: "Explore the GetAlertChannel function of the New Relic package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific alert channel in New Relic that already exists. "
+title: "getAlertChannel"
+title_tag: "newrelic.getAlertChannel"
+meta_desc: "Documentation for the newrelic.getAlertChannel function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -53,7 +53,7 @@ const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("fooAlertPolicyCha
 {{% /examples %}}
 
 
-## Using GetAlertChannel {#using}
+## Using getAlertChannel {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -154,7 +154,7 @@ The following arguments are supported:
 
 
 
-## GetAlertChannel Result {#result}
+## getAlertChannel Result {#result}
 
 The following output properties are available:
 

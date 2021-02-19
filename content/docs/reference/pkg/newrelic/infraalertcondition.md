@@ -1,8 +1,8 @@
 
 ---
 title: "InfraAlertCondition"
-title_tag: "Resource InfraAlertCondition | Package New Relic"
-meta_desc: "Explore the InfraAlertCondition resource of the New Relic package, including examples, input properties, output properties, lookup functions, and supporting types. Use this resource to create and manage Infrastructure alert conditions in New Relic."
+title_tag: "newrelic.InfraAlertCondition"
+meta_desc: "Documentation for the newrelic.InfraAlertCondition resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "EntityTags"
-title_tag: "Resource EntityTags | Package New Relic"
-meta_desc: "Explore the EntityTags resource of the New Relic package, including examples, input properties, output properties, lookup functions, and supporting types. Use this resource to create, update, and delete tags for a New Relic One entity."
+title_tag: "newrelic.EntityTags"
+meta_desc: "Documentation for the newrelic.EntityTags resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

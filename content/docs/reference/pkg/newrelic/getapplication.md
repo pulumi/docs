@@ -1,8 +1,8 @@
 
 ---
-title: "GetApplication"
-title_tag: "Function GetApplication | Package New Relic"
-meta_desc: "Explore the GetApplication function of the New Relic package, including examples, input properties, output properties, and supporting types. #### DEPRECATED! Use at your own risk. Use the `newrelic.getEntity` data source instead. This feature may be removed in the next major release."
+title: "getApplication"
+title_tag: "newrelic.getApplication"
+meta_desc: "Documentation for the newrelic.getApplication function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -169,7 +169,7 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
 {{% /examples %}}
 
 
-## Using GetApplication {#using}
+## Using getApplication {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -186,6 +186,8 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetApplicationResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetApplication` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -268,7 +270,7 @@ The following arguments are supported:
 
 
 
-## GetApplication Result {#result}
+## getApplication Result {#result}
 
 The following output properties are available:
 

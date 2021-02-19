@@ -1,8 +1,8 @@
 
 ---
 title: "AlertCondition"
-title_tag: "Resource AlertCondition | Package New Relic"
-meta_desc: "Explore the AlertCondition resource of the New Relic package, including examples, input properties, output properties, lookup functions, and supporting types. Use this resource to create and manage alert conditions for APM, Browser, and Mobile in New Relic."
+title_tag: "newrelic.AlertCondition"
+meta_desc: "Documentation for the newrelic.AlertCondition resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

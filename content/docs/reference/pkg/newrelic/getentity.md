@@ -1,8 +1,8 @@
 
 ---
-title: "GetEntity"
-title_tag: "Function GetEntity | Package New Relic"
-meta_desc: "Explore the GetEntity function of the New Relic package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific entity in New Relic One that already exists. "
+title: "getEntity"
+title_tag: "newrelic.getEntity"
+meta_desc: "Documentation for the newrelic.getEntity function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -15,7 +15,7 @@ Use this data source to get information about a specific entity in New Relic One
 
 
 
-## Using GetEntity {#using}
+## Using getEntity {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -32,6 +32,8 @@ Use this data source to get information about a specific entity in New Relic One
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEntity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEntityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEntityResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetEntity` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -230,7 +232,7 @@ The following arguments are supported:
 
 
 
-## GetEntity Result {#result}
+## getEntity Result {#result}
 
 The following output properties are available:
 

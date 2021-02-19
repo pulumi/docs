@@ -1,8 +1,8 @@
 
 ---
-title: "GetPluginComponent"
-title_tag: "Function GetPluginComponent | Module plugins | Package New Relic"
-meta_desc: "Explore the GetPluginComponent function of the plugins module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a single plugin component in New Relic that already exists."
+title: "getPluginComponent"
+title_tag: "newrelic.plugins.getPluginComponent"
+meta_desc: "Documentation for the newrelic.plugins.getPluginComponent function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -196,7 +196,7 @@ const fooAlertCondition = new newrelic.plugins.AlertCondition("fooAlertCondition
 {{% /examples %}}
 
 
-## Using GetPluginComponent {#using}
+## Using getPluginComponent {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -213,6 +213,8 @@ const fooAlertCondition = new newrelic.plugins.AlertCondition("fooAlertCondition
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPluginComponent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPluginComponentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPluginComponentResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetPluginComponent` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -335,7 +337,7 @@ The following arguments are supported:
 
 
 
-## GetPluginComponent Result {#result}
+## getPluginComponent Result {#result}
 
 The following output properties are available:
 
