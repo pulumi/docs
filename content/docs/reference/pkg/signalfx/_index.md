@@ -1,6 +1,6 @@
 ---
 title: "SignalFx"
-title_tag: "Package SignalFx"
+title_tag: "SignalFx Package"
 meta_desc: "A Pulumi package for creating and managing SignalFx resources."
 menu:
     reference:
@@ -59,6 +59,6 @@ A Pulumi package for creating and managing SignalFx resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>4.3.1</dd>
+	<dd>4.4.0</dd>
 </dl>
 

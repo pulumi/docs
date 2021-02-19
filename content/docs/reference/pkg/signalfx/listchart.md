@@ -1,8 +1,8 @@
 
 ---
 title: "ListChart"
-title_tag: "Resource ListChart | Package SignalFx"
-meta_desc: "Explore the ListChart resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. This chart type displays current data values in a list format."
+title_tag: "signalfx.ListChart"
+meta_desc: "Documentation for the signalfx.ListChart resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

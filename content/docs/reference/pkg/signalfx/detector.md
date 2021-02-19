@@ -1,8 +1,8 @@
 
 ---
 title: "Detector"
-title_tag: "Resource Detector | Package SignalFx"
-meta_desc: "Explore the Detector resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a SignalFx detector resource. This can be used to create and manage detectors."
+title_tag: "signalfx.Detector"
+meta_desc: "Documentation for the signalfx.Detector resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

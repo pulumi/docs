@@ -1,8 +1,8 @@
 
 ---
 title: "Dashboard"
-title_tag: "Resource Dashboard | Package SignalFx"
-meta_desc: "Explore the Dashboard resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "signalfx.Dashboard"
+meta_desc: "Documentation for the signalfx.Dashboard resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

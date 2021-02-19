@@ -1,8 +1,8 @@
 
 ---
 title: "EventFeedChart"
-title_tag: "Resource EventFeedChart | Package SignalFx"
-meta_desc: "Explore the EventFeedChart resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. Displays a listing of events as a widget in a dashboard."
+title_tag: "signalfx.EventFeedChart"
+meta_desc: "Documentation for the signalfx.EventFeedChart resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

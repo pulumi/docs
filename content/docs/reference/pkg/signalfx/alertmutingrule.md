@@ -1,8 +1,8 @@
 
 ---
 title: "AlertMutingRule"
-title_tag: "Resource AlertMutingRule | Package SignalFx"
-meta_desc: "Explore the AlertMutingRule resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a SignalFx resource for managing alert muting rules. See [Mute Notifications](https://docs.signalfx.com/en/latest/detect-alert/mute-notifications.html) for more information."
+title_tag: "signalfx.AlertMutingRule"
+meta_desc: "Documentation for the signalfx.AlertMutingRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

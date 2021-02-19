@@ -1,8 +1,8 @@
 
 ---
 title: "TextChart"
-title_tag: "Resource TextChart | Package SignalFx"
-meta_desc: "Explore the TextChart resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. This special type of chart doesn’t display any metric data. Rather, it lets you place a text note on the dashboard."
+title_tag: "signalfx.TextChart"
+meta_desc: "Documentation for the signalfx.TextChart resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

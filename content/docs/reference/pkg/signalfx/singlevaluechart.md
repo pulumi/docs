@@ -1,8 +1,8 @@
 
 ---
 title: "SingleValueChart"
-title_tag: "Resource SingleValueChart | Package SignalFx"
-meta_desc: "Explore the SingleValueChart resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. This chart type displays a single number in a large font, representing the current value of a single metric on a plot line."
+title_tag: "signalfx.SingleValueChart"
+meta_desc: "Documentation for the signalfx.SingleValueChart resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
