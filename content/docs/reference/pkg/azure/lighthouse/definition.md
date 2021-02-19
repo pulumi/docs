@@ -40,6 +40,7 @@ class MyStack : Stack
                 {
                     PrincipalId = "00000000-0000-0000-0000-000000000000",
                     RoleDefinitionId = contributor.Apply(contributor => contributor.RoleDefinitionId),
+                    PrincipalDisplayName = "Tier 1 Support",
                 },
             },
         });
@@ -74,8 +75,9 @@ func main() {
 			ManagingTenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
 			Authorizations: lighthouse.DefinitionAuthorizationArray{
 				&lighthouse.DefinitionAuthorizationArgs{
-					PrincipalId:      pulumi.String("00000000-0000-0000-0000-000000000000"),
-					RoleDefinitionId: pulumi.String(contributor.RoleDefinitionId),
+					PrincipalId:          pulumi.String("00000000-0000-0000-0000-000000000000"),
+					RoleDefinitionId:     pulumi.String(contributor.RoleDefinitionId),
+					PrincipalDisplayName: pulumi.String("Tier 1 Support"),
 				},
 			},
 		})
@@ -101,6 +103,7 @@ example = azure.lighthouse.Definition("example",
     authorizations=[azure.lighthouse.DefinitionAuthorizationArgs(
         principal_id="00000000-0000-0000-0000-000000000000",
         role_definition_id=contributor.role_definition_id,
+        principal_display_name="Tier 1 Support",
     )])
 ```
 
@@ -121,6 +124,7 @@ const example = new azure.lighthouse.Definition("example", {
     authorizations: [{
         principalId: "00000000-0000-0000-0000-000000000000",
         roleDefinitionId: contributor.then(contributor => contributor.roleDefinitionId),
+        principalDisplayName: "Tier 1 Support",
     }],
 });
 ```
@@ -1051,6 +1055,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define the permissions that are granted to the principal. This cannot be an `Owner` role.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="principaldisplayname_csharp">
+<a href="#principaldisplayname_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the security group/service principal/user that would be assigned permissions to the projected subscription.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1076,6 +1090,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define the permissions that are granted to the principal. This cannot be an `Owner` role.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="principaldisplayname_go">
+<a href="#principaldisplayname_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the security group/service principal/user that would be assigned permissions to the projected subscription.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1103,6 +1127,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define the permissions that are granted to the principal. This cannot be an `Owner` role.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="principaldisplayname_nodejs">
+<a href="#principaldisplayname_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the security group/service principal/user that would be assigned permissions to the projected subscription.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1128,6 +1162,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define the permissions that are granted to the principal. This cannot be an `Owner` role.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="principal_display_name_python">
+<a href="#principal_display_name_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The display name of the security group/service principal/user that would be assigned permissions to the projected subscription.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
