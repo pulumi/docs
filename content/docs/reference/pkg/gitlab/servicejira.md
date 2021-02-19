@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceJira"
-title_tag: "Resource ServiceJira | Package GitLab"
-meta_desc: "Explore the ServiceJira resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "gitlab.ServiceJira"
+meta_desc: "Documentation for the gitlab.ServiceJira resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

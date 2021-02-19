@@ -1,8 +1,8 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Package GitLab"
-meta_desc: "Explore the User resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "gitlab.User"
+meta_desc: "Documentation for the gitlab.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

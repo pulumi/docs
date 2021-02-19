@@ -1,8 +1,8 @@
 
 ---
-title: "GetUser"
-title_tag: "Function GetUser | Package GitLab"
-meta_desc: "Explore the GetUser function of the GitLab package, including examples, input properties, output properties, and supporting types. ## # gitlab\_user"
+title: "getUser"
+title_tag: "gitlab.getUser"
+meta_desc: "Documentation for the gitlab.getUser function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ const example = pulumi.output(gitlab.getUser({
 {{% /examples %}}
 
 
-## Using GetUser {#using}
+## Using getUser {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -272,7 +272,7 @@ The following arguments are supported:
 
 
 
-## GetUser Result {#result}
+## getUser Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "InstanceVariable"
-title_tag: "Resource InstanceVariable | Package GitLab"
-meta_desc: "Explore the InstanceVariable resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage CI/CD variables for your GitLab instance."
+title_tag: "gitlab.InstanceVariable"
+meta_desc: "Documentation for the gitlab.InstanceVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

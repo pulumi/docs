@@ -1,8 +1,8 @@
 
 ---
 title: "GroupMembership"
-title_tag: "Resource GroupMembership | Package GitLab"
-meta_desc: "Explore the GroupMembership resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_group_membership"
+title_tag: "gitlab.GroupMembership"
+meta_desc: "Documentation for the gitlab.GroupMembership resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

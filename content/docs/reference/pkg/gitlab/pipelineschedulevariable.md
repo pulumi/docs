@@ -1,8 +1,8 @@
 
 ---
 title: "PipelineScheduleVariable"
-title_tag: "Resource PipelineScheduleVariable | Package GitLab"
-meta_desc: "Explore the PipelineScheduleVariable resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_pipeline\_schedule\_variable"
+title_tag: "gitlab.PipelineScheduleVariable"
+meta_desc: "Documentation for the gitlab.PipelineScheduleVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "DeployToken"
-title_tag: "Resource DeployToken | Package GitLab"
-meta_desc: "Explore the DeployToken resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_deploy\_token"
+title_tag: "gitlab.DeployToken"
+meta_desc: "Documentation for the gitlab.DeployToken resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -392,7 +392,7 @@ The DeployToken resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the token will expire it, RFC3339 format.
+    <dd>{{% md %}}Time the token will expire it, RFC3339 format. Will not expire per default.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -460,7 +460,7 @@ Either `project` or `group` must be set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the token will expire it, RFC3339 format.
+    <dd>{{% md %}}Time the token will expire it, RFC3339 format. Will not expire per default.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -528,7 +528,7 @@ Either `project` or `group` must be set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the token will expire it, RFC3339 format.
+    <dd>{{% md %}}Time the token will expire it, RFC3339 format. Will not expire per default.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -596,7 +596,7 @@ Either `project` or `group` must be set.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time the token will expire it, RFC3339 format.
+    <dd>{{% md %}}Time the token will expire it, RFC3339 format. Will not expire per default.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -884,7 +884,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the token will expire it, RFC3339 format.
+    <dd>{{% md %}}Time the token will expire it, RFC3339 format. Will not expire per default.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -962,7 +962,7 @@ Either `project` or `group` must be set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the token will expire it, RFC3339 format.
+    <dd>{{% md %}}Time the token will expire it, RFC3339 format. Will not expire per default.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1040,7 +1040,7 @@ Either `project` or `group` must be set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the token will expire it, RFC3339 format.
+    <dd>{{% md %}}Time the token will expire it, RFC3339 format. Will not expire per default.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1118,7 +1118,7 @@ Either `project` or `group` must be set.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time the token will expire it, RFC3339 format.
+    <dd>{{% md %}}Time the token will expire it, RFC3339 format. Will not expire per default.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

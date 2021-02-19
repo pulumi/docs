@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceGithub"
-title_tag: "Resource ServiceGithub | Package GitLab"
-meta_desc: "Explore the ServiceGithub resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "gitlab.ServiceGithub"
+meta_desc: "Documentation for the gitlab.ServiceGithub resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

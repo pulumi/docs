@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectMembership"
-title_tag: "Resource ProjectMembership | Package GitLab"
-meta_desc: "Explore the ProjectMembership resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_project_membership"
+title_tag: "gitlab.ProjectMembership"
+meta_desc: "Documentation for the gitlab.ProjectMembership resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

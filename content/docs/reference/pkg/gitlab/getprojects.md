@@ -1,8 +1,8 @@
 
 ---
-title: "GetProjects"
-title_tag: "Function GetProjects | Package GitLab"
-meta_desc: "Explore the GetProjects function of the GitLab package, including examples, input properties, output properties, and supporting types. ## # gitlab\_projects"
+title: "getProjects"
+title_tag: "gitlab.getProjects"
+meta_desc: "Documentation for the gitlab.getProjects function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -197,7 +197,7 @@ const projects = pulumi.output(gitlab.getProjects({
 {{% /examples %}}
 
 
-## Using GetProjects {#using}
+## Using getProjects {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -214,6 +214,8 @@ const projects = pulumi.output(gitlab.getProjects({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProjects<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetProjectsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProjectsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetProjects` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -1088,7 +1090,7 @@ The following arguments are supported:
 
 
 
-## GetProjects Result {#result}
+## getProjects Result {#result}
 
 The following output properties are available:
 

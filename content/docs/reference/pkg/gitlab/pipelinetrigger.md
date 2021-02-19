@@ -1,8 +1,8 @@
 
 ---
 title: "PipelineTrigger"
-title_tag: "Resource PipelineTrigger | Package GitLab"
-meta_desc: "Explore the PipelineTrigger resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_pipeline\_trigger"
+title_tag: "gitlab.PipelineTrigger"
+meta_desc: "Documentation for the gitlab.PipelineTrigger resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

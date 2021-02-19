@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectLevelMrApprovals"
-title_tag: "Resource ProjectLevelMrApprovals | Package GitLab"
-meta_desc: "Explore the ProjectLevelMrApprovals resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "gitlab.ProjectLevelMrApprovals"
+meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "DeployKeyEnable"
-title_tag: "Resource DeployKeyEnable | Package GitLab"
-meta_desc: "Explore the DeployKeyEnable resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_deploy\_key\_enable"
+title_tag: "gitlab.DeployKeyEnable"
+meta_desc: "Documentation for the gitlab.DeployKeyEnable resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

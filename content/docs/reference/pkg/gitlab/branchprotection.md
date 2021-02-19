@@ -1,8 +1,8 @@
 
 ---
 title: "BranchProtection"
-title_tag: "Resource BranchProtection | Package GitLab"
-meta_desc: "Explore the BranchProtection resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_branch_protection"
+title_tag: "gitlab.BranchProtection"
+meta_desc: "Documentation for the gitlab.BranchProtection resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

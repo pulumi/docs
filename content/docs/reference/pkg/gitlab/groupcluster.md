@@ -1,8 +1,8 @@
 
 ---
 title: "GroupCluster"
-title_tag: "Resource GroupCluster | Package GitLab"
-meta_desc: "Explore the GroupCluster resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_group\_cluster"
+title_tag: "gitlab.GroupCluster"
+meta_desc: "Documentation for the gitlab.GroupCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

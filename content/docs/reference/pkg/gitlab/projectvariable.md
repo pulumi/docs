@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectVariable"
-title_tag: "Resource ProjectVariable | Package GitLab"
-meta_desc: "Explore the ProjectVariable resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_project\_variable"
+title_tag: "gitlab.ProjectVariable"
+meta_desc: "Documentation for the gitlab.ProjectVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

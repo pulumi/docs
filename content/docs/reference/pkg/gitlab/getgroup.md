@@ -1,8 +1,8 @@
 
 ---
-title: "GetGroup"
-title_tag: "Function GetGroup | Package GitLab"
-meta_desc: "Explore the GetGroup function of the GitLab package, including examples, input properties, output properties, and supporting types. ## # gitlab\_group"
+title: "getGroup"
+title_tag: "gitlab.getGroup"
+meta_desc: "Documentation for the gitlab.getGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ const foo = pulumi.output(gitlab.getGroup({
 {{% /examples %}}
 
 
-## Using GetGroup {#using}
+## Using getGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -232,7 +232,7 @@ The following arguments are supported:
 
 
 
-## GetGroup Result {#result}
+## getGroup Result {#result}
 
 The following output properties are available:
 

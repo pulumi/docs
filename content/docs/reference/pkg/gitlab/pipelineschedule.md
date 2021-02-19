@@ -1,8 +1,8 @@
 
 ---
 title: "PipelineSchedule"
-title_tag: "Resource PipelineSchedule | Package GitLab"
-meta_desc: "Explore the PipelineSchedule resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_pipeline\_schedule"
+title_tag: "gitlab.PipelineSchedule"
+meta_desc: "Documentation for the gitlab.PipelineSchedule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

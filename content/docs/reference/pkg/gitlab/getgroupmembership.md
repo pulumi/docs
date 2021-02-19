@@ -1,8 +1,8 @@
 
 ---
-title: "GetGroupMembership"
-title_tag: "Function GetGroupMembership | Package GitLab"
-meta_desc: "Explore the GetGroupMembership function of the GitLab package, including examples, input properties, output properties, and supporting types. ## # gitlab\_group\_membership"
+title: "getGroupMembership"
+title_tag: "gitlab.getGroupMembership"
+meta_desc: "Documentation for the gitlab.getGroupMembership function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ const example = pulumi.output(gitlab.getGroupMembership({
 {{% /examples %}}
 
 
-## Using GetGroupMembership {#using}
+## Using getGroupMembership {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -272,7 +272,7 @@ The following arguments are supported:
 
 
 
-## GetGroupMembership Result {#result}
+## getGroupMembership Result {#result}
 
 The following output properties are available:
 
