@@ -1,8 +1,8 @@
 
 ---
-title: "GetManagedInstance"
-title_tag: "Function GetManagedInstance | Module sql | Package Azure NextGen"
-meta_desc: "Explore the GetManagedInstance function of the sql module, including examples, input properties, output properties, and supporting types. "
+title: "getManagedInstance"
+title_tag: "azure-nextgen.sql.getManagedInstance"
+meta_desc: "Documentation for the azure-nextgen.sql.getManagedInstance function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetManagedInstance function of the sql module, including
 
 
 
-## Using GetManagedInstance {#using}
+## Using getManagedInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagedInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetManagedInstanceResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagedInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetManagedInstanceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetManagedInstance function of the sql module, including
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagedInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagedInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupManagedInstanceResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagedInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagedInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupManagedInstanceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupManagedInstance` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetManagedInstance function of the sql module, including
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetManagedInstance </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetManagedInstanceResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagedInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetManagedInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagedInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetManagedInstance Result {#result}
+## getManagedInstance Result {#result}
 
 The following output properties are available:
 
@@ -1338,9 +1338,6 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1438,9 +1435,6 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 {{% /choosable %}}
 
 <h4 id="managedinstanceprivateendpointconnectionpropertiesresponse">Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1580,9 +1574,6 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1644,9 +1635,6 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 {{% /choosable %}}
 
 <h4 id="managedinstanceprivatelinkserviceconnectionstatepropertyresponse">Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</h4>
-
-
-
 
 
 
@@ -1786,9 +1774,6 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1922,9 +1907,6 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
-
-
-
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetDscConfiguration"
-title_tag: "Function GetDscConfiguration | Module automation | Package Azure NextGen"
-meta_desc: "Explore the GetDscConfiguration function of the automation module, including examples, input properties, output properties, and supporting types. "
+title: "getDscConfiguration"
+title_tag: "azure-nextgen.automation.getDscConfiguration"
+meta_desc: "Documentation for the azure-nextgen.automation.getDscConfiguration function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetDscConfiguration function of the automation module, i
 
 
 
-## Using GetDscConfiguration {#using}
+## Using getDscConfiguration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDscConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDscConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetDscConfigurationResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDscConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDscConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDscConfigurationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetDscConfiguration function of the automation module, i
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDscConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDscConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupDscConfigurationResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDscConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDscConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDscConfigurationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDscConfiguration` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetDscConfiguration function of the automation module, i
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDscConfiguration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetDscConfigurationResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetDscConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDscConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDscConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetDscConfiguration Result {#result}
+## getDscConfiguration Result {#result}
 
 The following output properties are available:
 
@@ -798,9 +798,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -898,9 +895,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contentsourceresponse">Content<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -1073,9 +1067,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dscconfigurationparameterresponse">Dsc<wbr>Configuration<wbr>Parameter<wbr>Response</h4>
-
-
-
 
 
 

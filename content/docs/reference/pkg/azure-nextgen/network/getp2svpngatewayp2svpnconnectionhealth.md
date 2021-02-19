@@ -1,8 +1,8 @@
 
 ---
-title: "GetP2sVpnGatewayP2sVpnConnectionHealth"
-title_tag: "Function GetP2sVpnGatewayP2sVpnConnectionHealth | Module network | Package Azure NextGen"
-meta_desc: "Explore the GetP2sVpnGatewayP2sVpnConnectionHealth function of the network module, including examples, input properties, output properties, and supporting types. "
+title: "getP2sVpnGatewayP2sVpnConnectionHealth"
+title_tag: "azure-nextgen.network.getP2sVpnGatewayP2sVpnConnectionHealth"
+meta_desc: "Documentation for the azure-nextgen.network.getP2sVpnGatewayP2sVpnConnectionHealth function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetP2sVpnGatewayP2sVpnConnectionHealth function of the n
 
 
 
-## Using GetP2sVpnGatewayP2sVpnConnectionHealth {#using}
+## Using getP2sVpnGatewayP2sVpnConnectionHealth {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getP2sVpnGatewayP2sVpnConnectionHealth<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetP2sVpnGatewayP2sVpnConnectionHealthArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetP2sVpnGatewayP2sVpnConnectionHealthResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getP2sVpnGatewayP2sVpnConnectionHealth<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetP2sVpnGatewayP2sVpnConnectionHealthArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetP2sVpnGatewayP2sVpnConnectionHealthResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the GetP2sVpnGatewayP2sVpnConnectionHealth function of the n
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetP2sVpnGatewayP2sVpnConnectionHealth<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetP2sVpnGatewayP2sVpnConnectionHealthArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">GetP2sVpnGatewayP2sVpnConnectionHealthResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetP2sVpnGatewayP2sVpnConnectionHealth<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetP2sVpnGatewayP2sVpnConnectionHealthArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetP2sVpnGatewayP2sVpnConnectionHealthResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetP2sVpnGatewayP2sVpnConnectionHealth` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetP2sVpnGatewayP2sVpnConnectionHealth </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetP2sVpnGatewayP2sVpnConnectionHealthResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetP2sVpnGatewayP2sVpnConnectionHealthArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetP2sVpnGatewayP2sVpnConnectionHealthResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetP2sVpnGatewayP2sVpnConnectionHealthArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -144,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetP2sVpnGatewayP2sVpnConnectionHealth Result {#result}
+## getP2sVpnGatewayP2sVpnConnectionHealth Result {#result}
 
 The following output properties are available:
 
@@ -688,9 +690,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -752,9 +751,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="p2sconnectionconfigurationresponse">P2SConnection<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 
@@ -1038,9 +1034,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1138,9 +1131,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 
@@ -1280,9 +1270,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1419,9 +1406,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1486,9 +1470,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1550,9 +1531,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vpnclientconnectionhealthresponse">Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Response</h4>
-
-
-
 
 
 

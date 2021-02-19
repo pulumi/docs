@@ -1,8 +1,8 @@
 
 ---
-title: "GetIntegrationServiceEnvironmentManagedApi"
-title_tag: "Function GetIntegrationServiceEnvironmentManagedApi | Module logic | Package Azure NextGen"
-meta_desc: "Explore the GetIntegrationServiceEnvironmentManagedApi function of the logic module, including examples, input properties, output properties, and supporting types. "
+title: "getIntegrationServiceEnvironmentManagedApi"
+title_tag: "azure-nextgen.logic.getIntegrationServiceEnvironmentManagedApi"
+meta_desc: "Documentation for the azure-nextgen.logic.getIntegrationServiceEnvironmentManagedApi function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetIntegrationServiceEnvironmentManagedApi function of t
 
 
 
-## Using GetIntegrationServiceEnvironmentManagedApi {#using}
+## Using getIntegrationServiceEnvironmentManagedApi {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationServiceEnvironmentManagedApi<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationServiceEnvironmentManagedApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetIntegrationServiceEnvironmentManagedApiResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationServiceEnvironmentManagedApi<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationServiceEnvironmentManagedApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationServiceEnvironmentManagedApiResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetIntegrationServiceEnvironmentManagedApi function of t
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationServiceEnvironmentManagedApi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationServiceEnvironmentManagedApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupIntegrationServiceEnvironmentManagedApiResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationServiceEnvironmentManagedApi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationServiceEnvironmentManagedApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationServiceEnvironmentManagedApiResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIntegrationServiceEnvironmentManagedApi` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetIntegrationServiceEnvironmentManagedApi function of t
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIntegrationServiceEnvironmentManagedApi </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetIntegrationServiceEnvironmentManagedApiResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationServiceEnvironmentManagedApiArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationServiceEnvironmentManagedApiResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationServiceEnvironmentManagedApiArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetIntegrationServiceEnvironmentManagedApi Result {#result}
+## getIntegrationServiceEnvironmentManagedApi Result {#result}
 
 The following output properties are available:
 
@@ -438,9 +438,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -649,9 +646,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -752,9 +746,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -816,9 +807,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response</h4>
-
-
-
 
 
 
@@ -919,9 +907,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="apiresourcegeneralinformationresponse">Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response</h4>
-
-
-
 
 
 
@@ -1166,9 +1151,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="apiresourcemetadataresponse">Api<wbr>Resource<wbr>Metadata<wbr>Response</h4>
-
-
-
 
 
 
@@ -1560,9 +1542,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1660,9 +1639,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="apiresourcepropertiesresponse">Api<wbr>Resource<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -2162,9 +2138,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2298,9 +2271,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 

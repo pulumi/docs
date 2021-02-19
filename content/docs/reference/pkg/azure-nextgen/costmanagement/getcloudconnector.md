@@ -1,8 +1,8 @@
 
 ---
-title: "GetCloudConnector"
-title_tag: "Function GetCloudConnector | Module costmanagement | Package Azure NextGen"
-meta_desc: "Explore the GetCloudConnector function of the costmanagement module, including examples, input properties, output properties, and supporting types. "
+title: "getCloudConnector"
+title_tag: "azure-nextgen.costmanagement.getCloudConnector"
+meta_desc: "Documentation for the azure-nextgen.costmanagement.getCloudConnector function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetCloudConnector function of the costmanagement module,
 
 
 
-## Using GetCloudConnector {#using}
+## Using getCloudConnector {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCloudConnector<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCloudConnectorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetCloudConnectorResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCloudConnector<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCloudConnectorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCloudConnectorResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetCloudConnector function of the costmanagement module,
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCloudConnector<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCloudConnectorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupCloudConnectorResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCloudConnector<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCloudConnectorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCloudConnectorResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCloudConnector` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetCloudConnector function of the costmanagement module,
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCloudConnector </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetCloudConnectorResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetCloudConnectorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCloudConnectorResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCloudConnectorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetCloudConnector Result {#result}
+## getCloudConnector Result {#result}
 
 The following output properties are available:
 
@@ -870,9 +870,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1042,9 +1039,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 

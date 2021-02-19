@@ -1,8 +1,8 @@
 
 ---
-title: "GetPython2Package"
-title_tag: "Function GetPython2Package | Module automation | Package Azure NextGen"
-meta_desc: "Explore the GetPython2Package function of the automation module, including examples, input properties, output properties, and supporting types. "
+title: "getPython2Package"
+title_tag: "azure-nextgen.automation.getPython2Package"
+meta_desc: "Documentation for the azure-nextgen.automation.getPython2Package function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetPython2Package function of the automation module, inc
 
 
 
-## Using GetPython2Package {#using}
+## Using getPython2Package {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPython2Package<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPython2PackageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetPython2PackageResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPython2Package<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPython2PackageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPython2PackageResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetPython2Package function of the automation module, inc
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPython2Package<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPython2PackageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupPython2PackageResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPython2Package<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPython2PackageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPython2PackageResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPython2Package` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetPython2Package function of the automation module, inc
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPython2Package </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetPython2PackageResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetPython2PackageArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPython2PackageResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPython2PackageArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetPython2Package Result {#result}
+## getPython2Package Result {#result}
 
 The following output properties are available:
 
@@ -834,9 +834,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -934,9 +931,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contentlinkresponse">Content<wbr>Link<wbr>Response</h4>
-
-
-
 
 
 
@@ -1073,9 +1067,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="moduleerrorinforesponse">Module<wbr>Error<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 

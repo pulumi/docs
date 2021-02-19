@@ -1,8 +1,8 @@
 
 ---
-title: "GetGuestConfigurationAssignment"
-title_tag: "Function GetGuestConfigurationAssignment | Module guestconfiguration | Package Azure NextGen"
-meta_desc: "Explore the GetGuestConfigurationAssignment function of the guestconfiguration module, including examples, input properties, output properties, and supporting types. "
+title: "getGuestConfigurationAssignment"
+title_tag: "azure-nextgen.guestconfiguration.getGuestConfigurationAssignment"
+meta_desc: "Documentation for the azure-nextgen.guestconfiguration.getGuestConfigurationAssignment function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetGuestConfigurationAssignment function of the guestcon
 
 
 
-## Using GetGuestConfigurationAssignment {#using}
+## Using getGuestConfigurationAssignment {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGuestConfigurationAssignment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGuestConfigurationAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetGuestConfigurationAssignmentResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGuestConfigurationAssignment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGuestConfigurationAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGuestConfigurationAssignmentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetGuestConfigurationAssignment function of the guestcon
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGuestConfigurationAssignment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGuestConfigurationAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupGuestConfigurationAssignmentResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGuestConfigurationAssignment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGuestConfigurationAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupGuestConfigurationAssignmentResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupGuestConfigurationAssignment` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetGuestConfigurationAssignment function of the guestcon
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGuestConfigurationAssignment </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetGuestConfigurationAssignmentResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetGuestConfigurationAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGuestConfigurationAssignmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGuestConfigurationAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetGuestConfigurationAssignment Result {#result}
+## getGuestConfigurationAssignment Result {#result}
 
 The following output properties are available:
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -505,9 +502,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -605,9 +599,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="assignmentreportresourceresponse">Assignment<wbr>Report<wbr>Resource<wbr>Response</h4>
-
-
-
 
 
 
@@ -780,9 +771,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="assignmentreportresponse">Assignment<wbr>Report<wbr>Response</h4>
-
-
-
 
 
 
@@ -1138,9 +1126,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1241,9 +1226,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1341,9 +1323,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="configurationsettingresponse">Configuration<wbr>Setting<wbr>Response</h4>
-
-
-
 
 
 
@@ -1588,9 +1567,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="guestconfigurationassignmentpropertiesresponse">Guest<wbr>Configuration<wbr>Assignment<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1946,9 +1922,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2226,9 +2199,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vminforesponse">VMInfo<wbr>Response</h4>
-
-
-
 
 
 

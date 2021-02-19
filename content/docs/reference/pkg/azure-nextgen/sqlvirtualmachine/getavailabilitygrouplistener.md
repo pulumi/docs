@@ -1,8 +1,8 @@
 
 ---
-title: "GetAvailabilityGroupListener"
-title_tag: "Function GetAvailabilityGroupListener | Module sqlvirtualmachine | Package Azure NextGen"
-meta_desc: "Explore the GetAvailabilityGroupListener function of the sqlvirtualmachine module, including examples, input properties, output properties, and supporting types. "
+title: "getAvailabilityGroupListener"
+title_tag: "azure-nextgen.sqlvirtualmachine.getAvailabilityGroupListener"
+meta_desc: "Documentation for the azure-nextgen.sqlvirtualmachine.getAvailabilityGroupListener function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetAvailabilityGroupListener function of the sqlvirtualm
 
 
 
-## Using GetAvailabilityGroupListener {#using}
+## Using getAvailabilityGroupListener {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAvailabilityGroupListener<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAvailabilityGroupListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetAvailabilityGroupListenerResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAvailabilityGroupListener<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAvailabilityGroupListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAvailabilityGroupListenerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetAvailabilityGroupListener function of the sqlvirtualm
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAvailabilityGroupListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAvailabilityGroupListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupAvailabilityGroupListenerResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAvailabilityGroupListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAvailabilityGroupListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAvailabilityGroupListenerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAvailabilityGroupListener` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetAvailabilityGroupListener function of the sqlvirtualm
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAvailabilityGroupListener </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetAvailabilityGroupListenerResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetAvailabilityGroupListenerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAvailabilityGroupListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAvailabilityGroupListenerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetAvailabilityGroupListener Result {#result}
+## getAvailabilityGroupListener Result {#result}
 
 The following output properties are available:
 
@@ -510,9 +510,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -718,9 +715,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="privateipaddressresponse">Private<wbr>IPAddress<wbr>Response</h4>
-
-
-
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetLogAnalyticExportThrottledRequests"
-title_tag: "Function GetLogAnalyticExportThrottledRequests | Module compute | Package Azure NextGen"
-meta_desc: "Explore the GetLogAnalyticExportThrottledRequests function of the compute module, including examples, input properties, output properties, and supporting types. "
+title: "getLogAnalyticExportThrottledRequests"
+title_tag: "azure-nextgen.compute.getLogAnalyticExportThrottledRequests"
+meta_desc: "Documentation for the azure-nextgen.compute.getLogAnalyticExportThrottledRequests function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetLogAnalyticExportThrottledRequests function of the co
 
 
 
-## Using GetLogAnalyticExportThrottledRequests {#using}
+## Using getLogAnalyticExportThrottledRequests {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLogAnalyticExportThrottledRequests<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLogAnalyticExportThrottledRequestsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetLogAnalyticExportThrottledRequestsResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLogAnalyticExportThrottledRequests<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLogAnalyticExportThrottledRequestsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLogAnalyticExportThrottledRequestsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the GetLogAnalyticExportThrottledRequests function of the co
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLogAnalyticExportThrottledRequests<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetLogAnalyticExportThrottledRequestsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">GetLogAnalyticExportThrottledRequestsResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLogAnalyticExportThrottledRequests<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetLogAnalyticExportThrottledRequestsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetLogAnalyticExportThrottledRequestsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetLogAnalyticExportThrottledRequests` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLogAnalyticExportThrottledRequests </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetLogAnalyticExportThrottledRequestsResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetLogAnalyticExportThrottledRequestsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLogAnalyticExportThrottledRequestsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLogAnalyticExportThrottledRequestsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -396,7 +398,7 @@ The following arguments are supported:
 
 
 
-## GetLogAnalyticExportThrottledRequests Result {#result}
+## getLogAnalyticExportThrottledRequests Result {#result}
 
 The following output properties are available:
 
@@ -469,9 +471,6 @@ The following output properties are available:
 
 
 <h4 id="loganalyticsoutputresponse">Log<wbr>Analytics<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 

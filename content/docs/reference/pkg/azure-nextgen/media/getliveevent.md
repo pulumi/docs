@@ -1,8 +1,8 @@
 
 ---
-title: "GetLiveEvent"
-title_tag: "Function GetLiveEvent | Module media | Package Azure NextGen"
-meta_desc: "Explore the GetLiveEvent function of the media module, including examples, input properties, output properties, and supporting types. "
+title: "getLiveEvent"
+title_tag: "azure-nextgen.media.getLiveEvent"
+meta_desc: "Documentation for the azure-nextgen.media.getLiveEvent function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetLiveEvent function of the media module, including exa
 
 
 
-## Using GetLiveEvent {#using}
+## Using getLiveEvent {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLiveEvent<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLiveEventArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetLiveEventResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLiveEvent<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLiveEventArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLiveEventResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetLiveEvent function of the media module, including exa
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLiveEvent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLiveEventArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupLiveEventResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLiveEvent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLiveEventArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLiveEventResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupLiveEvent` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetLiveEvent function of the media module, including exa
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLiveEvent </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetLiveEventResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetLiveEventArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLiveEventResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLiveEventArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetLiveEvent Result {#result}
+## getLiveEvent Result {#result}
 
 The following output properties are available:
 
@@ -906,9 +906,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1009,9 +1006,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1073,9 +1067,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="iprangeresponse">IPRange<wbr>Response</h4>
-
-
-
 
 
 
@@ -1212,9 +1203,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="liveeventencodingresponse">Live<wbr>Event<wbr>Encoding<wbr>Response</h4>
-
-
-
 
 
 
@@ -1390,9 +1378,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1493,9 +1478,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1557,9 +1539,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="liveeventinputresponse">Live<wbr>Event<wbr>Input<wbr>Response</h4>
-
-
-
 
 
 
@@ -1771,9 +1750,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1910,9 +1886,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1977,9 +1950,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2041,9 +2011,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="liveeventpreviewresponse">Live<wbr>Event<wbr>Preview<wbr>Response</h4>
-
-
-
 
 
 
@@ -2255,9 +2222,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2391,9 +2355,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 

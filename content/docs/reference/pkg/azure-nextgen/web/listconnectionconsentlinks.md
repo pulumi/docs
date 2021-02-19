@@ -1,8 +1,8 @@
 
 ---
-title: "ListConnectionConsentLinks"
-title_tag: "Function ListConnectionConsentLinks | Module web | Package Azure NextGen"
-meta_desc: "Explore the ListConnectionConsentLinks function of the web module, including examples, input properties, output properties, and supporting types. "
+title: "listConnectionConsentLinks"
+title_tag: "azure-nextgen.web.listConnectionConsentLinks"
+meta_desc: "Documentation for the azure-nextgen.web.listConnectionConsentLinks function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the ListConnectionConsentLinks function of the web module, i
 
 
 
-## Using ListConnectionConsentLinks {#using}
+## Using listConnectionConsentLinks {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listConnectionConsentLinks<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListConnectionConsentLinksArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">ListConnectionConsentLinksResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listConnectionConsentLinks<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListConnectionConsentLinksArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListConnectionConsentLinksResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the ListConnectionConsentLinks function of the web module, i
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListConnectionConsentLinks<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListConnectionConsentLinksArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">ListConnectionConsentLinksResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListConnectionConsentLinks<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListConnectionConsentLinksArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListConnectionConsentLinksResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `ListConnectionConsentLinks` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListConnectionConsentLinks </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">ListConnectionConsentLinksResult</span>> <span class="p">InvokeAsync(</span><span class="nx">ListConnectionConsentLinksArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListConnectionConsentLinksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListConnectionConsentLinksArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -216,7 +218,7 @@ The following arguments are supported:
 
 
 
-## ListConnectionConsentLinks Result {#result}
+## listConnectionConsentLinks Result {#result}
 
 The following output properties are available:
 
@@ -289,9 +291,6 @@ The following output properties are available:
 
 
 <h4 id="consentlinkdefinitionresponse">Consent<wbr>Link<wbr>Definition<wbr>Response</h4>
-
-
-
 
 
 
@@ -464,9 +463,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="consentlinkparameterdefinition">Consent<wbr>Link<wbr>Parameter<wbr>Definition</h4>
-
-
-
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetExpressRouteCircuitPeering"
-title_tag: "Function GetExpressRouteCircuitPeering | Module network | Package Azure NextGen"
-meta_desc: "Explore the GetExpressRouteCircuitPeering function of the network module, including examples, input properties, output properties, and supporting types. "
+title: "getExpressRouteCircuitPeering"
+title_tag: "azure-nextgen.network.getExpressRouteCircuitPeering"
+meta_desc: "Documentation for the azure-nextgen.network.getExpressRouteCircuitPeering function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetExpressRouteCircuitPeering function of the network mo
 
 
 
-## Using GetExpressRouteCircuitPeering {#using}
+## Using getExpressRouteCircuitPeering {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getExpressRouteCircuitPeering<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetExpressRouteCircuitPeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetExpressRouteCircuitPeeringResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getExpressRouteCircuitPeering<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetExpressRouteCircuitPeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetExpressRouteCircuitPeeringResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetExpressRouteCircuitPeering function of the network mo
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupExpressRouteCircuitPeering<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupExpressRouteCircuitPeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupExpressRouteCircuitPeeringResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupExpressRouteCircuitPeering<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupExpressRouteCircuitPeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupExpressRouteCircuitPeeringResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupExpressRouteCircuitPeering` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetExpressRouteCircuitPeering function of the network mo
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetExpressRouteCircuitPeering </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetExpressRouteCircuitPeeringResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetExpressRouteCircuitPeeringArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetExpressRouteCircuitPeeringResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetExpressRouteCircuitPeeringArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetExpressRouteCircuitPeering Result {#result}
+## getExpressRouteCircuitPeering Result {#result}
 
 The following output properties are available:
 
@@ -1086,9 +1086,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1513,9 +1510,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1760,9 +1754,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1935,9 +1926,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1999,9 +1987,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ipv6circuitconnectionconfigresponse">Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Response</h4>
-
-
-
 
 
 
@@ -2102,9 +2087,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ipv6expressroutecircuitpeeringconfigresponse">Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response</h4>
-
-
-
 
 
 
@@ -2313,9 +2295,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="peerexpressroutecircuitconnectionresponse">Peer<wbr>Express<wbr>Route<wbr>Circuit<wbr>Connection<wbr>Response</h4>
-
-
-
 
 
 
@@ -2740,9 +2719,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
-
-
-
 
 
 

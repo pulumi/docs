@@ -1,8 +1,8 @@
 
 ---
-title: "GetVMwareCollector"
-title_tag: "Function GetVMwareCollector | Module migrate | Package Azure NextGen"
-meta_desc: "Explore the GetVMwareCollector function of the migrate module, including examples, input properties, output properties, and supporting types. "
+title: "getVMwareCollector"
+title_tag: "azure-nextgen.migrate.getVMwareCollector"
+meta_desc: "Documentation for the azure-nextgen.migrate.getVMwareCollector function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetVMwareCollector function of the migrate module, inclu
 
 
 
-## Using GetVMwareCollector {#using}
+## Using getVMwareCollector {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVMwareCollector<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVMwareCollectorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetVMwareCollectorResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVMwareCollector<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVMwareCollectorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVMwareCollectorResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetVMwareCollector function of the migrate module, inclu
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVMwareCollector<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVMwareCollectorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupVMwareCollectorResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVMwareCollector<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVMwareCollectorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVMwareCollectorResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVMwareCollector` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetVMwareCollector function of the migrate module, inclu
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVMwareCollector </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetVMwareCollectorResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetVMwareCollectorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVMwareCollectorResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVMwareCollectorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetVMwareCollector Result {#result}
+## getVMwareCollector Result {#result}
 
 The following output properties are available:
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -574,9 +571,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -785,9 +779,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="collectorpropertiesresponse">Collector<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 

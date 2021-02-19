@@ -1,8 +1,8 @@
 
 ---
-title: "GetBookmarkRelation"
-title_tag: "Function GetBookmarkRelation | Module securityinsights | Package Azure NextGen"
-meta_desc: "Explore the GetBookmarkRelation function of the securityinsights module, including examples, input properties, output properties, and supporting types. "
+title: "getBookmarkRelation"
+title_tag: "azure-nextgen.securityinsights.getBookmarkRelation"
+meta_desc: "Documentation for the azure-nextgen.securityinsights.getBookmarkRelation function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetBookmarkRelation function of the securityinsights mod
 
 
 
-## Using GetBookmarkRelation {#using}
+## Using getBookmarkRelation {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBookmarkRelation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBookmarkRelationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetBookmarkRelationResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBookmarkRelation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBookmarkRelationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBookmarkRelationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetBookmarkRelation function of the securityinsights mod
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBookmarkRelation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBookmarkRelationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupBookmarkRelationResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBookmarkRelation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBookmarkRelationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBookmarkRelationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBookmarkRelation` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetBookmarkRelation function of the securityinsights mod
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBookmarkRelation </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetBookmarkRelationResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetBookmarkRelationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBookmarkRelationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBookmarkRelationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -254,7 +254,7 @@ The following arguments are supported:
 
 
 
-## GetBookmarkRelation Result {#result}
+## getBookmarkRelation Result {#result}
 
 The following output properties are available:
 

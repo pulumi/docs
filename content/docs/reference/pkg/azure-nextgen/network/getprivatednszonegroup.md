@@ -1,8 +1,8 @@
 
 ---
-title: "GetPrivateDnsZoneGroup"
-title_tag: "Function GetPrivateDnsZoneGroup | Module network | Package Azure NextGen"
-meta_desc: "Explore the GetPrivateDnsZoneGroup function of the network module, including examples, input properties, output properties, and supporting types. "
+title: "getPrivateDnsZoneGroup"
+title_tag: "azure-nextgen.network.getPrivateDnsZoneGroup"
+meta_desc: "Documentation for the azure-nextgen.network.getPrivateDnsZoneGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetPrivateDnsZoneGroup function of the network module, i
 
 
 
-## Using GetPrivateDnsZoneGroup {#using}
+## Using getPrivateDnsZoneGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPrivateDnsZoneGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPrivateDnsZoneGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetPrivateDnsZoneGroupResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPrivateDnsZoneGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPrivateDnsZoneGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPrivateDnsZoneGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetPrivateDnsZoneGroup function of the network module, i
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPrivateDnsZoneGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPrivateDnsZoneGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupPrivateDnsZoneGroupResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPrivateDnsZoneGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPrivateDnsZoneGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPrivateDnsZoneGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPrivateDnsZoneGroup` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetPrivateDnsZoneGroup function of the network module, i
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPrivateDnsZoneGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetPrivateDnsZoneGroupResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetPrivateDnsZoneGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPrivateDnsZoneGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPrivateDnsZoneGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetPrivateDnsZoneGroup Result {#result}
+## getPrivateDnsZoneGroup Result {#result}
 
 The following output properties are available:
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -538,9 +535,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="recordsetresponse">Record<wbr>Set<wbr>Response</h4>
-
-
-
 
 
 

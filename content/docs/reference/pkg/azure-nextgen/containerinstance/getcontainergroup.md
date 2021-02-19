@@ -1,8 +1,8 @@
 
 ---
-title: "GetContainerGroup"
-title_tag: "Function GetContainerGroup | Module containerinstance | Package Azure NextGen"
-meta_desc: "Explore the GetContainerGroup function of the containerinstance module, including examples, input properties, output properties, and supporting types. "
+title: "getContainerGroup"
+title_tag: "azure-nextgen.containerinstance.getContainerGroup"
+meta_desc: "Documentation for the azure-nextgen.containerinstance.getContainerGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetContainerGroup function of the containerinstance modu
 
 
 
-## Using GetContainerGroup {#using}
+## Using getContainerGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getContainerGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetContainerGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetContainerGroupResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getContainerGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetContainerGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetContainerGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetContainerGroup function of the containerinstance modu
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupContainerGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupContainerGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupContainerGroupResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupContainerGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupContainerGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupContainerGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupContainerGroup` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetContainerGroup function of the containerinstance modu
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetContainerGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetContainerGroupResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetContainerGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetContainerGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetContainerGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetContainerGroup Result {#result}
+## getContainerGroup Result {#result}
 
 The following output properties are available:
 
@@ -922,9 +922,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1097,9 +1094,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1164,9 +1158,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1228,9 +1219,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="containergroupidentityresponse">Container<wbr>Group<wbr>Identity<wbr>Response</h4>
-
-
-
 
 
 
@@ -1406,9 +1394,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1509,9 +1494,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1573,9 +1555,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="containergroupresponseinstanceview">Container<wbr>Group<wbr>Response<wbr>Instance<wbr>View</h4>
-
-
-
 
 
 
@@ -1676,9 +1655,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="containerhttpgetresponse">Container<wbr>Http<wbr>Get<wbr>Response</h4>
-
-
-
 
 
 
@@ -1854,9 +1830,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1954,9 +1927,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="containerproberesponse">Container<wbr>Probe<wbr>Response</h4>
-
-
-
 
 
 
@@ -2240,9 +2210,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2412,9 +2379,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="containerresponse">Container<wbr>Response</h4>
-
-
-
 
 
 
@@ -2806,9 +2770,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3017,9 +2978,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3153,9 +3111,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="encryptionpropertiesresponse">Encryption<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -3295,9 +3250,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3431,9 +3383,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="eventresponse">Event<wbr>Response</h4>
-
-
-
 
 
 
@@ -3681,9 +3630,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3820,9 +3766,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3923,9 +3866,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4023,9 +3963,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="imageregistrycredentialresponse">Image<wbr>Registry<wbr>Credential<wbr>Response</h4>
-
-
-
 
 
 
@@ -4162,9 +4099,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="initcontainerdefinitionresponse">Init<wbr>Container<wbr>Definition<wbr>Response</h4>
-
-
-
 
 
 
@@ -4412,9 +4346,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4584,9 +4515,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ipaddressresponse">Ip<wbr>Address<wbr>Response</h4>
-
-
-
 
 
 
@@ -4798,9 +4726,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5009,9 +4934,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5109,9 +5031,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcelimitsresponse">Resource<wbr>Limits<wbr>Response</h4>
-
-
-
 
 
 
@@ -5251,9 +5170,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5390,9 +5306,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5490,9 +5403,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="volumemountresponse">Volume<wbr>Mount<wbr>Response</h4>
-
-
-
 
 
 
@@ -5629,9 +5539,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="volumeresponse">Volume<wbr>Response</h4>
-
-
-
 
 
 
