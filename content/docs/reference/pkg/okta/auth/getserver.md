@@ -1,8 +1,8 @@
 
 ---
-title: "GetServer"
-title_tag: "Function GetServer | Module auth | Package Okta"
-meta_desc: "Explore the GetServer function of the auth module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve an auth server from Okta."
+title: "getServer"
+title_tag: "okta.auth.getServer"
+meta_desc: "Documentation for the okta.auth.getServer function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(okta.auth.getServer({
 {{% /examples %}}
 
 
-## Using GetServer {#using}
+## Using getServer {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetServer Result {#result}
+## getServer Result {#result}
 
 The following output properties are available:
 

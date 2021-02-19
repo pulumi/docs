@@ -1,8 +1,8 @@
 
 ---
-title: "GetSaml"
-title_tag: "Function GetSaml | Module app | Package Okta"
-meta_desc: "Explore the GetSaml function of the app module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve the collaborators for a given repository."
+title: "getSaml"
+title_tag: "okta.app.getSaml"
+meta_desc: "Documentation for the okta.app.getSaml function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const example = pulumi.output(okta.app.getSaml({
 {{% /examples %}}
 
 
-## Using GetSaml {#using}
+## Using getSaml {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1470,7 +1470,7 @@ The following arguments are supported:
 
 
 
-## GetSaml Result {#result}
+## getSaml Result {#result}
 
 The following output properties are available:
 

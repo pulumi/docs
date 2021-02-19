@@ -1,8 +1,8 @@
 
 ---
-title: "GetOauth"
-title_tag: "Function GetOauth | Module app | Package Okta"
-meta_desc: "Explore the GetOauth function of the app module, including examples, input properties, output properties, and supporting types. "
+title: "getOauth"
+title_tag: "okta.app.getOauth"
+meta_desc: "Documentation for the okta.app.getOauth function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetOauth function of the app module, including examples,
 
 
 
-## Using GetOauth {#using}
+## Using getOauth {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -30,6 +30,8 @@ meta_desc: "Explore the GetOauth function of the app module, including examples,
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOauth<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetOauthArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetOauthResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetOauth` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -324,7 +326,7 @@ The following arguments are supported:
 
 
 
-## GetOauth Result {#result}
+## getOauth Result {#result}
 
 The following output properties are available:
 

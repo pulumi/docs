@@ -1,8 +1,8 @@
 
 ---
 title: "AdminRoleTargets"
-title_tag: "Resource AdminRoleTargets | Package Okta"
-meta_desc: "Explore the AdminRoleTargets resource of the Okta package, including examples, input properties, output properties, lookup functions, and supporting types. Manages targets for administrator roles."
+title_tag: "okta.AdminRoleTargets"
+meta_desc: "Documentation for the okta.AdminRoleTargets resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

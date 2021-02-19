@@ -1,8 +1,8 @@
 
 ---
-title: "GetSaml"
-title_tag: "Function GetSaml | Module idp | Package Okta"
-meta_desc: "Explore the GetSaml function of the idp module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve a SAML IdP from Okta."
+title: "getSaml"
+title_tag: "okta.idp.getSaml"
+meta_desc: "Documentation for the okta.idp.getSaml function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const example = pulumi.output(okta.idp.getSaml({
 {{% /examples %}}
 
 
-## Using GetSaml {#using}
+## Using getSaml {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -230,7 +230,7 @@ The following arguments are supported:
 
 
 
-## GetSaml Result {#result}
+## getSaml Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "TemplateSms"
-title_tag: "Resource TemplateSms | Package Okta"
-meta_desc: "Explore the TemplateSms resource of the Okta package, including examples, input properties, output properties, lookup functions, and supporting types. Creates an Okta SMS Template."
+title_tag: "okta.TemplateSms"
+meta_desc: "Documentation for the okta.TemplateSms resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

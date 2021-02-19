@@ -1,8 +1,8 @@
 
 ---
-title: "GetGroup"
-title_tag: "Function GetGroup | Module group | Package Okta"
-meta_desc: "Explore the GetGroup function of the group module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve a group from Okta."
+title: "getGroup"
+title_tag: "okta.group.getGroup"
+meta_desc: "Documentation for the okta.group.getGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(okta.group.getGroup({
 {{% /examples %}}
 
 
-## Using GetGroup {#using}
+## Using getGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -273,7 +273,7 @@ The following arguments are supported:
 
 
 
-## GetGroup Result {#result}
+## getGroup Result {#result}
 
 The following output properties are available:
 

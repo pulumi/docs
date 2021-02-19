@@ -1,8 +1,8 @@
 
 ---
-title: "GetEveryoneGroup"
-title_tag: "Function GetEveryoneGroup | Module group | Package Okta"
-meta_desc: "Explore the GetEveryoneGroup function of the group module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve the `Everyone` group from Okta. The same can be achieved with the `okta.group.Group` data source with `name = &#34;Everyone&#34;`. This is simply a shortcut."
+title: "getEveryoneGroup"
+title_tag: "okta.group.getEveryoneGroup"
+meta_desc: "Documentation for the okta.group.getEveryoneGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -81,7 +81,7 @@ const example = pulumi.output(okta.group.getEveryoneGroup({ async: true }));
 {{% /examples %}}
 
 
-## Using GetEveryoneGroup {#using}
+## Using getEveryoneGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -98,6 +98,8 @@ const example = pulumi.output(okta.group.getEveryoneGroup({ async: true }));
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEveryoneGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEveryoneGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEveryoneGroupResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetEveryoneGroup` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -176,7 +178,7 @@ The following arguments are supported:
 
 
 
-## GetEveryoneGroup Result {#result}
+## getEveryoneGroup Result {#result}
 
 The following output properties are available:
 
