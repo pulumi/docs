@@ -45,11 +45,11 @@ hero:
 
 # Webinar pages support multiple session via the 'multiple' property.
 multiple:
-    - datetime: 2021-02-11T11:00:00+01:00
-      hubspot_form_id: 8e1a5894-5ec5-4ae7-b741-d75d2e020b38
-
     - datetime: 2021-02-25T11:00:00+01:00
       hubspot_form_id: cb663e2e-2a1e-4099-8311-1dcaa2af3b5d
+
+    - datetime: 2021-03-02T11:00:00-08:00
+      hubspot_form_id: 397d51bd-70e7-4fad-90e0-53950c605b09
 
     - datetime: 2021-03-11T11:00:00+01:00
       hubspot_form_id: 3ec7c538-d08a-4c94-b161-2824d41ae9c9
@@ -73,11 +73,23 @@ main:
     description: |
         Join our Ask the Expert session with Pulumi engineers. Come with your Pulumi-based questions --- we'll be here to answer any questions that are Cloud Engineering related. Have a project you're currently working on? Bring it --- we love sharing!
 
+        You do not need to register to join the session and can click the on one of the below links below to join the session when it starts
+        or fill out the form to receive a reminder when the session is about to start.
+
+        - [February 25th, 2021](https://www.bigmarker.com/pulumi/Ask-the-Expert-Europe-b89f7877e30fa171fe58d3d7)
+        - [March 2nd, 2021](https://www.bigmarker.com/pulumi/Ask-the-Expert-NA)
+        - [March 11th, 2021](https://www.bigmarker.com/pulumi/Ask-the-Expert-Europe-127797766c1f5995ed671215)
+        - [March 25th, 20201](https://www.bigmarker.com/pulumi/Ask-the-Expert-Europe-bf66b52ecfc624bf77f9adc5)
+
     # The webinar presenters
     presenters:
         - name: Paul Stack
           role: Software Engineer, Pulumi
         - name: Piers Karsenbarg
+          role: Customer Engineer, Pulumi
+        - name: Cameron Stokes
+          role: Customer Engineer, Pulumi
+        - name: Tushar Shah
           role: Customer Engineer, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
@@ -85,4 +97,7 @@ main:
         - Interact with Pulumi and Cloud Engineering experts.
         - Hear how others are developing solutions around cloud challenges.
         - Gain advice on how to get the most out of Pulumi.
+
+form:
+  header: Get An Email Reminder
 ---

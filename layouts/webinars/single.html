@@ -72,6 +72,9 @@
                         </p>
                     {{ else }}
                         {{ $formHeader := (cond (eq .Params.pre_recorded true) "Watch The Recording Now" "Register Here") }}
+                        {{ if isset .Params.form "header" }}
+                            {{ $formHeader = .Params.form.header }}
+                        {{ end }}
                         <h3 class="text-orange">{{ $formHeader }}</h3>
                         {{ if $multipleSessions }}
                             <pulumi-webinar-form-select
