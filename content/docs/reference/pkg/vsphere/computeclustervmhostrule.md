@@ -1,8 +1,8 @@
 
 ---
 title: "ComputeClusterVmHostRule"
-title_tag: "vsphere.ComputeClusterVmHostRule"
-meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ComputeClusterVmHostRule | Package vSphere"
+meta_desc: "Explore the ComputeClusterVmHostRule resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

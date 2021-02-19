@@ -1,8 +1,8 @@
 
 ---
-title: "getSpacesBuckets"
-title_tag: "digitalocean.getSpacesBuckets"
-meta_desc: "Documentation for the digitalocean.getSpacesBuckets function with examples, input properties, output properties, and supporting types."
+title: "GetSpacesBuckets"
+title_tag: "Function GetSpacesBuckets | Package DigitalOcean"
+meta_desc: "Explore the GetSpacesBuckets function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on Spaces buckets for use in other resources, with the ability to filter and sort the results."
 ---
 
 
@@ -115,7 +115,7 @@ const nyc3 = pulumi.output(digitalocean.getSpacesBuckets({
 {{% /examples %}}
 
 
-## Using getSpacesBuckets {#using}
+## Using GetSpacesBuckets {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -132,8 +132,6 @@ const nyc3 = pulumi.output(digitalocean.getSpacesBuckets({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpacesBuckets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSpacesBucketsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSpacesBucketsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetSpacesBuckets` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -264,7 +262,7 @@ The `sort` block is documented below.
 
 
 
-## getSpacesBuckets Result {#result}
+## GetSpacesBuckets Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "AccessApplication"
-title_tag: "cloudflare.AccessApplication"
-meta_desc: "Documentation for the cloudflare.AccessApplication resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AccessApplication | Package Cloudflare"
+meta_desc: "Explore the AccessApplication resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare Access Application resource. Access Applications"
 ---
 
 

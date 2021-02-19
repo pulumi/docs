@@ -1,8 +1,8 @@
 
 ---
 title: "Group"
-title_tag: "keycloak.Group"
-meta_desc: "Documentation for the keycloak.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Group | Package Keycloak"
+meta_desc: "Explore the Group resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. Allows for creating and managing Groups within Keycloak."
 ---
 
 

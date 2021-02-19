@@ -1,8 +1,8 @@
 
 ---
 title: "Instance"
-title_tag: "linode.Instance"
-meta_desc: "Documentation for the linode.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Instance | Package Linode"
+meta_desc: "Explore the Instance resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode Instance resource.  This can be used to create, modify, and delete Linodes."
 ---
 
 

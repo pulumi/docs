@@ -1,8 +1,8 @@
 
 ---
 title: "SelfSignedCert"
-title_tag: "tls.SelfSignedCert"
-meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource SelfSignedCert | Package TLS"
+meta_desc: "Explore the SelfSignedCert resource of the TLS package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

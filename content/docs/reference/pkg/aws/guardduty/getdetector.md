@@ -1,8 +1,8 @@
 
 ---
-title: "getDetector"
-title_tag: "aws.guardduty.getDetector"
-meta_desc: "Documentation for the aws.guardduty.getDetector function with examples, input properties, output properties, and supporting types."
+title: "GetDetector"
+title_tag: "Function GetDetector | Module guardduty | Package AWS"
+meta_desc: "Explore the GetDetector function of the guardduty module, including examples, input properties, output properties, and supporting types. Retrieve information about a GuardDuty detector."
 ---
 
 
@@ -81,7 +81,7 @@ const example = pulumi.output(aws.guardduty.getDetector({ async: true }));
 {{% /examples %}}
 
 
-## Using getDetector {#using}
+## Using GetDetector {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## getDetector Result {#result}
+## GetDetector Result {#result}
 
 The following output properties are available:
 

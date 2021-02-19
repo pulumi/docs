@@ -1,8 +1,8 @@
 
 ---
-title: "getSecrets"
-title_tag: "aws.kms.getSecrets"
-meta_desc: "Documentation for the aws.kms.getSecrets function with examples, input properties, output properties, and supporting types."
+title: "GetSecrets"
+title_tag: "Function GetSecrets | Module kms | Package AWS"
+meta_desc: "Explore the GetSecrets function of the kms module, including examples, input properties, output properties, and supporting types. Decrypt multiple secrets from data encrypted with the AWS KMS service."
 ---
 
 
@@ -15,7 +15,7 @@ Decrypt multiple secrets from data encrypted with the AWS KMS service.
 
 
 
-## Using getSecrets {#using}
+## Using GetSecrets {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -32,8 +32,6 @@ Decrypt multiple secrets from data encrypted with the AWS KMS service.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecrets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSecretsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSecretsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetSecrets` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -116,7 +114,7 @@ The following arguments are supported:
 
 
 
-## getSecrets Result {#result}
+## GetSecrets Result {#result}
 
 The following output properties are available:
 

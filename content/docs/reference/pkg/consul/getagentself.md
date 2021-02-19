@@ -1,8 +1,8 @@
 
 ---
-title: "getAgentSelf"
-title_tag: "consul.getAgentSelf"
-meta_desc: "Documentation for the consul.getAgentSelf function with examples, input properties, output properties, and supporting types."
+title: "GetAgentSelf"
+title_tag: "Function GetAgentSelf | Package Consul"
+meta_desc: "Explore the GetAgentSelf function of the Consul package, including examples, input properties, output properties, and supporting types. &gt; **Warning:** The `consul.getAgentSelf` resource has been deprecated and will be removed"
 ---
 
 
@@ -20,7 +20,7 @@ from the agent specified in the `provider`.
 
 
 
-## Using getAgentSelf {#using}
+## Using GetAgentSelf {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -38,8 +38,6 @@ from the agent specified in the `provider`.
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAgentSelf<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAgentSelfResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetAgentSelf` in the Go SDK.
-
 {{% /choosable %}}
 
 
@@ -52,7 +50,7 @@ from the agent specified in the `provider`.
 
 
 
-## getAgentSelf Result {#result}
+## GetAgentSelf Result {#result}
 
 The following output properties are available:
 

@@ -1,6 +1,6 @@
 ---
 title: "DNSimple"
-title_tag: "dnsimple.DNSimple"
+title_tag: "Module DNSimple | Package DNSimple"
 meta_desc: "A Pulumi package for creating and managing dnsimple cloud resources."
 menu:
     reference:

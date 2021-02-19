@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancerPool"
-title_tag: "cloudflare.LoadBalancerPool"
-meta_desc: "Documentation for the cloudflare.LoadBalancerPool resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource LoadBalancerPool | Package Cloudflare"
+meta_desc: "Explore the LoadBalancerPool resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare Load Balancer pool resource. This provides a pool of origins that can be used by a Cloudflare Load Balancer. Note that the load balancing feature must be enabled in your Cloudflare account before you can use this resource."
 ---
 
 

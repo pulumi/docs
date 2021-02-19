@@ -1,8 +1,8 @@
 
 ---
-title: "getVolume"
-title_tag: "linode.getVolume"
-meta_desc: "Documentation for the linode.getVolume function with examples, input properties, output properties, and supporting types."
+title: "GetVolume"
+title_tag: "Function GetVolume | Package Linode"
+meta_desc: "Explore the GetVolume function of the Linode package, including examples, input properties, output properties, and supporting types. Provides information about a Linode Volume."
 ---
 
 
@@ -111,7 +111,7 @@ const foo = pulumi.output(linode.getVolume({
 {{% /examples %}}
 
 
-## Using getVolume {#using}
+## Using GetVolume {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -212,7 +212,7 @@ The following arguments are supported:
 
 
 
-## getVolume Result {#result}
+## GetVolume Result {#result}
 
 The following output properties are available:
 

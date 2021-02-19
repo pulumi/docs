@@ -1,8 +1,8 @@
 
 ---
 title: "DatabaseReplica"
-title_tag: "digitalocean.DatabaseReplica"
-meta_desc: "Documentation for the digitalocean.DatabaseReplica resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource DatabaseReplica | Package DigitalOcean"
+meta_desc: "Explore the DatabaseReplica resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean database replica resource."
 ---
 
 

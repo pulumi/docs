@@ -1,8 +1,8 @@
 
 ---
-title: "getCertificate"
-title_tag: "rancher2.getCertificate"
-meta_desc: "Documentation for the rancher2.getCertificate function with examples, input properties, output properties, and supporting types."
+title: "GetCertificate"
+title_tag: "Function GetCertificate | Package Rancher 2"
+meta_desc: "Explore the GetCertificate function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 certificate."
 ---
 
 
@@ -97,7 +97,7 @@ const foo = pulumi.output(rancher2.getCertificate({
 {{% /examples %}}
 
 
-## Using getCertificate {#using}
+## Using GetCertificate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -278,7 +278,7 @@ The following arguments are supported:
 
 
 
-## getCertificate Result {#result}
+## GetCertificate Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getSpotPrice"
-title_tag: "aws.ec2.getSpotPrice"
-meta_desc: "Documentation for the aws.ec2.getSpotPrice function with examples, input properties, output properties, and supporting types."
+title: "GetSpotPrice"
+title_tag: "Function GetSpotPrice | Module ec2 | Package AWS"
+meta_desc: "Explore the GetSpotPrice function of the ec2 module, including examples, input properties, output properties, and supporting types. Information about most recent Spot Price for a given EC2 instance."
 ---
 
 
@@ -121,7 +121,7 @@ const example = pulumi.output(aws.ec2.getSpotPrice({
 {{% /examples %}}
 
 
-## Using getSpotPrice {#using}
+## Using GetSpotPrice {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -138,8 +138,6 @@ const example = pulumi.output(aws.ec2.getSpotPrice({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotPrice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSpotPriceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSpotPriceResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetSpotPrice` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -302,7 +300,7 @@ The following arguments are supported:
 
 
 
-## getSpotPrice Result {#result}
+## GetSpotPrice Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getApplications"
-title_tag: "alicloud.edas.getApplications"
-meta_desc: "Documentation for the alicloud.edas.getApplications function with examples, input properties, output properties, and supporting types."
+title: "GetApplications"
+title_tag: "Function GetApplications | Module edas | Package AliCloud"
+meta_desc: "Explore the GetApplications function of the edas module, including examples, input properties, output properties, and supporting types. This data source provides a list of EDAS application in an Alibaba Cloud account according to the specified filters."
 ---
 
 
@@ -106,7 +106,7 @@ export const firstApplicationName = applications.then(applications => applicatio
 {{% /examples %}}
 
 
-## Using getApplications {#using}
+## Using GetApplications {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -123,8 +123,6 @@ export const firstApplicationName = applications.then(applications => applicatio
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplications<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetApplicationsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetApplicationsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetApplications` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -283,7 +281,7 @@ The following arguments are supported:
 
 
 
-## getApplications Result {#result}
+## GetApplications Result {#result}
 
 The following output properties are available:
 

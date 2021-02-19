@@ -1,8 +1,8 @@
 
 ---
-title: "getSigningJob"
-title_tag: "aws.signer.getSigningJob"
-meta_desc: "Documentation for the aws.signer.getSigningJob function with examples, input properties, output properties, and supporting types."
+title: "GetSigningJob"
+title_tag: "Function GetSigningJob | Module signer | Package AWS"
+meta_desc: "Explore the GetSigningJob function of the signer module, including examples, input properties, output properties, and supporting types. Provides information about a Signer Signing Job."
 ---
 
 
@@ -88,7 +88,7 @@ const buildSigningJob = pulumi.output(aws.signer.getSigningJob({
 {{% /examples %}}
 
 
-## Using getSigningJob {#using}
+## Using GetSigningJob {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## getSigningJob Result {#result}
+## GetSigningJob Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getBastionHostInstances"
-title_tag: "alicloud.yundun.getBastionHostInstances"
-meta_desc: "Documentation for the alicloud.yundun.getBastionHostInstances function with examples, input properties, output properties, and supporting types."
+title: "GetBastionHostInstances"
+title_tag: "Function GetBastionHostInstances | Module yundun | Package AliCloud"
+meta_desc: "Explore the GetBastionHostInstances function of the yundun module, including examples, input properties, output properties, and supporting types. This data source provides a list of cloud Bastionhost instances in an Alibaba Cloud account according to the specified filters."
 ---
 
 
@@ -102,7 +102,7 @@ export const instance = alicloud_yundun_bastionhost_instances_instance.map(v => 
 {{% /examples %}}
 
 
-## Using getBastionHostInstances {#using}
+## Using GetBastionHostInstances {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -119,8 +119,6 @@ export const instance = alicloud_yundun_bastionhost_instances_instance.map(v => 
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBastionHostInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetBastionHostInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBastionHostInstancesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetBastionHostInstances` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -559,7 +557,7 @@ func main() {
 
 
 
-## getBastionHostInstances Result {#result}
+## GetBastionHostInstances Result {#result}
 
 The following output properties are available:
 

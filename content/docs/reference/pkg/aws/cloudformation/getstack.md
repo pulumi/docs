@@ -1,8 +1,8 @@
 
 ---
-title: "getStack"
-title_tag: "aws.cloudformation.getStack"
-meta_desc: "Documentation for the aws.cloudformation.getStack function with examples, input properties, output properties, and supporting types."
+title: "GetStack"
+title_tag: "Function GetStack | Module cloudformation | Package AWS"
+meta_desc: "Explore the GetStack function of the cloudformation module, including examples, input properties, output properties, and supporting types. The CloudFormation Stack data source allows access to stack"
 ---
 
 
@@ -126,7 +126,7 @@ const web = new aws.ec2.Instance("web", {
 {{% /examples %}}
 
 
-## Using getStack {#using}
+## Using GetStack {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -267,7 +267,7 @@ The following arguments are supported:
 
 
 
-## getStack Result {#result}
+## GetStack Result {#result}
 
 The following output properties are available:
 

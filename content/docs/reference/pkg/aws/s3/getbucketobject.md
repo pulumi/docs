@@ -1,8 +1,8 @@
 
 ---
-title: "getBucketObject"
-title_tag: "aws.s3.getBucketObject"
-meta_desc: "Documentation for the aws.s3.getBucketObject function with examples, input properties, output properties, and supporting types."
+title: "GetBucketObject"
+title_tag: "Function GetBucketObject | Module s3 | Package AWS"
+meta_desc: "Explore the GetBucketObject function of the s3 module, including examples, input properties, output properties, and supporting types. The S3 object data source allows access to the metadata and"
 ---
 
 
@@ -119,7 +119,7 @@ const example = new aws.ec2.Instance("example", {
 {{% /examples %}}
 
 
-## Using getBucketObject {#using}
+## Using GetBucketObject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -416,7 +416,7 @@ The following arguments are supported:
 
 
 
-## getBucketObject Result {#result}
+## GetBucketObject Result {#result}
 
 The following output properties are available:
 

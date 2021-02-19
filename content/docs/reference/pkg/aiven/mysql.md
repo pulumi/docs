@@ -1,8 +1,8 @@
 
 ---
 title: "MySql"
-title_tag: "aiven.MySql"
-meta_desc: "Documentation for the aiven.MySql resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource MySql | Package Aiven"
+meta_desc: "Explore the MySql resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # MySQL Resource"
 ---
 
 

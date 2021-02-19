@@ -1,8 +1,8 @@
 
 ---
-title: "getPg"
-title_tag: "aiven.getPg"
-meta_desc: "Documentation for the aiven.getPg function with examples, input properties, output properties, and supporting types."
+title: "GetPg"
+title_tag: "Function GetPg | Package Aiven"
+meta_desc: "Explore the GetPg function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # PG Data Source"
 ---
 
 
@@ -94,7 +94,7 @@ const pg = aiven.getPg({
 {{% /examples %}}
 
 
-## Using getPg {#using}
+## Using GetPg {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1019,7 +1019,7 @@ deletion is done.
 
 
 
-## getPg Result {#result}
+## GetPg Result {#result}
 
 The following output properties are available:
 

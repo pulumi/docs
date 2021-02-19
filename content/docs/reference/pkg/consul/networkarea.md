@@ -1,8 +1,8 @@
 
 ---
 title: "NetworkArea"
-title_tag: "consul.NetworkArea"
-meta_desc: "Documentation for the consul.NetworkArea resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource NetworkArea | Package Consul"
+meta_desc: "Explore the NetworkArea resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **NOTE:** This feature requires [Consul Enterprise](https://www.consul.io/docs/enterprise/index.html)."
 ---
 
 

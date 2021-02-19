@@ -1,8 +1,8 @@
 
 ---
 title: "ObjectStorageBucket"
-title_tag: "linode.ObjectStorageBucket"
-meta_desc: "Documentation for the linode.ObjectStorageBucket resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ObjectStorageBucket | Package Linode"
+meta_desc: "Explore the ObjectStorageBucket resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode Object Storage Bucket resource. This can be used to create, modify, and delete Linodes Object Storage Buckets."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getPermissionSet"
-title_tag: "aws.ssoadmin.getPermissionSet"
-meta_desc: "Documentation for the aws.ssoadmin.getPermissionSet function with examples, input properties, output properties, and supporting types."
+title: "GetPermissionSet"
+title_tag: "Function GetPermissionSet | Module ssoadmin | Package AWS"
+meta_desc: "Explore the GetPermissionSet function of the ssoadmin module, including examples, input properties, output properties, and supporting types. Use this data source to get a Single Sign-On (SSO) Permission Set."
 ---
 
 
@@ -15,7 +15,7 @@ Use this data source to get a Single Sign-On (SSO) Permission Set.
 
 
 
-## Using getPermissionSet {#using}
+## Using GetPermissionSet {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ The following arguments are supported:
 
 
 
-## getPermissionSet Result {#result}
+## GetPermissionSet Result {#result}
 
 The following output properties are available:
 

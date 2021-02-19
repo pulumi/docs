@@ -1,8 +1,8 @@
 
 ---
 title: "Record"
-title_tag: "cloudflare.Record"
-meta_desc: "Documentation for the cloudflare.Record resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Record | Package Cloudflare"
+meta_desc: "Explore the Record resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare record resource."
 ---
 
 

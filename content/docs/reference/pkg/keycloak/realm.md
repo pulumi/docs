@@ -1,8 +1,8 @@
 
 ---
 title: "Realm"
-title_tag: "keycloak.Realm"
-meta_desc: "Documentation for the keycloak.Realm resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Realm | Package Keycloak"
+meta_desc: "Explore the Realm resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. Allows for creating and managing Realms within Keycloak."
 ---
 
 

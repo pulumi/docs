@@ -1,8 +1,8 @@
 
 ---
 title: "Mount"
-title_tag: "vault.Mount"
-meta_desc: "Documentation for the vault.Mount resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Mount | Package Vault"
+meta_desc: "Explore the Mount resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 
 

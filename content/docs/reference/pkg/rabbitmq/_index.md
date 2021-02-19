@@ -1,6 +1,6 @@
 ---
 title: "RabbitMQ"
-title_tag: "rabbitmq.RabbitMQ"
+title_tag: "Module RabbitMQ | Package RabbitMQ"
 meta_desc: "A Pulumi package for creating and managing RabbitMQ resources."
 menu:
     reference:

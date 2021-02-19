@@ -1,8 +1,8 @@
 
 ---
 title: "KubernetesNodePool"
-title_tag: "digitalocean.KubernetesNodePool"
-meta_desc: "Documentation for the digitalocean.KubernetesNodePool resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource KubernetesNodePool | Package DigitalOcean"
+meta_desc: "Explore the KubernetesNodePool resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the `digitalocean.KubernetesCluster` resource, this resource can be used to add additional ones to a cluster."
 ---
 
 

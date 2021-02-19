@@ -1,8 +1,8 @@
 
 ---
-title: "getNetworkAreaMembers"
-title_tag: "consul.getNetworkAreaMembers"
-meta_desc: "Documentation for the consul.getNetworkAreaMembers function with examples, input properties, output properties, and supporting types."
+title: "GetNetworkAreaMembers"
+title_tag: "Function GetNetworkAreaMembers | Package Consul"
+meta_desc: "Explore the GetNetworkAreaMembers function of the Consul package, including examples, input properties, output properties, and supporting types. &gt; **NOTE:** This feature requires [Consul Enterprise](https://www.consul.io/docs/enterprise/index.html)."
 ---
 
 
@@ -94,7 +94,7 @@ export const members = dc2NetworkAreaMembers.members;
 {{% /examples %}}
 
 
-## Using getNetworkAreaMembers {#using}
+## Using GetNetworkAreaMembers {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -111,8 +111,6 @@ export const members = dc2NetworkAreaMembers.members;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkAreaMembers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNetworkAreaMembersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNetworkAreaMembersResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetNetworkAreaMembers` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -283,7 +281,7 @@ token that the agent provides by default.
 
 
 
-## getNetworkAreaMembers Result {#result}
+## GetNetworkAreaMembers Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getNetworkContainers"
-title_tag: "mongodbatlas.getNetworkContainers"
-meta_desc: "Documentation for the mongodbatlas.getNetworkContainers function with examples, input properties, output properties, and supporting types."
+title: "GetNetworkContainers"
+title_tag: "Function GetNetworkContainers | Package MongoDB Atlas"
+meta_desc: "Explore the GetNetworkContainers function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.getNetworkContainers` describes all Network Peering Containers. The data source requires your Project ID."
 ---
 
 
@@ -119,7 +119,7 @@ const testNetworkContainers = pulumi.all([testNetworkContainer.projectId, testNe
 {{% /examples %}}
 
 
-## Using getNetworkContainers {#using}
+## Using GetNetworkContainers {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -136,8 +136,6 @@ const testNetworkContainers = pulumi.all([testNetworkContainer.projectId, testNe
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkContainers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNetworkContainersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNetworkContainersResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetNetworkContainers` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -260,7 +258,7 @@ The following arguments are supported:
 
 
 
-## getNetworkContainers Result {#result}
+## GetNetworkContainers Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "DomainRecord"
-title_tag: "linode.DomainRecord"
-meta_desc: "Documentation for the linode.DomainRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource DomainRecord | Package Linode"
+meta_desc: "Explore the DomainRecord resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode Domain Record resource.  This can be used to create, modify, and delete Linodes Domain Records."
 ---
 
 

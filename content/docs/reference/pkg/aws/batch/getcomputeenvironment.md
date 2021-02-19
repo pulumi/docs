@@ -1,8 +1,8 @@
 
 ---
-title: "getComputeEnvironment"
-title_tag: "aws.batch.getComputeEnvironment"
-meta_desc: "Documentation for the aws.batch.getComputeEnvironment function with examples, input properties, output properties, and supporting types."
+title: "GetComputeEnvironment"
+title_tag: "Function GetComputeEnvironment | Module batch | Package AWS"
+meta_desc: "Explore the GetComputeEnvironment function of the batch module, including examples, input properties, output properties, and supporting types. The Batch Compute Environment data source allows access to details of a specific"
 ---
 
 
@@ -89,7 +89,7 @@ const batch_mongo = pulumi.output(aws.batch.getComputeEnvironment({
 {{% /examples %}}
 
 
-## Using getComputeEnvironment {#using}
+## Using GetComputeEnvironment {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -230,7 +230,7 @@ The following arguments are supported:
 
 
 
-## getComputeEnvironment Result {#result}
+## GetComputeEnvironment Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getAccountAuthentication"
-title_tag: "aiven.getAccountAuthentication"
-meta_desc: "Documentation for the aiven.getAccountAuthentication function with examples, input properties, output properties, and supporting types."
+title: "GetAccountAuthentication"
+title_tag: "Function GetAccountAuthentication | Package Aiven"
+meta_desc: "Explore the GetAccountAuthentication function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Account Authentication Data Source"
 ---
 
 
@@ -17,7 +17,7 @@ The Account Authentication data source provides information about the existing A
 
 
 
-## Using getAccountAuthentication {#using}
+## Using GetAccountAuthentication {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -558,7 +558,7 @@ The following arguments are supported:
 
 
 
-## getAccountAuthentication Result {#result}
+## GetAccountAuthentication Result {#result}
 
 The following output properties are available:
 

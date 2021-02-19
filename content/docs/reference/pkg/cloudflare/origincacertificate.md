@@ -1,8 +1,8 @@
 
 ---
 title: "OriginCaCertificate"
-title_tag: "cloudflare.OriginCaCertificate"
-meta_desc: "Documentation for the cloudflare.OriginCaCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource OriginCaCertificate | Package Cloudflare"
+meta_desc: "Explore the OriginCaCertificate resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare Origin CA certificate used to protect traffic to your origin without involving a third party Certificate Authority."
 ---
 
 

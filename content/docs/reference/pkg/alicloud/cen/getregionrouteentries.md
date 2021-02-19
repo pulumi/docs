@@ -1,8 +1,8 @@
 
 ---
-title: "getRegionRouteEntries"
-title_tag: "alicloud.cen.getRegionRouteEntries"
-meta_desc: "Documentation for the alicloud.cen.getRegionRouteEntries function with examples, input properties, output properties, and supporting types."
+title: "GetRegionRouteEntries"
+title_tag: "Function GetRegionRouteEntries | Module cen | Package AliCloud"
+meta_desc: "Explore the GetRegionRouteEntries function of the cen module, including examples, input properties, output properties, and supporting types. This data source provides CEN Regional Route Entries available to the user."
 ---
 
 
@@ -99,7 +99,7 @@ export const firstRegionRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrB
 {{% /examples %}}
 
 
-## Using getRegionRouteEntries {#using}
+## Using GetRegionRouteEntries {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -116,8 +116,6 @@ export const firstRegionRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrB
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionRouteEntries<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegionRouteEntriesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegionRouteEntriesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetRegionRouteEntries` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -276,7 +274,7 @@ The following arguments are supported:
 
 
 
-## getRegionRouteEntries Result {#result}
+## GetRegionRouteEntries Result {#result}
 
 The following output properties are available:
 

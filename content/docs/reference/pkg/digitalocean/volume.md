@@ -1,8 +1,8 @@
 
 ---
 title: "Volume"
-title_tag: "digitalocean.Volume"
-meta_desc: "Documentation for the digitalocean.Volume resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Volume | Package DigitalOcean"
+meta_desc: "Explore the Volume resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Block Storage volume which can be attached to a Droplet in order to provide expanded storage."
 ---
 
 

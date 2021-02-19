@@ -1,8 +1,8 @@
 
 ---
-title: "getDashboardList"
-title_tag: "datadog.getDashboardList"
-meta_desc: "Documentation for the datadog.getDashboardList function with examples, input properties, output properties, and supporting types."
+title: "GetDashboardList"
+title_tag: "Function GetDashboardList | Package Datadog"
+meta_desc: "Explore the GetDashboardList function of the Datadog package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about an existing dashboard list, for use in other resources. In particular, it can be used in a dashboard to register it in the list."
 ---
 
 
@@ -88,7 +88,7 @@ const test = pulumi.output(datadog.getDashboardList({
 {{% /examples %}}
 
 
-## Using getDashboardList {#using}
+## Using GetDashboardList {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -185,7 +185,7 @@ The following arguments are supported:
 
 
 
-## getDashboardList Result {#result}
+## GetDashboardList Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Argo"
-title_tag: "cloudflare.Argo"
-meta_desc: "Documentation for the cloudflare.Argo resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Argo | Package Cloudflare"
+meta_desc: "Explore the Argo resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Cloudflare Argo controls the routing to your origin and tiered caching options to speed up your website browsing experience."
 ---
 
 

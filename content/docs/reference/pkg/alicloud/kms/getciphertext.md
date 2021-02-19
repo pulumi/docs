@@ -1,8 +1,8 @@
 
 ---
-title: "getCiphertext"
-title_tag: "alicloud.kms.getCiphertext"
-meta_desc: "Documentation for the alicloud.kms.getCiphertext function with examples, input properties, output properties, and supporting types."
+title: "GetCiphertext"
+title_tag: "Function GetCiphertext | Module kms | Package AliCloud"
+meta_desc: "Explore the GetCiphertext function of the kms module, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the alicloud.kms.getCiphertext function with examp
 
 
 
-## Using getCiphertext {#using}
+## Using GetCiphertext {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -198,7 +198,7 @@ The following arguments are supported:
 
 
 
-## getCiphertext Result {#result}
+## GetCiphertext Result {#result}
 
 The following output properties are available:
 

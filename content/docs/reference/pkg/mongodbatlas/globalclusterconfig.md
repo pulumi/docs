@@ -1,8 +1,8 @@
 
 ---
 title: "GlobalClusterConfig"
-title_tag: "mongodbatlas.GlobalClusterConfig"
-meta_desc: "Documentation for the mongodbatlas.GlobalClusterConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource GlobalClusterConfig | Package MongoDB Atlas"
+meta_desc: "Explore the GlobalClusterConfig resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.GlobalClusterConfig` provides a Global Cluster Configuration resource."
 ---
 
 

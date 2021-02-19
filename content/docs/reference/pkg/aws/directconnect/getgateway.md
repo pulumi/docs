@@ -1,8 +1,8 @@
 
 ---
-title: "getGateway"
-title_tag: "aws.directconnect.getGateway"
-meta_desc: "Documentation for the aws.directconnect.getGateway function with examples, input properties, output properties, and supporting types."
+title: "GetGateway"
+title_tag: "Function GetGateway | Module directconnect | Package AWS"
+meta_desc: "Explore the GetGateway function of the directconnect module, including examples, input properties, output properties, and supporting types. Retrieve information about a Direct Connect Gateway."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.directconnect.getGateway({
 {{% /examples %}}
 
 
-## Using getGateway {#using}
+## Using GetGateway {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## getGateway Result {#result}
+## GetGateway Result {#result}
 
 The following output properties are available:
 

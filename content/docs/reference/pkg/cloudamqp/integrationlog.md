@@ -1,8 +1,8 @@
 
 ---
 title: "IntegrationLog"
-title_tag: "cloudamqp.IntegrationLog"
-meta_desc: "Documentation for the cloudamqp.IntegrationLog resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource IntegrationLog | Package CloudAMQP"
+meta_desc: "Explore the IntegrationLog resource of the CloudAMQP package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage third party log integrations for a CloudAMQP instance. Once configured, the logs produced will be forward to corresponding integration."
 ---
 
 

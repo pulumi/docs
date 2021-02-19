@@ -1,8 +1,8 @@
 
 ---
-title: "getClusterSnapshot"
-title_tag: "aws.rds.getClusterSnapshot"
-meta_desc: "Documentation for the aws.rds.getClusterSnapshot function with examples, input properties, output properties, and supporting types."
+title: "GetClusterSnapshot"
+title_tag: "Function GetClusterSnapshot | Module rds | Package AWS"
+meta_desc: "Explore the GetClusterSnapshot function of the rds module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a DB Cluster Snapshot for use when provisioning DB clusters."
 ---
 
 
@@ -149,7 +149,7 @@ const auroraClusterInstance = new aws.rds.ClusterInstance("auroraClusterInstance
 {{% /examples %}}
 
 
-## Using getClusterSnapshot {#using}
+## Using GetClusterSnapshot {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -510,7 +510,7 @@ included in the returned results by default. Possible values are, `automated`, `
 
 
 
-## getClusterSnapshot Result {#result}
+## GetClusterSnapshot Result {#result}
 
 The following output properties are available:
 

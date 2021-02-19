@@ -1,8 +1,8 @@
 
 ---
 title: "PodSecurityPolicyTemplate"
-title_tag: "rancher2.PodSecurityPolicyTemplate"
-meta_desc: "Documentation for the rancher2.PodSecurityPolicyTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource PodSecurityPolicyTemplate | Package Rancher 2"
+meta_desc: "Explore the PodSecurityPolicyTemplate resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 PodSecurityPolicyTemplate resource. This can be used to create PodSecurityPolicyTemplates for Rancher v2 environments and retrieve their information."
 ---
 
 

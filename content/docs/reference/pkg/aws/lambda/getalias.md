@@ -1,8 +1,8 @@
 
 ---
-title: "getAlias"
-title_tag: "aws.lambda.getAlias"
-meta_desc: "Documentation for the aws.lambda.getAlias function with examples, input properties, output properties, and supporting types."
+title: "GetAlias"
+title_tag: "Function GetAlias | Module lambda | Package AWS"
+meta_desc: "Explore the GetAlias function of the lambda module, including examples, input properties, output properties, and supporting types. Provides information about a Lambda Alias."
 ---
 
 
@@ -92,7 +92,7 @@ const production = pulumi.output(aws.lambda.getAlias({
 {{% /examples %}}
 
 
-## Using getAlias {#using}
+## Using GetAlias {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ The following arguments are supported:
 
 
 
-## getAlias Result {#result}
+## GetAlias Result {#result}
 
 The following output properties are available:
 

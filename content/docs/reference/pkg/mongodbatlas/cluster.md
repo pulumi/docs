@@ -1,8 +1,8 @@
 
 ---
 title: "Cluster"
-title_tag: "mongodbatlas.Cluster"
-meta_desc: "Documentation for the mongodbatlas.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Cluster | Package MongoDB Atlas"
+meta_desc: "Explore the Cluster resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.Cluster` provides a Cluster resource. The resource lets you create, edit and delete clusters. The resource requires your Project ID."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getServiceComponent"
-title_tag: "aiven.getServiceComponent"
-meta_desc: "Documentation for the aiven.getServiceComponent function with examples, input properties, output properties, and supporting types."
+title: "GetServiceComponent"
+title_tag: "Function GetServiceComponent | Package Aiven"
+meta_desc: "Explore the GetServiceComponent function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Service Component Data Source"
 ---
 
 
@@ -115,7 +115,7 @@ const sc1 = aiven.getServiceComponent({
 {{% /examples %}}
 
 
-## Using getServiceComponent {#using}
+## Using GetServiceComponent {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -132,8 +132,6 @@ const sc1 = aiven.getServiceComponent({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceComponent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetServiceComponentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetServiceComponentResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetServiceComponent` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -540,7 +538,7 @@ but hasn't yet fully caught up.
 
 
 
-## getServiceComponent Result {#result}
+## GetServiceComponent Result {#result}
 
 The following output properties are available:
 

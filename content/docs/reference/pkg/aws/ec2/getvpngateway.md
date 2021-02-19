@@ -1,8 +1,8 @@
 
 ---
-title: "getVpnGateway"
-title_tag: "aws.ec2.getVpnGateway"
-meta_desc: "Documentation for the aws.ec2.getVpnGateway function with examples, input properties, output properties, and supporting types."
+title: "GetVpnGateway"
+title_tag: "Function GetVpnGateway | Module ec2 | Package AWS"
+meta_desc: "Explore the GetVpnGateway function of the ec2 module, including examples, input properties, output properties, and supporting types. The VPN Gateway data source provides details about"
 ---
 
 
@@ -118,7 +118,7 @@ export const vpnGatewayId = selected.then(selected => selected.id);
 {{% /examples %}}
 
 
-## Using getVpnGateway {#using}
+## Using GetVpnGateway {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -463,7 +463,7 @@ a pair on the desired VPN Gateway.
 
 
 
-## getVpnGateway Result {#result}
+## GetVpnGateway Result {#result}
 
 The following output properties are available:
 

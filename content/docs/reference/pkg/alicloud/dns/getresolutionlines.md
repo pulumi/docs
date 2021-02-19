@@ -1,8 +1,8 @@
 
 ---
-title: "getResolutionLines"
-title_tag: "alicloud.dns.getResolutionLines"
-meta_desc: "Documentation for the alicloud.dns.getResolutionLines function with examples, input properties, output properties, and supporting types."
+title: "GetResolutionLines"
+title_tag: "Function GetResolutionLines | Module dns | Package AliCloud"
+meta_desc: "Explore the GetResolutionLines function of the dns module, including examples, input properties, output properties, and supporting types. This data source provides a list of DNS Resolution Lines in an Alibaba Cloud account according to the specified filters."
 ---
 
 
@@ -107,7 +107,7 @@ export const firstLineCode = resolutionLinesDs.lines[0].lineCode;
 {{% /examples %}}
 
 
-## Using getResolutionLines {#using}
+## Using GetResolutionLines {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -124,8 +124,6 @@ export const firstLineCode = resolutionLinesDs.lines[0].lineCode;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResolutionLines<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetResolutionLinesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetResolutionLinesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetResolutionLines` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -440,7 +438,7 @@ The following arguments are supported:
 
 
 
-## getResolutionLines Result {#result}
+## GetResolutionLines Result {#result}
 
 The following output properties are available:
 

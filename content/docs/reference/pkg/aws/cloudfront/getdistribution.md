@@ -1,8 +1,8 @@
 
 ---
-title: "getDistribution"
-title_tag: "aws.cloudfront.getDistribution"
-meta_desc: "Documentation for the aws.cloudfront.getDistribution function with examples, input properties, output properties, and supporting types."
+title: "GetDistribution"
+title_tag: "Function GetDistribution | Module cloudfront | Package AWS"
+meta_desc: "Explore the GetDistribution function of the cloudfront module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a CloudFront distribution."
 ---
 
 
@@ -88,7 +88,7 @@ const test = pulumi.output(aws.cloudfront.getDistribution({
 {{% /examples %}}
 
 
-## Using getDistribution {#using}
+## Using GetDistribution {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -225,7 +225,7 @@ The following arguments are supported:
 
 
 
-## getDistribution Result {#result}
+## GetDistribution Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "AuthBackend"
-title_tag: "vault.AuthBackend"
-meta_desc: "Documentation for the vault.AuthBackend resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AuthBackend | Package Vault"
+meta_desc: "Explore the AuthBackend resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 
 

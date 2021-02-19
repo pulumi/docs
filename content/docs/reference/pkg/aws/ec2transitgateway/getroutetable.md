@@ -1,8 +1,8 @@
 
 ---
-title: "getRouteTable"
-title_tag: "aws.ec2transitgateway.getRouteTable"
-meta_desc: "Documentation for the aws.ec2transitgateway.getRouteTable function with examples, input properties, output properties, and supporting types."
+title: "GetRouteTable"
+title_tag: "Function GetRouteTable | Module ec2transitgateway | Package AWS"
+meta_desc: "Explore the GetRouteTable function of the ec2transitgateway module, including examples, input properties, output properties, and supporting types. Get information on an EC2 Transit Gateway Route Table."
 ---
 
 
@@ -206,7 +206,7 @@ const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
 {{% /examples %}}
 
 
-## Using getRouteTable {#using}
+## Using GetRouteTable {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -387,7 +387,7 @@ The following arguments are supported:
 
 
 
-## getRouteTable Result {#result}
+## GetRouteTable Result {#result}
 
 The following output properties are available:
 

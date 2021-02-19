@@ -1,8 +1,8 @@
 
 ---
-title: "getM3Aggregator"
-title_tag: "aiven.getM3Aggregator"
-meta_desc: "Documentation for the aiven.getM3Aggregator function with examples, input properties, output properties, and supporting types."
+title: "GetM3Aggregator"
+title_tag: "Function GetM3Aggregator | Package Aiven"
+meta_desc: "Explore the GetM3Aggregator function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # M3 Aggregator Data Source"
 ---
 
 
@@ -94,7 +94,7 @@ const m3a = aiven.getM3Aggregator({
 {{% /examples %}}
 
 
-## Using getM3Aggregator {#using}
+## Using GetM3Aggregator {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1019,7 +1019,7 @@ deletion is done.
 
 
 
-## getM3Aggregator Result {#result}
+## GetM3Aggregator Result {#result}
 
 The following output properties are available:
 

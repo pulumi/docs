@@ -1,8 +1,8 @@
 
 ---
-title: "getAgentConfig"
-title_tag: "consul.getAgentConfig"
-meta_desc: "Documentation for the consul.getAgentConfig function with examples, input properties, output properties, and supporting types."
+title: "GetAgentConfig"
+title_tag: "Function GetAgentConfig | Package Consul"
+meta_desc: "Explore the GetAgentConfig function of the Consul package, including examples, input properties, output properties, and supporting types. &gt; **Note:** The `consul.getAgentConfig` resource differs from [`consul.getAgentSelf`](https://www.terraform.io/docs/providers/consul/d/agent_self.html),"
 ---
 
 
@@ -94,7 +94,7 @@ export const consulVersion = remoteAgent.version;
 {{% /examples %}}
 
 
-## Using getAgentConfig {#using}
+## Using GetAgentConfig {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -112,8 +112,6 @@ export const consulVersion = remoteAgent.version;
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAgentConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAgentConfigResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetAgentConfig` in the Go SDK.
-
 {{% /choosable %}}
 
 
@@ -126,7 +124,7 @@ export const consulVersion = remoteAgent.version;
 
 
 
-## getAgentConfig Result {#result}
+## GetAgentConfig Result {#result}
 
 The following output properties are available:
 

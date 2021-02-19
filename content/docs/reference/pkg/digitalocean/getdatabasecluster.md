@@ -1,8 +1,8 @@
 
 ---
-title: "getDatabaseCluster"
-title_tag: "digitalocean.getDatabaseCluster"
-meta_desc: "Documentation for the digitalocean.getDatabaseCluster function with examples, input properties, output properties, and supporting types."
+title: "GetDatabaseCluster"
+title_tag: "Function GetDatabaseCluster | Package DigitalOcean"
+meta_desc: "Explore the GetDatabaseCluster function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Provides information on a DigitalOcean database cluster resource."
 ---
 
 
@@ -94,7 +94,7 @@ export const databaseOutput = example.then(example => example.uri);
 {{% /examples %}}
 
 
-## Using getDatabaseCluster {#using}
+## Using GetDatabaseCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -231,7 +231,7 @@ The following arguments are supported:
 
 
 
-## getDatabaseCluster Result {#result}
+## GetDatabaseCluster Result {#result}
 
 The following output properties are available:
 

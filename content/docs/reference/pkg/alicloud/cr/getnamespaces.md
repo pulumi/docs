@@ -1,8 +1,8 @@
 
 ---
-title: "getNamespaces"
-title_tag: "alicloud.cr.getNamespaces"
-meta_desc: "Documentation for the alicloud.cr.getNamespaces function with examples, input properties, output properties, and supporting types."
+title: "GetNamespaces"
+title_tag: "Function GetNamespaces | Module cr | Package AliCloud"
+meta_desc: "Explore the GetNamespaces function of the cr module, including examples, input properties, output properties, and supporting types. This data source provides a list Container Registry namespaces on Alibaba Cloud."
 ---
 
 
@@ -104,7 +104,7 @@ export const output = myNamespaces.namespaces;
 {{% /examples %}}
 
 
-## Using getNamespaces {#using}
+## Using GetNamespaces {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -121,8 +121,6 @@ export const output = myNamespaces.namespaces;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNamespaces<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNamespacesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNamespacesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetNamespaces` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -241,7 +239,7 @@ The following arguments are supported:
 
 
 
-## getNamespaces Result {#result}
+## GetNamespaces Result {#result}
 
 The following output properties are available:
 

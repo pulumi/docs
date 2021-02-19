@@ -1,8 +1,8 @@
 
 ---
 title: "LogsMetric"
-title_tag: "datadog.LogsMetric"
-meta_desc: "Documentation for the datadog.LogsMetric resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource LogsMetric | Package Datadog"
+meta_desc: "Explore the LogsMetric resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Resource for interacting with the logs_metric API"
 ---
 
 

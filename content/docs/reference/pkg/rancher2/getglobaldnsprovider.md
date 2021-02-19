@@ -1,8 +1,8 @@
 
 ---
-title: "getGlobalDnsProvider"
-title_tag: "rancher2.getGlobalDnsProvider"
-meta_desc: "Documentation for the rancher2.getGlobalDnsProvider function with examples, input properties, output properties, and supporting types."
+title: "GetGlobalDnsProvider"
+title_tag: "Function GetGlobalDnsProvider | Package Rancher 2"
+meta_desc: "Explore the GetGlobalDnsProvider function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Provides a Rancher V2 Global DNS Provider data source. Use this data source to retrieve information about a Rancher v2 global DNS provider"
 ---
 
 
@@ -88,7 +88,7 @@ const foo = pulumi.output(rancher2.getGlobalDnsProvider({
 {{% /examples %}}
 
 
-## Using getGlobalDnsProvider {#using}
+## Using GetGlobalDnsProvider {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## getGlobalDnsProvider Result {#result}
+## GetGlobalDnsProvider Result {#result}
 
 The following output properties are available:
 

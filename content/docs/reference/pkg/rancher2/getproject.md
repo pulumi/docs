@@ -1,8 +1,8 @@
 
 ---
-title: "getProject"
-title_tag: "rancher2.getProject"
-meta_desc: "Documentation for the rancher2.getProject function with examples, input properties, output properties, and supporting types."
+title: "GetProject"
+title_tag: "Function GetProject | Package Rancher 2"
+meta_desc: "Explore the GetProject function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the rancher2.getProject function with examples, in
 
 
 
-## Using getProject {#using}
+## Using GetProject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -154,7 +154,7 @@ The following arguments are supported:
 
 
 
-## getProject Result {#result}
+## GetProject Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getImageRecipe"
-title_tag: "aws.imagebuilder.getImageRecipe"
-meta_desc: "Documentation for the aws.imagebuilder.getImageRecipe function with examples, input properties, output properties, and supporting types."
+title: "GetImageRecipe"
+title_tag: "Function GetImageRecipe | Module imagebuilder | Package AWS"
+meta_desc: "Explore the GetImageRecipe function of the imagebuilder module, including examples, input properties, output properties, and supporting types. Provides details about an Image Builder Image Recipe."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.imagebuilder.getImageRecipe({
 {{% /examples %}}
 
 
-## Using getImageRecipe {#using}
+## Using GetImageRecipe {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## getImageRecipe Result {#result}
+## GetImageRecipe Result {#result}
 
 The following output properties are available:
 

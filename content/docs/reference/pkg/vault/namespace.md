@@ -1,8 +1,8 @@
 
 ---
 title: "Namespace"
-title_tag: "vault.Namespace"
-meta_desc: "Documentation for the vault.Namespace resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Namespace | Package Vault"
+meta_desc: "Explore the Namespace resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage [Namespaces](https://www.vaultproject.io/docs/enterprise/namespaces/index.html)."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getCluster"
-title_tag: "aws.rds.getCluster"
-meta_desc: "Documentation for the aws.rds.getCluster function with examples, input properties, output properties, and supporting types."
+title: "GetCluster"
+title_tag: "Function GetCluster | Module rds | Package AWS"
+meta_desc: "Explore the GetCluster function of the rds module, including examples, input properties, output properties, and supporting types. Provides information about an RDS cluster."
 ---
 
 
@@ -88,7 +88,7 @@ const clusterName = pulumi.output(aws.rds.getCluster({
 {{% /examples %}}
 
 
-## Using getCluster {#using}
+## Using GetCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -225,7 +225,7 @@ The following arguments are supported:
 
 
 
-## getCluster Result {#result}
+## GetCluster Result {#result}
 
 The following output properties are available:
 

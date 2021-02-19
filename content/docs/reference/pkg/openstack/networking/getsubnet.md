@@ -1,8 +1,8 @@
 
 ---
-title: "getSubnet"
-title_tag: "openstack.networking.getSubnet"
-meta_desc: "Documentation for the openstack.networking.getSubnet function with examples, input properties, output properties, and supporting types."
+title: "GetSubnet"
+title_tag: "Function GetSubnet | Module networking | Package Open Stack"
+meta_desc: "Explore the GetSubnet function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack subnet."
 ---
 
 
@@ -89,7 +89,7 @@ const subnet1 = pulumi.output(openstack.networking.getSubnet({
 {{% /examples %}}
 
 
-## Using getSubnet {#using}
+## Using GetSubnet {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -762,7 +762,7 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
 
 
 
-## getSubnet Result {#result}
+## GetSubnet Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "KubernetesCluster"
-title_tag: "digitalocean.KubernetesCluster"
-meta_desc: "Documentation for the digitalocean.KubernetesCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource KubernetesCluster | Package DigitalOcean"
+meta_desc: "Explore the KubernetesCluster resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

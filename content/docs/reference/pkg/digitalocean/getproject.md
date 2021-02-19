@@ -1,8 +1,8 @@
 
 ---
-title: "getProject"
-title_tag: "digitalocean.getProject"
-meta_desc: "Documentation for the digitalocean.getProject function with examples, input properties, output properties, and supporting types."
+title: "GetProject"
+title_tag: "Function GetProject | Package DigitalOcean"
+meta_desc: "Explore the GetProject function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a single DigitalOcean project. If neither the `id` nor `name` attributes are provided,"
 ---
 
 
@@ -97,7 +97,7 @@ const staging = pulumi.output(digitalocean.getProject({
 {{% /examples %}}
 
 
-## Using getProject {#using}
+## Using GetProject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -242,7 +242,7 @@ one project has the provided name or if no project has that name.
 
 
 
-## getProject Result {#result}
+## GetProject Result {#result}
 
 The following output properties are available:
 

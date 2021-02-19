@@ -1,8 +1,8 @@
 
 ---
 title: "Service"
-title_tag: "consul.Service"
-meta_desc: "Documentation for the consul.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Service | Package Consul"
+meta_desc: "Explore the Service resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. A high-level resource for creating a Service in Consul in the Consul catalog. This"
 ---
 
 

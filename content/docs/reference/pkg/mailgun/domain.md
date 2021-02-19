@@ -1,8 +1,8 @@
 
 ---
 title: "Domain"
-title_tag: "mailgun.Domain"
-meta_desc: "Documentation for the mailgun.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Domain | Package Mailgun"
+meta_desc: "Explore the Domain resource of the Mailgun package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Mailgun App resource. This can be used to"
 ---
 
 

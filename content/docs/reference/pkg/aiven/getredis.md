@@ -1,8 +1,8 @@
 
 ---
-title: "getRedis"
-title_tag: "aiven.getRedis"
-meta_desc: "Documentation for the aiven.getRedis function with examples, input properties, output properties, and supporting types."
+title: "GetRedis"
+title_tag: "Function GetRedis | Package Aiven"
+meta_desc: "Explore the GetRedis function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Redis Data Source"
 ---
 
 
@@ -94,7 +94,7 @@ const redis1 = aiven.getRedis({
 {{% /examples %}}
 
 
-## Using getRedis {#using}
+## Using GetRedis {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1019,7 +1019,7 @@ deletion is done.
 
 
 
-## getRedis Result {#result}
+## GetRedis Result {#result}
 
 The following output properties are available:
 

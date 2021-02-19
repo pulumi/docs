@@ -1,8 +1,8 @@
 
 ---
-title: "getHostedZone"
-title_tag: "aws.elasticbeanstalk.getHostedZone"
-meta_desc: "Documentation for the aws.elasticbeanstalk.getHostedZone function with examples, input properties, output properties, and supporting types."
+title: "GetHostedZone"
+title_tag: "Function GetHostedZone | Module elasticbeanstalk | Package AWS"
+meta_desc: "Explore the GetHostedZone function of the elasticbeanstalk module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an [elastic beanstalk hosted zone](http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region)."
 ---
 
 
@@ -81,7 +81,7 @@ const current = pulumi.output(aws.elasticbeanstalk.getHostedZone({ async: true }
 {{% /examples %}}
 
 
-## Using getHostedZone {#using}
+## Using GetHostedZone {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -98,8 +98,6 @@ const current = pulumi.output(aws.elasticbeanstalk.getHostedZone({ async: true }
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostedZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetHostedZoneArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetHostedZoneResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetHostedZone` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -182,7 +180,7 @@ The following arguments are supported:
 
 
 
-## getHostedZone Result {#result}
+## GetHostedZone Result {#result}
 
 The following output properties are available:
 

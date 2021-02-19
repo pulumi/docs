@@ -1,8 +1,8 @@
 
 ---
 title: "ObjectStorageObject"
-title_tag: "linode.ObjectStorageObject"
-meta_desc: "Documentation for the linode.ObjectStorageObject resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ObjectStorageObject | Package Linode"
+meta_desc: "Explore the ObjectStorageObject resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode Object Storage Object resource. This can be used to create, modify, and delete Linodes Object Storage Objects for Buckets."
 ---
 
 

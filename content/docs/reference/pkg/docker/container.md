@@ -1,8 +1,8 @@
 
 ---
 title: "Container"
-title_tag: "docker.Container"
-meta_desc: "Documentation for the docker.Container resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Container | Package Docker"
+meta_desc: "Explore the Container resource of the Docker package, including examples, input properties, output properties, lookup functions, and supporting types. Manages the lifecycle of a Docker container."
 ---
 
 

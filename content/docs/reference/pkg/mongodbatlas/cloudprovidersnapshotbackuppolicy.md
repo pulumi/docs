@@ -1,8 +1,8 @@
 
 ---
 title: "CloudProviderSnapshotBackupPolicy"
-title_tag: "mongodbatlas.CloudProviderSnapshotBackupPolicy"
-meta_desc: "Documentation for the mongodbatlas.CloudProviderSnapshotBackupPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource CloudProviderSnapshotBackupPolicy | Package MongoDB Atlas"
+meta_desc: "Explore the CloudProviderSnapshotBackupPolicy resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getCatalogServices"
-title_tag: "consul.getCatalogServices"
-meta_desc: "Documentation for the consul.getCatalogServices function with examples, input properties, output properties, and supporting types."
+title: "GetCatalogServices"
+title_tag: "Function GetCatalogServices | Package Consul"
+meta_desc: "Explore the GetCatalogServices function of the Consul package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the consul.getCatalogServices function with exampl
 
 
 
-## Using getCatalogServices {#using}
+## Using GetCatalogServices {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -30,8 +30,6 @@ meta_desc: "Documentation for the consul.getCatalogServices function with exampl
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCatalogServices<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCatalogServicesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCatalogServicesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetCatalogServices` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -110,7 +108,7 @@ The following arguments are supported:
 
 
 
-## getCatalogServices Result {#result}
+## GetCatalogServices Result {#result}
 
 The following output properties are available:
 

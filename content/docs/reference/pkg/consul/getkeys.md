@@ -1,8 +1,8 @@
 
 ---
-title: "getKeys"
-title_tag: "consul.getKeys"
-meta_desc: "Documentation for the consul.getKeys function with examples, input properties, output properties, and supporting types."
+title: "GetKeys"
+title_tag: "Function GetKeys | Package Consul"
+meta_desc: "Explore the GetKeys function of the Consul package, including examples, input properties, output properties, and supporting types. The `consul.Keys` resource reads values from the Consul key/value store."
 ---
 
 
@@ -143,7 +143,7 @@ const appInstance = new aws.ec2.Instance("app", {
 {{% /examples %}}
 
 
-## Using getKeys {#using}
+## Using GetKeys {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -376,7 +376,7 @@ token that the agent provides by default.
 
 
 
-## getKeys Result {#result}
+## GetKeys Result {#result}
 
 The following output properties are available:
 

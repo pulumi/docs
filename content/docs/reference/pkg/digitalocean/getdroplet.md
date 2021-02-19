@@ -1,8 +1,8 @@
 
 ---
-title: "getDroplet"
-title_tag: "digitalocean.getDroplet"
-meta_desc: "Documentation for the digitalocean.getDroplet function with examples, input properties, output properties, and supporting types."
+title: "GetDroplet"
+title_tag: "Function GetDroplet | Package DigitalOcean"
+meta_desc: "Explore the GetDroplet function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a Droplet for use in other resources. This data source provides"
 ---
 
 
@@ -101,7 +101,7 @@ export const dropletOutput = example.then(example => example.ipv4Address);
 {{% /examples %}}
 
 
-## Using getDroplet {#using}
+## Using GetDroplet {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -282,7 +282,7 @@ The following arguments are supported:
 
 
 
-## getDroplet Result {#result}
+## GetDroplet Result {#result}
 
 The following output properties are available:
 

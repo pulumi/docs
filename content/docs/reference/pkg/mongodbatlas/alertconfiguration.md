@@ -1,8 +1,8 @@
 
 ---
 title: "AlertConfiguration"
-title_tag: "mongodbatlas.AlertConfiguration"
-meta_desc: "Documentation for the mongodbatlas.AlertConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AlertConfiguration | Package MongoDB Atlas"
+meta_desc: "Explore the AlertConfiguration resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.AlertConfiguration` provides an Alert Configuration resource to define the conditions that trigger an alert and the methods of notification within a MongoDB Atlas project."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "SecurityMonitoringRule"
-title_tag: "datadog.SecurityMonitoringRule"
-meta_desc: "Documentation for the datadog.SecurityMonitoringRule resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource SecurityMonitoringRule | Package Datadog"
+meta_desc: "Explore the SecurityMonitoringRule resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog [Security Monitoring Rule API](https://docs.datadoghq.com/api/v2/security-monitoring/) resource. This can be used to create and manage Datadog security monitoring rules. To change settings for a default rule use [datadog_security_default_rule](https://www.terraform.io/resources/security_monitoring_default_rule) instead."
 ---
 
 

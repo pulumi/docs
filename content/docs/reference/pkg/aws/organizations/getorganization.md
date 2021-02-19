@@ -1,8 +1,8 @@
 
 ---
-title: "getOrganization"
-title_tag: "aws.organizations.getOrganization"
-meta_desc: "Documentation for the aws.organizations.getOrganization function with examples, input properties, output properties, and supporting types."
+title: "GetOrganization"
+title_tag: "Function GetOrganization | Module organizations | Package AWS"
+meta_desc: "Explore the GetOrganization function of the organizations module, including examples, input properties, output properties, and supporting types. Get information about the organization that the user&#39;s account belongs to"
 ---
 
 
@@ -266,7 +266,7 @@ const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("snsTopicPolicyTopicPo
 {{% /examples %}}
 
 
-## Using getOrganization {#using}
+## Using GetOrganization {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -298,7 +298,7 @@ const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("snsTopicPolicyTopicPo
 
 
 
-## getOrganization Result {#result}
+## GetOrganization Result {#result}
 
 The following output properties are available:
 

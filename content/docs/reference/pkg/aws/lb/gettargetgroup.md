@@ -1,8 +1,8 @@
 
 ---
-title: "getTargetGroup"
-title_tag: "aws.lb.getTargetGroup"
-meta_desc: "Documentation for the aws.lb.getTargetGroup function with examples, input properties, output properties, and supporting types."
+title: "GetTargetGroup"
+title_tag: "Function GetTargetGroup | Module lb | Package AWS"
+meta_desc: "Explore the GetTargetGroup function of the lb module, including examples, input properties, output properties, and supporting types. &gt; **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical."
 ---
 
 
@@ -123,7 +123,7 @@ const test = aws.lb.getTargetGroup({
 {{% /examples %}}
 
 
-## Using getTargetGroup {#using}
+## Using GetTargetGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -300,7 +300,7 @@ The following arguments are supported:
 
 
 
-## getTargetGroup Result {#result}
+## GetTargetGroup Result {#result}
 
 The following output properties are available:
 

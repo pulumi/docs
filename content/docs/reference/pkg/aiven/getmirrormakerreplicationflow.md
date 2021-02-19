@@ -1,8 +1,8 @@
 
 ---
-title: "getMirrorMakerReplicationFlow"
-title_tag: "aiven.getMirrorMakerReplicationFlow"
-meta_desc: "Documentation for the aiven.getMirrorMakerReplicationFlow function with examples, input properties, output properties, and supporting types."
+title: "GetMirrorMakerReplicationFlow"
+title_tag: "Function GetMirrorMakerReplicationFlow | Package Aiven"
+meta_desc: "Explore the GetMirrorMakerReplicationFlow function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # MirrorMaker 2 Replication Flow Data Source"
 ---
 
 
@@ -103,7 +103,7 @@ const f1 = aiven.getMirrorMakerReplicationFlow({
 {{% /examples %}}
 
 
-## Using getMirrorMakerReplicationFlow {#using}
+## Using GetMirrorMakerReplicationFlow {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -444,7 +444,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
 
 
 
-## getMirrorMakerReplicationFlow Result {#result}
+## GetMirrorMakerReplicationFlow Result {#result}
 
 The following output properties are available:
 

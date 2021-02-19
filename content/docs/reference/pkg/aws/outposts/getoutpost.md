@@ -1,8 +1,8 @@
 
 ---
-title: "getOutpost"
-title_tag: "aws.outposts.getOutpost"
-meta_desc: "Documentation for the aws.outposts.getOutpost function with examples, input properties, output properties, and supporting types."
+title: "GetOutpost"
+title_tag: "Function GetOutpost | Module outposts | Package AWS"
+meta_desc: "Explore the GetOutpost function of the outposts module, including examples, input properties, output properties, and supporting types. Provides details about an Outposts Outpost."
 ---
 
 
@@ -89,7 +89,7 @@ const example = pulumi.output(aws.outposts.getOutpost({
 {{% /examples %}}
 
 
-## Using getOutpost {#using}
+## Using GetOutpost {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -106,8 +106,6 @@ const example = pulumi.output(aws.outposts.getOutpost({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOutpost<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetOutpostArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetOutpostResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetOutpost` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -270,7 +268,7 @@ The following arguments are supported:
 
 
 
-## getOutpost Result {#result}
+## GetOutpost Result {#result}
 
 The following output properties are available:
 

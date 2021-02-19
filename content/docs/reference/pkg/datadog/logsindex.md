@@ -1,8 +1,8 @@
 
 ---
 title: "LogsIndex"
-title_tag: "datadog.LogsIndex"
-meta_desc: "Documentation for the datadog.LogsIndex resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource LogsIndex | Package Datadog"
+meta_desc: "Explore the LogsIndex resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

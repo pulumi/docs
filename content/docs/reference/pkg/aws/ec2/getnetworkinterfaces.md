@@ -1,8 +1,8 @@
 
 ---
-title: "getNetworkInterfaces"
-title_tag: "aws.ec2.getNetworkInterfaces"
-meta_desc: "Documentation for the aws.ec2.getNetworkInterfaces function with examples, input properties, output properties, and supporting types."
+title: "GetNetworkInterfaces"
+title_tag: "Function GetNetworkInterfaces | Module ec2 | Package AWS"
+meta_desc: "Explore the GetNetworkInterfaces function of the ec2 module, including examples, input properties, output properties, and supporting types. {{% examples %}}"
 ---
 
 
@@ -86,7 +86,7 @@ export const example = exampleNetworkInterfaces.then(exampleNetworkInterfaces =>
 {{% /examples %}}
 
 
-## Using getNetworkInterfaces {#using}
+## Using GetNetworkInterfaces {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -103,8 +103,6 @@ export const example = exampleNetworkInterfaces.then(exampleNetworkInterfaces =>
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkInterfaces<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNetworkInterfacesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNetworkInterfacesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetNetworkInterfaces` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -231,7 +229,7 @@ a pair on the desired network interfaces.
 
 
 
-## getNetworkInterfaces Result {#result}
+## GetNetworkInterfaces Result {#result}
 
 The following output properties are available:
 

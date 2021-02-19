@@ -1,8 +1,8 @@
 
 ---
 title: "IpList"
-title_tag: "cloudflare.IpList"
-meta_desc: "Documentation for the cloudflare.IpList resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource IpList | Package Cloudflare"
+meta_desc: "Explore the IpList resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. IP Lists are a set of IP addresses or CIDR ranges that are configured on the account level. Once created, IP Lists can be "
 ---
 
 

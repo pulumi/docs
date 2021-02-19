@@ -1,8 +1,8 @@
 
 ---
-title: "getAccessCredentials"
-title_tag: "vault.azure.getAccessCredentials"
-meta_desc: "Documentation for the vault.azure.getAccessCredentials function with examples, input properties, output properties, and supporting types."
+title: "GetAccessCredentials"
+title_tag: "Function GetAccessCredentials | Module azure | Package Vault"
+meta_desc: "Explore the GetAccessCredentials function of the azure module, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the vault.azure.getAccessCredentials function with
 
 
 
-## Using getAccessCredentials {#using}
+## Using GetAccessCredentials {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -30,8 +30,6 @@ meta_desc: "Documentation for the vault.azure.getAccessCredentials function with
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessCredentials<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAccessCredentialsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAccessCredentialsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetAccessCredentials` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -358,7 +356,7 @@ Azure Active Directory. Designating `true` activates testing.
 
 
 
-## getAccessCredentials Result {#result}
+## GetAccessCredentials Result {#result}
 
 The following output properties are available:
 

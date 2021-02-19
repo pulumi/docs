@@ -1,8 +1,8 @@
 
 ---
-title: "getResourceGroups"
-title_tag: "alicloud.resourcemanager.getResourceGroups"
-meta_desc: "Documentation for the alicloud.resourcemanager.getResourceGroups function with examples, input properties, output properties, and supporting types."
+title: "GetResourceGroups"
+title_tag: "Function GetResourceGroups | Module resourcemanager | Package AliCloud"
+meta_desc: "Explore the GetResourceGroups function of the resourcemanager module, including examples, input properties, output properties, and supporting types. This data source provides resource groups of the current Alibaba Cloud user."
 ---
 
 
@@ -98,7 +98,7 @@ export const firstResourceGroupId = example.groups[0].id;
 {{% /examples %}}
 
 
-## Using getResourceGroups {#using}
+## Using GetResourceGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -115,8 +115,6 @@ export const firstResourceGroupId = example.groups[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourceGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetResourceGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetResourceGroupsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetResourceGroups` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -355,7 +353,7 @@ The following arguments are supported:
 
 
 
-## getResourceGroups Result {#result}
+## GetResourceGroups Result {#result}
 
 The following output properties are available:
 

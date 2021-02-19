@@ -1,8 +1,8 @@
 
 ---
-title: "getSnapshot"
-title_tag: "openstack.sharedfilesystem.getSnapshot"
-meta_desc: "Documentation for the openstack.sharedfilesystem.getSnapshot function with examples, input properties, output properties, and supporting types."
+title: "GetSnapshot"
+title_tag: "Function GetSnapshot | Module sharedfilesystem | Package Open Stack"
+meta_desc: "Explore the GetSnapshot function of the sharedfilesystem module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available Shared File System snapshot."
 ---
 
 
@@ -89,7 +89,7 @@ const snapshot1 = pulumi.output(openstack.sharedfilesystem.getSnapshot({
 {{% /examples %}}
 
 
-## Using getSnapshot {#using}
+## Using GetSnapshot {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -106,8 +106,6 @@ const snapshot1 = pulumi.output(openstack.sharedfilesystem.getSnapshot({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSnapshotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSnapshotResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetSnapshot` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -358,7 +356,7 @@ The following arguments are supported:
 
 
 
-## getSnapshot Result {#result}
+## GetSnapshot Result {#result}
 
 The following output properties are available:
 

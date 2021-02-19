@@ -1,8 +1,8 @@
 
 ---
-title: "getGroup"
-title_tag: "aws.iam.getGroup"
-meta_desc: "Documentation for the aws.iam.getGroup function with examples, input properties, output properties, and supporting types."
+title: "GetGroup"
+title_tag: "Function GetGroup | Module iam | Package AWS"
+meta_desc: "Explore the GetGroup function of the iam module, including examples, input properties, output properties, and supporting types. This data source can be used to fetch information about a specific"
 ---
 
 
@@ -90,7 +90,7 @@ const example = pulumi.output(aws.iam.getGroup({
 {{% /examples %}}
 
 
-## Using getGroup {#using}
+## Using GetGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -191,7 +191,7 @@ The following arguments are supported:
 
 
 
-## getGroup Result {#result}
+## GetGroup Result {#result}
 
 The following output properties are available:
 

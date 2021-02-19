@@ -1,8 +1,8 @@
 
 ---
-title: "getAccountTeamProject"
-title_tag: "aiven.getAccountTeamProject"
-meta_desc: "Documentation for the aiven.getAccountTeamProject function with examples, input properties, output properties, and supporting types."
+title: "GetAccountTeamProject"
+title_tag: "Function GetAccountTeamProject | Package Aiven"
+meta_desc: "Explore the GetAccountTeamProject function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Account Team Project Data Source"
 ---
 
 
@@ -17,7 +17,7 @@ The Account Team Project data source provides information about the existing Acc
 
 
 
-## Using getAccountTeamProject {#using}
+## Using GetAccountTeamProject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -242,7 +242,7 @@ The following arguments are supported:
 
 
 
-## getAccountTeamProject Result {#result}
+## GetAccountTeamProject Result {#result}
 
 The following output properties are available:
 

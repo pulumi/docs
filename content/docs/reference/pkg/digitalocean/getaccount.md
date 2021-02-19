@@ -1,8 +1,8 @@
 
 ---
-title: "getAccount"
-title_tag: "digitalocean.getAccount"
-meta_desc: "Documentation for the digitalocean.getAccount function with examples, input properties, output properties, and supporting types."
+title: "GetAccount"
+title_tag: "Function GetAccount | Package DigitalOcean"
+meta_desc: "Explore the GetAccount function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on your DigitalOcean account."
 ---
 
 
@@ -81,7 +81,7 @@ const example = pulumi.output(digitalocean.getAccount({ async: true }));
 {{% /examples %}}
 
 
-## Using getAccount {#using}
+## Using GetAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -99,8 +99,6 @@ const example = pulumi.output(digitalocean.getAccount({ async: true }));
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAccountResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetAccount` in the Go SDK.
-
 {{% /choosable %}}
 
 
@@ -113,7 +111,7 @@ const example = pulumi.output(digitalocean.getAccount({ async: true }));
 
 
 
-## getAccount Result {#result}
+## GetAccount Result {#result}
 
 The following output properties are available:
 

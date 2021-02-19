@@ -1,8 +1,8 @@
 
 ---
 title: "WorkerScript"
-title_tag: "cloudflare.WorkerScript"
-meta_desc: "Documentation for the cloudflare.WorkerScript resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource WorkerScript | Package Cloudflare"
+meta_desc: "Explore the WorkerScript resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare worker script resource. In order for a script to be active, you&#39;ll also need to setup a `cloudflare.WorkerRoute`. *NOTE:*  This resource uses the Cloudflare account APIs. This requires setting the `CLOUDFLARE_ACCOUNT_ID` environment variable or `account_id` provider argument."
 ---
 
 

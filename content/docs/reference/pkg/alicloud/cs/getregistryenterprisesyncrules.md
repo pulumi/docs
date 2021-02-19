@@ -1,8 +1,8 @@
 
 ---
-title: "getRegistryEnterpriseSyncRules"
-title_tag: "alicloud.cs.getRegistryEnterpriseSyncRules"
-meta_desc: "Documentation for the alicloud.cs.getRegistryEnterpriseSyncRules function with examples, input properties, output properties, and supporting types."
+title: "GetRegistryEnterpriseSyncRules"
+title_tag: "Function GetRegistryEnterpriseSyncRules | Module cs | Package AliCloud"
+meta_desc: "Explore the GetRegistryEnterpriseSyncRules function of the cs module, including examples, input properties, output properties, and supporting types. This data source provides a list Container Registry Enterprise Edition sync rules on Alibaba Cloud."
 ---
 
 
@@ -121,7 +121,7 @@ export const output = mySyncRules.then(mySyncRules => mySyncRules.rules.map(__it
 {{% /examples %}}
 
 
-## Using getRegistryEnterpriseSyncRules {#using}
+## Using GetRegistryEnterpriseSyncRules {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -138,8 +138,6 @@ export const output = mySyncRules.then(mySyncRules => mySyncRules.rules.map(__it
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryEnterpriseSyncRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegistryEnterpriseSyncRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegistryEnterpriseSyncRulesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetRegistryEnterpriseSyncRules` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -458,7 +456,7 @@ The following arguments are supported:
 
 
 
-## getRegistryEnterpriseSyncRules Result {#result}
+## GetRegistryEnterpriseSyncRules Result {#result}
 
 The following output properties are available:
 

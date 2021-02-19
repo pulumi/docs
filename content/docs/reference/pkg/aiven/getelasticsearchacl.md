@@ -1,8 +1,8 @@
 
 ---
-title: "getElasticSearchAcl"
-title_tag: "aiven.getElasticSearchAcl"
-meta_desc: "Documentation for the aiven.getElasticSearchAcl function with examples, input properties, output properties, and supporting types."
+title: "GetElasticSearchAcl"
+title_tag: "Function GetElasticSearchAcl | Package Aiven"
+meta_desc: "Explore the GetElasticSearchAcl function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Elasticsearch ACL Data Source"
 ---
 
 
@@ -95,7 +95,7 @@ const es-acls = aiven.getElasticSearchAcl({
 {{% /examples %}}
 
 
-## Using getElasticSearchAcl {#using}
+## Using GetElasticSearchAcl {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -360,7 +360,7 @@ these APIs as long as all operations only target indexes they have been granted 
 
 
 
-## getElasticSearchAcl Result {#result}
+## GetElasticSearchAcl Result {#result}
 
 The following output properties are available:
 

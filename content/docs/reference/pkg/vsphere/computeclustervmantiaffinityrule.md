@@ -1,8 +1,8 @@
 
 ---
 title: "ComputeClusterVmAntiAffinityRule"
-title_tag: "vsphere.ComputeClusterVmAntiAffinityRule"
-meta_desc: "Documentation for the vsphere.ComputeClusterVmAntiAffinityRule resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ComputeClusterVmAntiAffinityRule | Package vSphere"
+meta_desc: "Explore the ComputeClusterVmAntiAffinityRule resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

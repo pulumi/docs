@@ -1,8 +1,8 @@
 
 ---
-title: "getEntity"
-title_tag: "vault.identity.getEntity"
-meta_desc: "Documentation for the vault.identity.getEntity function with examples, input properties, output properties, and supporting types."
+title: "GetEntity"
+title_tag: "Function GetEntity | Module identity | Package Vault"
+meta_desc: "Explore the GetEntity function of the identity module, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the vault.identity.getEntity function with example
 
 
 
-## Using getEntity {#using}
+## Using GetEntity {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -282,7 +282,7 @@ This should be supplied in conjunction with `alias_name`.
 
 
 
-## getEntity Result {#result}
+## GetEntity Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "DropletSnapshot"
-title_tag: "digitalocean.DropletSnapshot"
-meta_desc: "Documentation for the digitalocean.DropletSnapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource DropletSnapshot | Package DigitalOcean"
+meta_desc: "Explore the DropletSnapshot resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource which can be used to create a snapshot from an existing DigitalOcean Droplet."
 ---
 
 

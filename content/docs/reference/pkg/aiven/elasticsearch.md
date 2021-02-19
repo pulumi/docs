@@ -1,8 +1,8 @@
 
 ---
 title: "ElasticSearch"
-title_tag: "aiven.ElasticSearch"
-meta_desc: "Documentation for the aiven.ElasticSearch resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ElasticSearch | Package Aiven"
+meta_desc: "Explore the ElasticSearch resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Elasticsearch Resource"
 ---
 
 

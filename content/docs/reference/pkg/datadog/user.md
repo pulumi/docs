@@ -1,8 +1,8 @@
 
 ---
 title: "User"
-title_tag: "datadog.User"
-meta_desc: "Documentation for the datadog.User resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource User | Package Datadog"
+meta_desc: "Explore the User resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog user resource. This can be used to create and manage Datadog users."
 ---
 
 

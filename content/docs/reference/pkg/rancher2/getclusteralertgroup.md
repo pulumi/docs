@@ -1,8 +1,8 @@
 
 ---
-title: "getClusterAlertGroup"
-title_tag: "rancher2.getClusterAlertGroup"
-meta_desc: "Documentation for the rancher2.getClusterAlertGroup function with examples, input properties, output properties, and supporting types."
+title: "GetClusterAlertGroup"
+title_tag: "Function GetClusterAlertGroup | Package Rancher 2"
+meta_desc: "Explore the GetClusterAlertGroup function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 cluster alert group."
 ---
 
 
@@ -92,7 +92,7 @@ const foo = pulumi.output(rancher2.getClusterAlertGroup({
 {{% /examples %}}
 
 
-## Using getClusterAlertGroup {#using}
+## Using GetClusterAlertGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ The following arguments are supported:
 
 
 
-## getClusterAlertGroup Result {#result}
+## GetClusterAlertGroup Result {#result}
 
 The following output properties are available:
 

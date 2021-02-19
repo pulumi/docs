@@ -1,8 +1,8 @@
 
 ---
 title: "KeyPrefix"
-title_tag: "consul.KeyPrefix"
-meta_desc: "Documentation for the consul.KeyPrefix resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource KeyPrefix | Package Consul"
+meta_desc: "Explore the KeyPrefix resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

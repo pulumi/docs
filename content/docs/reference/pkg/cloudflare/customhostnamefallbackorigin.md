@@ -1,8 +1,8 @@
 
 ---
 title: "CustomHostnameFallbackOrigin"
-title_tag: "cloudflare.CustomHostnameFallbackOrigin"
-meta_desc: "Documentation for the cloudflare.CustomHostnameFallbackOrigin resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource CustomHostnameFallbackOrigin | Package Cloudflare"
+meta_desc: "Explore the CustomHostnameFallbackOrigin resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare custom hostname fallback origin resource."
 ---
 
 

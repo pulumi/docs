@@ -1,8 +1,8 @@
 
 ---
 title: "AccountAuthentication"
-title_tag: "aiven.AccountAuthentication"
-meta_desc: "Documentation for the aiven.AccountAuthentication resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AccountAuthentication | Package Aiven"
+meta_desc: "Explore the AccountAuthentication resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Account Authentication Resource"
 ---
 
 

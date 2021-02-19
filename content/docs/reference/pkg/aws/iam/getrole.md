@@ -1,8 +1,8 @@
 
 ---
-title: "getRole"
-title_tag: "aws.iam.getRole"
-meta_desc: "Documentation for the aws.iam.getRole function with examples, input properties, output properties, and supporting types."
+title: "GetRole"
+title_tag: "Function GetRole | Module iam | Package AWS"
+meta_desc: "Explore the GetRole function of the iam module, including examples, input properties, output properties, and supporting types. This data source can be used to fetch information about a specific"
 ---
 
 
@@ -90,7 +90,7 @@ const example = pulumi.output(aws.iam.getRole({
 {{% /examples %}}
 
 
-## Using getRole {#using}
+## Using GetRole {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -231,7 +231,7 @@ The following arguments are supported:
 
 
 
-## getRole Result {#result}
+## GetRole Result {#result}
 
 The following output properties are available:
 

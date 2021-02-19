@@ -1,8 +1,8 @@
 
 ---
-title: "getNetwork"
-title_tag: "vsphere.getNetwork"
-meta_desc: "Documentation for the vsphere.getNetwork function with examples, input properties, output properties, and supporting types."
+title: "GetNetwork"
+title_tag: "Function GetNetwork | Package vSphere"
+meta_desc: "Explore the GetNetwork function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.getNetwork` data source can be used to discover the ID of a network"
 ---
 
 
@@ -112,7 +112,7 @@ const net = datacenter.apply(datacenter => vsphere.getNetwork({
 {{% /examples %}}
 
 
-## Using getNetwork {#using}
+## Using GetNetwork {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -129,8 +129,6 @@ const net = datacenter.apply(datacenter => vsphere.getNetwork({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetwork<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNetworkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNetworkResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetNetwork` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -321,7 +319,7 @@ Distributed virtual switch ID.
 
 
 
-## getNetwork Result {#result}
+## GetNetwork Result {#result}
 
 The following output properties are available:
 

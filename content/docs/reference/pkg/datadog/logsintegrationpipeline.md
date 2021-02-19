@@ -1,8 +1,8 @@
 
 ---
 title: "LogsIntegrationPipeline"
-title_tag: "datadog.LogsIntegrationPipeline"
-meta_desc: "Documentation for the datadog.LogsIntegrationPipeline resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource LogsIntegrationPipeline | Package Datadog"
+meta_desc: "Explore the LogsIntegrationPipeline resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/v1/logs-pipelines/) resource to manage the [integrations](https://docs.datadoghq.com/logs/log_collection/?tab=tcpussite)."
 ---
 
 

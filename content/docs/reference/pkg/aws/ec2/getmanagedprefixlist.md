@@ -1,8 +1,8 @@
 
 ---
-title: "getManagedPrefixList"
-title_tag: "aws.ec2.getManagedPrefixList"
-meta_desc: "Documentation for the aws.ec2.getManagedPrefixList function with examples, input properties, output properties, and supporting types."
+title: "GetManagedPrefixList"
+title_tag: "Function GetManagedPrefixList | Module ec2 | Package AWS"
+meta_desc: "Explore the GetManagedPrefixList function of the ec2 module, including examples, input properties, output properties, and supporting types. `aws.ec2.ManagedPrefixList` provides details about a specific AWS prefix list or"
 ---
 
 
@@ -191,7 +191,7 @@ const example = pulumi.output(aws.ec2.getManagedPrefixList({
 {{% /examples %}}
 
 
-## Using getManagedPrefixList {#using}
+## Using GetManagedPrefixList {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -412,7 +412,7 @@ The following arguments are supported:
 
 
 
-## getManagedPrefixList Result {#result}
+## GetManagedPrefixList Result {#result}
 
 The following output properties are available:
 

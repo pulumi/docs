@@ -1,8 +1,8 @@
 
 ---
 title: "Userv1"
-title_tag: "fastly.Userv1"
-meta_desc: "Documentation for the fastly.Userv1 resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Userv1 | Package Fastly"
+meta_desc: "Explore the Userv1 resource of the Fastly package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Fastly User, representing the configuration for a user account for interacting with Fastly."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "DatabaseFirewall"
-title_tag: "digitalocean.DatabaseFirewall"
-meta_desc: "Documentation for the digitalocean.DatabaseFirewall resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource DatabaseFirewall | Package DigitalOcean"
+meta_desc: "Explore the DatabaseFirewall resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean database firewall resource allowing you to restrict"
 ---
 
 

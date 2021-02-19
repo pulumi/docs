@@ -1,8 +1,8 @@
 
 ---
-title: "getCluster"
-title_tag: "mongodbatlas.getCluster"
-meta_desc: "Documentation for the mongodbatlas.getCluster function with examples, input properties, output properties, and supporting types."
+title: "GetCluster"
+title_tag: "Function GetCluster | Package MongoDB Atlas"
+meta_desc: "Explore the GetCluster function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.Cluster` describes a Cluster. The. The data source requires your Project ID."
 ---
 
 
@@ -21,7 +21,7 @@ meta_desc: "Documentation for the mongodbatlas.getCluster function with examples
 
 
 
-## Using getCluster {#using}
+## Using GetCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -162,7 +162,7 @@ The following arguments are supported:
 
 
 
-## getCluster Result {#result}
+## GetCluster Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getContentLibrary"
-title_tag: "vsphere.getContentLibrary"
-meta_desc: "Documentation for the vsphere.getContentLibrary function with examples, input properties, output properties, and supporting types."
+title: "GetContentLibrary"
+title_tag: "Function GetContentLibrary | Package vSphere"
+meta_desc: "Explore the GetContentLibrary function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.ContentLibrary` data source can be used to discover the ID of a Content Library."
 ---
 
 
@@ -91,7 +91,7 @@ const library = pulumi.output(vsphere.getContentLibrary({
 {{% /examples %}}
 
 
-## Using getContentLibrary {#using}
+## Using GetContentLibrary {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -192,7 +192,7 @@ The following arguments are supported:
 
 
 
-## getContentLibrary Result {#result}
+## GetContentLibrary Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Shovel"
-title_tag: "rabbitmq.Shovel"
-meta_desc: "Documentation for the rabbitmq.Shovel resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Shovel | Package RabbitMQ"
+meta_desc: "Explore the Shovel resource of the RabbitMQ package, including examples, input properties, output properties, lookup functions, and supporting types. The ``rabbitmq.Shovel`` resource creates and manages a shovel."
 ---
 
 

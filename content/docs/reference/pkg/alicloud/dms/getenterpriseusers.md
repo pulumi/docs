@@ -1,8 +1,8 @@
 
 ---
-title: "getEnterpriseUsers"
-title_tag: "alicloud.dms.getEnterpriseUsers"
-meta_desc: "Documentation for the alicloud.dms.getEnterpriseUsers function with examples, input properties, output properties, and supporting types."
+title: "GetEnterpriseUsers"
+title_tag: "Function GetEnterpriseUsers | Module dms | Package AliCloud"
+meta_desc: "Explore the GetEnterpriseUsers function of the dms module, including examples, input properties, output properties, and supporting types. This data source provides a list of DMS Enterprise Users in an Alibaba Cloud account according to the specified filters."
 ---
 
 
@@ -113,7 +113,7 @@ export const firstUserId = dmsEnterpriseUsersDs.users[0].id;
 {{% /examples %}}
 
 
-## Using getEnterpriseUsers {#using}
+## Using GetEnterpriseUsers {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -130,8 +130,6 @@ export const firstUserId = dmsEnterpriseUsersDs.users[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnterpriseUsers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEnterpriseUsersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEnterpriseUsersResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetEnterpriseUsers` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -450,7 +448,7 @@ The following arguments are supported:
 
 
 
-## getEnterpriseUsers Result {#result}
+## GetEnterpriseUsers Result {#result}
 
 The following output properties are available:
 

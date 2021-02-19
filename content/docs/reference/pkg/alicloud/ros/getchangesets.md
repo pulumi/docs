@@ -1,8 +1,8 @@
 
 ---
-title: "getChangeSets"
-title_tag: "alicloud.ros.getChangeSets"
-meta_desc: "Documentation for the alicloud.ros.getChangeSets function with examples, input properties, output properties, and supporting types."
+title: "GetChangeSets"
+title_tag: "Function GetChangeSets | Module ros | Package AliCloud"
+meta_desc: "Explore the GetChangeSets function of the ros module, including examples, input properties, output properties, and supporting types. This data source provides the Ros Change Sets of the current Alibaba Cloud user."
 ---
 
 
@@ -110,7 +110,7 @@ export const firstRosChangeSetId = example.then(example => example.sets[0].id);
 {{% /examples %}}
 
 
-## Using getChangeSets {#using}
+## Using GetChangeSets {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -127,8 +127,6 @@ export const firstRosChangeSetId = example.then(example => example.sets[0].id);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetChangeSets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetChangeSetsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetChangeSetsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetChangeSets` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -447,7 +445,7 @@ The following arguments are supported:
 
 
 
-## getChangeSets Result {#result}
+## GetChangeSets Result {#result}
 
 The following output properties are available:
 

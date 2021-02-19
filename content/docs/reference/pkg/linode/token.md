@@ -1,8 +1,8 @@
 
 ---
 title: "Token"
-title_tag: "linode.Token"
-meta_desc: "Documentation for the linode.Token resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Token | Package Linode"
+meta_desc: "Explore the Token resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode Token resource.  This can be used to create, modify, and delete Linode API Personal Access Tokens.  Personal Access Tokens proxy user credentials for Linode API access.  This is necessary for tools, to interact with Linode services on a user&#39;s behalf."
 ---
 
 

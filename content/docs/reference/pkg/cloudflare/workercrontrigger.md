@@ -1,8 +1,8 @@
 
 ---
 title: "WorkerCronTrigger"
-title_tag: "cloudflare.WorkerCronTrigger"
-meta_desc: "Documentation for the cloudflare.WorkerCronTrigger resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource WorkerCronTrigger | Package Cloudflare"
+meta_desc: "Explore the WorkerCronTrigger resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Worker Cron Triggers allow users to map a cron expression to a Worker script"
 ---
 
 

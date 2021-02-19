@@ -1,8 +1,8 @@
 
 ---
-title: "getCluster"
-title_tag: "aws.elasticache.getCluster"
-meta_desc: "Documentation for the aws.elasticache.getCluster function with examples, input properties, output properties, and supporting types."
+title: "GetCluster"
+title_tag: "Function GetCluster | Module elasticache | Package AWS"
+meta_desc: "Explore the GetCluster function of the elasticache module, including examples, input properties, output properties, and supporting types. Use this data source to get information about an Elasticache Cluster"
 ---
 
 
@@ -88,7 +88,7 @@ const myCluster = pulumi.output(aws.elasticache.getCluster({
 {{% /examples %}}
 
 
-## Using getCluster {#using}
+## Using GetCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## getCluster Result {#result}
+## GetCluster Result {#result}
 
 The following output properties are available:
 

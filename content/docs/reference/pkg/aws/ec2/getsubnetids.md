@@ -1,8 +1,8 @@
 
 ---
-title: "getSubnetIds"
-title_tag: "aws.ec2.getSubnetIds"
-meta_desc: "Documentation for the aws.ec2.getSubnetIds function with examples, input properties, output properties, and supporting types."
+title: "GetSubnetIds"
+title_tag: "Function GetSubnetIds | Module ec2 | Package AWS"
+meta_desc: "Explore the GetSubnetIds function of the ec2 module, including examples, input properties, output properties, and supporting types. `aws.ec2.getSubnetIds` provides a set of ids for a vpc_id"
 ---
 
 
@@ -127,7 +127,7 @@ export const subnetCidrBlocks = exampleSubnet.map(s => s.cidrBlock);
 {{% /examples %}}
 
 
-## Using getSubnetIds {#using}
+## Using GetSubnetIds {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -144,8 +144,6 @@ export const subnetCidrBlocks = exampleSubnet.map(s => s.cidrBlock);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnetIds<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSubnetIdsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSubnetIdsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetSubnetIds` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -312,7 +310,7 @@ a pair on the desired subnets.
 
 
 
-## getSubnetIds Result {#result}
+## GetSubnetIds Result {#result}
 
 The following output properties are available:
 

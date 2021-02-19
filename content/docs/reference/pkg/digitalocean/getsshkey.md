@@ -1,8 +1,8 @@
 
 ---
-title: "getSshKey"
-title_tag: "digitalocean.getSshKey"
-meta_desc: "Documentation for the digitalocean.getSshKey function with examples, input properties, output properties, and supporting types."
+title: "GetSshKey"
+title_tag: "Function GetSshKey | Package DigitalOcean"
+meta_desc: "Explore the GetSshKey function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a ssh key. This data source provides the name, public key,"
 ---
 
 
@@ -94,7 +94,7 @@ const exampleDroplet = new digitalocean.Droplet("exampleDroplet", {
 {{% /examples %}}
 
 
-## Using getSshKey {#using}
+## Using GetSshKey {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -195,7 +195,7 @@ The following arguments are supported:
 
 
 
-## getSshKey Result {#result}
+## GetSshKey Result {#result}
 
 The following output properties are available:
 

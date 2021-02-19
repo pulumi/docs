@@ -1,8 +1,8 @@
 
 ---
-title: "getNetworkContainer"
-title_tag: "mongodbatlas.getNetworkContainer"
-meta_desc: "Documentation for the mongodbatlas.getNetworkContainer function with examples, input properties, output properties, and supporting types."
+title: "GetNetworkContainer"
+title_tag: "Function GetNetworkContainer | Package MongoDB Atlas"
+meta_desc: "Explore the GetNetworkContainer function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.NetworkContainer` describes a Network Peering Container. The resource requires your Project ID and container ID."
 ---
 
 
@@ -19,7 +19,7 @@ meta_desc: "Documentation for the mongodbatlas.getNetworkContainer function with
 
 
 
-## Using getNetworkContainer {#using}
+## Using GetNetworkContainer {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -160,7 +160,7 @@ The following arguments are supported:
 
 
 
-## getNetworkContainer Result {#result}
+## GetNetworkContainer Result {#result}
 
 The following output properties are available:
 

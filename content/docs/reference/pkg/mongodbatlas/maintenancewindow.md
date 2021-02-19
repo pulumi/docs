@@ -1,8 +1,8 @@
 
 ---
 title: "MaintenanceWindow"
-title_tag: "mongodbatlas.MaintenanceWindow"
-meta_desc: "Documentation for the mongodbatlas.MaintenanceWindow resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource MaintenanceWindow | Package MongoDB Atlas"
+meta_desc: "Explore the MaintenanceWindow resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.MaintenanceWindow` provides a resource to schedule a maintenance window for your MongoDB Atlas Project and/or set to defer a scheduled maintenance up to two times."
 ---
 
 

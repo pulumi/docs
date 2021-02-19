@@ -1,8 +1,8 @@
 
 ---
-title: "getHostThumbprint"
-title_tag: "vsphere.getHostThumbprint"
-meta_desc: "Documentation for the vsphere.getHostThumbprint function with examples, input properties, output properties, and supporting types."
+title: "GetHostThumbprint"
+title_tag: "Function GetHostThumbprint | Package vSphere"
+meta_desc: "Explore the GetHostThumbprint function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere_thumbprint` data source can be used to discover the host"
 ---
 
 
@@ -91,7 +91,7 @@ const thumbprint = pulumi.output(vsphere.getHostThumbprint({
 {{% /examples %}}
 
 
-## Using getHostThumbprint {#using}
+## Using GetHostThumbprint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -108,8 +108,6 @@ const thumbprint = pulumi.output(vsphere.getHostThumbprint({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostThumbprint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetHostThumbprintArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetHostThumbprintResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetHostThumbprint` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -280,7 +278,7 @@ certificate verification. Default: false
 
 
 
-## getHostThumbprint Result {#result}
+## GetHostThumbprint Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getDataLakeSettings"
-title_tag: "aws.lakeformation.getDataLakeSettings"
-meta_desc: "Documentation for the aws.lakeformation.getDataLakeSettings function with examples, input properties, output properties, and supporting types."
+title: "GetDataLakeSettings"
+title_tag: "Function GetDataLakeSettings | Module lakeformation | Package AWS"
+meta_desc: "Explore the GetDataLakeSettings function of the lakeformation module, including examples, input properties, output properties, and supporting types. Get Lake Formation principals designated as data lake administrators and lists of principal permission entries for default create database and default create table permissions."
 ---
 
 
@@ -89,7 +89,7 @@ const example = pulumi.output(aws.lakeformation.getDataLakeSettings({
 {{% /examples %}}
 
 
-## Using getDataLakeSettings {#using}
+## Using GetDataLakeSettings {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -190,7 +190,7 @@ The following arguments are supported:
 
 
 
-## getDataLakeSettings Result {#result}
+## GetDataLakeSettings Result {#result}
 
 The following output properties are available:
 

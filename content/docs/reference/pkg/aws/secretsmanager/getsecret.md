@@ -1,8 +1,8 @@
 
 ---
-title: "getSecret"
-title_tag: "aws.secretsmanager.getSecret"
-meta_desc: "Documentation for the aws.secretsmanager.getSecret function with examples, input properties, output properties, and supporting types."
+title: "GetSecret"
+title_tag: "Function GetSecret | Module secretsmanager | Package AWS"
+meta_desc: "Explore the GetSecret function of the secretsmanager module, including examples, input properties, output properties, and supporting types. Retrieve metadata information about a Secrets Manager secret. To retrieve a secret value, see the `aws.secretsmanager.SecretVersion`."
 ---
 
 
@@ -158,7 +158,7 @@ const by_name = pulumi.output(aws.secretsmanager.getSecret({
 {{% /examples %}}
 
 
-## Using getSecret {#using}
+## Using GetSecret {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -299,7 +299,7 @@ The following arguments are supported:
 
 
 
-## getSecret Result {#result}
+## GetSecret Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "AccessRule"
-title_tag: "cloudflare.AccessRule"
-meta_desc: "Documentation for the cloudflare.AccessRule resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AccessRule | Package Cloudflare"
+meta_desc: "Explore the AccessRule resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare IP Firewall Access Rule resource. Access control can be applied on basis of IP addresses, IP ranges, AS numbers or countries."
 ---
 
 

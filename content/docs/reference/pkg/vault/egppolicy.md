@@ -1,8 +1,8 @@
 
 ---
 title: "EgpPolicy"
-title_tag: "vault.EgpPolicy"
-meta_desc: "Documentation for the vault.EgpPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource EgpPolicy | Package Vault"
+meta_desc: "Explore the EgpPolicy resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage Endpoint Governing Policy (EGP) via [Sentinel](https://www.vaultproject.io/docs/enterprise/sentinel/index.html)."
 ---
 
 

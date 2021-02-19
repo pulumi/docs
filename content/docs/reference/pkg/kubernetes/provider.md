@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "kubernetes.Provider"
-meta_desc: "Documentation for the kubernetes.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Provider | Package Kubernetes"
+meta_desc: "Explore the Provider resource of the Kubernetes package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the kubernetes package."
 ---
 
 
@@ -226,7 +226,7 @@ This feature is in developer preview, and is disabled by default.
 
 This config can be specified in the following ways, using this precedence:
 1. This `enableDryRun` parameter.
-2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd>
+2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_csharp">
@@ -235,7 +235,7 @@ This config can be specified in the following ways, using this precedence:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd>
+    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
@@ -278,7 +278,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 
 This config can be specified in the following ways, using this precedence:
 1. This `suppressDeprecationWarnings` parameter.
-2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd>
+2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -316,7 +316,7 @@ This feature is in developer preview, and is disabled by default.
 
 This config can be specified in the following ways, using this precedence:
 1. This `enableDryRun` parameter.
-2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd>
+2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_go">
@@ -325,7 +325,7 @@ This config can be specified in the following ways, using this precedence:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd>
+    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
@@ -368,7 +368,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 
 This config can be specified in the following ways, using this precedence:
 1. This `suppressDeprecationWarnings` parameter.
-2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd>
+2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -406,7 +406,7 @@ This feature is in developer preview, and is disabled by default.
 
 This config can be specified in the following ways, using this precedence:
 1. This `enableDryRun` parameter.
-2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd>
+2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_nodejs">
@@ -415,7 +415,7 @@ This config can be specified in the following ways, using this precedence:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd>
+    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
@@ -458,7 +458,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 
 This config can be specified in the following ways, using this precedence:
 1. This `suppressDeprecationWarnings` parameter.
-2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd>
+2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -496,7 +496,7 @@ This feature is in developer preview, and is disabled by default.
 
 This config can be specified in the following ways, using this precedence:
 1. This `enableDryRun` parameter.
-2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd>
+2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_python">
@@ -505,7 +505,7 @@ This config can be specified in the following ways, using this precedence:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd>
+    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
@@ -548,7 +548,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 
 This config can be specified in the following ways, using this precedence:
 1. This `suppressDeprecationWarnings` parameter.
-2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd>
+2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

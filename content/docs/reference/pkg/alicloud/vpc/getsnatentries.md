@@ -1,8 +1,8 @@
 
 ---
-title: "getSnatEntries"
-title_tag: "alicloud.vpc.getSnatEntries"
-meta_desc: "Documentation for the alicloud.vpc.getSnatEntries function with examples, input properties, output properties, and supporting types."
+title: "GetSnatEntries"
+title_tag: "Function GetSnatEntries | Module vpc | Package AliCloud"
+meta_desc: "Explore the GetSnatEntries function of the vpc module, including examples, input properties, output properties, and supporting types. This data source provides a list of Snat Entries owned by an Alibaba Cloud account."
 ---
 
 
@@ -223,7 +223,7 @@ const fooSnatEntries = fooSnatEntry.snatTableId.apply(snatTableId => alicloud.vp
 {{% /examples %}}
 
 
-## Using getSnatEntries {#using}
+## Using GetSnatEntries {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -240,8 +240,6 @@ const fooSnatEntries = fooSnatEntry.snatTableId.apply(snatTableId => alicloud.vp
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnatEntries<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSnatEntriesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSnatEntriesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetSnatEntries` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -480,7 +478,7 @@ The following arguments are supported:
 
 
 
-## getSnatEntries Result {#result}
+## GetSnatEntries Result {#result}
 
 The following output properties are available:
 

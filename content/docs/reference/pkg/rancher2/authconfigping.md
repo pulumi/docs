@@ -1,8 +1,8 @@
 
 ---
 title: "AuthConfigPing"
-title_tag: "rancher2.AuthConfigPing"
-meta_desc: "Documentation for the rancher2.AuthConfigPing resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AuthConfigPing | Package Rancher 2"
+meta_desc: "Explore the AuthConfigPing resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Auth Config Ping resource. This can be used to configure and enable Auth Config Ping for Rancher v2 RKE clusters and retrieve their information."
 ---
 
 

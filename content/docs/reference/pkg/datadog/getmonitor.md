@@ -1,8 +1,8 @@
 
 ---
-title: "getMonitor"
-title_tag: "datadog.getMonitor"
-meta_desc: "Documentation for the datadog.getMonitor function with examples, input properties, output properties, and supporting types."
+title: "GetMonitor"
+title_tag: "Function GetMonitor | Package Datadog"
+meta_desc: "Explore the GetMonitor function of the Datadog package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about an existing monitor for use in other resources."
 ---
 
 
@@ -150,7 +150,7 @@ const test = pulumi.output(datadog.getMonitor({
 {{% /examples %}}
 
 
-## Using getMonitor {#using}
+## Using GetMonitor {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -319,7 +319,7 @@ The following arguments are supported:
 
 
 
-## getMonitor Result {#result}
+## GetMonitor Result {#result}
 
 The following output properties are available:
 

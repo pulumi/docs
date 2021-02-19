@@ -1,8 +1,8 @@
 
 ---
-title: "getScheduledTasks"
-title_tag: "alicloud.ess.getScheduledTasks"
-meta_desc: "Documentation for the alicloud.ess.getScheduledTasks function with examples, input properties, output properties, and supporting types."
+title: "GetScheduledTasks"
+title_tag: "Function GetScheduledTasks | Module ess | Package AliCloud"
+meta_desc: "Explore the GetScheduledTasks function of the ess module, including examples, input properties, output properties, and supporting types. This data source provides available scheduled task resources. "
 ---
 
 
@@ -103,7 +103,7 @@ export const firstScheduledTask = ds.tasks[0].id;
 {{% /examples %}}
 
 
-## Using getScheduledTasks {#using}
+## Using GetScheduledTasks {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -120,8 +120,6 @@ export const firstScheduledTask = ds.tasks[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScheduledTasks<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetScheduledTasksArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetScheduledTasksResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetScheduledTasks` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -360,7 +358,7 @@ The following arguments are supported:
 
 
 
-## getScheduledTasks Result {#result}
+## GetScheduledTasks Result {#result}
 
 The following output properties are available:
 

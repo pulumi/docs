@@ -1,8 +1,8 @@
 
 ---
-title: "getThirdPartyIntegration"
-title_tag: "mongodbatlas.getThirdPartyIntegration"
-meta_desc: "Documentation for the mongodbatlas.getThirdPartyIntegration function with examples, input properties, output properties, and supporting types."
+title: "GetThirdPartyIntegration"
+title_tag: "Function GetThirdPartyIntegration | Package MongoDB Atlas"
+meta_desc: "Explore the GetThirdPartyIntegration function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.ThirdPartyIntegration` describe a Third-Party Integration Settings for the given type."
 ---
 
 
@@ -17,7 +17,7 @@ meta_desc: "Documentation for the mongodbatlas.getThirdPartyIntegration function
 
 
 
-## Using getThirdPartyIntegration {#using}
+## Using GetThirdPartyIntegration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -186,7 +186,7 @@ The following arguments are supported:
 
 
 
-## getThirdPartyIntegration Result {#result}
+## GetThirdPartyIntegration Result {#result}
 
 The following output properties are available:
 

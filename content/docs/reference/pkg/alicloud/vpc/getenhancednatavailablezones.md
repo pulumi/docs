@@ -1,8 +1,8 @@
 
 ---
-title: "getEnhancedNatAvailableZones"
-title_tag: "alicloud.vpc.getEnhancedNatAvailableZones"
-meta_desc: "Documentation for the alicloud.vpc.getEnhancedNatAvailableZones function with examples, input properties, output properties, and supporting types."
+title: "GetEnhancedNatAvailableZones"
+title_tag: "Function GetEnhancedNatAvailableZones | Module vpc | Package AliCloud"
+meta_desc: "Explore the GetEnhancedNatAvailableZones function of the vpc module, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the alicloud.vpc.getEnhancedNatAvailableZones func
 
 
 
-## Using getEnhancedNatAvailableZones {#using}
+## Using GetEnhancedNatAvailableZones {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -30,8 +30,6 @@ meta_desc: "Documentation for the alicloud.vpc.getEnhancedNatAvailableZones func
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnhancedNatAvailableZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEnhancedNatAvailableZonesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEnhancedNatAvailableZonesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetEnhancedNatAvailableZones` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -110,7 +108,7 @@ The following arguments are supported:
 
 
 
-## getEnhancedNatAvailableZones Result {#result}
+## GetEnhancedNatAvailableZones Result {#result}
 
 The following output properties are available:
 

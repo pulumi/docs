@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceConfig"
-title_tag: "docker.ServiceConfig"
-meta_desc: "Documentation for the docker.ServiceConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ServiceConfig | Package Docker"
+meta_desc: "Explore the ServiceConfig resource of the Docker package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "DnsRecord"
-title_tag: "digitalocean.DnsRecord"
-meta_desc: "Documentation for the digitalocean.DnsRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource DnsRecord | Package DigitalOcean"
+meta_desc: "Explore the DnsRecord resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean DNS record resource."
 ---
 
 

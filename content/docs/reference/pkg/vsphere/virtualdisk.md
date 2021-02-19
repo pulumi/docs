@@ -1,8 +1,8 @@
 
 ---
 title: "VirtualDisk"
-title_tag: "vsphere.VirtualDisk"
-meta_desc: "Documentation for the vsphere.VirtualDisk resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource VirtualDisk | Package vSphere"
+meta_desc: "Explore the VirtualDisk resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. The `vsphere.VirtualDisk` resource can be used to create virtual disks outside"
 ---
 
 

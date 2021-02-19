@@ -1,8 +1,8 @@
 
 ---
-title: "getResolverRule"
-title_tag: "aws.route53.getResolverRule"
-meta_desc: "Documentation for the aws.route53.getResolverRule function with examples, input properties, output properties, and supporting types."
+title: "GetResolverRule"
+title_tag: "Function GetResolverRule | Module route53 | Package AWS"
+meta_desc: "Explore the GetResolverRule function of the route53 module, including examples, input properties, output properties, and supporting types. `aws.route53.ResolverRule` provides details about a specific Route53 Resolver rule."
 ---
 
 
@@ -94,7 +94,7 @@ const example = pulumi.output(aws.route53.getResolverRule({
 {{% /examples %}}
 
 
-## Using getResolverRule {#using}
+## Using GetResolverRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -395,7 +395,7 @@ The following arguments are supported:
 
 
 
-## getResolverRule Result {#result}
+## GetResolverRule Result {#result}
 
 The following output properties are available:
 

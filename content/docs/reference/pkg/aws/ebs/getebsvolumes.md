@@ -1,8 +1,8 @@
 
 ---
-title: "getEbsVolumes"
-title_tag: "aws.ebs.getEbsVolumes"
-meta_desc: "Documentation for the aws.ebs.getEbsVolumes function with examples, input properties, output properties, and supporting types."
+title: "GetEbsVolumes"
+title_tag: "Function GetEbsVolumes | Module ebs | Package AWS"
+meta_desc: "Explore the GetEbsVolumes function of the ebs module, including examples, input properties, output properties, and supporting types. `aws.ebs.getEbsVolumes` provides identifying information for EBS volumes matching given criteria."
 ---
 
 
@@ -70,7 +70,7 @@ export const availabilityZoneToVolumeId = exampleVolume.reduce((__obj, s) => { .
 {{% /examples %}}
 
 
-## Using getEbsVolumes {#using}
+## Using GetEbsVolumes {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -87,8 +87,6 @@ export const availabilityZoneToVolumeId = exampleVolume.reduce((__obj, s) => { .
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEbsVolumes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEbsVolumesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEbsVolumesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetEbsVolumes` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -215,7 +213,7 @@ a pair on the desired volumes.
 
 
 
-## getEbsVolumes Result {#result}
+## GetEbsVolumes Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getInfluxDb"
-title_tag: "aiven.getInfluxDb"
-meta_desc: "Documentation for the aiven.getInfluxDb function with examples, input properties, output properties, and supporting types."
+title: "GetInfluxDb"
+title_tag: "Function GetInfluxDb | Package Aiven"
+meta_desc: "Explore the GetInfluxDb function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # InfluxDB Data Source"
 ---
 
 
@@ -94,7 +94,7 @@ const inf1 = aiven.getInfluxDb({
 {{% /examples %}}
 
 
-## Using getInfluxDb {#using}
+## Using GetInfluxDb {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1019,7 +1019,7 @@ deletion is done.
 
 
 
-## getInfluxDb Result {#result}
+## GetInfluxDb Result {#result}
 
 The following output properties are available:
 

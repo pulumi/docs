@@ -1,6 +1,6 @@
 ---
 title: "AliCloud"
-title_tag: "AliCloud Package"
+title_tag: "Package AliCloud"
 meta_desc: "A Pulumi package for creating and managing AliCloud resources."
 menu:
     reference:

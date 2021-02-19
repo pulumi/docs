@@ -1,8 +1,8 @@
 
 ---
-title: "getInstanceAttachments"
-title_tag: "alicloud.oss.getInstanceAttachments"
-meta_desc: "Documentation for the alicloud.oss.getInstanceAttachments function with examples, input properties, output properties, and supporting types."
+title: "GetInstanceAttachments"
+title_tag: "Function GetInstanceAttachments | Module oss | Package AliCloud"
+meta_desc: "Explore the GetInstanceAttachments function of the oss module, including examples, input properties, output properties, and supporting types. This data source provides the ots instance attachments of the current Alibaba Cloud user."
 ---
 
 
@@ -106,7 +106,7 @@ export const firstOtsAttachmentId = attachmentsDs.attachments[0].id;
 {{% /examples %}}
 
 
-## Using getInstanceAttachments {#using}
+## Using GetInstanceAttachments {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -123,8 +123,6 @@ export const firstOtsAttachmentId = attachmentsDs.attachments[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceAttachments<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceAttachmentsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceAttachmentsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetInstanceAttachments` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -283,7 +281,7 @@ The following arguments are supported:
 
 
 
-## getInstanceAttachments Result {#result}
+## GetInstanceAttachments Result {#result}
 
 The following output properties are available:
 

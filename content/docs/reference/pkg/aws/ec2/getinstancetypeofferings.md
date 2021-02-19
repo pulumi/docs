@@ -1,8 +1,8 @@
 
 ---
-title: "getInstanceTypeOfferings"
-title_tag: "aws.ec2.getInstanceTypeOfferings"
-meta_desc: "Documentation for the aws.ec2.getInstanceTypeOfferings function with examples, input properties, output properties, and supporting types."
+title: "GetInstanceTypeOfferings"
+title_tag: "Function GetInstanceTypeOfferings | Module ec2 | Package AWS"
+meta_desc: "Explore the GetInstanceTypeOfferings function of the ec2 module, including examples, input properties, output properties, and supporting types. Information about EC2 Instance Type Offerings."
 ---
 
 
@@ -150,7 +150,7 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOfferings({
 {{% /examples %}}
 
 
-## Using getInstanceTypeOfferings {#using}
+## Using GetInstanceTypeOfferings {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -167,8 +167,6 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOfferings({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceTypeOfferings<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceTypeOfferingsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceTypeOfferingsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetInstanceTypeOfferings` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -291,7 +289,7 @@ The following arguments are supported:
 
 
 
-## getInstanceTypeOfferings Result {#result}
+## GetInstanceTypeOfferings Result {#result}
 
 The following output properties are available:
 

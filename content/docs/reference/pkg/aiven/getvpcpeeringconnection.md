@@ -1,8 +1,8 @@
 
 ---
-title: "getVpcPeeringConnection"
-title_tag: "aiven.getVpcPeeringConnection"
-meta_desc: "Documentation for the aiven.getVpcPeeringConnection function with examples, input properties, output properties, and supporting types."
+title: "GetVpcPeeringConnection"
+title_tag: "Function GetVpcPeeringConnection | Package Aiven"
+meta_desc: "Explore the GetVpcPeeringConnection function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # VPC Peering Connection Data Source"
 ---
 
 
@@ -99,7 +99,7 @@ const mypeeringconnection = aiven_project_vpc_myvpc.id.apply(id => aiven.getVpcP
 {{% /examples %}}
 
 
-## Using getVpcPeeringConnection {#using}
+## Using GetVpcPeeringConnection {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -576,7 +576,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 
 
 
-## getVpcPeeringConnection Result {#result}
+## GetVpcPeeringConnection Result {#result}
 
 The following output properties are available:
 

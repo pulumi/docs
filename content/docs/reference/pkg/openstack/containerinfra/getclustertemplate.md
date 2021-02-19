@@ -1,8 +1,8 @@
 
 ---
-title: "getClusterTemplate"
-title_tag: "openstack.containerinfra.getClusterTemplate"
-meta_desc: "Documentation for the openstack.containerinfra.getClusterTemplate function with examples, input properties, output properties, and supporting types."
+title: "GetClusterTemplate"
+title_tag: "Function GetClusterTemplate | Module containerinfra | Package Open Stack"
+meta_desc: "Explore the GetClusterTemplate function of the containerinfra module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack Magnum cluster"
 ---
 
 
@@ -89,7 +89,7 @@ const clustertemplate1 = pulumi.output(openstack.containerinfra.getClusterTempla
 {{% /examples %}}
 
 
-## Using getClusterTemplate {#using}
+## Using GetClusterTemplate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -238,7 +238,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## getClusterTemplate Result {#result}
+## GetClusterTemplate Result {#result}
 
 The following output properties are available:
 

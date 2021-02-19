@@ -1,8 +1,8 @@
 
 ---
-title: "getDelegationSet"
-title_tag: "aws.route53.getDelegationSet"
-meta_desc: "Documentation for the aws.route53.getDelegationSet function with examples, input properties, output properties, and supporting types."
+title: "GetDelegationSet"
+title_tag: "Function GetDelegationSet | Module route53 | Package AWS"
+meta_desc: "Explore the GetDelegationSet function of the route53 module, including examples, input properties, output properties, and supporting types. `aws.route53.DelegationSet` provides details about a specific Route 53 Delegation Set."
 ---
 
 
@@ -90,7 +90,7 @@ const dset = pulumi.output(aws.route53.getDelegationSet({
 {{% /examples %}}
 
 
-## Using getDelegationSet {#using}
+## Using GetDelegationSet {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -191,7 +191,7 @@ The following arguments are supported:
 
 
 
-## getDelegationSet Result {#result}
+## GetDelegationSet Result {#result}
 
 The following output properties are available:
 

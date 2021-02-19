@@ -1,8 +1,8 @@
 
 ---
-title: "getPort"
-title_tag: "openstack.networking.getPort"
-meta_desc: "Documentation for the openstack.networking.getPort function with examples, input properties, output properties, and supporting types."
+title: "GetPort"
+title_tag: "Function GetPort | Module networking | Package Open Stack"
+meta_desc: "Explore the GetPort function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack port."
 ---
 
 
@@ -89,7 +89,7 @@ const port1 = pulumi.output(openstack.networking.getPort({
 {{% /examples %}}
 
 
-## Using getPort {#using}
+## Using GetPort {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -798,7 +798,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
 
 
-## getPort Result {#result}
+## GetPort Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getListeners"
-title_tag: "alicloud.ga.getListeners"
-meta_desc: "Documentation for the alicloud.ga.getListeners function with examples, input properties, output properties, and supporting types."
+title: "GetListeners"
+title_tag: "Function GetListeners | Module ga | Package AliCloud"
+meta_desc: "Explore the GetListeners function of the ga module, including examples, input properties, output properties, and supporting types. This data source provides the Global Accelerator (GA) Listeners of the current Alibaba Cloud user."
 ---
 
 
@@ -110,7 +110,7 @@ export const firstGaListenerId = example.then(example => example.listeners[0].id
 {{% /examples %}}
 
 
-## Using getListeners {#using}
+## Using GetListeners {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -127,8 +127,6 @@ export const firstGaListenerId = example.then(example => example.listeners[0].id
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListeners<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetListenersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetListenersResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetListeners` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -367,7 +365,7 @@ The following arguments are supported:
 
 
 
-## getListeners Result {#result}
+## GetListeners Result {#result}
 
 The following output properties are available:
 

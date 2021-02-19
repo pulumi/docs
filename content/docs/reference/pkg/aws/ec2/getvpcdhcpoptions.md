@@ -1,8 +1,8 @@
 
 ---
-title: "getVpcDhcpOptions"
-title_tag: "aws.ec2.getVpcDhcpOptions"
-meta_desc: "Documentation for the aws.ec2.getVpcDhcpOptions function with examples, input properties, output properties, and supporting types."
+title: "GetVpcDhcpOptions"
+title_tag: "Function GetVpcDhcpOptions | Module ec2 | Package AWS"
+meta_desc: "Explore the GetVpcDhcpOptions function of the ec2 module, including examples, input properties, output properties, and supporting types. Retrieve information about an EC2 DHCP Options configuration."
 ---
 
 
@@ -206,7 +206,7 @@ const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
 {{% /examples %}}
 
 
-## Using getVpcDhcpOptions {#using}
+## Using GetVpcDhcpOptions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -387,7 +387,7 @@ The following arguments are supported:
 
 
 
-## getVpcDhcpOptions Result {#result}
+## GetVpcDhcpOptions Result {#result}
 
 The following output properties are available:
 

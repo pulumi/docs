@@ -1,8 +1,8 @@
 
 ---
-title: "getVolumeV3"
-title_tag: "openstack.blockstorage.getVolumeV3"
-meta_desc: "Documentation for the openstack.blockstorage.getVolumeV3 function with examples, input properties, output properties, and supporting types."
+title: "GetVolumeV3"
+title_tag: "Function GetVolumeV3 | Module blockstorage | Package Open Stack"
+meta_desc: "Explore the GetVolumeV3 function of the blockstorage module, including examples, input properties, output properties, and supporting types. Use this data source to get information about an existing volume."
 ---
 
 
@@ -89,7 +89,7 @@ const volume1 = pulumi.output(openstack.blockstorage.getVolumeV3({
 {{% /examples %}}
 
 
-## Using getVolumeV3 {#using}
+## Using GetVolumeV3 {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -106,8 +106,6 @@ const volume1 = pulumi.output(openstack.blockstorage.getVolumeV3({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolumeV3<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetVolumeV3Args</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetVolumeV3Result</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetVolumeV3` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -394,7 +392,7 @@ client. If omitted, the `region` argument of the provider is used.
 
 
 
-## getVolumeV3 Result {#result}
+## GetVolumeV3 Result {#result}
 
 The following output properties are available:
 

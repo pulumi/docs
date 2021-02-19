@@ -1,8 +1,8 @@
 
 ---
-title: "getSnapshotIds"
-title_tag: "aws.ebs.getSnapshotIds"
-meta_desc: "Documentation for the aws.ebs.getSnapshotIds function with examples, input properties, output properties, and supporting types."
+title: "GetSnapshotIds"
+title_tag: "Function GetSnapshotIds | Module ebs | Package AWS"
+meta_desc: "Explore the GetSnapshotIds function of the ebs module, including examples, input properties, output properties, and supporting types. Use this data source to get a list of EBS Snapshot IDs matching the specified"
 ---
 
 
@@ -147,7 +147,7 @@ const ebsVolumes = pulumi.output(aws.ebs.getSnapshotIds({
 {{% /examples %}}
 
 
-## Using getSnapshotIds {#using}
+## Using GetSnapshotIds {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -164,8 +164,6 @@ const ebsVolumes = pulumi.output(aws.ebs.getSnapshotIds({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshotIds<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSnapshotIdsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSnapshotIdsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetSnapshotIds` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -336,7 +334,7 @@ several valid keys, for a full reference, check out
 
 
 
-## getSnapshotIds Result {#result}
+## GetSnapshotIds Result {#result}
 
 The following output properties are available:
 

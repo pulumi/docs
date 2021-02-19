@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectLogging"
-title_tag: "rancher2.ProjectLogging"
-meta_desc: "Documentation for the rancher2.ProjectLogging resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ProjectLogging | Package Rancher 2"
+meta_desc: "Explore the ProjectLogging resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Project Logging resource. This can be used to create Project Logging for Rancher v2 environments and retrieve their information."
 ---
 
 

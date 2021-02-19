@@ -1,8 +1,8 @@
 
 ---
 title: "PageRule"
-title_tag: "cloudflare.PageRule"
-meta_desc: "Documentation for the cloudflare.PageRule resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource PageRule | Package Cloudflare"
+meta_desc: "Explore the PageRule resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare page rule resource."
 ---
 
 

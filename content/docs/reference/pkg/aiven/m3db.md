@@ -1,8 +1,8 @@
 
 ---
 title: "M3Db"
-title_tag: "aiven.M3Db"
-meta_desc: "Documentation for the aiven.M3Db resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource M3Db | Package Aiven"
+meta_desc: "Explore the M3Db resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # M3 DB Resource"
 ---
 
 

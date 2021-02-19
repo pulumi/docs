@@ -1,8 +1,8 @@
 
 ---
 title: "ClusterLogging"
-title_tag: "rancher2.ClusterLogging"
-meta_desc: "Documentation for the rancher2.ClusterLogging resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ClusterLogging | Package Rancher 2"
+meta_desc: "Explore the ClusterLogging resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Cluster Logging resource. This can be used to configure Cluster Logging for Rancher v2 environments and retrieve their information."
 ---
 
 

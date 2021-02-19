@@ -1,8 +1,8 @@
 
 ---
-title: "getResource"
-title_tag: "aws.apigateway.getResource"
-meta_desc: "Documentation for the aws.apigateway.getResource function with examples, input properties, output properties, and supporting types."
+title: "GetResource"
+title_tag: "Function GetResource | Module apigateway | Package AWS"
+meta_desc: "Explore the GetResource function of the apigateway module, including examples, input properties, output properties, and supporting types. Use this data source to get the id of a Resource in API Gateway."
 ---
 
 
@@ -107,7 +107,7 @@ const myResource = myRestApi.then(myRestApi => aws.apigateway.getResource({
 {{% /examples %}}
 
 
-## Using getResource {#using}
+## Using GetResource {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -248,7 +248,7 @@ The following arguments are supported:
 
 
 
-## getResource Result {#result}
+## GetResource Result {#result}
 
 The following output properties are available:
 

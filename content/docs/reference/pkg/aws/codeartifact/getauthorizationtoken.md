@@ -1,8 +1,8 @@
 
 ---
-title: "getAuthorizationToken"
-title_tag: "aws.codeartifact.getAuthorizationToken"
-meta_desc: "Documentation for the aws.codeartifact.getAuthorizationToken function with examples, input properties, output properties, and supporting types."
+title: "GetAuthorizationToken"
+title_tag: "Function GetAuthorizationToken | Module codeartifact | Package AWS"
+meta_desc: "Explore the GetAuthorizationToken function of the codeartifact module, including examples, input properties, output properties, and supporting types. The CodeArtifact Authorization Token data source generates a temporary authentication token for accessing repositories in a CodeArtifact domain."
 ---
 
 
@@ -88,7 +88,7 @@ const test = aws.codeartifact.getAuthorizationToken({
 {{% /examples %}}
 
 
-## Using getAuthorizationToken {#using}
+## Using GetAuthorizationToken {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -105,8 +105,6 @@ const test = aws.codeartifact.getAuthorizationToken({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthorizationToken<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAuthorizationTokenArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAuthorizationTokenResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetAuthorizationToken` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -269,7 +267,7 @@ The following arguments are supported:
 
 
 
-## getAuthorizationToken Result {#result}
+## GetAuthorizationToken Result {#result}
 
 The following output properties are available:
 

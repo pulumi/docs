@@ -1,8 +1,8 @@
 
 ---
-title: "getDistributionConfiguration"
-title_tag: "aws.imagebuilder.getDistributionConfiguration"
-meta_desc: "Documentation for the aws.imagebuilder.getDistributionConfiguration function with examples, input properties, output properties, and supporting types."
+title: "GetDistributionConfiguration"
+title_tag: "Function GetDistributionConfiguration | Module imagebuilder | Package AWS"
+meta_desc: "Explore the GetDistributionConfiguration function of the imagebuilder module, including examples, input properties, output properties, and supporting types. Provides details about an Image Builder Distribution Configuration."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.imagebuilder.getDistributionConfiguration({
 {{% /examples %}}
 
 
-## Using getDistributionConfiguration {#using}
+## Using GetDistributionConfiguration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## getDistributionConfiguration Result {#result}
+## GetDistributionConfiguration Result {#result}
 
 The following output properties are available:
 

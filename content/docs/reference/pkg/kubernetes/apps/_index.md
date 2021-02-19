@@ -1,6 +1,6 @@
 ---
 title: "apps"
-title_tag: "apps Package"
+title_tag: "Package apps"
 meta_desc: ""
 ---
 

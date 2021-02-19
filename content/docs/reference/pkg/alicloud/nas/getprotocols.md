@@ -1,8 +1,8 @@
 
 ---
-title: "getProtocols"
-title_tag: "alicloud.nas.getProtocols"
-meta_desc: "Documentation for the alicloud.nas.getProtocols function with examples, input properties, output properties, and supporting types."
+title: "GetProtocols"
+title_tag: "Function GetProtocols | Module nas | Package AliCloud"
+meta_desc: "Explore the GetProtocols function of the nas module, including examples, input properties, output properties, and supporting types. Provide  a data source to retrieve the type of protocol used to create NAS file system."
 ---
 
 
@@ -107,7 +107,7 @@ export const nasProtocolsProtocol = defaultProtocols.protocols[0];
 {{% /examples %}}
 
 
-## Using getProtocols {#using}
+## Using GetProtocols {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -124,8 +124,6 @@ export const nasProtocolsProtocol = defaultProtocols.protocols[0];
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProtocols<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetProtocolsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProtocolsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetProtocols` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -284,7 +282,7 @@ The following arguments are supported:
 
 
 
-## getProtocols Result {#result}
+## GetProtocols Result {#result}
 
 The following output properties are available:
 

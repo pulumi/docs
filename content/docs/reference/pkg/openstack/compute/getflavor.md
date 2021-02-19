@@ -1,8 +1,8 @@
 
 ---
-title: "getFlavor"
-title_tag: "openstack.compute.getFlavor"
-meta_desc: "Documentation for the openstack.compute.getFlavor function with examples, input properties, output properties, and supporting types."
+title: "GetFlavor"
+title_tag: "Function GetFlavor | Module compute | Package Open Stack"
+meta_desc: "Explore the GetFlavor function of the compute module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack flavor."
 ---
 
 
@@ -94,7 +94,7 @@ const small = pulumi.output(openstack.compute.getFlavor({
 {{% /examples %}}
 
 
-## Using getFlavor {#using}
+## Using GetFlavor {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -611,7 +611,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## getFlavor Result {#result}
+## GetFlavor Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getFastlyIpRanges"
-title_tag: "fastly.getFastlyIpRanges"
-meta_desc: "Documentation for the fastly.getFastlyIpRanges function with examples, input properties, output properties, and supporting types."
+title: "GetFastlyIpRanges"
+title_tag: "Function GetFastlyIpRanges | Package Fastly"
+meta_desc: "Explore the GetFastlyIpRanges function of the Fastly package, including examples, input properties, output properties, and supporting types. Use this data source to get the [IP ranges](https://docs.fastly.com/guides/securing-communications/accessing-fastlys-ip-ranges) of Fastly edge nodes."
 ---
 
 
@@ -134,7 +134,7 @@ const fromFastly = new aws.ec2.SecurityGroup("fromFastly", {ingress: [{
 {{% /examples %}}
 
 
-## Using getFastlyIpRanges {#using}
+## Using GetFastlyIpRanges {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -152,8 +152,6 @@ const fromFastly = new aws.ec2.SecurityGroup("fromFastly", {ingress: [{
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFastlyIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFastlyIpRangesResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetFastlyIpRanges` in the Go SDK.
-
 {{% /choosable %}}
 
 
@@ -166,7 +164,7 @@ const fromFastly = new aws.ec2.SecurityGroup("fromFastly", {ingress: [{
 
 
 
-## getFastlyIpRanges Result {#result}
+## GetFastlyIpRanges Result {#result}
 
 The following output properties are available:
 

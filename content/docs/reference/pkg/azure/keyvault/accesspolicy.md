@@ -49,11 +49,11 @@ class MyStack : Stack
             ObjectId = current.Apply(current => current.ObjectId),
             KeyPermissions = 
             {
-                "Get",
+                "get",
             },
             SecretPermissions = 
             {
-                "Get",
+                "get",
             },
         });
     }
@@ -99,10 +99,10 @@ func main() {
 			TenantId:   pulumi.String(current.TenantId),
 			ObjectId:   pulumi.String(current.ObjectId),
 			KeyPermissions: pulumi.StringArray{
-				pulumi.String("Get"),
+				pulumi.String("get"),
 			},
 			SecretPermissions: pulumi.StringArray{
-				pulumi.String("Get"),
+				pulumi.String("get"),
 			},
 		})
 		if err != nil {
@@ -131,8 +131,8 @@ example_access_policy = azure.keyvault.AccessPolicy("exampleAccessPolicy",
     key_vault_id=example_key_vault.id,
     tenant_id=current.tenant_id,
     object_id=current.object_id,
-    key_permissions=["Get"],
-    secret_permissions=["Get"])
+    key_permissions=["get"],
+    secret_permissions=["get"])
 ```
 
 {{% /example %}}
@@ -155,8 +155,8 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
     keyVaultId: exampleKeyVault.id,
     tenantId: current.then(current => current.tenantId),
     objectId: current.then(current => current.objectId),
-    keyPermissions: ["Get"],
-    secretPermissions: ["Get"],
+    keyPermissions: ["get"],
+    secretPermissions: ["get"],
 });
 ```
 
@@ -399,7 +399,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
+    <dd>{{% md %}}List of certificate permissions, must be one or more from
+the following: `backup`, `create`, `delete`, `deleteissuers`, `get`, `getissuers`, `import`, `list`, `listissuers`,
+`managecontacts`, `manageissuers`, `purge`, `recover`, `restore`, `setissuers` and `update`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -409,7 +411,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
+    <dd>{{% md %}}List of key permissions, must be one or more from
+the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `import`, `list`, `purge`,
+`recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -419,7 +423,8 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more
+from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -429,7 +434,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
+    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `backup`, `delete`, `deletesas`, `get`, `getsas`, `list`, `listsas`, `purge`, `recover`, `regeneratekey`, `restore`, `set`, `setsas` and `update`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -491,7 +496,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
+    <dd>{{% md %}}List of certificate permissions, must be one or more from
+the following: `backup`, `create`, `delete`, `deleteissuers`, `get`, `getissuers`, `import`, `list`, `listissuers`,
+`managecontacts`, `manageissuers`, `purge`, `recover`, `restore`, `setissuers` and `update`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -501,7 +508,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
+    <dd>{{% md %}}List of key permissions, must be one or more from
+the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `import`, `list`, `purge`,
+`recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -511,7 +520,8 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more
+from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -521,7 +531,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
+    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `backup`, `delete`, `deletesas`, `get`, `getsas`, `list`, `listsas`, `purge`, `recover`, `regeneratekey`, `restore`, `set`, `setsas` and `update`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -583,7 +593,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
+    <dd>{{% md %}}List of certificate permissions, must be one or more from
+the following: `backup`, `create`, `delete`, `deleteissuers`, `get`, `getissuers`, `import`, `list`, `listissuers`,
+`managecontacts`, `manageissuers`, `purge`, `recover`, `restore`, `setissuers` and `update`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -593,7 +605,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
+    <dd>{{% md %}}List of key permissions, must be one or more from
+the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `import`, `list`, `purge`,
+`recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -603,7 +617,8 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more
+from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -613,7 +628,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
+    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `backup`, `delete`, `deletesas`, `get`, `getsas`, `list`, `listsas`, `purge`, `recover`, `regeneratekey`, `restore`, `set`, `setsas` and `update`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -675,7 +690,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
+    <dd>{{% md %}}List of certificate permissions, must be one or more from
+the following: `backup`, `create`, `delete`, `deleteissuers`, `get`, `getissuers`, `import`, `list`, `listissuers`,
+`managecontacts`, `manageissuers`, `purge`, `recover`, `restore`, `setissuers` and `update`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -685,7 +702,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
+    <dd>{{% md %}}List of key permissions, must be one or more from
+the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `import`, `list`, `purge`,
+`recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -695,7 +714,8 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more
+from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -705,7 +725,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
+    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `backup`, `delete`, `deletesas`, `get`, `getsas`, `list`, `listsas`, `purge`, `recover`, `regeneratekey`, `restore`, `set`, `setsas` and `update`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -921,7 +941,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
+    <dd>{{% md %}}List of certificate permissions, must be one or more from
+the following: `backup`, `create`, `delete`, `deleteissuers`, `get`, `getissuers`, `import`, `list`, `listissuers`,
+`managecontacts`, `manageissuers`, `purge`, `recover`, `restore`, `setissuers` and `update`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -931,7 +953,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
+    <dd>{{% md %}}List of key permissions, must be one or more from
+the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `import`, `list`, `purge`,
+`recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -965,7 +989,8 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more
+from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -975,7 +1000,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
+    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `backup`, `delete`, `deletesas`, `get`, `getsas`, `list`, `listsas`, `purge`, `recover`, `regeneratekey`, `restore`, `set`, `setsas` and `update`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1013,7 +1038,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
+    <dd>{{% md %}}List of certificate permissions, must be one or more from
+the following: `backup`, `create`, `delete`, `deleteissuers`, `get`, `getissuers`, `import`, `list`, `listissuers`,
+`managecontacts`, `manageissuers`, `purge`, `recover`, `restore`, `setissuers` and `update`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1023,7 +1050,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
+    <dd>{{% md %}}List of key permissions, must be one or more from
+the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `import`, `list`, `purge`,
+`recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1057,7 +1086,8 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more
+from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1067,7 +1097,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
+    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `backup`, `delete`, `deletesas`, `get`, `getsas`, `list`, `listsas`, `purge`, `recover`, `regeneratekey`, `restore`, `set`, `setsas` and `update`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1105,7 +1135,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
+    <dd>{{% md %}}List of certificate permissions, must be one or more from
+the following: `backup`, `create`, `delete`, `deleteissuers`, `get`, `getissuers`, `import`, `list`, `listissuers`,
+`managecontacts`, `manageissuers`, `purge`, `recover`, `restore`, `setissuers` and `update`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1115,7 +1147,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
+    <dd>{{% md %}}List of key permissions, must be one or more from
+the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `import`, `list`, `purge`,
+`recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1149,7 +1183,8 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more
+from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1159,7 +1194,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
+    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `backup`, `delete`, `deletesas`, `get`, `getsas`, `list`, `listsas`, `purge`, `recover`, `regeneratekey`, `restore`, `set`, `setsas` and `update`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1197,7 +1232,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
+    <dd>{{% md %}}List of certificate permissions, must be one or more from
+the following: `backup`, `create`, `delete`, `deleteissuers`, `get`, `getissuers`, `import`, `list`, `listissuers`,
+`managecontacts`, `manageissuers`, `purge`, `recover`, `restore`, `setissuers` and `update`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1207,7 +1244,9 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
+    <dd>{{% md %}}List of key permissions, must be one or more from
+the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `import`, `list`, `purge`,
+`recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1241,7 +1280,8 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
+    <dd>{{% md %}}List of secret permissions, must be one or more
+from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1251,7 +1291,7 @@ to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
+    <dd>{{% md %}}List of storage permissions, must be one or more from the following: `backup`, `delete`, `deletesas`, `get`, `getsas`, `list`, `listsas`, `purge`, `recover`, `regeneratekey`, `restore`, `set`, `setsas` and `update`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -1,8 +1,8 @@
 
 ---
-title: "getAccountAlias"
-title_tag: "alicloud.ram.getAccountAlias"
-meta_desc: "Documentation for the alicloud.ram.getAccountAlias function with examples, input properties, output properties, and supporting types."
+title: "GetAccountAlias"
+title_tag: "Function GetAccountAlias | Module ram | Package AliCloud"
+meta_desc: "Explore the GetAccountAlias function of the ram module, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the alicloud.ram.getAccountAlias function with exa
 
 
 
-## Using getAccountAlias {#using}
+## Using GetAccountAlias {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -110,7 +110,7 @@ The following arguments are supported:
 
 
 
-## getAccountAlias Result {#result}
+## GetAccountAlias Result {#result}
 
 The following output properties are available:
 

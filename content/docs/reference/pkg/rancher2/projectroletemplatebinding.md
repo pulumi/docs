@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectRoleTemplateBinding"
-title_tag: "rancher2.ProjectRoleTemplateBinding"
-meta_desc: "Documentation for the rancher2.ProjectRoleTemplateBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ProjectRoleTemplateBinding | Package Rancher 2"
+meta_desc: "Explore the ProjectRoleTemplateBinding resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Project Role Template Binding resource. This can be used to create Project Role Template Bindings for Rancher v2 environments and retrieve their information."
 ---
 
 

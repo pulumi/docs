@@ -1,8 +1,8 @@
 
 ---
-title: "getOrganizationalUnits"
-title_tag: "aws.organizations.getOrganizationalUnits"
-meta_desc: "Documentation for the aws.organizations.getOrganizationalUnits function with examples, input properties, output properties, and supporting types."
+title: "GetOrganizationalUnits"
+title_tag: "Function GetOrganizationalUnits | Module organizations | Package AWS"
+meta_desc: "Explore the GetOrganizationalUnits function of the organizations module, including examples, input properties, output properties, and supporting types. Get all direct child organizational units under a parent organizational unit. This only provides immediate children, not all children."
 ---
 
 
@@ -95,7 +95,7 @@ const ou = org.then(org => aws.organizations.getOrganizationalUnits({
 {{% /examples %}}
 
 
-## Using getOrganizationalUnits {#using}
+## Using GetOrganizationalUnits {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -112,8 +112,6 @@ const ou = org.then(org => aws.organizations.getOrganizationalUnits({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationalUnits<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetOrganizationalUnitsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetOrganizationalUnitsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetOrganizationalUnits` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -196,7 +194,7 @@ The following arguments are supported:
 
 
 
-## getOrganizationalUnits Result {#result}
+## GetOrganizationalUnits Result {#result}
 
 The following output properties are available:
 

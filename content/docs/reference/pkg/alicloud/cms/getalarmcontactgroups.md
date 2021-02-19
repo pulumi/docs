@@ -1,8 +1,8 @@
 
 ---
-title: "getAlarmContactGroups"
-title_tag: "alicloud.cms.getAlarmContactGroups"
-meta_desc: "Documentation for the alicloud.cms.getAlarmContactGroups function with examples, input properties, output properties, and supporting types."
+title: "GetAlarmContactGroups"
+title_tag: "Function GetAlarmContactGroups | Module cms | Package AliCloud"
+meta_desc: "Explore the GetAlarmContactGroups function of the cms module, including examples, input properties, output properties, and supporting types. This data source provides the CMS Groups of the current Alibaba Cloud user."
 ---
 
 
@@ -17,7 +17,7 @@ This data source provides the CMS Groups of the current Alibaba Cloud user.
 
 
 
-## Using getAlarmContactGroups {#using}
+## Using GetAlarmContactGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -34,8 +34,6 @@ This data source provides the CMS Groups of the current Alibaba Cloud user.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlarmContactGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAlarmContactGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAlarmContactGroupsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetAlarmContactGroups` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -194,7 +192,7 @@ The following arguments are supported:
 
 
 
-## getAlarmContactGroups Result {#result}
+## GetAlarmContactGroups Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "ClusterRoleTemplateBinding"
-title_tag: "rancher2.ClusterRoleTemplateBinding"
-meta_desc: "Documentation for the rancher2.ClusterRoleTemplateBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ClusterRoleTemplateBinding | Package Rancher 2"
+meta_desc: "Explore the ClusterRoleTemplateBinding resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Cluster Role Template Binding resource. This can be used to create Cluster Role Template Bindings for Rancher v2 environments and retrieve their information."
 ---
 
 

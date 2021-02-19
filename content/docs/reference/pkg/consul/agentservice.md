@@ -1,8 +1,8 @@
 
 ---
 title: "AgentService"
-title_tag: "consul.AgentService"
-meta_desc: "Documentation for the consul.AgentService resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AgentService | Package Consul"
+meta_desc: "Explore the AgentService resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. !&gt; The `consul.AgentService` resource has been deprecated in version 2.0.0 of the provider"
 ---
 
 

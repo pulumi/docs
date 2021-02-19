@@ -1,8 +1,8 @@
 
 ---
-title: "getVolume"
-title_tag: "digitalocean.getVolume"
-meta_desc: "Documentation for the digitalocean.getVolume function with examples, input properties, output properties, and supporting types."
+title: "GetVolume"
+title_tag: "Function GetVolume | Package DigitalOcean"
+meta_desc: "Explore the GetVolume function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a volume for use in other resources. This data source provides"
 ---
 
 
@@ -98,7 +98,7 @@ const example = pulumi.output(digitalocean.getVolume({
 {{% /examples %}}
 
 
-## Using getVolume {#using}
+## Using GetVolume {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -279,7 +279,7 @@ The following arguments are supported:
 
 
 
-## getVolume Result {#result}
+## GetVolume Result {#result}
 
 The following output properties are available:
 

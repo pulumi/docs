@@ -1,8 +1,8 @@
 
 ---
-title: "getAccountTeamMember"
-title_tag: "aiven.getAccountTeamMember"
-meta_desc: "Documentation for the aiven.getAccountTeamMember function with examples, input properties, output properties, and supporting types."
+title: "GetAccountTeamMember"
+title_tag: "Function GetAccountTeamMember | Package Aiven"
+meta_desc: "Explore the GetAccountTeamMember function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Account Team Member Data Source"
 ---
 
 
@@ -17,7 +17,7 @@ The Account Team Member data source provides information about the existing Aive
 
 
 
-## Using getAccountTeamMember {#using}
+## Using GetAccountTeamMember {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -330,7 +330,7 @@ he or she becomes a member of a team.
 
 
 
-## getAccountTeamMember Result {#result}
+## GetAccountTeamMember Result {#result}
 
 The following output properties are available:
 

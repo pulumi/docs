@@ -1,8 +1,8 @@
 
 ---
-title: "getScalingRules"
-title_tag: "alicloud.ess.getScalingRules"
-meta_desc: "Documentation for the alicloud.ess.getScalingRules function with examples, input properties, output properties, and supporting types."
+title: "GetScalingRules"
+title_tag: "Function GetScalingRules | Module ess | Package AliCloud"
+meta_desc: "Explore the GetScalingRules function of the ess module, including examples, input properties, output properties, and supporting types. This data source provides available scaling rule resources. "
 ---
 
 
@@ -118,7 +118,7 @@ export const firstScalingRule = scalingrulesDs.rules[0].id;
 {{% /examples %}}
 
 
-## Using getScalingRules {#using}
+## Using GetScalingRules {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -135,8 +135,6 @@ export const firstScalingRule = scalingrulesDs.rules[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScalingRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetScalingRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetScalingRulesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetScalingRules` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -375,7 +373,7 @@ The following arguments are supported:
 
 
 
-## getScalingRules Result {#result}
+## GetScalingRules Result {#result}
 
 The following output properties are available:
 

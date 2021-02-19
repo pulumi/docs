@@ -1,8 +1,8 @@
 
 ---
-title: "getNetwork"
-title_tag: "openstack.networking.getNetwork"
-meta_desc: "Documentation for the openstack.networking.getNetwork function with examples, input properties, output properties, and supporting types."
+title: "GetNetwork"
+title_tag: "Function GetNetwork | Module networking | Package Open Stack"
+meta_desc: "Explore the GetNetwork function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack network."
 ---
 
 
@@ -89,7 +89,7 @@ const network = pulumi.output(openstack.networking.getNetwork({
 {{% /examples %}}
 
 
-## Using getNetwork {#using}
+## Using GetNetwork {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -606,7 +606,7 @@ network.
 
 
 
-## getNetwork Result {#result}
+## GetNetwork Result {#result}
 
 The following output properties are available:
 

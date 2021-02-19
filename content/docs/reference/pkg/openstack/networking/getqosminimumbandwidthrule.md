@@ -1,8 +1,8 @@
 
 ---
-title: "getQosMinimumBandwidthRule"
-title_tag: "openstack.networking.getQosMinimumBandwidthRule"
-meta_desc: "Documentation for the openstack.networking.getQosMinimumBandwidthRule function with examples, input properties, output properties, and supporting types."
+title: "GetQosMinimumBandwidthRule"
+title_tag: "Function GetQosMinimumBandwidthRule | Module networking | Package Open Stack"
+meta_desc: "Explore the GetQosMinimumBandwidthRule function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack QoS minimum bandwidth rule."
 ---
 
 
@@ -46,7 +46,7 @@ const qosMinBwRule1 = pulumi.output(openstack.networking.getQosMinimumBandwidthR
 {{% /examples %}}
 
 
-## Using getQosMinimumBandwidthRule {#using}
+## Using GetQosMinimumBandwidthRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -271,7 +271,7 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 
 
 
-## getQosMinimumBandwidthRule Result {#result}
+## GetQosMinimumBandwidthRule Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "DefaultGroups"
-title_tag: "keycloak.DefaultGroups"
-meta_desc: "Documentation for the keycloak.DefaultGroups resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource DefaultGroups | Package Keycloak"
+meta_desc: "Explore the DefaultGroups resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. Allows for managing a realm&#39;s default groups."
 ---
 
 

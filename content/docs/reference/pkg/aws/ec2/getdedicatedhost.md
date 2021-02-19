@@ -1,8 +1,8 @@
 
 ---
-title: "getDedicatedHost"
-title_tag: "aws.ec2.getDedicatedHost"
-meta_desc: "Documentation for the aws.ec2.getDedicatedHost function with examples, input properties, output properties, and supporting types."
+title: "GetDedicatedHost"
+title_tag: "Function GetDedicatedHost | Module ec2 | Package AWS"
+meta_desc: "Explore the GetDedicatedHost function of the ec2 module, including examples, input properties, output properties, and supporting types. Use this data source to get information about the host when allocating an EC2 Dedicated Host."
 ---
 
 
@@ -109,7 +109,7 @@ const testData = test.id.apply(id => aws.ec2.getDedicatedHost({
 {{% /examples %}}
 
 
-## Using getDedicatedHost {#using}
+## Using GetDedicatedHost {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -246,7 +246,7 @@ The following arguments are supported:
 
 
 
-## getDedicatedHost Result {#result}
+## GetDedicatedHost Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getSecretVersion"
-title_tag: "aws.secretsmanager.getSecretVersion"
-meta_desc: "Documentation for the aws.secretsmanager.getSecretVersion function with examples, input properties, output properties, and supporting types."
+title: "GetSecretVersion"
+title_tag: "Function GetSecretVersion | Module secretsmanager | Package AWS"
+meta_desc: "Explore the GetSecretVersion function of the secretsmanager module, including examples, input properties, output properties, and supporting types. Retrieve information about a Secrets Manager secret version, including its secret value. To retrieve secret metadata, see the `aws.secretsmanager.Secret` data source."
 ---
 
 
@@ -161,7 +161,7 @@ const by-version-stage = aws.secretsmanager.getSecretVersion({
 {{% /examples %}}
 
 
-## Using getSecretVersion {#using}
+## Using GetSecretVersion {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -342,7 +342,7 @@ The following arguments are supported:
 
 
 
-## getSecretVersion Result {#result}
+## GetSecretVersion Result {#result}
 
 The following output properties are available:
 

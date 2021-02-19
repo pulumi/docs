@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "rancher2.Provider"
-meta_desc: "Documentation for the rancher2.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Provider | Package Rancher 2"
+meta_desc: "Explore the Provider resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the rancher2 package. By default, resources use package-wide configuration"
 ---
 
 

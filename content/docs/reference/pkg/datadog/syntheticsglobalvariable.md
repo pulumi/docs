@@ -1,8 +1,8 @@
 
 ---
 title: "SyntheticsGlobalVariable"
-title_tag: "datadog.SyntheticsGlobalVariable"
-meta_desc: "Documentation for the datadog.SyntheticsGlobalVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource SyntheticsGlobalVariable | Package Datadog"
+meta_desc: "Explore the SyntheticsGlobalVariable resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog synthetics global variable resource. This can be used to create and manage Datadog synthetics global variables."
 ---
 
 

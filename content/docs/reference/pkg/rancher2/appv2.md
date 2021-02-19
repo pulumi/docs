@@ -1,8 +1,8 @@
 
 ---
 title: "AppV2"
-title_tag: "rancher2.AppV2"
-meta_desc: "Documentation for the rancher2.AppV2 resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AppV2 | Package Rancher 2"
+meta_desc: "Explore the AppV2 resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher App v2 resource. This can be used to manage helm charts for Rancher v2 environments and retrieve their information. App v2 resource is available at Rancher v2.5.x and above."
 ---
 
 

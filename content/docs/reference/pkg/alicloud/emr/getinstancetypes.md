@@ -1,8 +1,8 @@
 
 ---
-title: "getInstanceTypes"
-title_tag: "alicloud.emr.getInstanceTypes"
-meta_desc: "Documentation for the alicloud.emr.getInstanceTypes function with examples, input properties, output properties, and supporting types."
+title: "GetInstanceTypes"
+title_tag: "Function GetInstanceTypes | Module emr | Package AliCloud"
+meta_desc: "Explore the GetInstanceTypes function of the emr module, including examples, input properties, output properties, and supporting types. The `alicloud.emr.getInstanceTypes` data source provides a collection of ecs"
 ---
 
 
@@ -133,7 +133,7 @@ export const firstInstanceType = defaultInstanceTypes.types[0].id;
 {{% /examples %}}
 
 
-## Using getInstanceTypes {#using}
+## Using GetInstanceTypes {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -150,8 +150,6 @@ export const firstInstanceType = defaultInstanceTypes.types[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceTypes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceTypesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceTypesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetInstanceTypes` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -514,7 +512,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
 
 
 
-## getInstanceTypes Result {#result}
+## GetInstanceTypes Result {#result}
 
 The following output properties are available:
 

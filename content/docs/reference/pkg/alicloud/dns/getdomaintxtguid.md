@@ -1,8 +1,8 @@
 
 ---
-title: "getDomainTxtGuid"
-title_tag: "alicloud.dns.getDomainTxtGuid"
-meta_desc: "Documentation for the alicloud.dns.getDomainTxtGuid function with examples, input properties, output properties, and supporting types."
+title: "GetDomainTxtGuid"
+title_tag: "Function GetDomainTxtGuid | Module dns | Package AliCloud"
+meta_desc: "Explore the GetDomainTxtGuid function of the dns module, including examples, input properties, output properties, and supporting types. Provides the generation of txt records to realize the retrieval and verification of domain names."
 ---
 
 
@@ -107,7 +107,7 @@ export const value = thisDomainTxtGuid.value;
 {{% /examples %}}
 
 
-## Using getDomainTxtGuid {#using}
+## Using GetDomainTxtGuid {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -124,8 +124,6 @@ export const value = thisDomainTxtGuid.value;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainTxtGuid<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDomainTxtGuidArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDomainTxtGuidResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetDomainTxtGuid` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -324,7 +322,7 @@ The following arguments are supported:
 
 
 
-## getDomainTxtGuid Result {#result}
+## GetDomainTxtGuid Result {#result}
 
 The following output properties are available:
 

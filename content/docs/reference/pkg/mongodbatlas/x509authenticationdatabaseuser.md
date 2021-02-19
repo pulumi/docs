@@ -1,8 +1,8 @@
 
 ---
 title: "X509AuthenticationDatabaseUser"
-title_tag: "mongodbatlas.X509AuthenticationDatabaseUser"
-meta_desc: "Documentation for the mongodbatlas.X509AuthenticationDatabaseUser resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource X509AuthenticationDatabaseUser | Package MongoDB Atlas"
+meta_desc: "Explore the X509AuthenticationDatabaseUser resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.X509AuthenticationDatabaseUser` provides a X509 Authentication Database User resource. The mongodbatlas.X509AuthenticationDatabaseUser resource lets you manage MongoDB users who authenticate using X.509 certificates. You can manage these X.509 certificates or let Atlas do it for you."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Pg"
-title_tag: "aiven.Pg"
-meta_desc: "Documentation for the aiven.Pg resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Pg | Package Aiven"
+meta_desc: "Explore the Pg resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

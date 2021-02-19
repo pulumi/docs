@@ -1,8 +1,8 @@
 
 ---
-title: "getUser"
-title_tag: "aws.iam.getUser"
-meta_desc: "Documentation for the aws.iam.getUser function with examples, input properties, output properties, and supporting types."
+title: "GetUser"
+title_tag: "Function GetUser | Module iam | Package AWS"
+meta_desc: "Explore the GetUser function of the iam module, including examples, input properties, output properties, and supporting types. This data source can be used to fetch information about a specific"
 ---
 
 
@@ -90,7 +90,7 @@ const example = pulumi.output(aws.iam.getUser({
 {{% /examples %}}
 
 
-## Using getUser {#using}
+## Using GetUser {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -231,7 +231,7 @@ The following arguments are supported:
 
 
 
-## getUser Result {#result}
+## GetUser Result {#result}
 
 The following output properties are available:
 

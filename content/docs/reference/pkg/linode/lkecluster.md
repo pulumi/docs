@@ -1,8 +1,8 @@
 
 ---
 title: "LkeCluster"
-title_tag: "linode.LkeCluster"
-meta_desc: "Documentation for the linode.LkeCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource LkeCluster | Package Linode"
+meta_desc: "Explore the LkeCluster resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Manages an LKE cluster."
 ---
 
 

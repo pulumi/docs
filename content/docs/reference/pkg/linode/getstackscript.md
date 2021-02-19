@@ -1,8 +1,8 @@
 
 ---
-title: "getStackScript"
-title_tag: "linode.getStackScript"
-meta_desc: "Documentation for the linode.getStackScript function with examples, input properties, output properties, and supporting types."
+title: "GetStackScript"
+title_tag: "Function GetStackScript | Package Linode"
+meta_desc: "Explore the GetStackScript function of the Linode package, including examples, input properties, output properties, and supporting types. Provides details about a specific Linode StackScript."
 ---
 
 
@@ -129,7 +129,7 @@ const myStackscript = pulumi.output(linode.getStackScript({
 {{% /examples %}}
 
 
-## Using getStackScript {#using}
+## Using GetStackScript {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -266,7 +266,7 @@ The following arguments are supported:
 
 
 
-## getStackScript Result {#result}
+## GetStackScript Result {#result}
 
 The following output properties are available:
 

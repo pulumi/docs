@@ -1,8 +1,8 @@
 
 ---
 title: "AccountTeamMember"
-title_tag: "aiven.AccountTeamMember"
-meta_desc: "Documentation for the aiven.AccountTeamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AccountTeamMember | Package Aiven"
+meta_desc: "Explore the AccountTeamMember resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Account Team Member Resource"
 ---
 
 

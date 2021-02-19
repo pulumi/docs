@@ -1,8 +1,8 @@
 
 ---
 title: "Service"
-title_tag: "kong.Service"
-meta_desc: "Documentation for the kong.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Service | Package Kong"
+meta_desc: "Explore the Service resource of the Kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

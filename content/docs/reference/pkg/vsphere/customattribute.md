@@ -1,8 +1,8 @@
 
 ---
 title: "CustomAttribute"
-title_tag: "vsphere.CustomAttribute"
-meta_desc: "Documentation for the vsphere.CustomAttribute resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource CustomAttribute | Package vSphere"
+meta_desc: "Explore the CustomAttribute resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

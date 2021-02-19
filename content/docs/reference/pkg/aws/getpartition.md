@@ -1,8 +1,8 @@
 
 ---
-title: "getPartition"
-title_tag: "aws.getPartition"
-meta_desc: "Documentation for the aws.getPartition function with examples, input properties, output properties, and supporting types."
+title: "GetPartition"
+title_tag: "Function GetPartition | Package AWS"
+meta_desc: "Explore the GetPartition function of the AWS package, including examples, input properties, output properties, and supporting types. Use this data source to lookup current AWS partition in which this provider is working"
 ---
 
 
@@ -130,7 +130,7 @@ const s3Policy = current.apply(current => aws.iam.getPolicyDocument({
 {{% /examples %}}
 
 
-## Using getPartition {#using}
+## Using GetPartition {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -148,8 +148,6 @@ const s3Policy = current.apply(current => aws.iam.getPolicyDocument({
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPartition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPartitionResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetPartition` in the Go SDK.
-
 {{% /choosable %}}
 
 
@@ -162,7 +160,7 @@ const s3Policy = current.apply(current => aws.iam.getPolicyDocument({
 
 
 
-## getPartition Result {#result}
+## GetPartition Result {#result}
 
 The following output properties are available:
 

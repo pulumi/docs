@@ -1,8 +1,8 @@
 
 ---
-title: "getPrivateLinkEndpointService"
-title_tag: "mongodbatlas.getPrivateLinkEndpointService"
-meta_desc: "Documentation for the mongodbatlas.getPrivateLinkEndpointService function with examples, input properties, output properties, and supporting types."
+title: "GetPrivateLinkEndpointService"
+title_tag: "Function GetPrivateLinkEndpointService | Package MongoDB Atlas"
+meta_desc: "Explore the GetPrivateLinkEndpointService function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.PrivateLinkEndpointService` describe a Private Endpoint Link. This represents a Private Endpoint Link Connection that wants to retrieve details in an Atlas project."
 ---
 
 
@@ -69,7 +69,7 @@ const testPrivateLinkEndpointService = pulumi.all([testMongodbatlasPrivateLinkEn
 {{% /examples %}}
 
 
-## Using getPrivateLinkEndpointService {#using}
+## Using GetPrivateLinkEndpointService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -290,7 +290,7 @@ The following arguments are supported:
 
 
 
-## getPrivateLinkEndpointService Result {#result}
+## GetPrivateLinkEndpointService Result {#result}
 
 The following output properties are available:
 

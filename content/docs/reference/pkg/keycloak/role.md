@@ -1,8 +1,8 @@
 
 ---
 title: "Role"
-title_tag: "keycloak.Role"
-meta_desc: "Documentation for the keycloak.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Role | Package Keycloak"
+meta_desc: "Explore the Role resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. Allows for creating and managing roles within Keycloak."
 ---
 
 

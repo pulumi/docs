@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectUser"
-title_tag: "aiven.ProjectUser"
-meta_desc: "Documentation for the aiven.ProjectUser resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ProjectUser | Package Aiven"
+meta_desc: "Explore the ProjectUser resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Project User Resource"
 ---
 
 

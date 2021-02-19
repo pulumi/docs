@@ -1,8 +1,8 @@
 
 ---
-title: "getDomain"
-title_tag: "digitalocean.getDomain"
-meta_desc: "Documentation for the digitalocean.getDomain function with examples, input properties, output properties, and supporting types."
+title: "GetDomain"
+title_tag: "Function GetDomain | Package DigitalOcean"
+meta_desc: "Explore the GetDomain function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a domain. This data source provides the name, TTL, and zone"
 ---
 
 
@@ -21,7 +21,7 @@ DigitalOcean account.
 
 
 
-## Using getDomain {#using}
+## Using GetDomain {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -122,7 +122,7 @@ The following arguments are supported:
 
 
 
-## getDomain Result {#result}
+## GetDomain Result {#result}
 
 The following output properties are available:
 

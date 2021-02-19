@@ -2225,16 +2225,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="upgradesettings_csharp">
-<a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span>
@@ -2405,16 +2395,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="upgradesettings_go">
-<a href="#upgradesettings_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting</a></span>
-    </dt>
-    <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2591,16 +2571,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="upgradesettings_nodejs">
-<a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting[]</a></span>
-    </dt>
-    <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
@@ -2774,16 +2744,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="upgrade_settings_python">
-<a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
@@ -2801,74 +2761,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="getkubernetesclusteragentpoolprofileupgradesetting">Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="maxsurge_csharp">
-<a href="#maxsurge_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="maxsurge_go">
-<a href="#maxsurge_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="maxsurge_nodejs">
-<a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="max_surge_python">
-<a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

@@ -1,8 +1,8 @@
 
 ---
 title: "FloatingIpAssignment"
-title_tag: "digitalocean.FloatingIpAssignment"
-meta_desc: "Documentation for the digitalocean.FloatingIpAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource FloatingIpAssignment | Package DigitalOcean"
+meta_desc: "Explore the FloatingIpAssignment resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource for assigning an existing DigitalOcean Floating IP to a Droplet. This"
 ---
 
 

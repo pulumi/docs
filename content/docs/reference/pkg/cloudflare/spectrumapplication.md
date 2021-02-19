@@ -1,8 +1,8 @@
 
 ---
 title: "SpectrumApplication"
-title_tag: "cloudflare.SpectrumApplication"
-meta_desc: "Documentation for the cloudflare.SpectrumApplication resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource SpectrumApplication | Package Cloudflare"
+meta_desc: "Explore the SpectrumApplication resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare Spectrum Application. You can extend the power of Cloudflare&#39;s DDoS, TLS, and IP Firewall to your other TCP-based services."
 ---
 
 

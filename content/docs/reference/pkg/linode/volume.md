@@ -1,8 +1,8 @@
 
 ---
 title: "Volume"
-title_tag: "linode.Volume"
-meta_desc: "Documentation for the linode.Volume resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Volume | Package Linode"
+meta_desc: "Explore the Volume resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode Volume resource.  This can be used to create, modify, and delete Linodes Block Storage Volumes.  Block Storage Volumes are removable storage disks that persist outside the life-cycle of Linode Instances. These volumes can be attached to and detached from Linode instances throughout a region."
 ---
 
 

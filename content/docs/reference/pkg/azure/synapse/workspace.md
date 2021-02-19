@@ -208,7 +208,7 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">, </span><span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAzureDevopsRepoArgs]</span> = None<span class="p">, </span><span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceGithubRepoArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_identity_control_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_data_lake_gen2_filesystem_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_identity_control_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_data_lake_gen2_filesystem_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -431,26 +431,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="azuredevopsrepo_csharp">
-<a href="#azuredevopsrepo_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Devops<wbr>Repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="githubrepo_csharp">
-<a href="#githubrepo_csharp" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `github_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -564,26 +544,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="azuredevopsrepo_go">
-<a href="#azuredevopsrepo_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Devops<wbr>Repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</a></span>
-    </dt>
-    <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="githubrepo_go">
-<a href="#githubrepo_go" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</a></span>
-    </dt>
-    <dd>{{% md %}}A `github_repo` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -703,26 +663,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="azuredevopsrepo_nodejs">
-<a href="#azuredevopsrepo_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Devops<wbr>Repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</a></span>
-    </dt>
-    <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="githubrepo_nodejs">
-<a href="#githubrepo_nodejs" style="color: inherit; text-decoration: inherit;">github<wbr>Repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</a></span>
-    </dt>
-    <dd>{{% md %}}A `github_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -836,26 +776,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="azure_devops_repo_python">
-<a href="#azure_devops_repo_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>devops_<wbr>repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="github_repo_python">
-<a href="#github_repo_python" style="color: inherit; text-decoration: inherit;">github_<wbr>repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `github_repo` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1080,7 +1000,7 @@ Get an existing Workspace resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">, </span><span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAzureDevopsRepoArgs]</span> = None<span class="p">, </span><span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceGithubRepoArgs]</span> = None<span class="p">, </span><span class="nx">identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkspaceIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_identity_control_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_data_lake_gen2_filesystem_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Workspace</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">, </span><span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkspaceIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_identity_control_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_data_lake_gen2_filesystem_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Workspace</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1205,16 +1125,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_azuredevopsrepo_csharp">
-<a href="#state_azuredevopsrepo_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Devops<wbr>Repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_connectivityendpoints_csharp">
 <a href="#state_connectivityendpoints_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
 </span>
@@ -1222,16 +1132,6 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_githubrepo_csharp">
-<a href="#state_githubrepo_csharp" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `github_repo` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1361,16 +1261,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_azuredevopsrepo_go">
-<a href="#state_azuredevopsrepo_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Devops<wbr>Repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</a></span>
-    </dt>
-    <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_connectivityendpoints_go">
 <a href="#state_connectivityendpoints_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
 </span>
@@ -1378,16 +1268,6 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_githubrepo_go">
-<a href="#state_githubrepo_go" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</a></span>
-    </dt>
-    <dd>{{% md %}}A `github_repo` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1517,16 +1397,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_azuredevopsrepo_nodejs">
-<a href="#state_azuredevopsrepo_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Devops<wbr>Repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</a></span>
-    </dt>
-    <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_connectivityendpoints_nodejs">
 <a href="#state_connectivityendpoints_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Endpoints</a>
 </span>
@@ -1534,16 +1404,6 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_githubrepo_nodejs">
-<a href="#state_githubrepo_nodejs" style="color: inherit; text-decoration: inherit;">github<wbr>Repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</a></span>
-    </dt>
-    <dd>{{% md %}}A `github_repo` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1673,16 +1533,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_azure_devops_repo_python">
-<a href="#state_azure_devops_repo_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>devops_<wbr>repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_connectivity_endpoints_python">
 <a href="#state_connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
 </span>
@@ -1690,16 +1540,6 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_github_repo_python">
-<a href="#state_github_repo_python" style="color: inherit; text-decoration: inherit;">github_<wbr>repo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `github_repo` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1965,458 +1805,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accountname_csharp">
-<a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the Azure DevOps account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="branchname_csharp">
-<a href="#branchname_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="projectname_csharp">
-<a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Azure DevOps project.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="repositoryname_csharp">
-<a href="#repositoryname_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="rootfolder_csharp">
-<a href="#rootfolder_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accountname_go">
-<a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the Azure DevOps account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="branchname_go">
-<a href="#branchname_go" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="projectname_go">
-<a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Azure DevOps project.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="repositoryname_go">
-<a href="#repositoryname_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="rootfolder_go">
-<a href="#rootfolder_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accountname_nodejs">
-<a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the Azure DevOps account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="branchname_nodejs">
-<a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="projectname_nodejs">
-<a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Azure DevOps project.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="repositoryname_nodejs">
-<a href="#repositoryname_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="rootfolder_nodejs">
-<a href="#rootfolder_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="account_name_python">
-<a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the Azure DevOps account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="branch_name_python">
-<a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="project_name_python">
-<a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Azure DevOps project.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="repository_name_python">
-<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="root_folder_python">
-<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accountname_csharp">
-<a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the GitHub account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="branchname_csharp">
-<a href="#branchname_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="repositoryname_csharp">
-<a href="#repositoryname_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="rootfolder_csharp">
-<a href="#rootfolder_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="giturl_csharp">
-<a href="#giturl_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accountname_go">
-<a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the GitHub account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="branchname_go">
-<a href="#branchname_go" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="repositoryname_go">
-<a href="#repositoryname_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="rootfolder_go">
-<a href="#rootfolder_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="giturl_go">
-<a href="#giturl_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accountname_nodejs">
-<a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the GitHub account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="branchname_nodejs">
-<a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="repositoryname_nodejs">
-<a href="#repositoryname_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="rootfolder_nodejs">
-<a href="#rootfolder_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="giturl_nodejs">
-<a href="#giturl_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="account_name_python">
-<a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the GitHub account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="branch_name_python">
-<a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="repository_name_python">
-<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="root_folder_python">
-<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="git_url_python">
-<a href="#git_url_python" style="color: inherit; text-decoration: inherit;">git_<wbr>url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

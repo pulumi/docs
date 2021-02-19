@@ -1,8 +1,8 @@
 
 ---
-title: "getResolverEndpoint"
-title_tag: "aws.route53.getResolverEndpoint"
-meta_desc: "Documentation for the aws.route53.getResolverEndpoint function with examples, input properties, output properties, and supporting types."
+title: "GetResolverEndpoint"
+title_tag: "Function GetResolverEndpoint | Module route53 | Package AWS"
+meta_desc: "Explore the GetResolverEndpoint function of the route53 module, including examples, input properties, output properties, and supporting types. `aws.route53.ResolverEndpoint` provides details about a specific Route53 Resolver Endpoint."
 ---
 
 
@@ -91,7 +91,7 @@ const example = pulumi.output(aws.route53.getResolverEndpoint({
 {{% /examples %}}
 
 
-## Using getResolverEndpoint {#using}
+## Using GetResolverEndpoint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -240,7 +240,7 @@ several valid keys, for a full reference, check out
 
 
 
-## getResolverEndpoint Result {#result}
+## GetResolverEndpoint Result {#result}
 
 The following output properties are available:
 

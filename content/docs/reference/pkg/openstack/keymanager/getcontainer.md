@@ -1,8 +1,8 @@
 
 ---
-title: "getContainer"
-title_tag: "openstack.keymanager.getContainer"
-meta_desc: "Documentation for the openstack.keymanager.getContainer function with examples, input properties, output properties, and supporting types."
+title: "GetContainer"
+title_tag: "Function GetContainer | Module keymanager | Package Open Stack"
+meta_desc: "Explore the GetContainer function of the keymanager module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available Barbican container."
 ---
 
 
@@ -89,7 +89,7 @@ const example = pulumi.output(openstack.keymanager.getContainer({
 {{% /examples %}}
 
 
-## Using getContainer {#using}
+## Using GetContainer {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -106,8 +106,6 @@ const example = pulumi.output(openstack.keymanager.getContainer({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetContainerResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetContainer` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -238,7 +236,7 @@ argument of the provider is used.
 
 
 
-## getContainer Result {#result}
+## GetContainer Result {#result}
 
 The following output properties are available:
 

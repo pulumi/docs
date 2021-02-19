@@ -1,8 +1,8 @@
 
 ---
 title: "ObjectStorageKey"
-title_tag: "linode.ObjectStorageKey"
-meta_desc: "Documentation for the linode.ObjectStorageKey resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ObjectStorageKey | Package Linode"
+meta_desc: "Explore the ObjectStorageKey resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode Object Storage Key resource. This can be used to create, modify, and delete Linodes Object Storage Keys."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getRole"
-title_tag: "openstack.identity.getRole"
-meta_desc: "Documentation for the openstack.identity.getRole function with examples, input properties, output properties, and supporting types."
+title: "GetRole"
+title_tag: "Function GetRole | Module identity | Package Open Stack"
+meta_desc: "Explore the GetRole function of the identity module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an OpenStack role."
 ---
 
 
@@ -88,7 +88,7 @@ const admin = pulumi.output(openstack.identity.getRole({
 {{% /examples %}}
 
 
-## Using getRole {#using}
+## Using GetRole {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -273,7 +273,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## getRole Result {#result}
+## GetRole Result {#result}
 
 The following output properties are available:
 

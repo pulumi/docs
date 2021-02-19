@@ -1,8 +1,8 @@
 
 ---
 title: "Intention"
-title_tag: "consul.Intention"
-meta_desc: "Documentation for the consul.Intention resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Intention | Package Consul"
+meta_desc: "Explore the Intention resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. [Intentions](https://www.consul.io/docs/connect/intentions.html) are used to define"
 ---
 
 

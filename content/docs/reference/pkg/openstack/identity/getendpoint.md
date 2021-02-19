@@ -1,8 +1,8 @@
 
 ---
-title: "getEndpoint"
-title_tag: "openstack.identity.getEndpoint"
-meta_desc: "Documentation for the openstack.identity.getEndpoint function with examples, input properties, output properties, and supporting types."
+title: "GetEndpoint"
+title_tag: "Function GetEndpoint | Module identity | Package Open Stack"
+meta_desc: "Explore the GetEndpoint function of the identity module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an OpenStack endpoint."
 ---
 
 
@@ -91,7 +91,7 @@ const endpoint1 = pulumi.output(openstack.identity.getEndpoint({
 {{% /examples %}}
 
 
-## Using getEndpoint {#using}
+## Using GetEndpoint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -108,8 +108,6 @@ const endpoint1 = pulumi.output(openstack.identity.getEndpoint({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEndpointResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetEndpoint` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -444,7 +442,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## getEndpoint Result {#result}
+## GetEndpoint Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getRepository"
-title_tag: "aws.codecommit.getRepository"
-meta_desc: "Documentation for the aws.codecommit.getRepository function with examples, input properties, output properties, and supporting types."
+title: "GetRepository"
+title_tag: "Function GetRepository | Module codecommit | Package AWS"
+meta_desc: "Explore the GetRepository function of the codecommit module, including examples, input properties, output properties, and supporting types. The CodeCommit Repository data source allows the ARN, Repository ID, Repository URL for HTTP and Repository URL for SSH to be retrieved for an CodeCommit repository."
 ---
 
 
@@ -88,7 +88,7 @@ const test = pulumi.output(aws.codecommit.getRepository({
 {{% /examples %}}
 
 
-## Using getRepository {#using}
+## Using GetRepository {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## getRepository Result {#result}
+## GetRepository Result {#result}
 
 The following output properties are available:
 

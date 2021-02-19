@@ -1,8 +1,8 @@
 
 ---
 title: "Route"
-title_tag: "mailgun.Route"
-meta_desc: "Documentation for the mailgun.Route resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Route | Package Mailgun"
+meta_desc: "Explore the Route resource of the Mailgun package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Mailgun Route resource. This can be used to create and manage routes on Mailgun."
 ---
 
 

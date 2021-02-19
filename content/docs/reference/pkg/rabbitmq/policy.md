@@ -1,8 +1,8 @@
 
 ---
 title: "Policy"
-title_tag: "rabbitmq.Policy"
-meta_desc: "Documentation for the rabbitmq.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Policy | Package RabbitMQ"
+meta_desc: "Explore the Policy resource of the RabbitMQ package, including examples, input properties, output properties, lookup functions, and supporting types. The ``rabbitmq.Policy`` resource creates and manages policies for exchanges"
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getAccount"
-title_tag: "aiven.getAccount"
-meta_desc: "Documentation for the aiven.getAccount function with examples, input properties, output properties, and supporting types."
+title: "GetAccount"
+title_tag: "Function GetAccount | Package Aiven"
+meta_desc: "Explore the GetAccount function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Account Data Source"
 ---
 
 
@@ -90,7 +90,7 @@ const account1 = pulumi.output(aiven.getAccount({
 {{% /examples %}}
 
 
-## Using getAccount {#using}
+## Using GetAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -391,7 +391,7 @@ The following arguments are supported:
 
 
 
-## getAccount Result {#result}
+## GetAccount Result {#result}
 
 The following output properties are available:
 

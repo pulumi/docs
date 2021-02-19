@@ -1,8 +1,8 @@
 
 ---
 title: "ClusterAlterRule"
-title_tag: "rancher2.ClusterAlterRule"
-meta_desc: "Documentation for the rancher2.ClusterAlterRule resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ClusterAlterRule | Package Rancher 2"
+meta_desc: "Explore the ClusterAlterRule resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

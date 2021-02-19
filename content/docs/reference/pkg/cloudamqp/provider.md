@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "cloudamqp.Provider"
-meta_desc: "Documentation for the cloudamqp.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Provider | Package CloudAMQP"
+meta_desc: "Explore the Provider resource of the CloudAMQP package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the cloudamqp package. By default, resources use package-wide configuration"
 ---
 
 

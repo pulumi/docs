@@ -1,8 +1,8 @@
 
 ---
-title: "getCloudCredential"
-title_tag: "rancher2.getCloudCredential"
-meta_desc: "Documentation for the rancher2.getCloudCredential function with examples, input properties, output properties, and supporting types."
+title: "GetCloudCredential"
+title_tag: "Function GetCloudCredential | Package Rancher 2"
+meta_desc: "Explore the GetCloudCredential function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 Cloud Credential."
 ---
 
 
@@ -88,7 +88,7 @@ const test = pulumi.output(rancher2.getCloudCredential({
 {{% /examples %}}
 
 
-## Using getCloudCredential {#using}
+## Using GetCloudCredential {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## getCloudCredential Result {#result}
+## GetCloudCredential Result {#result}
 
 The following output properties are available:
 

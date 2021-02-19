@@ -1,8 +1,8 @@
 
 ---
 title: "Node"
-title_tag: "consul.Node"
-meta_desc: "Documentation for the consul.Node resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Node | Package Consul"
+meta_desc: "Explore the Node resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. Provides access to Node data in Consul. This can be used to define a"
 ---
 
 

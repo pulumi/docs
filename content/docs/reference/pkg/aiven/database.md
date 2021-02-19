@@ -1,8 +1,8 @@
 
 ---
 title: "Database"
-title_tag: "aiven.Database"
-meta_desc: "Documentation for the aiven.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Database | Package Aiven"
+meta_desc: "Explore the Database resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Database Resource"
 ---
 
 

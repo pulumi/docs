@@ -1,8 +1,8 @@
 
 ---
 title: "NodeBalancerNode"
-title_tag: "linode.NodeBalancerNode"
-meta_desc: "Documentation for the linode.NodeBalancerNode resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource NodeBalancerNode | Package Linode"
+meta_desc: "Explore the NodeBalancerNode resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode NodeBalancer Node resource.  This can be used to create, modify, and delete Linodes NodeBalancer Nodes."
 ---
 
 

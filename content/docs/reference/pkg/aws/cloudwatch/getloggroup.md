@@ -1,8 +1,8 @@
 
 ---
-title: "getLogGroup"
-title_tag: "aws.cloudwatch.getLogGroup"
-meta_desc: "Documentation for the aws.cloudwatch.getLogGroup function with examples, input properties, output properties, and supporting types."
+title: "GetLogGroup"
+title_tag: "Function GetLogGroup | Module cloudwatch | Package AWS"
+meta_desc: "Explore the GetLogGroup function of the cloudwatch module, including examples, input properties, output properties, and supporting types. Use this data source to get information about an AWS Cloudwatch Log Group"
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.cloudwatch.getLogGroup({
 {{% /examples %}}
 
 
-## Using getLogGroup {#using}
+## Using GetLogGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## getLogGroup Result {#result}
+## GetLogGroup Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getScalingConfigurations"
-title_tag: "alicloud.ess.getScalingConfigurations"
-meta_desc: "Documentation for the alicloud.ess.getScalingConfigurations function with examples, input properties, output properties, and supporting types."
+title: "GetScalingConfigurations"
+title_tag: "Function GetScalingConfigurations | Module ess | Package AliCloud"
+meta_desc: "Explore the GetScalingConfigurations function of the ess module, including examples, input properties, output properties, and supporting types. This data source provides available scaling configuration resources. "
 ---
 
 
@@ -118,7 +118,7 @@ export const firstScalingRule = scalingconfigurationsDs.configurations[0].id;
 {{% /examples %}}
 
 
-## Using getScalingConfigurations {#using}
+## Using GetScalingConfigurations {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -135,8 +135,6 @@ export const firstScalingRule = scalingconfigurationsDs.configurations[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScalingConfigurations<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetScalingConfigurationsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetScalingConfigurationsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetScalingConfigurations` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -335,7 +333,7 @@ The following arguments are supported:
 
 
 
-## getScalingConfigurations Result {#result}
+## GetScalingConfigurations Result {#result}
 
 The following output properties are available:
 

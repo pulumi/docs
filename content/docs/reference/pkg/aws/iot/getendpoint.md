@@ -1,8 +1,8 @@
 
 ---
-title: "getEndpoint"
-title_tag: "aws.iot.getEndpoint"
-meta_desc: "Documentation for the aws.iot.getEndpoint function with examples, input properties, output properties, and supporting types."
+title: "GetEndpoint"
+title_tag: "Function GetEndpoint | Module iot | Package AWS"
+meta_desc: "Explore the GetEndpoint function of the iot module, including examples, input properties, output properties, and supporting types. Returns a unique endpoint specific to the AWS account making the call."
 ---
 
 
@@ -15,7 +15,7 @@ Returns a unique endpoint specific to the AWS account making the call.
 
 
 
-## Using getEndpoint {#using}
+## Using GetEndpoint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -32,8 +32,6 @@ Returns a unique endpoint specific to the AWS account making the call.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEndpointResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetEndpoint` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -116,7 +114,7 @@ The following arguments are supported:
 
 
 
-## getEndpoint Result {#result}
+## GetEndpoint Result {#result}
 
 The following output properties are available:
 

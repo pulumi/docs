@@ -1,8 +1,8 @@
 
 ---
-title: "getRoleTemplate"
-title_tag: "rancher2.getRoleTemplate"
-meta_desc: "Documentation for the rancher2.getRoleTemplate function with examples, input properties, output properties, and supporting types."
+title: "GetRoleTemplate"
+title_tag: "Function GetRoleTemplate | Package Rancher 2"
+meta_desc: "Explore the GetRoleTemplate function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 role template resource."
 ---
 
 
@@ -88,7 +88,7 @@ const foo = pulumi.output(rancher2.getRoleTemplate({
 {{% /examples %}}
 
 
-## Using getRoleTemplate {#using}
+## Using GetRoleTemplate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -105,8 +105,6 @@ const foo = pulumi.output(rancher2.getRoleTemplate({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoleTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRoleTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRoleTemplateResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetRoleTemplate` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -229,7 +227,7 @@ The following arguments are supported:
 
 
 
-## getRoleTemplate Result {#result}
+## GetRoleTemplate Result {#result}
 
 The following output properties are available:
 

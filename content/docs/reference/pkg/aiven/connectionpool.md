@@ -1,8 +1,8 @@
 
 ---
 title: "ConnectionPool"
-title_tag: "aiven.ConnectionPool"
-meta_desc: "Documentation for the aiven.ConnectionPool resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ConnectionPool | Package Aiven"
+meta_desc: "Explore the ConnectionPool resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Connection Pool Resource"
 ---
 
 

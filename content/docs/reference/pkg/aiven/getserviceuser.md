@@ -1,8 +1,8 @@
 
 ---
-title: "getServiceUser"
-title_tag: "aiven.getServiceUser"
-meta_desc: "Documentation for the aiven.getServiceUser function with examples, input properties, output properties, and supporting types."
+title: "GetServiceUser"
+title_tag: "Function GetServiceUser | Package Aiven"
+meta_desc: "Explore the GetServiceUser function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Service User Data Source"
 ---
 
 
@@ -98,7 +98,7 @@ const myserviceuser = pulumi.all([aiven_project_myproject.project, aiven_service
 {{% /examples %}}
 
 
-## Using getServiceUser {#using}
+## Using GetServiceUser {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -595,7 +595,7 @@ using reference as shown above to set up dependencies correctly.
 
 
 
-## getServiceUser Result {#result}
+## GetServiceUser Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getOrderableDbInstance"
-title_tag: "aws.docdb.getOrderableDbInstance"
-meta_desc: "Documentation for the aws.docdb.getOrderableDbInstance function with examples, input properties, output properties, and supporting types."
+title: "GetOrderableDbInstance"
+title_tag: "Function GetOrderableDbInstance | Module docdb | Package AWS"
+meta_desc: "Explore the GetOrderableDbInstance function of the docdb module, including examples, input properties, output properties, and supporting types. Information about DocumentDB orderable DB instances."
 ---
 
 
@@ -120,7 +120,7 @@ const test = pulumi.output(aws.docdb.getOrderableDbInstance({
 {{% /examples %}}
 
 
-## Using getOrderableDbInstance {#using}
+## Using GetOrderableDbInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -137,8 +137,6 @@ const test = pulumi.output(aws.docdb.getOrderableDbInstance({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrderableDbInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetOrderableDbInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetOrderableDbInstanceResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetOrderableDbInstance` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -421,7 +419,7 @@ The following arguments are supported:
 
 
 
-## getOrderableDbInstance Result {#result}
+## GetOrderableDbInstance Result {#result}
 
 The following output properties are available:
 

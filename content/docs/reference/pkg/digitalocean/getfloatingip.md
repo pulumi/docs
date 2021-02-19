@@ -1,8 +1,8 @@
 
 ---
-title: "getFloatingIp"
-title_tag: "digitalocean.getFloatingIp"
-meta_desc: "Documentation for the digitalocean.getFloatingIp function with examples, input properties, output properties, and supporting types."
+title: "GetFloatingIp"
+title_tag: "Function GetFloatingIp | Package DigitalOcean"
+meta_desc: "Explore the GetFloatingIp function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a floating ip. This data source provides the region and Droplet id"
 ---
 
 
@@ -108,7 +108,7 @@ export const fipOutput = example.then(example => example.dropletId);
 {{% /examples %}}
 
 
-## Using getFloatingIp {#using}
+## Using GetFloatingIp {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -209,7 +209,7 @@ The following arguments are supported:
 
 
 
-## getFloatingIp Result {#result}
+## GetFloatingIp Result {#result}
 
 The following output properties are available:
 

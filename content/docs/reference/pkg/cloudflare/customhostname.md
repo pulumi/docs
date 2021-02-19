@@ -1,8 +1,8 @@
 
 ---
 title: "CustomHostname"
-title_tag: "cloudflare.CustomHostname"
-meta_desc: "Documentation for the cloudflare.CustomHostname resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource CustomHostname | Package Cloudflare"
+meta_desc: "Explore the CustomHostname resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare custom hostname (also known as SSL for SaaS) resource."
 ---
 
 

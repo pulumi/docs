@@ -1,8 +1,8 @@
 
 ---
-title: "getDomainRecord"
-title_tag: "linode.getDomainRecord"
-meta_desc: "Documentation for the linode.getDomainRecord function with examples, input properties, output properties, and supporting types."
+title: "GetDomainRecord"
+title_tag: "Function GetDomainRecord | Package Linode"
+meta_desc: "Explore the GetDomainRecord function of the Linode package, including examples, input properties, output properties, and supporting types. Provides information about a Linode Domain Record."
 ---
 
 
@@ -139,7 +139,7 @@ const myWwwRecord = pulumi.output(linode.getDomainRecord({
 {{% /examples %}}
 
 
-## Using getDomainRecord {#using}
+## Using GetDomainRecord {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -320,7 +320,7 @@ The following arguments are supported:
 
 
 
-## getDomainRecord Result {#result}
+## GetDomainRecord Result {#result}
 
 The following output properties are available:
 

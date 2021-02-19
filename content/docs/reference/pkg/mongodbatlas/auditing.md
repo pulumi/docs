@@ -1,8 +1,8 @@
 
 ---
 title: "Auditing"
-title_tag: "mongodbatlas.Auditing"
-meta_desc: "Documentation for the mongodbatlas.Auditing resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Auditing | Package MongoDB Atlas"
+meta_desc: "Explore the Auditing resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.Auditing` provides an Auditing resource. This allows auditing to be created."
 ---
 
 

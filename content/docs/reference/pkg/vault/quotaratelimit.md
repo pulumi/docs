@@ -1,8 +1,8 @@
 
 ---
 title: "QuotaRateLimit"
-title_tag: "vault.QuotaRateLimit"
-meta_desc: "Documentation for the vault.QuotaRateLimit resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource QuotaRateLimit | Package Vault"
+meta_desc: "Explore the QuotaRateLimit resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. Manage rate limit quotas which enforce API rate limiting using a token bucket algorithm."
 ---
 
 

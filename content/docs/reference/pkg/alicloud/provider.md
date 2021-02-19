@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "alicloud.Provider"
-meta_desc: "Documentation for the alicloud.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Provider | Package AliCloud"
+meta_desc: "Explore the Provider resource of the AliCloud package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the alicloud package. By default, resources use package-wide configuration"
 ---
 
 

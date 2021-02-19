@@ -1,8 +1,8 @@
 
 ---
-title: "getFlows"
-title_tag: "alicloud.fnf.getFlows"
-meta_desc: "Documentation for the alicloud.fnf.getFlows function with examples, input properties, output properties, and supporting types."
+title: "GetFlows"
+title_tag: "Function GetFlows | Module fnf | Package AliCloud"
+meta_desc: "Explore the GetFlows function of the fnf module, including examples, input properties, output properties, and supporting types. This data source provides the Fnf Flows of the current Alibaba Cloud user."
 ---
 
 
@@ -106,7 +106,7 @@ export const firstFnfFlowId = example.then(example => example.flows[0].id);
 {{% /examples %}}
 
 
-## Using getFlows {#using}
+## Using GetFlows {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -123,8 +123,6 @@ export const firstFnfFlowId = example.then(example => example.flows[0].id);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFlows<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetFlowsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFlowsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetFlows` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -323,7 +321,7 @@ The following arguments are supported:
 
 
 
-## getFlows Result {#result}
+## GetFlows Result {#result}
 
 The following output properties are available:
 

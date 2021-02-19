@@ -1,8 +1,8 @@
 
 ---
-title: "getCluster"
-title_tag: "aws.redshift.getCluster"
-meta_desc: "Documentation for the aws.redshift.getCluster function with examples, input properties, output properties, and supporting types."
+title: "GetCluster"
+title_tag: "Function GetCluster | Module redshift | Package AWS"
+meta_desc: "Explore the GetCluster function of the redshift module, including examples, input properties, output properties, and supporting types. Provides details about a specific redshift cluster."
 ---
 
 
@@ -177,7 +177,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
 {{% /examples %}}
 
 
-## Using getCluster {#using}
+## Using GetCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -318,7 +318,7 @@ The following arguments are supported:
 
 
 
-## getCluster Result {#result}
+## GetCluster Result {#result}
 
 The following output properties are available:
 

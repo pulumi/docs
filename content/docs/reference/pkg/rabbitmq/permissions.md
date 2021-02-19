@@ -1,8 +1,8 @@
 
 ---
 title: "Permissions"
-title_tag: "rabbitmq.Permissions"
-meta_desc: "Documentation for the rabbitmq.Permissions resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Permissions | Package RabbitMQ"
+meta_desc: "Explore the Permissions resource of the RabbitMQ package, including examples, input properties, output properties, lookup functions, and supporting types. The ``rabbitmq.Permissions`` resource creates and manages a user&#39;s set of"
 ---
 
 

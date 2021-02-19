@@ -1,8 +1,8 @@
 
 ---
 title: "VappContainer"
-title_tag: "vsphere.VappContainer"
-meta_desc: "Documentation for the vsphere.VappContainer resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource VappContainer | Package vSphere"
+meta_desc: "Explore the VappContainer resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

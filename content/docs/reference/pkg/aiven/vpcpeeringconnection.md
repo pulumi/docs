@@ -1,8 +1,8 @@
 
 ---
 title: "VpcPeeringConnection"
-title_tag: "aiven.VpcPeeringConnection"
-meta_desc: "Documentation for the aiven.VpcPeeringConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource VpcPeeringConnection | Package Aiven"
+meta_desc: "Explore the VpcPeeringConnection resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # VPC Peering Connection Resource"
 ---
 
 

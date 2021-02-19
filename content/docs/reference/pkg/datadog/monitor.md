@@ -1,8 +1,8 @@
 
 ---
 title: "Monitor"
-title_tag: "datadog.Monitor"
-meta_desc: "Documentation for the datadog.Monitor resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Monitor | Package Datadog"
+meta_desc: "Explore the Monitor resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

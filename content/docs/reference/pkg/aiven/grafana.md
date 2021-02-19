@@ -1,8 +1,8 @@
 
 ---
 title: "Grafana"
-title_tag: "aiven.Grafana"
-meta_desc: "Documentation for the aiven.Grafana resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Grafana | Package Aiven"
+meta_desc: "Explore the Grafana resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Grafana Resource"
 ---
 
 

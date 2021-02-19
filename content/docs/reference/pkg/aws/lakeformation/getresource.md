@@ -1,8 +1,8 @@
 
 ---
-title: "getResource"
-title_tag: "aws.lakeformation.getResource"
-meta_desc: "Documentation for the aws.lakeformation.getResource function with examples, input properties, output properties, and supporting types."
+title: "GetResource"
+title_tag: "Function GetResource | Module lakeformation | Package AWS"
+meta_desc: "Explore the GetResource function of the lakeformation module, including examples, input properties, output properties, and supporting types. Provides details about a Lake Formation resource."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.lakeformation.getResource({
 {{% /examples %}}
 
 
-## Using getResource {#using}
+## Using GetResource {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## getResource Result {#result}
+## GetResource Result {#result}
 
 The following output properties are available:
 

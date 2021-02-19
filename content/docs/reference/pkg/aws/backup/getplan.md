@@ -1,8 +1,8 @@
 
 ---
-title: "getPlan"
-title_tag: "aws.backup.getPlan"
-meta_desc: "Documentation for the aws.backup.getPlan function with examples, input properties, output properties, and supporting types."
+title: "GetPlan"
+title_tag: "Function GetPlan | Module backup | Package AWS"
+meta_desc: "Explore the GetPlan function of the backup module, including examples, input properties, output properties, and supporting types. Use this data source to get information on an existing backup plan."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.backup.getPlan({
 {{% /examples %}}
 
 
-## Using getPlan {#using}
+## Using GetPlan {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## getPlan Result {#result}
+## GetPlan Result {#result}
 
 The following output properties are available:
 

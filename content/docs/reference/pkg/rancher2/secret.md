@@ -1,8 +1,8 @@
 
 ---
 title: "Secret"
-title_tag: "rancher2.Secret"
-meta_desc: "Documentation for the rancher2.Secret resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Secret | Package Rancher 2"
+meta_desc: "Explore the Secret resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Secret resource. This can be used to create secrets for Rancher v2 environments and retrieve their information."
 ---
 
 

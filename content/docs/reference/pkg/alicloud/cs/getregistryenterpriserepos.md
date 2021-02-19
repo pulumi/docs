@@ -1,8 +1,8 @@
 
 ---
-title: "getRegistryEnterpriseRepos"
-title_tag: "alicloud.cs.getRegistryEnterpriseRepos"
-meta_desc: "Documentation for the alicloud.cs.getRegistryEnterpriseRepos function with examples, input properties, output properties, and supporting types."
+title: "GetRegistryEnterpriseRepos"
+title_tag: "Function GetRegistryEnterpriseRepos | Module cs | Package AliCloud"
+meta_desc: "Explore the GetRegistryEnterpriseRepos function of the cs module, including examples, input properties, output properties, and supporting types. This data source provides a list Container Registry Enterprise Edition repositories on Alibaba Cloud."
 ---
 
 
@@ -108,7 +108,7 @@ export const output = myRepos.repos;
 {{% /examples %}}
 
 
-## Using getRegistryEnterpriseRepos {#using}
+## Using GetRegistryEnterpriseRepos {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -125,8 +125,6 @@ export const output = myRepos.repos;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryEnterpriseRepos<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegistryEnterpriseReposArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegistryEnterpriseReposResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetRegistryEnterpriseRepos` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -405,7 +403,7 @@ The following arguments are supported:
 
 
 
-## getRegistryEnterpriseRepos Result {#result}
+## GetRegistryEnterpriseRepos Result {#result}
 
 The following output properties are available:
 

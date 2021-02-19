@@ -1,8 +1,8 @@
 
 ---
-title: "getMongoInstances"
-title_tag: "alicloud.dds.getMongoInstances"
-meta_desc: "Documentation for the alicloud.dds.getMongoInstances function with examples, input properties, output properties, and supporting types."
+title: "GetMongoInstances"
+title_tag: "Function GetMongoInstances | Module dds | Package AliCloud"
+meta_desc: "Explore the GetMongoInstances function of the dds module, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the alicloud.dds.getMongoInstances function with e
 
 
 
-## Using getMongoInstances {#using}
+## Using GetMongoInstances {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -30,8 +30,6 @@ meta_desc: "Documentation for the alicloud.dds.getMongoInstances function with e
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMongoInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetMongoInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetMongoInstancesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetMongoInstances` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -326,7 +324,7 @@ The following arguments are supported:
 
 
 
-## getMongoInstances Result {#result}
+## GetMongoInstances Result {#result}
 
 The following output properties are available:
 

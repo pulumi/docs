@@ -1,8 +1,8 @@
 
 ---
 title: "Network"
-title_tag: "docker.Network"
-meta_desc: "Documentation for the docker.Network resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Network | Package Docker"
+meta_desc: "Explore the Network resource of the Docker package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Docker Network. This can be used alongside"
 ---
 
 

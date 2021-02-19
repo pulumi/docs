@@ -1,8 +1,8 @@
 
 ---
-title: "getRoles"
-title_tag: "alicloud.resourcemanager.getRoles"
-meta_desc: "Documentation for the alicloud.resourcemanager.getRoles function with examples, input properties, output properties, and supporting types."
+title: "GetRoles"
+title_tag: "Function GetRoles | Module resourcemanager | Package AliCloud"
+meta_desc: "Explore the GetRoles function of the resourcemanager module, including examples, input properties, output properties, and supporting types. This data source provides the Resource Manager Roles of the current Alibaba Cloud user."
 ---
 
 
@@ -98,7 +98,7 @@ export const firstRoleId = example.roles[0].id;
 {{% /examples %}}
 
 
-## Using getRoles {#using}
+## Using GetRoles {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -115,8 +115,6 @@ export const firstRoleId = example.roles[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoles<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRolesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRolesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetRoles` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -315,7 +313,7 @@ The following arguments are supported:
 
 
 
-## getRoles Result {#result}
+## GetRoles Result {#result}
 
 The following output properties are available:
 

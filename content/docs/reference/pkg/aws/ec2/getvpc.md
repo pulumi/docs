@@ -1,8 +1,8 @@
 
 ---
-title: "getVpc"
-title_tag: "aws.ec2.getVpc"
-meta_desc: "Documentation for the aws.ec2.getVpc function with examples, input properties, output properties, and supporting types."
+title: "GetVpc"
+title_tag: "Function GetVpc | Module ec2 | Package AWS"
+meta_desc: "Explore the GetVpc function of the ec2 module, including examples, input properties, output properties, and supporting types. `aws.ec2.Vpc` provides details about a specific VPC."
 ---
 
 
@@ -19,7 +19,7 @@ VPC.
 
 
 
-## Using getVpc {#using}
+## Using GetVpc {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -372,7 +372,7 @@ a pair on the desired VPC.
 
 
 
-## getVpc Result {#result}
+## GetVpc Result {#result}
 
 The following output properties are available:
 

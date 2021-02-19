@@ -1,8 +1,8 @@
 
 ---
-title: "getAccessGroups"
-title_tag: "alicloud.nas.getAccessGroups"
-meta_desc: "Documentation for the alicloud.nas.getAccessGroups function with examples, input properties, output properties, and supporting types."
+title: "GetAccessGroups"
+title_tag: "Function GetAccessGroups | Module nas | Package AliCloud"
+meta_desc: "Explore the GetAccessGroups function of the nas module, including examples, input properties, output properties, and supporting types. This data source provides user-available access groups. Use when you can create mount points"
 ---
 
 
@@ -107,7 +107,7 @@ export const alicloudNasAccessGroupsId = example.then(example => example.groups[
 {{% /examples %}}
 
 
-## Using getAccessGroups {#using}
+## Using GetAccessGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -124,8 +124,6 @@ export const alicloudNasAccessGroupsId = example.then(example => example.groups[
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAccessGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAccessGroupsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetAccessGroups` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -484,7 +482,7 @@ The following arguments are supported:
 
 
 
-## getAccessGroups Result {#result}
+## GetAccessGroups Result {#result}
 
 The following output properties are available:
 

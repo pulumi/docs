@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "cloudflare.Provider"
-meta_desc: "Documentation for the cloudflare.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Provider | Package Cloudflare"
+meta_desc: "Explore the Provider resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the cloudflare package. By default, resources use package-wide configuration"
 ---
 
 

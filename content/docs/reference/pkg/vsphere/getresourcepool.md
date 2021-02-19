@@ -1,8 +1,8 @@
 
 ---
-title: "getResourcePool"
-title_tag: "vsphere.getResourcePool"
-meta_desc: "Documentation for the vsphere.getResourcePool function with examples, input properties, output properties, and supporting types."
+title: "GetResourcePool"
+title_tag: "Function GetResourcePool | Package vSphere"
+meta_desc: "Explore the GetResourcePool function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.ResourcePool` data source can be used to discover the ID of a"
 ---
 
 
@@ -186,7 +186,7 @@ const pool = vsphere_datacenter_dc.id.apply(id => vsphere.getResourcePool({
 {{% /examples %}}
 
 
-## Using getResourcePool {#using}
+## Using GetResourcePool {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -347,7 +347,7 @@ path. This is required when using vCenter.
 
 
 
-## getResourcePool Result {#result}
+## GetResourcePool Result {#result}
 
 The following output properties are available:
 

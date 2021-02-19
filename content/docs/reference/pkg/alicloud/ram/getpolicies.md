@@ -1,8 +1,8 @@
 
 ---
-title: "getPolicies"
-title_tag: "alicloud.ram.getPolicies"
-meta_desc: "Documentation for the alicloud.ram.getPolicies function with examples, input properties, output properties, and supporting types."
+title: "GetPolicies"
+title_tag: "Function GetPolicies | Module ram | Package AliCloud"
+meta_desc: "Explore the GetPolicies function of the ram module, including examples, input properties, output properties, and supporting types. This data source provides a list of RAM policies in an Alibaba Cloud account according to the specified filters."
 ---
 
 
@@ -111,7 +111,7 @@ export const firstPolicyName = policiesDs.policies[0].name;
 {{% /examples %}}
 
 
-## Using getPolicies {#using}
+## Using GetPolicies {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -128,8 +128,6 @@ export const firstPolicyName = policiesDs.policies[0].name;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicies<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPoliciesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPoliciesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetPolicies` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -484,7 +482,7 @@ The following arguments are supported:
 
 
 
-## getPolicies Result {#result}
+## GetPolicies Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "AclBindingRule"
-title_tag: "consul.AclBindingRule"
-meta_desc: "Documentation for the consul.AclBindingRule resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AclBindingRule | Package Consul"
+meta_desc: "Explore the AclBindingRule resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. Starting with Consul 1.5.0, the consul.AclBindingRule resource can be used to"
 ---
 
 

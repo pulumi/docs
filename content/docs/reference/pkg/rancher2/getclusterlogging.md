@@ -1,8 +1,8 @@
 
 ---
-title: "getClusterLogging"
-title_tag: "rancher2.getClusterLogging"
-meta_desc: "Documentation for the rancher2.getClusterLogging function with examples, input properties, output properties, and supporting types."
+title: "GetClusterLogging"
+title_tag: "Function GetClusterLogging | Package Rancher 2"
+meta_desc: "Explore the GetClusterLogging function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 Cluster Logging."
 ---
 
 
@@ -88,7 +88,7 @@ const foo = pulumi.output(rancher2.getClusterLogging({
 {{% /examples %}}
 
 
-## Using getClusterLogging {#using}
+## Using GetClusterLogging {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## getClusterLogging Result {#result}
+## GetClusterLogging Result {#result}
 
 The following output properties are available:
 

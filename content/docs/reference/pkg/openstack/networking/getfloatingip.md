@@ -1,8 +1,8 @@
 
 ---
-title: "getFloatingIp"
-title_tag: "openstack.networking.getFloatingIp"
-meta_desc: "Documentation for the openstack.networking.getFloatingIp function with examples, input properties, output properties, and supporting types."
+title: "GetFloatingIp"
+title_tag: "Function GetFloatingIp | Module networking | Package Open Stack"
+meta_desc: "Explore the GetFloatingIp function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack floating IP."
 ---
 
 
@@ -89,7 +89,7 @@ const floatingip1 = pulumi.output(openstack.networking.getFloatingIp({
 {{% /examples %}}
 
 
-## Using getFloatingIp {#using}
+## Using GetFloatingIp {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -518,7 +518,7 @@ A Neutron client is needed to retrieve floating IP ids. If omitted, the
 
 
 
-## getFloatingIp Result {#result}
+## GetFloatingIp Result {#result}
 
 The following output properties are available:
 

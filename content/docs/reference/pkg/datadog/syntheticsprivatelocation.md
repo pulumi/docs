@@ -1,8 +1,8 @@
 
 ---
 title: "SyntheticsPrivateLocation"
-title_tag: "datadog.SyntheticsPrivateLocation"
-meta_desc: "Documentation for the datadog.SyntheticsPrivateLocation resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource SyntheticsPrivateLocation | Package Datadog"
+meta_desc: "Explore the SyntheticsPrivateLocation resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog synthetics private location resource. This can be used to create and manage Datadog synthetics private locations."
 ---
 
 

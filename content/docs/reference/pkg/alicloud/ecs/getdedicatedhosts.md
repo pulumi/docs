@@ -1,8 +1,8 @@
 
 ---
-title: "getDedicatedHosts"
-title_tag: "alicloud.ecs.getDedicatedHosts"
-meta_desc: "Documentation for the alicloud.ecs.getDedicatedHosts function with examples, input properties, output properties, and supporting types."
+title: "GetDedicatedHosts"
+title_tag: "Function GetDedicatedHosts | Module ecs | Package AliCloud"
+meta_desc: "Explore the GetDedicatedHosts function of the ecs module, including examples, input properties, output properties, and supporting types. This data source provides a list of ECS Dedicated Hosts in an Alibaba Cloud account according to the specified filters."
 ---
 
 
@@ -109,7 +109,7 @@ export const firstDedicatedHostsId = dedicatedHostsDs.hosts[0].id;
 {{% /examples %}}
 
 
-## Using getDedicatedHosts {#using}
+## Using GetDedicatedHosts {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -126,8 +126,6 @@ export const firstDedicatedHostsId = dedicatedHostsDs.hosts[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDedicatedHosts<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDedicatedHostsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDedicatedHostsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetDedicatedHosts` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -570,7 +568,7 @@ The following arguments are supported:
 
 
 
-## getDedicatedHosts Result {#result}
+## GetDedicatedHosts Result {#result}
 
 The following output properties are available:
 

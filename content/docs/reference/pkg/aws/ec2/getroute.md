@@ -1,8 +1,8 @@
 
 ---
-title: "getRoute"
-title_tag: "aws.ec2.getRoute"
-meta_desc: "Documentation for the aws.ec2.getRoute function with examples, input properties, output properties, and supporting types."
+title: "GetRoute"
+title_tag: "Function GetRoute | Module ec2 | Package AWS"
+meta_desc: "Explore the GetRoute function of the ec2 module, including examples, input properties, output properties, and supporting types. `aws.ec2.Route` provides details about a specific Route."
 ---
 
 
@@ -136,7 +136,7 @@ const interface = route.then(route => aws.ec2.getNetworkInterface({
 {{% /examples %}}
 
 
-## Using getRoute {#using}
+## Using GetRoute {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -637,7 +637,7 @@ The following arguments are supported:
 
 
 
-## getRoute Result {#result}
+## GetRoute Result {#result}
 
 The following output properties are available:
 

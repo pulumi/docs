@@ -1,8 +1,8 @@
 
 ---
-title: "getServiceHealth"
-title_tag: "consul.getServiceHealth"
-meta_desc: "Documentation for the consul.getServiceHealth function with examples, input properties, output properties, and supporting types."
+title: "GetServiceHealth"
+title_tag: "Function GetServiceHealth | Package Consul"
+meta_desc: "Explore the GetServiceHealth function of the Consul package, including examples, input properties, output properties, and supporting types. `consul.getServiceHealth` can be used to get the list of the instances that"
 ---
 
 
@@ -54,7 +54,7 @@ const vaultServiceHealth = pulumi.output(consul.getServiceHealth({
 {{% /examples %}}
 
 
-## Using getServiceHealth {#using}
+## Using GetServiceHealth {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -71,8 +71,6 @@ const vaultServiceHealth = pulumi.output(consul.getServiceHealth({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceHealth<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetServiceHealthArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetServiceHealthResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetServiceHealth` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -451,7 +449,7 @@ based on a single matching tag.
 
 
 
-## getServiceHealth Result {#result}
+## GetServiceHealth Result {#result}
 
 The following output properties are available:
 

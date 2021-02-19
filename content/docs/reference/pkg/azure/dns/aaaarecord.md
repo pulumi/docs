@@ -39,10 +39,6 @@ class MyStack : Stack
             ZoneName = exampleZone.Name,
             ResourceGroupName = exampleResourceGroup.Name,
             Ttl = 300,
-            Records = 
-            {
-                "2001:db8::1:0:0:1",
-            },
         });
     }
 
@@ -79,9 +75,6 @@ func main() {
 			ZoneName:          exampleZone.Name,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Ttl:               pulumi.Int(300),
-			Records: pulumi.StringArray{
-				pulumi.String("2001:db8::1:0:0:1"),
-			},
 		})
 		if err != nil {
 			return err
@@ -103,8 +96,7 @@ example_zone = azure.dns.Zone("exampleZone", resource_group_name=example_resourc
 example_aaaa_record = azure.dns.AaaaRecord("exampleAaaaRecord",
     zone_name=example_zone.name,
     resource_group_name=example_resource_group.name,
-    ttl=300,
-    records=["2001:db8::1:0:0:1"])
+    ttl=300)
 ```
 
 {{% /example %}}
@@ -121,7 +113,6 @@ const exampleAaaaRecord = new azure.dns.AaaaRecord("exampleAaaaRecord", {
     zoneName: exampleZone.name,
     resourceGroupName: exampleResourceGroup.name,
     ttl: 300,
-    records: ["2001:db8::1:0:0:1"],
 });
 ```
 
@@ -491,7 +482,7 @@ The AaaaRecord resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 Addresses. Conflicts with `target_resource_id`.
+    <dd>{{% md %}}List of IPv4 Addresses. Conflicts with `target_resource_id`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -566,7 +557,7 @@ The AaaaRecord resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 Addresses. Conflicts with `target_resource_id`.
+    <dd>{{% md %}}List of IPv4 Addresses. Conflicts with `target_resource_id`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -641,7 +632,7 @@ The AaaaRecord resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 Addresses. Conflicts with `target_resource_id`.
+    <dd>{{% md %}}List of IPv4 Addresses. Conflicts with `target_resource_id`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -716,7 +707,7 @@ The AaaaRecord resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 Addresses. Conflicts with `target_resource_id`.
+    <dd>{{% md %}}List of IPv4 Addresses. Conflicts with `target_resource_id`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1002,7 +993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 Addresses. Conflicts with `target_resource_id`.
+    <dd>{{% md %}}List of IPv4 Addresses. Conflicts with `target_resource_id`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1087,7 +1078,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 Addresses. Conflicts with `target_resource_id`.
+    <dd>{{% md %}}List of IPv4 Addresses. Conflicts with `target_resource_id`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1172,7 +1163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 Addresses. Conflicts with `target_resource_id`.
+    <dd>{{% md %}}List of IPv4 Addresses. Conflicts with `target_resource_id`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1257,7 +1248,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of IPv6 Addresses. Conflicts with `target_resource_id`.
+    <dd>{{% md %}}List of IPv4 Addresses. Conflicts with `target_resource_id`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

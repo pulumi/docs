@@ -1,8 +1,8 @@
 
 ---
-title: "getQueue"
-title_tag: "aws.sqs.getQueue"
-meta_desc: "Documentation for the aws.sqs.getQueue function with examples, input properties, output properties, and supporting types."
+title: "GetQueue"
+title_tag: "Function GetQueue | Module sqs | Package AWS"
+meta_desc: "Explore the GetQueue function of the sqs module, including examples, input properties, output properties, and supporting types. Use this data source to get the ARN and URL of queue in AWS Simple Queue Service (SQS)."
 ---
 
 
@@ -90,7 +90,7 @@ const example = pulumi.output(aws.sqs.getQueue({
 {{% /examples %}}
 
 
-## Using getQueue {#using}
+## Using GetQueue {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -231,7 +231,7 @@ The following arguments are supported:
 
 
 
-## getQueue Result {#result}
+## GetQueue Result {#result}
 
 The following output properties are available:
 

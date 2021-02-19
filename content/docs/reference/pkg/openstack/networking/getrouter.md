@@ -1,8 +1,8 @@
 
 ---
-title: "getRouter"
-title_tag: "openstack.networking.getRouter"
-meta_desc: "Documentation for the openstack.networking.getRouter function with examples, input properties, output properties, and supporting types."
+title: "GetRouter"
+title_tag: "Function GetRouter | Module networking | Package Open Stack"
+meta_desc: "Explore the GetRouter function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack router."
 ---
 
 
@@ -89,7 +89,7 @@ const router = pulumi.output(openstack.networking.getRouter({
 {{% /examples %}}
 
 
-## Using getRouter {#using}
+## Using GetRouter {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -558,7 +558,7 @@ A Neutron client is needed to retrieve router ids. If omitted, the
 
 
 
-## getRouter Result {#result}
+## GetRouter Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Target"
-title_tag: "kong.Target"
-meta_desc: "Documentation for the kong.Target resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Target | Package Kong"
+meta_desc: "Explore the Target resource of the Kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

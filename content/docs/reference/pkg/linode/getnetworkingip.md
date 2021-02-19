@@ -1,8 +1,8 @@
 
 ---
-title: "getNetworkingIp"
-title_tag: "linode.getNetworkingIp"
-meta_desc: "Documentation for the linode.getNetworkingIp function with examples, input properties, output properties, and supporting types."
+title: "GetNetworkingIp"
+title_tag: "Function GetNetworkingIp | Package Linode"
+meta_desc: "Explore the GetNetworkingIp function of the Linode package, including examples, input properties, output properties, and supporting types. Provides information about a Linode Networking IP Address"
 ---
 
 
@@ -109,7 +109,7 @@ const ns1LinodeCom = pulumi.output(linode.getNetworkingIp({
 {{% /examples %}}
 
 
-## Using getNetworkingIp {#using}
+## Using GetNetworkingIp {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -126,8 +126,6 @@ const ns1LinodeCom = pulumi.output(linode.getNetworkingIp({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkingIp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNetworkingIpArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNetworkingIpResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetNetworkingIp` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -210,7 +208,7 @@ The following arguments are supported:
 
 
 
-## getNetworkingIp Result {#result}
+## GetNetworkingIp Result {#result}
 
 The following output properties are available:
 

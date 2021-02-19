@@ -1,8 +1,8 @@
 
 ---
-title: "getService"
-title_tag: "aiven.getService"
-meta_desc: "Documentation for the aiven.getService function with examples, input properties, output properties, and supporting types."
+title: "GetService"
+title_tag: "Function GetService | Package Aiven"
+meta_desc: "Explore the GetService function of the Aiven package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the aiven.getService function with examples, input
 
 
 
-## Using getService {#using}
+## Using GetService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1406,7 +1406,7 @@ The following arguments are supported:
 
 
 
-## getService Result {#result}
+## GetService Result {#result}
 
 The following output properties are available:
 

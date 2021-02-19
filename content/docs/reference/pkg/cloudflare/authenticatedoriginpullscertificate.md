@@ -1,8 +1,8 @@
 
 ---
 title: "AuthenticatedOriginPullsCertificate"
-title_tag: "cloudflare.AuthenticatedOriginPullsCertificate"
-meta_desc: "Documentation for the cloudflare.AuthenticatedOriginPullsCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AuthenticatedOriginPullsCertificate | Package Cloudflare"
+meta_desc: "Explore the AuthenticatedOriginPullsCertificate resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare Authenticated Origin Pulls certificate resource. An uploaded client certificate is required to use Per-Zone or Per-Hostname Authenticated Origin Pulls."
 ---
 
 

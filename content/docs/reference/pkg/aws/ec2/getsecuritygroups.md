@@ -1,8 +1,8 @@
 
 ---
-title: "getSecurityGroups"
-title_tag: "aws.ec2.getSecurityGroups"
-meta_desc: "Documentation for the aws.ec2.getSecurityGroups function with examples, input properties, output properties, and supporting types."
+title: "GetSecurityGroups"
+title_tag: "Function GetSecurityGroups | Module ec2 | Package AWS"
+meta_desc: "Explore the GetSecurityGroups function of the ec2 module, including examples, input properties, output properties, and supporting types. Use this data source to get IDs and VPC membership of Security Groups that are created"
 ---
 
 
@@ -102,7 +102,7 @@ const test = pulumi.output(aws.ec2.getSecurityGroups({
 {{% /examples %}}
 
 
-## Using getSecurityGroups {#using}
+## Using GetSecurityGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -119,8 +119,6 @@ const test = pulumi.output(aws.ec2.getSecurityGroups({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSecurityGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSecurityGroupsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetSecurityGroups` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -255,7 +253,7 @@ desired security groups.
 
 
 
-## getSecurityGroups Result {#result}
+## GetSecurityGroups Result {#result}
 
 The following output properties are available:
 

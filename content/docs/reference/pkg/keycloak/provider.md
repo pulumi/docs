@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "keycloak.Provider"
-meta_desc: "Documentation for the keycloak.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Provider | Package Keycloak"
+meta_desc: "Explore the Provider resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the keycloak package. By default, resources use package-wide configuration"
 ---
 
 

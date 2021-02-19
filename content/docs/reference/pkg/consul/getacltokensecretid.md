@@ -1,8 +1,8 @@
 
 ---
-title: "getAclTokenSecretId"
-title_tag: "consul.getAclTokenSecretId"
-meta_desc: "Documentation for the consul.getAclTokenSecretId function with examples, input properties, output properties, and supporting types."
+title: "GetAclTokenSecretId"
+title_tag: "Function GetAclTokenSecretId | Package Consul"
+meta_desc: "Explore the GetAclTokenSecretId function of the Consul package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the consul.getAclTokenSecretId function with examp
 
 
 
-## Using getAclTokenSecretId {#using}
+## Using GetAclTokenSecretId {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -30,8 +30,6 @@ meta_desc: "Documentation for the consul.getAclTokenSecretId function with examp
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAclTokenSecretId<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAclTokenSecretIdArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAclTokenSecretIdResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetAclTokenSecretId` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -150,7 +148,7 @@ The following arguments are supported:
 
 
 
-## getAclTokenSecretId Result {#result}
+## GetAclTokenSecretId Result {#result}
 
 The following output properties are available:
 

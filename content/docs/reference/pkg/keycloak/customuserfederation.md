@@ -1,8 +1,8 @@
 
 ---
 title: "CustomUserFederation"
-title_tag: "keycloak.CustomUserFederation"
-meta_desc: "Documentation for the keycloak.CustomUserFederation resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource CustomUserFederation | Package Keycloak"
+meta_desc: "Explore the CustomUserFederation resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

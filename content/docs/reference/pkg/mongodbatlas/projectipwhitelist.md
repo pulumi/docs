@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectIpWhitelist"
-title_tag: "mongodbatlas.ProjectIpWhitelist"
-meta_desc: "Documentation for the mongodbatlas.ProjectIpWhitelist resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ProjectIpWhitelist | Package MongoDB Atlas"
+meta_desc: "Explore the ProjectIpWhitelist resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.ProjectIpWhitelist` provides an IP Whitelist entry resource. The whitelist grants access from IPs, CIDRs or AWS Security Groups (if VPC Peering is enabled) to clusters within the Project."
 ---
 
 

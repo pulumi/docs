@@ -1,8 +1,8 @@
 
 ---
-title: "getNotifications"
-title_tag: "alicloud.ess.getNotifications"
-meta_desc: "Documentation for the alicloud.ess.getNotifications function with examples, input properties, output properties, and supporting types."
+title: "GetNotifications"
+title_tag: "Function GetNotifications | Module ess | Package AliCloud"
+meta_desc: "Explore the GetNotifications function of the ess module, including examples, input properties, output properties, and supporting types. This data source provides available notification resources. "
 ---
 
 
@@ -97,7 +97,7 @@ export const firstNotification = ds.notifications[0].id;
 {{% /examples %}}
 
 
-## Using getNotifications {#using}
+## Using GetNotifications {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -114,8 +114,6 @@ export const firstNotification = ds.notifications[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNotifications<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNotificationsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNotificationsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetNotifications` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -274,7 +272,7 @@ The following arguments are supported:
 
 
 
-## getNotifications Result {#result}
+## GetNotifications Result {#result}
 
 The following output properties are available:
 

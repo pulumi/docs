@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceLevelObjective"
-title_tag: "datadog.ServiceLevelObjective"
-meta_desc: "Documentation for the datadog.ServiceLevelObjective resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ServiceLevelObjective | Package Datadog"
+meta_desc: "Explore the ServiceLevelObjective resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog service level objective resource. This can be used to create and manage Datadog service level objectives."
 ---
 
 

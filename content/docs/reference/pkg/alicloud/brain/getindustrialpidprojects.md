@@ -1,8 +1,8 @@
 
 ---
-title: "getIndustrialPidProjects"
-title_tag: "alicloud.brain.getIndustrialPidProjects"
-meta_desc: "Documentation for the alicloud.brain.getIndustrialPidProjects function with examples, input properties, output properties, and supporting types."
+title: "GetIndustrialPidProjects"
+title_tag: "Function GetIndustrialPidProjects | Module brain | Package AliCloud"
+meta_desc: "Explore the GetIndustrialPidProjects function of the brain module, including examples, input properties, output properties, and supporting types. This data source provides the Brain Industrial Pid Projects of the current Alibaba Cloud user."
 ---
 
 
@@ -106,7 +106,7 @@ export const firstBrainIndustrialPidProjectId = example.then(example => example.
 {{% /examples %}}
 
 
-## Using getIndustrialPidProjects {#using}
+## Using GetIndustrialPidProjects {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -123,8 +123,6 @@ export const firstBrainIndustrialPidProjectId = example.then(example => example.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIndustrialPidProjects<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetIndustrialPidProjectsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIndustrialPidProjectsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetIndustrialPidProjects` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -363,7 +361,7 @@ The following arguments are supported:
 
 
 
-## getIndustrialPidProjects Result {#result}
+## GetIndustrialPidProjects Result {#result}
 
 The following output properties are available:
 

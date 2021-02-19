@@ -1,8 +1,8 @@
 
 ---
-title: "getFileCrc64Checksum"
-title_tag: "alicloud.getFileCrc64Checksum"
-meta_desc: "Documentation for the alicloud.getFileCrc64Checksum function with examples, input properties, output properties, and supporting types."
+title: "GetFileCrc64Checksum"
+title_tag: "Function GetFileCrc64Checksum | Package AliCloud"
+meta_desc: "Explore the GetFileCrc64Checksum function of the AliCloud package, including examples, input properties, output properties, and supporting types. This data source compute file crc64 checksum."
 ---
 
 
@@ -97,7 +97,7 @@ export const fileCrc64Checksum = alicloud_file_crc64_checksum_defualt.checksum;
 {{% /examples %}}
 
 
-## Using getFileCrc64Checksum {#using}
+## Using GetFileCrc64Checksum {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -114,8 +114,6 @@ export const fileCrc64Checksum = alicloud_file_crc64_checksum_defualt.checksum;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFileCrc64Checksum<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetFileCrc64ChecksumArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFileCrc64ChecksumResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetFileCrc64Checksum` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -234,7 +232,7 @@ The following arguments are supported:
 
 
 
-## getFileCrc64Checksum Result {#result}
+## GetFileCrc64Checksum Result {#result}
 
 The following output properties are available:
 

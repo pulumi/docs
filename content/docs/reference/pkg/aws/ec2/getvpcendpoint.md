@@ -1,8 +1,8 @@
 
 ---
-title: "getVpcEndpoint"
-title_tag: "aws.ec2.getVpcEndpoint"
-meta_desc: "Documentation for the aws.ec2.getVpcEndpoint function with examples, input properties, output properties, and supporting types."
+title: "GetVpcEndpoint"
+title_tag: "Function GetVpcEndpoint | Module ec2 | Package AWS"
+meta_desc: "Explore the GetVpcEndpoint function of the ec2 module, including examples, input properties, output properties, and supporting types. The VPC Endpoint data source provides details about"
 ---
 
 
@@ -114,7 +114,7 @@ const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("privateS3", {
 {{% /examples %}}
 
 
-## Using getVpcEndpoint {#using}
+## Using GetVpcEndpoint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -419,7 +419,7 @@ a pair on the specific VPC Endpoint to retrieve.
 
 
 
-## getVpcEndpoint Result {#result}
+## GetVpcEndpoint Result {#result}
 
 The following output properties are available:
 

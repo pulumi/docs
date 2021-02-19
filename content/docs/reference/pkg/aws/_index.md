@@ -1,6 +1,6 @@
 ---
 title: "AWS"
-title_tag: "AWS Package"
+title_tag: "Package AWS"
 meta_desc: "A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resources."
 menu:
     reference:

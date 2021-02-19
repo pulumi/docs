@@ -1,8 +1,8 @@
 
 ---
 title: "AuthConfigAdfs"
-title_tag: "rancher2.AuthConfigAdfs"
-meta_desc: "Documentation for the rancher2.AuthConfigAdfs resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AuthConfigAdfs | Package Rancher 2"
+meta_desc: "Explore the AuthConfigAdfs resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Auth Config ADFS resource. This can be used to configure and enable Auth Config ADFS for Rancher v2 RKE clusters and retrieve their information."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getSecret"
-title_tag: "vault.generic.getSecret"
-meta_desc: "Documentation for the vault.generic.getSecret function with examples, input properties, output properties, and supporting types."
+title: "GetSecret"
+title_tag: "Function GetSecret | Module generic | Package Vault"
+meta_desc: "Explore the GetSecret function of the generic module, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the vault.generic.getSecret function with examples
 
 
 
-## Using getSecret {#using}
+## Using GetSecret {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ to see which endpoints support the `GET` method.
 
 
 
-## getSecret Result {#result}
+## GetSecret Result {#result}
 
 The following output properties are available:
 

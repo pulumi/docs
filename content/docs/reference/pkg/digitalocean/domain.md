@@ -1,8 +1,8 @@
 
 ---
 title: "Domain"
-title_tag: "digitalocean.Domain"
-meta_desc: "Documentation for the digitalocean.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Domain | Package DigitalOcean"
+meta_desc: "Explore the Domain resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean domain resource."
 ---
 
 

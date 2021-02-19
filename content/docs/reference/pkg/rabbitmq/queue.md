@@ -1,8 +1,8 @@
 
 ---
 title: "Queue"
-title_tag: "rabbitmq.Queue"
-meta_desc: "Documentation for the rabbitmq.Queue resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Queue | Package RabbitMQ"
+meta_desc: "Explore the Queue resource of the RabbitMQ package, including examples, input properties, output properties, lookup functions, and supporting types. The ``rabbitmq.Queue`` resource creates and manages a queue."
 ---
 
 

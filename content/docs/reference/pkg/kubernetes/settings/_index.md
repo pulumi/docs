@@ -1,6 +1,6 @@
 ---
 title: "settings"
-title_tag: "settings Package"
+title_tag: "Package settings"
 meta_desc: ""
 ---
 

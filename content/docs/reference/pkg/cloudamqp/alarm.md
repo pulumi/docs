@@ -1,8 +1,8 @@
 
 ---
 title: "Alarm"
-title_tag: "cloudamqp.Alarm"
-meta_desc: "Documentation for the cloudamqp.Alarm resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Alarm | Package CloudAMQP"
+meta_desc: "Explore the Alarm resource of the CloudAMQP package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage alarms to trigger based on a set of conditions. Once triggerd a notification will be sent to the assigned recipients. When creating a new instance, there will also be a set of default alarms (cpu, memory and disk) created. All default alarms uses the default recipient for notifications."
 ---
 
 

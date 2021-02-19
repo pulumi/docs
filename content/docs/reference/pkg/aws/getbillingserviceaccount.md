@@ -1,8 +1,8 @@
 
 ---
-title: "getBillingServiceAccount"
-title_tag: "aws.getBillingServiceAccount"
-meta_desc: "Documentation for the aws.getBillingServiceAccount function with examples, input properties, output properties, and supporting types."
+title: "GetBillingServiceAccount"
+title_tag: "Function GetBillingServiceAccount | Package AWS"
+meta_desc: "Explore the GetBillingServiceAccount function of the AWS package, including examples, input properties, output properties, and supporting types. Use this data source to get the Account ID of the [AWS Billing and Cost Management Service Account](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-getting-started.html#step-2) for the purpose of permitting in S3 bucket policy."
 ---
 
 
@@ -200,7 +200,7 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
 {{% /examples %}}
 
 
-## Using getBillingServiceAccount {#using}
+## Using GetBillingServiceAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -218,8 +218,6 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBillingServiceAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBillingServiceAccountResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetBillingServiceAccount` in the Go SDK.
-
 {{% /choosable %}}
 
 
@@ -232,7 +230,7 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
 
 
 
-## getBillingServiceAccount Result {#result}
+## GetBillingServiceAccount Result {#result}
 
 The following output properties are available:
 

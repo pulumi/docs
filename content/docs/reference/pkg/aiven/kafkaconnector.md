@@ -1,8 +1,8 @@
 
 ---
 title: "KafkaConnector"
-title_tag: "aiven.KafkaConnector"
-meta_desc: "Documentation for the aiven.KafkaConnector resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource KafkaConnector | Package Aiven"
+meta_desc: "Explore the KafkaConnector resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Kafka connectors Resource"
 ---
 
 

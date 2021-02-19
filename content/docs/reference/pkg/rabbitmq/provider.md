@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "rabbitmq.Provider"
-meta_desc: "Documentation for the rabbitmq.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Provider | Package RabbitMQ"
+meta_desc: "Explore the Provider resource of the RabbitMQ package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the rabbitmq package. By default, resources use package-wide configuration"
 ---
 
 

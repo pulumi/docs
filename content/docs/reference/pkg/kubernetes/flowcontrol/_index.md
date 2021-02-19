@@ -1,6 +1,6 @@
 ---
 title: "flowcontrol"
-title_tag: "flowcontrol Package"
+title_tag: "Package flowcontrol"
 meta_desc: ""
 ---
 

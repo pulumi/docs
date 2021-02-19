@@ -1,8 +1,8 @@
 
 ---
-title: "getBot"
-title_tag: "aws.lex.getBot"
-meta_desc: "Documentation for the aws.lex.getBot function with examples, input properties, output properties, and supporting types."
+title: "GetBot"
+title_tag: "Function GetBot | Module lex | Package AWS"
+meta_desc: "Explore the GetBot function of the lex module, including examples, input properties, output properties, and supporting types. Provides details about a specific Amazon Lex Bot."
 ---
 
 
@@ -95,7 +95,7 @@ const orderFlowersBot = pulumi.output(aws.lex.getBot({
 {{% /examples %}}
 
 
-## Using getBot {#using}
+## Using GetBot {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ The following arguments are supported:
 
 
 
-## getBot Result {#result}
+## GetBot Result {#result}
 
 The following output properties are available:
 

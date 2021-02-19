@@ -1,8 +1,8 @@
 
 ---
-title: "getBucket"
-title_tag: "aws.s3.getBucket"
-meta_desc: "Documentation for the aws.s3.getBucket function with examples, input properties, output properties, and supporting types."
+title: "GetBucket"
+title_tag: "Function GetBucket | Module s3 | Package AWS"
+meta_desc: "Explore the GetBucket function of the s3 module, including examples, input properties, output properties, and supporting types. Provides details about a specific S3 bucket."
 ---
 
 
@@ -251,7 +251,7 @@ const test = new aws.cloudfront.Distribution("test", {origins: [{
 {{% /examples %}}
 
 
-## Using getBucket {#using}
+## Using GetBucket {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -352,7 +352,7 @@ The following arguments are supported:
 
 
 
-## getBucket Result {#result}
+## GetBucket Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "CustomImage"
-title_tag: "digitalocean.CustomImage"
-meta_desc: "Documentation for the digitalocean.CustomImage resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource CustomImage | Package DigitalOcean"
+meta_desc: "Explore the CustomImage resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource which can be used to create a [custom image](https://www.digitalocean.com/docs/images/custom-images/)"
 ---
 
 

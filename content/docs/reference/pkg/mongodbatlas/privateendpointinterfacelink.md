@@ -1,8 +1,8 @@
 
 ---
 title: "PrivateEndpointInterfaceLink"
-title_tag: "mongodbatlas.PrivateEndpointInterfaceLink"
-meta_desc: "Documentation for the mongodbatlas.PrivateEndpointInterfaceLink resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource PrivateEndpointInterfaceLink | Package MongoDB Atlas"
+meta_desc: "Explore the PrivateEndpointInterfaceLink resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.PrivateEndpointInterfaceLink` provides a Private Endpoint Interface Link resource. This represents a Private Endpoint Interface Link, which adds one interface endpoint to a private endpoint connection in an Atlas project."
 ---
 
 

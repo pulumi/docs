@@ -1,8 +1,8 @@
 
 ---
-title: "getWafRules"
-title_tag: "cloudflare.getWafRules"
-meta_desc: "Documentation for the cloudflare.getWafRules function with examples, input properties, output properties, and supporting types."
+title: "GetWafRules"
+title_tag: "Function GetWafRules | Package Cloudflare"
+meta_desc: "Explore the GetWafRules function of the Cloudflare package, including examples, input properties, output properties, and supporting types. Use this data source to look up [WAF Rules](https://api.cloudflare.com/#waf-rule-groups-properties)."
 ---
 
 
@@ -120,7 +120,7 @@ export const wafRules = test.then(test => test.rules);
 {{% /examples %}}
 
 
-## Using getWafRules {#using}
+## Using GetWafRules {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -137,8 +137,6 @@ export const wafRules = test.then(test => test.rules);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWafRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetWafRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetWafRulesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetWafRules` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -305,7 +303,7 @@ values must match in order to be included, see below for full list.
 
 
 
-## getWafRules Result {#result}
+## GetWafRules Result {#result}
 
 The following output properties are available:
 

@@ -1,6 +1,6 @@
 ---
 title: "Linode"
-title_tag: "linode.Linode"
+title_tag: "Module Linode | Package Linode"
 meta_desc: "A Pulumi package for creating and managing linode cloud resources."
 menu:
     reference:

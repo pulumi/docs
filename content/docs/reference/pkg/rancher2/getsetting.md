@@ -1,8 +1,8 @@
 
 ---
-title: "getSetting"
-title_tag: "rancher2.getSetting"
-meta_desc: "Documentation for the rancher2.getSetting function with examples, input properties, output properties, and supporting types."
+title: "GetSetting"
+title_tag: "Function GetSetting | Package Rancher 2"
+meta_desc: "Explore the GetSetting function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 setting."
 ---
 
 
@@ -88,7 +88,7 @@ const server_image = pulumi.output(rancher2.getSetting({
 {{% /examples %}}
 
 
-## Using getSetting {#using}
+## Using GetSetting {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## getSetting Result {#result}
+## GetSetting Result {#result}
 
 The following output properties are available:
 

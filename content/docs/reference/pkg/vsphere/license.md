@@ -1,8 +1,8 @@
 
 ---
 title: "License"
-title_tag: "vsphere.License"
-meta_desc: "Documentation for the vsphere.License resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource License | Package vSphere"
+meta_desc: "Explore the License resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VMware vSphere license resource. This can be used to add and remove license keys."
 ---
 
 

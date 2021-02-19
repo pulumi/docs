@@ -1,8 +1,8 @@
 
 ---
-title: "getAmiIds"
-title_tag: "aws.getAmiIds"
-meta_desc: "Documentation for the aws.getAmiIds function with examples, input properties, output properties, and supporting types."
+title: "GetAmiIds"
+title_tag: "Function GetAmiIds | Package AWS"
+meta_desc: "Explore the GetAmiIds function of the AWS package, including examples, input properties, output properties, and supporting types. Use this data source to get a list of AMI IDs matching the specified criteria."
 ---
 
 
@@ -120,7 +120,7 @@ const ubuntu = pulumi.output(aws.getAmiIds({
 {{% /examples %}}
 
 
-## Using getAmiIds {#using}
+## Using GetAmiIds {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -137,8 +137,6 @@ const ubuntu = pulumi.output(aws.getAmiIds({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAmiIds<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAmiIdsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAmiIdsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetAmiIds` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -409,7 +407,7 @@ options to narrow down the list AWS returns.
 
 
 
-## getAmiIds Result {#result}
+## GetAmiIds Result {#result}
 
 The following output properties are available:
 

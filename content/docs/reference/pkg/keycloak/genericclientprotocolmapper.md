@@ -1,8 +1,8 @@
 
 ---
 title: "GenericClientProtocolMapper"
-title_tag: "keycloak.GenericClientProtocolMapper"
-meta_desc: "Documentation for the keycloak.GenericClientProtocolMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource GenericClientProtocolMapper | Package Keycloak"
+meta_desc: "Explore the GenericClientProtocolMapper resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. Allows for creating and managing protocol mappers for both types of clients (openid-connect and saml) within Keycloak."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "aws.Provider"
-meta_desc: "Documentation for the aws.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Provider | Package AWS"
+meta_desc: "Explore the Provider resource of the AWS package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the aws package. By default, resources use package-wide configuration"
 ---
 
 

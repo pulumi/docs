@@ -1,8 +1,8 @@
 
 ---
 title: "VolumeAttachment"
-title_tag: "digitalocean.VolumeAttachment"
-meta_desc: "Documentation for the digitalocean.VolumeAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource VolumeAttachment | Package DigitalOcean"
+meta_desc: "Explore the VolumeAttachment resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Manages attaching a Volume to a Droplet."
 ---
 
 

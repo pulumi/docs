@@ -1,8 +1,8 @@
 
 ---
-title: "getApiTokenPermissionGroups"
-title_tag: "cloudflare.getApiTokenPermissionGroups"
-meta_desc: "Documentation for the cloudflare.getApiTokenPermissionGroups function with examples, input properties, output properties, and supporting types."
+title: "GetApiTokenPermissionGroups"
+title_tag: "Function GetApiTokenPermissionGroups | Package Cloudflare"
+meta_desc: "Explore the GetApiTokenPermissionGroups function of the Cloudflare package, including examples, input properties, output properties, and supporting types. Use this data source to look up [API Token Permission Groups](https://developers.cloudflare.com/api/tokens/create/permissions). Commonly used as references within [`cloudflare.ApiToken`](https://www.terraform.io/docs/providers/cloudflare/r/api_token.html) resources."
 ---
 
 
@@ -68,7 +68,7 @@ export const dnsReadPermissionId = test.then(test => test.permissions["DNS Read"
 {{% /examples %}}
 
 
-## Using getApiTokenPermissionGroups {#using}
+## Using GetApiTokenPermissionGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -86,8 +86,6 @@ export const dnsReadPermissionId = test.then(test => test.permissions["DNS Read"
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApiTokenPermissionGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetApiTokenPermissionGroupsResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetApiTokenPermissionGroups` in the Go SDK.
-
 {{% /choosable %}}
 
 
@@ -100,7 +98,7 @@ export const dnsReadPermissionId = test.then(test => test.permissions["DNS Read"
 
 
 
-## getApiTokenPermissionGroups Result {#result}
+## GetApiTokenPermissionGroups Result {#result}
 
 The following output properties are available:
 

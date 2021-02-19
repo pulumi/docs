@@ -1,8 +1,8 @@
 
 ---
-title: "getCluster"
-title_tag: "aws.eks.getCluster"
-meta_desc: "Documentation for the aws.eks.getCluster function with examples, input properties, output properties, and supporting types."
+title: "GetCluster"
+title_tag: "Function GetCluster | Module eks | Package AWS"
+meta_desc: "Explore the GetCluster function of the eks module, including examples, input properties, output properties, and supporting types. Retrieve information about an EKS Cluster."
 ---
 
 
@@ -15,7 +15,7 @@ Retrieve information about an EKS Cluster.
 
 
 
-## Using getCluster {#using}
+## Using GetCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -156,7 +156,7 @@ The following arguments are supported:
 
 
 
-## getCluster Result {#result}
+## GetCluster Result {#result}
 
 The following output properties are available:
 

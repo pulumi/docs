@@ -1,8 +1,8 @@
 
 ---
-title: "getApplicationInfos"
-title_tag: "alicloud.quotas.getApplicationInfos"
-meta_desc: "Documentation for the alicloud.quotas.getApplicationInfos function with examples, input properties, output properties, and supporting types."
+title: "GetApplicationInfos"
+title_tag: "Function GetApplicationInfos | Module quotas | Package AliCloud"
+meta_desc: "Explore the GetApplicationInfos function of the quotas module, including examples, input properties, output properties, and supporting types. This data source provides the Quotas Application Infos of the current Alibaba Cloud user."
 ---
 
 
@@ -105,7 +105,7 @@ export const firstQuotasApplicationInfoId = example.then(example => example.info
 {{% /examples %}}
 
 
-## Using getApplicationInfos {#using}
+## Using GetApplicationInfos {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -122,8 +122,6 @@ export const firstQuotasApplicationInfoId = example.then(example => example.info
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplicationInfos<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetApplicationInfosArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetApplicationInfosResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetApplicationInfos` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -482,7 +480,7 @@ The following arguments are supported:
 
 
 
-## getApplicationInfos Result {#result}
+## GetApplicationInfos Result {#result}
 
 The following output properties are available:
 

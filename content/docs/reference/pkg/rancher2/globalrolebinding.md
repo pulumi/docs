@@ -1,8 +1,8 @@
 
 ---
 title: "GlobalRoleBinding"
-title_tag: "rancher2.GlobalRoleBinding"
-meta_desc: "Documentation for the rancher2.GlobalRoleBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource GlobalRoleBinding | Package Rancher 2"
+meta_desc: "Explore the GlobalRoleBinding resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Global Role Binding resource. This can be used to create Global Role Bindings for Rancher v2 environments and retrieve their information."
 ---
 
 

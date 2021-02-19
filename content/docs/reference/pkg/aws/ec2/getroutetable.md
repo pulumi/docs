@@ -1,8 +1,8 @@
 
 ---
-title: "getRouteTable"
-title_tag: "aws.ec2.getRouteTable"
-meta_desc: "Documentation for the aws.ec2.getRouteTable function with examples, input properties, output properties, and supporting types."
+title: "GetRouteTable"
+title_tag: "Function GetRouteTable | Module ec2 | Package AWS"
+meta_desc: "Explore the GetRouteTable function of the ec2 module, including examples, input properties, output properties, and supporting types. `aws.ec2.RouteTable` provides details about a specific Route Table."
 ---
 
 
@@ -125,7 +125,7 @@ const route = new aws.ec2.Route("route", {
 {{% /examples %}}
 
 
-## Using getRouteTable {#using}
+## Using GetRouteTable {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -430,7 +430,7 @@ a pair on the desired Route Table.
 
 
 
-## getRouteTable Result {#result}
+## GetRouteTable Result {#result}
 
 The following output properties are available:
 

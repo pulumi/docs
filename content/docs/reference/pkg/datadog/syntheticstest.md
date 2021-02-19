@@ -1,8 +1,8 @@
 
 ---
 title: "SyntheticsTest"
-title_tag: "datadog.SyntheticsTest"
-meta_desc: "Documentation for the datadog.SyntheticsTest resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource SyntheticsTest | Package Datadog"
+meta_desc: "Explore the SyntheticsTest resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog synthetics test resource. This can be used to create and manage Datadog synthetics test."
 ---
 
 

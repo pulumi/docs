@@ -1,8 +1,8 @@
 
 ---
-title: "getTransitGateway"
-title_tag: "aws.ec2transitgateway.getTransitGateway"
-meta_desc: "Documentation for the aws.ec2transitgateway.getTransitGateway function with examples, input properties, output properties, and supporting types."
+title: "GetTransitGateway"
+title_tag: "Function GetTransitGateway | Module ec2transitgateway | Package AWS"
+meta_desc: "Explore the GetTransitGateway function of the ec2transitgateway module, including examples, input properties, output properties, and supporting types. Get information on an EC2 Transit Gateway."
 ---
 
 
@@ -180,7 +180,7 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
 {{% /examples %}}
 
 
-## Using getTransitGateway {#using}
+## Using GetTransitGateway {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -361,7 +361,7 @@ The following arguments are supported:
 
 
 
-## getTransitGateway Result {#result}
+## GetTransitGateway Result {#result}
 
 The following output properties are available:
 

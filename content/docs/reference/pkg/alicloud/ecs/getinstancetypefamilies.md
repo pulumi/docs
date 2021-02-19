@@ -1,8 +1,8 @@
 
 ---
-title: "getInstanceTypeFamilies"
-title_tag: "alicloud.ecs.getInstanceTypeFamilies"
-meta_desc: "Documentation for the alicloud.ecs.getInstanceTypeFamilies function with examples, input properties, output properties, and supporting types."
+title: "GetInstanceTypeFamilies"
+title_tag: "Function GetInstanceTypeFamilies | Module ecs | Package AliCloud"
+meta_desc: "Explore the GetInstanceTypeFamilies function of the ecs module, including examples, input properties, output properties, and supporting types. This data source provides the ECS instance type families of Alibaba Cloud."
 ---
 
 
@@ -104,7 +104,7 @@ export const instanceIds = defaultInstanceTypeFamilies.ids;
 {{% /examples %}}
 
 
-## Using getInstanceTypeFamilies {#using}
+## Using GetInstanceTypeFamilies {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -121,8 +121,6 @@ export const instanceIds = defaultInstanceTypeFamilies.ids;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceTypeFamilies<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceTypeFamiliesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceTypeFamiliesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetInstanceTypeFamilies` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -361,7 +359,7 @@ The following arguments are supported:
 
 
 
-## getInstanceTypeFamilies Result {#result}
+## GetInstanceTypeFamilies Result {#result}
 
 The following output properties are available:
 

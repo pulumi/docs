@@ -1,8 +1,8 @@
 
 ---
-title: "getRepository"
-title_tag: "aws.ecr.getRepository"
-meta_desc: "Documentation for the aws.ecr.getRepository function with examples, input properties, output properties, and supporting types."
+title: "GetRepository"
+title_tag: "Function GetRepository | Module ecr | Package AWS"
+meta_desc: "Explore the GetRepository function of the ecr module, including examples, input properties, output properties, and supporting types. The ECR Repository data source allows the ARN, Repository URI and Registry ID to be retrieved for an ECR repository."
 ---
 
 
@@ -88,7 +88,7 @@ const service = pulumi.output(aws.ecr.getRepository({
 {{% /examples %}}
 
 
-## Using getRepository {#using}
+## Using GetRepository {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -269,7 +269,7 @@ The following arguments are supported:
 
 
 
-## getRepository Result {#result}
+## GetRepository Result {#result}
 
 The following output properties are available:
 

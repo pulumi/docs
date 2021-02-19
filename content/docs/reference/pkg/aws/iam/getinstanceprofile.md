@@ -1,8 +1,8 @@
 
 ---
-title: "getInstanceProfile"
-title_tag: "aws.iam.getInstanceProfile"
-meta_desc: "Documentation for the aws.iam.getInstanceProfile function with examples, input properties, output properties, and supporting types."
+title: "GetInstanceProfile"
+title_tag: "Function GetInstanceProfile | Module iam | Package AWS"
+meta_desc: "Explore the GetInstanceProfile function of the iam module, including examples, input properties, output properties, and supporting types. This data source can be used to fetch information about a specific"
 ---
 
 
@@ -90,7 +90,7 @@ const example = pulumi.output(aws.iam.getInstanceProfile({
 {{% /examples %}}
 
 
-## Using getInstanceProfile {#using}
+## Using GetInstanceProfile {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -191,7 +191,7 @@ The following arguments are supported:
 
 
 
-## getInstanceProfile Result {#result}
+## GetInstanceProfile Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "LogsPipelineOrder"
-title_tag: "datadog.LogsPipelineOrder"
-meta_desc: "Documentation for the datadog.LogsPipelineOrder resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource LogsPipelineOrder | Package Datadog"
+meta_desc: "Explore the LogsPipelineOrder resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/v1/logs-pipelines/) resource, which is used to manage Datadog log pipelines order."
 ---
 
 

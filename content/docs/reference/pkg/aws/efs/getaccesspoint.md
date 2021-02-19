@@ -1,8 +1,8 @@
 
 ---
-title: "getAccessPoint"
-title_tag: "aws.efs.getAccessPoint"
-meta_desc: "Documentation for the aws.efs.getAccessPoint function with examples, input properties, output properties, and supporting types."
+title: "GetAccessPoint"
+title_tag: "Function GetAccessPoint | Module efs | Package AWS"
+meta_desc: "Explore the GetAccessPoint function of the efs module, including examples, input properties, output properties, and supporting types. Provides information about an Elastic File System (EFS) Access Point."
 ---
 
 
@@ -88,7 +88,7 @@ const test = pulumi.output(aws.efs.getAccessPoint({
 {{% /examples %}}
 
 
-## Using getAccessPoint {#using}
+## Using GetAccessPoint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## getAccessPoint Result {#result}
+## GetAccessPoint Result {#result}
 
 The following output properties are available:
 

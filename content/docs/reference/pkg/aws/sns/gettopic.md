@@ -1,8 +1,8 @@
 
 ---
-title: "getTopic"
-title_tag: "aws.sns.getTopic"
-meta_desc: "Documentation for the aws.sns.getTopic function with examples, input properties, output properties, and supporting types."
+title: "GetTopic"
+title_tag: "Function GetTopic | Module sns | Package AWS"
+meta_desc: "Explore the GetTopic function of the sns module, including examples, input properties, output properties, and supporting types. Use this data source to get the ARN of a topic in AWS Simple Notification"
 ---
 
 
@@ -90,7 +90,7 @@ const example = pulumi.output(aws.sns.getTopic({
 {{% /examples %}}
 
 
-## Using getTopic {#using}
+## Using GetTopic {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -191,7 +191,7 @@ The following arguments are supported:
 
 
 
-## getTopic Result {#result}
+## GetTopic Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getDomainRecords"
-title_tag: "alicloud.dns.getDomainRecords"
-meta_desc: "Documentation for the alicloud.dns.getDomainRecords function with examples, input properties, output properties, and supporting types."
+title: "GetDomainRecords"
+title_tag: "Function GetDomainRecords | Module dns | Package AliCloud"
+meta_desc: "Explore the GetDomainRecords function of the dns module, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the alicloud.dns.getDomainRecords function with ex
 
 
 
-## Using getDomainRecords {#using}
+## Using GetDomainRecords {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -30,8 +30,6 @@ meta_desc: "Documentation for the alicloud.dns.getDomainRecords function with ex
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainRecords<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDomainRecordsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDomainRecordsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetDomainRecords` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -398,7 +396,7 @@ The following arguments are supported:
 
 
 
-## getDomainRecords Result {#result}
+## GetDomainRecords Result {#result}
 
 The following output properties are available:
 

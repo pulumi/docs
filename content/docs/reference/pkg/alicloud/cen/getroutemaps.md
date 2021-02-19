@@ -1,8 +1,8 @@
 
 ---
-title: "getRouteMaps"
-title_tag: "alicloud.cen.getRouteMaps"
-meta_desc: "Documentation for the alicloud.cen.getRouteMaps function with examples, input properties, output properties, and supporting types."
+title: "GetRouteMaps"
+title_tag: "Function GetRouteMaps | Module cen | Package AliCloud"
+meta_desc: "Explore the GetRouteMaps function of the cen module, including examples, input properties, output properties, and supporting types. This data source provides CEN Route Maps available to the user."
 ---
 
 
@@ -126,7 +126,7 @@ export const firstCenRouteMapId = thisRouteMaps.maps[0].id;
 {{% /examples %}}
 
 
-## Using getRouteMaps {#using}
+## Using GetRouteMaps {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -143,8 +143,6 @@ export const firstCenRouteMapId = thisRouteMaps.maps[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouteMaps<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRouteMapsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRouteMapsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetRouteMaps` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -463,7 +461,7 @@ The following arguments are supported:
 
 
 
-## getRouteMaps Result {#result}
+## GetRouteMaps Result {#result}
 
 The following output properties are available:
 

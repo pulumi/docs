@@ -1,8 +1,8 @@
 
 ---
-title: "getDatabases"
-title_tag: "alicloud.polardb.getDatabases"
-meta_desc: "Documentation for the alicloud.polardb.getDatabases function with examples, input properties, output properties, and supporting types."
+title: "GetDatabases"
+title_tag: "Function GetDatabases | Module polardb | Package AliCloud"
+meta_desc: "Explore the GetDatabases function of the polardb module, including examples, input properties, output properties, and supporting types. The `alicloud.polardb.getDatabases` data source provides a collection of PolarDB cluster database available in Alibaba Cloud account."
 ---
 
 
@@ -117,7 +117,7 @@ export const database = _default.then(_default => _default.databases[0].dbName);
 {{% /examples %}}
 
 
-## Using getDatabases {#using}
+## Using GetDatabases {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -134,8 +134,6 @@ export const database = _default.then(_default => _default.databases[0].dbName);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatabases<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDatabasesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDatabasesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetDatabases` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -258,7 +256,7 @@ The following arguments are supported:
 
 
 
-## getDatabases Result {#result}
+## GetDatabases Result {#result}
 
 The following output properties are available:
 

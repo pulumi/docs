@@ -1,8 +1,8 @@
 
 ---
-title: "getRouteEntries"
-title_tag: "alicloud.cen.getRouteEntries"
-meta_desc: "Documentation for the alicloud.cen.getRouteEntries function with examples, input properties, output properties, and supporting types."
+title: "GetRouteEntries"
+title_tag: "Function GetRouteEntries | Module cen | Package AliCloud"
+meta_desc: "Explore the GetRouteEntries function of the cen module, including examples, input properties, output properties, and supporting types. This data source provides CEN Route Entries available to the user."
 ---
 
 
@@ -99,7 +99,7 @@ export const firstRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrBlock;
 {{% /examples %}}
 
 
-## Using getRouteEntries {#using}
+## Using GetRouteEntries {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -116,8 +116,6 @@ export const firstRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrBlock;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouteEntries<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRouteEntriesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRouteEntriesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetRouteEntries` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -316,7 +314,7 @@ The following arguments are supported:
 
 
 
-## getRouteEntries Result {#result}
+## GetRouteEntries Result {#result}
 
 The following output properties are available:
 

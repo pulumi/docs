@@ -1,8 +1,8 @@
 
 ---
-title: "getNetworkSegments"
-title_tag: "consul.getNetworkSegments"
-meta_desc: "Documentation for the consul.getNetworkSegments function with examples, input properties, output properties, and supporting types."
+title: "GetNetworkSegments"
+title_tag: "Function GetNetworkSegments | Package Consul"
+meta_desc: "Explore the GetNetworkSegments function of the Consul package, including examples, input properties, output properties, and supporting types. &gt; **NOTE:** This feature requires [Consul Enterprise](https://www.consul.io/docs/enterprise/index.html)."
 ---
 
 
@@ -90,7 +90,7 @@ export const segments = segmentsNetworkSegments.then(segmentsNetworkSegments => 
 {{% /examples %}}
 
 
-## Using getNetworkSegments {#using}
+## Using GetNetworkSegments {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -107,8 +107,6 @@ export const segments = segmentsNetworkSegments.then(segmentsNetworkSegments => 
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkSegments<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNetworkSegmentsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNetworkSegmentsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetNetworkSegments` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -239,7 +237,7 @@ token that the agent provides by default.
 
 
 
-## getNetworkSegments Result {#result}
+## GetNetworkSegments Result {#result}
 
 The following output properties are available:
 

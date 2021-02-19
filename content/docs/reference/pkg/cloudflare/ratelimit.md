@@ -1,8 +1,8 @@
 
 ---
 title: "RateLimit"
-title_tag: "cloudflare.RateLimit"
-meta_desc: "Documentation for the cloudflare.RateLimit resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource RateLimit | Package Cloudflare"
+meta_desc: "Explore the RateLimit resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare rate limit resource for a given zone. This can be used to limit the traffic you receive zone-wide, or matching more specific types of requests/responses."
 ---
 
 

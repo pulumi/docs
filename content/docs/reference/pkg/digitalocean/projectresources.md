@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectResources"
-title_tag: "digitalocean.ProjectResources"
-meta_desc: "Documentation for the digitalocean.ProjectResources resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ProjectResources | Package DigitalOcean"
+meta_desc: "Explore the ProjectResources resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Assign resources to a DigitalOcean Project. This is useful if you need to assign resources"
 ---
 
 

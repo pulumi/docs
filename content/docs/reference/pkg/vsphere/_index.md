@@ -1,6 +1,6 @@
 ---
 title: "vSphere"
-title_tag: "vsphere.vSphere"
+title_tag: "Module vSphere | Package vSphere"
 meta_desc: "A Pulumi package for creating vsphere resources"
 menu:
     reference:

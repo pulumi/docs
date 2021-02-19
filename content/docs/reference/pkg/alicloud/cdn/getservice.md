@@ -1,8 +1,8 @@
 
 ---
-title: "getService"
-title_tag: "alicloud.cdn.getService"
-meta_desc: "Documentation for the alicloud.cdn.getService function with examples, input properties, output properties, and supporting types."
+title: "GetService"
+title_tag: "Function GetService | Module cdn | Package AliCloud"
+meta_desc: "Explore the GetService function of the cdn module, including examples, input properties, output properties, and supporting types. Using this data source can enable CDN service automatically. If the service has been enabled, it will return `Opened`."
 ---
 
 
@@ -98,7 +98,7 @@ const open = pulumi.output(alicloud.cdn.getService({
 {{% /examples %}}
 
 
-## Using getService {#using}
+## Using GetService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -115,8 +115,6 @@ const open = pulumi.output(alicloud.cdn.getService({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetServiceResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetService` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -247,7 +245,7 @@ As a note, the updated internet charge type will be effective in the next day ze
 
 
 
-## getService Result {#result}
+## GetService Result {#result}
 
 The following output properties are available:
 

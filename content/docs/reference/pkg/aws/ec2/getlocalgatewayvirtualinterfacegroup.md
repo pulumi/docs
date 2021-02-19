@@ -1,8 +1,8 @@
 
 ---
-title: "getLocalGatewayVirtualInterfaceGroup"
-title_tag: "aws.ec2.getLocalGatewayVirtualInterfaceGroup"
-meta_desc: "Documentation for the aws.ec2.getLocalGatewayVirtualInterfaceGroup function with examples, input properties, output properties, and supporting types."
+title: "GetLocalGatewayVirtualInterfaceGroup"
+title_tag: "Function GetLocalGatewayVirtualInterfaceGroup | Module ec2 | Package AWS"
+meta_desc: "Explore the GetLocalGatewayVirtualInterfaceGroup function of the ec2 module, including examples, input properties, output properties, and supporting types. Provides details about an EC2 Local Gateway Virtual Interface Group. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing)."
 ---
 
 
@@ -89,7 +89,7 @@ const example = aws.ec2.getLocalGatewayVirtualInterfaceGroup({
 {{% /examples %}}
 
 
-## Using getLocalGatewayVirtualInterfaceGroup {#using}
+## Using GetLocalGatewayVirtualInterfaceGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -106,8 +106,6 @@ const example = aws.ec2.getLocalGatewayVirtualInterfaceGroup({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLocalGatewayVirtualInterfaceGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetLocalGatewayVirtualInterfaceGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetLocalGatewayVirtualInterfaceGroupResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetLocalGatewayVirtualInterfaceGroup` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -310,7 +308,7 @@ The following arguments are supported:
 
 
 
-## getLocalGatewayVirtualInterfaceGroup Result {#result}
+## GetLocalGatewayVirtualInterfaceGroup Result {#result}
 
 The following output properties are available:
 

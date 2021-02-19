@@ -1,8 +1,8 @@
 
 ---
 title: "Vnic"
-title_tag: "vsphere.Vnic"
-meta_desc: "Documentation for the vsphere.Vnic resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Vnic | Package vSphere"
+meta_desc: "Explore the Vnic resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VMware vSphere vnic resource."
 ---
 
 

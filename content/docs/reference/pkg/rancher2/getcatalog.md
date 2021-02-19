@@ -1,8 +1,8 @@
 
 ---
-title: "getCatalog"
-title_tag: "rancher2.getCatalog"
-meta_desc: "Documentation for the rancher2.getCatalog function with examples, input properties, output properties, and supporting types."
+title: "GetCatalog"
+title_tag: "Function GetCatalog | Package Rancher 2"
+meta_desc: "Explore the GetCatalog function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 catalog."
 ---
 
 
@@ -88,7 +88,7 @@ const library = pulumi.output(rancher2.getCatalog({
 {{% /examples %}}
 
 
-## Using getCatalog {#using}
+## Using GetCatalog {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## getCatalog Result {#result}
+## GetCatalog Result {#result}
 
 The following output properties are available:
 

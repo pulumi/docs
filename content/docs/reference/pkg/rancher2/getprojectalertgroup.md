@@ -1,8 +1,8 @@
 
 ---
-title: "getProjectAlertGroup"
-title_tag: "rancher2.getProjectAlertGroup"
-meta_desc: "Documentation for the rancher2.getProjectAlertGroup function with examples, input properties, output properties, and supporting types."
+title: "GetProjectAlertGroup"
+title_tag: "Function GetProjectAlertGroup | Package Rancher 2"
+meta_desc: "Explore the GetProjectAlertGroup function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 project alert group."
 ---
 
 
@@ -92,7 +92,7 @@ const foo = pulumi.output(rancher2.getProjectAlertGroup({
 {{% /examples %}}
 
 
-## Using getProjectAlertGroup {#using}
+## Using GetProjectAlertGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ The following arguments are supported:
 
 
 
-## getProjectAlertGroup Result {#result}
+## GetProjectAlertGroup Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getDatastore"
-title_tag: "vsphere.getDatastore"
-meta_desc: "Documentation for the vsphere.getDatastore function with examples, input properties, output properties, and supporting types."
+title: "GetDatastore"
+title_tag: "Function GetDatastore | Package vSphere"
+meta_desc: "Explore the GetDatastore function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.getDatastore` data source can be used to discover the ID of a"
 ---
 
 
@@ -111,7 +111,7 @@ const datastore = datacenter.apply(datacenter => vsphere.getDatastore({
 {{% /examples %}}
 
 
-## Using getDatastore {#using}
+## Using GetDatastore {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -128,8 +128,6 @@ const datastore = datacenter.apply(datacenter => vsphere.getDatastore({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatastore<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDatastoreArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDatastoreResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetDatastore` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -268,7 +266,7 @@ data source.
 
 
 
-## getDatastore Result {#result}
+## GetDatastore Result {#result}
 
 The following output properties are available:
 

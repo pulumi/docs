@@ -1,8 +1,8 @@
 
 ---
 title: "Notification"
-title_tag: "cloudamqp.Notification"
-meta_desc: "Documentation for the cloudamqp.Notification resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Notification | Package CloudAMQP"
+meta_desc: "Explore the Notification resource of the CloudAMQP package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage recipients to receive alarm notifications. There will always be a default recipient created upon instance creation. This recipient will use team email and receive notifications from default alarms."
 ---
 
 

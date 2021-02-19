@@ -1,8 +1,8 @@
 
 ---
-title: "getDefaultKmsKey"
-title_tag: "aws.ebs.getDefaultKmsKey"
-meta_desc: "Documentation for the aws.ebs.getDefaultKmsKey function with examples, input properties, output properties, and supporting types."
+title: "GetDefaultKmsKey"
+title_tag: "Function GetDefaultKmsKey | Module ebs | Package AWS"
+meta_desc: "Explore the GetDefaultKmsKey function of the ebs module, including examples, input properties, output properties, and supporting types. Use this data source to get the default EBS encryption KMS key in the current region."
 ---
 
 
@@ -104,7 +104,7 @@ const example = new aws.ebs.Volume("example", {
 {{% /examples %}}
 
 
-## Using getDefaultKmsKey {#using}
+## Using GetDefaultKmsKey {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -136,7 +136,7 @@ const example = new aws.ebs.Volume("example", {
 
 
 
-## getDefaultKmsKey Result {#result}
+## GetDefaultKmsKey Result {#result}
 
 The following output properties are available:
 

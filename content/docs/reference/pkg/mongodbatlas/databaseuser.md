@@ -1,8 +1,8 @@
 
 ---
 title: "DatabaseUser"
-title_tag: "mongodbatlas.DatabaseUser"
-meta_desc: "Documentation for the mongodbatlas.DatabaseUser resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource DatabaseUser | Package MongoDB Atlas"
+meta_desc: "Explore the DatabaseUser resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

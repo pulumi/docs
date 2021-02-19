@@ -1,8 +1,8 @@
 
 ---
-title: "getShareNetwork"
-title_tag: "openstack.sharedfilesystem.getShareNetwork"
-meta_desc: "Documentation for the openstack.sharedfilesystem.getShareNetwork function with examples, input properties, output properties, and supporting types."
+title: "GetShareNetwork"
+title_tag: "Function GetShareNetwork | Module sharedfilesystem | Package Open Stack"
+meta_desc: "Explore the GetShareNetwork function of the sharedfilesystem module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available Shared File System share network."
 ---
 
 
@@ -89,7 +89,7 @@ const sharenetwork1 = pulumi.output(openstack.sharedfilesystem.getShareNetwork({
 {{% /examples %}}
 
 
-## Using getShareNetwork {#using}
+## Using GetShareNetwork {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -526,7 +526,7 @@ the share network.
 
 
 
-## getShareNetwork Result {#result}
+## GetShareNetwork Result {#result}
 
 The following output properties are available:
 

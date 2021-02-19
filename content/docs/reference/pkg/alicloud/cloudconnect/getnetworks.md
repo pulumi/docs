@@ -1,8 +1,8 @@
 
 ---
-title: "getNetworks"
-title_tag: "alicloud.cloudconnect.getNetworks"
-meta_desc: "Documentation for the alicloud.cloudconnect.getNetworks function with examples, input properties, output properties, and supporting types."
+title: "GetNetworks"
+title_tag: "Function GetNetworks | Module cloudconnect | Package AliCloud"
+meta_desc: "Explore the GetNetworks function of the cloudconnect module, including examples, input properties, output properties, and supporting types. This data source provides Cloud Connect Networks available to the user."
 ---
 
 
@@ -93,7 +93,7 @@ const defaultNetwork = new alicloud.cloudconnect.Network("default", {
 {{% /examples %}}
 
 
-## Using getNetworks {#using}
+## Using GetNetworks {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -110,8 +110,6 @@ const defaultNetwork = new alicloud.cloudconnect.Network("default", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworks<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNetworksArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNetworksResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetNetworks` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -270,7 +268,7 @@ The following arguments are supported:
 
 
 
-## getNetworks Result {#result}
+## GetNetworks Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "get509AuthenticationDatabaseUser"
-title_tag: "mongodbatlas.get509AuthenticationDatabaseUser"
-meta_desc: "Documentation for the mongodbatlas.get509AuthenticationDatabaseUser function with examples, input properties, output properties, and supporting types."
+title: "Get509AuthenticationDatabaseUser"
+title_tag: "Function Get509AuthenticationDatabaseUser | Package MongoDB Atlas"
+meta_desc: "Explore the Get509AuthenticationDatabaseUser function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.X509AuthenticationDatabaseUser` describe a X509 Authentication Database User. This represents a X509 Authentication Database User."
 ---
 
 
@@ -319,7 +319,7 @@ const test509AuthenticationDatabaseUser = testX509AuthenticationDatabaseUser.pro
 {{% /examples %}}
 
 
-## Using get509AuthenticationDatabaseUser {#using}
+## Using Get509AuthenticationDatabaseUser {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -336,8 +336,6 @@ const test509AuthenticationDatabaseUser = testX509AuthenticationDatabaseUser.pro
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>Get509AuthenticationDatabaseUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">Get509AuthenticationDatabaseUserArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">Get509AuthenticationDatabaseUserResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `Get509AuthenticationDatabaseUser` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -460,7 +458,7 @@ The following arguments are supported:
 
 
 
-## get509AuthenticationDatabaseUser Result {#result}
+## Get509AuthenticationDatabaseUser Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getKey"
-title_tag: "aws.kms.getKey"
-meta_desc: "Documentation for the aws.kms.getKey function with examples, input properties, output properties, and supporting types."
+title: "GetKey"
+title_tag: "Function GetKey | Module kms | Package AWS"
+meta_desc: "Explore the GetKey function of the kms module, including examples, input properties, output properties, and supporting types. Use this data source to get detailed information about"
 ---
 
 
@@ -133,7 +133,7 @@ const byKeyArn = pulumi.output(aws.kms.getKey({
 {{% /examples %}}
 
 
-## Using getKey {#using}
+## Using GetKey {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -290,7 +290,7 @@ The following arguments are supported:
 
 
 
-## getKey Result {#result}
+## GetKey Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getCertificate"
-title_tag: "aws.acm.getCertificate"
-meta_desc: "Documentation for the aws.acm.getCertificate function with examples, input properties, output properties, and supporting types."
+title: "GetCertificate"
+title_tag: "Function GetCertificate | Module acm | Package AWS"
+meta_desc: "Explore the GetCertificate function of the acm module, including examples, input properties, output properties, and supporting types. Use this data source to get the ARN of a certificate in AWS Certificate"
 ---
 
 
@@ -153,7 +153,7 @@ const rsa4096 = pulumi.output(aws.acm.getCertificate({
 {{% /examples %}}
 
 
-## Using getCertificate {#using}
+## Using GetCertificate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -462,7 +462,7 @@ are returned.
 
 
 
-## getCertificate Result {#result}
+## GetCertificate Result {#result}
 
 The following output properties are available:
 

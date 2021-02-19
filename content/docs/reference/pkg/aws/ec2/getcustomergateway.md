@@ -1,8 +1,8 @@
 
 ---
-title: "getCustomerGateway"
-title_tag: "aws.ec2.getCustomerGateway"
-meta_desc: "Documentation for the aws.ec2.getCustomerGateway function with examples, input properties, output properties, and supporting types."
+title: "GetCustomerGateway"
+title_tag: "Function GetCustomerGateway | Module ec2 | Package AWS"
+meta_desc: "Explore the GetCustomerGateway function of the ec2 module, including examples, input properties, output properties, and supporting types. Get an existing AWS Customer Gateway."
 ---
 
 
@@ -157,7 +157,7 @@ const transit = new aws.ec2.VpnConnection("transit", {
 {{% /examples %}}
 
 
-## Using getCustomerGateway {#using}
+## Using GetCustomerGateway {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -338,7 +338,7 @@ The following arguments are supported:
 
 
 
-## getCustomerGateway Result {#result}
+## GetCustomerGateway Result {#result}
 
 The following output properties are available:
 

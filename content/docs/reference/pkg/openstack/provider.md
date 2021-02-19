@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "openstack.Provider"
-meta_desc: "Documentation for the openstack.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Provider | Package Open Stack"
+meta_desc: "Explore the Provider resource of the Open Stack package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the openstack package. By default, resources use package-wide configuration"
 ---
 
 

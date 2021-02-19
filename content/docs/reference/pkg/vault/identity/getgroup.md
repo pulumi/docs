@@ -1,8 +1,8 @@
 
 ---
-title: "getGroup"
-title_tag: "vault.identity.getGroup"
-meta_desc: "Documentation for the vault.identity.getGroup function with examples, input properties, output properties, and supporting types."
+title: "GetGroup"
+title_tag: "Function GetGroup | Module identity | Package Vault"
+meta_desc: "Explore the GetGroup function of the identity module, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Documentation for the vault.identity.getGroup function with examples
 
 
 
-## Using getGroup {#using}
+## Using GetGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -282,7 +282,7 @@ This should be supplied in conjunction with `alias_name`.
 
 
 
-## getGroup Result {#result}
+## GetGroup Result {#result}
 
 The following output properties are available:
 

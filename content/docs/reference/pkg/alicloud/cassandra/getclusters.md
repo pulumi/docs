@@ -1,8 +1,8 @@
 
 ---
-title: "getClusters"
-title_tag: "alicloud.cassandra.getClusters"
-meta_desc: "Documentation for the alicloud.cassandra.getClusters function with examples, input properties, output properties, and supporting types."
+title: "GetClusters"
+title_tag: "Function GetClusters | Module cassandra | Package AliCloud"
+meta_desc: "Explore the GetClusters function of the cassandra module, including examples, input properties, output properties, and supporting types. The `alicloud.cassandra.getClusters` data source provides a collection of Cassandra clusters available in Alicloud account."
 ---
 
 
@@ -92,7 +92,7 @@ const cassandra = pulumi.output(alicloud.cassandra.getClusters({
 {{% /examples %}}
 
 
-## Using getClusters {#using}
+## Using GetClusters {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -109,8 +109,6 @@ const cassandra = pulumi.output(alicloud.cassandra.getClusters({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusters<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetClustersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetClustersResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetClusters` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -309,7 +307,7 @@ The following arguments are supported:
 
 
 
-## getClusters Result {#result}
+## GetClusters Result {#result}
 
 The following output properties are available:
 

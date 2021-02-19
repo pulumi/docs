@@ -1,8 +1,8 @@
 
 ---
 title: "LogsIndexOrder"
-title_tag: "datadog.LogsIndexOrder"
-meta_desc: "Documentation for the datadog.LogsIndexOrder resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource LogsIndexOrder | Package Datadog"
+meta_desc: "Explore the LogsIndexOrder resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog [Logs Index API](https://docs.datadoghq.com/api/v1/logs-indexes/) resource. This can be used to manage the order of Datadog logs indexes."
 ---
 
 

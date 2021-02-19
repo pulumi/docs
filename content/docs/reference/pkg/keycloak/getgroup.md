@@ -1,8 +1,8 @@
 
 ---
-title: "getGroup"
-title_tag: "keycloak.getGroup"
-meta_desc: "Documentation for the keycloak.getGroup function with examples, input properties, output properties, and supporting types."
+title: "GetGroup"
+title_tag: "Function GetGroup | Package Keycloak"
+meta_desc: "Explore the GetGroup function of the Keycloak package, including examples, input properties, output properties, and supporting types. This data source can be used to fetch properties of a Keycloak group for"
 ---
 
 
@@ -148,7 +148,7 @@ const groupRoles = new keycloak.GroupRoles("groupRoles", {
 {{% /examples %}}
 
 
-## Using getGroup {#using}
+## Using GetGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -289,7 +289,7 @@ The following arguments are supported:
 
 
 
-## getGroup Result {#result}
+## GetGroup Result {#result}
 
 The following output properties are available:
 

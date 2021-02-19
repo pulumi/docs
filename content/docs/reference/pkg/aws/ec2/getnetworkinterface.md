@@ -1,8 +1,8 @@
 
 ---
-title: "getNetworkInterface"
-title_tag: "aws.ec2.getNetworkInterface"
-meta_desc: "Documentation for the aws.ec2.getNetworkInterface function with examples, input properties, output properties, and supporting types."
+title: "GetNetworkInterface"
+title_tag: "Function GetNetworkInterface | Module ec2 | Package AWS"
+meta_desc: "Explore the GetNetworkInterface function of the ec2 module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a Network Interface."
 ---
 
 
@@ -89,7 +89,7 @@ const bar = pulumi.output(aws.ec2.getNetworkInterface({
 {{% /examples %}}
 
 
-## Using getNetworkInterface {#using}
+## Using GetNetworkInterface {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -270,7 +270,7 @@ The following arguments are supported:
 
 
 
-## getNetworkInterface Result {#result}
+## GetNetworkInterface Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getBroker"
-title_tag: "aws.mq.getBroker"
-meta_desc: "Documentation for the aws.mq.getBroker function with examples, input properties, output properties, and supporting types."
+title: "GetBroker"
+title_tag: "Function GetBroker | Module mq | Package AWS"
+meta_desc: "Explore the GetBroker function of the mq module, including examples, input properties, output properties, and supporting types. Provides information about a MQ Broker."
 ---
 
 
@@ -127,7 +127,7 @@ const byName = aws.mq.getBroker({
 {{% /examples %}}
 
 
-## Using getBroker {#using}
+## Using GetBroker {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -340,7 +340,7 @@ The following arguments are supported:
 
 
 
-## getBroker Result {#result}
+## GetBroker Result {#result}
 
 The following output properties are available:
 

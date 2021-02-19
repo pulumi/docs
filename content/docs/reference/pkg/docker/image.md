@@ -1,8 +1,8 @@
 
 ---
 title: "Image"
-title_tag: "docker.Image"
-meta_desc: "Documentation for the docker.Image resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Image | Package Docker"
+meta_desc: "Explore the Image resource of the Docker package, including examples, input properties, output properties, lookup functions, and supporting types. A docker.Image resource represents a Docker image built locally which is published and made available via a remote Docker registry. This can be used to ensure that a Docker source directory from a local deployment environment is built and pushed to a cloud-hosted Docker registry as part of a Pulumi deployment, so that it can be referenced as an image input from other cloud services that reference Docker images - including Kubernetes Pods, AWS ECS Tasks, and Azure Container Instances."
 ---
 
 

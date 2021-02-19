@@ -1,8 +1,8 @@
 
 ---
-title: "getApplication"
-title_tag: "aws.elasticbeanstalk.getApplication"
-meta_desc: "Documentation for the aws.elasticbeanstalk.getApplication function with examples, input properties, output properties, and supporting types."
+title: "GetApplication"
+title_tag: "Function GetApplication | Module elasticbeanstalk | Package AWS"
+meta_desc: "Explore the GetApplication function of the elasticbeanstalk module, including examples, input properties, output properties, and supporting types. Retrieve information about an Elastic Beanstalk Application."
 ---
 
 
@@ -100,7 +100,7 @@ export const description = example.then(example => example.description);
 {{% /examples %}}
 
 
-## Using getApplication {#using}
+## Using GetApplication {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -201,7 +201,7 @@ The following arguments are supported:
 
 
 
-## getApplication Result {#result}
+## GetApplication Result {#result}
 
 The following output properties are available:
 

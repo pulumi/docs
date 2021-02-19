@@ -1,8 +1,8 @@
 
 ---
 title: "AuthConfigOkta"
-title_tag: "rancher2.AuthConfigOkta"
-meta_desc: "Documentation for the rancher2.AuthConfigOkta resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AuthConfigOkta | Package Rancher 2"
+meta_desc: "Explore the AuthConfigOkta resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Auth Config OKTA resource. This can be used to configure and enable Auth Config OKTA for Rancher v2 RKE clusters and retrieve their information."
 ---
 
 

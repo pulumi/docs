@@ -1,8 +1,8 @@
 
 ---
 title: "ArgoTunnel"
-title_tag: "cloudflare.ArgoTunnel"
-meta_desc: "Documentation for the cloudflare.ArgoTunnel resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ArgoTunnel | Package Cloudflare"
+meta_desc: "Explore the ArgoTunnel resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Argo Tunnel exposes applications running on your local web server on any network with an internet connection without manually adding DNS records or configuring a firewall or router."
 ---
 
 

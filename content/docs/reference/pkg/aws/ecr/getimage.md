@@ -1,8 +1,8 @@
 
 ---
-title: "getImage"
-title_tag: "aws.ecr.getImage"
-meta_desc: "Documentation for the aws.ecr.getImage function with examples, input properties, output properties, and supporting types."
+title: "GetImage"
+title_tag: "Function GetImage | Module ecr | Package AWS"
+meta_desc: "Explore the GetImage function of the ecr module, including examples, input properties, output properties, and supporting types. The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved."
 ---
 
 
@@ -93,7 +93,7 @@ const serviceImage = pulumi.output(aws.ecr.getImage({
 {{% /examples %}}
 
 
-## Using getImage {#using}
+## Using GetImage {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -110,8 +110,6 @@ const serviceImage = pulumi.output(aws.ecr.getImage({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetImageResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetImage` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -314,7 +312,7 @@ The following arguments are supported:
 
 
 
-## getImage Result {#result}
+## GetImage Result {#result}
 
 The following output properties are available:
 

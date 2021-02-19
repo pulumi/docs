@@ -1,8 +1,8 @@
 
 ---
-title: "getSpacesBucketObject"
-title_tag: "digitalocean.getSpacesBucketObject"
-meta_desc: "Documentation for the digitalocean.getSpacesBucketObject function with examples, input properties, output properties, and supporting types."
+title: "GetSpacesBucketObject"
+title_tag: "Function GetSpacesBucketObject | Package DigitalOcean"
+meta_desc: "Explore the GetSpacesBucketObject function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. The Spaces object data source allows access to the metadata and"
 ---
 
 
@@ -128,7 +128,7 @@ const web = new digitalocean.Droplet("web", {
 {{% /examples %}}
 
 
-## Using getSpacesBucketObject {#using}
+## Using GetSpacesBucketObject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -385,7 +385,7 @@ The following arguments are supported:
 
 
 
-## getSpacesBucketObject Result {#result}
+## GetSpacesBucketObject Result {#result}
 
 The following output properties are available:
 

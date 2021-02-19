@@ -1,8 +1,8 @@
 
 ---
 title: "NodePool"
-title_tag: "rancher2.NodePool"
-meta_desc: "Documentation for the rancher2.NodePool resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource NodePool | Package Rancher 2"
+meta_desc: "Explore the NodePool resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Node Pool resource. This can be used to create Node Pool, using Node template for Rancher v2 RKE clusters and retrieve their information."
 ---
 
 

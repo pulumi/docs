@@ -1,8 +1,8 @@
 
 ---
-title: "getAlertConfiguration"
-title_tag: "mongodbatlas.getAlertConfiguration"
-meta_desc: "Documentation for the mongodbatlas.getAlertConfiguration function with examples, input properties, output properties, and supporting types."
+title: "GetAlertConfiguration"
+title_tag: "Function GetAlertConfiguration | Package MongoDB Atlas"
+meta_desc: "Explore the GetAlertConfiguration function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.AlertConfiguration` describes an Alert Configuration."
 ---
 
 
@@ -73,7 +73,7 @@ const testAlertConfiguration = pulumi.all([testMongodbatlasAlertConfiguration.al
 {{% /examples %}}
 
 
-## Using getAlertConfiguration {#using}
+## Using GetAlertConfiguration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -214,7 +214,7 @@ The following arguments are supported:
 
 
 
-## getAlertConfiguration Result {#result}
+## GetAlertConfiguration Result {#result}
 
 The following output properties are available:
 

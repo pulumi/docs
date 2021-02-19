@@ -1,8 +1,8 @@
 
 ---
-title: "getService"
-title_tag: "consul.getService"
-meta_desc: "Documentation for the consul.getService function with examples, input properties, output properties, and supporting types."
+title: "GetService"
+title_tag: "Function GetService | Package Consul"
+meta_desc: "Explore the GetService function of the Consul package, including examples, input properties, output properties, and supporting types. `consul.Service` provides details about a specific Consul service in a"
 ---
 
 
@@ -22,7 +22,7 @@ source, which provides a summary of the current Consul services.
 
 
 
-## Using getService {#using}
+## Using GetService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -303,7 +303,7 @@ to return based on a single matching tag..
 
 
 
-## getService Result {#result}
+## GetService Result {#result}
 
 The following output properties are available:
 

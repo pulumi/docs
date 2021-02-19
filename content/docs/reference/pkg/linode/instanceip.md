@@ -1,8 +1,8 @@
 
 ---
 title: "InstanceIp"
-title_tag: "linode.InstanceIp"
-meta_desc: "Documentation for the linode.InstanceIp resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource InstanceIp | Package Linode"
+meta_desc: "Explore the InstanceIp resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **NOTICE:** You may need to contact support to increase your instance IP limit before you can allocate additional IPs."
 ---
 
 

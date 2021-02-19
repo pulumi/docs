@@ -1,8 +1,8 @@
 
 ---
 title: "Policy"
-title_tag: "vault.Policy"
-meta_desc: "Documentation for the vault.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Policy | Package Vault"
+meta_desc: "Explore the Policy resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getAuthBackend"
-title_tag: "vault.getAuthBackend"
-meta_desc: "Documentation for the vault.getAuthBackend function with examples, input properties, output properties, and supporting types."
+title: "GetAuthBackend"
+title_tag: "Function GetAuthBackend | Package Vault"
+meta_desc: "Explore the GetAuthBackend function of the Vault package, including examples, input properties, output properties, and supporting types. {{% examples %}}"
 ---
 
 
@@ -87,7 +87,7 @@ const example = pulumi.output(vault.getAuthBackend({
 {{% /examples %}}
 
 
-## Using getAuthBackend {#using}
+## Using GetAuthBackend {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -188,7 +188,7 @@ The following arguments are supported:
 
 
 
-## getAuthBackend Result {#result}
+## GetAuthBackend Result {#result}
 
 The following output properties are available:
 

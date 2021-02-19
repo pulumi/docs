@@ -1,8 +1,8 @@
 
 ---
 title: "ClusterSync"
-title_tag: "rancher2.ClusterSync"
-meta_desc: "Documentation for the rancher2.ClusterSync resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ClusterSync | Package Rancher 2"
+meta_desc: "Explore the ClusterSync resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

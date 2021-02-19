@@ -1,8 +1,8 @@
 
 ---
 title: "ZoneLockdown"
-title_tag: "cloudflare.ZoneLockdown"
-meta_desc: "Documentation for the cloudflare.ZoneLockdown resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ZoneLockdown | Package Cloudflare"
+meta_desc: "Explore the ZoneLockdown resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare Zone Lockdown resource. Zone Lockdown allows you to define one or more URLs (with wildcard matching on the domain or path) that will only permit access if the request originates from an IP address that matches a safelist of one or more IP addresses and/or IP ranges."
 ---
 
 

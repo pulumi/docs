@@ -1,8 +1,8 @@
 
 ---
 title: "Service"
-title_tag: "aiven.Service"
-meta_desc: "Documentation for the aiven.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Service | Package Aiven"
+meta_desc: "Explore the Service resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

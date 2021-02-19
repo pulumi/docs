@@ -1,8 +1,8 @@
 
 ---
-title: "getBucketObjects"
-title_tag: "alicloud.oss.getBucketObjects"
-meta_desc: "Documentation for the alicloud.oss.getBucketObjects function with examples, input properties, output properties, and supporting types."
+title: "GetBucketObjects"
+title_tag: "Function GetBucketObjects | Module oss | Package AliCloud"
+meta_desc: "Explore the GetBucketObjects function of the oss module, including examples, input properties, output properties, and supporting types. This data source provides the objects of an OSS bucket."
 ---
 
 
@@ -100,7 +100,7 @@ export const firstObjectKey = bucketObjectsDs.objects[0].key;
 {{% /examples %}}
 
 
-## Using getBucketObjects {#using}
+## Using GetBucketObjects {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -117,8 +117,6 @@ export const firstObjectKey = bucketObjectsDs.objects[0].key;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucketObjects<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetBucketObjectsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBucketObjectsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetBucketObjects` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -317,7 +315,7 @@ The following arguments are supported:
 
 
 
-## getBucketObjects Result {#result}
+## GetBucketObjects Result {#result}
 
 The following output properties are available:
 

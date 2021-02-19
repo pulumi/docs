@@ -1,8 +1,8 @@
 
 ---
-title: "getKafkaSchemaConfiguration"
-title_tag: "aiven.getKafkaSchemaConfiguration"
-meta_desc: "Documentation for the aiven.getKafkaSchemaConfiguration function with examples, input properties, output properties, and supporting types."
+title: "GetKafkaSchemaConfiguration"
+title_tag: "Function GetKafkaSchemaConfiguration | Package Aiven"
+meta_desc: "Explore the GetKafkaSchemaConfiguration function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Kafka Schema Configuration Data Source"
 ---
 
 
@@ -95,7 +95,7 @@ const config = aiven.getKafkaSchemaConfiguration({
 {{% /examples %}}
 
 
-## Using getKafkaSchemaConfiguration {#using}
+## Using GetKafkaSchemaConfiguration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -404,7 +404,7 @@ it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FOR
 
 
 
-## getKafkaSchemaConfiguration Result {#result}
+## GetKafkaSchemaConfiguration Result {#result}
 
 The following output properties are available:
 

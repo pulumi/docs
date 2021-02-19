@@ -1,8 +1,8 @@
 
 ---
-title: "getTaskDefinition"
-title_tag: "aws.ecs.getTaskDefinition"
-meta_desc: "Documentation for the aws.ecs.getTaskDefinition function with examples, input properties, output properties, and supporting types."
+title: "GetTaskDefinition"
+title_tag: "Function GetTaskDefinition | Module ecs | Package AWS"
+meta_desc: "Explore the GetTaskDefinition function of the ecs module, including examples, input properties, output properties, and supporting types. The ECS task definition data source allows access to details of"
 ---
 
 
@@ -16,7 +16,7 @@ a specific AWS ECS task definition.
 
 
 
-## Using getTaskDefinition {#using}
+## Using GetTaskDefinition {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -117,7 +117,7 @@ The following arguments are supported:
 
 
 
-## getTaskDefinition Result {#result}
+## GetTaskDefinition Result {#result}
 
 The following output properties are available:
 

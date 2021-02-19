@@ -1,6 +1,6 @@
 ---
 title: "authorization"
-title_tag: "authorization Package"
+title_tag: "Package authorization"
 meta_desc: ""
 ---
 

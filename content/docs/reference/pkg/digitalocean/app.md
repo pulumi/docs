@@ -1,8 +1,8 @@
 
 ---
 title: "App"
-title_tag: "digitalocean.App"
-meta_desc: "Documentation for the digitalocean.App resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource App | Package DigitalOcean"
+meta_desc: "Explore the App resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean App resource."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "CertRequest"
-title_tag: "tls.CertRequest"
-meta_desc: "Documentation for the tls.CertRequest resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource CertRequest | Package TLS"
+meta_desc: "Explore the CertRequest resource of the TLS package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

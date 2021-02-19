@@ -1,8 +1,8 @@
 
 ---
 title: "Token"
-title_tag: "rancher2.Token"
-meta_desc: "Documentation for the rancher2.Token resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Token | Package Rancher 2"
+meta_desc: "Explore the Token resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Token resource. This can be used to create Tokens for Rancher v2 provider user and retrieve their information."
 ---
 
 

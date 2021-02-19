@@ -1,8 +1,8 @@
 
 ---
-title: "getEndpoints"
-title_tag: "alicloud.polardb.getEndpoints"
-meta_desc: "Documentation for the alicloud.polardb.getEndpoints function with examples, input properties, output properties, and supporting types."
+title: "GetEndpoints"
+title_tag: "Function GetEndpoints | Module polardb | Package AliCloud"
+meta_desc: "Explore the GetEndpoints function of the polardb module, including examples, input properties, output properties, and supporting types. The `alicloud.polardb.getEndpoints` data source provides a collection of PolarDB endpoints available in Alibaba Cloud account."
 ---
 
 
@@ -117,7 +117,7 @@ export const endpoint = _default.then(_default => _default.endpoints[0].dbEndpoi
 {{% /examples %}}
 
 
-## Using getEndpoints {#using}
+## Using GetEndpoints {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -134,8 +134,6 @@ export const endpoint = _default.then(_default => _default.endpoints[0].dbEndpoi
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoints<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEndpointsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEndpointsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetEndpoints` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -258,7 +256,7 @@ The following arguments are supported:
 
 
 
-## getEndpoints Result {#result}
+## GetEndpoints Result {#result}
 
 The following output properties are available:
 

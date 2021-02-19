@@ -1,8 +1,8 @@
 
 ---
-title: "getCluster"
-title_tag: "aws.cloudhsmv2.getCluster"
-meta_desc: "Documentation for the aws.cloudhsmv2.getCluster function with examples, input properties, output properties, and supporting types."
+title: "GetCluster"
+title_tag: "Function GetCluster | Module cloudhsmv2 | Package AWS"
+meta_desc: "Explore the GetCluster function of the cloudhsmv2 module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a CloudHSM v2 cluster"
 ---
 
 
@@ -88,7 +88,7 @@ const cluster = pulumi.output(aws.cloudhsmv2.getCluster({
 {{% /examples %}}
 
 
-## Using getCluster {#using}
+## Using GetCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## getCluster Result {#result}
+## GetCluster Result {#result}
 
 The following output properties are available:
 

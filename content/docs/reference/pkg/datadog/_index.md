@@ -1,6 +1,6 @@
 ---
 title: "Datadog"
-title_tag: "Datadog Package"
+title_tag: "Package Datadog"
 meta_desc: "A Pulumi package for creating and managing Datadog resources."
 menu:
     reference:

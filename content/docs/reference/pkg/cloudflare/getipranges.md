@@ -1,8 +1,8 @@
 
 ---
-title: "getIpRanges"
-title_tag: "cloudflare.getIpRanges"
-meta_desc: "Documentation for the cloudflare.getIpRanges function with examples, input properties, output properties, and supporting types."
+title: "GetIpRanges"
+title_tag: "Function GetIpRanges | Package Cloudflare"
+meta_desc: "Explore the GetIpRanges function of the Cloudflare package, including examples, input properties, output properties, and supporting types. Use this data source to get the [IP ranges](https://www.cloudflare.com/ips/) of Cloudflare edge nodes."
 ---
 
 
@@ -133,7 +133,7 @@ const allowCloudflareIngress = new gcp.compute.Firewall("allowCloudflareIngress"
 {{% /examples %}}
 
 
-## Using getIpRanges {#using}
+## Using GetIpRanges {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -151,8 +151,6 @@ const allowCloudflareIngress = new gcp.compute.Firewall("allowCloudflareIngress"
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIpRangesResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetIpRanges` in the Go SDK.
-
 {{% /choosable %}}
 
 
@@ -165,7 +163,7 @@ const allowCloudflareIngress = new gcp.compute.Firewall("allowCloudflareIngress"
 
 
 
-## getIpRanges Result {#result}
+## GetIpRanges Result {#result}
 
 The following output properties are available:
 

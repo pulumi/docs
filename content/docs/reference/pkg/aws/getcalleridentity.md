@@ -1,8 +1,8 @@
 
 ---
-title: "getCallerIdentity"
-title_tag: "aws.getCallerIdentity"
-meta_desc: "Documentation for the aws.getCallerIdentity function with examples, input properties, output properties, and supporting types."
+title: "GetCallerIdentity"
+title_tag: "Function GetCallerIdentity | Package AWS"
+meta_desc: "Explore the GetCallerIdentity function of the AWS package, including examples, input properties, output properties, and supporting types. Use this data source to get the access to the effective Account ID, User ID, and ARN in"
 ---
 
 
@@ -100,7 +100,7 @@ export const callerUser = current.then(current => current.userId);
 {{% /examples %}}
 
 
-## Using getCallerIdentity {#using}
+## Using GetCallerIdentity {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -118,8 +118,6 @@ export const callerUser = current.then(current => current.userId);
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCallerIdentity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCallerIdentityResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetCallerIdentity` in the Go SDK.
-
 {{% /choosable %}}
 
 
@@ -132,7 +130,7 @@ export const callerUser = current.then(current => current.userId);
 
 
 
-## getCallerIdentity Result {#result}
+## GetCallerIdentity Result {#result}
 
 The following output properties are available:
 

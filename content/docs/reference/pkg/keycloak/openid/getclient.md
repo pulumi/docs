@@ -1,8 +1,8 @@
 
 ---
-title: "getClient"
-title_tag: "keycloak.openid.getClient"
-meta_desc: "Documentation for the keycloak.openid.getClient function with examples, input properties, output properties, and supporting types."
+title: "GetClient"
+title_tag: "Function GetClient | Module openid | Package Keycloak"
+meta_desc: "Explore the GetClient function of the openid module, including examples, input properties, output properties, and supporting types. This data source can be used to fetch properties of a Keycloak OpenID client for usage with other resources."
 ---
 
 
@@ -116,7 +116,7 @@ const admin = realmManagement.then(realmManagement => keycloak.getRole({
 {{% /examples %}}
 
 
-## Using getClient {#using}
+## Using GetClient {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -257,7 +257,7 @@ The following arguments are supported:
 
 
 
-## getClient Result {#result}
+## GetClient Result {#result}
 
 The following output properties are available:
 

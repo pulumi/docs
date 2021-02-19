@@ -1,8 +1,8 @@
 
 ---
-title: "getAnycastEipAddresses"
-title_tag: "alicloud.eipanycast.getAnycastEipAddresses"
-meta_desc: "Documentation for the alicloud.eipanycast.getAnycastEipAddresses function with examples, input properties, output properties, and supporting types."
+title: "GetAnycastEipAddresses"
+title_tag: "Function GetAnycastEipAddresses | Module eipanycast | Package AliCloud"
+meta_desc: "Explore the GetAnycastEipAddresses function of the eipanycast module, including examples, input properties, output properties, and supporting types. This data source provides the Eipanycast Anycast Eip Addresses of the current Alibaba Cloud user."
 ---
 
 
@@ -106,7 +106,7 @@ export const firstEipanycastAnycastEipAddressId = example.then(example => exampl
 {{% /examples %}}
 
 
-## Using getAnycastEipAddresses {#using}
+## Using GetAnycastEipAddresses {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -123,8 +123,6 @@ export const firstEipanycastAnycastEipAddressId = example.then(example => exampl
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAnycastEipAddresses<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAnycastEipAddressesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAnycastEipAddressesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetAnycastEipAddresses` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -603,7 +601,7 @@ The following arguments are supported:
 
 
 
-## getAnycastEipAddresses Result {#result}
+## GetAnycastEipAddresses Result {#result}
 
 The following output properties are available:
 

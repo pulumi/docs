@@ -1,8 +1,8 @@
 
 ---
-title: "getZoneDnssec"
-title_tag: "cloudflare.getZoneDnssec"
-meta_desc: "Documentation for the cloudflare.getZoneDnssec function with examples, input properties, output properties, and supporting types."
+title: "GetZoneDnssec"
+title_tag: "Function GetZoneDnssec | Package Cloudflare"
+meta_desc: "Explore the GetZoneDnssec function of the Cloudflare package, including examples, input properties, output properties, and supporting types. Use this data source to look up [Zone][1] DNSSEC settings."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(cloudflare.getZoneDnssec({
 {{% /examples %}}
 
 
-## Using getZoneDnssec {#using}
+## Using GetZoneDnssec {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## getZoneDnssec Result {#result}
+## GetZoneDnssec Result {#result}
 
 The following output properties are available:
 

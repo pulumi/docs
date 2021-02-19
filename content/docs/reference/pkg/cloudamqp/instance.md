@@ -1,8 +1,8 @@
 
 ---
 title: "Instance"
-title_tag: "cloudamqp.Instance"
-meta_desc: "Documentation for the cloudamqp.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Instance | Package CloudAMQP"
+meta_desc: "Explore the Instance resource of the CloudAMQP package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage a CloudAMQP instance running Rabbit MQ and deploy to multiple cloud platforms provider and over multiple regions, see Instance regions for more information."
 ---
 
 

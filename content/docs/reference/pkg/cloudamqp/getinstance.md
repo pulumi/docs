@@ -1,8 +1,8 @@
 
 ---
-title: "getInstance"
-title_tag: "cloudamqp.getInstance"
-meta_desc: "Documentation for the cloudamqp.getInstance function with examples, input properties, output properties, and supporting types."
+title: "GetInstance"
+title_tag: "Function GetInstance | Package CloudAMQP"
+meta_desc: "Explore the GetInstance function of the CloudAMQP package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about an already created CloudAMQP instance. In order to retrieve the correct information, the CoudAMQP instance identifier is needed."
 ---
 
 
@@ -33,7 +33,7 @@ Use this data source to retrieve information about an already created CloudAMQP 
 
 
 
-## Using getInstance {#using}
+## Using GetInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## getInstance Result {#result}
+## GetInstance Result {#result}
 
 The following output properties are available:
 

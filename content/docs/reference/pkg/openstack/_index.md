@@ -1,6 +1,6 @@
 ---
 title: "Open Stack"
-title_tag: "Open Stack Package"
+title_tag: "Package Open Stack"
 meta_desc: "A Pulumi package for creating and managing OpenStack cloud resources."
 menu:
     reference:

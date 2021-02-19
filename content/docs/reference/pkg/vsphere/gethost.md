@@ -1,8 +1,8 @@
 
 ---
-title: "getHost"
-title_tag: "vsphere.getHost"
-meta_desc: "Documentation for the vsphere.getHost function with examples, input properties, output properties, and supporting types."
+title: "GetHost"
+title_tag: "Function GetHost | Package vSphere"
+meta_desc: "Explore the GetHost function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.Host` data source can be used to discover the ID of a vSphere"
 ---
 
 
@@ -110,7 +110,7 @@ const host = datacenter.apply(datacenter => vsphere.getHost({
 {{% /examples %}}
 
 
-## Using getHost {#using}
+## Using GetHost {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -259,7 +259,7 @@ omitted if there is only one host in your inventory.
 
 
 
-## getHost Result {#result}
+## GetHost Result {#result}
 
 The following output properties are available:
 

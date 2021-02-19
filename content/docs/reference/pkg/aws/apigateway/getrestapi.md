@@ -1,8 +1,8 @@
 
 ---
-title: "getRestApi"
-title_tag: "aws.apigateway.getRestApi"
-meta_desc: "Documentation for the aws.apigateway.getRestApi function with examples, input properties, output properties, and supporting types."
+title: "GetRestApi"
+title_tag: "Function GetRestApi | Module apigateway | Package AWS"
+meta_desc: "Explore the GetRestApi function of the apigateway module, including examples, input properties, output properties, and supporting types. Use this data source to get the id and root_resource_id of a REST API in"
 ---
 
 
@@ -91,7 +91,7 @@ const myRestApi = pulumi.output(aws.apigateway.getRestApi({
 {{% /examples %}}
 
 
-## Using getRestApi {#using}
+## Using GetRestApi {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -232,7 +232,7 @@ The following arguments are supported:
 
 
 
-## getRestApi Result {#result}
+## GetRestApi Result {#result}
 
 The following output properties are available:
 

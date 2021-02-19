@@ -1,8 +1,8 @@
 
 ---
 title: "LogpushJob"
-title_tag: "cloudflare.LogpushJob"
-meta_desc: "Documentation for the cloudflare.LogpushJob resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource LogpushJob | Package Cloudflare"
+meta_desc: "Explore the LogpushJob resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

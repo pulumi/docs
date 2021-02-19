@@ -1,8 +1,8 @@
 
 ---
 title: "Tag"
-title_tag: "digitalocean.Tag"
-meta_desc: "Documentation for the digitalocean.Tag resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Tag | Package DigitalOcean"
+meta_desc: "Explore the Tag resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Tag resource. A Tag is a label that can be applied to a"
 ---
 
 

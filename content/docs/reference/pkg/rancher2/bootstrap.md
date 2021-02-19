@@ -1,8 +1,8 @@
 
 ---
 title: "Bootstrap"
-title_tag: "rancher2.Bootstrap"
-meta_desc: "Documentation for the rancher2.Bootstrap resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Bootstrap | Package Rancher 2"
+meta_desc: "Explore the Bootstrap resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

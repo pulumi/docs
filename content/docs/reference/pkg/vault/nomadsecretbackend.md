@@ -1,8 +1,8 @@
 
 ---
 title: "NomadSecretBackend"
-title_tag: "vault.NomadSecretBackend"
-meta_desc: "Documentation for the vault.NomadSecretBackend resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource NomadSecretBackend | Package Vault"
+meta_desc: "Explore the NomadSecretBackend resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

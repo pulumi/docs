@@ -1,8 +1,8 @@
 
 ---
 title: "Zone"
-title_tag: "cloudflare.Zone"
-meta_desc: "Documentation for the cloudflare.Zone resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Zone | Package Cloudflare"
+meta_desc: "Explore the Zone resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare Zone resource. Zone is the basic resource for working with Cloudflare and is roughly equivalent to a domain name that the user purchases."
 ---
 
 

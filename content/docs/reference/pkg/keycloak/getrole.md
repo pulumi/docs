@@ -1,8 +1,8 @@
 
 ---
-title: "getRole"
-title_tag: "keycloak.getRole"
-meta_desc: "Documentation for the keycloak.getRole function with examples, input properties, output properties, and supporting types."
+title: "GetRole"
+title_tag: "Function GetRole | Package Keycloak"
+meta_desc: "Explore the GetRole function of the Keycloak package, including examples, input properties, output properties, and supporting types. This data source can be used to fetch properties of a Keycloak role for"
 ---
 
 
@@ -147,7 +147,7 @@ const groupRoles = new keycloak.GroupRoles("groupRoles", {
 {{% /examples %}}
 
 
-## Using getRole {#using}
+## Using GetRole {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -328,7 +328,7 @@ The following arguments are supported:
 
 
 
-## getRole Result {#result}
+## GetRole Result {#result}
 
 The following output properties are available:
 

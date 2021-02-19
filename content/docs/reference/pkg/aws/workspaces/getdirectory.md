@@ -1,8 +1,8 @@
 
 ---
-title: "getDirectory"
-title_tag: "aws.workspaces.getDirectory"
-meta_desc: "Documentation for the aws.workspaces.getDirectory function with examples, input properties, output properties, and supporting types."
+title: "GetDirectory"
+title_tag: "Function GetDirectory | Module workspaces | Package AWS"
+meta_desc: "Explore the GetDirectory function of the workspaces module, including examples, input properties, output properties, and supporting types. Retrieve information about an AWS WorkSpaces directory."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.workspaces.getDirectory({
 {{% /examples %}}
 
 
-## Using getDirectory {#using}
+## Using GetDirectory {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## getDirectory Result {#result}
+## GetDirectory Result {#result}
 
 The following output properties are available:
 

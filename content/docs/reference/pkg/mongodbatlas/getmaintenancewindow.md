@@ -1,8 +1,8 @@
 
 ---
-title: "getMaintenanceWindow"
-title_tag: "mongodbatlas.getMaintenanceWindow"
-meta_desc: "Documentation for the mongodbatlas.getMaintenanceWindow function with examples, input properties, output properties, and supporting types."
+title: "GetMaintenanceWindow"
+title_tag: "Function GetMaintenanceWindow | Package MongoDB Atlas"
+meta_desc: "Explore the GetMaintenanceWindow function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.MaintenanceWindow` provides a Maintenance Window entry datasource. Gets information regarding the configured maintenance window for a MongoDB Atlas project."
 ---
 
 
@@ -46,7 +46,7 @@ const testMaintenanceWindow = testMongodbatlasMaintenanceWindow.id.apply(id => m
 
 
 
-## Using getMaintenanceWindow {#using}
+## Using GetMaintenanceWindow {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -147,7 +147,7 @@ The following arguments are supported:
 
 
 
-## getMaintenanceWindow Result {#result}
+## GetMaintenanceWindow Result {#result}
 
 The following output properties are available:
 

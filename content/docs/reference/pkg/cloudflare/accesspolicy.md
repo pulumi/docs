@@ -1,8 +1,8 @@
 
 ---
 title: "AccessPolicy"
-title_tag: "cloudflare.AccessPolicy"
-meta_desc: "Documentation for the cloudflare.AccessPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AccessPolicy | Package Cloudflare"
+meta_desc: "Explore the AccessPolicy resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare Access Policy resource. Access Policies are used"
 ---
 
 

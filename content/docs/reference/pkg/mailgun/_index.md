@@ -1,6 +1,6 @@
 ---
 title: "Mailgun"
-title_tag: "mailgun.Mailgun"
+title_tag: "Module Mailgun | Package Mailgun"
 meta_desc: "A Pulumi package for creating and managing Mailgun resources."
 menu:
     reference:

@@ -1,8 +1,8 @@
 
 ---
-title: "getIntent"
-title_tag: "aws.lex.getIntent"
-meta_desc: "Documentation for the aws.lex.getIntent function with examples, input properties, output properties, and supporting types."
+title: "GetIntent"
+title_tag: "Function GetIntent | Module lex | Package AWS"
+meta_desc: "Explore the GetIntent function of the lex module, including examples, input properties, output properties, and supporting types. Provides details about a specific Amazon Lex Intent."
 ---
 
 
@@ -95,7 +95,7 @@ const orderFlowers = pulumi.output(aws.lex.getIntent({
 {{% /examples %}}
 
 
-## Using getIntent {#using}
+## Using GetIntent {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ The following arguments are supported:
 
 
 
-## getIntent Result {#result}
+## GetIntent Result {#result}
 
 The following output properties are available:
 

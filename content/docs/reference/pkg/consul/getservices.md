@@ -1,8 +1,8 @@
 
 ---
-title: "getServices"
-title_tag: "consul.getServices"
-meta_desc: "Documentation for the consul.getServices function with examples, input properties, output properties, and supporting types."
+title: "GetServices"
+title_tag: "Function GetServices | Package Consul"
+meta_desc: "Explore the GetServices function of the Consul package, including examples, input properties, output properties, and supporting types. The `consul.getServices` data source returns a list of Consul services that"
 ---
 
 
@@ -21,7 +21,7 @@ source, which provides a detailed response about a specific Consul service.
 
 
 
-## Using getServices {#using}
+## Using GetServices {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -38,8 +38,6 @@ source, which provides a detailed response about a specific Consul service.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServices<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetServicesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetServicesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetServices` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -122,7 +120,7 @@ The following arguments are supported:
 
 
 
-## getServices Result {#result}
+## GetServices Result {#result}
 
 The following output properties are available:
 

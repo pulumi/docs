@@ -1,8 +1,8 @@
 
 ---
-title: "getConnections"
-title_tag: "alicloud.vpn.getConnections"
-meta_desc: "Documentation for the alicloud.vpn.getConnections function with examples, input properties, output properties, and supporting types."
+title: "GetConnections"
+title_tag: "Function GetConnections | Module vpn | Package AliCloud"
+meta_desc: "Explore the GetConnections function of the vpn module, including examples, input properties, output properties, and supporting types. The VPN connections data source lists lots of VPN connections resource information owned by an Alicloud account."
 ---
 
 
@@ -108,7 +108,7 @@ const foo = pulumi.output(alicloud.vpn.getConnections({
 {{% /examples %}}
 
 
-## Using getConnections {#using}
+## Using GetConnections {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -125,8 +125,6 @@ const foo = pulumi.output(alicloud.vpn.getConnections({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConnections<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetConnectionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetConnectionsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetConnections` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -369,7 +367,7 @@ The following arguments are supported:
 
 
 
-## getConnections Result {#result}
+## GetConnections Result {#result}
 
 The following output properties are available:
 

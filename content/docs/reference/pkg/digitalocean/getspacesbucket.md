@@ -1,8 +1,8 @@
 
 ---
-title: "getSpacesBucket"
-title_tag: "digitalocean.getSpacesBucket"
-meta_desc: "Documentation for the digitalocean.getSpacesBucket function with examples, input properties, output properties, and supporting types."
+title: "GetSpacesBucket"
+title_tag: "Function GetSpacesBucket | Package DigitalOcean"
+meta_desc: "Explore the GetSpacesBucket function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a Spaces bucket for use in other resources. This is useful if the Spaces bucket in question"
 ---
 
 
@@ -99,7 +99,7 @@ export const bucketDomainName = example.then(example => example.bucketDomainName
 {{% /examples %}}
 
 
-## Using getSpacesBucket {#using}
+## Using GetSpacesBucket {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -240,7 +240,7 @@ The following arguments are supported:
 
 
 
-## getSpacesBucket Result {#result}
+## GetSpacesBucket Result {#result}
 
 The following output properties are available:
 

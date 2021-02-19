@@ -1,8 +1,8 @@
 
 ---
-title: "getKafkaMirrorMaker"
-title_tag: "aiven.getKafkaMirrorMaker"
-meta_desc: "Documentation for the aiven.getKafkaMirrorMaker function with examples, input properties, output properties, and supporting types."
+title: "GetKafkaMirrorMaker"
+title_tag: "Function GetKafkaMirrorMaker | Package Aiven"
+meta_desc: "Explore the GetKafkaMirrorMaker function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Kafka MirrorMaker Data Source"
 ---
 
 
@@ -94,7 +94,7 @@ const mm1 = aiven.getKafkaMirrorMaker({
 {{% /examples %}}
 
 
-## Using getKafkaMirrorMaker {#using}
+## Using GetKafkaMirrorMaker {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1019,7 +1019,7 @@ deletion is done.
 
 
 
-## getKafkaMirrorMaker Result {#result}
+## GetKafkaMirrorMaker Result {#result}
 
 The following output properties are available:
 

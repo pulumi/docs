@@ -1,8 +1,8 @@
 
 ---
-title: "getPlugin"
-title_tag: "docker.getPlugin"
-meta_desc: "Documentation for the docker.getPlugin function with examples, input properties, output properties, and supporting types."
+title: "GetPlugin"
+title_tag: "Function GetPlugin | Package Docker"
+meta_desc: "Explore the GetPlugin function of the Docker package, including examples, input properties, output properties, and supporting types. Reads the local Docker plugin. The plugin must be installed locally."
 ---
 
 
@@ -89,7 +89,7 @@ const sample_volume_plugin = pulumi.output(docker.getPlugin({
 {{% /examples %}}
 
 
-## Using getPlugin {#using}
+## Using GetPlugin {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -230,7 +230,7 @@ The following arguments are supported:
 
 
 
-## getPlugin Result {#result}
+## GetPlugin Result {#result}
 
 The following output properties are available:
 

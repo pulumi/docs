@@ -1,8 +1,8 @@
 
 ---
-title: "getSwitches"
-title_tag: "alicloud.vpc.getSwitches"
-meta_desc: "Documentation for the alicloud.vpc.getSwitches function with examples, input properties, output properties, and supporting types."
+title: "GetSwitches"
+title_tag: "Function GetSwitches | Module vpc | Package AliCloud"
+meta_desc: "Explore the GetSwitches function of the vpc module, including examples, input properties, output properties, and supporting types. This data source provides a list of VSwitches owned by an Alibaba Cloud account."
 ---
 
 
@@ -142,7 +142,7 @@ const defaultSwitches = vswitch.name.apply(name => alicloud.vpc.getSwitches({
 {{% /examples %}}
 
 
-## Using getSwitches {#using}
+## Using GetSwitches {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -159,8 +159,6 @@ const defaultSwitches = vswitch.name.apply(name => alicloud.vpc.getSwitches({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSwitches<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSwitchesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSwitchesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetSwitches` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -559,7 +557,7 @@ The following arguments are supported:
 
 
 
-## getSwitches Result {#result}
+## GetSwitches Result {#result}
 
 The following output properties are available:
 

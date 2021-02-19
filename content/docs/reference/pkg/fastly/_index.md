@@ -1,6 +1,6 @@
 ---
 title: "Fastly"
-title_tag: "fastly.Fastly"
+title_tag: "Module Fastly | Package Fastly"
 meta_desc: "A Pulumi package for creating and managing fastly cloud resources."
 menu:
     reference:

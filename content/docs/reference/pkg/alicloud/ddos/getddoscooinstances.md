@@ -1,8 +1,8 @@
 
 ---
-title: "getDdosCooInstances"
-title_tag: "alicloud.ddos.getDdosCooInstances"
-meta_desc: "Documentation for the alicloud.ddos.getDdosCooInstances function with examples, input properties, output properties, and supporting types."
+title: "GetDdosCooInstances"
+title_tag: "Function GetDdosCooInstances | Module ddos | Package AliCloud"
+meta_desc: "Explore the GetDdosCooInstances function of the ddos module, including examples, input properties, output properties, and supporting types. This data source provides a list of BGP-Line Anti-DDoS Pro instances in an Alibaba Cloud account according to the specified filters."
 ---
 
 
@@ -101,7 +101,7 @@ export const instance = alicloud_ddoscoo_instances_instance.map(v => v.id);
 {{% /examples %}}
 
 
-## Using getDdosCooInstances {#using}
+## Using GetDdosCooInstances {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -118,8 +118,6 @@ export const instance = alicloud_ddoscoo_instances_instance.map(v => v.id);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDdosCooInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDdosCooInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDdosCooInstancesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetDdosCooInstances` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -278,7 +276,7 @@ The following arguments are supported:
 
 
 
-## getDdosCooInstances Result {#result}
+## GetDdosCooInstances Result {#result}
 
 The following output properties are available:
 

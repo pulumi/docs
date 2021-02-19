@@ -1,8 +1,8 @@
 
 ---
-title: "getHostPciDevice"
-title_tag: "vsphere.getHostPciDevice"
-meta_desc: "Documentation for the vsphere.getHostPciDevice function with examples, input properties, output properties, and supporting types."
+title: "GetHostPciDevice"
+title_tag: "Function GetHostPciDevice | Package vSphere"
+meta_desc: "Explore the GetHostPciDevice function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.getHostPciDevice` data source can be used to discover the DeviceID"
 ---
 
 
@@ -134,7 +134,7 @@ const dev = host.then(host => vsphere.getHostPciDevice({
 {{% /examples %}}
 
 
-## Using getHostPciDevice {#using}
+## Using GetHostPciDevice {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -151,8 +151,6 @@ const dev = host.then(host => vsphere.getHostPciDevice({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostPciDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetHostPciDeviceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetHostPciDeviceResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetHostPciDevice` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -363,7 +361,7 @@ the host PCI device name.
 
 
 
-## getHostPciDevice Result {#result}
+## GetHostPciDevice Result {#result}
 
 The following output properties are available:
 

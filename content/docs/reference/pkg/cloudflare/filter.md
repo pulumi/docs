@@ -1,8 +1,8 @@
 
 ---
 title: "Filter"
-title_tag: "cloudflare.Filter"
-meta_desc: "Documentation for the cloudflare.Filter resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Filter | Package Cloudflare"
+meta_desc: "Explore the Filter resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Filter expressions that can be referenced across multiple features, e.g. Firewall Rule. The expression format is similar to [Wireshark Display Filter](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)."
 ---
 
 

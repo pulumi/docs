@@ -1,8 +1,8 @@
 
 ---
-title: "getVpc"
-title_tag: "digitalocean.getVpc"
-meta_desc: "Documentation for the digitalocean.getVpc function with examples, input properties, output properties, and supporting types."
+title: "GetVpc"
+title_tag: "Function GetVpc | Package DigitalOcean"
+meta_desc: "Explore the GetVpc function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Retrieve information about a VPC for use in other resources."
 ---
 
 
@@ -96,7 +96,7 @@ const example = pulumi.output(digitalocean.getVpc({
 {{% /examples %}}
 
 
-## Using getVpc {#using}
+## Using GetVpc {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -277,7 +277,7 @@ The following arguments are supported:
 
 
 
-## getVpc Result {#result}
+## GetVpc Result {#result}
 
 The following output properties are available:
 

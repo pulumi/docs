@@ -1,8 +1,8 @@
 
 ---
 title: "NasDatastore"
-title_tag: "vsphere.NasDatastore"
-meta_desc: "Documentation for the vsphere.NasDatastore resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource NasDatastore | Package vSphere"
+meta_desc: "Explore the NasDatastore resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

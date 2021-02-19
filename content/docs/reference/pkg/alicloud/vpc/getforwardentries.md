@@ -1,8 +1,8 @@
 
 ---
-title: "getForwardEntries"
-title_tag: "alicloud.vpc.getForwardEntries"
-meta_desc: "Documentation for the alicloud.vpc.getForwardEntries function with examples, input properties, output properties, and supporting types."
+title: "GetForwardEntries"
+title_tag: "Function GetForwardEntries | Module vpc | Package AliCloud"
+meta_desc: "Explore the GetForwardEntries function of the vpc module, including examples, input properties, output properties, and supporting types. This data source provides a list of Forward Entries owned by an Alibaba Cloud account."
 ---
 
 
@@ -235,7 +235,7 @@ const defaultForwardEntries = defaultForwardEntry.forwardTableId.apply(forwardTa
 {{% /examples %}}
 
 
-## Using getForwardEntries {#using}
+## Using GetForwardEntries {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -252,8 +252,6 @@ const defaultForwardEntries = defaultForwardEntry.forwardTableId.apply(forwardTa
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetForwardEntries<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetForwardEntriesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetForwardEntriesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetForwardEntries` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -572,7 +570,7 @@ The following arguments are supported:
 
 
 
-## getForwardEntries Result {#result}
+## GetForwardEntries Result {#result}
 
 The following output properties are available:
 

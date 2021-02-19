@@ -1,8 +1,8 @@
 
 ---
-title: "getRule"
-title_tag: "aws.waf.getRule"
-meta_desc: "Documentation for the aws.waf.getRule function with examples, input properties, output properties, and supporting types."
+title: "GetRule"
+title_tag: "Function GetRule | Module waf | Package AWS"
+meta_desc: "Explore the GetRule function of the waf module, including examples, input properties, output properties, and supporting types. `aws.waf.Rule` Retrieves a WAF Rule Resource Id."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.waf.getRule({
 {{% /examples %}}
 
 
-## Using getRule {#using}
+## Using GetRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## getRule Result {#result}
+## GetRule Result {#result}
 
 The following output properties are available:
 

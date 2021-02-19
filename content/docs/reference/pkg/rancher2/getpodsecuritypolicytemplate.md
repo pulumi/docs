@@ -1,8 +1,8 @@
 
 ---
-title: "getPodSecurityPolicyTemplate"
-title_tag: "rancher2.getPodSecurityPolicyTemplate"
-meta_desc: "Documentation for the rancher2.getPodSecurityPolicyTemplate function with examples, input properties, output properties, and supporting types."
+title: "GetPodSecurityPolicyTemplate"
+title_tag: "Function GetPodSecurityPolicyTemplate | Package Rancher 2"
+meta_desc: "Explore the GetPodSecurityPolicyTemplate function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 PodSecurityPolicyTemplate."
 ---
 
 
@@ -88,7 +88,7 @@ const foo = pulumi.output(rancher2.getPodSecurityPolicyTemplate({
 {{% /examples %}}
 
 
-## Using getPodSecurityPolicyTemplate {#using}
+## Using GetPodSecurityPolicyTemplate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1265,7 +1265,7 @@ The following arguments are supported:
 
 
 
-## getPodSecurityPolicyTemplate Result {#result}
+## GetPodSecurityPolicyTemplate Result {#result}
 
 The following output properties are available:
 

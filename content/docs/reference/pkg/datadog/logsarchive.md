@@ -1,8 +1,8 @@
 
 ---
 title: "LogsArchive"
-title_tag: "datadog.LogsArchive"
-meta_desc: "Documentation for the datadog.LogsArchive resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource LogsArchive | Package Datadog"
+meta_desc: "Explore the LogsArchive resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog Logs Archive API resource, which is used to create and manage Datadog logs archives."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getZones"
-title_tag: "alicloud.mongodb.getZones"
-meta_desc: "Documentation for the alicloud.mongodb.getZones function with examples, input properties, output properties, and supporting types."
+title: "GetZones"
+title_tag: "Function GetZones | Module mongodb | Package AliCloud"
+meta_desc: "Explore the GetZones function of the mongodb module, including examples, input properties, output properties, and supporting types. This data source provides availability zones for mongoDB that can be accessed by an Alibaba Cloud account within the region configured in the provider."
 ---
 
 
@@ -101,7 +101,7 @@ const mongodb = new alicloud.mongodb.Instance("mongodb", {zoneId: zonesIds.then(
 {{% /examples %}}
 
 
-## Using getZones {#using}
+## Using GetZones {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -118,8 +118,6 @@ const mongodb = new alicloud.mongodb.Instance("mongodb", {zoneId: zonesIds.then(
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetZonesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetZonesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetZones` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -238,7 +236,7 @@ The following arguments are supported:
 
 
 
-## getZones Result {#result}
+## GetZones Result {#result}
 
 The following output properties are available:
 

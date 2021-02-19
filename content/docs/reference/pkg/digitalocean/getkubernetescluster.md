@@ -1,8 +1,8 @@
 
 ---
-title: "getKubernetesCluster"
-title_tag: "digitalocean.getKubernetesCluster"
-meta_desc: "Documentation for the digitalocean.getKubernetesCluster function with examples, input properties, output properties, and supporting types."
+title: "GetKubernetesCluster"
+title_tag: "Function GetKubernetesCluster | Package DigitalOcean"
+meta_desc: "Explore the GetKubernetesCluster function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Retrieves information about a DigitalOcean Kubernetes cluster for use in other resources. This data source provides all of the cluster&#39;s properties as configured on your DigitalOcean account. This is useful if the cluster in question is not managed by the provider."
 ---
 
 
@@ -15,7 +15,7 @@ Retrieves information about a DigitalOcean Kubernetes cluster for use in other r
 
 
 
-## Using getKubernetesCluster {#using}
+## Using GetKubernetesCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -156,7 +156,7 @@ The following arguments are supported:
 
 
 
-## getKubernetesCluster Result {#result}
+## GetKubernetesCluster Result {#result}
 
 The following output properties are available:
 

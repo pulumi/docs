@@ -1,8 +1,8 @@
 
 ---
 title: "VolumeSnapshot"
-title_tag: "digitalocean.VolumeSnapshot"
-meta_desc: "Documentation for the digitalocean.VolumeSnapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource VolumeSnapshot | Package DigitalOcean"
+meta_desc: "Explore the VolumeSnapshot resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot from an existing volume."
 ---
 
 

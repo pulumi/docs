@@ -1,8 +1,8 @@
 
 ---
 title: "LogsArchiveOrder"
-title_tag: "datadog.LogsArchiveOrder"
-meta_desc: "Documentation for the datadog.LogsArchiveOrder resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource LogsArchiveOrder | Package Datadog"
+meta_desc: "Explore the LogsArchiveOrder resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog [Logs Archive API](https://docs.datadoghq.com/api/v2/logs-archives/) resource, which is used to manage Datadog log archives order."
 ---
 
 

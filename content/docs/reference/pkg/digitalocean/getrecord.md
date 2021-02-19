@@ -1,8 +1,8 @@
 
 ---
-title: "getRecord"
-title_tag: "digitalocean.getRecord"
-meta_desc: "Documentation for the digitalocean.getRecord function with examples, input properties, output properties, and supporting types."
+title: "GetRecord"
+title_tag: "Function GetRecord | Package DigitalOcean"
+meta_desc: "Explore the GetRecord function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a DNS record. This data source provides the name, TTL, and zone"
 ---
 
 
@@ -20,7 +20,7 @@ your DigitalOcean account.
 
 
 
-## Using getRecord {#using}
+## Using GetRecord {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -37,8 +37,6 @@ your DigitalOcean account.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRecord<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRecordArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRecordResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetRecord` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -161,7 +159,7 @@ The following arguments are supported:
 
 
 
-## getRecord Result {#result}
+## GetRecord Result {#result}
 
 The following output properties are available:
 

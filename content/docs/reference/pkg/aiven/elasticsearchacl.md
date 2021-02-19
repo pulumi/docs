@@ -1,8 +1,8 @@
 
 ---
 title: "ElasticSearchAcl"
-title_tag: "aiven.ElasticSearchAcl"
-meta_desc: "Documentation for the aiven.ElasticSearchAcl resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ElasticSearchAcl | Package Aiven"
+meta_desc: "Explore the ElasticSearchAcl resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Elasticsearch ACL Resource"
 ---
 
 

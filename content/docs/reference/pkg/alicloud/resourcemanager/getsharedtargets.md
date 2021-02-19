@@ -1,8 +1,8 @@
 
 ---
-title: "getSharedTargets"
-title_tag: "alicloud.resourcemanager.getSharedTargets"
-meta_desc: "Documentation for the alicloud.resourcemanager.getSharedTargets function with examples, input properties, output properties, and supporting types."
+title: "GetSharedTargets"
+title_tag: "Function GetSharedTargets | Module resourcemanager | Package AliCloud"
+meta_desc: "Explore the GetSharedTargets function of the resourcemanager module, including examples, input properties, output properties, and supporting types. This data source provides the Resource Manager Shared Targets of the current Alibaba Cloud user."
 ---
 
 
@@ -101,7 +101,7 @@ export const firstResourceManagerSharedTargetId = example.then(example => exampl
 {{% /examples %}}
 
 
-## Using getSharedTargets {#using}
+## Using GetSharedTargets {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -118,8 +118,6 @@ export const firstResourceManagerSharedTargetId = example.then(example => exampl
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSharedTargets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSharedTargetsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSharedTargetsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetSharedTargets` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -318,7 +316,7 @@ The following arguments are supported:
 
 
 
-## getSharedTargets Result {#result}
+## GetSharedTargets Result {#result}
 
 The following output properties are available:
 

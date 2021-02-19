@@ -1,8 +1,8 @@
 
 ---
-title: "getRateBasedMod"
-title_tag: "aws.wafregional.getRateBasedMod"
-meta_desc: "Documentation for the aws.wafregional.getRateBasedMod function with examples, input properties, output properties, and supporting types."
+title: "GetRateBasedMod"
+title_tag: "Function GetRateBasedMod | Module wafregional | Package AWS"
+meta_desc: "Explore the GetRateBasedMod function of the wafregional module, including examples, input properties, output properties, and supporting types. `aws.wafregional.RateBasedRule` Retrieves a WAF Regional Rate Based Rule Resource Id."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.wafregional.getRateBasedMod({
 {{% /examples %}}
 
 
-## Using getRateBasedMod {#using}
+## Using GetRateBasedMod {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -105,8 +105,6 @@ const example = pulumi.output(aws.wafregional.getRateBasedMod({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRateBasedMod<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRateBasedModArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRateBasedModResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetRateBasedMod` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -189,7 +187,7 @@ The following arguments are supported:
 
 
 
-## getRateBasedMod Result {#result}
+## GetRateBasedMod Result {#result}
 
 The following output properties are available:
 

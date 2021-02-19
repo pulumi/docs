@@ -1,8 +1,8 @@
 
 ---
-title: "getShare"
-title_tag: "openstack.sharedfilesystem.getShare"
-meta_desc: "Documentation for the openstack.sharedfilesystem.getShare function with examples, input properties, output properties, and supporting types."
+title: "GetShare"
+title_tag: "Function GetShare | Module sharedfilesystem | Package Open Stack"
+meta_desc: "Explore the GetShare function of the sharedfilesystem module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available Shared File System share."
 ---
 
 
@@ -89,7 +89,7 @@ const share1 = pulumi.output(openstack.sharedfilesystem.getShare({
 {{% /examples %}}
 
 
-## Using getShare {#using}
+## Using GetShare {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -538,7 +538,7 @@ strings.
 
 
 
-## getShare Result {#result}
+## GetShare Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Team"
-title_tag: "mongodbatlas.Team"
-meta_desc: "Documentation for the mongodbatlas.Team resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Team | Package MongoDB Atlas"
+meta_desc: "Explore the Team resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.Teams` provides a Team resource. The resource lets you create, edit and delete Teams. Also, Teams can be assigned to multiple projects, and team members’ access to the project is determined by the team’s project role."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "WafRule"
-title_tag: "cloudflare.WafRule"
-meta_desc: "Documentation for the cloudflare.WafRule resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource WafRule | Package Cloudflare"
+meta_desc: "Explore the WafRule resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare WAF rule resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall rules."
 ---
 
 

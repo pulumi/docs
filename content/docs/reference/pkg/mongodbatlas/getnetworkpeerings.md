@@ -1,8 +1,8 @@
 
 ---
-title: "getNetworkPeerings"
-title_tag: "mongodbatlas.getNetworkPeerings"
-meta_desc: "Documentation for the mongodbatlas.getNetworkPeerings function with examples, input properties, output properties, and supporting types."
+title: "GetNetworkPeerings"
+title_tag: "Function GetNetworkPeerings | Package MongoDB Atlas"
+meta_desc: "Explore the GetNetworkPeerings function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.getNetworkPeerings` describes all Network Peering Connections."
 ---
 
 
@@ -123,7 +123,7 @@ const testNetworkPeerings = testNetworkPeering.projectId.apply(projectId => mong
 {{% /examples %}}
 
 
-## Using getNetworkPeerings {#using}
+## Using GetNetworkPeerings {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -140,8 +140,6 @@ const testNetworkPeerings = testNetworkPeering.projectId.apply(projectId => mong
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkPeerings<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNetworkPeeringsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNetworkPeeringsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetNetworkPeerings` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -224,7 +222,7 @@ The following arguments are supported:
 
 
 
-## getNetworkPeerings Result {#result}
+## GetNetworkPeerings Result {#result}
 
 The following output properties are available:
 

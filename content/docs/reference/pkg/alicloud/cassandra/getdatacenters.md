@@ -1,8 +1,8 @@
 
 ---
-title: "getDataCenters"
-title_tag: "alicloud.cassandra.getDataCenters"
-meta_desc: "Documentation for the alicloud.cassandra.getDataCenters function with examples, input properties, output properties, and supporting types."
+title: "GetDataCenters"
+title_tag: "Function GetDataCenters | Module cassandra | Package AliCloud"
+meta_desc: "Explore the GetDataCenters function of the cassandra module, including examples, input properties, output properties, and supporting types. The `alicloud.cassandra.getDataCenters` data source provides a collection of Cassandra Data Centers available in Alicloud account."
 ---
 
 
@@ -96,7 +96,7 @@ const cassandra = pulumi.output(alicloud.cassandra.getDataCenters({
 {{% /examples %}}
 
 
-## Using getDataCenters {#using}
+## Using GetDataCenters {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -113,8 +113,6 @@ const cassandra = pulumi.output(alicloud.cassandra.getDataCenters({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataCenters<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDataCentersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDataCentersResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetDataCenters` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -313,7 +311,7 @@ The following arguments are supported:
 
 
 
-## getDataCenters Result {#result}
+## GetDataCenters Result {#result}
 
 The following output properties are available:
 

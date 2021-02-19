@@ -1,8 +1,8 @@
 
 ---
-title: "getCloudProviderAccess"
-title_tag: "mongodbatlas.getCloudProviderAccess"
-meta_desc: "Documentation for the mongodbatlas.getCloudProviderAccess function with examples, input properties, output properties, and supporting types."
+title: "GetCloudProviderAccess"
+title_tag: "Function GetCloudProviderAccess | Package MongoDB Atlas"
+meta_desc: "Explore the GetCloudProviderAccess function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.CloudProviderAccess` allows you to get the list of cloud provider access roles, currently only AWS is supported."
 ---
 
 
@@ -103,7 +103,7 @@ const all = testRole.projectId.apply(projectId => mongodbatlas.getCloudProviderA
 {{% /examples %}}
 
 
-## Using getCloudProviderAccess {#using}
+## Using GetCloudProviderAccess {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -204,7 +204,7 @@ The following arguments are supported:
 
 
 
-## getCloudProviderAccess Result {#result}
+## GetCloudProviderAccess Result {#result}
 
 The following output properties are available:
 

@@ -1,6 +1,6 @@
 ---
 title: "admissionregistration"
-title_tag: "admissionregistration Package"
+title_tag: "Package admissionregistration"
 meta_desc: ""
 ---
 

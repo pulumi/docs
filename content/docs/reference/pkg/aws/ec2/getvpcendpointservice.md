@@ -1,8 +1,8 @@
 
 ---
-title: "getVpcEndpointService"
-title_tag: "aws.ec2.getVpcEndpointService"
-meta_desc: "Documentation for the aws.ec2.getVpcEndpointService function with examples, input properties, output properties, and supporting types."
+title: "GetVpcEndpointService"
+title_tag: "Function GetVpcEndpointService | Module ec2 | Package AWS"
+meta_desc: "Explore the GetVpcEndpointService function of the ec2 module, including examples, input properties, output properties, and supporting types. The VPC Endpoint Service data source details about a specific service that"
 ---
 
 
@@ -292,7 +292,7 @@ const test = pulumi.output(aws.ec2.getVpcEndpointService({
 {{% /examples %}}
 
 
-## Using getVpcEndpointService {#using}
+## Using GetVpcEndpointService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -553,7 +553,7 @@ The following arguments are supported:
 
 
 
-## getVpcEndpointService Result {#result}
+## GetVpcEndpointService Result {#result}
 
 The following output properties are available:
 

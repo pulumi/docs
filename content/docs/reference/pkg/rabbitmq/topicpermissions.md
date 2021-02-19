@@ -1,8 +1,8 @@
 
 ---
 title: "TopicPermissions"
-title_tag: "rabbitmq.TopicPermissions"
-meta_desc: "Documentation for the rabbitmq.TopicPermissions resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource TopicPermissions | Package RabbitMQ"
+meta_desc: "Explore the TopicPermissions resource of the RabbitMQ package, including examples, input properties, output properties, lookup functions, and supporting types. The ``rabbitmq.TopicPermissions`` resource creates and manages a user&#39;s set of"
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "FederationUpstream"
-title_tag: "rabbitmq.FederationUpstream"
-meta_desc: "Documentation for the rabbitmq.FederationUpstream resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource FederationUpstream | Package RabbitMQ"
+meta_desc: "Explore the FederationUpstream resource of the RabbitMQ package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

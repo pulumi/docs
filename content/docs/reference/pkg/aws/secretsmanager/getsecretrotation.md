@@ -1,8 +1,8 @@
 
 ---
-title: "getSecretRotation"
-title_tag: "aws.secretsmanager.getSecretRotation"
-meta_desc: "Documentation for the aws.secretsmanager.getSecretRotation function with examples, input properties, output properties, and supporting types."
+title: "GetSecretRotation"
+title_tag: "Function GetSecretRotation | Module secretsmanager | Package AWS"
+meta_desc: "Explore the GetSecretRotation function of the secretsmanager module, including examples, input properties, output properties, and supporting types. Retrieve information about a Secrets Manager secret rotation. To retrieve secret metadata, see the [`aws.secretsmanager.Secret` data source](https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret.html). To retrieve a secret value, see the [`aws.secretsmanager.SecretVersion` data source](https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret_version.html)."
 ---
 
 
@@ -88,7 +88,7 @@ const example = aws.secretsmanager.getSecretRotation({
 {{% /examples %}}
 
 
-## Using getSecretRotation {#using}
+## Using GetSecretRotation {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## getSecretRotation Result {#result}
+## GetSecretRotation Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "VmStoragePolicy"
-title_tag: "vsphere.VmStoragePolicy"
-meta_desc: "Documentation for the vsphere.VmStoragePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource VmStoragePolicy | Package vSphere"
+meta_desc: "Explore the VmStoragePolicy resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. The `vsphere.VmStoragePolicy` resource can be used to create and manage storage "
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectAlertGroup"
-title_tag: "rancher2.ProjectAlertGroup"
-meta_desc: "Documentation for the rancher2.ProjectAlertGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource ProjectAlertGroup | Package Rancher 2"
+meta_desc: "Explore the ProjectAlertGroup resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Project Alert Group resource. This can be used to create Project Alert Group for Rancher v2 environments and retrieve their information."
 ---
 
 

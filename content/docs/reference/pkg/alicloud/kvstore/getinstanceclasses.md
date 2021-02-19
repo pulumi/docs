@@ -1,8 +1,8 @@
 
 ---
-title: "getInstanceClasses"
-title_tag: "alicloud.kvstore.getInstanceClasses"
-meta_desc: "Documentation for the alicloud.kvstore.getInstanceClasses function with examples, input properties, output properties, and supporting types."
+title: "GetInstanceClasses"
+title_tag: "Function GetInstanceClasses | Module kvstore | Package AliCloud"
+meta_desc: "Explore the GetInstanceClasses function of the kvstore module, including examples, input properties, output properties, and supporting types. This data source provides the KVStore instance classes resource available info of Alibaba Cloud."
 ---
 
 
@@ -133,7 +133,7 @@ export const firstKvstoreInstanceClass = resourcesInstanceClasses.instanceClasse
 {{% /examples %}}
 
 
-## Using getInstanceClasses {#using}
+## Using GetInstanceClasses {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -150,8 +150,6 @@ export const firstKvstoreInstanceClass = resourcesInstanceClasses.instanceClasse
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceClasses<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceClassesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceClassesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetInstanceClasses` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -746,7 +744,7 @@ The following arguments are supported:
 
 
 
-## getInstanceClasses Result {#result}
+## GetInstanceClasses Result {#result}
 
 The following output properties are available:
 

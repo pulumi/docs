@@ -1,8 +1,8 @@
 
 ---
-title: "getLedger"
-title_tag: "aws.qldb.getLedger"
-meta_desc: "Documentation for the aws.qldb.getLedger function with examples, input properties, output properties, and supporting types."
+title: "GetLedger"
+title_tag: "Function GetLedger | Module qldb | Package AWS"
+meta_desc: "Explore the GetLedger function of the qldb module, including examples, input properties, output properties, and supporting types. Use this data source to fetch information about a Quantum Ledger Database."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.qldb.getLedger({
 {{% /examples %}}
 
 
-## Using getLedger {#using}
+## Using GetLedger {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## getLedger Result {#result}
+## GetLedger Result {#result}
 
 The following output properties are available:
 

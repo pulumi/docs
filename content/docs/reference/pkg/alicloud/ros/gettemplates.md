@@ -1,8 +1,8 @@
 
 ---
-title: "getTemplates"
-title_tag: "alicloud.ros.getTemplates"
-meta_desc: "Documentation for the alicloud.ros.getTemplates function with examples, input properties, output properties, and supporting types."
+title: "GetTemplates"
+title_tag: "Function GetTemplates | Module ros | Package AliCloud"
+meta_desc: "Explore the GetTemplates function of the ros module, including examples, input properties, output properties, and supporting types. This data source provides the Ros Templates of the current Alibaba Cloud user."
 ---
 
 
@@ -106,7 +106,7 @@ export const firstRosTemplateId = example.then(example => example.templates[0].i
 {{% /examples %}}
 
 
-## Using getTemplates {#using}
+## Using GetTemplates {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -123,8 +123,6 @@ export const firstRosTemplateId = example.then(example => example.templates[0].i
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTemplates<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetTemplatesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetTemplatesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetTemplates` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -443,7 +441,7 @@ The following arguments are supported:
 
 
 
-## getTemplates Result {#result}
+## GetTemplates Result {#result}
 
 The following output properties are available:
 

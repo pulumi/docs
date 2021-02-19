@@ -1,8 +1,8 @@
 
 ---
 title: "StackScript"
-title_tag: "linode.StackScript"
-meta_desc: "Documentation for the linode.StackScript resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource StackScript | Package Linode"
+meta_desc: "Explore the StackScript resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode StackScript resource.  This can be used to create, modify, and delete Linode StackScripts.  StackScripts are private or public managed scripts which run within an instance during startup.  StackScripts can include variables whose values are specified when the Instance is created.  "
 ---
 
 

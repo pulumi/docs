@@ -1,8 +1,8 @@
 
 ---
-title: "getOriginRequestPolicy"
-title_tag: "aws.cloudfront.getOriginRequestPolicy"
-meta_desc: "Documentation for the aws.cloudfront.getOriginRequestPolicy function with examples, input properties, output properties, and supporting types."
+title: "GetOriginRequestPolicy"
+title_tag: "Function GetOriginRequestPolicy | Module cloudfront | Package AWS"
+meta_desc: "Explore the GetOriginRequestPolicy function of the cloudfront module, including examples, input properties, output properties, and supporting types. {{% examples %}}"
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.cloudfront.getOriginRequestPolicy({
 {{% /examples %}}
 
 
-## Using getOriginRequestPolicy {#using}
+## Using GetOriginRequestPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## getOriginRequestPolicy Result {#result}
+## GetOriginRequestPolicy Result {#result}
 
 The following output properties are available:
 

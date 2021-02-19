@@ -1,8 +1,8 @@
 
 ---
 title: "Certificate"
-title_tag: "digitalocean.Certificate"
-meta_desc: "Documentation for the digitalocean.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Certificate | Package DigitalOcean"
+meta_desc: "Explore the Certificate resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Certificate resource that allows you to manage"
 ---
 
 

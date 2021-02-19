@@ -1,8 +1,8 @@
 
 ---
-title: "getAclRole"
-title_tag: "consul.getAclRole"
-meta_desc: "Documentation for the consul.getAclRole function with examples, input properties, output properties, and supporting types."
+title: "GetAclRole"
+title_tag: "Function GetAclRole | Package Consul"
+meta_desc: "Explore the GetAclRole function of the Consul package, including examples, input properties, output properties, and supporting types. The `consul.AclRole` data source returns the information related to a"
 ---
 
 
@@ -95,7 +95,7 @@ export const consulAclRole = test.then(test => test.id);
 {{% /examples %}}
 
 
-## Using getAclRole {#using}
+## Using GetAclRole {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -364,7 +364,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 
 
-## getAclRole Result {#result}
+## GetAclRole Result {#result}
 
 The following output properties are available:
 

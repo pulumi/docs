@@ -1,8 +1,8 @@
 
 ---
-title: "getProfile"
-title_tag: "linode.getProfile"
-meta_desc: "Documentation for the linode.getProfile function with examples, input properties, output properties, and supporting types."
+title: "GetProfile"
+title_tag: "Function GetProfile | Package Linode"
+meta_desc: "Explore the GetProfile function of the Linode package, including examples, input properties, output properties, and supporting types. Provides information about a Linode profile."
 ---
 
 
@@ -116,7 +116,7 @@ const profile = pulumi.output(linode.getProfile({ async: true }));
 {{% /examples %}}
 
 
-## Using getProfile {#using}
+## Using GetProfile {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -134,8 +134,6 @@ const profile = pulumi.output(linode.getProfile({ async: true }));
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProfileResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetProfile` in the Go SDK.
-
 {{% /choosable %}}
 
 
@@ -148,7 +146,7 @@ const profile = pulumi.output(linode.getProfile({ async: true }));
 
 
 
-## getProfile Result {#result}
+## GetProfile Result {#result}
 
 The following output properties are available:
 

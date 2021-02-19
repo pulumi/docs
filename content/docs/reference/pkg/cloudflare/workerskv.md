@@ -1,8 +1,8 @@
 
 ---
 title: "WorkersKv"
-title_tag: "cloudflare.WorkersKv"
-meta_desc: "Documentation for the cloudflare.WorkersKv resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource WorkersKv | Package Cloudflare"
+meta_desc: "Explore the WorkersKv resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Workers KV Pair.  *NOTE:*  This resource uses the Cloudflare account APIs.  This requires setting the `CLOUDFLARE_ACCOUNT_ID` environment variable or `account_id` provider argument."
 ---
 
 

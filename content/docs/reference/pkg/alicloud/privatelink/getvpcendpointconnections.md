@@ -1,8 +1,8 @@
 
 ---
-title: "getVpcEndpointConnections"
-title_tag: "alicloud.privatelink.getVpcEndpointConnections"
-meta_desc: "Documentation for the alicloud.privatelink.getVpcEndpointConnections function with examples, input properties, output properties, and supporting types."
+title: "GetVpcEndpointConnections"
+title_tag: "Function GetVpcEndpointConnections | Module privatelink | Package AliCloud"
+meta_desc: "Explore the GetVpcEndpointConnections function of the privatelink module, including examples, input properties, output properties, and supporting types. This data source provides the Privatelink Vpc Endpoint Connections of the current Alibaba Cloud user."
 ---
 
 
@@ -101,7 +101,7 @@ export const firstPrivatelinkVpcEndpointConnectionId = example.then(example => e
 {{% /examples %}}
 
 
-## Using getVpcEndpointConnections {#using}
+## Using GetVpcEndpointConnections {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -118,8 +118,6 @@ export const firstPrivatelinkVpcEndpointConnectionId = example.then(example => e
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcEndpointConnections<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetVpcEndpointConnectionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetVpcEndpointConnectionsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetVpcEndpointConnections` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -358,7 +356,7 @@ The following arguments are supported:
 
 
 
-## getVpcEndpointConnections Result {#result}
+## GetVpcEndpointConnections Result {#result}
 
 The following output properties are available:
 

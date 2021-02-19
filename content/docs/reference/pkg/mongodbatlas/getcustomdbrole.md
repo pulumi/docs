@@ -1,8 +1,8 @@
 
 ---
-title: "getCustomDbRole"
-title_tag: "mongodbatlas.getCustomDbRole"
-meta_desc: "Documentation for the mongodbatlas.getCustomDbRole function with examples, input properties, output properties, and supporting types."
+title: "GetCustomDbRole"
+title_tag: "Function GetCustomDbRole | Package MongoDB Atlas"
+meta_desc: "Explore the GetCustomDbRole function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.CustomDbRole` describe a Custom DB Role. This represents a custom db role."
 ---
 
 
@@ -190,7 +190,7 @@ const test = pulumi.all([testRole.projectId, testRole.roleName]).apply(([project
 {{% /examples %}}
 
 
-## Using getCustomDbRole {#using}
+## Using GetCustomDbRole {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -367,7 +367,7 @@ The following arguments are supported:
 
 
 
-## getCustomDbRole Result {#result}
+## GetCustomDbRole Result {#result}
 
 The following output properties are available:
 

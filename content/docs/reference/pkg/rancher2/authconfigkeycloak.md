@@ -1,8 +1,8 @@
 
 ---
 title: "AuthConfigKeycloak"
-title_tag: "rancher2.AuthConfigKeycloak"
-meta_desc: "Documentation for the rancher2.AuthConfigKeycloak resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource AuthConfigKeycloak | Package Rancher 2"
+meta_desc: "Explore the AuthConfigKeycloak resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Auth Config KeyCloak resource. This can be used to configure and enable Auth Config KeyCloak for Rancher v2 RKE clusters and retrieve their information."
 ---
 
 

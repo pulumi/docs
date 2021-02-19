@@ -1,8 +1,8 @@
 
 ---
 title: "RegistryImage"
-title_tag: "docker.RegistryImage"
-meta_desc: "Documentation for the docker.RegistryImage resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource RegistryImage | Package Docker"
+meta_desc: "Explore the RegistryImage resource of the Docker package, including examples, input properties, output properties, lookup functions, and supporting types. Provides an image/tag in a Docker registry."
 ---
 
 

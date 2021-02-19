@@ -1,6 +1,6 @@
 ---
 title: "extensions"
-title_tag: "extensions Package"
+title_tag: "Package extensions"
 meta_desc: ""
 ---
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getClientAuthorizationPolicy"
-title_tag: "keycloak.openid.getClientAuthorizationPolicy"
-meta_desc: "Documentation for the keycloak.openid.getClientAuthorizationPolicy function with examples, input properties, output properties, and supporting types."
+title: "GetClientAuthorizationPolicy"
+title_tag: "Function GetClientAuthorizationPolicy | Module openid | Package Keycloak"
+meta_desc: "Explore the GetClientAuthorizationPolicy function of the openid module, including examples, input properties, output properties, and supporting types. This data source can be used to fetch policy and permission information for an OpenID client that has authorization enabled."
 ---
 
 
@@ -228,7 +228,7 @@ const permission = new keycloak.openid.ClientAuthorizationPermission("permission
 {{% /examples %}}
 
 
-## Using getClientAuthorizationPolicy {#using}
+## Using GetClientAuthorizationPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -245,8 +245,6 @@ const permission = new keycloak.openid.ClientAuthorizationPermission("permission
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClientAuthorizationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetClientAuthorizationPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetClientAuthorizationPolicyResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetClientAuthorizationPolicy` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -409,7 +407,7 @@ The following arguments are supported:
 
 
 
-## getClientAuthorizationPolicy Result {#result}
+## GetClientAuthorizationPolicy Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "NodeTemplate"
-title_tag: "rancher2.NodeTemplate"
-meta_desc: "Documentation for the rancher2.NodeTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource NodeTemplate | Package Rancher 2"
+meta_desc: "Explore the NodeTemplate resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Node Template resource. This can be used to create Node Template for Rancher v2 and retrieve their information."
 ---
 
 

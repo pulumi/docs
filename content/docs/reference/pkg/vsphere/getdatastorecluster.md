@@ -1,8 +1,8 @@
 
 ---
-title: "getDatastoreCluster"
-title_tag: "vsphere.getDatastoreCluster"
-meta_desc: "Documentation for the vsphere.getDatastoreCluster function with examples, input properties, output properties, and supporting types."
+title: "GetDatastoreCluster"
+title_tag: "Function GetDatastoreCluster | Package vSphere"
+meta_desc: "Explore the GetDatastoreCluster function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.DatastoreCluster` data source can be used to discover the ID of a"
 ---
 
 
@@ -114,7 +114,7 @@ const datastoreCluster = vsphere_datacenter_dc.id.apply(id => vsphere.getDatasto
 {{% /examples %}}
 
 
-## Using getDatastoreCluster {#using}
+## Using GetDatastoreCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -271,7 +271,7 @@ For default datacenters, use the id attribute from an empty
 
 
 
-## getDatastoreCluster Result {#result}
+## GetDatastoreCluster Result {#result}
 
 The following output properties are available:
 

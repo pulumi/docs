@@ -1,8 +1,8 @@
 
 ---
-title: "getSlotType"
-title_tag: "aws.lex.getSlotType"
-meta_desc: "Documentation for the aws.lex.getSlotType function with examples, input properties, output properties, and supporting types."
+title: "GetSlotType"
+title_tag: "Function GetSlotType | Module lex | Package AWS"
+meta_desc: "Explore the GetSlotType function of the lex module, including examples, input properties, output properties, and supporting types. Provides details about a specific Amazon Lex Slot Type."
 ---
 
 
@@ -93,7 +93,7 @@ const flowerTypes = pulumi.output(aws.lex.getSlotType({
 {{% /examples %}}
 
 
-## Using getSlotType {#using}
+## Using GetSlotType {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -234,7 +234,7 @@ The following arguments are supported:
 
 
 
-## getSlotType Result {#result}
+## GetSlotType Result {#result}
 
 The following output properties are available:
 

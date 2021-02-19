@@ -1,8 +1,8 @@
 
 ---
-title: "getFileSystem"
-title_tag: "aws.efs.getFileSystem"
-meta_desc: "Documentation for the aws.efs.getFileSystem function with examples, input properties, output properties, and supporting types."
+title: "GetFileSystem"
+title_tag: "Function GetFileSystem | Module efs | Package AWS"
+meta_desc: "Explore the GetFileSystem function of the efs module, including examples, input properties, output properties, and supporting types. Provides information about an Elastic File System (EFS) File System."
 ---
 
 
@@ -103,7 +103,7 @@ const byId = aws.efs.getFileSystem({
 {{% /examples %}}
 
 
-## Using getFileSystem {#using}
+## Using GetFileSystem {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -280,7 +280,7 @@ The following arguments are supported:
 
 
 
-## getFileSystem Result {#result}
+## GetFileSystem Result {#result}
 
 The following output properties are available:
 

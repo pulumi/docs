@@ -1,8 +1,8 @@
 
 ---
-title: "getParameter"
-title_tag: "aws.ssm.getParameter"
-meta_desc: "Documentation for the aws.ssm.getParameter function with examples, input properties, output properties, and supporting types."
+title: "GetParameter"
+title_tag: "Function GetParameter | Module ssm | Package AWS"
+meta_desc: "Explore the GetParameter function of the ssm module, including examples, input properties, output properties, and supporting types. Provides an SSM Parameter data source."
 ---
 
 
@@ -88,7 +88,7 @@ const foo = pulumi.output(aws.ssm.getParameter({
 {{% /examples %}}
 
 
-## Using getParameter {#using}
+## Using GetParameter {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## getParameter Result {#result}
+## GetParameter Result {#result}
 
 The following output properties are available:
 

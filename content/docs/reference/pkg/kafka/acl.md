@@ -1,8 +1,8 @@
 
 ---
 title: "Acl"
-title_tag: "kafka.Acl"
-meta_desc: "Documentation for the kafka.Acl resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Acl | Package Kafka"
+meta_desc: "Explore the Acl resource of the Kafka package, including examples, input properties, output properties, lookup functions, and supporting types. A resource for managing Kafka ACLs."
 ---
 
 

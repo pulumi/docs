@@ -1,8 +1,8 @@
 
 ---
-title: "getMainVersions"
-title_tag: "alicloud.emr.getMainVersions"
-meta_desc: "Documentation for the alicloud.emr.getMainVersions function with examples, input properties, output properties, and supporting types."
+title: "GetMainVersions"
+title_tag: "Function GetMainVersions | Module emr | Package AliCloud"
+meta_desc: "Explore the GetMainVersions function of the emr module, including examples, input properties, output properties, and supporting types. The `alicloud.emr.getMainVersions` data source provides a collection of emr "
 ---
 
 
@@ -122,7 +122,7 @@ export const thisClusterTypes = defaultMainVersions.mainVersions[0].clusterTypes
 {{% /examples %}}
 
 
-## Using getMainVersions {#using}
+## Using GetMainVersions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -139,8 +139,6 @@ export const thisClusterTypes = defaultMainVersions.mainVersions[0].clusterTypes
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMainVersions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetMainVersionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetMainVersionsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetMainVersions` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -303,7 +301,7 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
 
 
-## getMainVersions Result {#result}
+## GetMainVersions Result {#result}
 
 The following output properties are available:
 

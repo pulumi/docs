@@ -1,8 +1,8 @@
 
 ---
-title: "getBackendServers"
-title_tag: "alicloud.slb.getBackendServers"
-meta_desc: "Documentation for the alicloud.slb.getBackendServers function with examples, input properties, output properties, and supporting types."
+title: "GetBackendServers"
+title_tag: "Function GetBackendServers | Module slb | Package AliCloud"
+meta_desc: "Explore the GetBackendServers function of the slb module, including examples, input properties, output properties, and supporting types. This data source provides the server load balancer backend servers related to a server load balancer.."
 ---
 
 
@@ -97,7 +97,7 @@ export const firstSlbBackendServerId = sampleDs.backendServers[0].id;
 {{% /examples %}}
 
 
-## Using getBackendServers {#using}
+## Using GetBackendServers {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -114,8 +114,6 @@ export const firstSlbBackendServerId = sampleDs.backendServers[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackendServers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetBackendServersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBackendServersResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetBackendServers` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -274,7 +272,7 @@ The following arguments are supported:
 
 
 
-## getBackendServers Result {#result}
+## GetBackendServers Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getRegistryEnterpriseInstances"
-title_tag: "alicloud.cs.getRegistryEnterpriseInstances"
-meta_desc: "Documentation for the alicloud.cs.getRegistryEnterpriseInstances function with examples, input properties, output properties, and supporting types."
+title: "GetRegistryEnterpriseInstances"
+title_tag: "Function GetRegistryEnterpriseInstances | Module cs | Package AliCloud"
+meta_desc: "Explore the GetRegistryEnterpriseInstances function of the cs module, including examples, input properties, output properties, and supporting types. This data source provides a list Container Registry Enterprise Edition instances on Alibaba Cloud."
 ---
 
 
@@ -104,7 +104,7 @@ export const output = myInstances.instances;
 {{% /examples %}}
 
 
-## Using getRegistryEnterpriseInstances {#using}
+## Using GetRegistryEnterpriseInstances {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -121,8 +121,6 @@ export const output = myInstances.instances;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryEnterpriseInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegistryEnterpriseInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegistryEnterpriseInstancesResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetRegistryEnterpriseInstances` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -281,7 +279,7 @@ The following arguments are supported:
 
 
 
-## getRegistryEnterpriseInstances Result {#result}
+## GetRegistryEnterpriseInstances Result {#result}
 
 The following output properties are available:
 

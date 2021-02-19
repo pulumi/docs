@@ -1,8 +1,8 @@
 
 ---
 title: "Firewall"
-title_tag: "digitalocean.Firewall"
-meta_desc: "Documentation for the digitalocean.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
+title_tag: "Resource Firewall | Package DigitalOcean"
+meta_desc: "Explore the Firewall resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Cloud Firewall resource. This can be used to create,"
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "getRegions"
-title_tag: "aws.getRegions"
-meta_desc: "Documentation for the aws.getRegions function with examples, input properties, output properties, and supporting types."
+title: "GetRegions"
+title_tag: "Function GetRegions | Package AWS"
+meta_desc: "Explore the GetRegions function of the AWS package, including examples, input properties, output properties, and supporting types. Provides information about AWS Regions. Can be used to filter regions i.e. by Opt-In status or only regions enabled for current account. To get details like endpoint and description of each region the data source can be combined with the `aws.getRegion` data source."
 ---
 
 
@@ -81,7 +81,7 @@ const current = pulumi.output(aws.getRegions({ async: true }));
 {{% /examples %}}
 
 
-## Using getRegions {#using}
+## Using GetRegions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -98,8 +98,6 @@ const current = pulumi.output(aws.getRegions({ async: true }));
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegionsResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetRegions` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -222,7 +220,7 @@ The following arguments are supported:
 
 
 
-## getRegions Result {#result}
+## GetRegions Result {#result}
 
 The following output properties are available:
 

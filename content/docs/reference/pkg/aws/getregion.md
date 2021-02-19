@@ -1,8 +1,8 @@
 
 ---
-title: "getRegion"
-title_tag: "aws.getRegion"
-meta_desc: "Documentation for the aws.getRegion function with examples, input properties, output properties, and supporting types."
+title: "GetRegion"
+title_tag: "Function GetRegion | Package AWS"
+meta_desc: "Explore the GetRegion function of the AWS package, including examples, input properties, output properties, and supporting types. `aws.getRegion` provides details about a specific AWS region."
 ---
 
 
@@ -86,7 +86,7 @@ const current = pulumi.output(aws.getRegion({ async: true }));
 {{% /examples %}}
 
 
-## Using getRegion {#using}
+## Using GetRegion {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -103,8 +103,6 @@ const current = pulumi.output(aws.getRegion({ async: true }));
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegionResult</a></span>, error)</span></code></pre></div>
-
-> Note: This function is named `GetRegion` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -227,7 +225,7 @@ The following arguments are supported:
 
 
 
-## getRegion Result {#result}
+## GetRegion Result {#result}
 
 The following output properties are available:
 
