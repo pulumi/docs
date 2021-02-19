@@ -1,8 +1,8 @@
 
 ---
-title: "GetCertificate"
-title_tag: "Function GetCertificate | Module ssl | Package f5 BIG-IP"
-meta_desc: "Explore the GetCertificate function of the ssl module, including examples, input properties, output properties, and supporting types. "
+title: "getCertificate"
+title_tag: "f5bigip.ssl.getCertificate"
+meta_desc: "Documentation for the f5bigip.ssl.getCertificate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetCertificate function of the ssl module, including exa
 
 
 
-## Using GetCertificate {#using}
+## Using getCertificate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetCertificate Result {#result}
+## getCertificate Result {#result}
 
 The following output properties are available:
 

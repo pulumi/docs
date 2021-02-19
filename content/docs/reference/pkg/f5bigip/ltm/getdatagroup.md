@@ -1,8 +1,8 @@
 
 ---
-title: "GetDataGroup"
-title_tag: "Function GetDataGroup | Module ltm | Package f5 BIG-IP"
-meta_desc: "Explore the GetDataGroup function of the ltm module, including examples, input properties, output properties, and supporting types. "
+title: "getDataGroup"
+title_tag: "f5bigip.ltm.getDataGroup"
+meta_desc: "Documentation for the f5bigip.ltm.getDataGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetDataGroup function of the ltm module, including examp
 
 
 
-## Using GetDataGroup {#using}
+## Using getDataGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -218,7 +218,7 @@ The following arguments are supported:
 
 
 
-## GetDataGroup Result {#result}
+## getDataGroup Result {#result}
 
 The following output properties are available:
 

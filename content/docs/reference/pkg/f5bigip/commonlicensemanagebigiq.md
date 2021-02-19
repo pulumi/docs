@@ -1,8 +1,8 @@
 
 ---
 title: "CommonLicenseManageBigIq"
-title_tag: "Resource CommonLicenseManageBigIq | Package f5 BIG-IP"
-meta_desc: "Explore the CommonLicenseManageBigIq resource of the f5 BIG-IP package, including examples, input properties, output properties, lookup functions, and supporting types. `f5bigip.CommonLicenseManageBigIq` This Resource is used for BIGIP/Provider License Management from BIGIQ"
+title_tag: "f5bigip.CommonLicenseManageBigIq"
+meta_desc: "Documentation for the f5bigip.CommonLicenseManageBigIq resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

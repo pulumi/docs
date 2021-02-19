@@ -1,8 +1,8 @@
 
 ---
 title: "BigIqAs3"
-title_tag: "Resource BigIqAs3 | Package f5 BIG-IP"
-meta_desc: "Explore the BigIqAs3 resource of the f5 BIG-IP package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "f5bigip.BigIqAs3"
+meta_desc: "Documentation for the f5bigip.BigIqAs3 resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

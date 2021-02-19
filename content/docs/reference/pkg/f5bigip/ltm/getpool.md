@@ -1,8 +1,8 @@
 
 ---
-title: "GetPool"
-title_tag: "Function GetPool | Module ltm | Package f5 BIG-IP"
-meta_desc: "Explore the GetPool function of the ltm module, including examples, input properties, output properties, and supporting types. "
+title: "getPool"
+title_tag: "f5bigip.ltm.getPool"
+meta_desc: "Documentation for the f5bigip.ltm.getPool function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetPool function of the ltm module, including examples, 
 
 
 
-## Using GetPool {#using}
+## Using getPool {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetPool Result {#result}
+## getPool Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Command"
-title_tag: "Resource Command | Package f5 BIG-IP"
-meta_desc: "Explore the Command resource of the f5 BIG-IP package, including examples, input properties, output properties, lookup functions, and supporting types. `f5bigip.Command` Run TMSH commands on F5 devices"
+title_tag: "f5bigip.Command"
+meta_desc: "Documentation for the f5bigip.Command resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

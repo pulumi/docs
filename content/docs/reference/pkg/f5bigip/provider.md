@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package f5 BIG-IP"
-meta_desc: "Explore the Provider resource of the f5 BIG-IP package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the bigip package. By default, resources use package-wide configuration"
+title_tag: "f5bigip.Provider"
+meta_desc: "Documentation for the f5bigip.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: "f5 BIG-IP"
-title_tag: "Package f5 BIG-IP"
+title_tag: "f5 BIG-IP Package"
 meta_desc: "A Pulumi package for creating and managing F5 BigIP resources."
 menu:
     reference:
@@ -41,6 +41,6 @@ A Pulumi package for creating and managing F5 BigIP resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 	<dt>Version</dt>
-	<dd>2.8.1</dd>
+	<dd>2.9.0</dd>
 </dl>
 
