@@ -1,8 +1,8 @@
 
 ---
-title: "GetAccount"
-title_tag: "Function GetAccount | Package New Relic"
-meta_desc: "Explore the GetAccount function of the New Relic package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific account in New Relic."
+title: "getAccount"
+title_tag: "newrelic.getAccount"
+meta_desc: "Documentation for the newrelic.getAccount function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ const acc = pulumi.output(newrelic.getAccount({
 {{% /examples %}}
 
 
-## Using GetAccount {#using}
+## Using getAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -108,6 +108,8 @@ const acc = pulumi.output(newrelic.getAccount({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAccountResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAccount` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -270,7 +272,7 @@ The following arguments are supported:
 
 
 
-## GetAccount Result {#result}
+## getAccount Result {#result}
 
 The following output properties are available:
 

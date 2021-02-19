@@ -1,8 +1,8 @@
 
 ---
 title: "ApiAccessKey"
-title_tag: "Resource ApiAccessKey | Package New Relic"
-meta_desc: "Explore the ApiAccessKey resource of the New Relic package, including examples, input properties, output properties, lookup functions, and supporting types. Use this resource to programmatically create and manage the following types of keys:"
+title_tag: "newrelic.ApiAccessKey"
+meta_desc: "Documentation for the newrelic.ApiAccessKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

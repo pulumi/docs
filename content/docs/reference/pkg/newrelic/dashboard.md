@@ -1,8 +1,8 @@
 
 ---
 title: "Dashboard"
-title_tag: "Resource Dashboard | Package New Relic"
-meta_desc: "Explore the Dashboard resource of the New Relic package, including examples, input properties, output properties, lookup functions, and supporting types. Use this resource to create and manage New Relic dashboards."
+title_tag: "newrelic.Dashboard"
+meta_desc: "Documentation for the newrelic.Dashboard resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

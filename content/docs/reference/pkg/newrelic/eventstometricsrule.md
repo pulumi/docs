@@ -1,8 +1,8 @@
 
 ---
 title: "EventsToMetricsRule"
-title_tag: "Resource EventsToMetricsRule | Package New Relic"
-meta_desc: "Explore the EventsToMetricsRule resource of the New Relic package, including examples, input properties, output properties, lookup functions, and supporting types. Use this resource to create, update, and delete New Relic Events to Metrics rules."
+title_tag: "newrelic.EventsToMetricsRule"
+meta_desc: "Documentation for the newrelic.EventsToMetricsRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetMonitor"
-title_tag: "Function GetMonitor | Module synthetics | Package New Relic"
-meta_desc: "Explore the GetMonitor function of the synthetics module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific synthetics monitor in New Relic that already exists. This can be used to set up a Synthetics alert condition."
+title: "getMonitor"
+title_tag: "newrelic.synthetics.getMonitor"
+meta_desc: "Documentation for the newrelic.synthetics.getMonitor function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -111,7 +111,7 @@ const baz = new newrelic.synthetics.AlertCondition("baz", {
 {{% /examples %}}
 
 
-## Using GetMonitor {#using}
+## Using getMonitor {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -212,7 +212,7 @@ The following arguments are supported:
 
 
 
-## GetMonitor Result {#result}
+## getMonitor Result {#result}
 
 The following output properties are available:
 

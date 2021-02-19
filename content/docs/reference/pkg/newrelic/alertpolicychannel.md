@@ -1,8 +1,8 @@
 
 ---
 title: "AlertPolicyChannel"
-title_tag: "Resource AlertPolicyChannel | Package New Relic"
-meta_desc: "Explore the AlertPolicyChannel resource of the New Relic package, including examples, input properties, output properties, lookup functions, and supporting types. Use this resource to map alert policies to alert channels in New Relic."
+title_tag: "newrelic.AlertPolicyChannel"
+meta_desc: "Documentation for the newrelic.AlertPolicyChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

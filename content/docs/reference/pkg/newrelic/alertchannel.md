@@ -1,8 +1,8 @@
 
 ---
 title: "AlertChannel"
-title_tag: "Resource AlertChannel | Package New Relic"
-meta_desc: "Explore the AlertChannel resource of the New Relic package, including examples, input properties, output properties, lookup functions, and supporting types. Use this resource to create and manage New Relic alert channels."
+title_tag: "newrelic.AlertChannel"
+meta_desc: "Documentation for the newrelic.AlertChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "NrqlAlertCondition"
-title_tag: "Resource NrqlAlertCondition | Package New Relic"
-meta_desc: "Explore the NrqlAlertCondition resource of the New Relic package, including examples, input properties, output properties, lookup functions, and supporting types. Use this resource to create and manage NRQL alert conditions in New Relic."
+title_tag: "newrelic.NrqlAlertCondition"
+meta_desc: "Documentation for the newrelic.NrqlAlertCondition resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetSecureCredential"
-title_tag: "Function GetSecureCredential | Module synthetics | Package New Relic"
-meta_desc: "Explore the GetSecureCredential function of the synthetics module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific Synthetics secure credential in New Relic that already exists."
+title: "getSecureCredential"
+title_tag: "newrelic.synthetics.getSecureCredential"
+meta_desc: "Documentation for the newrelic.synthetics.getSecureCredential function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,7 +90,7 @@ const foo = pulumi.output(newrelic.synthetics.getSecureCredential({
 {{% /examples %}}
 
 
-## Using GetSecureCredential {#using}
+## Using getSecureCredential {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -191,7 +191,7 @@ The following arguments are supported:
 
 
 
-## GetSecureCredential Result {#result}
+## getSecureCredential Result {#result}
 
 The following output properties are available:
 
