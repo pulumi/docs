@@ -1,8 +1,8 @@
 
 ---
-title: "GetProject"
-title_tag: "Function GetProject | Package GitLab"
-meta_desc: "Explore the GetProject function of the GitLab package, including examples, input properties, output properties, and supporting types. ## # gitlab\_project"
+title: "getProject"
+title_tag: "gitlab.getProject"
+meta_desc: "Documentation for the gitlab.getProject function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -31,7 +31,7 @@ class MyStack : Stack
     {
         var example = Output.Create(GitLab.GetProject.InvokeAsync(new GitLab.GetProjectArgs
         {
-            Id = 30,
+            Id = "30",
         }));
     }
 
@@ -52,7 +52,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := gitlab.LookupProject(ctx, &gitlab.LookupProjectArgs{
-			Id: 30,
+			Id: "30",
 		}, nil)
 		if err != nil {
 			return err
@@ -69,7 +69,7 @@ func main() {
 import pulumi
 import pulumi_gitlab as gitlab
 
-example = gitlab.get_project(id=30)
+example = gitlab.get_project(id="30")
 ```
 
 {{% /example %}}
@@ -81,7 +81,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
 const example = pulumi.output(gitlab.getProject({
-    id: 30,
+    id: "30",
 }, { async: true }));
 ```
 
@@ -90,7 +90,7 @@ const example = pulumi.output(gitlab.getProject({
 {{% /examples %}}
 
 
-## Using GetProject {#using}
+## Using getProject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -101,7 +101,7 @@ const example = pulumi.output(gitlab.getProject({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_project(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_project(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -133,9 +133,9 @@ The following arguments are supported:
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
+    <dd>{{% md %}}The integer or path with namespace that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -149,9 +149,9 @@ The following arguments are supported:
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
+    <dd>{{% md %}}The integer or path with namespace that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -165,9 +165,9 @@ The following arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
+    <dd>{{% md %}}The integer or path with namespace that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -181,9 +181,9 @@ The following arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
+    <dd>{{% md %}}The integer or path with namespace that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -191,7 +191,7 @@ The following arguments are supported:
 
 
 
-## GetProject Result {#result}
+## getProject Result {#result}
 
 The following output properties are available:
 
@@ -247,7 +247,7 @@ repository via HTTP.
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
@@ -474,7 +474,7 @@ repository via HTTP.
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
@@ -701,7 +701,7 @@ repository via HTTP.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
@@ -928,7 +928,7 @@ repository via HTTP.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>

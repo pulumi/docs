@@ -1,8 +1,8 @@
 
 ---
 title: "GroupShareGroup"
-title_tag: "Resource GroupShareGroup | Package GitLab"
-meta_desc: "Explore the GroupShareGroup resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_group\_share\_group"
+title_tag: "gitlab.GroupShareGroup"
+meta_desc: "Documentation for the gitlab.GroupShareGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

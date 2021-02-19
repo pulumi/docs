@@ -1,8 +1,8 @@
 
 ---
 title: "GroupVariable"
-title_tag: "Resource GroupVariable | Package GitLab"
-meta_desc: "Explore the GroupVariable resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_group\_variable"
+title_tag: "gitlab.GroupVariable"
+meta_desc: "Documentation for the gitlab.GroupVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

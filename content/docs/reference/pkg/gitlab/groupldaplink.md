@@ -1,8 +1,8 @@
 
 ---
 title: "GroupLdapLink"
-title_tag: "Resource GroupLdapLink | Package GitLab"
-meta_desc: "Explore the GroupLdapLink resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_group\_ldap\_link"
+title_tag: "gitlab.GroupLdapLink"
+meta_desc: "Documentation for the gitlab.GroupLdapLink resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

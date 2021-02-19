@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectApprovalRule"
-title_tag: "Resource ProjectApprovalRule | Package GitLab"
-meta_desc: "Explore the ProjectApprovalRule resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_project\_approval\_rule"
+title_tag: "gitlab.ProjectApprovalRule"
+meta_desc: "Documentation for the gitlab.ProjectApprovalRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

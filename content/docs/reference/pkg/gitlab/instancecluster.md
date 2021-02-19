@@ -1,8 +1,8 @@
 
 ---
 title: "InstanceCluster"
-title_tag: "Resource InstanceCluster | Package GitLab"
-meta_desc: "Explore the InstanceCluster resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_instance\_cluster"
+title_tag: "gitlab.InstanceCluster"
+meta_desc: "Documentation for the gitlab.InstanceCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

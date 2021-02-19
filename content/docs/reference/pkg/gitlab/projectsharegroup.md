@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectShareGroup"
-title_tag: "Resource ProjectShareGroup | Package GitLab"
-meta_desc: "Explore the ProjectShareGroup resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_project\_share\_group"
+title_tag: "gitlab.ProjectShareGroup"
+meta_desc: "Documentation for the gitlab.ProjectShareGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

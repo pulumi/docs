@@ -1,8 +1,8 @@
 
 ---
 title: "Label"
-title_tag: "Resource Label | Package GitLab"
-meta_desc: "Explore the Label resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_label"
+title_tag: "gitlab.Label"
+meta_desc: "Documentation for the gitlab.Label resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

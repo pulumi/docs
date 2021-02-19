@@ -1,8 +1,8 @@
 
 ---
 title: "TagProtection"
-title_tag: "Resource TagProtection | Package GitLab"
-meta_desc: "Explore the TagProtection resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_tag\_protection"
+title_tag: "gitlab.TagProtection"
+meta_desc: "Documentation for the gitlab.TagProtection resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

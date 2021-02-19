@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceSlack"
-title_tag: "Resource ServiceSlack | Package GitLab"
-meta_desc: "Explore the ServiceSlack resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "gitlab.ServiceSlack"
+meta_desc: "Documentation for the gitlab.ServiceSlack resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

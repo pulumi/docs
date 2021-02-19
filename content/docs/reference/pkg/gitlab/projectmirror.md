@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectMirror"
-title_tag: "Resource ProjectMirror | Package GitLab"
-meta_desc: "Explore the ProjectMirror resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_project_mirror"
+title_tag: "gitlab.ProjectMirror"
+meta_desc: "Documentation for the gitlab.ProjectMirror resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

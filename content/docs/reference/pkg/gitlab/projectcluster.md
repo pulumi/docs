@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectCluster"
-title_tag: "Resource ProjectCluster | Package GitLab"
-meta_desc: "Explore the ProjectCluster resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_project\_cluster"
+title_tag: "gitlab.ProjectCluster"
+meta_desc: "Documentation for the gitlab.ProjectCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

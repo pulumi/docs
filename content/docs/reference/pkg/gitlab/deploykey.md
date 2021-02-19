@@ -1,8 +1,8 @@
 
 ---
 title: "DeployKey"
-title_tag: "Resource DeployKey | Package GitLab"
-meta_desc: "Explore the DeployKey resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. ## # gitlab\_deploy\_key"
+title_tag: "gitlab.DeployKey"
+meta_desc: "Documentation for the gitlab.DeployKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

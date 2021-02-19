@@ -1,8 +1,8 @@
 
 ---
 title: "ServicePipelinesEmail"
-title_tag: "Resource ServicePipelinesEmail | Package GitLab"
-meta_desc: "Explore the ServicePipelinesEmail resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "gitlab.ServicePipelinesEmail"
+meta_desc: "Documentation for the gitlab.ServicePipelinesEmail resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Group"
-title_tag: "Resource Group | Package GitLab"
-meta_desc: "Explore the Group resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "gitlab.Group"
+meta_desc: "Documentation for the gitlab.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
