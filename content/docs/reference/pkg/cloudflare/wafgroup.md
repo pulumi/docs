@@ -1,8 +1,8 @@
 
 ---
 title: "WafGroup"
-title_tag: "Resource WafGroup | Package Cloudflare"
-meta_desc: "Explore the WafGroup resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare WAF rule group resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall groups."
+title_tag: "cloudflare.WafGroup"
+meta_desc: "Documentation for the cloudflare.WafGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

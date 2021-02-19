@@ -1,8 +1,8 @@
 
 ---
-title: "GetEnterpriseInstances"
-title_tag: "Function GetEnterpriseInstances | Module dms | Package AliCloud"
-meta_desc: "Explore the GetEnterpriseInstances function of the dms module, including examples, input properties, output properties, and supporting types. This data source provides a list of DMS Enterprise Instances in an Alibaba Cloud account according to the specified filters."
+title: "getEnterpriseInstances"
+title_tag: "alicloud.dms.getEnterpriseInstances"
+meta_desc: "Documentation for the alicloud.dms.getEnterpriseInstances function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,7 +17,7 @@ This data source provides a list of DMS Enterprise Instances in an Alibaba Cloud
 
 
 
-## Using GetEnterpriseInstances {#using}
+## Using getEnterpriseInstances {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -34,6 +34,8 @@ This data source provides a list of DMS Enterprise Instances in an Alibaba Cloud
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnterpriseInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEnterpriseInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEnterpriseInstancesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetEnterpriseInstances` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -472,7 +474,7 @@ The following arguments are supported:
 
 
 
-## GetEnterpriseInstances Result {#result}
+## getEnterpriseInstances Result {#result}
 
 The following output properties are available:
 

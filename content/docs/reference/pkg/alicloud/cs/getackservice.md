@@ -1,8 +1,8 @@
 
 ---
-title: "GetAckService"
-title_tag: "Function GetAckService | Module cs | Package AliCloud"
-meta_desc: "Explore the GetAckService function of the cs module, including examples, input properties, output properties, and supporting types. Using this data source can open Container Service (CS) service automatically. If the service has been opened, it will return opened."
+title: "getAckService"
+title_tag: "alicloud.cs.getAckService"
+meta_desc: "Documentation for the alicloud.cs.getAckService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -97,7 +97,7 @@ const open = pulumi.output(alicloud.cs.getAckService({
 {{% /examples %}}
 
 
-## Using GetAckService {#using}
+## Using getAckService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -114,6 +114,8 @@ const open = pulumi.output(alicloud.cs.getAckService({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAckService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAckServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAckServiceResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAckService` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -236,7 +238,7 @@ The following arguments are supported:
 
 
 
-## GetAckService Result {#result}
+## getAckService Result {#result}
 
 The following output properties are available:
 

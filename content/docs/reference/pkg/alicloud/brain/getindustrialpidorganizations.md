@@ -1,8 +1,8 @@
 
 ---
-title: "GetIndustrialPidOrganizations"
-title_tag: "Function GetIndustrialPidOrganizations | Module brain | Package AliCloud"
-meta_desc: "Explore the GetIndustrialPidOrganizations function of the brain module, including examples, input properties, output properties, and supporting types. This data source provides the Brain Industrial Pid Organizations of the current Alibaba Cloud user."
+title: "getIndustrialPidOrganizations"
+title_tag: "alicloud.brain.getIndustrialPidOrganizations"
+meta_desc: "Documentation for the alicloud.brain.getIndustrialPidOrganizations function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -106,7 +106,7 @@ export const firstBrainIndustrialPidOrganizationId = example.then(example => exa
 {{% /examples %}}
 
 
-## Using GetIndustrialPidOrganizations {#using}
+## Using getIndustrialPidOrganizations {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -123,6 +123,8 @@ export const firstBrainIndustrialPidOrganizationId = example.then(example => exa
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIndustrialPidOrganizations<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetIndustrialPidOrganizationsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIndustrialPidOrganizationsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetIndustrialPidOrganizations` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -321,7 +323,7 @@ The following arguments are supported:
 
 
 
-## GetIndustrialPidOrganizations Result {#result}
+## getIndustrialPidOrganizations Result {#result}
 
 The following output properties are available:
 

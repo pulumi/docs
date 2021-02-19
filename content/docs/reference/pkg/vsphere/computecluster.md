@@ -1,8 +1,8 @@
 
 ---
 title: "ComputeCluster"
-title_tag: "Resource ComputeCluster | Package vSphere"
-meta_desc: "Explore the ComputeCluster resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.ComputeCluster"
+meta_desc: "Documentation for the vsphere.ComputeCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

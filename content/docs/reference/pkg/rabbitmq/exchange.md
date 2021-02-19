@@ -1,8 +1,8 @@
 
 ---
 title: "Exchange"
-title_tag: "Resource Exchange | Package RabbitMQ"
-meta_desc: "Explore the Exchange resource of the RabbitMQ package, including examples, input properties, output properties, lookup functions, and supporting types. The ``rabbitmq.Exchange`` resource creates and manages an exchange."
+title_tag: "rabbitmq.Exchange"
+meta_desc: "Documentation for the rabbitmq.Exchange resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

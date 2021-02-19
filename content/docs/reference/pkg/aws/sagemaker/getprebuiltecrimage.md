@@ -1,8 +1,8 @@
 
 ---
-title: "GetPrebuiltEcrImage"
-title_tag: "Function GetPrebuiltEcrImage | Module sagemaker | Package AWS"
-meta_desc: "Explore the GetPrebuiltEcrImage function of the sagemaker module, including examples, input properties, output properties, and supporting types. Get information about prebuilt Amazon SageMaker Docker images."
+title: "getPrebuiltEcrImage"
+title_tag: "aws.sagemaker.getPrebuiltEcrImage"
+meta_desc: "Documentation for the aws.sagemaker.getPrebuiltEcrImage function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -95,7 +95,7 @@ const test = pulumi.output(aws.sagemaker.getPrebuiltEcrImage({
 {{% /examples %}}
 
 
-## Using GetPrebuiltEcrImage {#using}
+## Using getPrebuiltEcrImage {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -112,6 +112,8 @@ const test = pulumi.output(aws.sagemaker.getPrebuiltEcrImage({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPrebuiltEcrImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPrebuiltEcrImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPrebuiltEcrImageResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetPrebuiltEcrImage` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -314,7 +316,7 @@ The following arguments are supported:
 
 
 
-## GetPrebuiltEcrImage Result {#result}
+## getPrebuiltEcrImage Result {#result}
 
 The following output properties are available:
 

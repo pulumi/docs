@@ -1,8 +1,8 @@
 
 ---
-title: "GetTeams"
-title_tag: "Function GetTeams | Package MongoDB Atlas"
-meta_desc: "Explore the GetTeams function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. "
+title: "getTeams"
+title_tag: "mongodbatlas.getTeams"
+meta_desc: "Documentation for the mongodbatlas.getTeams function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetTeams function of the MongoDB Atlas package, includin
 
 
 
-## Using GetTeams {#using}
+## Using getTeams {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetTeams Result {#result}
+## getTeams Result {#result}
 
 The following output properties are available:
 

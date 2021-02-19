@@ -1,8 +1,8 @@
 
 ---
-title: "GetRegions"
-title_tag: "Function GetRegions | Package DigitalOcean"
-meta_desc: "Explore the GetRegions function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Retrieve information about all supported DigitalOcean regions, with the ability to"
+title: "getRegions"
+title_tag: "digitalocean.getRegions"
+meta_desc: "Documentation for the digitalocean.getRegions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -115,7 +115,7 @@ const available = pulumi.output(digitalocean.getRegions({
 {{% /examples %}}
 
 
-## Using GetRegions {#using}
+## Using getRegions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -132,6 +132,8 @@ const available = pulumi.output(digitalocean.getRegions({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegionsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRegions` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -262,7 +264,7 @@ The `sort` block is documented below.
 
 
 
-## GetRegions Result {#result}
+## getRegions Result {#result}
 
 The following output properties are available:
 

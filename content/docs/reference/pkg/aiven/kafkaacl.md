@@ -1,8 +1,8 @@
 
 ---
 title: "KafkaAcl"
-title_tag: "Resource KafkaAcl | Package Aiven"
-meta_desc: "Explore the KafkaAcl resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource Kafka ACL Resource"
+title_tag: "aiven.KafkaAcl"
+meta_desc: "Documentation for the aiven.KafkaAcl resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

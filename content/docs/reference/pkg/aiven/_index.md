@@ -1,6 +1,6 @@
 ---
 title: "Aiven"
-title_tag: "Module Aiven | Package Aiven"
+title_tag: "aiven.Aiven"
 meta_desc: "A Pulumi package for creating and managing Aiven cloud resources."
 menu:
     reference:

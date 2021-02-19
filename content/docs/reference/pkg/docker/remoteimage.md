@@ -1,8 +1,8 @@
 
 ---
 title: "RemoteImage"
-title_tag: "Resource RemoteImage | Package Docker"
-meta_desc: "Explore the RemoteImage resource of the Docker package, including examples, input properties, output properties, lookup functions, and supporting types. Pulls a Docker image to a given Docker host from a Docker Registry."
+title_tag: "docker.RemoteImage"
+meta_desc: "Documentation for the docker.RemoteImage resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

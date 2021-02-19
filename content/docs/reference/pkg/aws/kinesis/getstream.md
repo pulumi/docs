@@ -1,8 +1,8 @@
 
 ---
-title: "GetStream"
-title_tag: "Function GetStream | Module kinesis | Package AWS"
-meta_desc: "Explore the GetStream function of the kinesis module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a Kinesis Stream for use in other"
+title: "getStream"
+title_tag: "aws.kinesis.getStream"
+meta_desc: "Documentation for the aws.kinesis.getStream function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ const stream = pulumi.output(aws.kinesis.getStream({
 {{% /examples %}}
 
 
-## Using GetStream {#using}
+## Using getStream {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -232,7 +232,7 @@ The following arguments are supported:
 
 
 
-## GetStream Result {#result}
+## getStream Result {#result}
 
 The following output properties are available:
 

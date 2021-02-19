@@ -1,8 +1,8 @@
 
 ---
-title: "GetRules"
-title_tag: "Function GetRules | Module slb | Package AliCloud"
-meta_desc: "Explore the GetRules function of the slb module, including examples, input properties, output properties, and supporting types. This data source provides the rules associated with a server load balancer listener."
+title: "getRules"
+title_tag: "alicloud.slb.getRules"
+meta_desc: "Documentation for the alicloud.slb.getRules function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -254,7 +254,7 @@ export const firstSlbRuleId = sampleDs.slbRules[0].id;
 {{% /examples %}}
 
 
-## Using GetRules {#using}
+## Using getRules {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -271,6 +271,8 @@ export const firstSlbRuleId = sampleDs.slbRules[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRulesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRules` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -509,7 +511,7 @@ The following arguments are supported:
 
 
 
-## GetRules Result {#result}
+## getRules Result {#result}
 
 The following output properties are available:
 

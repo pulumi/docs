@@ -1,8 +1,8 @@
 
 ---
-title: "GetNatGateway"
-title_tag: "Function GetNatGateway | Module ec2 | Package AWS"
-meta_desc: "Explore the GetNatGateway function of the ec2 module, including examples, input properties, output properties, and supporting types. Provides details about a specific Nat Gateway."
+title: "getNatGateway"
+title_tag: "aws.ec2.getNatGateway"
+meta_desc: "Documentation for the aws.ec2.getNatGateway function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,7 +98,7 @@ const default = aws.ec2.getNatGateway({
 {{% /examples %}}
 
 
-## Using GetNatGateway {#using}
+## Using getNatGateway {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -403,7 +403,7 @@ a pair on the desired Nat Gateway.
 
 
 
-## GetNatGateway Result {#result}
+## getNatGateway Result {#result}
 
 The following output properties are available:
 

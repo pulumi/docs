@@ -1,8 +1,8 @@
 
 ---
-title: "GetSite"
-title_tag: "Function GetSite | Module outposts | Package AWS"
-meta_desc: "Explore the GetSite function of the outposts module, including examples, input properties, output properties, and supporting types. Provides details about an Outposts Site."
+title: "getSite"
+title_tag: "aws.outposts.getSite"
+meta_desc: "Documentation for the aws.outposts.getSite function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const example = pulumi.output(aws.outposts.getSite({
 {{% /examples %}}
 
 
-## Using GetSite {#using}
+## Using getSite {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -106,6 +106,8 @@ const example = pulumi.output(aws.outposts.getSite({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSite<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSiteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSiteResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetSite` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -228,7 +230,7 @@ The following arguments are supported:
 
 
 
-## GetSite Result {#result}
+## getSite Result {#result}
 
 The following output properties are available:
 

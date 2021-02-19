@@ -1,8 +1,8 @@
 
 ---
-title: "GetSnapshotV3"
-title_tag: "Function GetSnapshotV3 | Module blockstorage | Package Open Stack"
-meta_desc: "Explore the GetSnapshotV3 function of the blockstorage module, including examples, input properties, output properties, and supporting types. Use this data source to get information about an existing snapshot."
+title: "getSnapshotV3"
+title_tag: "openstack.blockstorage.getSnapshotV3"
+meta_desc: "Documentation for the openstack.blockstorage.getSnapshotV3 function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const snapshot1 = pulumi.output(openstack.blockstorage.getSnapshotV3({
 {{% /examples %}}
 
 
-## Using GetSnapshotV3 {#using}
+## Using getSnapshotV3 {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -111,6 +111,8 @@ const snapshot1 = pulumi.output(openstack.blockstorage.getSnapshotV3({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshotV3<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSnapshotV3Args</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSnapshotV3Result</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetSnapshotV3` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -361,7 +363,7 @@ client. If omitted, the `region` argument of the provider is used.
 
 
 
-## GetSnapshotV3 Result {#result}
+## getSnapshotV3 Result {#result}
 
 The following output properties are available:
 

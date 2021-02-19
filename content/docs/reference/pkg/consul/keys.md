@@ -1,8 +1,8 @@
 
 ---
 title: "Keys"
-title_tag: "Resource Keys | Package Consul"
-meta_desc: "Explore the Keys resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "consul.Keys"
+meta_desc: "Documentation for the consul.Keys resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

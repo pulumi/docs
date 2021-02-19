@@ -1,8 +1,8 @@
 
 ---
-title: "GetDocument"
-title_tag: "Function GetDocument | Module ssm | Package AWS"
-meta_desc: "Explore the GetDocument function of the ssm module, including examples, input properties, output properties, and supporting types. Gets the contents of the specified Systems Manager document."
+title: "getDocument"
+title_tag: "aws.ssm.getDocument"
+meta_desc: "Documentation for the aws.ssm.getDocument function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -99,7 +99,7 @@ export const content = foo.then(foo => foo.content);
 {{% /examples %}}
 
 
-## Using GetDocument {#using}
+## Using getDocument {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -280,7 +280,7 @@ The following arguments are supported:
 
 
 
-## GetDocument Result {#result}
+## getDocument Result {#result}
 
 The following output properties are available:
 

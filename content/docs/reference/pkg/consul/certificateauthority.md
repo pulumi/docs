@@ -1,8 +1,8 @@
 
 ---
 title: "CertificateAuthority"
-title_tag: "Resource CertificateAuthority | Package Consul"
-meta_desc: "Explore the CertificateAuthority resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. The `consul.CertificateAuthority` resource can be used to manage the configuration of"
+title_tag: "consul.CertificateAuthority"
+meta_desc: "Documentation for the consul.CertificateAuthority resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

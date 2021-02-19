@@ -1,8 +1,8 @@
 
 ---
 title: "NomadSecretRole"
-title_tag: "Resource NomadSecretRole | Package Vault"
-meta_desc: "Explore the NomadSecretRole resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vault.NomadSecretRole"
+meta_desc: "Documentation for the vault.NomadSecretRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

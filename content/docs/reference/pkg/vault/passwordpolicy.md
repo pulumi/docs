@@ -1,8 +1,8 @@
 
 ---
 title: "PasswordPolicy"
-title_tag: "Resource PasswordPolicy | Package Vault"
-meta_desc: "Explore the PasswordPolicy resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage Password Policies "
+title_tag: "vault.PasswordPolicy"
+meta_desc: "Documentation for the vault.PasswordPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

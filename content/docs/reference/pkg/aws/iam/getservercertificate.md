@@ -1,8 +1,8 @@
 
 ---
-title: "GetServerCertificate"
-title_tag: "Function GetServerCertificate | Module iam | Package AWS"
-meta_desc: "Explore the GetServerCertificate function of the iam module, including examples, input properties, output properties, and supporting types. Use this data source to lookup information about IAM Server Certificates."
+title: "getServerCertificate"
+title_tag: "aws.iam.getServerCertificate"
+meta_desc: "Documentation for the aws.iam.getServerCertificate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -137,7 +137,7 @@ const elb = new aws.elb.LoadBalancer("elb", {listeners: [{
 {{% /examples %}}
 
 
-## Using GetServerCertificate {#using}
+## Using getServerCertificate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -358,7 +358,7 @@ The following arguments are supported:
 
 
 
-## GetServerCertificate Result {#result}
+## getServerCertificate Result {#result}
 
 The following output properties are available:
 

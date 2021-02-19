@@ -1,8 +1,8 @@
 
 ---
 title: "Secret"
-title_tag: "Resource Secret | Package Docker"
-meta_desc: "Explore the Secret resource of the Docker package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "docker.Secret"
+meta_desc: "Documentation for the docker.Secret resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetDBAuditInstance"
-title_tag: "Function GetDBAuditInstance | Module yundun | Package AliCloud"
-meta_desc: "Explore the GetDBAuditInstance function of the yundun module, including examples, input properties, output properties, and supporting types. "
+title: "getDBAuditInstance"
+title_tag: "alicloud.yundun.getDBAuditInstance"
+meta_desc: "Documentation for the alicloud.yundun.getDBAuditInstance function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetDBAuditInstance function of the yundun module, includ
 
 
 
-## Using GetDBAuditInstance {#using}
+## Using getDBAuditInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -218,7 +218,7 @@ The following arguments are supported:
 
 
 
-## GetDBAuditInstance Result {#result}
+## getDBAuditInstance Result {#result}
 
 The following output properties are available:
 

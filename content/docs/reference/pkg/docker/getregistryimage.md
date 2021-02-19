@@ -1,8 +1,8 @@
 
 ---
-title: "GetRegistryImage"
-title_tag: "Function GetRegistryImage | Package Docker"
-meta_desc: "Explore the GetRegistryImage function of the Docker package, including examples, input properties, output properties, and supporting types. Reads the image metadata from a Docker Registry. Used in conjunction with the"
+title: "getRegistryImage"
+title_tag: "docker.getRegistryImage"
+meta_desc: "Documentation for the docker.getRegistryImage function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -115,7 +115,7 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntuRemoteImage", {
 {{% /examples %}}
 
 
-## Using GetRegistryImage {#using}
+## Using getRegistryImage {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -216,7 +216,7 @@ The following arguments are supported:
 
 
 
-## GetRegistryImage Result {#result}
+## getRegistryImage Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetProject"
-title_tag: "Function GetProject | Module identity | Package Open Stack"
-meta_desc: "Explore the GetProject function of the identity module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an OpenStack project."
+title: "getProject"
+title_tag: "openstack.identity.getProject"
+meta_desc: "Documentation for the openstack.identity.getProject function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const project1 = pulumi.output(openstack.identity.getProject({
 {{% /examples %}}
 
 
-## Using GetProject {#using}
+## Using getProject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -398,7 +398,7 @@ are `true` and `false`.
 
 
 
-## GetProject Result {#result}
+## getProject Result {#result}
 
 The following output properties are available:
 

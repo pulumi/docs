@@ -1,8 +1,8 @@
 
 ---
-title: "GetAclAuthMethod"
-title_tag: "Function GetAclAuthMethod | Package Consul"
-meta_desc: "Explore the GetAclAuthMethod function of the Consul package, including examples, input properties, output properties, and supporting types. The `consul.AclAuthMethod` data source returns the information related to a"
+title: "getAclAuthMethod"
+title_tag: "consul.getAclAuthMethod"
+meta_desc: "Documentation for the consul.getAclAuthMethod function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -95,7 +95,7 @@ export const consulAclAuthMethod = test.then(test => test.config);
 {{% /examples %}}
 
 
-## Using GetAclAuthMethod {#using}
+## Using getAclAuthMethod {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ The following arguments are supported:
 
 
 
-## GetAclAuthMethod Result {#result}
+## getAclAuthMethod Result {#result}
 
 The following output properties are available:
 

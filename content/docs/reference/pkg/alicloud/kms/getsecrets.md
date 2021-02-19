@@ -1,8 +1,8 @@
 
 ---
-title: "GetSecrets"
-title_tag: "Function GetSecrets | Module kms | Package AliCloud"
-meta_desc: "Explore the GetSecrets function of the kms module, including examples, input properties, output properties, and supporting types. This data source provides a list of KMS Secrets in an Alibaba Cloud account according to the specified filters."
+title: "getSecrets"
+title_tag: "alicloud.kms.getSecrets"
+meta_desc: "Documentation for the alicloud.kms.getSecrets function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -121,7 +121,7 @@ export const firstSecretId = kmsSecretsDs.secrets[0].id;
 {{% /examples %}}
 
 
-## Using GetSecrets {#using}
+## Using getSecrets {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -138,6 +138,8 @@ export const firstSecretId = kmsSecretsDs.secrets[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecrets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSecretsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSecretsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetSecrets` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -376,7 +378,7 @@ The following arguments are supported:
 
 
 
-## GetSecrets Result {#result}
+## getSecrets Result {#result}
 
 The following output properties are available:
 

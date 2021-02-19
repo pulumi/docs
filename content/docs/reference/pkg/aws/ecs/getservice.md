@@ -1,8 +1,8 @@
 
 ---
-title: "GetService"
-title_tag: "Function GetService | Module ecs | Package AWS"
-meta_desc: "Explore the GetService function of the ecs module, including examples, input properties, output properties, and supporting types. The ECS Service data source allows access to details of a specific"
+title: "getService"
+title_tag: "aws.ecs.getService"
+meta_desc: "Documentation for the aws.ecs.getService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -93,7 +93,7 @@ const example = aws.ecs.getService({
 {{% /examples %}}
 
 
-## Using GetService {#using}
+## Using getService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -234,7 +234,7 @@ The following arguments are supported:
 
 
 
-## GetService Result {#result}
+## getService Result {#result}
 
 The following output properties are available:
 

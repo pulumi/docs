@@ -1,8 +1,8 @@
 
 ---
-title: "GetDomains"
-title_tag: "Function GetDomains | Module dcdn | Package AliCloud"
-meta_desc: "Explore the GetDomains function of the dcdn module, including examples, input properties, output properties, and supporting types. Provides a collection of DCDN Domains to the specified filters."
+title: "getDomains"
+title_tag: "alicloud.dcdn.getDomains"
+meta_desc: "Documentation for the alicloud.dcdn.getDomains function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,7 +17,7 @@ Provides a collection of DCDN Domains to the specified filters.
 
 
 
-## Using GetDomains {#using}
+## Using getDomains {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -34,6 +34,8 @@ Provides a collection of DCDN Domains to the specified filters.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomains<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDomainsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDomainsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDomains` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -508,7 +510,7 @@ The following arguments are supported:
 
 
 
-## GetDomains Result {#result}
+## getDomains Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "ScreenBoard"
-title_tag: "Resource ScreenBoard | Package Datadog"
-meta_desc: "Explore the ScreenBoard resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog screenboard resource. This can be used to create and manage Datadog screenboards."
+title_tag: "datadog.ScreenBoard"
+meta_desc: "Documentation for the datadog.ScreenBoard resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

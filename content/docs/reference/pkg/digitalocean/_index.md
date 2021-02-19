@@ -1,6 +1,6 @@
 ---
 title: "DigitalOcean"
-title_tag: "Module DigitalOcean | Package DigitalOcean"
+title_tag: "digitalocean.DigitalOcean"
 meta_desc: "A Pulumi package for creating and managing Digital Ocean cloud resources."
 menu:
     reference:

@@ -1,8 +1,8 @@
 
 ---
-title: "GetRole"
-title_tag: "Function GetRole | Package vSphere"
-meta_desc: "Explore the GetRole function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.Role` data source can be used to discover the id and privileges associated"
+title: "getRole"
+title_tag: "vsphere.getRole"
+meta_desc: "Documentation for the vsphere.getRole function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const role1 = pulumi.output(vsphere.getRole({
 {{% /examples %}}
 
 
-## Using GetRole {#using}
+## Using getRole {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -306,7 +306,7 @@ The following arguments are supported:
 
 
 
-## GetRole Result {#result}
+## getRole Result {#result}
 
 The following output properties are available:
 

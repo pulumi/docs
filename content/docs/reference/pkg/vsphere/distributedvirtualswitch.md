@@ -1,8 +1,8 @@
 
 ---
 title: "DistributedVirtualSwitch"
-title_tag: "Resource DistributedVirtualSwitch | Package vSphere"
-meta_desc: "Explore the DistributedVirtualSwitch resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.DistributedVirtualSwitch"
+meta_desc: "Documentation for the vsphere.DistributedVirtualSwitch resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

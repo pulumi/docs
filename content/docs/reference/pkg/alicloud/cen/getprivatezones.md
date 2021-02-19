@@ -1,8 +1,8 @@
 
 ---
-title: "GetPrivateZones"
-title_tag: "Function GetPrivateZones | Module cen | Package AliCloud"
-meta_desc: "Explore the GetPrivateZones function of the cen module, including examples, input properties, output properties, and supporting types. This data source provides CEN Private Zones available to the user."
+title: "getPrivateZones"
+title_tag: "alicloud.cen.getPrivateZones"
+meta_desc: "Documentation for the alicloud.cen.getPrivateZones function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -52,7 +52,7 @@ export const firstCenPrivateZonesId = thisPrivateZones.zones[0].id;
 {{% /examples %}}
 
 
-## Using GetPrivateZones {#using}
+## Using getPrivateZones {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -69,6 +69,8 @@ export const firstCenPrivateZonesId = thisPrivateZones.zones[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPrivateZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPrivateZonesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPrivateZonesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetPrivateZones` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -311,7 +313,7 @@ The following arguments are supported:
 
 
 
-## GetPrivateZones Result {#result}
+## getPrivateZones Result {#result}
 
 The following output properties are available:
 

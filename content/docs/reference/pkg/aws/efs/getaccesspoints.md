@@ -1,8 +1,8 @@
 
 ---
-title: "GetAccessPoints"
-title_tag: "Function GetAccessPoints | Module efs | Package AWS"
-meta_desc: "Explore the GetAccessPoints function of the efs module, including examples, input properties, output properties, and supporting types. Provides information about multiple Elastic File System (EFS) Access Points."
+title: "getAccessPoints"
+title_tag: "aws.efs.getAccessPoints"
+meta_desc: "Documentation for the aws.efs.getAccessPoints function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const test = pulumi.output(aws.efs.getAccessPoints({
 {{% /examples %}}
 
 
-## Using GetAccessPoints {#using}
+## Using getAccessPoints {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -105,6 +105,8 @@ const test = pulumi.output(aws.efs.getAccessPoints({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessPoints<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAccessPointsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAccessPointsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAccessPoints` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -187,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetAccessPoints Result {#result}
+## getAccessPoints Result {#result}
 
 The following output properties are available:
 

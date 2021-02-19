@@ -1,6 +1,6 @@
 ---
 title: "meta"
-title_tag: "Package meta"
+title_tag: "meta Package"
 meta_desc: ""
 ---
 

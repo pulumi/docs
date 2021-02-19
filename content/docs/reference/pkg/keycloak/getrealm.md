@@ -1,8 +1,8 @@
 
 ---
-title: "GetRealm"
-title_tag: "Function GetRealm | Package Keycloak"
-meta_desc: "Explore the GetRealm function of the Keycloak package, including examples, input properties, output properties, and supporting types. This data source can be used to fetch properties of a Keycloak realm for"
+title: "getRealm"
+title_tag: "keycloak.getRealm"
+meta_desc: "Documentation for the keycloak.getRealm function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -101,7 +101,7 @@ const group = new keycloak.Role("group", {realmId: realm.then(realm => realm.id)
 {{% /examples %}}
 
 
-## Using GetRealm {#using}
+## Using getRealm {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -526,7 +526,7 @@ The following arguments are supported:
 
 
 
-## GetRealm Result {#result}
+## getRealm Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetPrivateEndpoint"
-title_tag: "Function GetPrivateEndpoint | Package MongoDB Atlas"
-meta_desc: "Explore the GetPrivateEndpoint function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.PrivateEndpoint` describe a Private Endpoint. This represents a Private Endpoint Connection to retrieve details regarding a private endpoint by id in an Atlas project"
+title: "getPrivateEndpoint"
+title_tag: "mongodbatlas.getPrivateEndpoint"
+meta_desc: "Documentation for the mongodbatlas.getPrivateEndpoint function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -57,7 +57,7 @@ const testPrivateEndpoint = pulumi.all([testMongodbatlasPrivateEndpoint.privateL
 {{% /examples %}}
 
 
-## Using GetPrivateEndpoint {#using}
+## Using getPrivateEndpoint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -198,7 +198,7 @@ The following arguments are supported:
 
 
 
-## GetPrivateEndpoint Result {#result}
+## getPrivateEndpoint Result {#result}
 
 The following output properties are available:
 

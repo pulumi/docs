@@ -1,8 +1,8 @@
 
 ---
 title: "CustomDbRole"
-title_tag: "Resource CustomDbRole | Package MongoDB Atlas"
-meta_desc: "Explore the CustomDbRole resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.CustomDbRole` provides a Custom DB Role resource. The customDBRoles resource lets you retrieve, create and modify the custom MongoDB roles in your cluster. Use custom MongoDB roles to specify custom sets of actions which cannot be described by the built-in Atlas database user privileges."
+title_tag: "mongodbatlas.CustomDbRole"
+meta_desc: "Documentation for the mongodbatlas.CustomDbRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "File"
-title_tag: "Resource File | Package vSphere"
-meta_desc: "Explore the File resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. The `vsphere.File` resource can be used to upload files (such as virtual disk"
+title_tag: "vsphere.File"
+meta_desc: "Documentation for the vsphere.File resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

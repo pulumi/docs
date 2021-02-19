@@ -1,8 +1,8 @@
 
 ---
-title: "GetDirectConnectGatewayAttachment"
-title_tag: "Function GetDirectConnectGatewayAttachment | Module ec2transitgateway | Package AWS"
-meta_desc: "Explore the GetDirectConnectGatewayAttachment function of the ec2transitgateway module, including examples, input properties, output properties, and supporting types. Get information on an EC2 Transit Gateway&#39;s attachment to a Direct Connect Gateway."
+title: "getDirectConnectGatewayAttachment"
+title_tag: "aws.ec2transitgateway.getDirectConnectGatewayAttachment"
+meta_desc: "Documentation for the aws.ec2transitgateway.getDirectConnectGatewayAttachment function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const example = aws.ec2transitgateway.getDirectConnectGatewayAttachment({
 {{% /examples %}}
 
 
-## Using GetDirectConnectGatewayAttachment {#using}
+## Using getDirectConnectGatewayAttachment {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -111,6 +111,8 @@ const example = aws.ec2transitgateway.getDirectConnectGatewayAttachment({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectConnectGatewayAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDirectConnectGatewayAttachmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDirectConnectGatewayAttachmentResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDirectConnectGatewayAttachment` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -313,7 +315,7 @@ The following arguments are supported:
 
 
 
-## GetDirectConnectGatewayAttachment Result {#result}
+## getDirectConnectGatewayAttachment Result {#result}
 
 The following output properties are available:
 

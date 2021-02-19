@@ -1,8 +1,8 @@
 
 ---
-title: "GetKeys"
-title_tag: "Function GetKeys | Module kms | Package AliCloud"
-meta_desc: "Explore the GetKeys function of the kms module, including examples, input properties, output properties, and supporting types. This data source provides a list of KMS keys in an Alibaba Cloud account according to the specified filters."
+title: "getKeys"
+title_tag: "alicloud.kms.getKeys"
+meta_desc: "Documentation for the alicloud.kms.getKeys function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -102,7 +102,7 @@ export const firstKeyId = kmsKeysDs.keys[0].id;
 {{% /examples %}}
 
 
-## Using GetKeys {#using}
+## Using getKeys {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -119,6 +119,8 @@ export const firstKeyId = kmsKeysDs.keys[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKeys<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetKeysArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetKeysResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetKeys` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -317,7 +319,7 @@ The following arguments are supported:
 
 
 
-## GetKeys Result {#result}
+## getKeys Result {#result}
 
 The following output properties are available:
 

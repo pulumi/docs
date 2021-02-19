@@ -1,8 +1,8 @@
 
 ---
-title: "GetElasticSearch"
-title_tag: "Function GetElasticSearch | Package Aiven"
-meta_desc: "Explore the GetElasticSearch function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Elasticsearch Data Source"
+title: "getElasticSearch"
+title_tag: "aiven.getElasticSearch"
+meta_desc: "Documentation for the aiven.getElasticSearch function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const es1 = aiven.getElasticSearch({
 {{% /examples %}}
 
 
-## Using GetElasticSearch {#using}
+## Using getElasticSearch {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1019,7 +1019,7 @@ deletion is done.
 
 
 
-## GetElasticSearch Result {#result}
+## getElasticSearch Result {#result}
 
 The following output properties are available:
 

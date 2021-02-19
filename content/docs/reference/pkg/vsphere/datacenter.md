@@ -1,8 +1,8 @@
 
 ---
 title: "Datacenter"
-title_tag: "Resource Datacenter | Package vSphere"
-meta_desc: "Explore the Datacenter resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VMware vSphere datacenter resource. This can be used as the primary"
+title_tag: "vsphere.Datacenter"
+meta_desc: "Documentation for the vsphere.Datacenter resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

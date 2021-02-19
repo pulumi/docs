@@ -1,8 +1,8 @@
 
 ---
-title: "GetApp"
-title_tag: "Function GetApp | Package DigitalOcean"
-meta_desc: "Explore the GetApp function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a DigitalOcean App."
+title: "getApp"
+title_tag: "digitalocean.getApp"
+meta_desc: "Documentation for the digitalocean.getApp function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ export const defaultIngress = example.then(example => example.defaultIngress);
 {{% /examples %}}
 
 
-## Using GetApp {#using}
+## Using getApp {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -195,7 +195,7 @@ The following arguments are supported:
 
 
 
-## GetApp Result {#result}
+## getApp Result {#result}
 
 The following output properties are available:
 

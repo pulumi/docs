@@ -1,8 +1,8 @@
 
 ---
 title: "AclTokenPolicyAttachment"
-title_tag: "Resource AclTokenPolicyAttachment | Package Consul"
-meta_desc: "Explore the AclTokenPolicyAttachment resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "consul.AclTokenPolicyAttachment"
+meta_desc: "Documentation for the consul.AclTokenPolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

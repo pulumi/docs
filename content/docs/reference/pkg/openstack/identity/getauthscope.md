@@ -1,8 +1,8 @@
 
 ---
-title: "GetAuthScope"
-title_tag: "Function GetAuthScope | Module identity | Package Open Stack"
-meta_desc: "Explore the GetAuthScope function of the identity module, including examples, input properties, output properties, and supporting types. Use this data source to get authentication information about the current"
+title: "getAuthScope"
+title_tag: "openstack.identity.getAuthScope"
+meta_desc: "Documentation for the openstack.identity.getAuthScope function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,7 +90,7 @@ const scope = pulumi.output(openstack.identity.getAuthScope({
 {{% /examples %}}
 
 
-## Using GetAuthScope {#using}
+## Using getAuthScope {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -107,6 +107,8 @@ const scope = pulumi.output(openstack.identity.getAuthScope({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthScope<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAuthScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAuthScopeResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAuthScope` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -241,7 +243,7 @@ A Identity client is needed to retrieve tokens IDs. If omitted, the
 
 
 
-## GetAuthScope Result {#result}
+## getAuthScope Result {#result}
 
 The following output properties are available:
 

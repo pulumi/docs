@@ -1,8 +1,8 @@
 
 ---
 title: "ZoneDnssec"
-title_tag: "Resource ZoneDnssec | Package Cloudflare"
-meta_desc: "Explore the ZoneDnssec resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare Zone DNSSEC resource."
+title_tag: "cloudflare.ZoneDnssec"
+meta_desc: "Documentation for the cloudflare.ZoneDnssec resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetRoleTempalte"
-title_tag: "Function GetRoleTempalte | Package Rancher 2"
-meta_desc: "Explore the GetRoleTempalte function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. "
+title: "getRoleTempalte"
+title_tag: "rancher2.getRoleTempalte"
+meta_desc: "Documentation for the rancher2.getRoleTempalte function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -14,7 +14,7 @@ meta_desc: "Explore the GetRoleTempalte function of the Rancher 2 package, inclu
 
 
 
-## Using GetRoleTempalte {#using}
+## Using getRoleTempalte {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -147,7 +147,7 @@ The following arguments are supported:
 
 
 
-## GetRoleTempalte Result {#result}
+## getRoleTempalte Result {#result}
 
 The following output properties are available:
 

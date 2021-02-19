@@ -1,8 +1,8 @@
 
 ---
 title: "VirtualMachineSnapshot"
-title_tag: "Resource VirtualMachineSnapshot | Package vSphere"
-meta_desc: "Explore the VirtualMachineSnapshot resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. The `vsphere.VirtualMachineSnapshot` resource can be used to manage snapshots"
+title_tag: "vsphere.VirtualMachineSnapshot"
+meta_desc: "Documentation for the vsphere.VirtualMachineSnapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetCloudProviderSnapshotRestoreJobs"
-title_tag: "Function GetCloudProviderSnapshotRestoreJobs | Package MongoDB Atlas"
-meta_desc: "Explore the GetCloudProviderSnapshotRestoreJobs function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.getCloudProviderSnapshotRestoreJobs` provides a Cloud Backup Snapshot Restore Jobs datasource. Gets all the cloud backup snapshot restore jobs for the specified cluster."
+title: "getCloudProviderSnapshotRestoreJobs"
+title_tag: "mongodbatlas.getCloudProviderSnapshotRestoreJobs"
+meta_desc: "Documentation for the mongodbatlas.getCloudProviderSnapshotRestoreJobs function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -169,7 +169,7 @@ const testCloudProviderSnapshotRestoreJobs = pulumi.all([testCloudProviderSnapsh
 {{% /examples %}}
 
 
-## Using GetCloudProviderSnapshotRestoreJobs {#using}
+## Using getCloudProviderSnapshotRestoreJobs {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -186,6 +186,8 @@ const testCloudProviderSnapshotRestoreJobs = pulumi.all([testCloudProviderSnapsh
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCloudProviderSnapshotRestoreJobs<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCloudProviderSnapshotRestoreJobsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCloudProviderSnapshotRestoreJobsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetCloudProviderSnapshotRestoreJobs` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -388,7 +390,7 @@ The following arguments are supported:
 
 
 
-## GetCloudProviderSnapshotRestoreJobs Result {#result}
+## getCloudProviderSnapshotRestoreJobs Result {#result}
 
 The following output properties are available:
 

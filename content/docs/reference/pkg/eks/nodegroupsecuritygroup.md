@@ -1,8 +1,8 @@
 
 ---
 title: "NodeGroupSecurityGroup"
-title_tag: "Resource NodeGroupSecurityGroup | Package eks"
-meta_desc: "Explore the NodeGroupSecurityGroup resource of the eks package, including examples, input properties, output properties, lookup functions, and supporting types. NodeGroupSecurityGroup is a component that wraps creating a security group for node groups with the default ingress &amp; egress rules required to connect and work with the EKS cluster security group."
+title_tag: "eks.NodeGroupSecurityGroup"
+meta_desc: "Documentation for the eks.NodeGroupSecurityGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -20,19 +20,19 @@ NodeGroupSecurityGroup is a component that wraps creating a security group for n
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeGroupSecurityGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">NodeGroupSecurityGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeGroupSecurityGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeGroupSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodeGroupSecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_security_group</span><span class="p">:</span> <span class="nx">Optional[_ec2_securitygroup.SecurityGroup]</span> = None<span class="p">, </span><span class="nx">eks_cluster</span><span class="p">:</span> <span class="nx">Optional[_eks_cluster.Cluster]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodeGroupSecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_security_group</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.ec2.SecurityGroup]</span> = None<span class="p">, </span><span class="nx">eks_cluster</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.eks.Cluster]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeGroupSecurityGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">NodeGroupSecurityGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeGroupSecurityGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeGroupSecurityGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeGroupSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeGroupSecurityGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeGroupSecurityGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">NodeGroupSecurityGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeGroupSecurityGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NodeGroupSecurityGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -53,7 +53,7 @@ NodeGroupSecurityGroup is a component that wraps creating a security group for n
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NodeGroupSecurityGroupArgs</span>
+        <span class="property-type"><a href="#inputs">NodeGroupSecurityGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -122,7 +122,7 @@ NodeGroupSecurityGroup is a component that wraps creating a security group for n
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NodeGroupSecurityGroupArgs</span>
+        <span class="property-type"><a href="#inputs">NodeGroupSecurityGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -161,7 +161,7 @@ NodeGroupSecurityGroup is a component that wraps creating a security group for n
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NodeGroupSecurityGroupArgs</span>
+        <span class="property-type"><a href="#inputs">NodeGroupSecurityGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -184,11 +184,11 @@ NodeGroupSecurityGroup is a component that wraps creating a security group for n
 
 ## NodeGroupSecurityGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -285,7 +285,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
 <a href="#clustersecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Security<wbr>Group</span>
+        <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The security group associated with the EKS cluster.{{% /md %}}</dd>
     <dt class="property-required"
@@ -294,7 +294,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
 <a href="#ekscluster_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ekscluster<wbr>Cluster</span>
+        <span class="property-type">awseks<wbr>Cluster</span>
     </dt>
     <dd>{{% md %}}The EKS cluster associated with the worker node group{{% /md %}}</dd>
     <dt class="property-required"
@@ -451,7 +451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitygroup_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Security<wbr>Group</span>
+        <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.{{% /md %}}</dd>
     <dt class="property-"
@@ -460,7 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitygrouprule_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Rule<wbr>Security<wbr>Group<wbr>Rule</span>
+        <span class="property-type">awsec2Security<wbr>Group<wbr>Rule</span>
     </dt>
     <dd>{{% md %}}The EKS cluster ingress rule.{{% /md %}}</dd>
 </dl>

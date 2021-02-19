@@ -1,8 +1,8 @@
 
 ---
-title: "GetCatalogV2"
-title_tag: "Function GetCatalogV2 | Package Rancher 2"
-meta_desc: "Explore the GetCatalogV2 function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher2 catalog v2."
+title: "getCatalogV2"
+title_tag: "rancher2.getCatalogV2"
+meta_desc: "Documentation for the rancher2.getCatalogV2 function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -15,7 +15,7 @@ Use this data source to retrieve information about a Rancher2 catalog v2.
 
 
 
-## Using GetCatalogV2 {#using}
+## Using getCatalogV2 {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -156,7 +156,7 @@ The following arguments are supported:
 
 
 
-## GetCatalogV2 Result {#result}
+## getCatalogV2 Result {#result}
 
 The following output properties are available:
 

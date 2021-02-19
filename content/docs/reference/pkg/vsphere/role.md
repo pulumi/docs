@@ -1,8 +1,8 @@
 
 ---
 title: "Role"
-title_tag: "Resource Role | Package vSphere"
-meta_desc: "Explore the Role resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.Role"
+meta_desc: "Documentation for the vsphere.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

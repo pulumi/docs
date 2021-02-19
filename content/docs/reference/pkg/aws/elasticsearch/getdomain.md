@@ -1,8 +1,8 @@
 
 ---
-title: "GetDomain"
-title_tag: "Function GetDomain | Module elasticsearch | Package AWS"
-meta_desc: "Explore the GetDomain function of the elasticsearch module, including examples, input properties, output properties, and supporting types. Use this data source to get information about an Elasticsearch Domain"
+title: "getDomain"
+title_tag: "aws.elasticsearch.getDomain"
+meta_desc: "Documentation for the aws.elasticsearch.getDomain function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const myDomain = pulumi.output(aws.elasticsearch.getDomain({
 {{% /examples %}}
 
 
-## Using GetDomain {#using}
+## Using getDomain {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## GetDomain Result {#result}
+## getDomain Result {#result}
 
 The following output properties are available:
 

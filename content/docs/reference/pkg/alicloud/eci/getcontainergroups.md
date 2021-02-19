@@ -1,8 +1,8 @@
 
 ---
-title: "GetContainerGroups"
-title_tag: "Function GetContainerGroups | Module eci | Package AliCloud"
-meta_desc: "Explore the GetContainerGroups function of the eci module, including examples, input properties, output properties, and supporting types. This data source provides the Eci Container Groups of the current Alibaba Cloud user."
+title: "getContainerGroups"
+title_tag: "alicloud.eci.getContainerGroups"
+meta_desc: "Documentation for the alicloud.eci.getContainerGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -101,7 +101,7 @@ export const firstEciContainerGroupId = example.then(example => example.groups[0
 {{% /examples %}}
 
 
-## Using GetContainerGroups {#using}
+## Using getContainerGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -118,6 +118,8 @@ export const firstEciContainerGroupId = example.then(example => example.groups[0
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetContainerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetContainerGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetContainerGroups` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -632,7 +634,7 @@ The following arguments are supported:
 
 
 
-## GetContainerGroups Result {#result}
+## getContainerGroups Result {#result}
 
 The following output properties are available:
 

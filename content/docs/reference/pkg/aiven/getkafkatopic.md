@@ -1,8 +1,8 @@
 
 ---
-title: "GetKafkaTopic"
-title_tag: "Function GetKafkaTopic | Package Aiven"
-meta_desc: "Explore the GetKafkaTopic function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Kafka Topic Data Source"
+title: "getKafkaTopic"
+title_tag: "aiven.getKafkaTopic"
+meta_desc: "Documentation for the aiven.getKafkaTopic function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -129,7 +129,7 @@ const mytesttopic = pulumi.all([aiven_project_myproject.project, aiven_service_m
 {{% /examples %}}
 
 
-## Using GetKafkaTopic {#using}
+## Using getKafkaTopic {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -642,7 +642,7 @@ created instead.
 
 
 
-## GetKafkaTopic Result {#result}
+## getKafkaTopic Result {#result}
 
 The following output properties are available:
 

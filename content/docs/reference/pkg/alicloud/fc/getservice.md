@@ -1,8 +1,8 @@
 
 ---
-title: "GetService"
-title_tag: "Function GetService | Module fc | Package AliCloud"
-meta_desc: "Explore the GetService function of the fc module, including examples, input properties, output properties, and supporting types. Using this data source can open FC service automatically. If the service has been opened, it will return opened."
+title: "getService"
+title_tag: "alicloud.fc.getService"
+meta_desc: "Documentation for the alicloud.fc.getService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -93,7 +93,7 @@ const open = pulumi.output(alicloud.fc.getService({
 {{% /examples %}}
 
 
-## Using GetService {#using}
+## Using getService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -194,7 +194,7 @@ The following arguments are supported:
 
 
 
-## GetService Result {#result}
+## getService Result {#result}
 
 The following output properties are available:
 

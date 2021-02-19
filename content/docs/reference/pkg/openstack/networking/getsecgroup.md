@@ -1,8 +1,8 @@
 
 ---
-title: "GetSecGroup"
-title_tag: "Function GetSecGroup | Module networking | Package Open Stack"
-meta_desc: "Explore the GetSecGroup function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack security group."
+title: "getSecGroup"
+title_tag: "openstack.networking.getSecGroup"
+meta_desc: "Documentation for the openstack.networking.getSecGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const secgroup = pulumi.output(openstack.networking.getSecGroup({
 {{% /examples %}}
 
 
-## Using GetSecGroup {#using}
+## Using getSecGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -398,7 +398,7 @@ A Neutron client is needed to retrieve security groups ids. If omitted, the
 
 
 
-## GetSecGroup Result {#result}
+## getSecGroup Result {#result}
 
 The following output properties are available:
 

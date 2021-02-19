@@ -1,8 +1,8 @@
 
 ---
-title: "GetTransitGatewayVpcAttachment"
-title_tag: "Function GetTransitGatewayVpcAttachment | Package Aiven"
-meta_desc: "Explore the GetTransitGatewayVpcAttachment function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Transit Gateway VPC Attachment Data Source"
+title: "getTransitGatewayVpcAttachment"
+title_tag: "aiven.getTransitGatewayVpcAttachment"
+meta_desc: "Documentation for the aiven.getTransitGatewayVpcAttachment function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -99,7 +99,7 @@ const attachment = aiven.getTransitGatewayVpcAttachment({
 {{% /examples %}}
 
 
-## Using GetTransitGatewayVpcAttachment {#using}
+## Using getTransitGatewayVpcAttachment {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -468,7 +468,7 @@ The following arguments are supported:
 
 
 
-## GetTransitGatewayVpcAttachment Result {#result}
+## getTransitGatewayVpcAttachment Result {#result}
 
 The following output properties are available:
 

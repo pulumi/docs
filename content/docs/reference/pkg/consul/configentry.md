@@ -1,8 +1,8 @@
 
 ---
 title: "ConfigEntry"
-title_tag: "Resource ConfigEntry | Package Consul"
-meta_desc: "Explore the ConfigEntry resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. The [Configuration Entry](https://www.consul.io/docs/agent/config_entries.html)"
+title_tag: "consul.ConfigEntry"
+meta_desc: "Documentation for the consul.ConfigEntry resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

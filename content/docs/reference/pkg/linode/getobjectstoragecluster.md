@@ -1,8 +1,8 @@
 
 ---
-title: "GetObjectStorageCluster"
-title_tag: "Function GetObjectStorageCluster | Package Linode"
-meta_desc: "Explore the GetObjectStorageCluster function of the Linode package, including examples, input properties, output properties, and supporting types. Provides information about a Linode Object Storage Cluster"
+title: "getObjectStorageCluster"
+title_tag: "linode.getObjectStorageCluster"
+meta_desc: "Documentation for the linode.getObjectStorageCluster function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -99,7 +99,7 @@ const primary = pulumi.output(linode.getObjectStorageCluster({
 {{% /examples %}}
 
 
-## Using GetObjectStorageCluster {#using}
+## Using getObjectStorageCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -116,6 +116,8 @@ const primary = pulumi.output(linode.getObjectStorageCluster({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetObjectStorageCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetObjectStorageClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetObjectStorageClusterResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetObjectStorageCluster` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -342,7 +344,7 @@ The following arguments are supported:
 
 
 
-## GetObjectStorageCluster Result {#result}
+## getObjectStorageCluster Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "VmfsDatastore"
-title_tag: "Resource VmfsDatastore | Package vSphere"
-meta_desc: "Explore the VmfsDatastore resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.VmfsDatastore"
+meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

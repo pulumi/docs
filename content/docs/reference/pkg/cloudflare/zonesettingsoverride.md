@@ -1,8 +1,8 @@
 
 ---
 title: "ZoneSettingsOverride"
-title_tag: "Resource ZoneSettingsOverride | Package Cloudflare"
-meta_desc: "Explore the ZoneSettingsOverride resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource which customizes Cloudflare zone settings. Note that after destroying this resource Zone Settings will be reset to their initial values."
+title_tag: "cloudflare.ZoneSettingsOverride"
+meta_desc: "Documentation for the cloudflare.ZoneSettingsOverride resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

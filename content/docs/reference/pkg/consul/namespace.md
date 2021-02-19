@@ -1,8 +1,8 @@
 
 ---
 title: "Namespace"
-title_tag: "Resource Namespace | Package Consul"
-meta_desc: "Explore the Namespace resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **NOTE:** This feature requires Consul Enterprise."
+title_tag: "consul.Namespace"
+meta_desc: "Documentation for the consul.Namespace resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

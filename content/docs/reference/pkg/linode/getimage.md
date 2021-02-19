@@ -1,8 +1,8 @@
 
 ---
-title: "GetImage"
-title_tag: "Function GetImage | Package Linode"
-meta_desc: "Explore the GetImage function of the Linode package, including examples, input properties, output properties, and supporting types. Provides information about a Linode image"
+title: "getImage"
+title_tag: "linode.getImage"
+meta_desc: "Documentation for the linode.getImage function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -109,7 +109,7 @@ const k8Master = pulumi.output(linode.getImage({
 {{% /examples %}}
 
 
-## Using GetImage {#using}
+## Using getImage {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -210,7 +210,7 @@ The following arguments are supported:
 
 
 
-## GetImage Result {#result}
+## getImage Result {#result}
 
 The following output properties are available:
 

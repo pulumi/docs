@@ -1,8 +1,8 @@
 
 ---
-title: "GetAlarm"
-title_tag: "Function GetAlarm | Package CloudAMQP"
-meta_desc: "Explore the GetAlarm function of the CloudAMQP package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about default or created alarms. Either use `alarm_id` or `type` to retrieve the alarm."
+title: "getAlarm"
+title_tag: "cloudamqp.getAlarm"
+meta_desc: "Documentation for the cloudamqp.getAlarm function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -112,7 +112,7 @@ const defaultCpuAlarm = cloudamqp.getAlarm({
 {{% /examples %}}
 
 
-## Using GetAlarm {#using}
+## Using getAlarm {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -281,7 +281,7 @@ The following arguments are supported:
 
 
 
-## GetAlarm Result {#result}
+## getAlarm Result {#result}
 
 The following output properties are available:
 

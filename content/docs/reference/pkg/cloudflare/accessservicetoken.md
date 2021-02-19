@@ -1,8 +1,8 @@
 
 ---
 title: "AccessServiceToken"
-title_tag: "Resource AccessServiceToken | Package Cloudflare"
-meta_desc: "Explore the AccessServiceToken resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Access Service Tokens are used for service-to-service communication"
+title_tag: "cloudflare.AccessServiceToken"
+meta_desc: "Documentation for the cloudflare.AccessServiceToken resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

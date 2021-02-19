@@ -1,8 +1,8 @@
 
 ---
-title: "GetAcls"
-title_tag: "Function GetAcls | Module slb | Package AliCloud"
-meta_desc: "Explore the GetAcls function of the slb module, including examples, input properties, output properties, and supporting types. This data source provides the acls in the region."
+title: "getAcls"
+title_tag: "alicloud.slb.getAcls"
+meta_desc: "Documentation for the alicloud.slb.getAcls function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -103,7 +103,7 @@ export const firstSlbAclId = sampleDs.acls[0].id;
 {{% /examples %}}
 
 
-## Using GetAcls {#using}
+## Using getAcls {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -120,6 +120,8 @@ export const firstSlbAclId = sampleDs.acls[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAcls<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAclsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAclsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAcls` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -358,7 +360,7 @@ The following arguments are supported:
 
 
 
-## GetAcls Result {#result}
+## getAcls Result {#result}
 
 The following output properties are available:
 

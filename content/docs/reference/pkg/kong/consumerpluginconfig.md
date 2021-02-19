@@ -1,8 +1,8 @@
 
 ---
 title: "ConsumerPluginConfig"
-title_tag: "Resource ConsumerPluginConfig | Package Kong"
-meta_desc: "Explore the ConsumerPluginConfig resource of the Kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "kong.ConsumerPluginConfig"
+meta_desc: "Documentation for the kong.ConsumerPluginConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

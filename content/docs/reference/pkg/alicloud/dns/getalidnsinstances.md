@@ -1,8 +1,8 @@
 
 ---
-title: "GetAlidnsInstances"
-title_tag: "Function GetAlidnsInstances | Module dns | Package AliCloud"
-meta_desc: "Explore the GetAlidnsInstances function of the dns module, including examples, input properties, output properties, and supporting types. This data source provides a list of Alidns instances in an Alibaba Cloud account according to the specified filters."
+title: "getAlidnsInstances"
+title_tag: "alicloud.dns.getAlidnsInstances"
+meta_desc: "Documentation for the alicloud.dns.getAlidnsInstances function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -102,7 +102,7 @@ export const firstInstanceId = example.instances[0].id;
 {{% /examples %}}
 
 
-## Using GetAlidnsInstances {#using}
+## Using getAlidnsInstances {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -119,6 +119,8 @@ export const firstInstanceId = example.instances[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlidnsInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAlidnsInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAlidnsInstancesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAlidnsInstances` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -317,7 +319,7 @@ The following arguments are supported:
 
 
 
-## GetAlidnsInstances Result {#result}
+## getAlidnsInstances Result {#result}
 
 The following output properties are available:
 

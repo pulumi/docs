@@ -1,8 +1,8 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Package Aiven"
-meta_desc: "Explore the Account resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Account Resource"
+title_tag: "aiven.Account"
+meta_desc: "Documentation for the aiven.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

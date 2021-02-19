@@ -1,8 +1,8 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Package MongoDB Atlas"
-meta_desc: "Explore the Project resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "mongodbatlas.Project"
+meta_desc: "Documentation for the mongodbatlas.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

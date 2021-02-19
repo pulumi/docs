@@ -1,8 +1,8 @@
 
 ---
 title: "AuthenticatedOriginPulls"
-title_tag: "Resource AuthenticatedOriginPulls | Package Cloudflare"
-meta_desc: "Explore the AuthenticatedOriginPulls resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare Authenticated Origin Pulls resource. An `cloudflare.AuthenticatedOriginPulls` resource is required to use Per-Zone or Per-Hostname Authenticated Origin Pulls."
+title_tag: "cloudflare.AuthenticatedOriginPulls"
+meta_desc: "Documentation for the cloudflare.AuthenticatedOriginPulls resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

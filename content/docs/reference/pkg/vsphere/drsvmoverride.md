@@ -1,8 +1,8 @@
 
 ---
 title: "DrsVmOverride"
-title_tag: "Resource DrsVmOverride | Package vSphere"
-meta_desc: "Explore the DrsVmOverride resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.DrsVmOverride"
+meta_desc: "Documentation for the vsphere.DrsVmOverride resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

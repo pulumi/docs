@@ -1,8 +1,8 @@
 
 ---
-title: "GetProjectIpAccessList"
-title_tag: "Function GetProjectIpAccessList | Package MongoDB Atlas"
-meta_desc: "Explore the GetProjectIpAccessList function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.ProjectIpAccessList` describes an IP Access List entry resource. The access list grants access from IPs, CIDRs or AWS Security Groups (if VPC Peering is enabled) to clusters within the Project."
+title: "getProjectIpAccessList"
+title_tag: "mongodbatlas.getProjectIpAccessList"
+meta_desc: "Documentation for the mongodbatlas.getProjectIpAccessList function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -20,7 +20,7 @@ When you remove an entry from the access list, existing connections from the rem
 
 
 
-## Using GetProjectIpAccessList {#using}
+## Using getProjectIpAccessList {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -241,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetProjectIpAccessList Result {#result}
+## getProjectIpAccessList Result {#result}
 
 The following output properties are available:
 

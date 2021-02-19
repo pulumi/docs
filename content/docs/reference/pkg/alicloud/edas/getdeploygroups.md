@@ -1,8 +1,8 @@
 
 ---
-title: "GetDeployGroups"
-title_tag: "Function GetDeployGroups | Module edas | Package AliCloud"
-meta_desc: "Explore the GetDeployGroups function of the edas module, including examples, input properties, output properties, and supporting types. This data source provides a list of EDAS deploy groups in an Alibaba Cloud account according to the specified filters."
+title: "getDeployGroups"
+title_tag: "alicloud.edas.getDeployGroups"
+meta_desc: "Documentation for the alicloud.edas.getDeployGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -110,7 +110,7 @@ export const firstGroupName = groups.then(groups => groups.groups[0].groupName);
 {{% /examples %}}
 
 
-## Using GetDeployGroups {#using}
+## Using getDeployGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -127,6 +127,8 @@ export const firstGroupName = groups.then(groups => groups.groups[0].groupName);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeployGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDeployGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDeployGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDeployGroups` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -285,7 +287,7 @@ The following arguments are supported:
 
 
 
-## GetDeployGroups Result {#result}
+## getDeployGroups Result {#result}
 
 The following output properties are available:
 

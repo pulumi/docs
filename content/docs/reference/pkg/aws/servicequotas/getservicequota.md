@@ -1,8 +1,8 @@
 
 ---
-title: "GetServiceQuota"
-title_tag: "Function GetServiceQuota | Module servicequotas | Package AWS"
-meta_desc: "Explore the GetServiceQuota function of the servicequotas module, including examples, input properties, output properties, and supporting types. Retrieve information about a Service Quota."
+title: "getServiceQuota"
+title_tag: "aws.servicequotas.getServiceQuota"
+meta_desc: "Documentation for the aws.servicequotas.getServiceQuota function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -112,7 +112,7 @@ const byQuotaName = pulumi.output(aws.servicequotas.getServiceQuota({
 {{% /examples %}}
 
 
-## Using GetServiceQuota {#using}
+## Using getServiceQuota {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -293,7 +293,7 @@ The following arguments are supported:
 
 
 
-## GetServiceQuota Result {#result}
+## getServiceQuota Result {#result}
 
 The following output properties are available:
 

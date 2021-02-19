@@ -1,8 +1,8 @@
 
 ---
 title: "Firewall"
-title_tag: "Resource Firewall | Package Linode"
-meta_desc: "Explore the Firewall resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **NOTICE:** The Firewall feature is currently available through early access. "
+title_tag: "linode.Firewall"
+meta_desc: "Documentation for the linode.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

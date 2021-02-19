@@ -1,8 +1,8 @@
 
 ---
 title: "KafkaMirrorMaker"
-title_tag: "Resource KafkaMirrorMaker | Package Aiven"
-meta_desc: "Explore the KafkaMirrorMaker resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Kafka MirrorMaker Resource"
+title_tag: "aiven.KafkaMirrorMaker"
+meta_desc: "Documentation for the aiven.KafkaMirrorMaker resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

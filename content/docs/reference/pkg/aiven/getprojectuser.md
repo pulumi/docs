@@ -1,8 +1,8 @@
 
 ---
-title: "GetProjectUser"
-title_tag: "Function GetProjectUser | Package Aiven"
-meta_desc: "Explore the GetProjectUser function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Project User Data Source"
+title: "getProjectUser"
+title_tag: "aiven.getProjectUser"
+meta_desc: "Documentation for the aiven.getProjectUser function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const mytestuser = aiven_project_myproject.project.apply(project => aiven.getPro
 {{% /examples %}}
 
 
-## Using GetProjectUser {#using}
+## Using getProjectUser {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -327,7 +327,7 @@ cannot be set, only read.
 
 
 
-## GetProjectUser Result {#result}
+## getProjectUser Result {#result}
 
 The following output properties are available:
 

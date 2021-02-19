@@ -1,8 +1,8 @@
 
 ---
-title: "GetDomainExtensions"
-title_tag: "Function GetDomainExtensions | Module slb | Package AliCloud"
-meta_desc: "Explore the GetDomainExtensions function of the slb module, including examples, input properties, output properties, and supporting types. This data source provides the domain extensions associated with a server load balancer listener."
+title: "getDomainExtensions"
+title_tag: "alicloud.slb.getDomainExtensions"
+meta_desc: "Documentation for the alicloud.slb.getDomainExtensions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -103,7 +103,7 @@ const foo = pulumi.output(alicloud.slb.getDomainExtensions({
 {{% /examples %}}
 
 
-## Using GetDomainExtensions {#using}
+## Using getDomainExtensions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -120,6 +120,8 @@ const foo = pulumi.output(alicloud.slb.getDomainExtensions({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainExtensions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDomainExtensionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDomainExtensionsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDomainExtensions` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -318,7 +320,7 @@ The following arguments are supported:
 
 
 
-## GetDomainExtensions Result {#result}
+## getDomainExtensions Result {#result}
 
 The following output properties are available:
 

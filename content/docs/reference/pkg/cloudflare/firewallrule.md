@@ -1,8 +1,8 @@
 
 ---
 title: "FirewallRule"
-title_tag: "Resource FirewallRule | Package Cloudflare"
-meta_desc: "Explore the FirewallRule resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Define Firewall rules using filter expressions for more control over how traffic is matched to the rule."
+title_tag: "cloudflare.FirewallRule"
+meta_desc: "Documentation for the cloudflare.FirewallRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

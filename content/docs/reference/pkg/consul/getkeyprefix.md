@@ -1,8 +1,8 @@
 
 ---
-title: "GetKeyPrefix"
-title_tag: "Function GetKeyPrefix | Package Consul"
-meta_desc: "Explore the GetKeyPrefix function of the Consul package, including examples, input properties, output properties, and supporting types. "
+title: "getKeyPrefix"
+title_tag: "consul.getKeyPrefix"
+meta_desc: "Documentation for the consul.getKeyPrefix function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetKeyPrefix function of the Consul package, including e
 
 
 
-## Using GetKeyPrefix {#using}
+## Using getKeyPrefix {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -294,7 +294,7 @@ token that the agent provides by default.
 
 
 
-## GetKeyPrefix Result {#result}
+## getKeyPrefix Result {#result}
 
 The following output properties are available:
 

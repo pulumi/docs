@@ -1,8 +1,8 @@
 
 ---
-title: "GetProject"
-title_tag: "Function GetProject | Package MongoDB Atlas"
-meta_desc: "Explore the GetProject function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.Project` describes a MongoDB Atlas Project. This represents a project that has been created."
+title: "getProject"
+title_tag: "mongodbatlas.getProject"
+meta_desc: "Documentation for the mongodbatlas.getProject function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -104,7 +104,7 @@ const testProject = testMongodbatlasProject.name.apply(name => mongodbatlas.getP
 {{% /examples %}}
 
 
-## Using GetProject {#using}
+## Using getProject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -245,7 +245,7 @@ The following arguments are supported:
 
 
 
-## GetProject Result {#result}
+## getProject Result {#result}
 
 The following output properties are available:
 

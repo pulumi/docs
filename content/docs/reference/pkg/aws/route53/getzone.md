@@ -1,8 +1,8 @@
 
 ---
-title: "GetZone"
-title_tag: "Function GetZone | Module route53 | Package AWS"
-meta_desc: "Explore the GetZone function of the route53 module, including examples, input properties, output properties, and supporting types. `aws.route53.Zone` provides details about a specific Route 53 Hosted Zone."
+title: "getZone"
+title_tag: "aws.route53.getZone"
+meta_desc: "Documentation for the aws.route53.getZone function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -134,7 +134,7 @@ const www = new aws.route53.Record("www", {
 {{% /examples %}}
 
 
-## Using GetZone {#using}
+## Using getZone {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -435,7 +435,7 @@ The following arguments are supported:
 
 
 
-## GetZone Result {#result}
+## getZone Result {#result}
 
 The following output properties are available:
 

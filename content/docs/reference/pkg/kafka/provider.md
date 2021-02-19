@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Kafka"
-meta_desc: "Explore the Provider resource of the Kafka package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the kafka package. By default, resources use package-wide configuration"
+title_tag: "kafka.Provider"
+meta_desc: "Documentation for the kafka.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

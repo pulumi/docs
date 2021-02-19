@@ -1,8 +1,8 @@
 
 ---
 title: "DashboardList"
-title_tag: "Resource DashboardList | Package Datadog"
-meta_desc: "Explore the DashboardList resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog dashboard_list resource. This can be used to create and manage Datadog Dashboard Lists and the individual dashboards within them."
+title_tag: "datadog.DashboardList"
+meta_desc: "Documentation for the datadog.DashboardList resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

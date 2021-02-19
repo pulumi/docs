@@ -1,8 +1,8 @@
 
 ---
 title: "ActiveDirectory"
-title_tag: "Resource ActiveDirectory | Package Rancher 2"
-meta_desc: "Explore the ActiveDirectory resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Auth Config ActiveDirectory resource. This can be used to configure and enable Auth Config ActiveDirectory for Rancher v2 RKE clusters and retrieve their information."
+title_tag: "rancher2.ActiveDirectory"
+meta_desc: "Documentation for the rancher2.ActiveDirectory resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

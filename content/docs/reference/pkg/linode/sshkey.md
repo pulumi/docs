@@ -1,8 +1,8 @@
 
 ---
 title: "SshKey"
-title_tag: "Resource SshKey | Package Linode"
-meta_desc: "Explore the SshKey resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode SSH Key resource.  This can be used to create, modify, and delete Linodes SSH Keys.  Managed SSH Keys allow instances to be created with a list of Linode usernames, whose SSH keys will be automatically applied to the root account&#39;s `~/.ssh/authorized_keys` file."
+title_tag: "linode.SshKey"
+meta_desc: "Documentation for the linode.SshKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

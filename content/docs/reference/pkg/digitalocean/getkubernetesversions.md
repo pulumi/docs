@@ -1,8 +1,8 @@
 
 ---
-title: "GetKubernetesVersions"
-title_tag: "Function GetKubernetesVersions | Package DigitalOcean"
-meta_desc: "Explore the GetKubernetesVersions function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Provides access to the available DigitalOcean Kubernetes Service versions."
+title: "getKubernetesVersions"
+title_tag: "digitalocean.getKubernetesVersions"
+meta_desc: "Documentation for the digitalocean.getKubernetesVersions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -297,7 +297,7 @@ const example_cluster = new digitalocean.KubernetesCluster("example-cluster", {
 {{% /examples %}}
 
 
-## Using GetKubernetesVersions {#using}
+## Using getKubernetesVersions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -314,6 +314,8 @@ const example_cluster = new digitalocean.KubernetesCluster("example-cluster", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesVersions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetKubernetesVersionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetKubernetesVersionsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetKubernetesVersions` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -396,7 +398,7 @@ The following arguments are supported:
 
 
 
-## GetKubernetesVersions Result {#result}
+## getKubernetesVersions Result {#result}
 
 The following output properties are available:
 

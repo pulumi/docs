@@ -1,8 +1,8 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Package Keycloak"
-meta_desc: "Explore the User resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. Allows for creating and managing Users within Keycloak."
+title_tag: "keycloak.User"
+meta_desc: "Documentation for the keycloak.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

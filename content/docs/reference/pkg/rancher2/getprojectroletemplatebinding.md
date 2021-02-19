@@ -1,8 +1,8 @@
 
 ---
-title: "GetProjectRoleTemplateBinding"
-title_tag: "Function GetProjectRoleTemplateBinding | Package Rancher 2"
-meta_desc: "Explore the GetProjectRoleTemplateBinding function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 project role template binding."
+title: "getProjectRoleTemplateBinding"
+title_tag: "rancher2.getProjectRoleTemplateBinding"
+meta_desc: "Documentation for the rancher2.getProjectRoleTemplateBinding function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const foo = pulumi.output(rancher2.getProjectRoleTemplateBinding({
 {{% /examples %}}
 
 
-## Using GetProjectRoleTemplateBinding {#using}
+## Using getProjectRoleTemplateBinding {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -273,7 +273,7 @@ The following arguments are supported:
 
 
 
-## GetProjectRoleTemplateBinding Result {#result}
+## getProjectRoleTemplateBinding Result {#result}
 
 The following output properties are available:
 

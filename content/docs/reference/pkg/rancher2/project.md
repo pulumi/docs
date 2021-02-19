@@ -1,8 +1,8 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Package Rancher 2"
-meta_desc: "Explore the Project resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Project resource. This can be used to create projects for Rancher v2 environments and retrieve their information."
+title_tag: "rancher2.Project"
+meta_desc: "Documentation for the rancher2.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

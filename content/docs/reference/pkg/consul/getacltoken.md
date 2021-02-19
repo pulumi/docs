@@ -1,8 +1,8 @@
 
 ---
-title: "GetAclToken"
-title_tag: "Function GetAclToken | Package Consul"
-meta_desc: "Explore the GetAclToken function of the Consul package, including examples, input properties, output properties, and supporting types. The `consul.AclToken` data source returns the information related to the"
+title: "getAclToken"
+title_tag: "consul.getAclToken"
+meta_desc: "Documentation for the consul.getAclToken function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -99,7 +99,7 @@ export const consulAclPolicies = test.policies!;
 {{% /examples %}}
 
 
-## Using GetAclToken {#using}
+## Using getAclToken {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -364,7 +364,7 @@ an `id` and a `name` attribute.
 
 
 
-## GetAclToken Result {#result}
+## getAclToken Result {#result}
 
 The following output properties are available:
 

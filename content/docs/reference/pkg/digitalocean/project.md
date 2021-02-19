@@ -1,8 +1,8 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Package DigitalOcean"
-meta_desc: "Explore the Project resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Project resource."
+title_tag: "digitalocean.Project"
+meta_desc: "Documentation for the digitalocean.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

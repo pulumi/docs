@@ -1,8 +1,8 @@
 
 ---
 title: "AccessIdentityProvider"
-title_tag: "Resource AccessIdentityProvider | Package Cloudflare"
-meta_desc: "Explore the AccessIdentityProvider resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare Access Identity Provider resource. Identity Providers are"
+title_tag: "cloudflare.AccessIdentityProvider"
+meta_desc: "Documentation for the cloudflare.AccessIdentityProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

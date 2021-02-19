@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectAlertRule"
-title_tag: "Resource ProjectAlertRule | Package Rancher 2"
-meta_desc: "Explore the ProjectAlertRule resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Project Alert Rule resource. This can be used to create Project Alert Rule for Rancher v2 environments and retrieve their information."
+title_tag: "rancher2.ProjectAlertRule"
+meta_desc: "Documentation for the rancher2.ProjectAlertRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

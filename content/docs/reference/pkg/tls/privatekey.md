@@ -1,8 +1,8 @@
 
 ---
 title: "PrivateKey"
-title_tag: "Resource PrivateKey | Package TLS"
-meta_desc: "Explore the PrivateKey resource of the TLS package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "tls.PrivateKey"
+meta_desc: "Documentation for the tls.PrivateKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

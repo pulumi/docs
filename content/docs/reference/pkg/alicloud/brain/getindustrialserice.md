@@ -1,8 +1,8 @@
 
 ---
-title: "GetIndustrialSerice"
-title_tag: "Function GetIndustrialSerice | Module brain | Package AliCloud"
-meta_desc: "Explore the GetIndustrialSerice function of the brain module, including examples, input properties, output properties, and supporting types. Using this data source can open Brain Industrial service automatically. If the service has been opened, it will return opened."
+title: "getIndustrialSerice"
+title_tag: "alicloud.brain.getIndustrialSerice"
+meta_desc: "Documentation for the alicloud.brain.getIndustrialSerice function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ const open = pulumi.output(alicloud.brain.getIndustrialSerice({
 {{% /examples %}}
 
 
-## Using GetIndustrialSerice {#using}
+## Using getIndustrialSerice {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -108,6 +108,8 @@ const open = pulumi.output(alicloud.brain.getIndustrialSerice({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIndustrialSerice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetIndustrialSericeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIndustrialSericeResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetIndustrialSerice` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -190,7 +192,7 @@ The following arguments are supported:
 
 
 
-## GetIndustrialSerice Result {#result}
+## getIndustrialSerice Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetCassanda"
-title_tag: "Function GetCassanda | Package Aiven"
-meta_desc: "Explore the GetCassanda function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Cassandra Data Source"
+title: "getCassanda"
+title_tag: "aiven.getCassanda"
+meta_desc: "Documentation for the aiven.getCassanda function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -96,7 +96,7 @@ const bar = aiven.getCassanda({
 {{% /examples %}}
 
 
-## Using GetCassanda {#using}
+## Using getCassanda {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -113,6 +113,8 @@ const bar = aiven.getCassanda({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCassanda<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCassandaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCassandaResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetCassanda` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -1019,7 +1021,7 @@ deletion is done.
 
 
 
-## GetCassanda Result {#result}
+## getCassanda Result {#result}
 
 The following output properties are available:
 

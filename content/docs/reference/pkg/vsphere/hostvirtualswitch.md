@@ -1,8 +1,8 @@
 
 ---
 title: "HostVirtualSwitch"
-title_tag: "Resource HostVirtualSwitch | Package vSphere"
-meta_desc: "Explore the HostVirtualSwitch resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.HostVirtualSwitch"
+meta_desc: "Documentation for the vsphere.HostVirtualSwitch resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

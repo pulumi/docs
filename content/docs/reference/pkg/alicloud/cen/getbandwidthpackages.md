@@ -1,8 +1,8 @@
 
 ---
-title: "GetBandwidthPackages"
-title_tag: "Function GetBandwidthPackages | Module cen | Package AliCloud"
-meta_desc: "Explore the GetBandwidthPackages function of the cen module, including examples, input properties, output properties, and supporting types. This data source provides CEN Bandwidth Packages available to the user."
+title: "getBandwidthPackages"
+title_tag: "alicloud.cen.getBandwidthPackages"
+meta_desc: "Documentation for the alicloud.cen.getBandwidthPackages function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -100,7 +100,7 @@ export const firstCenBandwidthPackageId = example.then(example => example.packag
 {{% /examples %}}
 
 
-## Using GetBandwidthPackages {#using}
+## Using getBandwidthPackages {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -117,6 +117,8 @@ export const firstCenBandwidthPackageId = example.then(example => example.packag
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBandwidthPackages<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetBandwidthPackagesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBandwidthPackagesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetBandwidthPackages` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -395,7 +397,7 @@ The following arguments are supported:
 
 
 
-## GetBandwidthPackages Result {#result}
+## getBandwidthPackages Result {#result}
 
 The following output properties are available:
 

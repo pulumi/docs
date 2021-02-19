@@ -1,8 +1,8 @@
 
 ---
-title: "GetAuditing"
-title_tag: "Function GetAuditing | Package MongoDB Atlas"
-meta_desc: "Explore the GetAuditing function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.Auditing` describes a Auditing."
+title: "getAuditing"
+title_tag: "mongodbatlas.getAuditing"
+meta_desc: "Documentation for the mongodbatlas.getAuditing function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -54,7 +54,7 @@ const testAuditing = testMongodbatlasAuditing.id.apply(id => mongodbatlas.getAud
 {{% /examples %}}
 
 
-## Using GetAuditing {#using}
+## Using getAuditing {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -155,7 +155,7 @@ The following arguments are supported:
 
 
 
-## GetAuditing Result {#result}
+## getAuditing Result {#result}
 
 The following output properties are available:
 

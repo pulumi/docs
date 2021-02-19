@@ -1,8 +1,8 @@
 
 ---
 title: "HostPortGroup"
-title_tag: "Resource HostPortGroup | Package vSphere"
-meta_desc: "Explore the HostPortGroup resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. The `vsphere.HostPortGroup` resource can be used to manage vSphere standard"
+title_tag: "vsphere.HostPortGroup"
+meta_desc: "Documentation for the vsphere.HostPortGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

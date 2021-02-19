@@ -1,8 +1,8 @@
 
 ---
 title: "Webhook"
-title_tag: "Resource Webhook | Package CloudAMQP"
-meta_desc: "Explore the Webhook resource of the CloudAMQP package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to enable or disable webhooks for a specific vhost and queue."
+title_tag: "cloudamqp.Webhook"
+meta_desc: "Documentation for the cloudamqp.Webhook resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

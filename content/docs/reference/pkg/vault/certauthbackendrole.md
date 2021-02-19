@@ -1,8 +1,8 @@
 
 ---
 title: "CertAuthBackendRole"
-title_tag: "Resource CertAuthBackendRole | Package Vault"
-meta_desc: "Explore the CertAuthBackendRole resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create a role in an [Cert auth backend within Vault](https://www.vaultproject.io/docs/auth/cert.html)."
+title_tag: "vault.CertAuthBackendRole"
+meta_desc: "Documentation for the vault.CertAuthBackendRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

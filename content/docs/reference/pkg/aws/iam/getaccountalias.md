@@ -1,8 +1,8 @@
 
 ---
-title: "GetAccountAlias"
-title_tag: "Function GetAccountAlias | Module iam | Package AWS"
-meta_desc: "Explore the GetAccountAlias function of the iam module, including examples, input properties, output properties, and supporting types. The IAM Account Alias data source allows access to the account alias"
+title: "getAccountAlias"
+title_tag: "aws.iam.getAccountAlias"
+meta_desc: "Documentation for the aws.iam.getAccountAlias function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ export const accountId = current.then(current => current.accountAlias);
 {{% /examples %}}
 
 
-## Using GetAccountAlias {#using}
+## Using getAccountAlias {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -120,7 +120,7 @@ export const accountId = current.then(current => current.accountAlias);
 
 
 
-## GetAccountAlias Result {#result}
+## getAccountAlias Result {#result}
 
 The following output properties are available:
 

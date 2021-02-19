@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancer"
-title_tag: "Resource LoadBalancer | Package DigitalOcean"
-meta_desc: "Explore the LoadBalancer resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Load Balancer resource. This can be used to create,"
+title_tag: "digitalocean.LoadBalancer"
+meta_desc: "Documentation for the digitalocean.LoadBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

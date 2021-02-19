@@ -1,8 +1,8 @@
 
 ---
-title: "GetSshKey"
-title_tag: "Function GetSshKey | Package Linode"
-meta_desc: "Explore the GetSshKey function of the Linode package, including examples, input properties, output properties, and supporting types. `linode.SshKey` provides access to a specifically labeled SSH Key in the Profile of the User identified by the access token."
+title: "getSshKey"
+title_tag: "linode.getSshKey"
+meta_desc: "Documentation for the linode.getSshKey function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const foo = pulumi.output(linode.getSshKey({
 {{% /examples %}}
 
 
-## Using GetSshKey {#using}
+## Using getSshKey {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetSshKey Result {#result}
+## getSshKey Result {#result}
 
 The following output properties are available:
 

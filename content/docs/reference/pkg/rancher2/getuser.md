@@ -1,8 +1,8 @@
 
 ---
-title: "GetUser"
-title_tag: "Function GetUser | Package Rancher 2"
-meta_desc: "Explore the GetUser function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 user"
+title: "getUser"
+title_tag: "rancher2.getUser"
+meta_desc: "Documentation for the rancher2.getUser function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const foo = pulumi.output(rancher2.getUser({
 {{% /examples %}}
 
 
-## Using GetUser {#using}
+## Using getUser {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -270,7 +270,7 @@ The following arguments are supported:
 
 
 
-## GetUser Result {#result}
+## getUser Result {#result}
 
 The following output properties are available:
 

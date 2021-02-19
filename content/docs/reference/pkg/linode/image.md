@@ -1,8 +1,8 @@
 
 ---
 title: "Image"
-title_tag: "Resource Image | Package Linode"
-meta_desc: "Explore the Image resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode Image resource.  This can be used to create, modify, and delete Linodes Images.  Linode Images are snapshots of a Linode Instance Disk which can then be used to provision more Linode Instances.  Images can be used across regions."
+title_tag: "linode.Image"
+meta_desc: "Documentation for the linode.Image resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "NodeBalancer"
-title_tag: "Resource NodeBalancer | Package Linode"
-meta_desc: "Explore the NodeBalancer resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode NodeBalancer resource.  This can be used to create, modify, and delete Linodes NodeBalancers in Linode&#39;s managed load balancer service."
+title_tag: "linode.NodeBalancer"
+meta_desc: "Documentation for the linode.NodeBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

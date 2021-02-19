@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Fastly"
-meta_desc: "Explore the Provider resource of the Fastly package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the fastly package. By default, resources use package-wide configuration"
+title_tag: "fastly.Provider"
+meta_desc: "Documentation for the fastly.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

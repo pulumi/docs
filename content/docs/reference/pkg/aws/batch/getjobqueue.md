@@ -1,8 +1,8 @@
 
 ---
-title: "GetJobQueue"
-title_tag: "Function GetJobQueue | Module batch | Package AWS"
-meta_desc: "Explore the GetJobQueue function of the batch module, including examples, input properties, output properties, and supporting types. The Batch Job Queue data source allows access to details of a specific"
+title: "getJobQueue"
+title_tag: "aws.batch.getJobQueue"
+meta_desc: "Documentation for the aws.batch.getJobQueue function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const test_queue = pulumi.output(aws.batch.getJobQueue({
 {{% /examples %}}
 
 
-## Using GetJobQueue {#using}
+## Using getJobQueue {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -230,7 +230,7 @@ The following arguments are supported:
 
 
 
-## GetJobQueue Result {#result}
+## getJobQueue Result {#result}
 
 The following output properties are available:
 

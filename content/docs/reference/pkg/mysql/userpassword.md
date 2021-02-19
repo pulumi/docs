@@ -1,8 +1,8 @@
 
 ---
 title: "UserPassword"
-title_tag: "Resource UserPassword | Package MySQL"
-meta_desc: "Explore the UserPassword resource of the MySQL package, including examples, input properties, output properties, lookup functions, and supporting types. The `mysql.UserPassword` resource sets and manages a password for a given "
+title_tag: "mysql.UserPassword"
+meta_desc: "Documentation for the mysql.UserPassword resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

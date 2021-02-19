@@ -1,8 +1,8 @@
 
 ---
-title: "GetDatabaseUser"
-title_tag: "Function GetDatabaseUser | Package MongoDB Atlas"
-meta_desc: "Explore the GetDatabaseUser function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.DatabaseUser` describe a Database User. This represents a database user which will be applied to all clusters within the project."
+title: "getDatabaseUser"
+title_tag: "mongodbatlas.getDatabaseUser"
+meta_desc: "Documentation for the mongodbatlas.getDatabaseUser function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -19,7 +19,7 @@ Each user has a set of roles that provide access to the project’s databases. U
 
 
 
-## Using GetDatabaseUser {#using}
+## Using getDatabaseUser {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -240,7 +240,7 @@ The following arguments are supported:
 
 
 
-## GetDatabaseUser Result {#result}
+## getDatabaseUser Result {#result}
 
 The following output properties are available:
 

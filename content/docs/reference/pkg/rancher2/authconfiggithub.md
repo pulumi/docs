@@ -1,8 +1,8 @@
 
 ---
 title: "AuthConfigGithub"
-title_tag: "Resource AuthConfigGithub | Package Rancher 2"
-meta_desc: "Explore the AuthConfigGithub resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Auth Config Github resource. This can be used to configure and enable Auth Config Github for Rancher v2 RKE clusters and retrieve their information."
+title_tag: "rancher2.AuthConfigGithub"
+meta_desc: "Documentation for the rancher2.AuthConfigGithub resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

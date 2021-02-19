@@ -1,8 +1,8 @@
 
 ---
-title: "GetUser"
-title_tag: "Function GetUser | Module identity | Package Open Stack"
-meta_desc: "Explore the GetUser function of the identity module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an OpenStack user."
+title: "getUser"
+title_tag: "openstack.identity.getUser"
+meta_desc: "Documentation for the openstack.identity.getUser function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const user1 = pulumi.output(openstack.identity.getUser({
 {{% /examples %}}
 
 
-## Using GetUser {#using}
+## Using getUser {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -474,7 +474,7 @@ values are `true` and `false`.
 
 
 
-## GetUser Result {#result}
+## getUser Result {#result}
 
 The following output properties are available:
 

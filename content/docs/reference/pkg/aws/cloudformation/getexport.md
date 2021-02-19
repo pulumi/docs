@@ -1,8 +1,8 @@
 
 ---
-title: "GetExport"
-title_tag: "Function GetExport | Module cloudformation | Package AWS"
-meta_desc: "Explore the GetExport function of the cloudformation module, including examples, input properties, output properties, and supporting types. The CloudFormation Export data source allows access to stack"
+title: "getExport"
+title_tag: "aws.cloudformation.getExport"
+meta_desc: "Documentation for the aws.cloudformation.getExport function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -115,7 +115,7 @@ const web = new aws.ec2.Instance("web", {
 {{% /examples %}}
 
 
-## Using GetExport {#using}
+## Using getExport {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -132,6 +132,8 @@ const web = new aws.ec2.Instance("web", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetExport<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetExportArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetExportResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetExport` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -214,7 +216,7 @@ The following arguments are supported:
 
 
 
-## GetExport Result {#result}
+## getExport Result {#result}
 
 The following output properties are available:
 

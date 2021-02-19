@@ -1,8 +1,8 @@
 
 ---
-title: "GetCluster"
-title_tag: "Function GetCluster | Module containerinfra | Package Open Stack"
-meta_desc: "Explore the GetCluster function of the containerinfra module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack Magnum cluster."
+title: "getCluster"
+title_tag: "openstack.containerinfra.getCluster"
+meta_desc: "Documentation for the openstack.containerinfra.getCluster function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const cluster1 = pulumi.output(openstack.containerinfra.getCluster({
 {{% /examples %}}
 
 
-## Using GetCluster {#using}
+## Using getCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -237,7 +237,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## GetCluster Result {#result}
+## getCluster Result {#result}
 
 The following output properties are available:
 

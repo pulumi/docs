@@ -1,6 +1,6 @@
 ---
 title: "Azure"
-title_tag: "Package Azure"
+title_tag: "Azure Package"
 meta_desc: "A Pulumi package for creating and managing Microsoft Azure cloud resources."
 menu:
     reference:
@@ -121,6 +121,6 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.47.1</dd>
+	<dd>3.48.0</dd>
 </dl>
 

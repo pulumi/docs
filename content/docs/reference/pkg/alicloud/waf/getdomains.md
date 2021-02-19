@@ -1,8 +1,8 @@
 
 ---
-title: "GetDomains"
-title_tag: "Function GetDomains | Module waf | Package AliCloud"
-meta_desc: "Explore the GetDomains function of the waf module, including examples, input properties, output properties, and supporting types. Provides a WAF datasource to retrieve domains."
+title: "getDomains"
+title_tag: "alicloud.waf.getDomains"
+meta_desc: "Documentation for the alicloud.waf.getDomains function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const defaultDomains = pulumi.output(alicloud.waf.getDomains({
 {{% /examples %}}
 
 
-## Using GetDomains {#using}
+## Using getDomains {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -109,6 +109,8 @@ const defaultDomains = pulumi.output(alicloud.waf.getDomains({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomains<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDomainsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDomainsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDomains` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -387,7 +389,7 @@ The following arguments are supported:
 
 
 
-## GetDomains Result {#result}
+## getDomains Result {#result}
 
 The following output properties are available:
 

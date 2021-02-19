@@ -1,8 +1,8 @@
 
 ---
 title: "Audit"
-title_tag: "Resource Audit | Package Vault"
-meta_desc: "Explore the Audit resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
+title_tag: "vault.Audit"
+meta_desc: "Documentation for the vault.Audit resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

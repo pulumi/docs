@@ -1,8 +1,8 @@
 
 ---
-title: "GetPatchBaseline"
-title_tag: "Function GetPatchBaseline | Module ssm | Package AWS"
-meta_desc: "Explore the GetPatchBaseline function of the ssm module, including examples, input properties, output properties, and supporting types. Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided."
+title: "getPatchBaseline"
+title_tag: "aws.ssm.getPatchBaseline"
+meta_desc: "Documentation for the aws.ssm.getPatchBaseline function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,7 +98,7 @@ const centos = pulumi.output(aws.ssm.getPatchBaseline({
 {{% /examples %}}
 
 
-## Using GetPatchBaseline {#using}
+## Using getPatchBaseline {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -319,7 +319,7 @@ The following arguments are supported:
 
 
 
-## GetPatchBaseline Result {#result}
+## getPatchBaseline Result {#result}
 
 The following output properties are available:
 

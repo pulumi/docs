@@ -1,8 +1,8 @@
 
 ---
 title: "ContentLibrary"
-title_tag: "Resource ContentLibrary | Package vSphere"
-meta_desc: "Explore the ContentLibrary resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.ContentLibrary"
+meta_desc: "Documentation for the vsphere.ContentLibrary resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

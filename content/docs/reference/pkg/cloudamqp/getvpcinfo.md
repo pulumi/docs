@@ -1,8 +1,8 @@
 
 ---
-title: "GetVpcInfo"
-title_tag: "Function GetVpcInfo | Package CloudAMQP"
-meta_desc: "Explore the GetVpcInfo function of the CloudAMQP package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about VPC for a CloudAMQP instance."
+title: "getVpcInfo"
+title_tag: "cloudamqp.getVpcInfo"
+meta_desc: "Documentation for the cloudamqp.getVpcInfo function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -104,7 +104,7 @@ const vpcInfo = cloudamqp.getVpcInfo({
 {{% /examples %}}
 
 
-## Using GetVpcInfo {#using}
+## Using getVpcInfo {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -121,6 +121,8 @@ const vpcInfo = cloudamqp.getVpcInfo({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcInfo<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetVpcInfoArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetVpcInfoResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetVpcInfo` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -199,7 +201,7 @@ The following arguments are supported:
 
 
 
-## GetVpcInfo Result {#result}
+## getVpcInfo Result {#result}
 
 The following output properties are available:
 

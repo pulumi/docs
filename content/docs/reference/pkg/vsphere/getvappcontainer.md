@@ -1,8 +1,8 @@
 
 ---
-title: "GetVappContainer"
-title_tag: "Function GetVappContainer | Package vSphere"
-meta_desc: "Explore the GetVappContainer function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.VappContainer` data source can be used to discover the ID of a"
+title: "getVappContainer"
+title_tag: "vsphere.getVappContainer"
+meta_desc: "Documentation for the vsphere.getVappContainer function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -110,7 +110,7 @@ const pool = datacenter.apply(datacenter => vsphere.getVappContainer({
 {{% /examples %}}
 
 
-## Using GetVappContainer {#using}
+## Using getVappContainer {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -259,7 +259,7 @@ path.
 
 
 
-## GetVappContainer Result {#result}
+## getVappContainer Result {#result}
 
 The following output properties are available:
 

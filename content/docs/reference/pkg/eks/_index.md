@@ -1,6 +1,6 @@
 ---
 title: "eks"
-title_tag: "Module eks | Package eks"
+title_tag: "eks.eks"
 meta_desc: "Pulumi Amazon Web Services (AWS) EKS Components."
 menu:
     reference:
@@ -32,7 +32,4 @@ Pulumi Amazon Web Services (AWS) EKS Components.
 	<dt>Version</dt>
 	<dd>0.22.0</dd>
 </dl>
-
-
-
 

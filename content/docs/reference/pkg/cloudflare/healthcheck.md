@@ -1,8 +1,8 @@
 
 ---
 title: "Healthcheck"
-title_tag: "Resource Healthcheck | Package Cloudflare"
-meta_desc: "Explore the Healthcheck resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Standalone Health Checks provide a way to monitor origin servers without needing a Cloudflare Load Balancer. "
+title_tag: "cloudflare.Healthcheck"
+meta_desc: "Documentation for the cloudflare.Healthcheck resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

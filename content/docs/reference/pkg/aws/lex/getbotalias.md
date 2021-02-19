@@ -1,8 +1,8 @@
 
 ---
-title: "GetBotAlias"
-title_tag: "Function GetBotAlias | Module lex | Package AWS"
-meta_desc: "Explore the GetBotAlias function of the lex module, including examples, input properties, output properties, and supporting types. Provides details about a specific Amazon Lex Bot Alias."
+title: "getBotAlias"
+title_tag: "aws.lex.getBotAlias"
+meta_desc: "Documentation for the aws.lex.getBotAlias function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const orderFlowersProd = pulumi.output(aws.lex.getBotAlias({
 {{% /examples %}}
 
 
-## Using GetBotAlias {#using}
+## Using getBotAlias {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ The following arguments are supported:
 
 
 
-## GetBotAlias Result {#result}
+## getBotAlias Result {#result}
 
 The following output properties are available:
 

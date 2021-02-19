@@ -1,8 +1,8 @@
 
 ---
 title: "AuthConfigOpenLdap"
-title_tag: "Resource AuthConfigOpenLdap | Package Rancher 2"
-meta_desc: "Explore the AuthConfigOpenLdap resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Auth Config OpenLdap resource. This can be used to configure and enable Auth Config OpenLdap for Rancher v2 RKE clusters and retrieve their information."
+title_tag: "rancher2.AuthConfigOpenLdap"
+meta_desc: "Documentation for the rancher2.AuthConfigOpenLdap resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetNetworks"
-title_tag: "Function GetNetworks | Module vpc | Package AliCloud"
-meta_desc: "Explore the GetNetworks function of the vpc module, including examples, input properties, output properties, and supporting types. This data source provides VPCs available to the user."
+title: "getNetworks"
+title_tag: "alicloud.vpc.getNetworks"
+meta_desc: "Documentation for the alicloud.vpc.getNetworks function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -106,7 +106,7 @@ export const firstVpcId = vpcsDs.vpcs[0].id;
 {{% /examples %}}
 
 
-## Using GetNetworks {#using}
+## Using getNetworks {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -123,6 +123,8 @@ export const firstVpcId = vpcsDs.vpcs[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworks<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNetworksArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNetworksResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetNetworks` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -521,7 +523,7 @@ The following arguments are supported:
 
 
 
-## GetNetworks Result {#result}
+## getNetworks Result {#result}
 
 The following output properties are available:
 

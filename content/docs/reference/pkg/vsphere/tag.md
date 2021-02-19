@@ -1,8 +1,8 @@
 
 ---
 title: "Tag"
-title_tag: "Resource Tag | Package vSphere"
-meta_desc: "Explore the Tag resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.Tag"
+meta_desc: "Documentation for the vsphere.Tag resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

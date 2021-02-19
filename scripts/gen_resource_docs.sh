@@ -37,6 +37,7 @@ generate_docs() {
     fi
 
     echo -e "\033[0;95m--- Updating repo pulumi/${repository} ---\033[0m"
+    [ ! -d "../${repository}" ] && mkdir "../${repository}" && git clone "git@github.com:pulumi/${repository}.git" "../${repository}"
     pushd "../${repository}"
     git fetch --tags
 

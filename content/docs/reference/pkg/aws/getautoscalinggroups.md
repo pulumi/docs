@@ -1,8 +1,8 @@
 
 ---
-title: "GetAutoscalingGroups"
-title_tag: "Function GetAutoscalingGroups | Package AWS"
-meta_desc: "Explore the GetAutoscalingGroups function of the AWS package, including examples, input properties, output properties, and supporting types. The Autoscaling Groups data source allows access to the list of AWS"
+title: "getAutoscalingGroups"
+title_tag: "aws.getAutoscalingGroups"
+meta_desc: "Documentation for the aws.getAutoscalingGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -190,7 +190,7 @@ const slackNotifications = new aws.autoscaling.Notification("slackNotifications"
 {{% /examples %}}
 
 
-## Using GetAutoscalingGroups {#using}
+## Using getAutoscalingGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -207,6 +207,8 @@ const slackNotifications = new aws.autoscaling.Notification("slackNotifications"
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoscalingGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAutoscalingGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAutoscalingGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAutoscalingGroups` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -289,7 +291,7 @@ The following arguments are supported:
 
 
 
-## GetAutoscalingGroups Result {#result}
+## getAutoscalingGroups Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetQosBandwidthLimitRule"
-title_tag: "Function GetQosBandwidthLimitRule | Module networking | Package Open Stack"
-meta_desc: "Explore the GetQosBandwidthLimitRule function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack QoS bandwidth limit rule."
+title: "getQosBandwidthLimitRule"
+title_tag: "openstack.networking.getQosBandwidthLimitRule"
+meta_desc: "Documentation for the openstack.networking.getQosBandwidthLimitRule function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -46,7 +46,7 @@ const qosBandwidthLimitRule1 = pulumi.output(openstack.networking.getQosBandwidt
 {{% /examples %}}
 
 
-## Using GetQosBandwidthLimitRule {#using}
+## Using getQosBandwidthLimitRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -275,7 +275,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
 
 
 
-## GetQosBandwidthLimitRule Result {#result}
+## getQosBandwidthLimitRule Result {#result}
 
 The following output properties are available:
 

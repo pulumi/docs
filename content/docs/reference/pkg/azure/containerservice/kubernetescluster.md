@@ -179,7 +179,7 @@ export const kubeConfig = exampleKubernetesCluster.kubeConfigRaw;
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">KubernetesCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addon_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAddonProfileArgs]</span> = None<span class="p">, </span><span class="nx">api_server_authorized_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAutoScalerProfileArgs]</span> = None<span class="p">, </span><span class="nx">default_node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterDefaultNodePoolArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_based_access_control</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterRoleBasedAccessControlArgs]</span> = None<span class="p">, </span><span class="nx">service_principal</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterServicePrincipalArgs]</span> = None<span class="p">, </span><span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterWindowsProfileArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">KubernetesCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addon_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAddonProfileArgs]</span> = None<span class="p">, </span><span class="nx">api_server_authorized_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAutoScalerProfileArgs]</span> = None<span class="p">, </span><span class="nx">automatic_channel_upgrade</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterDefaultNodePoolArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_based_access_control</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterRoleBasedAccessControlArgs]</span> = None<span class="p">, </span><span class="nx">service_principal</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterServicePrincipalArgs]</span> = None<span class="p">, </span><span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterWindowsProfileArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -409,6 +409,16 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="automaticchannelupgrade_csharp">
+<a href="#automaticchannelupgrade_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Channel<wbr>Upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -646,6 +656,16 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="automaticchannelupgrade_go">
+<a href="#automaticchannelupgrade_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Channel<wbr>Upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="diskencryptionsetid_go">
 <a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
@@ -880,6 +900,16 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="automaticchannelupgrade_nodejs">
+<a href="#automaticchannelupgrade_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Channel<wbr>Upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="diskencryptionsetid_nodejs">
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
@@ -1111,6 +1141,16 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="automatic_channel_upgrade_python">
+<a href="#automatic_channel_upgrade_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>channel_<wbr>upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1643,7 +1683,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addon_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAddonProfileArgs]</span> = None<span class="p">, </span><span class="nx">api_server_authorized_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAutoScalerProfileArgs]</span> = None<span class="p">, </span><span class="nx">default_node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterDefaultNodePoolArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kube_admin_config_raw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_admin_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeAdminConfigArgs]]</span> = None<span class="p">, </span><span class="nx">kube_config_raw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">kubelet_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeletIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_based_access_control</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterRoleBasedAccessControlArgs]</span> = None<span class="p">, </span><span class="nx">service_principal</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterServicePrincipalArgs]</span> = None<span class="p">, </span><span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterWindowsProfileArgs]</span> = None<span class="p">) -&gt;</span> KubernetesCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addon_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAddonProfileArgs]</span> = None<span class="p">, </span><span class="nx">api_server_authorized_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAutoScalerProfileArgs]</span> = None<span class="p">, </span><span class="nx">automatic_channel_upgrade</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterDefaultNodePoolArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kube_admin_config_raw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_admin_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeAdminConfigArgs]]</span> = None<span class="p">, </span><span class="nx">kube_config_raw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">kubelet_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeletIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_based_access_control</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterRoleBasedAccessControlArgs]</span> = None<span class="p">, </span><span class="nx">service_principal</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterServicePrincipalArgs]</span> = None<span class="p">, </span><span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterWindowsProfileArgs]</span> = None<span class="p">) -&gt;</span> KubernetesCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1785,6 +1825,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_automaticchannelupgrade_csharp">
+<a href="#state_automaticchannelupgrade_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Channel<wbr>Upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2092,6 +2142,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_automaticchannelupgrade_go">
+<a href="#state_automaticchannelupgrade_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Channel<wbr>Upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultnodepool_go">
 <a href="#state_defaultnodepool_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Node<wbr>Pool</a>
 </span>
@@ -2396,6 +2456,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_automaticchannelupgrade_nodejs">
+<a href="#state_automaticchannelupgrade_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Channel<wbr>Upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultnodepool_nodejs">
 <a href="#state_defaultnodepool_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Node<wbr>Pool</a>
 </span>
@@ -2697,6 +2767,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_automatic_channel_upgrade_python">
+<a href="#state_automatic_channel_upgrade_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>channel_<wbr>upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3945,6 +4025,26 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}How often the AKS Cluster should be re-evaluated for scale up/down. Defaults to `10s`.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipnodeswithlocalstorage_csharp">
+<a href="#skipnodeswithlocalstorage_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Nodes<wbr>With<wbr>Local<wbr>Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true` cluster autoscaler will never delete nodes with pods with local storage, for example, EmptyDir or HostPath. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipnodeswithsystempods_csharp">
+<a href="#skipnodeswithsystempods_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Nodes<wbr>With<wbr>System<wbr>Pods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true` cluster autoscaler will never delete nodes with pods from kube-system (except for DaemonSet or mirror pods). Defaults to `true`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4050,6 +4150,26 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often the AKS Cluster should be re-evaluated for scale up/down. Defaults to `10s`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipnodeswithlocalstorage_go">
+<a href="#skipnodeswithlocalstorage_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Nodes<wbr>With<wbr>Local<wbr>Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true` cluster autoscaler will never delete nodes with pods with local storage, for example, EmptyDir or HostPath. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipnodeswithsystempods_go">
+<a href="#skipnodeswithsystempods_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Nodes<wbr>With<wbr>System<wbr>Pods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true` cluster autoscaler will never delete nodes with pods from kube-system (except for DaemonSet or mirror pods). Defaults to `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4157,6 +4277,26 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}How often the AKS Cluster should be re-evaluated for scale up/down. Defaults to `10s`.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipnodeswithlocalstorage_nodejs">
+<a href="#skipnodeswithlocalstorage_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Nodes<wbr>With<wbr>Local<wbr>Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If `true` cluster autoscaler will never delete nodes with pods with local storage, for example, EmptyDir or HostPath. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipnodeswithsystempods_nodejs">
+<a href="#skipnodeswithsystempods_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Nodes<wbr>With<wbr>System<wbr>Pods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If `true` cluster autoscaler will never delete nodes with pods from kube-system (except for DaemonSet or mirror pods). Defaults to `true`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4262,6 +4402,26 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How often the AKS Cluster should be re-evaluated for scale up/down. Defaults to `10s`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skip_nodes_with_local_storage_python">
+<a href="#skip_nodes_with_local_storage_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>nodes_<wbr>with_<wbr>local_<wbr>storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true` cluster autoscaler will never delete nodes with pods with local storage, for example, EmptyDir or HostPath. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skip_nodes_with_system_pods_python">
+<a href="#skip_nodes_with_system_pods_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>nodes_<wbr>with_<wbr>system_<wbr>pods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true` cluster autoscaler will never delete nodes with pods from kube-system (except for DaemonSet or mirror pods). Defaults to `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4458,6 +4618,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Node Pool which should be created. Possible values are `AvailabilitySet` and `VirtualMachineScaleSets`. Defaults to `VirtualMachineScaleSets`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upgradesettings_csharp">
+<a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4665,6 +4835,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="upgradesettings_go">
+<a href="#upgradesettings_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}A `upgrade_settings` block as documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="vnetsubnetid_go">
 <a href="#vnetsubnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>Id</a>
 </span>
@@ -4866,6 +5046,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Node Pool which should be created. Possible values are `AvailabilitySet` and `VirtualMachineScaleSets`. Defaults to `VirtualMachineScaleSets`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upgradesettings_nodejs">
+<a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5073,6 +5263,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="upgrade_settings_python">
+<a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `upgrade_settings` block as documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="vnet_subnet_id_python">
 <a href="#vnet_subnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>id</a>
 </span>
@@ -5080,6 +5280,72 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a Subnet where the Kubernetes Node Pool should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxsurge_csharp">
+<a href="#maxsurge_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxsurge_go">
+<a href="#maxsurge_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxsurge_nodejs">
+<a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_surge_python">
+<a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

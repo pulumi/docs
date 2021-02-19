@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceDynamicSnippetContentv1"
-title_tag: "Resource ServiceDynamicSnippetContentv1 | Package Fastly"
-meta_desc: "Explore the ServiceDynamicSnippetContentv1 resource of the Fastly package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "fastly.ServiceDynamicSnippetContentv1"
+meta_desc: "Documentation for the fastly.ServiceDynamicSnippetContentv1 resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

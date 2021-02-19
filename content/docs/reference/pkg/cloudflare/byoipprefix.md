@@ -1,8 +1,8 @@
 
 ---
 title: "ByoIpPrefix"
-title_tag: "Resource ByoIpPrefix | Package Cloudflare"
-meta_desc: "Explore the ByoIpPrefix resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides the ability to manage Bring-Your-Own-IP prefixes (BYOIP) which are used with or without Magic Transit."
+title_tag: "cloudflare.ByoIpPrefix"
+meta_desc: "Documentation for the cloudflare.ByoIpPrefix resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

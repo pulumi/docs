@@ -1,8 +1,8 @@
 
 ---
-title: "GetAccounts"
-title_tag: "Function GetAccounts | Module kvstore | Package AliCloud"
-meta_desc: "Explore the GetAccounts function of the kvstore module, including examples, input properties, output properties, and supporting types. This data source provides the KVStore Accounts of the current Alibaba Cloud user."
+title: "getAccounts"
+title_tag: "alicloud.kvstore.getAccounts"
+meta_desc: "Documentation for the alicloud.kvstore.getAccounts function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -96,7 +96,7 @@ export const firstKvstoreAccountId = example.then(example => example.accounts[0]
 {{% /examples %}}
 
 
-## Using GetAccounts {#using}
+## Using getAccounts {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -113,6 +113,8 @@ export const firstKvstoreAccountId = example.then(example => example.accounts[0]
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccounts<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAccountsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAccountsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAccounts` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -347,7 +349,7 @@ The following arguments are supported:
 
 
 
-## GetAccounts Result {#result}
+## getAccounts Result {#result}
 
 The following output properties are available:
 
