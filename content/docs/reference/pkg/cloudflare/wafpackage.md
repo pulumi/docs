@@ -1,8 +1,8 @@
 
 ---
 title: "WafPackage"
-title_tag: "Resource WafPackage | Package Cloudflare"
-meta_desc: "Explore the WafPackage resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare WAF rule package resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall packages."
+title_tag: "cloudflare.WafPackage"
+meta_desc: "Documentation for the cloudflare.WafPackage resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

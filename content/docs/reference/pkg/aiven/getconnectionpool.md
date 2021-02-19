@@ -1,8 +1,8 @@
 
 ---
-title: "GetConnectionPool"
-title_tag: "Function GetConnectionPool | Package Aiven"
-meta_desc: "Explore the GetConnectionPool function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Connection Pool Data Source"
+title: "getConnectionPool"
+title_tag: "aiven.getConnectionPool"
+meta_desc: "Documentation for the aiven.getConnectionPool function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,7 +98,7 @@ const mytestpool = pulumi.all([aiven_project_myproject.project, aiven_service_my
 {{% /examples %}}
 
 
-## Using GetConnectionPool {#using}
+## Using getConnectionPool {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -507,7 +507,7 @@ be defined using reference as shown above to set up dependencies correctly.
 
 
 
-## GetConnectionPool Result {#result}
+## getConnectionPool Result {#result}
 
 The following output properties are available:
 

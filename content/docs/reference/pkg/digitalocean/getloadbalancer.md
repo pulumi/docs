@@ -1,8 +1,8 @@
 
 ---
-title: "GetLoadBalancer"
-title_tag: "Function GetLoadBalancer | Package DigitalOcean"
-meta_desc: "Explore the GetLoadBalancer function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a load balancer for use in other resources. This data source"
+title: "getLoadBalancer"
+title_tag: "digitalocean.getLoadBalancer"
+meta_desc: "Documentation for the digitalocean.getLoadBalancer function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -99,7 +99,7 @@ export const lbOutput = example.then(example => example.ip);
 {{% /examples %}}
 
 
-## Using GetLoadBalancer {#using}
+## Using getLoadBalancer {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -200,7 +200,7 @@ The following arguments are supported:
 
 
 
-## GetLoadBalancer Result {#result}
+## getLoadBalancer Result {#result}
 
 The following output properties are available:
 

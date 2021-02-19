@@ -1,8 +1,8 @@
 
 ---
 title: "KafkaSchema"
-title_tag: "Resource KafkaSchema | Package Aiven"
-meta_desc: "Explore the KafkaSchema resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Kafka Schema Resource"
+title_tag: "aiven.KafkaSchema"
+meta_desc: "Documentation for the aiven.KafkaSchema resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

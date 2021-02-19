@@ -1,8 +1,8 @@
 
 ---
 title: "Consumer"
-title_tag: "Resource Consumer | Package Kong"
-meta_desc: "Explore the Consumer resource of the Kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "kong.Consumer"
+meta_desc: "Documentation for the kong.Consumer resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

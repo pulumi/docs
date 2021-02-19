@@ -1,8 +1,8 @@
 
 ---
-title: "GetCertificateAuthority"
-title_tag: "Function GetCertificateAuthority | Module acmpca | Package AWS"
-meta_desc: "Explore the GetCertificateAuthority function of the acmpca module, including examples, input properties, output properties, and supporting types. Get information on a AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority)."
+title: "getCertificateAuthority"
+title_tag: "aws.acmpca.getCertificateAuthority"
+meta_desc: "Documentation for the aws.acmpca.getCertificateAuthority function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.acmpca.getCertificateAuthority({
 {{% /examples %}}
 
 
-## Using GetCertificateAuthority {#using}
+## Using getCertificateAuthority {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -289,7 +289,7 @@ The following arguments are supported:
 
 
 
-## GetCertificateAuthority Result {#result}
+## getCertificateAuthority Result {#result}
 
 The following output properties are available:
 

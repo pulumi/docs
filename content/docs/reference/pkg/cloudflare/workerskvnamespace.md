@@ -1,8 +1,8 @@
 
 ---
 title: "WorkersKvNamespace"
-title_tag: "Resource WorkersKvNamespace | Package Cloudflare"
-meta_desc: "Explore the WorkersKvNamespace resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Workers KV Namespace"
+title_tag: "cloudflare.WorkersKvNamespace"
+meta_desc: "Documentation for the cloudflare.WorkersKvNamespace resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

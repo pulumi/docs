@@ -1,8 +1,8 @@
 
 ---
-title: "GetClusterDriver"
-title_tag: "Function GetClusterDriver | Package Rancher 2"
-meta_desc: "Explore the GetClusterDriver function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 Cluster Driver resource."
+title: "getClusterDriver"
+title_tag: "rancher2.getClusterDriver"
+meta_desc: "Documentation for the rancher2.getClusterDriver function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const foo = pulumi.output(rancher2.getClusterDriver({
 {{% /examples %}}
 
 
-## Using GetClusterDriver {#using}
+## Using getClusterDriver {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## GetClusterDriver Result {#result}
+## getClusterDriver Result {#result}
 
 The following output properties are available:
 

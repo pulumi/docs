@@ -1,8 +1,8 @@
 
 ---
-title: "GetContainerRegistry"
-title_tag: "Function GetContainerRegistry | Package DigitalOcean"
-meta_desc: "Explore the GetContainerRegistry function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a container registry. This data source provides the name as"
+title: "getContainerRegistry"
+title_tag: "digitalocean.getContainerRegistry"
+meta_desc: "Documentation for the digitalocean.getContainerRegistry function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -93,7 +93,7 @@ const example = pulumi.output(digitalocean.getContainerRegistry({
 {{% /examples %}}
 
 
-## Using GetContainerRegistry {#using}
+## Using getContainerRegistry {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -194,7 +194,7 @@ The following arguments are supported:
 
 
 
-## GetContainerRegistry Result {#result}
+## getContainerRegistry Result {#result}
 
 The following output properties are available:
 

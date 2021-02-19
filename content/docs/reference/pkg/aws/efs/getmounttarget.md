@@ -1,8 +1,8 @@
 
 ---
-title: "GetMountTarget"
-title_tag: "Function GetMountTarget | Module efs | Package AWS"
-meta_desc: "Explore the GetMountTarget function of the efs module, including examples, input properties, output properties, and supporting types. Provides information about an Elastic File System Mount Target (EFS)."
+title: "getMountTarget"
+title_tag: "aws.efs.getMountTarget"
+meta_desc: "Documentation for the aws.efs.getMountTarget function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -102,7 +102,7 @@ const byId = aws.efs.getMountTarget({
 {{% /examples %}}
 
 
-## Using GetMountTarget {#using}
+## Using getMountTarget {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -203,7 +203,7 @@ The following arguments are supported:
 
 
 
-## GetMountTarget Result {#result}
+## getMountTarget Result {#result}
 
 The following output properties are available:
 

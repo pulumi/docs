@@ -1,8 +1,8 @@
 
 ---
 title: "Catalog"
-title_tag: "Resource Catalog | Package Rancher 2"
-meta_desc: "Explore the Catalog resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Catalog resource. This can be used to create cluster, global and/or project catalogs for Rancher v2 environments and retrieve their information."
+title_tag: "rancher2.Catalog"
+meta_desc: "Documentation for the rancher2.Catalog resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetConfiguration"
-title_tag: "Function GetConfiguration | Module msk | Package AWS"
-meta_desc: "Explore the GetConfiguration function of the msk module, including examples, input properties, output properties, and supporting types. Get information on an Amazon MSK Configuration."
+title: "getConfiguration"
+title_tag: "aws.msk.getConfiguration"
+meta_desc: "Documentation for the aws.msk.getConfiguration function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.msk.getConfiguration({
 {{% /examples %}}
 
 
-## Using GetConfiguration {#using}
+## Using getConfiguration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetConfiguration Result {#result}
+## getConfiguration Result {#result}
 
 The following output properties are available:
 

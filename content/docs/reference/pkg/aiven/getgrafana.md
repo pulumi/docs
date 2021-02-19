@@ -1,8 +1,8 @@
 
 ---
-title: "GetGrafana"
-title_tag: "Function GetGrafana | Package Aiven"
-meta_desc: "Explore the GetGrafana function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Grafana Data Source"
+title: "getGrafana"
+title_tag: "aiven.getGrafana"
+meta_desc: "Documentation for the aiven.getGrafana function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const gr1 = aiven.getGrafana({
 {{% /examples %}}
 
 
-## Using GetGrafana {#using}
+## Using getGrafana {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1019,7 +1019,7 @@ deletion is done.
 
 
 
-## GetGrafana Result {#result}
+## getGrafana Result {#result}
 
 The following output properties are available:
 

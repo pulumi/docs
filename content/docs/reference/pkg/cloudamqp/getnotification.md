@@ -1,8 +1,8 @@
 
 ---
-title: "GetNotification"
-title_tag: "Function GetNotification | Package CloudAMQP"
-meta_desc: "Explore the GetNotification function of the CloudAMQP package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about default or created recipients. The recipient will receive notifications assigned to an alarm that has triggered. To retrieve the recipient either use `recipient_id` or `name`."
+title: "getNotification"
+title_tag: "cloudamqp.getNotification"
+meta_desc: "Documentation for the cloudamqp.getNotification function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,7 +107,7 @@ const defaultRecipient = cloudamqp.getNotification({
 {{% /examples %}}
 
 
-## Using GetNotification {#using}
+## Using getNotification {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -276,7 +276,7 @@ The following arguments are supported:
 
 
 
-## GetNotification Result {#result}
+## getNotification Result {#result}
 
 The following output properties are available:
 

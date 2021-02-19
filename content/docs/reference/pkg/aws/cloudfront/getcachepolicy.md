@@ -1,8 +1,8 @@
 
 ---
-title: "GetCachePolicy"
-title_tag: "Function GetCachePolicy | Module cloudfront | Package AWS"
-meta_desc: "Explore the GetCachePolicy function of the cloudfront module, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+title: "getCachePolicy"
+title_tag: "aws.cloudfront.getCachePolicy"
+meta_desc: "Documentation for the aws.cloudfront.getCachePolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.cloudfront.getCachePolicy({
 {{% /examples %}}
 
 
-## Using GetCachePolicy {#using}
+## Using getCachePolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## GetCachePolicy Result {#result}
+## getCachePolicy Result {#result}
 
 The following output properties are available:
 

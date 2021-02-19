@@ -1,8 +1,8 @@
 
 ---
 title: "FloatingIp"
-title_tag: "Resource FloatingIp | Package DigitalOcean"
-meta_desc: "Explore the FloatingIp resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Floating IP to represent a publicly-accessible static IP addresses that can be mapped to one of your Droplets."
+title_tag: "digitalocean.FloatingIp"
+meta_desc: "Documentation for the digitalocean.FloatingIp resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

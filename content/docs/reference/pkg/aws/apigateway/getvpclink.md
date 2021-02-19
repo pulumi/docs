@@ -1,8 +1,8 @@
 
 ---
-title: "GetVpcLink"
-title_tag: "Function GetVpcLink | Module apigateway | Package AWS"
-meta_desc: "Explore the GetVpcLink function of the apigateway module, including examples, input properties, output properties, and supporting types. Use this data source to get the id of a VPC Link in"
+title: "getVpcLink"
+title_tag: "aws.apigateway.getVpcLink"
+meta_desc: "Documentation for the aws.apigateway.getVpcLink function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ const myApiGatewayVpcLink = pulumi.output(aws.apigateway.getVpcLink({
 {{% /examples %}}
 
 
-## Using GetVpcLink {#using}
+## Using getVpcLink {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ If multiple API Gateway VPC Links are found with this name, an error will be ret
 
 
 
-## GetVpcLink Result {#result}
+## getVpcLink Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetApp"
-title_tag: "Function GetApp | Package Rancher 2"
-meta_desc: "Explore the GetApp function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 app."
+title: "getApp"
+title_tag: "rancher2.getApp"
+meta_desc: "Documentation for the rancher2.getApp function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -97,7 +97,7 @@ const rancher2App = pulumi.output(rancher2.getApp({
 {{% /examples %}}
 
 
-## Using GetApp {#using}
+## Using getApp {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -318,7 +318,7 @@ The following arguments are supported:
 
 
 
-## GetApp Result {#result}
+## getApp Result {#result}
 
 The following output properties are available:
 

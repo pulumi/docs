@@ -1,6 +1,6 @@
 ---
 title: "Kong"
-title_tag: "Module Kong | Package Kong"
+title_tag: "kong.Kong"
 meta_desc: "A Pulumi package for creating and managing Kong resources."
 menu:
     reference:

@@ -1,8 +1,8 @@
 
 ---
-title: "GetInfrastructureConfiguration"
-title_tag: "Function GetInfrastructureConfiguration | Module imagebuilder | Package AWS"
-meta_desc: "Explore the GetInfrastructureConfiguration function of the imagebuilder module, including examples, input properties, output properties, and supporting types. Provides details about an Image Builder Infrastructure Configuration."
+title: "getInfrastructureConfiguration"
+title_tag: "aws.imagebuilder.getInfrastructureConfiguration"
+meta_desc: "Documentation for the aws.imagebuilder.getInfrastructureConfiguration function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.imagebuilder.getInfrastructureConfiguration({
 {{% /examples %}}
 
 
-## Using GetInfrastructureConfiguration {#using}
+## Using getInfrastructureConfiguration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -269,7 +269,7 @@ The following arguments are supported:
 
 
 
-## GetInfrastructureConfiguration Result {#result}
+## getInfrastructureConfiguration Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Role"
-title_tag: "Resource Role | Package Datadog"
-meta_desc: "Explore the Role resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog role resource. This can be used to create and manage Datadog roles."
+title_tag: "datadog.Role"
+meta_desc: "Documentation for the datadog.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

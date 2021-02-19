@@ -1,8 +1,8 @@
 
 ---
-title: "GetFunctions"
-title_tag: "Function GetFunctions | Module fc | Package AliCloud"
-meta_desc: "Explore the GetFunctions function of the fc module, including examples, input properties, output properties, and supporting types. This data source provides the Function Compute functions of the current Alibaba Cloud user."
+title: "getFunctions"
+title_tag: "alicloud.fc.getFunctions"
+meta_desc: "Documentation for the alicloud.fc.getFunctions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -100,7 +100,7 @@ export const firstFcFunctionName = functionsDs.functions[0].name;
 {{% /examples %}}
 
 
-## Using GetFunctions {#using}
+## Using getFunctions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -117,6 +117,8 @@ export const firstFcFunctionName = functionsDs.functions[0].name;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunctions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetFunctionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFunctionsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetFunctions` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -315,7 +317,7 @@ The following arguments are supported:
 
 
 
-## GetFunctions Result {#result}
+## getFunctions Result {#result}
 
 The following output properties are available:
 

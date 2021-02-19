@@ -1,8 +1,8 @@
 
 ---
-title: "GetClient"
-title_tag: "Function GetClient | Module saml | Package Keycloak"
-meta_desc: "Explore the GetClient function of the saml module, including examples, input properties, output properties, and supporting types. This data source can be used to fetch properties of a Keycloak client that uses the SAML protocol."
+title: "getClient"
+title_tag: "keycloak.saml.getClient"
+meta_desc: "Documentation for the keycloak.saml.getClient function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -116,7 +116,7 @@ const admin = realmManagement.then(realmManagement => keycloak.getRole({
 {{% /examples %}}
 
 
-## Using GetClient {#using}
+## Using getClient {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -257,7 +257,7 @@ The following arguments are supported:
 
 
 
-## GetClient Result {#result}
+## getClient Result {#result}
 
 The following output properties are available:
 

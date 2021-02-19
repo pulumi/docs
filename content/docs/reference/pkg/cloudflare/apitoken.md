@@ -1,8 +1,8 @@
 
 ---
 title: "ApiToken"
-title_tag: "Resource ApiToken | Package Cloudflare"
-meta_desc: "Explore the ApiToken resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource which manages Cloudflare API tokens."
+title_tag: "cloudflare.ApiToken"
+meta_desc: "Documentation for the cloudflare.ApiToken resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

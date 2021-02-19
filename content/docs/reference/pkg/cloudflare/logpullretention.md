@@ -1,8 +1,8 @@
 
 ---
 title: "LogpullRetention"
-title_tag: "Resource LogpullRetention | Package Cloudflare"
-meta_desc: "Explore the LogpullRetention resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Allows management of the Logpull Retention settings used to control whether or not to retain HTTP request logs."
+title_tag: "cloudflare.LogpullRetention"
+meta_desc: "Documentation for the cloudflare.LogpullRetention resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "KafkaTopic"
-title_tag: "Resource KafkaTopic | Package Aiven"
-meta_desc: "Explore the KafkaTopic resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Kafka Topic Resource"
+title_tag: "aiven.KafkaTopic"
+meta_desc: "Documentation for the aiven.KafkaTopic resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

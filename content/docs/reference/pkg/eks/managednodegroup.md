@@ -1,8 +1,8 @@
 
 ---
 title: "ManagedNodeGroup"
-title_tag: "Resource ManagedNodeGroup | Package eks"
-meta_desc: "Explore the ManagedNodeGroup resource of the eks package, including examples, input properties, output properties, lookup functions, and supporting types. ManagedNodeGroup is a component that wraps creating an AWS managed node group."
+title_tag: "eks.ManagedNodeGroup"
+meta_desc: "Documentation for the eks.ManagedNodeGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -23,19 +23,19 @@ https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedNodeGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagedNodeGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedNodeGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedNodeGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedNodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[CoreDataArgs]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">force_update_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_role</span><span class="p">:</span> <span class="nx">Optional[_iam_role.Role]</span> = None<span class="p">, </span><span class="nx">node_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedNodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[CoreDataArgs]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">force_update_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_role</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.iam.Role]</span> = None<span class="p">, </span><span class="nx">node_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedNodeGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagedNodeGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedNodeGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedNodeGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedNodeGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedNodeGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedNodeGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagedNodeGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedNodeGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagedNodeGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -56,7 +56,7 @@ https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedNodeGroupArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedNodeGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -125,7 +125,7 @@ https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedNodeGroupArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedNodeGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -164,7 +164,7 @@ https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ManagedNodeGroupArgs</span>
+        <span class="property-type"><a href="#inputs">ManagedNodeGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -187,11 +187,11 @@ https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html
 
 ## ManagedNodeGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ManagedNodeGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ManagedNodeGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -562,7 +562,7 @@ This default logic is based on the existing subnet IDs logic of this package: ht
 <a href="#noderole_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">iamrole<wbr>Role</span>
+        <span class="property-type">awsiam<wbr>Role</span>
     </dt>
     <dd>{{% md %}}The IAM Role that provides permissions for the EKS Node Group.
 
@@ -840,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodegroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">eksnode<wbr>Group<wbr>Node<wbr>Group</span>
+        <span class="property-type">awseks<wbr>Node<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The AWS managed node group.{{% /md %}}</dd>
 </dl>
@@ -1492,7 +1492,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
 <a href="#clusteringressrule_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ingress<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Rule<wbr>Security<wbr>Group<wbr>Rule</span>
+        <span class="property-type">awsec2Security<wbr>Group<wbr>Rule</span>
     </dt>
     <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1519,7 +1519,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
 <a href="#extranodesecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Node<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Security<wbr>Group[]</span>
+        <span class="property-type">awsec2Security<wbr>Group[]</span>
     </dt>
     <dd>{{% md %}}Extra security groups to attach on all nodes in this worker node group.
 
@@ -1547,7 +1547,7 @@ See for more details:
 <a href="#instanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">iaminstance<wbr>Profile<wbr>Instance<wbr>Profile</span>
+        <span class="property-type">awsiam<wbr>Instance<wbr>Profile</span>
     </dt>
     <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1639,7 +1639,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
 <a href="#nodesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Security<wbr>Group</span>
+        <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The security group for the worker node group to communicate with the cluster.
 
@@ -2351,7 +2351,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ekscluster<wbr>Cluster</span>
+        <span class="property-type">awseks<wbr>Cluster</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -2360,7 +2360,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#clustersecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Security<wbr>Group</span>
+        <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -2378,7 +2378,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#instanceroles_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">iamrole<wbr>Role[]</span>
+        <span class="property-type">awsiam<wbr>Role[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -2396,7 +2396,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Kubernetes</span>
+        <span class="property-type">kubernetes<wbr>Provider</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -2423,7 +2423,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#awsprovider_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Aws</span>
+        <span class="property-type">aws<wbr>Provider</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2432,7 +2432,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#eksnodeaccess_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Node<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">corev1Config<wbr>Map</span>
+        <span class="property-type">kubernetescorev1Config<wbr>Map</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2441,7 +2441,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#fargateprofile_nodejs" style="color: inherit; text-decoration: inherit;">fargate<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">eksfargate<wbr>Profile<wbr>Fargate<wbr>Profile</span>
+        <span class="property-type">awseks<wbr>Fargate<wbr>Profile</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2468,7 +2468,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#oidcprovider_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">iamopen<wbr>Id<wbr>Connect<wbr>Provider<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider</span>
+        <span class="property-type">awsiam<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2495,7 +2495,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#storageclasses_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: storagek8siov1Storage<wbr>Class}</span>
+        <span class="property-type">{[key: string]: kubernetesstoragev1Storage<wbr>Class}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"

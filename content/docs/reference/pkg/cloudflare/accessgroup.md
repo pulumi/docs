@@ -1,8 +1,8 @@
 
 ---
 title: "AccessGroup"
-title_tag: "Resource AccessGroup | Package Cloudflare"
-meta_desc: "Explore the AccessGroup resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare Access Group resource. Access Groups are used"
+title_tag: "cloudflare.AccessGroup"
+meta_desc: "Documentation for the cloudflare.AccessGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

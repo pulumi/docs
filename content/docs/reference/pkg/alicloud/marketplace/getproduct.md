@@ -1,8 +1,8 @@
 
 ---
-title: "GetProduct"
-title_tag: "Function GetProduct | Module marketplace | Package AliCloud"
-meta_desc: "Explore the GetProduct function of the marketplace module, including examples, input properties, output properties, and supporting types. This data source provides the Market product item details of Alibaba Cloud."
+title: "getProduct"
+title_tag: "alicloud.marketplace.getProduct"
+meta_desc: "Documentation for the alicloud.marketplace.getProduct function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -109,7 +109,7 @@ export const firstProductPackageVersion = defaultProduct.products[0].skuses[0].p
 {{% /examples %}}
 
 
-## Using GetProduct {#using}
+## Using getProduct {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -126,6 +126,8 @@ export const firstProductPackageVersion = defaultProduct.products[0].skuses[0].p
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProduct<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetProductArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProductResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetProduct` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -248,7 +250,7 @@ The following arguments are supported:
 
 
 
-## GetProduct Result {#result}
+## getProduct Result {#result}
 
 The following output properties are available:
 

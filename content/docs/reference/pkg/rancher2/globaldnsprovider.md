@@ -1,8 +1,8 @@
 
 ---
 title: "GlobalDnsProvider"
-title_tag: "Resource GlobalDnsProvider | Package Rancher 2"
-meta_desc: "Explore the GlobalDnsProvider resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher V2 Global DNS Provider resource. This can be used to create Global DNS Providers for Rancher V2. Supported Global DNS Providers: `alidns, cloudflare, route53`"
+title_tag: "rancher2.GlobalDnsProvider"
+meta_desc: "Documentation for the rancher2.GlobalDnsProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "NetworkPeering"
-title_tag: "Resource NetworkPeering | Package MongoDB Atlas"
-meta_desc: "Explore the NetworkPeering resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "mongodbatlas.NetworkPeering"
+meta_desc: "Documentation for the mongodbatlas.NetworkPeering resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

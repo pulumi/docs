@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectSshKey"
-title_tag: "Resource ProjectSshKey | Package Equinix Metal"
-meta_desc: "Explore the ProjectSshKey resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Equinix Metal project SSH key resource to manage project-specific SSH keys."
+title_tag: "equinix-metal.ProjectSshKey"
+meta_desc: "Documentation for the equinix-metal.ProjectSshKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

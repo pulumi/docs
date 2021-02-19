@@ -1,8 +1,8 @@
 
 ---
 title: "TagCategory"
-title_tag: "Resource TagCategory | Package vSphere"
-meta_desc: "Explore the TagCategory resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.TagCategory"
+meta_desc: "Documentation for the vsphere.TagCategory resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

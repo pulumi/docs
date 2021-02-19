@@ -1,6 +1,6 @@
 ---
 title: "Consul"
-title_tag: "Module Consul | Package Consul"
+title_tag: "consul.Consul"
 meta_desc: "A Pulumi package for creating and managing consul resources."
 menu:
     reference:

@@ -1,8 +1,8 @@
 
 ---
-title: "GetNodePool"
-title_tag: "Function GetNodePool | Package Rancher 2"
-meta_desc: "Explore the GetNodePool function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 Node Pool resource."
+title: "getNodePool"
+title_tag: "rancher2.getNodePool"
+meta_desc: "Documentation for the rancher2.getNodePool function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const foo = rancher2.getNodePool({
 {{% /examples %}}
 
 
-## Using GetNodePool {#using}
+## Using getNodePool {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -273,7 +273,7 @@ The following arguments are supported:
 
 
 
-## GetNodePool Result {#result}
+## getNodePool Result {#result}
 
 The following output properties are available:
 

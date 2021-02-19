@@ -1,8 +1,8 @@
 
 ---
 title: "DatastoreClusterVmAntiAffinityRule"
-title_tag: "Resource DatastoreClusterVmAntiAffinityRule | Package vSphere"
-meta_desc: "Explore the DatastoreClusterVmAntiAffinityRule resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.DatastoreClusterVmAntiAffinityRule"
+meta_desc: "Documentation for the vsphere.DatastoreClusterVmAntiAffinityRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Organization"
-title_tag: "Resource Organization | Package Equinix Metal"
-meta_desc: "Explore the Organization resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage organization resource in Equinix Metal."
+title_tag: "equinix-metal.Organization"
+meta_desc: "Documentation for the equinix-metal.Organization resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

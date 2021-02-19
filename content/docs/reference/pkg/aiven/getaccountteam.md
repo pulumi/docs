@@ -1,8 +1,8 @@
 
 ---
-title: "GetAccountTeam"
-title_tag: "Function GetAccountTeam | Package Aiven"
-meta_desc: "Explore the GetAccountTeam function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Account Team Data Source"
+title: "getAccountTeam"
+title_tag: "aiven.getAccountTeam"
+meta_desc: "Documentation for the aiven.getAccountTeam function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,7 +17,7 @@ The Account Team data source provides information about the existing Account Tea
 
 
 
-## Using GetAccountTeam {#using}
+## Using getAccountTeam {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -278,7 +278,7 @@ The following arguments are supported:
 
 
 
-## GetAccountTeam Result {#result}
+## getAccountTeam Result {#result}
 
 The following output properties are available:
 

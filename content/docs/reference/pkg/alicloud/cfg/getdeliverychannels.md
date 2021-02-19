@@ -1,8 +1,8 @@
 
 ---
-title: "GetDeliveryChannels"
-title_tag: "Function GetDeliveryChannels | Module cfg | Package AliCloud"
-meta_desc: "Explore the GetDeliveryChannels function of the cfg module, including examples, input properties, output properties, and supporting types. This data source provides the Config Delivery Channels of the current Alibaba Cloud user."
+title: "getDeliveryChannels"
+title_tag: "alicloud.cfg.getDeliveryChannels"
+meta_desc: "Documentation for the alicloud.cfg.getDeliveryChannels function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -108,7 +108,7 @@ export const firstConfigDeliveryChannelId = example.then(example => example.chan
 {{% /examples %}}
 
 
-## Using GetDeliveryChannels {#using}
+## Using getDeliveryChannels {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -125,6 +125,8 @@ export const firstConfigDeliveryChannelId = example.then(example => example.chan
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeliveryChannels<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDeliveryChannelsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDeliveryChannelsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDeliveryChannels` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -323,7 +325,7 @@ The following arguments are supported:
 
 
 
-## GetDeliveryChannels Result {#result}
+## getDeliveryChannels Result {#result}
 
 The following output properties are available:
 

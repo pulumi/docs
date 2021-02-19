@@ -1,8 +1,8 @@
 
 ---
 title: "CloudProviderSnapshot"
-title_tag: "Resource CloudProviderSnapshot | Package MongoDB Atlas"
-meta_desc: "Explore the CloudProviderSnapshot resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.CloudProviderSnapshot` provides a resource to take a cloud backup snapshot on demand."
+title_tag: "mongodbatlas.CloudProviderSnapshot"
+meta_desc: "Documentation for the mongodbatlas.CloudProviderSnapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

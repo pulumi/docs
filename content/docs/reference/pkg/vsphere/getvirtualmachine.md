@@ -1,8 +1,8 @@
 
 ---
-title: "GetVirtualMachine"
-title_tag: "Function GetVirtualMachine | Package vSphere"
-meta_desc: "Explore the GetVirtualMachine function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.VirtualMachine` data source can be used to find the UUID of an"
+title: "getVirtualMachine"
+title_tag: "vsphere.getVirtualMachine"
+meta_desc: "Documentation for the vsphere.getVirtualMachine function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -112,7 +112,7 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
 {{% /examples %}}
 
 
-## Using GetVirtualMachine {#using}
+## Using getVirtualMachine {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1869,7 +1869,7 @@ scan for disk attributes and controller types on. Default: `1`.
 
 
 
-## GetVirtualMachine Result {#result}
+## getVirtualMachine Result {#result}
 
 The following output properties are available:
 

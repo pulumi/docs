@@ -1,8 +1,8 @@
 
 ---
-title: "GetAlias"
-title_tag: "Function GetAlias | Module kms | Package AWS"
-meta_desc: "Explore the GetAlias function of the kms module, including examples, input properties, output properties, and supporting types. Use this data source to get the ARN of a KMS key alias."
+title: "getAlias"
+title_tag: "aws.kms.getAlias"
+meta_desc: "Documentation for the aws.kms.getAlias function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,7 +90,7 @@ const s3 = pulumi.output(aws.kms.getAlias({
 {{% /examples %}}
 
 
-## Using GetAlias {#using}
+## Using getAlias {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -191,7 +191,7 @@ The following arguments are supported:
 
 
 
-## GetAlias Result {#result}
+## getAlias Result {#result}
 
 The following output properties are available:
 

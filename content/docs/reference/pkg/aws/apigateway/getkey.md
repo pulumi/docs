@@ -1,8 +1,8 @@
 
 ---
-title: "GetKey"
-title_tag: "Function GetKey | Module apigateway | Package AWS"
-meta_desc: "Explore the GetKey function of the apigateway module, including examples, input properties, output properties, and supporting types. Use this data source to get the name and value of a pre-existing API Key, for"
+title: "getKey"
+title_tag: "aws.apigateway.getKey"
+meta_desc: "Documentation for the aws.apigateway.getKey function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const myApiKey = pulumi.output(aws.apigateway.getKey({
 {{% /examples %}}
 
 
-## Using GetKey {#using}
+## Using getKey {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -106,6 +106,8 @@ const myApiKey = pulumi.output(aws.apigateway.getKey({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetKeyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetKeyResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetKey` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -228,7 +230,7 @@ The following arguments are supported:
 
 
 
-## GetKey Result {#result}
+## getKey Result {#result}
 
 The following output properties are available:
 

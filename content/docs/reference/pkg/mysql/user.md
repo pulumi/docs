@@ -1,8 +1,8 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Package MySQL"
-meta_desc: "Explore the User resource of the MySQL package, including examples, input properties, output properties, lookup functions, and supporting types. The ``mysql.User`` resource creates and manages a user on a MySQL"
+title_tag: "mysql.User"
+meta_desc: "Documentation for the mysql.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

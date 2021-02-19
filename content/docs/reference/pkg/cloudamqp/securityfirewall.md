@@ -1,8 +1,8 @@
 
 ---
 title: "SecurityFirewall"
-title_tag: "Resource SecurityFirewall | Package CloudAMQP"
-meta_desc: "Explore the SecurityFirewall resource of the CloudAMQP package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to configure and manage firewall rules for the CloudAMQP instance. Beware that all rules need to be present, since all older configurations will be overwritten."
+title_tag: "cloudamqp.SecurityFirewall"
+meta_desc: "Documentation for the cloudamqp.SecurityFirewall resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

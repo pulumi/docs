@@ -1,8 +1,8 @@
 
 ---
-title: "GetOutpostInstanceType"
-title_tag: "Function GetOutpostInstanceType | Module outposts | Package AWS"
-meta_desc: "Explore the GetOutpostInstanceType function of the outposts module, including examples, input properties, output properties, and supporting types. Information about single Outpost Instance Type."
+title: "getOutpostInstanceType"
+title_tag: "aws.outposts.getOutpostInstanceType"
+meta_desc: "Documentation for the aws.outposts.getOutpostInstanceType function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -15,7 +15,7 @@ Information about single Outpost Instance Type.
 
 
 
-## Using GetOutpostInstanceType {#using}
+## Using getOutpostInstanceType {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -32,6 +32,8 @@ Information about single Outpost Instance Type.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOutpostInstanceType<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetOutpostInstanceTypeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetOutpostInstanceTypeResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetOutpostInstanceType` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -194,7 +196,7 @@ The following arguments are supported:
 
 
 
-## GetOutpostInstanceType Result {#result}
+## getOutpostInstanceType Result {#result}
 
 The following output properties are available:
 

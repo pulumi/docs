@@ -1,8 +1,8 @@
 
 ---
 title: "GroupRoles"
-title_tag: "Resource GroupRoles | Package Keycloak"
-meta_desc: "Explore the GroupRoles resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "keycloak.GroupRoles"
+meta_desc: "Documentation for the keycloak.GroupRoles resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

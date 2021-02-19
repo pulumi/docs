@@ -1,8 +1,8 @@
 
 ---
-title: "GetSpotMarketRequest"
-title_tag: "Function GetSpotMarketRequest | Package Equinix Metal"
-meta_desc: "Explore the GetSpotMarketRequest function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. "
+title: "getSpotMarketRequest"
+title_tag: "equinix-metal.getSpotMarketRequest"
+meta_desc: "Documentation for the equinix-metal.getSpotMarketRequest function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetSpotMarketRequest function of the Equinix Metal packa
 
 
 
-## Using GetSpotMarketRequest {#using}
+## Using getSpotMarketRequest {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -114,7 +114,7 @@ The following arguments are supported:
 
 
 
-## GetSpotMarketRequest Result {#result}
+## getSpotMarketRequest Result {#result}
 
 The following output properties are available:
 

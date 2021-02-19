@@ -1,8 +1,8 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Package Rancher 2"
-meta_desc: "Explore the User resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 User resource. This can be used to create Users for Rancher v2 environments and retrieve their information."
+title_tag: "rancher2.User"
+meta_desc: "Documentation for the rancher2.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

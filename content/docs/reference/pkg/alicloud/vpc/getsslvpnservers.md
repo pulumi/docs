@@ -1,8 +1,8 @@
 
 ---
-title: "GetSslVpnServers"
-title_tag: "Function GetSslVpnServers | Module vpc | Package AliCloud"
-meta_desc: "Explore the GetSslVpnServers function of the vpc module, including examples, input properties, output properties, and supporting types. The SSL-VPN servers data source lists lots of SSL-VPN servers resource information owned by an Alicloud account."
+title: "getSslVpnServers"
+title_tag: "alicloud.vpc.getSslVpnServers"
+meta_desc: "Documentation for the alicloud.vpc.getSslVpnServers function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -108,7 +108,7 @@ const foo = pulumi.output(alicloud.vpc.getSslVpnServers({
 {{% /examples %}}
 
 
-## Using GetSslVpnServers {#using}
+## Using getSslVpnServers {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -125,6 +125,8 @@ const foo = pulumi.output(alicloud.vpc.getSslVpnServers({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSslVpnServers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSslVpnServersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSslVpnServersResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetSslVpnServers` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -327,7 +329,7 @@ The following arguments are supported:
 
 
 
-## GetSslVpnServers Result {#result}
+## getSslVpnServers Result {#result}
 
 The following output properties are available:
 

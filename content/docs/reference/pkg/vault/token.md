@@ -1,8 +1,8 @@
 
 ---
 title: "Token"
-title_tag: "Resource Token | Package Vault"
-meta_desc: "Explore the Token resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vault.Token"
+meta_desc: "Documentation for the vault.Token resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

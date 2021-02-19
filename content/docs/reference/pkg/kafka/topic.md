@@ -1,8 +1,8 @@
 
 ---
 title: "Topic"
-title_tag: "Resource Topic | Package Kafka"
-meta_desc: "Explore the Topic resource of the Kafka package, including examples, input properties, output properties, lookup functions, and supporting types. A resource for managing Kafka topics. Increases partition count without destroying the topic."
+title_tag: "kafka.Topic"
+meta_desc: "Documentation for the kafka.Topic resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

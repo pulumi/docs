@@ -1,8 +1,8 @@
 
 ---
-title: "GetSizes"
-title_tag: "Function GetSizes | Package DigitalOcean"
-meta_desc: "Explore the GetSizes function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Retrieves information about the Droplet sizes that DigitalOcean supports, with"
+title: "getSizes"
+title_tag: "digitalocean.getSizes"
+meta_desc: "Documentation for the digitalocean.getSizes function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -130,7 +130,7 @@ const web = new digitalocean.Droplet("web", {
 {{% /examples %}}
 
 
-## Using GetSizes {#using}
+## Using getSizes {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -147,6 +147,8 @@ const web = new digitalocean.Droplet("web", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSizes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSizesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSizesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetSizes` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -277,7 +279,7 @@ The `sort` block is documented below.
 
 
 
-## GetSizes Result {#result}
+## getSizes Result {#result}
 
 The following output properties are available:
 

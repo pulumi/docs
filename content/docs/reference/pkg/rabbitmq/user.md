@@ -1,8 +1,8 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Package RabbitMQ"
-meta_desc: "Explore the User resource of the RabbitMQ package, including examples, input properties, output properties, lookup functions, and supporting types. The ``rabbitmq.User`` resource creates and manages a user."
+title_tag: "rabbitmq.User"
+meta_desc: "Documentation for the rabbitmq.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Volume"
-title_tag: "Resource Volume | Package Equinix Metal"
-meta_desc: "Explore the Volume resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "equinix-metal.Volume"
+meta_desc: "Documentation for the equinix-metal.Volume resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Redis"
-title_tag: "Resource Redis | Package Aiven"
-meta_desc: "Explore the Redis resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Redis Resource"
+title_tag: "aiven.Redis"
+meta_desc: "Documentation for the aiven.Redis resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

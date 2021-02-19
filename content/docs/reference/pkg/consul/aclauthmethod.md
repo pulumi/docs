@@ -1,8 +1,8 @@
 
 ---
 title: "AclAuthMethod"
-title_tag: "Resource AclAuthMethod | Package Consul"
-meta_desc: "Explore the AclAuthMethod resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. Starting with Consul 1.5.0, the consul.AclAuthMethod resource can be used to"
+title_tag: "consul.AclAuthMethod"
+meta_desc: "Documentation for the consul.AclAuthMethod resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

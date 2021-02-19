@@ -1,8 +1,8 @@
 
 ---
 title: "Downtime"
-title_tag: "Resource Downtime | Package Datadog"
-meta_desc: "Explore the Downtime resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog downtime resource. This can be used to create and manage Datadog downtimes."
+title_tag: "datadog.Downtime"
+meta_desc: "Documentation for the datadog.Downtime resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

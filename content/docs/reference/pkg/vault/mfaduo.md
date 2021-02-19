@@ -1,8 +1,8 @@
 
 ---
 title: "MfaDuo"
-title_tag: "Resource MfaDuo | Package Vault"
-meta_desc: "Explore the MfaDuo resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage [Duo MFA](https://www.vaultproject.io/docs/enterprise/mfa/mfa-duo.html)."
+title_tag: "vault.MfaDuo"
+meta_desc: "Documentation for the vault.MfaDuo resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

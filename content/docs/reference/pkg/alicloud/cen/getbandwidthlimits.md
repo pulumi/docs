@@ -1,8 +1,8 @@
 
 ---
-title: "GetBandwidthLimits"
-title_tag: "Function GetBandwidthLimits | Module cen | Package AliCloud"
-meta_desc: "Explore the GetBandwidthLimits function of the cen module, including examples, input properties, output properties, and supporting types. This data source provides CEN Bandwidth Limits available to the user."
+title: "getBandwidthLimits"
+title_tag: "alicloud.cen.getBandwidthLimits"
+meta_desc: "Documentation for the alicloud.cen.getBandwidthLimits function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -100,7 +100,7 @@ export const firstCenBandwidthLimitsLocalRegionId = bwl.limits[0].localRegionId;
 {{% /examples %}}
 
 
-## Using GetBandwidthLimits {#using}
+## Using getBandwidthLimits {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -117,6 +117,8 @@ export const firstCenBandwidthLimitsLocalRegionId = bwl.limits[0].localRegionId;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBandwidthLimits<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetBandwidthLimitsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBandwidthLimitsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetBandwidthLimits` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -235,7 +237,7 @@ The following arguments are supported:
 
 
 
-## GetBandwidthLimits Result {#result}
+## getBandwidthLimits Result {#result}
 
 The following output properties are available:
 

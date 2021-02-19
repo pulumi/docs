@@ -1,8 +1,8 @@
 
 ---
 title: "License"
-title_tag: "Resource License | Package Consul"
-meta_desc: "Explore the License resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **NOTE:** This feature requires [Consul Enterprise](https://www.consul.io/docs/enterprise/index.html)."
+title_tag: "consul.License"
+meta_desc: "Documentation for the consul.License resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

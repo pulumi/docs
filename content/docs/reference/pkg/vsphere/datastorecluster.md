@@ -1,8 +1,8 @@
 
 ---
 title: "DatastoreCluster"
-title_tag: "Resource DatastoreCluster | Package vSphere"
-meta_desc: "Explore the DatastoreCluster resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.DatastoreCluster"
+meta_desc: "Documentation for the vsphere.DatastoreCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

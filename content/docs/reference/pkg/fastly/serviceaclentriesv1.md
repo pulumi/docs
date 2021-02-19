@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceACLEntriesv1"
-title_tag: "Resource ServiceACLEntriesv1 | Package Fastly"
-meta_desc: "Explore the ServiceACLEntriesv1 resource of the Fastly package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "fastly.ServiceACLEntriesv1"
+meta_desc: "Documentation for the fastly.ServiceACLEntriesv1 resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

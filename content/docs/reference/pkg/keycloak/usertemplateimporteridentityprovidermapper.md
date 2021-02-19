@@ -1,8 +1,8 @@
 
 ---
 title: "UserTemplateImporterIdentityProviderMapper"
-title_tag: "Resource UserTemplateImporterIdentityProviderMapper | Package Keycloak"
-meta_desc: "Explore the UserTemplateImporterIdentityProviderMapper resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "keycloak.UserTemplateImporterIdentityProviderMapper"
+meta_desc: "Documentation for the keycloak.UserTemplateImporterIdentityProviderMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

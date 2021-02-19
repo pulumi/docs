@@ -1,8 +1,8 @@
 
 ---
-title: "GetLocalGatewayRouteTable"
-title_tag: "Function GetLocalGatewayRouteTable | Module ec2 | Package AWS"
-meta_desc: "Explore the GetLocalGatewayRouteTable function of the ec2 module, including examples, input properties, output properties, and supporting types. Provides details about an EC2 Local Gateway Route Table."
+title: "getLocalGatewayRouteTable"
+title_tag: "aws.ec2.getLocalGatewayRouteTable"
+meta_desc: "Documentation for the aws.ec2.getLocalGatewayRouteTable function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -101,7 +101,7 @@ const selected = aws.ec2.getLocalGatewayRouteTable({
 {{% /examples %}}
 
 
-## Using GetLocalGatewayRouteTable {#using}
+## Using getLocalGatewayRouteTable {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -118,6 +118,8 @@ const selected = aws.ec2.getLocalGatewayRouteTable({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLocalGatewayRouteTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetLocalGatewayRouteTableArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetLocalGatewayRouteTableResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetLocalGatewayRouteTable` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -400,7 +402,7 @@ a pair on the desired local gateway route table.
 
 
 
-## GetLocalGatewayRouteTable Result {#result}
+## getLocalGatewayRouteTable Result {#result}
 
 The following output properties are available:
 

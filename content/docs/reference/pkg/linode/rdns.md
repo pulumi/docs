@@ -1,8 +1,8 @@
 
 ---
 title: "Rdns"
-title_tag: "Resource Rdns | Package Linode"
-meta_desc: "Explore the Rdns resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode RDNS resource.  This can be used to create and modify RDNS records."
+title_tag: "linode.Rdns"
+meta_desc: "Documentation for the linode.Rdns resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

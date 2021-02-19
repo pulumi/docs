@@ -1,8 +1,8 @@
 
 ---
-title: "GetVolume"
-title_tag: "Function GetVolume | Package Equinix Metal"
-meta_desc: "Explore the GetVolume function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. Provides an Equinix Metal Block Storage Volume datasource to allow you to read existing volumes."
+title: "getVolume"
+title_tag: "equinix-metal.getVolume"
+meta_desc: "Documentation for the equinix-metal.getVolume function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -100,7 +100,7 @@ export const volumeSize = volume1.then(volume1 => volume1.size);
 {{% /examples %}}
 
 
-## Using GetVolume {#using}
+## Using getVolume {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -281,7 +281,7 @@ The following arguments are supported:
 
 
 
-## GetVolume Result {#result}
+## getVolume Result {#result}
 
 The following output properties are available:
 

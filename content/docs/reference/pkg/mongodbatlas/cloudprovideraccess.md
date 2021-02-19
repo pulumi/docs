@@ -1,8 +1,8 @@
 
 ---
 title: "CloudProviderAccess"
-title_tag: "Resource CloudProviderAccess | Package MongoDB Atlas"
-meta_desc: "Explore the CloudProviderAccess resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "mongodbatlas.CloudProviderAccess"
+meta_desc: "Documentation for the mongodbatlas.CloudProviderAccess resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

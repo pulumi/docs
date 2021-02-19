@@ -1,8 +1,8 @@
 
 ---
 title: "Vlan"
-title_tag: "Resource Vlan | Package Linode"
-meta_desc: "Explore the Vlan resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "linode.Vlan"
+meta_desc: "Documentation for the linode.Vlan resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

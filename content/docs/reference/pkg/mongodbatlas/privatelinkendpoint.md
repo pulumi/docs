@@ -1,8 +1,8 @@
 
 ---
 title: "PrivateLinkEndpoint"
-title_tag: "Resource PrivateLinkEndpoint | Package MongoDB Atlas"
-meta_desc: "Explore the PrivateLinkEndpoint resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.PrivateLinkEndpoint` provides a Private Endpoint resource. This represents a Private Endpoint Service that can be created in an Atlas project."
+title_tag: "mongodbatlas.PrivateLinkEndpoint"
+meta_desc: "Documentation for the mongodbatlas.PrivateLinkEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

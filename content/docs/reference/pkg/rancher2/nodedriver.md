@@ -1,8 +1,8 @@
 
 ---
 title: "NodeDriver"
-title_tag: "Resource NodeDriver | Package Rancher 2"
-meta_desc: "Explore the NodeDriver resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Node Driver resource. This can be used to create Node Driver for Rancher v2 RKE clusters and retrieve their information."
+title_tag: "rancher2.NodeDriver"
+meta_desc: "Documentation for the rancher2.NodeDriver resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

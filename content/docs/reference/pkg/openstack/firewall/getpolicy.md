@@ -1,8 +1,8 @@
 
 ---
-title: "GetPolicy"
-title_tag: "Function GetPolicy | Module firewall | Package Open Stack"
-meta_desc: "Explore the GetPolicy function of the firewall module, including examples, input properties, output properties, and supporting types. Use this data source to get firewall policy information of an available OpenStack firewall policy."
+title: "getPolicy"
+title_tag: "openstack.firewall.getPolicy"
+meta_desc: "Documentation for the openstack.firewall.getPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const policy = pulumi.output(openstack.firewall.getPolicy({
 {{% /examples %}}
 
 
-## Using GetPolicy {#using}
+## Using getPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -318,7 +318,7 @@ A Neutron client is needed to retrieve firewall policy ids. If omitted, the
 
 
 
-## GetPolicy Result {#result}
+## getPolicy Result {#result}
 
 The following output properties are available:
 

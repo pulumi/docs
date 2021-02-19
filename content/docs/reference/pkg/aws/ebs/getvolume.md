@@ -1,8 +1,8 @@
 
 ---
-title: "GetVolume"
-title_tag: "Function GetVolume | Module ebs | Package AWS"
-meta_desc: "Explore the GetVolume function of the ebs module, including examples, input properties, output properties, and supporting types. Use this data source to get information about an EBS volume for use in other"
+title: "getVolume"
+title_tag: "aws.ebs.getVolume"
+meta_desc: "Documentation for the aws.ebs.getVolume function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -143,7 +143,7 @@ const ebsVolume = pulumi.output(aws.ebs.getVolume({
 {{% /examples %}}
 
 
-## Using GetVolume {#using}
+## Using getVolume {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -336,7 +336,7 @@ recent Volume.
 
 
 
-## GetVolume Result {#result}
+## getVolume Result {#result}
 
 The following output properties are available:
 

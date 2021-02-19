@@ -1,8 +1,8 @@
 
 ---
-title: "GetSecurityGroupRules"
-title_tag: "Function GetSecurityGroupRules | Module ecs | Package AliCloud"
-meta_desc: "Explore the GetSecurityGroupRules function of the ecs module, including examples, input properties, output properties, and supporting types. The `alicloud.ecs.getSecurityGroupRules` data source provides a collection of security permissions of a specific security group."
+title: "getSecurityGroupRules"
+title_tag: "alicloud.ecs.getSecurityGroupRules"
+meta_desc: "Documentation for the alicloud.ecs.getSecurityGroupRules function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -153,7 +153,7 @@ const backend = new alicloud.ecs.Instance("backend", {
 {{% /examples %}}
 
 
-## Using GetSecurityGroupRules {#using}
+## Using getSecurityGroupRules {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -170,6 +170,8 @@ const backend = new alicloud.ecs.Instance("backend", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroupRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSecurityGroupRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSecurityGroupRulesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetSecurityGroupRules` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -448,7 +450,7 @@ The following arguments are supported:
 
 
 
-## GetSecurityGroupRules Result {#result}
+## getSecurityGroupRules Result {#result}
 
 The following output properties are available:
 

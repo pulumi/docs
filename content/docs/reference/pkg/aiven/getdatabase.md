@@ -1,8 +1,8 @@
 
 ---
-title: "GetDatabase"
-title_tag: "Function GetDatabase | Package Aiven"
-meta_desc: "Explore the GetDatabase function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Database Data Source"
+title: "getDatabase"
+title_tag: "aiven.getDatabase"
+meta_desc: "Documentation for the aiven.getDatabase function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,7 +98,7 @@ const mydatabase = pulumi.all([aiven_project_myproject.project, aiven_service_my
 {{% /examples %}}
 
 
-## Using GetDatabase {#using}
+## Using getDatabase {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -395,7 +395,7 @@ They should be defined using reference as shown above to set up dependencies cor
 
 
 
-## GetDatabase Result {#result}
+## getDatabase Result {#result}
 
 The following output properties are available:
 

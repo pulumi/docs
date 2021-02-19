@@ -1,8 +1,8 @@
 
 ---
-title: "GetNetworkPeering"
-title_tag: "Function GetNetworkPeering | Package MongoDB Atlas"
-meta_desc: "Explore the GetNetworkPeering function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.NetworkPeering` describes a Network Peering Connection."
+title: "getNetworkPeering"
+title_tag: "mongodbatlas.getNetworkPeering"
+meta_desc: "Documentation for the mongodbatlas.getNetworkPeering function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,7 +17,7 @@ meta_desc: "Explore the GetNetworkPeering function of the MongoDB Atlas package,
 
 
 
-## Using GetNetworkPeering {#using}
+## Using getNetworkPeering {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -158,7 +158,7 @@ The following arguments are supported:
 
 
 
-## GetNetworkPeering Result {#result}
+## getNetworkPeering Result {#result}
 
 The following output properties are available:
 

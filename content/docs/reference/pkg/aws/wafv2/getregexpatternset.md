@@ -1,8 +1,8 @@
 
 ---
-title: "GetRegexPatternSet"
-title_tag: "Function GetRegexPatternSet | Module wafv2 | Package AWS"
-meta_desc: "Explore the GetRegexPatternSet function of the wafv2 module, including examples, input properties, output properties, and supporting types. Retrieves the summary of a WAFv2 Regex Pattern Set."
+title: "getRegexPatternSet"
+title_tag: "aws.wafv2.getRegexPatternSet"
+meta_desc: "Documentation for the aws.wafv2.getRegexPatternSet function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const example = pulumi.output(aws.wafv2.getRegexPatternSet({
 {{% /examples %}}
 
 
-## Using GetRegexPatternSet {#using}
+## Using getRegexPatternSet {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ The following arguments are supported:
 
 
 
-## GetRegexPatternSet Result {#result}
+## getRegexPatternSet Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "LogPushOwnershipChallenge"
-title_tag: "Resource LogPushOwnershipChallenge | Package Cloudflare"
-meta_desc: "Explore the LogPushOwnershipChallenge resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource which manages Cloudflare Logpush ownership challenges to use"
+title_tag: "cloudflare.LogPushOwnershipChallenge"
+meta_desc: "Documentation for the cloudflare.LogPushOwnershipChallenge resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

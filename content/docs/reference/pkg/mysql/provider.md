@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package MySQL"
-meta_desc: "Explore the Provider resource of the MySQL package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the mysql package. By default, resources use package-wide configuration"
+title_tag: "mysql.Provider"
+meta_desc: "Documentation for the mysql.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetKafkaSchema"
-title_tag: "Function GetKafkaSchema | Package Aiven"
-meta_desc: "Explore the GetKafkaSchema function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Kafka Schema Data Source"
+title: "getKafkaSchema"
+title_tag: "aiven.getKafkaSchema"
+meta_desc: "Documentation for the aiven.getKafkaSchema function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,7 +98,7 @@ const kafka-schema1 = aiven.getKafkaSchema({
 {{% /examples %}}
 
 
-## Using GetKafkaSchema {#using}
+## Using getKafkaSchema {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -407,7 +407,7 @@ it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FOR
 
 
 
-## GetKafkaSchema Result {#result}
+## getKafkaSchema Result {#result}
 
 The following output properties are available:
 

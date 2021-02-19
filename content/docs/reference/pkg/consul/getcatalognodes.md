@@ -1,8 +1,8 @@
 
 ---
-title: "GetCatalogNodes"
-title_tag: "Function GetCatalogNodes | Package Consul"
-meta_desc: "Explore the GetCatalogNodes function of the Consul package, including examples, input properties, output properties, and supporting types. "
+title: "getCatalogNodes"
+title_tag: "consul.getCatalogNodes"
+meta_desc: "Documentation for the consul.getCatalogNodes function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetCatalogNodes function of the Consul package, includin
 
 
 
-## Using GetCatalogNodes {#using}
+## Using getCatalogNodes {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -30,6 +30,8 @@ meta_desc: "Explore the GetCatalogNodes function of the Consul package, includin
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCatalogNodes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCatalogNodesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCatalogNodesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetCatalogNodes` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -108,7 +110,7 @@ The following arguments are supported:
 
 
 
-## GetCatalogNodes Result {#result}
+## getCatalogNodes Result {#result}
 
 The following output properties are available:
 

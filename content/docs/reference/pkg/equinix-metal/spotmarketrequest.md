@@ -1,8 +1,8 @@
 
 ---
 title: "SpotMarketRequest"
-title_tag: "Resource SpotMarketRequest | Package Equinix Metal"
-meta_desc: "Explore the SpotMarketRequest resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Equinix Metal Spot Market Request resource to allow you to"
+title_tag: "equinix-metal.SpotMarketRequest"
+meta_desc: "Documentation for the equinix-metal.SpotMarketRequest resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

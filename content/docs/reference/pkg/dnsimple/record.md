@@ -1,8 +1,8 @@
 
 ---
 title: "Record"
-title_tag: "Resource Record | Package DNSimple"
-meta_desc: "Explore the Record resource of the DNSimple package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DNSimple record resource."
+title_tag: "dnsimple.Record"
+meta_desc: "Documentation for the dnsimple.Record resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

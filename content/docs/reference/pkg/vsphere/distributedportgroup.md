@@ -1,8 +1,8 @@
 
 ---
 title: "DistributedPortGroup"
-title_tag: "Resource DistributedPortGroup | Package vSphere"
-meta_desc: "Explore the DistributedPortGroup resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.DistributedPortGroup"
+meta_desc: "Documentation for the vsphere.DistributedPortGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

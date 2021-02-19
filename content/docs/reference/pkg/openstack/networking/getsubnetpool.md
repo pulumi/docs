@@ -1,8 +1,8 @@
 
 ---
-title: "GetSubnetPool"
-title_tag: "Function GetSubnetPool | Module networking | Package Open Stack"
-meta_desc: "Explore the GetSubnetPool function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack subnetpool."
+title: "getSubnetPool"
+title_tag: "openstack.networking.getSubnetPool"
+meta_desc: "Documentation for the openstack.networking.getSubnetPool function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const subnetpool1 = pulumi.output(openstack.networking.getSubnetPool({
 {{% /examples %}}
 
 
-## Using GetSubnetPool {#using}
+## Using getSubnetPool {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -690,7 +690,7 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
 
 
-## GetSubnetPool Result {#result}
+## getSubnetPool Result {#result}
 
 The following output properties are available:
 

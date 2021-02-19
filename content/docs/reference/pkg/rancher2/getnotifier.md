@@ -1,8 +1,8 @@
 
 ---
-title: "GetNotifier"
-title_tag: "Function GetNotifier | Package Rancher 2"
-meta_desc: "Explore the GetNotifier function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 notifier."
+title: "getNotifier"
+title_tag: "rancher2.getNotifier"
+meta_desc: "Documentation for the rancher2.getNotifier function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const foo = pulumi.output(rancher2.getNotifier({
 {{% /examples %}}
 
 
-## Using GetNotifier {#using}
+## Using getNotifier {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -313,7 +313,7 @@ The following arguments are supported:
 
 
 
-## GetNotifier Result {#result}
+## getNotifier Result {#result}
 
 The following output properties are available:
 

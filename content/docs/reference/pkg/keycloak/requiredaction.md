@@ -1,8 +1,8 @@
 
 ---
 title: "RequiredAction"
-title_tag: "Resource RequiredAction | Package Keycloak"
-meta_desc: "Explore the RequiredAction resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "keycloak.RequiredAction"
+meta_desc: "Documentation for the keycloak.RequiredAction resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "PrivateIpMode"
-title_tag: "Resource PrivateIpMode | Package MongoDB Atlas"
-meta_desc: "Explore the PrivateIpMode resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.PrivateIpMode` provides a Private IP Mode resource. This allows one to disable Connect via Peering Only mode for a MongoDB Atlas Project."
+title_tag: "mongodbatlas.PrivateIpMode"
+meta_desc: "Documentation for the mongodbatlas.PrivateIpMode resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

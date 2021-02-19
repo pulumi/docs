@@ -1,8 +1,8 @@
 
 ---
 title: "Sni"
-title_tag: "Resource Sni | Package Kong"
-meta_desc: "Explore the Sni resource of the Kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "kong.Sni"
+meta_desc: "Documentation for the kong.Sni resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

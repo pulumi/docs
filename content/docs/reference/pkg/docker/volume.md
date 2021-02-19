@@ -1,8 +1,8 @@
 
 ---
 title: "Volume"
-title_tag: "Resource Volume | Package Docker"
-meta_desc: "Explore the Volume resource of the Docker package, including examples, input properties, output properties, lookup functions, and supporting types. Creates and destroys a volume in Docker. This can be used alongside"
+title_tag: "docker.Volume"
+meta_desc: "Documentation for the docker.Volume resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "UserRoles"
-title_tag: "Resource UserRoles | Package Keycloak"
-meta_desc: "Explore the UserRoles resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "keycloak.UserRoles"
+meta_desc: "Documentation for the keycloak.UserRoles resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

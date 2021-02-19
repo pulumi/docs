@@ -1,8 +1,8 @@
 
 ---
 title: "MirrorMakerReplicationFlow"
-title_tag: "Resource MirrorMakerReplicationFlow | Package Aiven"
-meta_desc: "Explore the MirrorMakerReplicationFlow resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # MirrorMaker 2 Replication Flow Resource"
+title_tag: "aiven.MirrorMakerReplicationFlow"
+meta_desc: "Documentation for the aiven.MirrorMakerReplicationFlow resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

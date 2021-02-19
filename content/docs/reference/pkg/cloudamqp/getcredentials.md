@@ -1,8 +1,8 @@
 
 ---
-title: "GetCredentials"
-title_tag: "Function GetCredentials | Package CloudAMQP"
-meta_desc: "Explore the GetCredentials function of the CloudAMQP package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about the credentials of the configured user in Rabbit MQ. Information is extracted from `cloudamqp_instance.instance.url`."
+title: "getCredentials"
+title_tag: "cloudamqp.getCredentials"
+meta_desc: "Documentation for the cloudamqp.getCredentials function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -100,7 +100,7 @@ const credentials = cloudamqp.getCredentials({
 {{% /examples %}}
 
 
-## Using GetCredentials {#using}
+## Using getCredentials {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -117,6 +117,8 @@ const credentials = cloudamqp.getCredentials({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCredentials<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCredentialsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCredentialsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetCredentials` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -267,7 +269,7 @@ The following arguments are supported:
 
 
 
-## GetCredentials Result {#result}
+## getCredentials Result {#result}
 
 The following output properties are available:
 

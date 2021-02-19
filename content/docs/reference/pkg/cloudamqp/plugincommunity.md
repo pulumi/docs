@@ -1,8 +1,8 @@
 
 ---
 title: "PluginCommunity"
-title_tag: "Resource PluginCommunity | Package CloudAMQP"
-meta_desc: "Explore the PluginCommunity resource of the CloudAMQP package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to install or uninstall community plugins. Once installed the plugin will be available in `cloudamqp.Plugin`."
+title_tag: "cloudamqp.PluginCommunity"
+meta_desc: "Documentation for the cloudamqp.PluginCommunity resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

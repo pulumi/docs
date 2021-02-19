@@ -1,8 +1,8 @@
 
 ---
 title: "AclRole"
-title_tag: "Resource AclRole | Package Consul"
-meta_desc: "Explore the AclRole resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. Starting with Consul 1.5.0, the consul.AclRole can be used to managed Consul ACL roles."
+title_tag: "consul.AclRole"
+meta_desc: "Documentation for the consul.AclRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

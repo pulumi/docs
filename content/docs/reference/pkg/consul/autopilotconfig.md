@@ -1,8 +1,8 @@
 
 ---
 title: "AutopilotConfig"
-title_tag: "Resource AutopilotConfig | Package Consul"
-meta_desc: "Explore the AutopilotConfig resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. Provides access to the [Autopilot Configuration](https://www.consul.io/docs/guides/autopilot.html)"
+title_tag: "consul.AutopilotConfig"
+meta_desc: "Documentation for the consul.AutopilotConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

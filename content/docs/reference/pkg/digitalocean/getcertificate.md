@@ -1,8 +1,8 @@
 
 ---
-title: "GetCertificate"
-title_tag: "Function GetCertificate | Package DigitalOcean"
-meta_desc: "Explore the GetCertificate function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a certificate. This data source provides the name, type, state,"
+title: "getCertificate"
+title_tag: "digitalocean.getCertificate"
+meta_desc: "Documentation for the digitalocean.getCertificate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -93,7 +93,7 @@ const example = pulumi.output(digitalocean.getCertificate({
 {{% /examples %}}
 
 
-## Using GetCertificate {#using}
+## Using getCertificate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -194,7 +194,7 @@ The following arguments are supported:
 
 
 
-## GetCertificate Result {#result}
+## getCertificate Result {#result}
 
 The following output properties are available:
 

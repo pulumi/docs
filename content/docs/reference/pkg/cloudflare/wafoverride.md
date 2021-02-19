@@ -1,8 +1,8 @@
 
 ---
 title: "WafOverride"
-title_tag: "Resource WafOverride | Package Cloudflare"
-meta_desc: "Explore the WafOverride resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare WAF override resource. This enables the ability to toggle"
+title_tag: "cloudflare.WafOverride"
+meta_desc: "Documentation for the cloudflare.WafOverride resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

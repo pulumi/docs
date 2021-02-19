@@ -1,8 +1,8 @@
 
 ---
-title: "GetDomain"
-title_tag: "Function GetDomain | Package Linode"
-meta_desc: "Explore the GetDomain function of the Linode package, including examples, input properties, output properties, and supporting types. Provides information about a Linode domain."
+title: "getDomain"
+title_tag: "linode.getDomain"
+meta_desc: "Documentation for the linode.getDomain function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -135,7 +135,7 @@ const bar = pulumi.output(linode.getDomain({
 {{% /examples %}}
 
 
-## Using GetDomain {#using}
+## Using getDomain {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -276,7 +276,7 @@ The following arguments are supported:
 
 
 
-## GetDomain Result {#result}
+## getDomain Result {#result}
 
 The following output properties are available:
 

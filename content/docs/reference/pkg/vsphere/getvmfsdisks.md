@@ -1,8 +1,8 @@
 
 ---
-title: "GetVmfsDisks"
-title_tag: "Function GetVmfsDisks | Package vSphere"
-meta_desc: "Explore the GetVmfsDisks function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.getVmfsDisks` data source can be used to discover the storage"
+title: "getVmfsDisks"
+title_tag: "vsphere.getVmfsDisks"
+meta_desc: "Documentation for the vsphere.getVmfsDisks function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -135,7 +135,7 @@ const available = host.apply(host => vsphere.getVmfsDisks({
 {{% /examples %}}
 
 
-## Using GetVmfsDisks {#using}
+## Using getVmfsDisks {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -152,6 +152,8 @@ const available = host.apply(host => vsphere.getVmfsDisks({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVmfsDisks<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetVmfsDisksArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetVmfsDisksResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetVmfsDisks` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -330,7 +332,7 @@ search. Default: `false`.
 
 
 
-## GetVmfsDisks Result {#result}
+## getVmfsDisks Result {#result}
 
 The following output properties are available:
 

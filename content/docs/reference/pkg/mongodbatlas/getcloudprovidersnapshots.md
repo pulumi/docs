@@ -1,8 +1,8 @@
 
 ---
-title: "GetCloudProviderSnapshots"
-title_tag: "Function GetCloudProviderSnapshots | Package MongoDB Atlas"
-meta_desc: "Explore the GetCloudProviderSnapshots function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.getCloudProviderSnapshots` provides an Cloud Backup Snapshot datasource. Atlas Cloud Backup Snapshots provide localized backup storage using the native snapshot functionality of the cluster’s cloud service."
+title: "getCloudProviderSnapshots"
+title_tag: "mongodbatlas.getCloudProviderSnapshots"
+meta_desc: "Documentation for the mongodbatlas.getCloudProviderSnapshots function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,7 +17,7 @@ meta_desc: "Explore the GetCloudProviderSnapshots function of the MongoDB Atlas 
 
 
 
-## Using GetCloudProviderSnapshots {#using}
+## Using getCloudProviderSnapshots {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -34,6 +34,8 @@ meta_desc: "Explore the GetCloudProviderSnapshots function of the MongoDB Atlas 
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCloudProviderSnapshots<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCloudProviderSnapshotsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCloudProviderSnapshotsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetCloudProviderSnapshots` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -232,7 +234,7 @@ The following arguments are supported:
 
 
 
-## GetCloudProviderSnapshots Result {#result}
+## getCloudProviderSnapshots Result {#result}
 
 The following output properties are available:
 

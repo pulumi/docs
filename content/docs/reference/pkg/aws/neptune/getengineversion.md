@@ -1,8 +1,8 @@
 
 ---
-title: "GetEngineVersion"
-title_tag: "Function GetEngineVersion | Module neptune | Package AWS"
-meta_desc: "Explore the GetEngineVersion function of the neptune module, including examples, input properties, output properties, and supporting types. Information about a Neptune engine version."
+title: "getEngineVersion"
+title_tag: "aws.neptune.getEngineVersion"
+meta_desc: "Documentation for the aws.neptune.getEngineVersion function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -105,7 +105,7 @@ const test = pulumi.output(aws.neptune.getEngineVersion({
 {{% /examples %}}
 
 
-## Using GetEngineVersion {#using}
+## Using getEngineVersion {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -122,6 +122,8 @@ const test = pulumi.output(aws.neptune.getEngineVersion({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEngineVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEngineVersionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEngineVersionResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetEngineVersion` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -324,7 +326,7 @@ The following arguments are supported:
 
 
 
-## GetEngineVersion Result {#result}
+## getEngineVersion Result {#result}
 
 The following output properties are available:
 

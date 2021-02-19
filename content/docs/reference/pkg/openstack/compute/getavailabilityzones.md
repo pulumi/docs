@@ -1,8 +1,8 @@
 
 ---
-title: "GetAvailabilityZones"
-title_tag: "Function GetAvailabilityZones | Module compute | Package Open Stack"
-meta_desc: "Explore the GetAvailabilityZones function of the compute module, including examples, input properties, output properties, and supporting types. Use this data source to get a list of availability zones from OpenStack"
+title: "getAvailabilityZones"
+title_tag: "openstack.compute.getAvailabilityZones"
+meta_desc: "Documentation for the openstack.compute.getAvailabilityZones function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -81,7 +81,7 @@ const zones = pulumi.output(openstack.compute.getAvailabilityZones({ async: true
 {{% /examples %}}
 
 
-## Using GetAvailabilityZones {#using}
+## Using getAvailabilityZones {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -98,6 +98,8 @@ const zones = pulumi.output(openstack.compute.getAvailabilityZones({ async: true
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAvailabilityZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAvailabilityZonesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAvailabilityZonesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAvailabilityZones` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -220,7 +222,7 @@ The following arguments are supported:
 
 
 
-## GetAvailabilityZones Result {#result}
+## getAvailabilityZones Result {#result}
 
 The following output properties are available:
 

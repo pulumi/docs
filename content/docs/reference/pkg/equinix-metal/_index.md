@@ -1,6 +1,6 @@
 ---
 title: "Equinix Metal"
-title_tag: "Module Equinix Metal | Package Equinix Metal"
+title_tag: "equinix-metal.Equinix Metal"
 meta_desc: "A Pulumi package for creating and managing equinix-metal cloud resources."
 menu:
     reference:

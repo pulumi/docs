@@ -1,8 +1,8 @@
 
 ---
 title: "WorkerRoute"
-title_tag: "Resource WorkerRoute | Package Cloudflare"
-meta_desc: "Explore the WorkerRoute resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare worker route resource. A route will also require a `cloudflare.WorkerScript`. *NOTE:*  This resource uses the Cloudflare account APIs. This requires setting the `CLOUDFLARE_ACCOUNT_ID` environment variable or `account_id` provider argument."
+title_tag: "cloudflare.WorkerRoute"
+meta_desc: "Documentation for the cloudflare.WorkerRoute resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

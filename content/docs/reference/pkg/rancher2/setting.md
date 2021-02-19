@@ -1,8 +1,8 @@
 
 ---
 title: "Setting"
-title_tag: "Resource Setting | Package Rancher 2"
-meta_desc: "Explore the Setting resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Setting resource. This can be used to create settings for Rancher v2 environments and retrieve their information."
+title_tag: "rancher2.Setting"
+meta_desc: "Documentation for the rancher2.Setting resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

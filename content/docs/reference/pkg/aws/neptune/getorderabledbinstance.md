@@ -1,8 +1,8 @@
 
 ---
-title: "GetOrderableDbInstance"
-title_tag: "Function GetOrderableDbInstance | Module neptune | Package AWS"
-meta_desc: "Explore the GetOrderableDbInstance function of the neptune module, including examples, input properties, output properties, and supporting types. Information about Neptune orderable DB instances."
+title: "getOrderableDbInstance"
+title_tag: "aws.neptune.getOrderableDbInstance"
+meta_desc: "Documentation for the aws.neptune.getOrderableDbInstance function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -110,7 +110,7 @@ const test = pulumi.output(aws.neptune.getOrderableDbInstance({
 {{% /examples %}}
 
 
-## Using GetOrderableDbInstance {#using}
+## Using getOrderableDbInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -127,6 +127,8 @@ const test = pulumi.output(aws.neptune.getOrderableDbInstance({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrderableDbInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetOrderableDbInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetOrderableDbInstanceResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetOrderableDbInstance` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -409,7 +411,7 @@ The following arguments are supported:
 
 
 
-## GetOrderableDbInstance Result {#result}
+## getOrderableDbInstance Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "AclPolicy"
-title_tag: "Resource AclPolicy | Package Consul"
-meta_desc: "Explore the AclPolicy resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. Starting with Consul 1.4.0, the consul.AclPolicy can be used to managed Consul ACL policies."
+title_tag: "consul.AclPolicy"
+meta_desc: "Documentation for the consul.AclPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetQosPolicy"
-title_tag: "Function GetQosPolicy | Module networking | Package Open Stack"
-meta_desc: "Explore the GetQosPolicy function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack QoS policy."
+title: "getQosPolicy"
+title_tag: "openstack.networking.getQosPolicy"
+meta_desc: "Documentation for the openstack.networking.getQosPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const qosPolicy1 = pulumi.output(openstack.networking.getQosPolicy({
 {{% /examples %}}
 
 
-## Using GetQosPolicy {#using}
+## Using getQosPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -438,7 +438,7 @@ A Networking client is needed to retrieve a QoS policy ID. If omitted, the
 
 
 
-## GetQosPolicy Result {#result}
+## getQosPolicy Result {#result}
 
 The following output properties are available:
 

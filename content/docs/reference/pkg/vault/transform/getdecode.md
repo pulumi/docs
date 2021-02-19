@@ -1,8 +1,8 @@
 
 ---
-title: "GetDecode"
-title_tag: "Function GetDecode | Module transform | Package Vault"
-meta_desc: "Explore the GetDecode function of the transform module, including examples, input properties, output properties, and supporting types. This data source supports the &#34;/transform/decode/{role_name}&#34; Vault endpoint."
+title: "getDecode"
+title_tag: "vault.transform.getDecode"
+meta_desc: "Documentation for the vault.transform.getDecode function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,7 +17,7 @@ It decodes the provided value using a named role.
 
 
 
-## Using GetDecode {#using}
+## Using getDecode {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -34,6 +34,8 @@ It decodes the provided value using a named role.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDecode<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDecodeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDecodeResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDecode` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -396,7 +398,7 @@ The following arguments are supported:
 
 
 
-## GetDecode Result {#result}
+## getDecode Result {#result}
 
 The following output properties are available:
 

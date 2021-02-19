@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceWafConfiguration"
-title_tag: "Resource ServiceWafConfiguration | Package Fastly"
-meta_desc: "Explore the ServiceWafConfiguration resource of the Fastly package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "fastly.ServiceWafConfiguration"
+meta_desc: "Documentation for the fastly.ServiceWafConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

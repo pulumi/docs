@@ -1,8 +1,8 @@
 
 ---
-title: "GetServiceIntegration"
-title_tag: "Function GetServiceIntegration | Package Aiven"
-meta_desc: "Explore the GetServiceIntegration function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Service Integration Data Source"
+title: "getServiceIntegration"
+title_tag: "aiven.getServiceIntegration"
+meta_desc: "Documentation for the aiven.getServiceIntegration function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,7 +107,7 @@ const myintegration = aiven_project_myproject.project.apply(project => aiven.get
 {{% /examples %}}
 
 
-## Using GetServiceIntegration {#using}
+## Using getServiceIntegration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1052,7 +1052,7 @@ The following arguments are supported:
 
 
 
-## GetServiceIntegration Result {#result}
+## getServiceIntegration Result {#result}
 
 The following output properties are available:
 

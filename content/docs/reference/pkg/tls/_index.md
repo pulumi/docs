@@ -1,6 +1,6 @@
 ---
 title: "TLS"
-title_tag: "Module TLS | Package TLS"
+title_tag: "tls.TLS"
 meta_desc: "A Pulumi package to create TLS resources in Pulumi programs."
 menu:
     reference:

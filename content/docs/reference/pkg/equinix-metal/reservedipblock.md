@@ -1,8 +1,8 @@
 
 ---
 title: "ReservedIpBlock"
-title_tag: "Resource ReservedIpBlock | Package Equinix Metal"
-meta_desc: "Explore the ReservedIpBlock resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create and manage blocks of reserved IP addresses in a project."
+title_tag: "equinix-metal.ReservedIpBlock"
+meta_desc: "Documentation for the equinix-metal.ReservedIpBlock resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

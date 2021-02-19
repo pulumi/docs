@@ -1,8 +1,8 @@
 
 ---
 title: "DatabaseCluster"
-title_tag: "Resource DatabaseCluster | Package DigitalOcean"
-meta_desc: "Explore the DatabaseCluster resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean database cluster resource."
+title_tag: "digitalocean.DatabaseCluster"
+meta_desc: "Documentation for the digitalocean.DatabaseCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

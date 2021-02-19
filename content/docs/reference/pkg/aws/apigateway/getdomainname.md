@@ -1,8 +1,8 @@
 
 ---
-title: "GetDomainName"
-title_tag: "Function GetDomainName | Module apigateway | Package AWS"
-meta_desc: "Explore the GetDomainName function of the apigateway module, including examples, input properties, output properties, and supporting types. Use this data source to get the custom domain name for use with AWS API Gateway."
+title: "getDomainName"
+title_tag: "aws.apigateway.getDomainName"
+meta_desc: "Documentation for the aws.apigateway.getDomainName function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.apigateway.getDomainName({
 {{% /examples %}}
 
 
-## Using GetDomainName {#using}
+## Using getDomainName {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## GetDomainName Result {#result}
+## getDomainName Result {#result}
 
 The following output properties are available:
 

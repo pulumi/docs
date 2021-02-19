@@ -1,8 +1,8 @@
 
 ---
 title: "TimeBoard"
-title_tag: "Resource TimeBoard | Package Datadog"
-meta_desc: "Explore the TimeBoard resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "datadog.TimeBoard"
+meta_desc: "Documentation for the datadog.TimeBoard resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

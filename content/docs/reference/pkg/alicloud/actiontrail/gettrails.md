@@ -1,8 +1,8 @@
 
 ---
-title: "GetTrails"
-title_tag: "Function GetTrails | Module actiontrail | Package AliCloud"
-meta_desc: "Explore the GetTrails function of the actiontrail module, including examples, input properties, output properties, and supporting types. This data source provides a list of ActionTrail Trails in an Alibaba Cloud account according to the specified filters."
+title: "getTrails"
+title_tag: "alicloud.actiontrail.getTrails"
+meta_desc: "Documentation for the alicloud.actiontrail.getTrails function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -97,7 +97,7 @@ export const trailName = _default.then(_default => _default.trails[0].id);
 {{% /examples %}}
 
 
-## Using GetTrails {#using}
+## Using getTrails {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -114,6 +114,8 @@ export const trailName = _default.then(_default => _default.trails[0].id);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrails<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetTrailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetTrailsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetTrails` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -392,7 +394,7 @@ The following arguments are supported:
 
 
 
-## GetTrails Result {#result}
+## getTrails Result {#result}
 
 The following output properties are available:
 

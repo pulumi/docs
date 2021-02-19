@@ -1,8 +1,8 @@
 
 ---
-title: "GetSubnetIdsV2"
-title_tag: "Function GetSubnetIdsV2 | Module networking | Package Open Stack"
-meta_desc: "Explore the GetSubnetIdsV2 function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get a list of Openstack Subnet IDs matching the"
+title: "getSubnetIdsV2"
+title_tag: "openstack.networking.getSubnetIdsV2"
+meta_desc: "Documentation for the openstack.networking.getSubnetIdsV2 function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -99,7 +99,7 @@ const subnets = pulumi.output(openstack.networking.getSubnetIdsV2({
 {{% /examples %}}
 
 
-## Using GetSubnetIdsV2 {#using}
+## Using getSubnetIdsV2 {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -116,6 +116,8 @@ const subnets = pulumi.output(openstack.networking.getSubnetIdsV2({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnetIdsV2<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSubnetIdsV2Args</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSubnetIdsV2Result</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetSubnetIdsV2` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -814,7 +816,7 @@ Defaults to none.
 
 
 
-## GetSubnetIdsV2 Result {#result}
+## getSubnetIdsV2 Result {#result}
 
 The following output properties are available:
 

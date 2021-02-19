@@ -1,8 +1,8 @@
 
 ---
 title: "PreparedQuery"
-title_tag: "Resource PreparedQuery | Package Consul"
-meta_desc: "Explore the PreparedQuery resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "consul.PreparedQuery"
+meta_desc: "Documentation for the consul.PreparedQuery resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

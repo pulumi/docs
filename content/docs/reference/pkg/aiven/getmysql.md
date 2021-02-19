@@ -1,8 +1,8 @@
 
 ---
-title: "GetMySql"
-title_tag: "Function GetMySql | Package Aiven"
-meta_desc: "Explore the GetMySql function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # MySQL Data Source"
+title: "getMySql"
+title_tag: "aiven.getMySql"
+meta_desc: "Documentation for the aiven.getMySql function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const mysql1 = aiven.getMySql({
 {{% /examples %}}
 
 
-## Using GetMySql {#using}
+## Using getMySql {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1019,7 +1019,7 @@ deletion is done.
 
 
 
-## GetMySql Result {#result}
+## getMySql Result {#result}
 
 The following output properties are available:
 

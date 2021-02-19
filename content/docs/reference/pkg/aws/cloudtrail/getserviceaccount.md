@@ -1,8 +1,8 @@
 
 ---
-title: "GetServiceAccount"
-title_tag: "Function GetServiceAccount | Module cloudtrail | Package AWS"
-meta_desc: "Explore the GetServiceAccount function of the cloudtrail module, including examples, input properties, output properties, and supporting types. Use this data source to get the Account ID of the [AWS CloudTrail Service Account](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-supported-regions.html)"
+title: "getServiceAccount"
+title_tag: "aws.cloudtrail.getServiceAccount"
+meta_desc: "Documentation for the aws.cloudtrail.getServiceAccount function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -180,7 +180,7 @@ const bucket = new aws.s3.Bucket("bucket", {
 {{% /examples %}}
 
 
-## Using GetServiceAccount {#using}
+## Using getServiceAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -197,6 +197,8 @@ const bucket = new aws.s3.Bucket("bucket", {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetServiceAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetServiceAccountResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetServiceAccount` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -283,7 +285,7 @@ Defaults to the region from the AWS provider configuration.
 
 
 
-## GetServiceAccount Result {#result}
+## getServiceAccount Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "VHost"
-title_tag: "Resource VHost | Package RabbitMQ"
-meta_desc: "Explore the VHost resource of the RabbitMQ package, including examples, input properties, output properties, lookup functions, and supporting types. The ``rabbitmq.VHost`` resource creates and manages a vhost."
+title_tag: "rabbitmq.VHost"
+meta_desc: "Documentation for the rabbitmq.VHost resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

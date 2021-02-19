@@ -1,8 +1,8 @@
 
 ---
-title: "GetCodeSigningConfig"
-title_tag: "Function GetCodeSigningConfig | Module lambda | Package AWS"
-meta_desc: "Explore the GetCodeSigningConfig function of the lambda module, including examples, input properties, output properties, and supporting types. Provides information about a Lambda Code Signing Config. A code signing configuration defines a list of allowed signing profiles and defines the code-signing validation policy (action to be taken if deployment validation checks fail)."
+title: "getCodeSigningConfig"
+title_tag: "aws.lambda.getCodeSigningConfig"
+meta_desc: "Documentation for the aws.lambda.getCodeSigningConfig function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const existingCsc = pulumi.output(aws.lambda.getCodeSigningConfig({
 {{% /examples %}}
 
 
-## Using GetCodeSigningConfig {#using}
+## Using getCodeSigningConfig {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -193,7 +193,7 @@ The following arguments are supported:
 
 
 
-## GetCodeSigningConfig Result {#result}
+## getCodeSigningConfig Result {#result}
 
 The following output properties are available:
 

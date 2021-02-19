@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes"
-title_tag: "Package Kubernetes"
+title_tag: "Kubernetes Package"
 meta_desc: "A Pulumi package for creating and managing Kubernetes resources."
 menu:
     reference:

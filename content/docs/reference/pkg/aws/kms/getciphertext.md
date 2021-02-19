@@ -1,8 +1,8 @@
 
 ---
-title: "GetCipherText"
-title_tag: "Function GetCipherText | Module kms | Package AWS"
-meta_desc: "Explore the GetCipherText function of the kms module, including examples, input properties, output properties, and supporting types. The KMS ciphertext data source allows you to encrypt plaintext into ciphertext"
+title: "getCipherText"
+title_tag: "aws.kms.getCipherText"
+meta_desc: "Documentation for the aws.kms.getCipherText function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -121,7 +121,7 @@ const oauth = oauthConfig.keyId.apply(keyId => aws.kms.getCipherText({
 {{% /examples %}}
 
 
-## Using GetCipherText {#using}
+## Using getCipherText {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -138,6 +138,8 @@ const oauth = oauthConfig.keyId.apply(keyId => aws.kms.getCipherText({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCipherText<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCipherTextArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCipherTextResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetCipherText` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -300,7 +302,7 @@ The following arguments are supported:
 
 
 
-## GetCipherText Result {#result}
+## getCipherText Result {#result}
 
 The following output properties are available:
 

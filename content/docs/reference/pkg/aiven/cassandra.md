@@ -1,8 +1,8 @@
 
 ---
 title: "Cassandra"
-title_tag: "Resource Cassandra | Package Aiven"
-meta_desc: "Explore the Cassandra resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Cassandra Resource"
+title_tag: "aiven.Cassandra"
+meta_desc: "Documentation for the aiven.Cassandra resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

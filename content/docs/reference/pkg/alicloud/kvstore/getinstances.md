@@ -1,8 +1,8 @@
 
 ---
-title: "GetInstances"
-title_tag: "Function GetInstances | Module kvstore | Package AliCloud"
-meta_desc: "Explore the GetInstances function of the kvstore module, including examples, input properties, output properties, and supporting types. The `alicloud.kvstore.getInstances` data source provides a collection of kvstore instances available in Alicloud account."
+title: "getInstances"
+title_tag: "alicloud.kvstore.getInstances"
+meta_desc: "Documentation for the alicloud.kvstore.getInstances function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -96,7 +96,7 @@ export const firstInstanceName = _default.then(_default => _default.instances[0]
 {{% /examples %}}
 
 
-## Using GetInstances {#using}
+## Using getInstances {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -113,6 +113,8 @@ export const firstInstanceName = _default.then(_default => _default.instances[0]
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstancesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetInstances` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -951,7 +953,7 @@ The following arguments are supported:
 
 
 
-## GetInstances Result {#result}
+## getInstances Result {#result}
 
 The following output properties are available:
 

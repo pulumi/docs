@@ -1,8 +1,8 @@
 
 ---
-title: "GetResolverRules"
-title_tag: "Function GetResolverRules | Module route53 | Package AWS"
-meta_desc: "Explore the GetResolverRules function of the route53 module, including examples, input properties, output properties, and supporting types. `aws.route53.getResolverRules` provides details about a set of Route53 Resolver rules."
+title: "getResolverRules"
+title_tag: "aws.route53.getResolverRules"
+meta_desc: "Documentation for the aws.route53.getResolverRules function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -99,7 +99,7 @@ const example = pulumi.output(aws.route53.getResolverRules({
 {{% /examples %}}
 
 
-## Using GetResolverRules {#using}
+## Using getResolverRules {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -116,6 +116,8 @@ const example = pulumi.output(aws.route53.getResolverRules({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResolverRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetResolverRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetResolverRulesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetResolverRules` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -318,7 +320,7 @@ The following arguments are supported:
 
 
 
-## GetResolverRules Result {#result}
+## getResolverRules Result {#result}
 
 The following output properties are available:
 

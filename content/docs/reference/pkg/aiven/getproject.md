@@ -1,8 +1,8 @@
 
 ---
-title: "GetProject"
-title_tag: "Function GetProject | Package Aiven"
-meta_desc: "Explore the GetProject function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Project Data Source"
+title: "getProject"
+title_tag: "aiven.getProject"
+meta_desc: "Documentation for the aiven.getProject function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,7 +90,7 @@ const myproject = pulumi.output(aiven.getProject({
 {{% /examples %}}
 
 
-## Using GetProject {#using}
+## Using getProject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -867,7 +867,7 @@ effect when the project is created.
 
 
 
-## GetProject Result {#result}
+## getProject Result {#result}
 
 The following output properties are available:
 

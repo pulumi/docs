@@ -1,8 +1,8 @@
 
 ---
-title: "GetConfigurationRecorders"
-title_tag: "Function GetConfigurationRecorders | Module cfg | Package AliCloud"
-meta_desc: "Explore the GetConfigurationRecorders function of the cfg module, including examples, input properties, output properties, and supporting types. This data source provides the Config Configuration Recorders of the current Alibaba Cloud user."
+title: "getConfigurationRecorders"
+title_tag: "alicloud.cfg.getConfigurationRecorders"
+meta_desc: "Documentation for the alicloud.cfg.getConfigurationRecorders function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ export const listOfResourceTypes = data.alicloud_config_configuration_recorders[
 {{% /examples %}}
 
 
-## Using GetConfigurationRecorders {#using}
+## Using getConfigurationRecorders {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -108,6 +108,8 @@ export const listOfResourceTypes = data.alicloud_config_configuration_recorders[
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConfigurationRecorders<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetConfigurationRecordersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetConfigurationRecordersResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetConfigurationRecorders` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -186,7 +188,7 @@ The following arguments are supported:
 
 
 
-## GetConfigurationRecorders Result {#result}
+## getConfigurationRecorders Result {#result}
 
 The following output properties are available:
 

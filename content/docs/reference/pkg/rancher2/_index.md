@@ -1,6 +1,6 @@
 ---
 title: "Rancher 2"
-title_tag: "Module Rancher 2 | Package Rancher 2"
+title_tag: "rancher2.Rancher 2"
 meta_desc: "A Pulumi package for creating and managing rancher2 resources."
 menu:
     reference:

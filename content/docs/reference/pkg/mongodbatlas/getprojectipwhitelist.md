@@ -1,8 +1,8 @@
 
 ---
-title: "GetProjectIpWhitelist"
-title_tag: "Function GetProjectIpWhitelist | Package MongoDB Atlas"
-meta_desc: "Explore the GetProjectIpWhitelist function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.ProjectIpWhitelist` describes an IP Whitelist entry resource. The whitelist grants access from IPs, CIDRs or AWS Security Groups (if VPC Peering is enabled) to clusters within the Project."
+title: "getProjectIpWhitelist"
+title_tag: "mongodbatlas.getProjectIpWhitelist"
+meta_desc: "Documentation for the mongodbatlas.getProjectIpWhitelist function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -20,7 +20,7 @@ When you remove an entry from the whitelist, existing connections from the remov
 
 
 
-## Using GetProjectIpWhitelist {#using}
+## Using getProjectIpWhitelist {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -241,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetProjectIpWhitelist Result {#result}
+## getProjectIpWhitelist Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Registry"
-title_tag: "Resource Registry | Package Rancher 2"
-meta_desc: "Explore the Registry resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Registry resource. This can be used to create docker registries for Rancher v2 environments and retrieve their information."
+title_tag: "rancher2.Registry"
+meta_desc: "Documentation for the rancher2.Registry resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

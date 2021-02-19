@@ -1,8 +1,8 @@
 
 ---
-title: "GetSelection"
-title_tag: "Function GetSelection | Module backup | Package AWS"
-meta_desc: "Explore the GetSelection function of the backup module, including examples, input properties, output properties, and supporting types. Use this data source to get information on an existing backup selection."
+title: "getSelection"
+title_tag: "aws.backup.getSelection"
+meta_desc: "Documentation for the aws.backup.getSelection function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const example = aws.backup.getSelection({
 {{% /examples %}}
 
 
-## Using GetSelection {#using}
+## Using getSelection {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ The following arguments are supported:
 
 
 
-## GetSelection Result {#result}
+## getSelection Result {#result}
 
 The following output properties are available:
 

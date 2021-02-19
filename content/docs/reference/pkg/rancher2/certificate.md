@@ -1,8 +1,8 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Package Rancher 2"
-meta_desc: "Explore the Certificate resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 certificate resource. This can be used to create certificates for Rancher v2 environments and retrieve their information."
+title_tag: "rancher2.Certificate"
+meta_desc: "Documentation for the rancher2.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

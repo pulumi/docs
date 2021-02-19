@@ -1,8 +1,8 @@
 
 ---
-title: "GetDatacenter"
-title_tag: "Function GetDatacenter | Package vSphere"
-meta_desc: "Explore the GetDatacenter function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.Datacenter` data source can be used to discover the ID of a"
+title: "getDatacenter"
+title_tag: "vsphere.getDatacenter"
+meta_desc: "Documentation for the vsphere.getDatacenter function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const datacenter = pulumi.output(vsphere.getDatacenter({
 {{% /examples %}}
 
 
-## Using GetDatacenter {#using}
+## Using getDatacenter {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -197,7 +197,7 @@ Can be omitted if there is only one datacenter in your inventory.
 
 
 
-## GetDatacenter Result {#result}
+## getDatacenter Result {#result}
 
 The following output properties are available:
 

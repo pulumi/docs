@@ -1,8 +1,8 @@
 
 ---
 title: "CatalogEntry"
-title_tag: "Resource CatalogEntry | Package Consul"
-meta_desc: "Explore the CatalogEntry resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. !&gt; The `consul.CatalogEntry` resource has been deprecated in version 2.0.0 of the provider"
+title_tag: "consul.CatalogEntry"
+meta_desc: "Documentation for the consul.CatalogEntry resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

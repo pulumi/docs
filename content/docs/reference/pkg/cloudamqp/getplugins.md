@@ -1,8 +1,8 @@
 
 ---
-title: "GetPlugins"
-title_tag: "Function GetPlugins | Package CloudAMQP"
-meta_desc: "Explore the GetPlugins function of the CloudAMQP package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about installed and available plugins for the CloudAMQP instance."
+title: "getPlugins"
+title_tag: "cloudamqp.getPlugins"
+meta_desc: "Documentation for the cloudamqp.getPlugins function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -108,7 +108,7 @@ const plugins = cloudamqp.getPlugins({
 {{% /examples %}}
 
 
-## Using GetPlugins {#using}
+## Using getPlugins {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -125,6 +125,8 @@ const plugins = cloudamqp.getPlugins({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPlugins<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPluginsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPluginsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetPlugins` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -239,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetPlugins Result {#result}
+## getPlugins Result {#result}
 
 The following output properties are available:
 
