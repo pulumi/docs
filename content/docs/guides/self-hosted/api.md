@@ -8,14 +8,9 @@ menu:
 meta_desc: Pulumi API is one of the components required for self-hosting Pulumi. Self-hosting is available as part of the Enterprise Edition.
 ---
 
-<div class="note note-info" role="alert">
-    <p>
-        Self-hosting is only available with the <strong>Pulumi Enterprise Edition</strong>.
-    </p>
-    <p>
-        <a href="/contact/">Contact us</a> if you would like to evaluate the Self-Hosted Enterprise Edition.
-    </p>
-</div>
+{{% notes type="info" %}}
+Self-hosting is only available with the **Pulumi Enterprise Edition**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+{{% /notes %}}
 
 The Pulumi API is one of the components required for self-hosting Pulumi in your organization's environment. It provides the necessary APIs for both the CLI and the [Console]({{< relref "console" >}}).
 
@@ -41,8 +36,7 @@ The Pulumi API is one of the components required for self-hosting Pulumi in your
 
 ## What's In The Container?
 
-> **Note**: The container image repository is private.
-> <a href="/contact/">Contact us</a> if you would like to evaluate the Self-Hosted Enterprise Edition.
+> **Note**: The container image repository is private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
 
 The API service is a Go-based application. This is a single binary application that has all of the dependencies it needs in order to run.
 

@@ -8,14 +8,9 @@ menu:
 meta_desc: Pulumi Console is one of the components required for self-hosting Pulumi. Self-hosting is available as part of the Enterprise Edition.
 ---
 
-<div class="note note-info" role="alert">
-    <p>
-        Self-hosting is only available with the <strong>Pulumi Enterprise Edition</strong>.
-    </p>
-    <p>
-        <a href="/contact/">Contact us</a> if you would like to evaluate the Self-Hosted Enterprise Edition.
-    </p>
-</div>
+{{% notes type="info" %}}
+Self-hosting is only available with the **Pulumi Enterprise Edition**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+{{% /notes %}}
 
 The Pulumi Console allows users to view the stacks they have created, see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.
 
@@ -39,8 +34,7 @@ You can run this container on the same host that your API container is running o
 
 ## What's In The Container?
 
-> **Note**: The container image repository is private.
-> <a href="/contact/">Contact us</a> if you would like to evaluate the Self-Hosted Enterprise Edition.
+> **Note**: The container image repository is private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
 
 The Console container runs a web server using a Node 10-based image.
 

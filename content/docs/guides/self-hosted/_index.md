@@ -7,14 +7,9 @@ menu:
 meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi within your organization's infrastructure.
 ---
 
-<div class="note note-info" role="alert">
-    <p>
-        Self-hosting is only available with the <strong>Pulumi Enterprise Edition</strong>. 
-    </p>
-    <p>
-        <a href="/contact/">Contact us</a> if you would like to evaluate the Self-Hosted Enterprise Edition.
-    </p>
-</div>
+{{% notes type="info" %}}
+Self-hosting is only available with the **Pulumi Enterprise Edition**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+{{% /notes %}}
 
 This guide walks you through the components that are required to get the Pulumi Service running in your own environment.
 
@@ -54,8 +49,7 @@ Here are some examples of deployment topologies:
 | [Console]({{< relref "console" >}}) |	[https://hub.docker.com/r/pulumi/console/](https://hub.docker.com/r/pulumi/console/) |
 | Migrations | [https://hub.docker.com/r/pulumi/migrations/](https://hub.docker.com/r/pulumi/migrations/) |
 
-> **Note**: The above container image repositories are private.
-> <a href="/contact/">Contact us</a> if you would like to evaluate the Self-Hosted Enterprise Edition.
+> **Note**: The above container image repositories are private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
 
 ## Quickstart
 
