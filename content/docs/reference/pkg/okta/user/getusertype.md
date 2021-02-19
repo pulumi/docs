@@ -1,8 +1,8 @@
 
 ---
-title: "GetUserType"
-title_tag: "Function GetUserType | Module user | Package Okta"
-meta_desc: "Explore the GetUserType function of the user module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve a user type from Okta."
+title: "getUserType"
+title_tag: "okta.user.getUserType"
+meta_desc: "Documentation for the okta.user.getUserType function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(okta.user.getUserType({
 {{% /examples %}}
 
 
-## Using GetUserType {#using}
+## Using getUserType {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -269,7 +269,7 @@ The following arguments are supported:
 
 
 
-## GetUserType Result {#result}
+## getUserType Result {#result}
 
 The following output properties are available:
 

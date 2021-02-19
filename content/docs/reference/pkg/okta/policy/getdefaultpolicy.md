@@ -1,8 +1,8 @@
 
 ---
-title: "GetDefaultPolicy"
-title_tag: "Function GetDefaultPolicy | Module policy | Package Okta"
-meta_desc: "Explore the GetDefaultPolicy function of the policy module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve a default policy from Okta. This same thing can be achieved using the `okta.policy.getPolicy` with default names, this is simply a shortcut."
+title: "getDefaultPolicy"
+title_tag: "okta.policy.getDefaultPolicy"
+meta_desc: "Documentation for the okta.policy.getDefaultPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(okta.policy.getDefaultPolicy({
 {{% /examples %}}
 
 
-## Using GetDefaultPolicy {#using}
+## Using getDefaultPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -105,6 +105,8 @@ const example = pulumi.output(okta.policy.getDefaultPolicy({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDefaultPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDefaultPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDefaultPolicyResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDefaultPolicy` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -187,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetDefaultPolicy Result {#result}
+## getDefaultPolicy Result {#result}
 
 The following output properties are available:
 

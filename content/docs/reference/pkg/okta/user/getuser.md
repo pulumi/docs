@@ -1,8 +1,8 @@
 
 ---
-title: "GetUser"
-title_tag: "Function GetUser | Module user | Package Okta"
-meta_desc: "Explore the GetUser function of the user module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve a users from Okta."
+title: "getUser"
+title_tag: "okta.user.getUser"
+meta_desc: "Documentation for the okta.user.getUser function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -128,7 +128,7 @@ const example = pulumi.output(okta.user.getUser({
 {{% /examples %}}
 
 
-## Using GetUser {#using}
+## Using getUser {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -269,7 +269,7 @@ The following arguments are supported:
 
 
 
-## GetUser Result {#result}
+## getUser Result {#result}
 
 The following output properties are available:
 

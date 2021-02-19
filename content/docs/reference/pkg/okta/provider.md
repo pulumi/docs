@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Okta"
-meta_desc: "Explore the Provider resource of the Okta package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the okta package. By default, resources use package-wide configuration"
+title_tag: "okta.Provider"
+meta_desc: "Documentation for the okta.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

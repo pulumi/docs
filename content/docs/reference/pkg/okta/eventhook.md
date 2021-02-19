@@ -1,8 +1,8 @@
 
 ---
 title: "EventHook"
-title_tag: "Resource EventHook | Package Okta"
-meta_desc: "Explore the EventHook resource of the Okta package, including examples, input properties, output properties, lookup functions, and supporting types. Creates an event hook."
+title_tag: "okta.EventHook"
+meta_desc: "Documentation for the okta.EventHook resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

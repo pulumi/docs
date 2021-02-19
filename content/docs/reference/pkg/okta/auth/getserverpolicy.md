@@ -1,8 +1,8 @@
 
 ---
-title: "GetServerPolicy"
-title_tag: "Function GetServerPolicy | Module auth | Package Okta"
-meta_desc: "Explore the GetServerPolicy function of the auth module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve a authorization server policy from Okta."
+title: "getServerPolicy"
+title_tag: "okta.auth.getServerPolicy"
+meta_desc: "Documentation for the okta.auth.getServerPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const example = pulumi.output(okta.auth.getServerPolicy({
 {{% /examples %}}
 
 
-## Using GetServerPolicy {#using}
+## Using getServerPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ The following arguments are supported:
 
 
 
-## GetServerPolicy Result {#result}
+## getServerPolicy Result {#result}
 
 The following output properties are available:
 
