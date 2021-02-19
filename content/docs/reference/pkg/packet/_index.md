@@ -1,6 +1,6 @@
 ---
 title: "Packet"
-title_tag: "packet.Packet"
+title_tag: "Module Packet | Package Packet"
 meta_desc: "A Pulumi package for creating and managing Packet cloud resources."
 menu:
     reference:
@@ -62,5 +62,23 @@ A Pulumi package for creating and managing Packet cloud resources.
 	<dd>This Pulumi package is based on the [`packet` Terraform Provider](https://github.com/terraform-providers/terraform-provider-packet).</dd>
 	<dt>Version</dt>
 	<dd>3.2.2</dd>
+</dl>
+
+
+
+<dl class="tabular">
+
+    <dt>.NET</dt>
+    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.html" title="Pulumi.Packet">Pulumi.Packet</a></dd>
+
+    <dt>Go</dt>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#" title="packet">packet</a></dd>
+
+    <dt>Node.js</dt>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/packet/#" title="@pulumi/packet">@pulumi/packet</a></dd>
+
+    <dt>Python</dt>
+    <dd><a href="/docs/reference/pkg/python/pulumi_packet" title="pulumi_packet">pulumi_packet</a></dd>
+
 </dl>
 
