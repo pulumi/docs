@@ -1,8 +1,8 @@
 
 ---
 title: "Repository"
-title_tag: "Resource Repository | Package GitHub"
-meta_desc: "Explore the Repository resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage repositories within your"
+title_tag: "github.Repository"
+meta_desc: "Documentation for the github.Repository resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

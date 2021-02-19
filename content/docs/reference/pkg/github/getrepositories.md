@@ -1,8 +1,8 @@
 
 ---
-title: "GetRepositories"
-title_tag: "Function GetRepositories | Package GitHub"
-meta_desc: "Explore the GetRepositories function of the GitHub package, including examples, input properties, output properties, and supporting types. &gt; **Note:** The data source will return a maximum of `1000` repositories"
+title: "getRepositories"
+title_tag: "github.getRepositories"
+meta_desc: "Documentation for the github.getRepositories function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ const example = pulumi.output(github.getRepositories({
 {{% /examples %}}
 
 
-## Using GetRepositories {#using}
+## Using getRepositories {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -108,6 +108,8 @@ const example = pulumi.output(github.getRepositories({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRepositories<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRepositoriesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRepositoriesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRepositories` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -230,7 +232,7 @@ The following arguments are supported:
 
 
 
-## GetRepositories Result {#result}
+## getRepositories Result {#result}
 
 The following output properties are available:
 

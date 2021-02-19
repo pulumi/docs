@@ -1,8 +1,8 @@
 
 ---
-title: "GetMembership"
-title_tag: "Function GetMembership | Package GitHub"
-meta_desc: "Explore the GetMembership function of the GitHub package, including examples, input properties, output properties, and supporting types. Use this data source to find out if a user is a member of your organization, as well"
+title: "getMembership"
+title_tag: "github.getMembership"
+meta_desc: "Documentation for the github.getMembership function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ const membershipForSomeUser = pulumi.output(github.getMembership({
 {{% /examples %}}
 
 
-## Using GetMembership {#using}
+## Using getMembership {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -232,7 +232,7 @@ The following arguments are supported:
 
 
 
-## GetMembership Result {#result}
+## getMembership Result {#result}
 
 The following output properties are available:
 

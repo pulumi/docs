@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectCard"
-title_tag: "Resource ProjectCard | Package GitHub"
-meta_desc: "Explore the ProjectCard resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage cards for GitHub projects."
+title_tag: "github.ProjectCard"
+meta_desc: "Documentation for the github.ProjectCard resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "RepositoryWebhook"
-title_tag: "Resource RepositoryWebhook | Package GitHub"
-meta_desc: "Explore the RepositoryWebhook resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage webhooks for repositories within your"
+title_tag: "github.RepositoryWebhook"
+meta_desc: "Documentation for the github.RepositoryWebhook resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

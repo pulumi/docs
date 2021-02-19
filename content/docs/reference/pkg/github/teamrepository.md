@@ -1,8 +1,8 @@
 
 ---
 title: "TeamRepository"
-title_tag: "Resource TeamRepository | Package GitHub"
-meta_desc: "Explore the TeamRepository resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource manages relationships between teams and repositories"
+title_tag: "github.TeamRepository"
+meta_desc: "Documentation for the github.TeamRepository resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -328,7 +328,7 @@ The TeamRepository resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GitHub team id
+    <dd>{{% md %}}The GitHub team id or the GitHub team slug
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -365,7 +365,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GitHub team id
+    <dd>{{% md %}}The GitHub team id or the GitHub team slug
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -402,7 +402,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GitHub team id
+    <dd>{{% md %}}The GitHub team id or the GitHub team slug
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -439,7 +439,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The GitHub team id
+    <dd>{{% md %}}The GitHub team id or the GitHub team slug
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -722,7 +722,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GitHub team id
+    <dd>{{% md %}}The GitHub team id or the GitHub team slug
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -768,7 +768,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GitHub team id
+    <dd>{{% md %}}The GitHub team id or the GitHub team slug
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -814,7 +814,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GitHub team id
+    <dd>{{% md %}}The GitHub team id or the GitHub team slug
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -860,7 +860,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The GitHub team id
+    <dd>{{% md %}}The GitHub team id or the GitHub team slug
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

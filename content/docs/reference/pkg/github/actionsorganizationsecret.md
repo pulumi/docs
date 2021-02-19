@@ -1,8 +1,8 @@
 
 ---
 title: "ActionsOrganizationSecret"
-title_tag: "Resource ActionsOrganizationSecret | Package GitHub"
-meta_desc: "Explore the ActionsOrganizationSecret resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "github.ActionsOrganizationSecret"
+meta_desc: "Documentation for the github.ActionsOrganizationSecret resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

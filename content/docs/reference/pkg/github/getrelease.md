@@ -1,8 +1,8 @@
 
 ---
-title: "GetRelease"
-title_tag: "Function GetRelease | Package GitHub"
-meta_desc: "Explore the GetRelease function of the GitHub package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a GitHub release in a specific repository."
+title: "getRelease"
+title_tag: "github.getRelease"
+meta_desc: "Documentation for the github.getRelease function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -96,7 +96,7 @@ const example = pulumi.output(github.getRelease({
 {{% /examples %}}
 
 
-## Using GetRelease {#using}
+## Using getRelease {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -113,6 +113,8 @@ const example = pulumi.output(github.getRelease({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRelease<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetReleaseArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetReleaseResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRelease` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -355,7 +357,7 @@ The following arguments are supported:
 
 
 
-## GetRelease Result {#result}
+## getRelease Result {#result}
 
 The following output properties are available:
 

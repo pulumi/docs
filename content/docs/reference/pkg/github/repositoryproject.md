@@ -1,8 +1,8 @@
 
 ---
 title: "RepositoryProject"
-title_tag: "Resource RepositoryProject | Package GitHub"
-meta_desc: "Explore the RepositoryProject resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage projects for GitHub repository."
+title_tag: "github.RepositoryProject"
+meta_desc: "Documentation for the github.RepositoryProject resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
