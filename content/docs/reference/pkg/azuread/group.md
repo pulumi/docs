@@ -1,8 +1,8 @@
 
 ---
 title: "Group"
-title_tag: "Resource Group | Package Azure AD"
-meta_desc: "Explore the Group resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Group within Azure Active Directory."
+title_tag: "azuread.Group"
+meta_desc: "Documentation for the azuread.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -547,6 +547,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mailenabled_csharp">
+<a href="#mailenabled_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
 </span>
@@ -554,6 +564,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="securityenabled_csharp">
+<a href="#securityenabled_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -572,6 +592,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mailenabled_go">
+<a href="#mailenabled_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
 </span>
@@ -579,6 +609,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="securityenabled_go">
+<a href="#securityenabled_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -597,6 +637,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mailenabled_nodejs">
+<a href="#mailenabled_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
@@ -604,6 +654,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="securityenabled_nodejs">
+<a href="#securityenabled_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -622,6 +682,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mail_enabled_python">
+<a href="#mail_enabled_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
@@ -629,6 +699,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="security_enabled_python">
+<a href="#security_enabled_python" style="color: inherit; text-decoration: inherit;">security_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -646,7 +726,7 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">prevent_duplicate_names</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mail_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">prevent_duplicate_names</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -781,6 +861,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_mailenabled_csharp">
+<a href="#state_mailenabled_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_members_csharp">
 <a href="#state_members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
 </span>
@@ -828,6 +918,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If `true`, will return an error when an existing Group is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_securityenabled_csharp">
+<a href="#state_securityenabled_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -853,6 +953,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the Group. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mailenabled_go">
+<a href="#state_mailenabled_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -903,6 +1013,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If `true`, will return an error when an existing Group is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_securityenabled_go">
+<a href="#state_securityenabled_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -928,6 +1048,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the Group. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mailenabled_nodejs">
+<a href="#state_mailenabled_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -978,6 +1108,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If `true`, will return an error when an existing Group is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_securityenabled_nodejs">
+<a href="#state_securityenabled_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1003,6 +1143,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the Group. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mail_enabled_python">
+<a href="#state_mail_enabled_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1052,6 +1202,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, will return an error when an existing Group is found with the same name. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_security_enabled_python">
+<a href="#state_security_enabled_python" style="color: inherit; text-decoration: inherit;">security_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

@@ -1,8 +1,8 @@
 
 ---
-title: "GetUsers"
-title_tag: "Function GetUsers | Package Azure AD"
-meta_desc: "Explore the GetUsers function of the Azure AD package, including examples, input properties, output properties, and supporting types. Gets Object IDs or UPNs for multiple Azure Active Directory users."
+title: "getUsers"
+title_tag: "azuread.getUsers"
+meta_desc: "Documentation for the azuread.getUsers function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -103,7 +103,7 @@ const users = pulumi.output(azuread.getUsers({
 {{% /examples %}}
 
 
-## Using GetUsers {#using}
+## Using getUsers {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -120,6 +120,8 @@ const users = pulumi.output(azuread.getUsers({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUsers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetUsersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetUsersResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetUsers` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -322,7 +324,7 @@ The following arguments are supported:
 
 
 
-## GetUsers Result {#result}
+## getUsers Result {#result}
 
 The following output properties are available:
 

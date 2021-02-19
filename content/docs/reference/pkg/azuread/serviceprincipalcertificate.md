@@ -1,8 +1,8 @@
 
 ---
 title: "ServicePrincipalCertificate"
-title_tag: "Resource ServicePrincipalCertificate | Package Azure AD"
-meta_desc: "Explore the ServicePrincipalCertificate resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Certificate associated with a Service Principal within Azure Active Directory."
+title_tag: "azuread.ServicePrincipalCertificate"
+meta_desc: "Documentation for the azuread.ServicePrincipalCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

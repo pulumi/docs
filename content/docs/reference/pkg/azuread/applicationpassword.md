@@ -1,8 +1,8 @@
 
 ---
 title: "ApplicationPassword"
-title_tag: "Resource ApplicationPassword | Package Azure AD"
-meta_desc: "Explore the ApplicationPassword resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Password associated with an Application within Azure Active Directory. Also can be referred to as Client secrets."
+title_tag: "azuread.ApplicationPassword"
+meta_desc: "Documentation for the azuread.ApplicationPassword resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

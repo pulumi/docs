@@ -1,8 +1,8 @@
 
 ---
 title: "ApplicationOAuth2Permission"
-title_tag: "Resource ApplicationOAuth2Permission | Package Azure AD"
-meta_desc: "Explore the ApplicationOAuth2Permission resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. Manages an OAuth2 Permission (also known as a Scope) associated with an Application within Azure Active Directory."
+title_tag: "azuread.ApplicationOAuth2Permission"
+meta_desc: "Documentation for the azuread.ApplicationOAuth2Permission resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

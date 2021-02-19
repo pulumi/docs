@@ -1,8 +1,8 @@
 
 ---
-title: "GetDomains"
-title_tag: "Function GetDomains | Package Azure AD"
-meta_desc: "Explore the GetDomains function of the Azure AD package, including examples, input properties, output properties, and supporting types. Use this data source to access information about existing Domains within Azure Active Directory."
+title: "getDomains"
+title_tag: "azuread.getDomains"
+meta_desc: "Documentation for the azuread.getDomains function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ export const domains = aadDomains.then(aadDomains => aadDomains.domains);
 {{% /examples %}}
 
 
-## Using GetDomains {#using}
+## Using getDomains {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -106,6 +106,8 @@ export const domains = aadDomains.then(aadDomains => aadDomains.domains);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomains<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDomainsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDomainsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDomains` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -268,7 +270,7 @@ The following arguments are supported:
 
 
 
-## GetDomains Result {#result}
+## getDomains Result {#result}
 
 The following output properties are available:
 

@@ -1,6 +1,6 @@
 ---
 title: "Azure AD"
-title_tag: "Module Azure AD | Package Azure AD"
+title_tag: "azuread.Azure AD"
 meta_desc: "A Pulumi package for creating and managing azuread cloud resources."
 menu:
     reference:
@@ -49,6 +49,6 @@ A Pulumi package for creating and managing azuread cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
 	<dt>Version</dt>
-	<dd>3.3.1</dd>
+	<dd>3.4.0</dd>
 </dl>
 

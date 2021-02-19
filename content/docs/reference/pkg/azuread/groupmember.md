@@ -1,8 +1,8 @@
 
 ---
 title: "GroupMember"
-title_tag: "Resource GroupMember | Package Azure AD"
-meta_desc: "Explore the GroupMember resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a single Group Membership within Azure Active Directory."
+title_tag: "azuread.GroupMember"
+meta_desc: "Documentation for the azuread.GroupMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

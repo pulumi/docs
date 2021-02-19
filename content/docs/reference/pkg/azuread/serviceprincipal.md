@@ -1,8 +1,8 @@
 
 ---
 title: "ServicePrincipal"
-title_tag: "Resource ServicePrincipal | Package Azure AD"
-meta_desc: "Explore the ServicePrincipal resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Service Principal associated with an Application within Azure Active Directory."
+title_tag: "azuread.ServicePrincipal"
+meta_desc: "Documentation for the azuread.ServicePrincipal resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

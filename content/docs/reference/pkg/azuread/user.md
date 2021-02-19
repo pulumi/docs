@@ -1,8 +1,8 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Package Azure AD"
-meta_desc: "Explore the User resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a User within Azure Active Directory."
+title_tag: "azuread.User"
+meta_desc: "Documentation for the azuread.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

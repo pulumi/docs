@@ -1,8 +1,8 @@
 
 ---
-title: "GetApplication"
-title_tag: "Function GetApplication | Package Azure AD"
-meta_desc: "Explore the GetApplication function of the Azure AD package, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Application within Azure Active Directory."
+title: "getApplication"
+title_tag: "azuread.getApplication"
+meta_desc: "Documentation for the azuread.getApplication function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -97,7 +97,7 @@ export const azureAdObjectId = example.then(example => example.id);
 {{% /examples %}}
 
 
-## Using GetApplication {#using}
+## Using getApplication {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -398,7 +398,7 @@ The following arguments are supported:
 
 
 
-## GetApplication Result {#result}
+## getApplication Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetUser"
-title_tag: "Function GetUser | Package Azure AD"
-meta_desc: "Explore the GetUser function of the Azure AD package, including examples, input properties, output properties, and supporting types. Gets information about an Azure Active Directory user."
+title: "getUser"
+title_tag: "azuread.getUser"
+meta_desc: "Documentation for the azuread.getUser function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ const example = pulumi.output(azuread.getUser({
 {{% /examples %}}
 
 
-## Using GetUser {#using}
+## Using getUser {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -272,7 +272,7 @@ The following arguments are supported:
 
 
 
-## GetUser Result {#result}
+## getUser Result {#result}
 
 The following output properties are available:
 
