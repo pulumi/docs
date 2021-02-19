@@ -1,8 +1,8 @@
 
 ---
-title: "GetRepository"
-title_tag: "Function GetRepository | Package GitHub"
-meta_desc: "Explore the GetRepository function of the GitHub package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a GitHub repository."
+title: "getRepository"
+title_tag: "github.getRepository"
+meta_desc: "Documentation for the github.getRepository function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const example = pulumi.output(github.getRepository({
 {{% /examples %}}
 
 
-## Using GetRepository {#using}
+## Using getRepository {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -230,7 +230,7 @@ The following arguments are supported:
 
 
 
-## GetRepository Result {#result}
+## getRepository Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetActionsPublicKey"
-title_tag: "Function GetActionsPublicKey | Package GitHub"
-meta_desc: "Explore the GetActionsPublicKey function of the GitHub package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a GitHub Actions public key. This data source is required to be used with other GitHub secrets interactions."
+title: "getActionsPublicKey"
+title_tag: "github.getActionsPublicKey"
+meta_desc: "Documentation for the github.getActionsPublicKey function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const example = pulumi.output(github.getActionsPublicKey({
 {{% /examples %}}
 
 
-## Using GetActionsPublicKey {#using}
+## Using getActionsPublicKey {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -106,6 +106,8 @@ const example = pulumi.output(github.getActionsPublicKey({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetActionsPublicKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetActionsPublicKeyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetActionsPublicKeyResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetActionsPublicKey` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -188,7 +190,7 @@ The following arguments are supported:
 
 
 
-## GetActionsPublicKey Result {#result}
+## getActionsPublicKey Result {#result}
 
 The following output properties are available:
 

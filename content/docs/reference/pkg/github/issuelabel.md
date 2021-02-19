@@ -1,8 +1,8 @@
 
 ---
 title: "IssueLabel"
-title_tag: "Resource IssueLabel | Package GitHub"
-meta_desc: "Explore the IssueLabel resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "github.IssueLabel"
+meta_desc: "Documentation for the github.IssueLabel resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetTeam"
-title_tag: "Function GetTeam | Package GitHub"
-meta_desc: "Explore the GetTeam function of the GitHub package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a GitHub team."
+title: "getTeam"
+title_tag: "github.getTeam"
+meta_desc: "Documentation for the github.getTeam function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(github.getTeam({
 {{% /examples %}}
 
 
-## Using GetTeam {#using}
+## Using getTeam {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetTeam Result {#result}
+## getTeam Result {#result}
 
 The following output properties are available:
 

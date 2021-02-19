@@ -1,8 +1,8 @@
 
 ---
 title: "RepositoryMilestone"
-title_tag: "Resource RepositoryMilestone | Package GitHub"
-meta_desc: "Explore the RepositoryMilestone resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub repository milestone resource."
+title_tag: "github.RepositoryMilestone"
+meta_desc: "Documentation for the github.RepositoryMilestone resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

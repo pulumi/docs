@@ -1,8 +1,8 @@
 
 ---
 title: "BranchDefault"
-title_tag: "Resource BranchDefault | Package GitHub"
-meta_desc: "Explore the BranchDefault resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub branch default resource."
+title_tag: "github.BranchDefault"
+meta_desc: "Documentation for the github.BranchDefault resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

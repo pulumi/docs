@@ -1,6 +1,6 @@
 ---
 title: "GitHub"
-title_tag: "Module GitHub | Package GitHub"
+title_tag: "github.GitHub"
 meta_desc: "A Pulumi package for creating and managing github cloud resources."
 menu:
     reference:
@@ -70,6 +70,6 @@ A Pulumi package for creating and managing github cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).</dd>
 	<dt>Version</dt>
-	<dd>3.1.1</dd>
+	<dd>3.2.0</dd>
 </dl>
 

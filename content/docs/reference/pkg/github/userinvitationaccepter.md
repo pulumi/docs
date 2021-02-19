@@ -1,8 +1,8 @@
 
 ---
 title: "UserInvitationAccepter"
-title_tag: "Resource UserInvitationAccepter | Package GitHub"
-meta_desc: "Explore the UserInvitationAccepter resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage GitHub repository collaborator invitations."
+title_tag: "github.UserInvitationAccepter"
+meta_desc: "Documentation for the github.UserInvitationAccepter resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "TeamSyncGroupMapping"
-title_tag: "Resource TeamSyncGroupMapping | Package GitHub"
-meta_desc: "Explore the TeamSyncGroupMapping resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage Identity Provider (IdP) group connections within your GitHub teams."
+title_tag: "github.TeamSyncGroupMapping"
+meta_desc: "Documentation for the github.TeamSyncGroupMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

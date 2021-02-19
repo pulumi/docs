@@ -1,8 +1,8 @@
 
 ---
-title: "GetBranch"
-title_tag: "Function GetBranch | Package GitHub"
-meta_desc: "Explore the GetBranch function of the GitHub package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a repository branch."
+title: "getBranch"
+title_tag: "github.getBranch"
+meta_desc: "Documentation for the github.getBranch function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const development = pulumi.output(github.getBranch({
 {{% /examples %}}
 
 
-## Using GetBranch {#using}
+## Using getBranch {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ The following arguments are supported:
 
 
 
-## GetBranch Result {#result}
+## getBranch Result {#result}
 
 The following output properties are available:
 

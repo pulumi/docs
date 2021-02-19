@@ -1,8 +1,8 @@
 
 ---
-title: "GetRepositoryMilestone"
-title_tag: "Function GetRepositoryMilestone | Package GitHub"
-meta_desc: "Explore the GetRepositoryMilestone function of the GitHub package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a specific GitHub milestone in a repository."
+title: "getRepositoryMilestone"
+title_tag: "github.getRepositoryMilestone"
+meta_desc: "Documentation for the github.getRepositoryMilestone function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -96,7 +96,7 @@ const example = pulumi.output(github.getRepositoryMilestone({
 {{% /examples %}}
 
 
-## Using GetRepositoryMilestone {#using}
+## Using getRepositoryMilestone {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -277,7 +277,7 @@ The following arguments are supported:
 
 
 
-## GetRepositoryMilestone Result {#result}
+## getRepositoryMilestone Result {#result}
 
 The following output properties are available:
 

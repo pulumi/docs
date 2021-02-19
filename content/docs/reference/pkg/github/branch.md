@@ -1,8 +1,8 @@
 
 ---
 title: "Branch"
-title_tag: "Resource Branch | Package GitHub"
-meta_desc: "Explore the Branch resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage branches within your repository."
+title_tag: "github.Branch"
+meta_desc: "Documentation for the github.Branch resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

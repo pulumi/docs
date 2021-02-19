@@ -1,8 +1,8 @@
 
 ---
 title: "UserGpgKey"
-title_tag: "Resource UserGpgKey | Package GitHub"
-meta_desc: "Explore the UserGpgKey resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub user&#39;s GPG key resource."
+title_tag: "github.UserGpgKey"
+meta_desc: "Documentation for the github.UserGpgKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
