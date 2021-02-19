@@ -1,8 +1,8 @@
 
 ---
-title: "GetVpcEndpointZones"
-title_tag: "Function GetVpcEndpointZones | Module privatelink | Package AliCloud"
-meta_desc: "Explore the GetVpcEndpointZones function of the privatelink module, including examples, input properties, output properties, and supporting types. This data source provides the Privatelink Vpc Endpoint Zones of the current Alibaba Cloud user."
+title: "getVpcEndpointZones"
+title_tag: "alicloud.privatelink.getVpcEndpointZones"
+meta_desc: "Documentation for the alicloud.privatelink.getVpcEndpointZones function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -96,7 +96,7 @@ export const firstPrivatelinkVpcEndpointZoneId = example.then(example => example
 {{% /examples %}}
 
 
-## Using GetVpcEndpointZones {#using}
+## Using getVpcEndpointZones {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -113,6 +113,8 @@ export const firstPrivatelinkVpcEndpointZoneId = example.then(example => example
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcEndpointZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetVpcEndpointZonesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetVpcEndpointZonesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetVpcEndpointZones` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -271,7 +273,7 @@ The following arguments are supported:
 
 
 
-## GetVpcEndpointZones Result {#result}
+## getVpcEndpointZones Result {#result}
 
 The following output properties are available:
 

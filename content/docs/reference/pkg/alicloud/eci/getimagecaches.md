@@ -1,8 +1,8 @@
 
 ---
-title: "GetImageCaches"
-title_tag: "Function GetImageCaches | Module eci | Package AliCloud"
-meta_desc: "Explore the GetImageCaches function of the eci module, including examples, input properties, output properties, and supporting types. Provides a collection of ECI Image Cache to the specified filters."
+title: "getImageCaches"
+title_tag: "alicloud.eci.getImageCaches"
+meta_desc: "Documentation for the alicloud.eci.getImageCaches function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,7 +17,7 @@ Provides a collection of ECI Image Cache to the specified filters.
 
 
 
-## Using GetImageCaches {#using}
+## Using getImageCaches {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -34,6 +34,8 @@ Provides a collection of ECI Image Cache to the specified filters.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImageCaches<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetImageCachesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetImageCachesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetImageCaches` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -352,7 +354,7 @@ The following arguments are supported:
 
 
 
-## GetImageCaches Result {#result}
+## getImageCaches Result {#result}
 
 The following output properties are available:
 

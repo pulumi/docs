@@ -1,8 +1,8 @@
 
 ---
-title: "GetGlobalClusterConfig"
-title_tag: "Function GetGlobalClusterConfig | Package MongoDB Atlas"
-meta_desc: "Explore the GetGlobalClusterConfig function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.GlobalClusterConfig` describes all managed namespaces and custom zone mappings associated with the specified Global Cluster."
+title: "getGlobalClusterConfig"
+title_tag: "mongodbatlas.getGlobalClusterConfig"
+meta_desc: "Documentation for the mongodbatlas.getGlobalClusterConfig function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,7 +17,7 @@ meta_desc: "Explore the GetGlobalClusterConfig function of the MongoDB Atlas pac
 
 
 
-## Using GetGlobalClusterConfig {#using}
+## Using getGlobalClusterConfig {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -198,7 +198,7 @@ The following arguments are supported:
 
 
 
-## GetGlobalClusterConfig Result {#result}
+## getGlobalClusterConfig Result {#result}
 
 The following output properties are available:
 

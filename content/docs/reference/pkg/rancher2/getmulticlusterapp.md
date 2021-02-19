@@ -1,8 +1,8 @@
 
 ---
-title: "GetMultiClusterApp"
-title_tag: "Function GetMultiClusterApp | Package Rancher 2"
-meta_desc: "Explore the GetMultiClusterApp function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 multi cluster app."
+title: "getMultiClusterApp"
+title_tag: "rancher2.getMultiClusterApp"
+meta_desc: "Documentation for the rancher2.getMultiClusterApp function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const foo = pulumi.output(rancher2.getMultiClusterApp({
 {{% /examples %}}
 
 
-## Using GetMultiClusterApp {#using}
+## Using getMultiClusterApp {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetMultiClusterApp Result {#result}
+## getMultiClusterApp Result {#result}
 
 The following output properties are available:
 

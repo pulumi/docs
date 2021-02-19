@@ -1,8 +1,8 @@
 
 ---
-title: "GetSecret"
-title_tag: "Function GetSecret | Package Rancher 2"
-meta_desc: "Explore the GetSecret function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 secret."
+title: "getSecret"
+title_tag: "rancher2.getSecret"
+meta_desc: "Documentation for the rancher2.getSecret function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -97,7 +97,7 @@ const foo = pulumi.output(rancher2.getSecret({
 {{% /examples %}}
 
 
-## Using GetSecret {#using}
+## Using getSecret {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -278,7 +278,7 @@ The following arguments are supported:
 
 
 
-## GetSecret Result {#result}
+## getSecret Result {#result}
 
 The following output properties are available:
 

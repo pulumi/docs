@@ -1,8 +1,8 @@
 
 ---
-title: "GetSecurityGroups"
-title_tag: "Function GetSecurityGroups | Module ecs | Package AliCloud"
-meta_desc: "Explore the GetSecurityGroups function of the ecs module, including examples, input properties, output properties, and supporting types. This data source provides a list of Security Groups in an Alibaba Cloud account according to the specified filters."
+title: "getSecurityGroups"
+title_tag: "alicloud.ecs.getSecurityGroups"
+meta_desc: "Documentation for the alicloud.ecs.getSecurityGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -125,7 +125,7 @@ export const firstGroupId = primarySecGroupsDs.groups[0].id;
 {{% /examples %}}
 
 
-## Using GetSecurityGroups {#using}
+## Using getSecurityGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -142,6 +142,8 @@ export const firstGroupId = primarySecGroupsDs.groups[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSecurityGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSecurityGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetSecurityGroups` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -672,7 +674,7 @@ func main() {
 
 
 
-## GetSecurityGroups Result {#result}
+## getSecurityGroups Result {#result}
 
 The following output properties are available:
 

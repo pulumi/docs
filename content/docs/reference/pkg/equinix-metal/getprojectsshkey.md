@@ -1,8 +1,8 @@
 
 ---
-title: "GetProjectSshKey"
-title_tag: "Function GetProjectSshKey | Package Equinix Metal"
-meta_desc: "Explore the GetProjectSshKey function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. Use this datasource to retrieve attributes of a Project SSH Key API resource."
+title: "getProjectSshKey"
+title_tag: "equinix-metal.getProjectSshKey"
+meta_desc: "Documentation for the equinix-metal.getProjectSshKey function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -93,7 +93,7 @@ const myKey = equinix_metal.getProjectSshKey({
 {{% /examples %}}
 
 
-## Using GetProjectSshKey {#using}
+## Using getProjectSshKey {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -278,7 +278,7 @@ in the Equinix Metal project
 
 
 
-## GetProjectSshKey Result {#result}
+## getProjectSshKey Result {#result}
 
 The following output properties are available:
 

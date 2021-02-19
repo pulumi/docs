@@ -1,8 +1,8 @@
 
 ---
-title: "GetKafkaConnector"
-title_tag: "Function GetKafkaConnector | Package Aiven"
-meta_desc: "Explore the GetKafkaConnector function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Kafka connector Data Source"
+title: "getKafkaConnector"
+title_tag: "aiven.getKafkaConnector"
+meta_desc: "Documentation for the aiven.getKafkaConnector function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,7 +98,7 @@ const kafka-es-con1 = aiven.getKafkaConnector({
 {{% /examples %}}
 
 
-## Using GetKafkaConnector {#using}
+## Using getKafkaConnector {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -587,7 +587,7 @@ The following arguments are supported:
 
 
 
-## GetKafkaConnector Result {#result}
+## getKafkaConnector Result {#result}
 
 The following output properties are available:
 

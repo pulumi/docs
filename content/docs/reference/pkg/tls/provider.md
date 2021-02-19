@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package TLS"
-meta_desc: "Explore the Provider resource of the TLS package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the tls package. By default, resources use package-wide configuration"
+title_tag: "tls.Provider"
+meta_desc: "Documentation for the tls.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

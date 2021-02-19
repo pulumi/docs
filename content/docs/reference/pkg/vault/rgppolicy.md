@@ -1,8 +1,8 @@
 
 ---
 title: "RgpPolicy"
-title_tag: "Resource RgpPolicy | Package Vault"
-meta_desc: "Explore the RgpPolicy resource of the Vault package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage Role Governing Policy (RGP) via [Sentinel](https://www.vaultproject.io/docs/enterprise/sentinel/index.html)."
+title_tag: "vault.RgpPolicy"
+meta_desc: "Documentation for the vault.RgpPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

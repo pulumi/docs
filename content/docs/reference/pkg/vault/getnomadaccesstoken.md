@@ -1,8 +1,8 @@
 
 ---
-title: "GetNomadAccessToken"
-title_tag: "Function GetNomadAccessToken | Package Vault"
-meta_desc: "Explore the GetNomadAccessToken function of the Vault package, including examples, input properties, output properties, and supporting types. "
+title: "getNomadAccessToken"
+title_tag: "vault.getNomadAccessToken"
+meta_desc: "Documentation for the vault.getNomadAccessToken function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetNomadAccessToken function of the Vault package, inclu
 
 
 
-## Using GetNomadAccessToken {#using}
+## Using getNomadAccessToken {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -30,6 +30,8 @@ meta_desc: "Explore the GetNomadAccessToken function of the Vault package, inclu
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNomadAccessToken<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNomadAccessTokenArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNomadAccessTokenResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetNomadAccessToken` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -160,7 +162,7 @@ a token for, with no leading or trailing `/`s.
 
 
 
-## GetNomadAccessToken Result {#result}
+## getNomadAccessToken Result {#result}
 
 The following output properties are available:
 

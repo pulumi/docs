@@ -1,8 +1,8 @@
 
 ---
 title: "PortVlanAttachment"
-title_tag: "Resource PortVlanAttachment | Package Equinix Metal"
-meta_desc: "Explore the PortVlanAttachment resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to attach device ports to VLANs."
+title_tag: "equinix-metal.PortVlanAttachment"
+meta_desc: "Documentation for the equinix-metal.PortVlanAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Route"
-title_tag: "Resource Route | Package Kong"
-meta_desc: "Explore the Route resource of the Kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "kong.Route"
+meta_desc: "Documentation for the kong.Route resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

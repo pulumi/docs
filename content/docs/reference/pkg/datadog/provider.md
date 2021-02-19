@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Datadog"
-meta_desc: "Explore the Provider resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the datadog package. By default, resources use package-wide configuration"
+title_tag: "datadog.Provider"
+meta_desc: "Documentation for the datadog.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

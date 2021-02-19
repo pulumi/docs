@@ -1,6 +1,6 @@
 ---
 title: "Keycloak"
-title_tag: "Package Keycloak"
+title_tag: "Keycloak Package"
 meta_desc: "A Pulumi package for creating and managing keycloak cloud resources."
 menu:
     reference:

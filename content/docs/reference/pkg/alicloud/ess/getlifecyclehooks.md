@@ -1,8 +1,8 @@
 
 ---
-title: "GetLifecycleHooks"
-title_tag: "Function GetLifecycleHooks | Module ess | Package AliCloud"
-meta_desc: "Explore the GetLifecycleHooks function of the ess module, including examples, input properties, output properties, and supporting types. This data source provides available lifecycle hook resources. "
+title: "getLifecycleHooks"
+title_tag: "alicloud.ess.getLifecycleHooks"
+meta_desc: "Documentation for the alicloud.ess.getLifecycleHooks function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -103,7 +103,7 @@ export const firstLifecycleHook = ds.hooks[0].id;
 {{% /examples %}}
 
 
-## Using GetLifecycleHooks {#using}
+## Using getLifecycleHooks {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -120,6 +120,8 @@ export const firstLifecycleHook = ds.hooks[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLifecycleHooks<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetLifecycleHooksArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetLifecycleHooksResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetLifecycleHooks` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -318,7 +320,7 @@ The following arguments are supported:
 
 
 
-## GetLifecycleHooks Result {#result}
+## getLifecycleHooks Result {#result}
 
 The following output properties are available:
 

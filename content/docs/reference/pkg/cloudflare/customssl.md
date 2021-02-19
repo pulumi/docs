@@ -1,8 +1,8 @@
 
 ---
 title: "CustomSsl"
-title_tag: "Resource CustomSsl | Package Cloudflare"
-meta_desc: "Explore the CustomSsl resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloudflare custom ssl resource."
+title_tag: "cloudflare.CustomSsl"
+meta_desc: "Documentation for the cloudflare.CustomSsl resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

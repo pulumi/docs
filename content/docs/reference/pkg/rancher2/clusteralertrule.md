@@ -1,8 +1,8 @@
 
 ---
 title: "ClusterAlertRule"
-title_tag: "Resource ClusterAlertRule | Package Rancher 2"
-meta_desc: "Explore the ClusterAlertRule resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Cluster Alert Rule resource. This can be used to create Cluster Alert Rule for Rancher v2 environments and retrieve their information."
+title_tag: "rancher2.ClusterAlertRule"
+meta_desc: "Documentation for the rancher2.ClusterAlertRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

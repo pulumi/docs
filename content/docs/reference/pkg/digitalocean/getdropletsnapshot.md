@@ -1,8 +1,8 @@
 
 ---
-title: "GetDropletSnapshot"
-title_tag: "Function GetDropletSnapshot | Package DigitalOcean"
-meta_desc: "Explore the GetDropletSnapshot function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Droplet snapshots are saved instances of a Droplet. Use this data"
+title: "getDropletSnapshot"
+title_tag: "digitalocean.getDropletSnapshot"
+meta_desc: "Documentation for the digitalocean.getDropletSnapshot function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -101,7 +101,7 @@ const web_snapshot = pulumi.output(digitalocean.getDropletSnapshot({
 {{% /examples %}}
 
 
-## Using GetDropletSnapshot {#using}
+## Using getDropletSnapshot {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -322,7 +322,7 @@ The following arguments are supported:
 
 
 
-## GetDropletSnapshot Result {#result}
+## getDropletSnapshot Result {#result}
 
 The following output properties are available:
 

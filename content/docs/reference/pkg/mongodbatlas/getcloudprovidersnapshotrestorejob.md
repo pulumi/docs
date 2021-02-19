@@ -1,8 +1,8 @@
 
 ---
-title: "GetCloudProviderSnapshotRestoreJob"
-title_tag: "Function GetCloudProviderSnapshotRestoreJob | Package MongoDB Atlas"
-meta_desc: "Explore the GetCloudProviderSnapshotRestoreJob function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.CloudProviderSnapshotRestoreJob` provides a Cloud Backup Snapshot Restore Job datasource. Gets all the cloud backup snapshot restore jobs for the specified cluster."
+title: "getCloudProviderSnapshotRestoreJob"
+title_tag: "mongodbatlas.getCloudProviderSnapshotRestoreJob"
+meta_desc: "Documentation for the mongodbatlas.getCloudProviderSnapshotRestoreJob function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -66,7 +66,7 @@ const testCloudProviderSnapshotRestoreJob = pulumi.all([testMongodbatlasCloudPro
 {{% /examples %}}
 
 
-## Using GetCloudProviderSnapshotRestoreJob {#using}
+## Using getCloudProviderSnapshotRestoreJob {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -247,7 +247,7 @@ The following arguments are supported:
 
 
 
-## GetCloudProviderSnapshotRestoreJob Result {#result}
+## getCloudProviderSnapshotRestoreJob Result {#result}
 
 The following output properties are available:
 

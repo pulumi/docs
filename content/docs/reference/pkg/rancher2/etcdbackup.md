@@ -1,8 +1,8 @@
 
 ---
 title: "EtcdBackup"
-title_tag: "Resource EtcdBackup | Package Rancher 2"
-meta_desc: "Explore the EtcdBackup resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "rancher2.EtcdBackup"
+meta_desc: "Documentation for the rancher2.EtcdBackup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

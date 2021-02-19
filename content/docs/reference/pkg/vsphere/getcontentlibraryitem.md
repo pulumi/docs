@@ -1,8 +1,8 @@
 
 ---
-title: "GetContentLibraryItem"
-title_tag: "Function GetContentLibraryItem | Package vSphere"
-meta_desc: "Explore the GetContentLibraryItem function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.ContentLibraryItem` data source can be used to discover the ID of a Content Library item."
+title: "getContentLibraryItem"
+title_tag: "vsphere.getContentLibraryItem"
+meta_desc: "Documentation for the vsphere.getContentLibraryItem function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -18,7 +18,7 @@ connections.
 
 
 
-## Using GetContentLibraryItem {#using}
+## Using getContentLibraryItem {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -199,7 +199,7 @@ The following arguments are supported:
 
 
 
-## GetContentLibraryItem Result {#result}
+## getContentLibraryItem Result {#result}
 
 The following output properties are available:
 

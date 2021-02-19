@@ -1,8 +1,8 @@
 
 ---
 title: "ComputeClusterVmDependencyRule"
-title_tag: "Resource ComputeClusterVmDependencyRule | Package vSphere"
-meta_desc: "Explore the ComputeClusterVmDependencyRule resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.ComputeClusterVmDependencyRule"
+meta_desc: "Documentation for the vsphere.ComputeClusterVmDependencyRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

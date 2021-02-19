@@ -1,8 +1,8 @@
 
 ---
-title: "GetTable"
-title_tag: "Function GetTable | Module dynamodb | Package AWS"
-meta_desc: "Explore the GetTable function of the dynamodb module, including examples, input properties, output properties, and supporting types. Provides information about a DynamoDB table."
+title: "getTable"
+title_tag: "aws.dynamodb.getTable"
+meta_desc: "Documentation for the aws.dynamodb.getTable function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const tableName = pulumi.output(aws.dynamodb.getTable({
 {{% /examples %}}
 
 
-## Using GetTable {#using}
+## Using getTable {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -261,7 +261,7 @@ The following arguments are supported:
 
 
 
-## GetTable Result {#result}
+## getTable Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "EntityPermissions"
-title_tag: "Resource EntityPermissions | Package vSphere"
-meta_desc: "Explore the EntityPermissions resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.EntityPermissions"
+meta_desc: "Documentation for the vsphere.EntityPermissions resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Grant"
-title_tag: "Resource Grant | Package MySQL"
-meta_desc: "Explore the Grant resource of the MySQL package, including examples, input properties, output properties, lookup functions, and supporting types. The ``mysql.Grant`` resource creates and manages privileges given to"
+title_tag: "mysql.Grant"
+meta_desc: "Documentation for the mysql.Grant resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

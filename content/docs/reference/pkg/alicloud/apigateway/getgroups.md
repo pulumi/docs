@@ -1,8 +1,8 @@
 
 ---
-title: "GetGroups"
-title_tag: "Function GetGroups | Module apigateway | Package AliCloud"
-meta_desc: "Explore the GetGroups function of the apigateway module, including examples, input properties, output properties, and supporting types. This data source provides the api groups of the current Alibaba Cloud user."
+title: "getGroups"
+title_tag: "alicloud.apigateway.getGroups"
+meta_desc: "Documentation for the alicloud.apigateway.getGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -96,7 +96,7 @@ export const firstGroupId = dataApigatway.groups[0].id;
 {{% /examples %}}
 
 
-## Using GetGroups {#using}
+## Using getGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -113,6 +113,8 @@ export const firstGroupId = dataApigatway.groups[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetGroups` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -271,7 +273,7 @@ The following arguments are supported:
 
 
 
-## GetGroups Result {#result}
+## getGroups Result {#result}
 
 The following output properties are available:
 

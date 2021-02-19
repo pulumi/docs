@@ -1,8 +1,8 @@
 
 ---
-title: "GetApplication"
-title_tag: "Function GetApplication | Module serverlessrepository | Package AWS"
-meta_desc: "Explore the GetApplication function of the serverlessrepository module, including examples, input properties, output properties, and supporting types. Use this data source to get information about an AWS Serverless Application Repository application. For example, this can be used to determine the required `capabilities` for an application."
+title: "getApplication"
+title_tag: "aws.serverlessrepository.getApplication"
+meta_desc: "Documentation for the aws.serverlessrepository.getApplication function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -118,7 +118,7 @@ const exampleCloudFormationStack = new aws.serverlessrepository.CloudFormationSt
 {{% /examples %}}
 
 
-## Using GetApplication {#using}
+## Using getApplication {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -135,6 +135,8 @@ const exampleCloudFormationStack = new aws.serverlessrepository.CloudFormationSt
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetApplicationResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetApplication` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -257,7 +259,7 @@ The following arguments are supported:
 
 
 
-## GetApplication Result {#result}
+## getApplication Result {#result}
 
 The following output properties are available:
 

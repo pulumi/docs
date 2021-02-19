@@ -1,8 +1,8 @@
 
 ---
-title: "GetKafka"
-title_tag: "Function GetKafka | Package Aiven"
-meta_desc: "Explore the GetKafka function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Kafka Data Source"
+title: "getKafka"
+title_tag: "aiven.getKafka"
+meta_desc: "Documentation for the aiven.getKafka function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const kafka1 = aiven.getKafka({
 {{% /examples %}}
 
 
-## Using GetKafka {#using}
+## Using getKafka {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1055,7 +1055,7 @@ deletion is done.
 
 
 
-## GetKafka Result {#result}
+## getKafka Result {#result}
 
 The following output properties are available:
 

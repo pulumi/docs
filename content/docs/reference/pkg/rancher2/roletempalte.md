@@ -1,8 +1,8 @@
 
 ---
 title: "RoleTempalte"
-title_tag: "Resource RoleTempalte | Package Rancher 2"
-meta_desc: "Explore the RoleTempalte resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Role Template resource. This can be used to create Role Template for Rancher v2 and retrieve their information. "
+title_tag: "rancher2.RoleTempalte"
+meta_desc: "Documentation for the rancher2.RoleTempalte resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

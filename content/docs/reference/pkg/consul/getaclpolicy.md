@@ -1,8 +1,8 @@
 
 ---
-title: "GetAclPolicy"
-title_tag: "Function GetAclPolicy | Package Consul"
-meta_desc: "Explore the GetAclPolicy function of the Consul package, including examples, input properties, output properties, and supporting types. The `consul.AclPolicy` data source returns the information related to a"
+title: "getAclPolicy"
+title_tag: "consul.getAclPolicy"
+meta_desc: "Documentation for the consul.getAclPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -95,7 +95,7 @@ export const consulAclPolicy = agent.then(agent => agent.rules);
 {{% /examples %}}
 
 
-## Using GetAclPolicy {#using}
+## Using getAclPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -356,7 +356,7 @@ The following arguments are supported:
 
 
 
-## GetAclPolicy Result {#result}
+## getAclPolicy Result {#result}
 
 The following output properties are available:
 

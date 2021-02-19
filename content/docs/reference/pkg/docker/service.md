@@ -1,8 +1,8 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Package Docker"
-meta_desc: "Explore the Service resource of the Docker package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "docker.Service"
+meta_desc: "Documentation for the docker.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

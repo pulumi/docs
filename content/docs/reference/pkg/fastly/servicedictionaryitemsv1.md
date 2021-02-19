@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceDictionaryItemsv1"
-title_tag: "Resource ServiceDictionaryItemsv1 | Package Fastly"
-meta_desc: "Explore the ServiceDictionaryItemsv1 resource of the Fastly package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "fastly.ServiceDictionaryItemsv1"
+meta_desc: "Documentation for the fastly.ServiceDictionaryItemsv1 resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

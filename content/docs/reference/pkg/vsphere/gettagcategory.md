@@ -1,8 +1,8 @@
 
 ---
-title: "GetTagCategory"
-title_tag: "Function GetTagCategory | Package vSphere"
-meta_desc: "Explore the GetTagCategory function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.TagCategory` data source can be used to reference tag categories"
+title: "getTagCategory"
+title_tag: "vsphere.getTagCategory"
+meta_desc: "Documentation for the vsphere.getTagCategory function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -95,7 +95,7 @@ const category = pulumi.output(vsphere.getTagCategory({
 {{% /examples %}}
 
 
-## Using GetTagCategory {#using}
+## Using getTagCategory {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -196,7 +196,7 @@ The following arguments are supported:
 
 
 
-## GetTagCategory Result {#result}
+## getTagCategory Result {#result}
 
 The following output properties are available:
 

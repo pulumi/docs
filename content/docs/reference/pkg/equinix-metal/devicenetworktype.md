@@ -1,8 +1,8 @@
 
 ---
 title: "DeviceNetworkType"
-title_tag: "Resource DeviceNetworkType | Package Equinix Metal"
-meta_desc: "Explore the DeviceNetworkType resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "equinix-metal.DeviceNetworkType"
+meta_desc: "Documentation for the equinix-metal.DeviceNetworkType resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

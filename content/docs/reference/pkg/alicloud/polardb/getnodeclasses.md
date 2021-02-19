@@ -1,8 +1,8 @@
 
 ---
-title: "GetNodeClasses"
-title_tag: "Function GetNodeClasses | Module polardb | Package AliCloud"
-meta_desc: "Explore the GetNodeClasses function of the polardb module, including examples, input properties, output properties, and supporting types. This data source provides the PolarDB node classes resource available info of Alibaba Cloud."
+title: "getNodeClasses"
+title_tag: "alicloud.polardb.getNodeClasses"
+meta_desc: "Documentation for the alicloud.polardb.getNodeClasses function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -127,7 +127,7 @@ export const polardbNodeClasses = resourcesNodeClasses.then(resourcesNodeClasses
 {{% /examples %}}
 
 
-## Using GetNodeClasses {#using}
+## Using getNodeClasses {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -144,6 +144,8 @@ export const polardbNodeClasses = resourcesNodeClasses.then(resourcesNodeClasses
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodeClasses<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNodeClassesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNodeClassesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetNodeClasses` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -462,7 +464,7 @@ The following arguments are supported:
 
 
 
-## GetNodeClasses Result {#result}
+## getNodeClasses Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "MultiClusterApp"
-title_tag: "Resource MultiClusterApp | Package Rancher 2"
-meta_desc: "Explore the MultiClusterApp resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "rancher2.MultiClusterApp"
+meta_desc: "Documentation for the rancher2.MultiClusterApp resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

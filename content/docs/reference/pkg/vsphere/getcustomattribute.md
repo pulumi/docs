@@ -1,8 +1,8 @@
 
 ---
-title: "GetCustomAttribute"
-title_tag: "Function GetCustomAttribute | Package vSphere"
-meta_desc: "Explore the GetCustomAttribute function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.CustomAttribute` data source can be used to reference custom "
+title: "getCustomAttribute"
+title_tag: "vsphere.getCustomAttribute"
+meta_desc: "Documentation for the vsphere.getCustomAttribute function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -95,7 +95,7 @@ const attribute = pulumi.output(vsphere.getCustomAttribute({
 {{% /examples %}}
 
 
-## Using GetCustomAttribute {#using}
+## Using getCustomAttribute {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -196,7 +196,7 @@ The following arguments are supported:
 
 
 
-## GetCustomAttribute Result {#result}
+## getCustomAttribute Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "DatabaseDb"
-title_tag: "Resource DatabaseDb | Package DigitalOcean"
-meta_desc: "Explore the DatabaseDb resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean database resource. When creating a new database cluster, a default database with name `defaultdb` will be created. Then, this resource can be used to provide additional database inside the cluster."
+title_tag: "digitalocean.DatabaseDb"
+meta_desc: "Documentation for the digitalocean.DatabaseDb resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetVpcPeeringConnection"
-title_tag: "Function GetVpcPeeringConnection | Module ec2 | Package AWS"
-meta_desc: "Explore the GetVpcPeeringConnection function of the ec2 module, including examples, input properties, output properties, and supporting types. The VPC Peering Connection data source provides details about"
+title: "getVpcPeeringConnection"
+title_tag: "aws.ec2.getVpcPeeringConnection"
+meta_desc: "Documentation for the aws.ec2.getVpcPeeringConnection function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -136,7 +136,7 @@ const route = new aws.ec2.Route("route", {
 {{% /examples %}}
 
 
-## Using GetVpcPeeringConnection {#using}
+## Using getVpcPeeringConnection {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -681,7 +681,7 @@ a pair on the desired VPC Peering Connection.
 
 
 
-## GetVpcPeeringConnection Result {#result}
+## getVpcPeeringConnection Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "CloudCredential"
-title_tag: "Resource CloudCredential | Package Rancher 2"
-meta_desc: "Explore the CloudCredential resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Cloud Credential resource. This can be used to create Cloud Credential for Rancher v2.2.x and retrieve their information."
+title_tag: "rancher2.CloudCredential"
+meta_desc: "Documentation for the rancher2.CloudCredential resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

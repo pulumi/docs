@@ -1,8 +1,8 @@
 
 ---
-title: "GetSnapshot"
-title_tag: "Function GetSnapshot | Module rds | Package AWS"
-meta_desc: "Explore the GetSnapshot function of the rds module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a DB Snapshot for use when provisioning DB instances"
+title: "getSnapshot"
+title_tag: "aws.rds.getSnapshot"
+meta_desc: "Documentation for the aws.rds.getSnapshot function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -163,7 +163,7 @@ const dev = new aws.rds.Instance("dev", {
 {{% /examples %}}
 
 
-## Using GetSnapshot {#using}
+## Using getSnapshot {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -488,7 +488,7 @@ included in the returned results by default. Possible values are, `automated`, `
 
 
 
-## GetSnapshot Result {#result}
+## getSnapshot Result {#result}
 
 The following output properties are available:
 

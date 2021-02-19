@@ -1,8 +1,8 @@
 
 ---
-title: "GetPortIds"
-title_tag: "Function GetPortIds | Module networking | Package Open Stack"
-meta_desc: "Explore the GetPortIds function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get a list of Openstack Port IDs matching the"
+title: "getPortIds"
+title_tag: "openstack.networking.getPortIds"
+meta_desc: "Documentation for the openstack.networking.getPortIds function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,7 +90,7 @@ const ports = pulumi.output(openstack.networking.getPortIds({
 {{% /examples %}}
 
 
-## Using GetPortIds {#using}
+## Using getPortIds {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -107,6 +107,8 @@ const ports = pulumi.output(openstack.networking.getPortIds({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPortIds<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPortIdsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPortIdsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetPortIds` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -833,7 +835,7 @@ Defaults to none.
 
 
 
-## GetPortIds Result {#result}
+## getPortIds Result {#result}
 
 The following output properties are available:
 

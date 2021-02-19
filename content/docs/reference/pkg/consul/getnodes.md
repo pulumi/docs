@@ -1,8 +1,8 @@
 
 ---
-title: "GetNodes"
-title_tag: "Function GetNodes | Package Consul"
-meta_desc: "Explore the GetNodes function of the Consul package, including examples, input properties, output properties, and supporting types. The `consul.getNodes` data source returns a list of Consul nodes that have"
+title: "getNodes"
+title_tag: "consul.getNodes"
+meta_desc: "Documentation for the consul.getNodes function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -18,7 +18,7 @@ nodes from a different WAN-attached Consul datacenter.
 
 
 
-## Using GetNodes {#using}
+## Using getNodes {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -35,6 +35,8 @@ nodes from a different WAN-attached Consul datacenter.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNodesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNodesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetNodes` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -117,7 +119,7 @@ The following arguments are supported:
 
 
 
-## GetNodes Result {#result}
+## getNodes Result {#result}
 
 The following output properties are available:
 

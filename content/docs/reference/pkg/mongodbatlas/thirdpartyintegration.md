@@ -1,8 +1,8 @@
 
 ---
 title: "ThirdPartyIntegration"
-title_tag: "Resource ThirdPartyIntegration | Package MongoDB Atlas"
-meta_desc: "Explore the ThirdPartyIntegration resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "mongodbatlas.ThirdPartyIntegration"
+meta_desc: "Documentation for the mongodbatlas.ThirdPartyIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

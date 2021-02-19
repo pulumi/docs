@@ -1,8 +1,8 @@
 
 ---
 title: "Droplet"
-title_tag: "Resource Droplet | Package DigitalOcean"
-meta_desc: "Explore the Droplet resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Droplet resource. This can be used to create,"
+title_tag: "digitalocean.Droplet"
+meta_desc: "Documentation for the digitalocean.Droplet resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

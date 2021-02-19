@@ -1,8 +1,8 @@
 
 ---
-title: "GetProject"
-title_tag: "Function GetProject | Package Equinix Metal"
-meta_desc: "Explore the GetProject function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. Use this datasource to retrieve attributes of the Project API resource."
+title: "getProject"
+title_tag: "equinix-metal.getProject"
+meta_desc: "Documentation for the equinix-metal.getProject function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -95,7 +95,7 @@ export const usersOfTerraformFun = tfProject1.then(tfProject1 => tfProject1.user
 {{% /examples %}}
 
 
-## Using GetProject {#using}
+## Using getProject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ The following arguments are supported:
 
 
 
-## GetProject Result {#result}
+## getProject Result {#result}
 
 The following output properties are available:
 

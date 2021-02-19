@@ -1,8 +1,8 @@
 
 ---
-title: "GetVbrHealthChecks"
-title_tag: "Function GetVbrHealthChecks | Module cen | Package AliCloud"
-meta_desc: "Explore the GetVbrHealthChecks function of the cen module, including examples, input properties, output properties, and supporting types. This data source provides CEN VBR Health Checks available to the user."
+title: "getVbrHealthChecks"
+title_tag: "alicloud.cen.getVbrHealthChecks"
+meta_desc: "Documentation for the alicloud.cen.getVbrHealthChecks function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,7 +17,7 @@ This data source provides CEN VBR Health Checks available to the user.
 
 
 
-## Using GetVbrHealthChecks {#using}
+## Using getVbrHealthChecks {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -34,6 +34,8 @@ This data source provides CEN VBR Health Checks available to the user.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVbrHealthChecks<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetVbrHealthChecksArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetVbrHealthChecksResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetVbrHealthChecks` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -272,7 +274,7 @@ The following arguments are supported:
 
 
 
-## GetVbrHealthChecks Result {#result}
+## getVbrHealthChecks Result {#result}
 
 The following output properties are available:
 

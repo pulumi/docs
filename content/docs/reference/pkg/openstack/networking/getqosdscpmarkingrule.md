@@ -1,8 +1,8 @@
 
 ---
-title: "GetQosDscpMarkingRule"
-title_tag: "Function GetQosDscpMarkingRule | Module networking | Package Open Stack"
-meta_desc: "Explore the GetQosDscpMarkingRule function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack QoS DSCP marking rule."
+title: "getQosDscpMarkingRule"
+title_tag: "openstack.networking.getQosDscpMarkingRule"
+meta_desc: "Documentation for the openstack.networking.getQosDscpMarkingRule function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -46,7 +46,7 @@ const qosDscpMarkingRule1 = pulumi.output(openstack.networking.getQosDscpMarking
 {{% /examples %}}
 
 
-## Using GetQosDscpMarkingRule {#using}
+## Using getQosDscpMarkingRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -235,7 +235,7 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
 
 
 
-## GetQosDscpMarkingRule Result {#result}
+## getQosDscpMarkingRule Result {#result}
 
 The following output properties are available:
 

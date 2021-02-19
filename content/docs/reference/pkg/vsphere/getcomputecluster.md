@@ -1,8 +1,8 @@
 
 ---
-title: "GetComputeCluster"
-title_tag: "Function GetComputeCluster | Package vSphere"
-meta_desc: "Explore the GetComputeCluster function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.ComputeCluster` data source can be used to discover the ID of a"
+title: "getComputeCluster"
+title_tag: "vsphere.getComputeCluster"
+meta_desc: "Documentation for the vsphere.getComputeCluster function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -118,7 +118,7 @@ const computeCluster = vsphere_datacenter_dc.id.apply(id => vsphere.getComputeCl
 {{% /examples %}}
 
 
-## Using GetComputeCluster {#using}
+## Using getComputeCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -275,7 +275,7 @@ data source.
 
 
 
-## GetComputeCluster Result {#result}
+## getComputeCluster Result {#result}
 
 The following output properties are available:
 

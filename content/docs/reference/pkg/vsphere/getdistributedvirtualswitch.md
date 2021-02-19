@@ -1,8 +1,8 @@
 
 ---
-title: "GetDistributedVirtualSwitch"
-title_tag: "Function GetDistributedVirtualSwitch | Package vSphere"
-meta_desc: "Explore the GetDistributedVirtualSwitch function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.DistributedVirtualSwitch` data source can be used to discover"
+title: "getDistributedVirtualSwitch"
+title_tag: "vsphere.getDistributedVirtualSwitch"
+meta_desc: "Documentation for the vsphere.getDistributedVirtualSwitch function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -148,7 +148,7 @@ const pg = new vsphere.DistributedPortGroup("pg", {
 {{% /examples %}}
 
 
-## Using GetDistributedVirtualSwitch {#using}
+## Using getDistributedVirtualSwitch {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -309,7 +309,7 @@ source.
 
 
 
-## GetDistributedVirtualSwitch Result {#result}
+## getDistributedVirtualSwitch Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetDevice"
-title_tag: "Function GetDevice | Package Equinix Metal"
-meta_desc: "Explore the GetDevice function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. Provides an Equinix Metal device datasource."
+title: "getDevice"
+title_tag: "equinix-metal.getDevice"
+meta_desc: "Documentation for the equinix-metal.getDevice function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -104,7 +104,7 @@ export const id = test.then(test => test.id);
 {{% /examples %}}
 
 
-## Using GetDevice {#using}
+## Using getDevice {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -285,7 +285,7 @@ The following arguments are supported:
 
 
 
-## GetDevice Result {#result}
+## getDevice Result {#result}
 
 The following output properties are available:
 

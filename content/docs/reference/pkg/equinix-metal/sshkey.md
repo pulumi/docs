@@ -1,8 +1,8 @@
 
 ---
 title: "SshKey"
-title_tag: "Resource SshKey | Package Equinix Metal"
-meta_desc: "Explore the SshKey resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage User SSH keys on your Equinix Metal user account. If you create a new device in a project, all the keys of the project&#39;s collaborators will be injected to the device."
+title_tag: "equinix-metal.SshKey"
+meta_desc: "Documentation for the equinix-metal.SshKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

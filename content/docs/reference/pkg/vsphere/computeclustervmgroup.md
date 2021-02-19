@@ -1,8 +1,8 @@
 
 ---
 title: "ComputeClusterVmGroup"
-title_tag: "Resource ComputeClusterVmGroup | Package vSphere"
-meta_desc: "Explore the ComputeClusterVmGroup resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.ComputeClusterVmGroup"
+meta_desc: "Documentation for the vsphere.ComputeClusterVmGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

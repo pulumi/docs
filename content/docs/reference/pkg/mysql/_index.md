@@ -1,6 +1,6 @@
 ---
 title: "MySQL"
-title_tag: "Module MySQL | Package MySQL"
+title_tag: "mysql.MySQL"
 meta_desc: "A Pulumi package for creating and managing mysql cloud resources."
 menu:
     reference:

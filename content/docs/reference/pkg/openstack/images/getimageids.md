@@ -1,8 +1,8 @@
 
 ---
-title: "GetImageIds"
-title_tag: "Function GetImageIds | Module images | Package Open Stack"
-meta_desc: "Explore the GetImageIds function of the images module, including examples, input properties, output properties, and supporting types. Use this data source to get a list of Openstack Image IDs matching the"
+title: "getImageIds"
+title_tag: "openstack.images.getImageIds"
+meta_desc: "Documentation for the openstack.images.getImageIds function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -108,7 +108,7 @@ const images = pulumi.output(openstack.images.getImageIds({
 {{% /examples %}}
 
 
-## Using GetImageIds {#using}
+## Using getImageIds {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -125,6 +125,8 @@ const images = pulumi.output(openstack.images.getImageIds({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImageIds<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetImageIdsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetImageIdsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetImageIds` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -767,7 +769,7 @@ are present in a configuration then only `sort` will be used.
 
 
 
-## GetImageIds Result {#result}
+## getImageIds Result {#result}
 
 The following output properties are available:
 

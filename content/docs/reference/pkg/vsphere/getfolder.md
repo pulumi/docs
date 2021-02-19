@@ -1,8 +1,8 @@
 
 ---
-title: "GetFolder"
-title_tag: "Function GetFolder | Package vSphere"
-meta_desc: "Explore the GetFolder function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.Folder` data source can be used to get the general attributes of a"
+title: "getFolder"
+title_tag: "vsphere.getFolder"
+meta_desc: "Documentation for the vsphere.getFolder function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,7 +90,7 @@ const folder = pulumi.output(vsphere.getFolder({
 {{% /examples %}}
 
 
-## Using GetFolder {#using}
+## Using getFolder {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -207,7 +207,7 @@ the path are: `vm`, `host`, `datacenter`, `datastore`, or `network`.
 
 
 
-## GetFolder Result {#result}
+## getFolder Result {#result}
 
 The following output properties are available:
 

@@ -1,6 +1,6 @@
 ---
 title: "apiregistration"
-title_tag: "Package apiregistration"
+title_tag: "apiregistration Package"
 meta_desc: ""
 ---
 

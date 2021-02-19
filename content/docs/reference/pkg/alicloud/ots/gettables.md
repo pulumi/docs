@@ -1,8 +1,8 @@
 
 ---
-title: "GetTables"
-title_tag: "Function GetTables | Module ots | Package AliCloud"
-meta_desc: "Explore the GetTables function of the ots module, including examples, input properties, output properties, and supporting types. This data source provides the ots tables of the current Alibaba Cloud user."
+title: "getTables"
+title_tag: "alicloud.ots.getTables"
+meta_desc: "Documentation for the alicloud.ots.getTables function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,7 +107,7 @@ export const firstTableId = tablesDs.tables[0].id;
 {{% /examples %}}
 
 
-## Using GetTables {#using}
+## Using getTables {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -124,6 +124,8 @@ export const firstTableId = tablesDs.tables[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTables<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetTablesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetTablesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetTables` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -322,7 +324,7 @@ The following arguments are supported:
 
 
 
-## GetTables Result {#result}
+## getTables Result {#result}
 
 The following output properties are available:
 

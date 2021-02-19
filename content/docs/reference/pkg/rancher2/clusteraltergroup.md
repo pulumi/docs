@@ -1,8 +1,8 @@
 
 ---
 title: "ClusterAlterGroup"
-title_tag: "Resource ClusterAlterGroup | Package Rancher 2"
-meta_desc: "Explore the ClusterAlterGroup resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "rancher2.ClusterAlterGroup"
+meta_desc: "Documentation for the rancher2.ClusterAlterGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

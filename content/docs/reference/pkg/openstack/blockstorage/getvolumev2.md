@@ -1,8 +1,8 @@
 
 ---
-title: "GetVolumeV2"
-title_tag: "Function GetVolumeV2 | Module blockstorage | Package Open Stack"
-meta_desc: "Explore the GetVolumeV2 function of the blockstorage module, including examples, input properties, output properties, and supporting types. Use this data source to get information about an existing volume."
+title: "getVolumeV2"
+title_tag: "openstack.blockstorage.getVolumeV2"
+meta_desc: "Documentation for the openstack.blockstorage.getVolumeV2 function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const volume1 = pulumi.output(openstack.blockstorage.getVolumeV2({
 {{% /examples %}}
 
 
-## Using GetVolumeV2 {#using}
+## Using getVolumeV2 {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -394,7 +394,7 @@ client. If omitted, the `region` argument of the provider is used.
 
 
 
-## GetVolumeV2 Result {#result}
+## getVolumeV2 Result {#result}
 
 The following output properties are available:
 

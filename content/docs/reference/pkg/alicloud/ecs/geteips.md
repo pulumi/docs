@@ -1,8 +1,8 @@
 
 ---
-title: "GetEips"
-title_tag: "Function GetEips | Module ecs | Package AliCloud"
-meta_desc: "Explore the GetEips function of the ecs module, including examples, input properties, output properties, and supporting types. This data source provides a list of EIPs (Elastic IP address) owned by an Alibaba Cloud account."
+title: "getEips"
+title_tag: "alicloud.ecs.getEips"
+meta_desc: "Documentation for the alicloud.ecs.getEips function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ export const firstEipId = eipsDs.eips[0].id;
 {{% /examples %}}
 
 
-## Using GetEips {#using}
+## Using getEips {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -105,6 +105,8 @@ export const firstEipId = eipsDs.eips[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEips<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEipsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEipsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetEips` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -383,7 +385,7 @@ The following arguments are supported:
 
 
 
-## GetEips Result {#result}
+## getEips Result {#result}
 
 The following output properties are available:
 

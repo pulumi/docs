@@ -1,8 +1,8 @@
 
 ---
 title: "TransitGatewayVpcAttachment"
-title_tag: "Resource TransitGatewayVpcAttachment | Package Aiven"
-meta_desc: "Explore the TransitGatewayVpcAttachment resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Transit Gateway VPC Attachment Resource"
+title_tag: "aiven.TransitGatewayVpcAttachment"
+meta_desc: "Documentation for the aiven.TransitGatewayVpcAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

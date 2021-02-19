@@ -1,8 +1,8 @@
 
 ---
 title: "LogsCustomPipeline"
-title_tag: "Resource LogsCustomPipeline | Package Datadog"
-meta_desc: "Explore the LogsCustomPipeline resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/v1/logs-pipelines/) resource, which is used to create and manage Datadog logs custom pipelines."
+title_tag: "datadog.LogsCustomPipeline"
+meta_desc: "Documentation for the datadog.LogsCustomPipeline resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Volume"
-title_tag: "Resource Volume | Package Packet"
-meta_desc: "Explore the Volume resource of the Packet package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "packet.Volume"
+meta_desc: "Documentation for the packet.Volume resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -22,19 +22,19 @@ meta_desc: "Explore the Volume resource of the Packet package, including example
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#Volume">Volume</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#VolumeArgs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_packet/#pulumi_packet.Volume">Volume</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">snapshot_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeSnapshotPolicyArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">snapshot_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeSnapshotPolicyArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#Volume">NewVolume</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#VolumeArgs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#Volume">Volume</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Volume.html">Volume</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.VolumeArgs.html">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -45,7 +45,7 @@ meta_desc: "Explore the Volume resource of the Packet package, including example
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -55,7 +55,7 @@ meta_desc: "Explore the Volume resource of the Packet package, including example
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#VolumeArgs">VolumeArgs</a></span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -114,7 +114,7 @@ meta_desc: "Explore the Volume resource of the Packet package, including example
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -124,7 +124,7 @@ meta_desc: "Explore the Volume resource of the Packet package, including example
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#VolumeArgs">VolumeArgs</a></span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -153,7 +153,7 @@ meta_desc: "Explore the Volume resource of the Packet package, including example
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -163,7 +163,7 @@ meta_desc: "Explore the Volume resource of the Packet package, including example
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.VolumeArgs.html">VolumeArgs</a></span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -186,12 +186,11 @@ meta_desc: "Explore the Volume resource of the Packet package, including example
 
 ## Volume Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Volume resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Volume resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -202,93 +201,84 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="facility_csharp">
 <a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The packet project ID to deploy the volume in
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="billingcycle_csharp">
 <a href="#billingcycle_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locked_csharp">
 <a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotpolicies_csharp">
 <a href="#snapshotpolicies_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotpolicy">List&lt;Volume<wbr>Snapshot<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -297,93 +287,84 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="facility_go">
 <a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The packet project ID to deploy the volume in
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="billingcycle_go">
 <a href="#billingcycle_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locked_go">
 <a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotpolicies_go">
 <a href="#snapshotpolicies_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotpolicy">[]Volume<wbr>Snapshot<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -392,93 +373,84 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="facility_nodejs">
 <a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Facility</span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The packet project ID to deploy the volume in
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="billingcycle_nodejs">
 <a href="#billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Billing<wbr>Cycle</span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locked_nodejs">
 <a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotpolicies_nodejs">
 <a href="#snapshotpolicies_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotpolicy">Volume<wbr>Snapshot<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -487,102 +459,89 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="facility_python">
 <a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The packet project ID to deploy the volume in
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="billing_cycle_python">
 <a href="#billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locked_python">
 <a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_policies_python">
 <a href="#snapshot_policies_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotpolicy">Sequence[Volume<wbr>Snapshot<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Volume resource produces the following output properties:
-
 
 
 
@@ -593,70 +552,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="attachments_csharp">
 <a href="#attachments_csharp" style="color: inherit; text-decoration: inherit;">Attachments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumeattachment">List&lt;Volume<wbr>Attachment&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the volume
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updated_csharp">
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -665,70 +617,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="attachments_go">
 <a href="#attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumeattachment">[]Volume<wbr>Attachment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the volume
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updated_go">
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -737,70 +682,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="attachments_nodejs">
 <a href="#attachments_nodejs" style="color: inherit; text-decoration: inherit;">attachments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumeattachment">Volume<wbr>Attachment[]</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the volume
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updated_nodejs">
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -809,73 +747,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="attachments_python">
 <a href="#attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumeattachment">Sequence[Volume<wbr>Attachment]</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the volume
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updated_python">
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -885,7 +813,7 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#VolumeState">VolumeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#Volume">Volume</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VolumeState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Volume</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -894,11 +822,11 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#VolumeState">VolumeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#Volume">Volume</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VolumeState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Volume.html">Volume</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..VolumeState.html">VolumeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Volume</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VolumeState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1000,7 +928,6 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1008,148 +935,134 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_attachments_csharp">
 <a href="#state_attachments_csharp" style="color: inherit; text-decoration: inherit;">Attachments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumeattachment">List&lt;Volume<wbr>Attachment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_billingcycle_csharp">
 <a href="#state_billingcycle_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_created_csharp">
 <a href="#state_created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_facility_csharp">
 <a href="#state_facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locked_csharp">
 <a href="#state_locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
 <a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The packet project ID to deploy the volume in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_snapshotpolicies_csharp">
 <a href="#state_snapshotpolicies_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotpolicy">List&lt;Volume<wbr>Snapshot<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updated_csharp">
 <a href="#state_updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1158,148 +1071,134 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_attachments_go">
 <a href="#state_attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumeattachment">[]Volume<wbr>Attachment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_billingcycle_go">
 <a href="#state_billingcycle_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_created_go">
 <a href="#state_created_go" style="color: inherit; text-decoration: inherit;">Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_facility_go">
 <a href="#state_facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locked_go">
 <a href="#state_locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_plan_go">
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The packet project ID to deploy the volume in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_snapshotpolicies_go">
 <a href="#state_snapshotpolicies_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotpolicy">[]Volume<wbr>Snapshot<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updated_go">
 <a href="#state_updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1308,148 +1207,134 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_attachments_nodejs">
 <a href="#state_attachments_nodejs" style="color: inherit; text-decoration: inherit;">attachments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumeattachment">Volume<wbr>Attachment[]</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_billingcycle_nodejs">
 <a href="#state_billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Billing<wbr>Cycle</span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_created_nodejs">
 <a href="#state_created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_facility_nodejs">
 <a href="#state_facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Facility</span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locked_nodejs">
 <a href="#state_locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_plan_nodejs">
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The packet project ID to deploy the volume in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_snapshotpolicies_nodejs">
 <a href="#state_snapshotpolicies_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotpolicy">Volume<wbr>Snapshot<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updated_nodejs">
 <a href="#state_updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1458,151 +1343,134 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_attachments_python">
 <a href="#state_attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumeattachment">Sequence[Volume<wbr>Attachment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_billing_cycle_python">
 <a href="#state_billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_created_python">
 <a href="#state_created_python" style="color: inherit; text-decoration: inherit;">created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_facility_python">
 <a href="#state_facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locked_python">
 <a href="#state_locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The packet project ID to deploy the volume in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_policies_python">
 <a href="#state_snapshot_policies_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotpolicy">Sequence[Volume<wbr>Snapshot<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the volume
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updated_python">
 <a href="#state_updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1612,20 +1480,8 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="volumeattachment">Volume<wbr>Attachment</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/packet/types/output/#VolumeAttachment">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#VolumeAttachmentTypeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Outputs.VolumeAttachment.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1634,15 +1490,13 @@ The following state arguments are supported:
             title="Optional">
         <span id="href_csharp">
 <a href="#href_csharp" style="color: inherit; text-decoration: inherit;">Href</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1651,15 +1505,13 @@ The following state arguments are supported:
             title="Optional">
         <span id="href_go">
 <a href="#href_go" style="color: inherit; text-decoration: inherit;">Href</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1668,15 +1520,13 @@ The following state arguments are supported:
             title="Optional">
         <span id="href_nodejs">
 <a href="#href_nodejs" style="color: inherit; text-decoration: inherit;">href</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1685,33 +1535,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="href_python">
 <a href="#href_python" style="color: inherit; text-decoration: inherit;">href</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="volumesnapshotpolicy">Volume<wbr>Snapshot<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/packet/types/input/#VolumeSnapshotPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/packet/types/output/#VolumeSnapshotPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#VolumeSnapshotPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v3/go/packet/?tab=doc#VolumeSnapshotPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Inputs.VolumeSnapshotPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Outputs.VolumeSnapshotPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1720,25 +1552,22 @@ The following state arguments are supported:
             title="Required">
         <span id="snapshotcount_csharp">
 <a href="#snapshotcount_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="snapshotfrequency_csharp">
 <a href="#snapshotfrequency_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1747,25 +1576,22 @@ The following state arguments are supported:
             title="Required">
         <span id="snapshotcount_go">
 <a href="#snapshotcount_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="snapshotfrequency_go">
 <a href="#snapshotfrequency_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1774,25 +1600,22 @@ The following state arguments are supported:
             title="Required">
         <span id="snapshotcount_nodejs">
 <a href="#snapshotcount_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="snapshotfrequency_nodejs">
 <a href="#snapshotfrequency_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1801,33 +1624,22 @@ The following state arguments are supported:
             title="Required">
         <span id="snapshot_count_python">
 <a href="#snapshot_count_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="snapshot_frequency_python">
 <a href="#snapshot_frequency_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

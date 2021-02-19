@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceCompute"
-title_tag: "Resource ServiceCompute | Package Fastly"
-meta_desc: "Explore the ServiceCompute resource of the Fastly package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Fastly Compute@Edge service. Compute@Edge is a computation platform capable of running custom binaries that you compile on your own systems and upload to Fastly. Security and portability is provided by compiling your code to [WebAssembly](https://webassembly.org/), which is run at the edge using [Lucet](https://github.com/bytecodealliance/lucet), an open-source WebAssembly runtime created by Fastly. A compute service encompasses Domains and Backends."
+title_tag: "fastly.ServiceCompute"
+meta_desc: "Documentation for the fastly.ServiceCompute resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

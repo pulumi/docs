@@ -1,8 +1,8 @@
 
 ---
-title: "GetImage"
-title_tag: "Function GetImage | Module images | Package Open Stack"
-meta_desc: "Explore the GetImage function of the images module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack image."
+title: "getImage"
+title_tag: "openstack.images.getImage"
+meta_desc: "Documentation for the openstack.images.getImage function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,7 +107,7 @@ const ubuntu = pulumi.output(openstack.images.getImage({
 {{% /examples %}}
 
 
-## Using GetImage {#using}
+## Using getImage {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -688,7 +688,7 @@ is used.
 
 
 
-## GetImage Result {#result}
+## getImage Result {#result}
 
 The following output properties are available:
 

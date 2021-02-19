@@ -1,6 +1,6 @@
 ---
 title: "Vault"
-title_tag: "Package Vault"
+title_tag: "Vault Package"
 meta_desc: "A Pulumi package for creating and managing vault cloud resources."
 menu:
     reference:

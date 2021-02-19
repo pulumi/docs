@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancerMonitor"
-title_tag: "Resource LoadBalancerMonitor | Package Cloudflare"
-meta_desc: "Explore the LoadBalancerMonitor resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. If you&#39;re using Cloudflare&#39;s Load Balancing to load-balance across multiple origin servers or data centers, you configure one of these Monitors to actively check the availability of those servers over HTTP(S) or TCP."
+title_tag: "cloudflare.LoadBalancerMonitor"
+meta_desc: "Documentation for the cloudflare.LoadBalancerMonitor resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

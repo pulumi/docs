@@ -1,8 +1,8 @@
 
 ---
 title: "Namespace"
-title_tag: "Resource Namespace | Package Rancher 2"
-meta_desc: "Explore the Namespace resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Namespace resource. This can be used to create namespaces for Rancher v2 environments and retrieve their information."
+title_tag: "rancher2.Namespace"
+meta_desc: "Documentation for the rancher2.Namespace resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetKafkaConnect"
-title_tag: "Function GetKafkaConnect | Package Aiven"
-meta_desc: "Explore the GetKafkaConnect function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Kafka Connect Data Source"
+title: "getKafkaConnect"
+title_tag: "aiven.getKafkaConnect"
+meta_desc: "Documentation for the aiven.getKafkaConnect function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const kc1 = aiven.getKafkaConnect({
 {{% /examples %}}
 
 
-## Using GetKafkaConnect {#using}
+## Using getKafkaConnect {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1019,7 +1019,7 @@ deletion is done.
 
 
 
-## GetKafkaConnect Result {#result}
+## getKafkaConnect Result {#result}
 
 The following output properties are available:
 

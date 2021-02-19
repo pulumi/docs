@@ -1,8 +1,8 @@
 
 ---
 title: "Role"
-title_tag: "Resource Role | Package MySQL"
-meta_desc: "Explore the Role resource of the MySQL package, including examples, input properties, output properties, lookup functions, and supporting types. The ``mysql.Role`` resource creates and manages a user on a MySQL"
+title_tag: "mysql.Role"
+meta_desc: "Documentation for the mysql.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

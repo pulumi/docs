@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectIpAccessList"
-title_tag: "Resource ProjectIpAccessList | Package MongoDB Atlas"
-meta_desc: "Explore the ProjectIpAccessList resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.ProjectIpAccessList` provides an IP Access List entry resource. The access list grants access from IPs, CIDRs or AWS Security Groups (if VPC Peering is enabled) to clusters within the Project."
+title_tag: "mongodbatlas.ProjectIpAccessList"
+meta_desc: "Documentation for the mongodbatlas.ProjectIpAccessList resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

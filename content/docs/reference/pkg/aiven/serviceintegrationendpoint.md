@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceIntegrationEndpoint"
-title_tag: "Resource ServiceIntegrationEndpoint | Package Aiven"
-meta_desc: "Explore the ServiceIntegrationEndpoint resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Service Integration Endpoint Resource"
+title_tag: "aiven.ServiceIntegrationEndpoint"
+meta_desc: "Documentation for the aiven.ServiceIntegrationEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

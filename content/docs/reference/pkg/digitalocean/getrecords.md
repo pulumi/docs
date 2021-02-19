@@ -1,8 +1,8 @@
 
 ---
-title: "GetRecords"
-title_tag: "Function GetRecords | Package DigitalOcean"
-meta_desc: "Explore the GetRecords function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Retrieve information about all DNS records within a domain, with the ability to filter and sort the results."
+title: "getRecords"
+title_tag: "digitalocean.getRecords"
+meta_desc: "Documentation for the digitalocean.getRecords function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -16,7 +16,7 @@ If no filters are specified, all records will be returned.
 
 
 
-## Using GetRecords {#using}
+## Using getRecords {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -33,6 +33,8 @@ If no filters are specified, all records will be returned.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRecords<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRecordsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRecordsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRecords` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -203,7 +205,7 @@ The `sort` block is documented below.
 
 
 
-## GetRecords Result {#result}
+## getRecords Result {#result}
 
 The following output properties are available:
 

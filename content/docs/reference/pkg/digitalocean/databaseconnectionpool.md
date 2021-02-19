@@ -1,8 +1,8 @@
 
 ---
 title: "DatabaseConnectionPool"
-title_tag: "Resource DatabaseConnectionPool | Package DigitalOcean"
-meta_desc: "Explore the DatabaseConnectionPool resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean database connection pool resource."
+title_tag: "digitalocean.DatabaseConnectionPool"
+meta_desc: "Documentation for the digitalocean.DatabaseConnectionPool resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

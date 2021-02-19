@@ -1,8 +1,8 @@
 
 ---
 title: "Database"
-title_tag: "Resource Database | Package MySQL"
-meta_desc: "Explore the Database resource of the MySQL package, including examples, input properties, output properties, lookup functions, and supporting types. The ``mysql.Database`` resource creates and manages a database on a MySQL"
+title_tag: "mysql.Database"
+meta_desc: "Documentation for the mysql.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetZoneRecords"
-title_tag: "Function GetZoneRecords | Module pvtz | Package AliCloud"
-meta_desc: "Explore the GetZoneRecords function of the pvtz module, including examples, input properties, output properties, and supporting types. This data source provides Private Zone Records resource information owned by an Alibaba Cloud account."
+title: "getZoneRecords"
+title_tag: "alicloud.pvtz.getZoneRecords"
+meta_desc: "Documentation for the alicloud.pvtz.getZoneRecords function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -100,7 +100,7 @@ export const firstRecordId = recordsDs.records[0].id;
 {{% /examples %}}
 
 
-## Using GetZoneRecords {#using}
+## Using getZoneRecords {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -117,6 +117,8 @@ export const firstRecordId = recordsDs.records[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZoneRecords<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetZoneRecordsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetZoneRecordsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetZoneRecords` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -531,7 +533,7 @@ The following arguments are supported:
 
 
 
-## GetZoneRecords Result {#result}
+## getZoneRecords Result {#result}
 
 The following output properties are available:
 

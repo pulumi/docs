@@ -1,8 +1,8 @@
 
 ---
-title: "GetDdosBgpInstances"
-title_tag: "Function GetDdosBgpInstances | Module ddos | Package AliCloud"
-meta_desc: "Explore the GetDdosBgpInstances function of the ddos module, including examples, input properties, output properties, and supporting types. This data source provides a list of Anti-DDoS Advanced instances in an Alibaba Cloud account according to the specified filters."
+title: "getDdosBgpInstances"
+title_tag: "alicloud.ddos.getDdosBgpInstances"
+meta_desc: "Documentation for the alicloud.ddos.getDdosBgpInstances function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -103,7 +103,7 @@ export const instance = alicloud_ddosbgp_instances_instance.map(v => v.id);
 {{% /examples %}}
 
 
-## Using GetDdosBgpInstances {#using}
+## Using getDdosBgpInstances {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -120,6 +120,8 @@ export const instance = alicloud_ddosbgp_instances_instance.map(v => v.id);
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDdosBgpInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDdosBgpInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDdosBgpInstancesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDdosBgpInstances` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -278,7 +280,7 @@ The following arguments are supported:
 
 
 
-## GetDdosBgpInstances Result {#result}
+## getDdosBgpInstances Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetPeeringAttachment"
-title_tag: "Function GetPeeringAttachment | Module ec2transitgateway | Package AWS"
-meta_desc: "Explore the GetPeeringAttachment function of the ec2transitgateway module, including examples, input properties, output properties, and supporting types. Get information on an EC2 Transit Gateway Peering Attachment."
+title: "getPeeringAttachment"
+title_tag: "aws.ec2transitgateway.getPeeringAttachment"
+meta_desc: "Documentation for the aws.ec2transitgateway.getPeeringAttachment function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -180,7 +180,7 @@ const attachment = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
 {{% /examples %}}
 
 
-## Using GetPeeringAttachment {#using}
+## Using getPeeringAttachment {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -365,7 +365,7 @@ a pair on the specific EC2 Transit Gateway Peering Attachment to retrieve.
 
 
 
-## GetPeeringAttachment Result {#result}
+## getPeeringAttachment Result {#result}
 
 The following output properties are available:
 

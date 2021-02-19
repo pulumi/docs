@@ -1,6 +1,6 @@
 ---
 title: "Cloudflare"
-title_tag: "Module Cloudflare | Package Cloudflare"
+title_tag: "cloudflare.Cloudflare"
 meta_desc: "A Pulumi package for creating and managing Cloudflare cloud resources."
 menu:
     reference:

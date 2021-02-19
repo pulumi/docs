@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Mailgun"
-meta_desc: "Explore the Provider resource of the Mailgun package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the mailgun package. By default, resources use package-wide configuration"
+title_tag: "mailgun.Provider"
+meta_desc: "Documentation for the mailgun.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

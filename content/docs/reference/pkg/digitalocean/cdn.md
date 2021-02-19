@@ -1,8 +1,8 @@
 
 ---
 title: "Cdn"
-title_tag: "Resource Cdn | Package DigitalOcean"
-meta_desc: "Explore the Cdn resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean CDN Endpoint resource for use with Spaces."
+title_tag: "digitalocean.Cdn"
+meta_desc: "Documentation for the digitalocean.Cdn resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

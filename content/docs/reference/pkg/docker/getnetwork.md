@@ -1,8 +1,8 @@
 
 ---
-title: "GetNetwork"
-title_tag: "Function GetNetwork | Package Docker"
-meta_desc: "Explore the GetNetwork function of the Docker package, including examples, input properties, output properties, and supporting types. Finds a specific docker network and returns information about it."
+title: "getNetwork"
+title_tag: "docker.getNetwork"
+meta_desc: "Documentation for the docker.getNetwork function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const main = pulumi.output(docker.getNetwork({
 {{% /examples %}}
 
 
-## Using GetNetwork {#using}
+## Using getNetwork {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -230,7 +230,7 @@ The following arguments are supported:
 
 
 
-## GetNetwork Result {#result}
+## getNetwork Result {#result}
 
 The following output properties are available:
 

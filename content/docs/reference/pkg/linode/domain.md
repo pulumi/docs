@@ -1,8 +1,8 @@
 
 ---
 title: "Domain"
-title_tag: "Resource Domain | Package Linode"
-meta_desc: "Explore the Domain resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Linode Domain resource.  This can be used to create, modify, and delete Linode Domains through Linode&#39;s managed DNS service."
+title_tag: "linode.Domain"
+meta_desc: "Documentation for the linode.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

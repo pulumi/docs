@@ -1,8 +1,8 @@
 
 ---
 title: "Vlan"
-title_tag: "Resource Vlan | Package Equinix Metal"
-meta_desc: "Explore the Vlan resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to allow users to manage Virtual Networks in their projects."
+title_tag: "equinix-metal.Vlan"
+meta_desc: "Documentation for the equinix-metal.Vlan resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

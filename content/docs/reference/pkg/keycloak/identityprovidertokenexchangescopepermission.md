@@ -1,8 +1,8 @@
 
 ---
 title: "IdentityProviderTokenExchangeScopePermission"
-title_tag: "Resource IdentityProviderTokenExchangeScopePermission | Package Keycloak"
-meta_desc: "Explore the IdentityProviderTokenExchangeScopePermission resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "keycloak.IdentityProviderTokenExchangeScopePermission"
+meta_desc: "Documentation for the keycloak.IdentityProviderTokenExchangeScopePermission resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

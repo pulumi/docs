@@ -1,8 +1,8 @@
 
 ---
-title: "GetM3Db"
-title_tag: "Function GetM3Db | Package Aiven"
-meta_desc: "Explore the GetM3Db function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # M3 DB Data Source"
+title: "getM3Db"
+title_tag: "aiven.getM3Db"
+meta_desc: "Documentation for the aiven.getM3Db function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const m3 = aiven.getM3Db({
 {{% /examples %}}
 
 
-## Using GetM3Db {#using}
+## Using getM3Db {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1019,7 +1019,7 @@ deletion is done.
 
 
 
-## GetM3Db Result {#result}
+## getM3Db Result {#result}
 
 The following output properties are available:
 

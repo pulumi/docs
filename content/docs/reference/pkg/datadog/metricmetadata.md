@@ -1,8 +1,8 @@
 
 ---
 title: "MetricMetadata"
-title_tag: "Resource MetricMetadata | Package Datadog"
-meta_desc: "Explore the MetricMetadata resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog metric_metadata resource. This can be used to manage a metric&#39;s metadata."
+title_tag: "datadog.MetricMetadata"
+meta_desc: "Documentation for the datadog.MetricMetadata resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

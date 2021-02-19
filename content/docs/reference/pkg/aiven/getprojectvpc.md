@@ -1,8 +1,8 @@
 
 ---
-title: "GetProjectVpc"
-title_tag: "Function GetProjectVpc | Package Aiven"
-meta_desc: "Explore the GetProjectVpc function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Project VPC Data Source"
+title: "getProjectVpc"
+title_tag: "aiven.getProjectVpc"
+meta_desc: "Documentation for the aiven.getProjectVpc function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const myvpc = aiven_project_myproject.project.apply(project => aiven.getProjectV
 {{% /examples %}}
 
 
-## Using GetProjectVpc {#using}
+## Using getProjectVpc {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -323,7 +323,7 @@ set, only read.
 
 
 
-## GetProjectVpc Result {#result}
+## getProjectVpc Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "DatabaseUser"
-title_tag: "Resource DatabaseUser | Package DigitalOcean"
-meta_desc: "Explore the DatabaseUser resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean database user resource. When creating a new database cluster, a default admin user with name `doadmin` will be created. Then, this resource can be used to provide additional normal users inside the cluster."
+title_tag: "digitalocean.DatabaseUser"
+meta_desc: "Documentation for the digitalocean.DatabaseUser resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

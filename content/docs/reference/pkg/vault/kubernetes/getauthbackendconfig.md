@@ -1,8 +1,8 @@
 
 ---
-title: "GetAuthBackendConfig"
-title_tag: "Function GetAuthBackendConfig | Module kubernetes | Package Vault"
-meta_desc: "Explore the GetAuthBackendConfig function of the kubernetes module, including examples, input properties, output properties, and supporting types. Reads the Role of an Kubernetes from a Vault server. See the [Vault"
+title: "getAuthBackendConfig"
+title_tag: "vault.kubernetes.getAuthBackendConfig"
+meta_desc: "Documentation for the vault.kubernetes.getAuthBackendConfig function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -50,7 +50,7 @@ export const tokenReviewerJwt = config.tokenReviewerJwt;
 {{% /examples %}}
 
 
-## Using GetAuthBackendConfig {#using}
+## Using getAuthBackendConfig {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -387,7 +387,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
 
 
 
-## GetAuthBackendConfig Result {#result}
+## getAuthBackendConfig Result {#result}
 
 The following output properties are available:
 

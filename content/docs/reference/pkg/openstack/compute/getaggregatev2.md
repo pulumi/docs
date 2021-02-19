@@ -1,8 +1,8 @@
 
 ---
-title: "GetAggregateV2"
-title_tag: "Function GetAggregateV2 | Module compute | Package Open Stack"
-meta_desc: "Explore the GetAggregateV2 function of the compute module, including examples, input properties, output properties, and supporting types. Use this data source to get information about host aggregates"
+title: "getAggregateV2"
+title_tag: "openstack.compute.getAggregateV2"
+meta_desc: "Documentation for the openstack.compute.getAggregateV2 function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const test = pulumi.output(openstack.compute.getAggregateV2({
 {{% /examples %}}
 
 
-## Using GetAggregateV2 {#using}
+## Using getAggregateV2 {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -270,7 +270,7 @@ The following arguments are supported:
 
 
 
-## GetAggregateV2 Result {#result}
+## getAggregateV2 Result {#result}
 
 The following output properties are available:
 

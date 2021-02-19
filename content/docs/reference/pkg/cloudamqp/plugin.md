@@ -1,8 +1,8 @@
 
 ---
 title: "Plugin"
-title_tag: "Resource Plugin | Package CloudAMQP"
-meta_desc: "Explore the Plugin resource of the CloudAMQP package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "cloudamqp.Plugin"
+meta_desc: "Documentation for the cloudamqp.Plugin resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

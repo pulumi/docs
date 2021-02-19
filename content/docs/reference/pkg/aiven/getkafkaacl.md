@@ -1,8 +1,8 @@
 
 ---
-title: "GetKafkaAcl"
-title_tag: "Function GetKafkaAcl | Package Aiven"
-meta_desc: "Explore the GetKafkaAcl function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Kafka ACL Data Source"
+title: "getKafkaAcl"
+title_tag: "aiven.getKafkaAcl"
+meta_desc: "Documentation for the aiven.getKafkaAcl function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,7 +107,7 @@ const mytestacl = pulumi.all([aiven_project_myproject.project, aiven_service_mys
 {{% /examples %}}
 
 
-## Using GetKafkaAcl {#using}
+## Using getKafkaAcl {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -380,7 +380,7 @@ the topic being deleted and new one created instead.
 
 
 
-## GetKafkaAcl Result {#result}
+## getKafkaAcl Result {#result}
 
 The following output properties are available:
 

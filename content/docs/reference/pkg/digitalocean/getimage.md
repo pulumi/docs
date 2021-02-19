@@ -1,8 +1,8 @@
 
 ---
-title: "GetImage"
-title_tag: "Function GetImage | Package DigitalOcean"
-meta_desc: "Explore the GetImage function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on an image for use in other resources (e.g. creating a Droplet"
+title: "getImage"
+title_tag: "digitalocean.getImage"
+meta_desc: "Documentation for the digitalocean.getImage function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,7 +94,7 @@ const example1 = pulumi.output(digitalocean.getImage({
 {{% /examples %}}
 
 
-## Using GetImage {#using}
+## Using getImage {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -111,6 +111,8 @@ const example1 = pulumi.output(digitalocean.getImage({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetImageResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetImage` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -313,7 +315,7 @@ The following arguments are supported:
 
 
 
-## GetImage Result {#result}
+## getImage Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetFileSystems"
-title_tag: "Function GetFileSystems | Module nas | Package AliCloud"
-meta_desc: "Explore the GetFileSystems function of the nas module, including examples, input properties, output properties, and supporting types. This data source provides FileSystems available to the user."
+title: "getFileSystems"
+title_tag: "alicloud.nas.getFileSystems"
+meta_desc: "Documentation for the alicloud.nas.getFileSystems function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -102,7 +102,7 @@ export const alicloudNasFileSystemsId = fs.systems[0].id;
 {{% /examples %}}
 
 
-## Using GetFileSystems {#using}
+## Using getFileSystems {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -119,6 +119,8 @@ export const alicloudNasFileSystemsId = fs.systems[0].id;
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFileSystems<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetFileSystemsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFileSystemsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetFileSystems` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -357,7 +359,7 @@ The following arguments are supported:
 
 
 
-## GetFileSystems Result {#result}
+## getFileSystems Result {#result}
 
 The following output properties are available:
 

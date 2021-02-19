@@ -1,6 +1,6 @@
 ---
 title: "Docker"
-title_tag: "Module Docker | Package Docker"
+title_tag: "docker.Docker"
 meta_desc: "A Pulumi package for interacting with Docker in Pulumi programs"
 menu:
     reference:

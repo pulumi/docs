@@ -1,8 +1,8 @@
 
 ---
-title: "GetTag"
-title_tag: "Function GetTag | Package vSphere"
-meta_desc: "Explore the GetTag function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.Tag` data source can be used to reference tags that are not"
+title: "getTag"
+title_tag: "vsphere.getTag"
+meta_desc: "Documentation for the vsphere.getTag function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -113,7 +113,7 @@ const tag = category.apply(category => vsphere.getTag({
 {{% /examples %}}
 
 
-## Using GetTag {#using}
+## Using getTag {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -254,7 +254,7 @@ The following arguments are supported:
 
 
 
-## GetTag Result {#result}
+## getTag Result {#result}
 
 The following output properties are available:
 

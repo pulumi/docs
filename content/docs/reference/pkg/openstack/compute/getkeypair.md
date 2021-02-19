@@ -1,8 +1,8 @@
 
 ---
-title: "GetKeypair"
-title_tag: "Function GetKeypair | Module compute | Package Open Stack"
-meta_desc: "Explore the GetKeypair function of the compute module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID and public key of an OpenStack keypair."
+title: "getKeypair"
+title_tag: "openstack.compute.getKeypair"
+meta_desc: "Documentation for the openstack.compute.getKeypair function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const kp = pulumi.output(openstack.compute.getKeypair({
 {{% /examples %}}
 
 
-## Using GetKeypair {#using}
+## Using getKeypair {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## GetKeypair Result {#result}
+## getKeypair Result {#result}
 
 The following output properties are available:
 

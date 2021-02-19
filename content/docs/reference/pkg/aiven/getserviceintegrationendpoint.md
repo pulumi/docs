@@ -1,8 +1,8 @@
 
 ---
-title: "GetServiceIntegrationEndpoint"
-title_tag: "Function GetServiceIntegrationEndpoint | Package Aiven"
-meta_desc: "Explore the GetServiceIntegrationEndpoint function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Service Integration Endpoint Data Source"
+title: "getServiceIntegrationEndpoint"
+title_tag: "aiven.getServiceIntegrationEndpoint"
+meta_desc: "Documentation for the aiven.getServiceIntegrationEndpoint function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -95,7 +95,7 @@ const myendpoint = aiven_project_myproject.project.apply(project => aiven.getSer
 {{% /examples %}}
 
 
-## Using GetServiceIntegrationEndpoint {#using}
+## Using getServiceIntegrationEndpoint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -680,7 +680,7 @@ By the time of writing the only available option is `datadog`.
 
 
 
-## GetServiceIntegrationEndpoint Result {#result}
+## getServiceIntegrationEndpoint Result {#result}
 
 The following output properties are available:
 

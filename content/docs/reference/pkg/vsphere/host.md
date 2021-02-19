@@ -1,8 +1,8 @@
 
 ---
 title: "Host"
-title_tag: "Resource Host | Package vSphere"
-meta_desc: "Explore the Host resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VMware vSphere host resource. This represents an ESXi host that"
+title_tag: "vsphere.Host"
+meta_desc: "Documentation for the vsphere.Host resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

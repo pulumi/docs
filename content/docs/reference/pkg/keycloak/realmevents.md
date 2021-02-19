@@ -1,8 +1,8 @@
 
 ---
 title: "RealmEvents"
-title_tag: "Resource RealmEvents | Package Keycloak"
-meta_desc: "Explore the RealmEvents resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. Allows for managing Realm Events settings within Keycloak."
+title_tag: "keycloak.RealmEvents"
+meta_desc: "Documentation for the keycloak.RealmEvents resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

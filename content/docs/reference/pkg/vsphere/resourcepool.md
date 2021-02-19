@@ -1,8 +1,8 @@
 
 ---
 title: "ResourcePool"
-title_tag: "Resource ResourcePool | Package vSphere"
-meta_desc: "Explore the ResourcePool resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vsphere.ResourcePool"
+meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

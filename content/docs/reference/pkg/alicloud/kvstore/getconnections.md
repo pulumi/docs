@@ -1,8 +1,8 @@
 
 ---
-title: "GetConnections"
-title_tag: "Function GetConnections | Module kvstore | Package AliCloud"
-meta_desc: "Explore the GetConnections function of the kvstore module, including examples, input properties, output properties, and supporting types. This data source can query the public IP of the specified KVStore DBInstance."
+title: "getConnections"
+title_tag: "alicloud.kvstore.getConnections"
+meta_desc: "Documentation for the alicloud.kvstore.getConnections function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,7 +17,7 @@ This data source can query the public IP of the specified KVStore DBInstance.
 
 
 
-## Using GetConnections {#using}
+## Using getConnections {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -34,6 +34,8 @@ This data source can query the public IP of the specified KVStore DBInstance.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConnections<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetConnectionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetConnectionsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetConnections` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -152,7 +154,7 @@ The following arguments are supported:
 
 
 
-## GetConnections Result {#result}
+## getConnections Result {#result}
 
 The following output properties are available:
 

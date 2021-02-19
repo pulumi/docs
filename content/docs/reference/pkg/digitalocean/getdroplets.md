@@ -1,8 +1,8 @@
 
 ---
-title: "GetDroplets"
-title_tag: "Function GetDroplets | Package DigitalOcean"
-meta_desc: "Explore the GetDroplets function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on Droplets for use in other resources, with the ability to filter and sort the results."
+title: "getDroplets"
+title_tag: "digitalocean.getDroplets"
+meta_desc: "Documentation for the digitalocean.getDroplets function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -118,7 +118,7 @@ const small = pulumi.output(digitalocean.getDroplets({
 {{% /examples %}}
 
 
-## Using GetDroplets {#using}
+## Using getDroplets {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -135,6 +135,8 @@ const small = pulumi.output(digitalocean.getDroplets({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDroplets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDropletsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDropletsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDroplets` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -265,7 +267,7 @@ The `sort` block is documented below.
 
 
 
-## GetDroplets Result {#result}
+## getDroplets Result {#result}
 
 The following output properties are available:
 

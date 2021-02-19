@@ -1,8 +1,8 @@
 
 ---
 title: "AccountMember"
-title_tag: "Resource AccountMember | Package Cloudflare"
-meta_desc: "Explore the AccountMember resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource which manages Cloudflare account members."
+title_tag: "cloudflare.AccountMember"
+meta_desc: "Documentation for the cloudflare.AccountMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "AuthConfigAzureAd"
-title_tag: "Resource AuthConfigAzureAd | Package Rancher 2"
-meta_desc: "Explore the AuthConfigAzureAd resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Auth Config AzureAD resource. This can be used to configure and enable Auth Config AzureAD for Rancher v2 RKE clusters and retrieve their information."
+title_tag: "rancher2.AuthConfigAzureAd"
+meta_desc: "Documentation for the rancher2.AuthConfigAzureAd resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

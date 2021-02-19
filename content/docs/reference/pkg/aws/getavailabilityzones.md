@@ -1,8 +1,8 @@
 
 ---
-title: "GetAvailabilityZones"
-title_tag: "Function GetAvailabilityZones | Package AWS"
-meta_desc: "Explore the GetAvailabilityZones function of the AWS package, including examples, input properties, output properties, and supporting types. The Availability Zones data source allows access to the list of AWS"
+title: "getAvailabilityZones"
+title_tag: "aws.getAvailabilityZones"
+meta_desc: "Documentation for the aws.getAvailabilityZones function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -231,7 +231,7 @@ const example = pulumi.output(aws.getAvailabilityZones({
 {{% /examples %}}
 
 
-## Using GetAvailabilityZones {#using}
+## Using getAvailabilityZones {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -248,6 +248,8 @@ const example = pulumi.output(aws.getAvailabilityZones({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAvailabilityZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAvailabilityZonesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAvailabilityZonesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAvailabilityZones` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -502,7 +504,7 @@ to which the underlying AWS account has access, regardless of their state.
 
 
 
-## GetAvailabilityZones Result {#result}
+## getAvailabilityZones Result {#result}
 
 The following output properties are available:
 

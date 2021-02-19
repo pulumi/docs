@@ -1,8 +1,8 @@
 
 ---
-title: "GetHypervisorV2"
-title_tag: "Function GetHypervisorV2 | Module compute | Package Open Stack"
-meta_desc: "Explore the GetHypervisorV2 function of the compute module, including examples, input properties, output properties, and supporting types. Use this data source to get information about hypervisors"
+title: "getHypervisorV2"
+title_tag: "openstack.compute.getHypervisorV2"
+meta_desc: "Documentation for the openstack.compute.getHypervisorV2 function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const host01 = pulumi.output(openstack.compute.getHypervisorV2({
 {{% /examples %}}
 
 
-## Using GetHypervisorV2 {#using}
+## Using getHypervisorV2 {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -106,6 +106,8 @@ const host01 = pulumi.output(openstack.compute.getHypervisorV2({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHypervisorV2<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetHypervisorV2Args</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetHypervisorV2Result</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetHypervisorV2` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -188,7 +190,7 @@ The following arguments are supported:
 
 
 
-## GetHypervisorV2 Result {#result}
+## getHypervisorV2 Result {#result}
 
 The following output properties are available:
 

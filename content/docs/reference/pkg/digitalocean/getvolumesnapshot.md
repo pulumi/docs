@@ -1,8 +1,8 @@
 
 ---
-title: "GetVolumeSnapshot"
-title_tag: "Function GetVolumeSnapshot | Package DigitalOcean"
-meta_desc: "Explore the GetVolumeSnapshot function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Volume snapshots are saved instances of a block storage volume. Use this data"
+title: "getVolumeSnapshot"
+title_tag: "digitalocean.getVolumeSnapshot"
+meta_desc: "Documentation for the digitalocean.getVolumeSnapshot function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -101,7 +101,7 @@ const snapshot = pulumi.output(digitalocean.getVolumeSnapshot({
 {{% /examples %}}
 
 
-## Using GetVolumeSnapshot {#using}
+## Using getVolumeSnapshot {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -322,7 +322,7 @@ The following arguments are supported:
 
 
 
-## GetVolumeSnapshot Result {#result}
+## getVolumeSnapshot Result {#result}
 
 The following output properties are available:
 

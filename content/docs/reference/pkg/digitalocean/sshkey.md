@@ -1,8 +1,8 @@
 
 ---
 title: "SshKey"
-title_tag: "Resource SshKey | Package DigitalOcean"
-meta_desc: "Explore the SshKey resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean SSH key resource to allow you to manage SSH"
+title_tag: "digitalocean.SshKey"
+meta_desc: "Documentation for the digitalocean.SshKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

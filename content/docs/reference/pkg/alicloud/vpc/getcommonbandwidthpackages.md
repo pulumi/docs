@@ -1,8 +1,8 @@
 
 ---
-title: "GetCommonBandwidthPackages"
-title_tag: "Function GetCommonBandwidthPackages | Module vpc | Package AliCloud"
-meta_desc: "Explore the GetCommonBandwidthPackages function of the vpc module, including examples, input properties, output properties, and supporting types. This data source provides a list of Common Bandwidth Packages owned by an Alibaba Cloud account."
+title: "getCommonBandwidthPackages"
+title_tag: "alicloud.vpc.getCommonBandwidthPackages"
+meta_desc: "Documentation for the alicloud.vpc.getCommonBandwidthPackages function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -115,7 +115,7 @@ const fooCommonBandwidthPackages = fooCommonBandwithPackage.id.apply(id => alicl
 {{% /examples %}}
 
 
-## Using GetCommonBandwidthPackages {#using}
+## Using getCommonBandwidthPackages {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -132,6 +132,8 @@ const fooCommonBandwidthPackages = fooCommonBandwithPackage.id.apply(id => alicl
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCommonBandwidthPackages<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCommonBandwidthPackagesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCommonBandwidthPackagesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetCommonBandwidthPackages` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -330,7 +332,7 @@ The following arguments are supported:
 
 
 
-## GetCommonBandwidthPackages Result {#result}
+## getCommonBandwidthPackages Result {#result}
 
 The following output properties are available:
 

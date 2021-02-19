@@ -1,8 +1,8 @@
 
 ---
 title: "AclToken"
-title_tag: "Resource AclToken | Package Consul"
-meta_desc: "Explore the AclToken resource of the Consul package, including examples, input properties, output properties, lookup functions, and supporting types. The `consul.AclToken` resource writes an ACL token into Consul."
+title_tag: "consul.AclToken"
+meta_desc: "Documentation for the consul.AclToken resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

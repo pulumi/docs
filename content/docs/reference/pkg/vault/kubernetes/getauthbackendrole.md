@@ -1,8 +1,8 @@
 
 ---
-title: "GetAuthBackendRole"
-title_tag: "Function GetAuthBackendRole | Module kubernetes | Package Vault"
-meta_desc: "Explore the GetAuthBackendRole function of the kubernetes module, including examples, input properties, output properties, and supporting types. Reads the Role of an Kubernetes from a Vault server. See the [Vault"
+title: "getAuthBackendRole"
+title_tag: "vault.kubernetes.getAuthBackendRole"
+meta_desc: "Documentation for the vault.kubernetes.getAuthBackendRole function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -102,7 +102,7 @@ export const policies = role.policies!;
 {{% /examples %}}
 
 
-## Using GetAuthBackendRole {#using}
+## Using getAuthBackendRole {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -935,7 +935,7 @@ requests a different type at generation time.
 
 
 
-## GetAuthBackendRole Result {#result}
+## getAuthBackendRole Result {#result}
 
 The following output properties are available:
 

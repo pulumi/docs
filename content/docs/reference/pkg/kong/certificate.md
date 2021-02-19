@@ -1,8 +1,8 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Package Kong"
-meta_desc: "Explore the Certificate resource of the Kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "kong.Certificate"
+meta_desc: "Documentation for the kong.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "AccountTeam"
-title_tag: "Resource AccountTeam | Package Aiven"
-meta_desc: "Explore the AccountTeam resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Account Team Resource"
+title_tag: "aiven.AccountTeam"
+meta_desc: "Documentation for the aiven.AccountTeam resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

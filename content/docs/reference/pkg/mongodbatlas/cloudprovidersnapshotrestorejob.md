@@ -1,8 +1,8 @@
 
 ---
 title: "CloudProviderSnapshotRestoreJob"
-title_tag: "Resource CloudProviderSnapshotRestoreJob | Package MongoDB Atlas"
-meta_desc: "Explore the CloudProviderSnapshotRestoreJob resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.CloudProviderSnapshotRestoreJob` provides a resource to create a new restore job from a cloud backup snapshot of a specified cluster. The restore job can be one of three types: "
+title_tag: "mongodbatlas.CloudProviderSnapshotRestoreJob"
+meta_desc: "Documentation for the mongodbatlas.CloudProviderSnapshotRestoreJob resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

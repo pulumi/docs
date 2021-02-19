@@ -1,8 +1,8 @@
 
 ---
-title: "GetCluster"
-title_tag: "Function GetCluster | Package Rancher 2"
-meta_desc: "Explore the GetCluster function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 cluster."
+title: "getCluster"
+title_tag: "rancher2.getCluster"
+meta_desc: "Documentation for the rancher2.getCluster function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const foo_custom = pulumi.output(rancher2.getCluster({
 {{% /examples %}}
 
 
-## Using GetCluster {#using}
+## Using getCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetCluster Result {#result}
+## getCluster Result {#result}
 
 The following output properties are available:
 

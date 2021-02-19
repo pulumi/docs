@@ -1,8 +1,8 @@
 
 ---
-title: "GetThirdPartyIntegrations"
-title_tag: "Function GetThirdPartyIntegrations | Package MongoDB Atlas"
-meta_desc: "Explore the GetThirdPartyIntegrations function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.getThirdPartyIntegrations` describe all Third-Party Integration Settings. This represents two Third-Party services `PAGER_DUTY` and `FLOWDOCK`"
+title: "getThirdPartyIntegrations"
+title_tag: "mongodbatlas.getThirdPartyIntegrations"
+meta_desc: "Documentation for the mongodbatlas.getThirdPartyIntegrations function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -18,7 +18,7 @@ applied across the project.
 
 
 
-## Using GetThirdPartyIntegrations {#using}
+## Using getThirdPartyIntegrations {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -35,6 +35,8 @@ applied across the project.
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetThirdPartyIntegrations<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetThirdPartyIntegrationsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetThirdPartyIntegrationsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetThirdPartyIntegrations` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -117,7 +119,7 @@ The following arguments are supported:
 
 
 
-## GetThirdPartyIntegrations Result {#result}
+## getThirdPartyIntegrations Result {#result}
 
 The following output properties are available:
 

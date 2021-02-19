@@ -1,8 +1,8 @@
 
 ---
-title: "GetDynamic"
-title_tag: "Function GetDynamic | Package vSphere"
-meta_desc: "Explore the GetDynamic function of the vSphere package, including examples, input properties, output properties, and supporting types. [docs-about-morefs]: /docs/providers/vsphere/index.html#use-of-managed-object-references-by-the-vsphere-provider"
+title: "getDynamic"
+title_tag: "vsphere.getDynamic"
+meta_desc: "Documentation for the vsphere.getDynamic function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -171,7 +171,7 @@ const dyn = Promise.all([tag1, tag1]).then(([tag1, tag11]) => vsphere.getDynamic
 {{% /examples %}}
 
 
-## Using GetDynamic {#using}
+## Using getDynamic {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -188,6 +188,8 @@ const dyn = Promise.all([tag1, tag1]).then(([tag1, tag11]) => vsphere.getDynamic
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDynamic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDynamicArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDynamicResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDynamic` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -362,7 +364,7 @@ For a full list, click [here](https://code.vmware.com/apis/196/vsphere).
 
 
 
-## GetDynamic Result {#result}
+## getDynamic Result {#result}
 
 The following output properties are available:
 

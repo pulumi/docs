@@ -1,8 +1,8 @@
 
 ---
 title: "GlobalDns"
-title_tag: "Resource GlobalDns | Package Rancher 2"
-meta_desc: "Explore the GlobalDns resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher V2 Global DNS resource. This can be used to create Global DNS records for Rancher V2."
+title_tag: "rancher2.GlobalDns"
+meta_desc: "Documentation for the rancher2.GlobalDns resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

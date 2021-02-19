@@ -1,8 +1,8 @@
 
 ---
-title: "GetPlaintext"
-title_tag: "Function GetPlaintext | Module kms | Package AliCloud"
-meta_desc: "Explore the GetPlaintext function of the kms module, including examples, input properties, output properties, and supporting types. "
+title: "getPlaintext"
+title_tag: "alicloud.kms.getPlaintext"
+meta_desc: "Documentation for the alicloud.kms.getPlaintext function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetPlaintext function of the kms module, including examp
 
 
 
-## Using GetPlaintext {#using}
+## Using getPlaintext {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -30,6 +30,8 @@ meta_desc: "Explore the GetPlaintext function of the kms module, including examp
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPlaintext<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPlaintextArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPlaintextResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetPlaintext` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -156,7 +158,7 @@ The following arguments are supported:
 
 
 
-## GetPlaintext Result {#result}
+## getPlaintext Result {#result}
 
 The following output properties are available:
 

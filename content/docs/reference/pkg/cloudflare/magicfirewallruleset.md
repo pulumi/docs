@@ -1,8 +1,8 @@
 
 ---
 title: "MagicFirewallRuleset"
-title_tag: "Resource MagicFirewallRuleset | Package Cloudflare"
-meta_desc: "Explore the MagicFirewallRuleset resource of the Cloudflare package, including examples, input properties, output properties, lookup functions, and supporting types. Magic Firewall is a network-level firewall to protect networks that are onboarded to Cloudflare&#39;s Magic Transit. This resource"
+title_tag: "cloudflare.MagicFirewallRuleset"
+meta_desc: "Documentation for the cloudflare.MagicFirewallRuleset resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
