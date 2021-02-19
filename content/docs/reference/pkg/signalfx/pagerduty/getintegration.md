@@ -1,8 +1,8 @@
 
 ---
-title: "GetIntegration"
-title_tag: "Function GetIntegration | Module pagerduty | Package SignalFx"
-meta_desc: "Explore the GetIntegration function of the pagerduty module, including examples, input properties, output properties, and supporting types. Use this data source to get information on an existing PagerDuty integration."
+title: "getIntegration"
+title_tag: "signalfx.pagerduty.getIntegration"
+meta_desc: "Documentation for the signalfx.pagerduty.getIntegration function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const pdIntegration = pulumi.output(signalfx.pagerduty.getIntegration({
 {{% /examples %}}
 
 
-## Using GetIntegration {#using}
+## Using getIntegration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetIntegration Result {#result}
+## getIntegration Result {#result}
 
 The following output properties are available:
 

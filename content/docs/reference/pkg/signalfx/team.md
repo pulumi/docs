@@ -1,8 +1,8 @@
 
 ---
 title: "Team"
-title_tag: "Resource Team | Package SignalFx"
-meta_desc: "Explore the Team resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. Handles management of SignalFx teams."
+title_tag: "signalfx.Team"
+meta_desc: "Documentation for the signalfx.Team resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

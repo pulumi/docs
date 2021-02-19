@@ -1,8 +1,8 @@
 
 ---
-title: "GetAwsServices"
-title_tag: "Function GetAwsServices | Package SignalFx"
-meta_desc: "Explore the GetAwsServices function of the SignalFx package, including examples, input properties, output properties, and supporting types. "
+title: "getAwsServices"
+title_tag: "signalfx.getAwsServices"
+meta_desc: "Documentation for the signalfx.getAwsServices function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -14,7 +14,7 @@ meta_desc: "Explore the GetAwsServices function of the SignalFx package, includi
 
 
 
-## Using GetAwsServices {#using}
+## Using getAwsServices {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -31,6 +31,8 @@ meta_desc: "Explore the GetAwsServices function of the SignalFx package, includi
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAwsServices<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAwsServicesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAwsServicesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAwsServices` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -109,7 +111,7 @@ The following arguments are supported:
 
 
 
-## GetAwsServices Result {#result}
+## getAwsServices Result {#result}
 
 The following output properties are available:
 

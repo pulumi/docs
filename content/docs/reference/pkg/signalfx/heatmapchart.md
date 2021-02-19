@@ -1,8 +1,8 @@
 
 ---
 title: "HeatmapChart"
-title_tag: "Resource HeatmapChart | Package SignalFx"
-meta_desc: "Explore the HeatmapChart resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. This chart type displays the specified plot in a heatmap fashion. This format is similar to the [Infrastructure Navigator](https://signalfx-product-docs.readthedocs-hosted.com/en/latest/built-in-content/infra-nav.html#infra), with squares representing each source for the selected metric, and the color of each square representing the value range of the metric."
+title_tag: "signalfx.HeatmapChart"
+meta_desc: "Documentation for the signalfx.HeatmapChart resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

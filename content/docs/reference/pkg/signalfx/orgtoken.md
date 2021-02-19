@@ -1,8 +1,8 @@
 
 ---
 title: "OrgToken"
-title_tag: "Resource OrgToken | Package SignalFx"
-meta_desc: "Explore the OrgToken resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. Manage SignalFx org tokens."
+title_tag: "signalfx.OrgToken"
+meta_desc: "Documentation for the signalfx.OrgToken resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

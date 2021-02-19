@@ -1,8 +1,8 @@
 
 ---
 title: "WebhookIntegration"
-title_tag: "Resource WebhookIntegration | Package SignalFx"
-meta_desc: "Explore the WebhookIntegration resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. SignalFx Webhook integration."
+title_tag: "signalfx.WebhookIntegration"
+meta_desc: "Documentation for the signalfx.WebhookIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

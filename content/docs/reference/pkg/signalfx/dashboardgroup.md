@@ -1,8 +1,8 @@
 
 ---
 title: "DashboardGroup"
-title_tag: "Resource DashboardGroup | Package SignalFx"
-meta_desc: "Explore the DashboardGroup resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dashboard_groups_reference.html) is a collection of dashboards."
+title_tag: "signalfx.DashboardGroup"
+meta_desc: "Documentation for the signalfx.DashboardGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

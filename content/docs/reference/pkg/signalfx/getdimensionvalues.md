@@ -1,8 +1,8 @@
 
 ---
-title: "GetDimensionValues"
-title_tag: "Function GetDimensionValues | Package SignalFx"
-meta_desc: "Explore the GetDimensionValues function of the SignalFx package, including examples, input properties, output properties, and supporting types. Use this data source to get a list of dimension values matching the provided query."
+title: "getDimensionValues"
+title_tag: "signalfx.getDimensionValues"
+meta_desc: "Documentation for the signalfx.getDimensionValues function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,7 +17,7 @@ Use this data source to get a list of dimension values matching the provided que
 
 
 
-## Using GetDimensionValues {#using}
+## Using getDimensionValues {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -34,6 +34,8 @@ Use this data source to get a list of dimension values matching the provided que
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDimensionValues<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDimensionValuesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDimensionValuesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDimensionValues` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -112,7 +114,7 @@ The following arguments are supported:
 
 
 
-## GetDimensionValues Result {#result}
+## getDimensionValues Result {#result}
 
 The following output properties are available:
 

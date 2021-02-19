@@ -1,8 +1,8 @@
 
 ---
 title: "TimeChart"
-title_tag: "Resource TimeChart | Package SignalFx"
-meta_desc: "Explore the TimeChart resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a SignalFx time chart resource. This can be used to create and manage the different types of time charts."
+title_tag: "signalfx.TimeChart"
+meta_desc: "Documentation for the signalfx.TimeChart resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

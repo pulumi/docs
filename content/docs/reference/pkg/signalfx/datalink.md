@@ -1,8 +1,8 @@
 
 ---
 title: "DataLink"
-title_tag: "Resource DataLink | Package SignalFx"
-meta_desc: "Explore the DataLink resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-links.html)."
+title_tag: "signalfx.DataLink"
+meta_desc: "Documentation for the signalfx.DataLink resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -1126,16 +1126,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="isdefault_csharp">
-<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="minimumtimewindow_csharp">
 <a href="#minimumtimewindow_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Time<wbr>Window</a>
 </span>
@@ -1189,16 +1179,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL string for a Splunk instance or external system data link target. [See the supported template variables](https://developers.signalfx.com/administration/data_links_overview.html#_external_link_targets).
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="isdefault_go">
-<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1258,16 +1238,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="isdefault_nodejs">
-<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="minimumtimewindow_nodejs">
 <a href="#minimumtimewindow_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Time<wbr>Window</a>
 </span>
@@ -1321,16 +1291,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL string for a Splunk instance or external system data link target. [See the supported template variables](https://developers.signalfx.com/administration/data_links_overview.html#_external_link_targets).
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="is_default_python">
-<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1568,16 +1528,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="isdefault_csharp">
-<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="propertykeymapping_csharp">
 <a href="#propertykeymapping_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Key<wbr>Mapping</a>
 </span>
@@ -1601,16 +1551,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="isdefault_go">
-<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1640,16 +1580,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="isdefault_nodejs">
-<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="propertykeymapping_nodejs">
 <a href="#propertykeymapping_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Key<wbr>Mapping</a>
 </span>
@@ -1673,16 +1603,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="is_default_python">
-<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
