@@ -1,8 +1,8 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Package Venafi"
-meta_desc: "Explore the Certificate resource of the Venafi package, including examples, input properties, output properties, lookup functions, and supporting types. Provides access to TLS key and certificate data enrolled using Venafi. This can be used to define a"
+title_tag: "venafi.Certificate"
+meta_desc: "Documentation for the venafi.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

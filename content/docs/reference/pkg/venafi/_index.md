@@ -1,6 +1,6 @@
 ---
 title: "Venafi"
-title_tag: "Module Venafi | Package Venafi"
+title_tag: "venafi.Venafi"
 meta_desc: "A Pulumi package for creating and managing venafi cloud resources."
 menu:
     reference:
@@ -27,6 +27,6 @@ A Pulumi package for creating and managing venafi cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`venafi` Terraform Provider](https://github.com/Venafi/terraform-provider-venafi).</dd>
 	<dt>Version</dt>
-	<dd>0.3.1</dd>
+	<dd>0.3.2</dd>
 </dl>
 
