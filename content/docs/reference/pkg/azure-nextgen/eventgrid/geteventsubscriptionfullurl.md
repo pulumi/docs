@@ -1,8 +1,8 @@
 
 ---
-title: "GetEventSubscriptionFullUrl"
-title_tag: "Function GetEventSubscriptionFullUrl | Module eventgrid | Package Azure NextGen"
-meta_desc: "Explore the GetEventSubscriptionFullUrl function of the eventgrid module, including examples, input properties, output properties, and supporting types. "
+title: "getEventSubscriptionFullUrl"
+title_tag: "azure-nextgen.eventgrid.getEventSubscriptionFullUrl"
+meta_desc: "Documentation for the azure-nextgen.eventgrid.getEventSubscriptionFullUrl function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetEventSubscriptionFullUrl function of the eventgrid mo
 
 
 
-## Using GetEventSubscriptionFullUrl {#using}
+## Using getEventSubscriptionFullUrl {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEventSubscriptionFullUrl<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEventSubscriptionFullUrlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetEventSubscriptionFullUrlResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEventSubscriptionFullUrl<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEventSubscriptionFullUrlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEventSubscriptionFullUrlResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the GetEventSubscriptionFullUrl function of the eventgrid mo
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscriptionFullUrl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEventSubscriptionFullUrlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">GetEventSubscriptionFullUrlResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscriptionFullUrl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEventSubscriptionFullUrlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEventSubscriptionFullUrlResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetEventSubscriptionFullUrl` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEventSubscriptionFullUrl </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetEventSubscriptionFullUrlResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetEventSubscriptionFullUrlArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEventSubscriptionFullUrlResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEventSubscriptionFullUrlArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -144,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetEventSubscriptionFullUrl Result {#result}
+## getEventSubscriptionFullUrl Result {#result}
 
 The following output properties are available:
 

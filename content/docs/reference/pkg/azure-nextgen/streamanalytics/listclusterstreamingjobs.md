@@ -1,8 +1,8 @@
 
 ---
-title: "ListClusterStreamingJobs"
-title_tag: "Function ListClusterStreamingJobs | Module streamanalytics | Package Azure NextGen"
-meta_desc: "Explore the ListClusterStreamingJobs function of the streamanalytics module, including examples, input properties, output properties, and supporting types. "
+title: "listClusterStreamingJobs"
+title_tag: "azure-nextgen.streamanalytics.listClusterStreamingJobs"
+meta_desc: "Documentation for the azure-nextgen.streamanalytics.listClusterStreamingJobs function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the ListClusterStreamingJobs function of the streamanalytics
 
 
 
-## Using ListClusterStreamingJobs {#using}
+## Using listClusterStreamingJobs {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listClusterStreamingJobs<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListClusterStreamingJobsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">ListClusterStreamingJobsResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listClusterStreamingJobs<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListClusterStreamingJobsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListClusterStreamingJobsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the ListClusterStreamingJobs function of the streamanalytics
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListClusterStreamingJobs<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListClusterStreamingJobsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">ListClusterStreamingJobsResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListClusterStreamingJobs<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListClusterStreamingJobsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListClusterStreamingJobsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `ListClusterStreamingJobs` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListClusterStreamingJobs </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">ListClusterStreamingJobsResult</span>> <span class="p">InvokeAsync(</span><span class="nx">ListClusterStreamingJobsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListClusterStreamingJobsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListClusterStreamingJobsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -144,7 +146,7 @@ The following arguments are supported:
 
 
 
-## ListClusterStreamingJobs Result {#result}
+## listClusterStreamingJobs Result {#result}
 
 The following output properties are available:
 
@@ -253,9 +255,6 @@ The following output properties are available:
 
 
 <h4 id="clusterjobresponse">Cluster<wbr>Job<wbr>Response</h4>
-
-
-
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetStorageTarget"
-title_tag: "Function GetStorageTarget | Module storagecache | Package Azure NextGen"
-meta_desc: "Explore the GetStorageTarget function of the storagecache module, including examples, input properties, output properties, and supporting types. "
+title: "getStorageTarget"
+title_tag: "azure-nextgen.storagecache.getStorageTarget"
+meta_desc: "Documentation for the azure-nextgen.storagecache.getStorageTarget function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetStorageTarget function of the storagecache module, in
 
 
 
-## Using GetStorageTarget {#using}
+## Using getStorageTarget {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getStorageTarget<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetStorageTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetStorageTargetResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getStorageTarget<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetStorageTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetStorageTargetResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetStorageTarget function of the storagecache module, in
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStorageTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupStorageTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupStorageTargetResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStorageTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupStorageTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupStorageTargetResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupStorageTarget` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetStorageTarget function of the storagecache module, in
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetStorageTarget </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetStorageTargetResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetStorageTargetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetStorageTargetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetStorageTargetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetStorageTarget Result {#result}
+## getStorageTarget Result {#result}
 
 The following output properties are available:
 
@@ -618,9 +618,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -682,9 +679,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="namespacejunctionresponse">Namespace<wbr>Junction<wbr>Response</h4>
-
-
-
 
 
 
@@ -860,9 +854,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -960,9 +951,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 
@@ -1207,9 +1195,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="unknowntargetresponse">Unknown<wbr>Target<wbr>Response</h4>
-
-
-
 
 
 

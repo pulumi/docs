@@ -1,8 +1,8 @@
 
 ---
-title: "ListClusterLanguageExtensions"
-title_tag: "Function ListClusterLanguageExtensions | Module kusto | Package Azure NextGen"
-meta_desc: "Explore the ListClusterLanguageExtensions function of the kusto module, including examples, input properties, output properties, and supporting types. "
+title: "listClusterLanguageExtensions"
+title_tag: "azure-nextgen.kusto.listClusterLanguageExtensions"
+meta_desc: "Documentation for the azure-nextgen.kusto.listClusterLanguageExtensions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the ListClusterLanguageExtensions function of the kusto modu
 
 
 
-## Using ListClusterLanguageExtensions {#using}
+## Using listClusterLanguageExtensions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listClusterLanguageExtensions<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListClusterLanguageExtensionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">ListClusterLanguageExtensionsResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listClusterLanguageExtensions<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListClusterLanguageExtensionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListClusterLanguageExtensionsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the ListClusterLanguageExtensions function of the kusto modu
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListClusterLanguageExtensions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListClusterLanguageExtensionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">ListClusterLanguageExtensionsResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListClusterLanguageExtensions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListClusterLanguageExtensionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListClusterLanguageExtensionsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `ListClusterLanguageExtensions` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListClusterLanguageExtensions </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">ListClusterLanguageExtensionsResult</span>> <span class="p">InvokeAsync(</span><span class="nx">ListClusterLanguageExtensionsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListClusterLanguageExtensionsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListClusterLanguageExtensionsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -144,7 +146,7 @@ The following arguments are supported:
 
 
 
-## ListClusterLanguageExtensions Result {#result}
+## listClusterLanguageExtensions Result {#result}
 
 The following output properties are available:
 
@@ -217,9 +219,6 @@ The following output properties are available:
 
 
 <h4 id="languageextensionresponse">Language<wbr>Extension<wbr>Response</h4>
-
-
-
 
 
 

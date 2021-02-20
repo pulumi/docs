@@ -1,6 +1,6 @@
 ---
 title: "Azure NextGen"
-title_tag: "Package Azure NextGen"
+title_tag: "Azure NextGen Package"
 meta_desc: "A Next Generation Pulumi package for creating and managing Azure resources."
 menu:
     reference:
@@ -183,7 +183,4 @@ A Next Generation Pulumi package for creating and managing Azure resources.
 	<dt>Version</dt>
 	<dd>0.6.1</dd>
 </dl>
-
-
-
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetBatchAccount"
-title_tag: "Function GetBatchAccount | Module batch | Package Azure NextGen"
-meta_desc: "Explore the GetBatchAccount function of the batch module, including examples, input properties, output properties, and supporting types. "
+title: "getBatchAccount"
+title_tag: "azure-nextgen.batch.getBatchAccount"
+meta_desc: "Documentation for the azure-nextgen.batch.getBatchAccount function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetBatchAccount function of the batch module, including 
 
 
 
-## Using GetBatchAccount {#using}
+## Using getBatchAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBatchAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBatchAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetBatchAccountResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBatchAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBatchAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBatchAccountResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetBatchAccount function of the batch module, including 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBatchAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBatchAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupBatchAccountResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBatchAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBatchAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBatchAccountResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBatchAccount` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetBatchAccount function of the batch module, including 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBatchAccount </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetBatchAccountResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetBatchAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBatchAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBatchAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetBatchAccount Result {#result}
+## getBatchAccount Result {#result}
 
 The following output properties are available:
 
@@ -906,9 +906,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1006,9 +1003,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="batchaccountidentityresponse">Batch<wbr>Account<wbr>Identity<wbr>Response</h4>
-
-
-
 
 
 
@@ -1184,9 +1178,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1284,9 +1275,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="encryptionpropertiesresponse">Encryption<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1390,9 +1378,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1470,9 +1455,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 
@@ -1573,9 +1555,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
-
-
-
 
 
 
@@ -1859,9 +1838,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1923,9 +1899,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
-
-
-
 
 
 
@@ -2062,9 +2035,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualmachinefamilycorequotaresponse">Virtual<wbr>Machine<wbr>Family<wbr>Core<wbr>Quota<wbr>Response</h4>
-
-
-
 
 
 

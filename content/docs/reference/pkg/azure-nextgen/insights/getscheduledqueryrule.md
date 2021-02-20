@@ -1,8 +1,8 @@
 
 ---
-title: "GetScheduledQueryRule"
-title_tag: "Function GetScheduledQueryRule | Module insights | Package Azure NextGen"
-meta_desc: "Explore the GetScheduledQueryRule function of the insights module, including examples, input properties, output properties, and supporting types. "
+title: "getScheduledQueryRule"
+title_tag: "azure-nextgen.insights.getScheduledQueryRule"
+meta_desc: "Documentation for the azure-nextgen.insights.getScheduledQueryRule function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetScheduledQueryRule function of the insights module, i
 
 
 
-## Using GetScheduledQueryRule {#using}
+## Using getScheduledQueryRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getScheduledQueryRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetScheduledQueryRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetScheduledQueryRuleResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getScheduledQueryRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetScheduledQueryRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetScheduledQueryRuleResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetScheduledQueryRule function of the insights module, i
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupScheduledQueryRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupScheduledQueryRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupScheduledQueryRuleResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupScheduledQueryRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupScheduledQueryRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupScheduledQueryRuleResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupScheduledQueryRule` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetScheduledQueryRule function of the insights module, i
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetScheduledQueryRule </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetScheduledQueryRuleResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetScheduledQueryRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetScheduledQueryRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetScheduledQueryRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetScheduledQueryRule Result {#result}
+## getScheduledQueryRule Result {#result}
 
 The following output properties are available:
 
@@ -798,9 +798,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -973,9 +970,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1112,9 +1106,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1212,9 +1203,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dimensionresponse">Dimension<wbr>Response</h4>
-
-
-
 
 
 
@@ -1351,9 +1339,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response</h4>
-
-
-
 
 
 
@@ -1529,9 +1514,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1593,9 +1575,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="scheduleresponse">Schedule<wbr>Response</h4>
-
-
-
 
 
 
@@ -1696,9 +1675,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sourceresponse">Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -1871,9 +1847,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="triggerconditionresponse">Trigger<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 

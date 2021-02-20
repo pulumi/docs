@@ -1,8 +1,8 @@
 
 ---
-title: "GetManagedNetworkGroup"
-title_tag: "Function GetManagedNetworkGroup | Module managednetwork | Package Azure NextGen"
-meta_desc: "Explore the GetManagedNetworkGroup function of the managednetwork module, including examples, input properties, output properties, and supporting types. "
+title: "getManagedNetworkGroup"
+title_tag: "azure-nextgen.managednetwork.getManagedNetworkGroup"
+meta_desc: "Documentation for the azure-nextgen.managednetwork.getManagedNetworkGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetManagedNetworkGroup function of the managednetwork mo
 
 
 
-## Using GetManagedNetworkGroup {#using}
+## Using getManagedNetworkGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedNetworkGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagedNetworkGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetManagedNetworkGroupResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedNetworkGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagedNetworkGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetManagedNetworkGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetManagedNetworkGroup function of the managednetwork mo
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagedNetworkGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagedNetworkGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupManagedNetworkGroupResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagedNetworkGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagedNetworkGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupManagedNetworkGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupManagedNetworkGroup` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetManagedNetworkGroup function of the managednetwork mo
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetManagedNetworkGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetManagedNetworkGroupResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagedNetworkGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetManagedNetworkGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagedNetworkGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetManagedNetworkGroup Result {#result}
+## getManagedNetworkGroup Result {#result}
 
 The following output properties are available:
 
@@ -615,9 +615,6 @@ The following output properties are available:
 
 
 <h4 id="resourceidresponse">Resource<wbr>Id<wbr>Response</h4>
-
-
-
 
 
 

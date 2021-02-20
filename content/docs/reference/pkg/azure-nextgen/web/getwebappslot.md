@@ -1,8 +1,8 @@
 
 ---
-title: "GetWebAppSlot"
-title_tag: "Function GetWebAppSlot | Module web | Package Azure NextGen"
-meta_desc: "Explore the GetWebAppSlot function of the web module, including examples, input properties, output properties, and supporting types. "
+title: "getWebAppSlot"
+title_tag: "azure-nextgen.web.getWebAppSlot"
+meta_desc: "Documentation for the azure-nextgen.web.getWebAppSlot function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetWebAppSlot function of the web module, including exam
 
 
 
-## Using GetWebAppSlot {#using}
+## Using getWebAppSlot {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWebAppSlot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWebAppSlotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetWebAppSlotResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWebAppSlot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWebAppSlotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWebAppSlotResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetWebAppSlot function of the web module, including exam
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWebAppSlot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWebAppSlotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupWebAppSlotResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWebAppSlot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWebAppSlotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWebAppSlotResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupWebAppSlot` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetWebAppSlot function of the web module, including exam
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetWebAppSlot </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetWebAppSlotResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetWebAppSlotArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetWebAppSlotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWebAppSlotArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetWebAppSlot Result {#result}
+## getWebAppSlot Result {#result}
 
 The following output properties are available:
 
@@ -1906,9 +1906,6 @@ http requests{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1973,9 +1970,6 @@ http requests{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2037,9 +2031,6 @@ http requests{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="autohealactionsresponse">Auto<wbr>Heal<wbr>Actions<wbr>Response</h4>
-
-
-
 
 
 
@@ -2183,9 +2174,6 @@ before taking the action{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2286,9 +2274,6 @@ before taking the action{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2386,9 +2371,6 @@ before taking the action{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="autohealtriggersresponse">Auto<wbr>Heal<wbr>Triggers<wbr>Response</h4>
-
-
-
 
 
 
@@ -2561,9 +2543,6 @@ before taking the action{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="cloninginforesponse">Cloning<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -3011,9 +2990,6 @@ together to use the same snapshot.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3150,9 +3126,6 @@ together to use the same snapshot.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3265,9 +3238,6 @@ for more details.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3329,9 +3299,6 @@ for more details.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="handlermappingresponse">Handler<wbr>Mapping<wbr>Response</h4>
-
-
-
 
 
 
@@ -3468,9 +3435,6 @@ for more details.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="hostnamesslstateresponse">Host<wbr>Name<wbr>Ssl<wbr>State<wbr>Response</h4>
-
-
-
 
 
 
@@ -3718,9 +3682,6 @@ for more details.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3854,9 +3815,6 @@ for more details.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="ipsecurityrestrictionresponse">Ip<wbr>Security<wbr>Restriction<wbr>Response</h4>
-
-
-
 
 
 
@@ -4356,9 +4314,6 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4531,9 +4486,6 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4634,9 +4586,6 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4734,9 +4683,6 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="pushsettingsresponse">Push<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -5104,9 +5050,6 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5435,9 +5378,6 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5535,9 +5475,6 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 {{% /choosable %}}
 
 <h4 id="siteconfigresponse">Site<wbr>Config<wbr>Response</h4>
-
-
-
 
 
 
@@ -7661,9 +7598,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7797,9 +7731,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="sitemachinekeyresponse">Site<wbr>Machine<wbr>Key<wbr>Response</h4>
-
-
-
 
 
 
@@ -7975,9 +7906,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8114,9 +8042,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8250,9 +8175,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="statuscodesbasedtriggerresponse">Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response</h4>
-
-
-
 
 
 
@@ -8461,9 +8383,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 
@@ -8711,9 +8630,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8883,9 +8799,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="virtualdirectoryresponse">Virtual<wbr>Directory<wbr>Response</h4>
-
-
-
 
 
 

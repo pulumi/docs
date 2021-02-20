@@ -1,8 +1,8 @@
 
 ---
-title: "GetIoTSpace"
-title_tag: "Function GetIoTSpace | Module iotspaces | Package Azure NextGen"
-meta_desc: "Explore the GetIoTSpace function of the iotspaces module, including examples, input properties, output properties, and supporting types. "
+title: "getIoTSpace"
+title_tag: "azure-nextgen.iotspaces.getIoTSpace"
+meta_desc: "Documentation for the azure-nextgen.iotspaces.getIoTSpace function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetIoTSpace function of the iotspaces module, including 
 
 
 
-## Using GetIoTSpace {#using}
+## Using getIoTSpace {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIoTSpace<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIoTSpaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetIoTSpaceResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIoTSpace<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIoTSpaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIoTSpaceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetIoTSpace function of the iotspaces module, including 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIoTSpace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIoTSpaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupIoTSpaceResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIoTSpace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIoTSpaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIoTSpaceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIoTSpace` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetIoTSpace function of the iotspaces module, including 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIoTSpace </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetIoTSpaceResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetIoTSpaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIoTSpaceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIoTSpaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetIoTSpace Result {#result}
+## getIoTSpace Result {#result}
 
 The following output properties are available:
 
@@ -438,9 +438,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -613,9 +610,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -677,9 +671,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="storagecontainerpropertiesresponse">Storage<wbr>Container<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 

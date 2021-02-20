@@ -1,8 +1,8 @@
 
 ---
-title: "GetIntegrationAccountAgreement"
-title_tag: "Function GetIntegrationAccountAgreement | Module logic | Package Azure NextGen"
-meta_desc: "Explore the GetIntegrationAccountAgreement function of the logic module, including examples, input properties, output properties, and supporting types. "
+title: "getIntegrationAccountAgreement"
+title_tag: "azure-nextgen.logic.getIntegrationAccountAgreement"
+meta_desc: "Documentation for the azure-nextgen.logic.getIntegrationAccountAgreement function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetIntegrationAccountAgreement function of the logic mod
 
 
 
-## Using GetIntegrationAccountAgreement {#using}
+## Using getIntegrationAccountAgreement {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationAccountAgreement<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationAccountAgreementArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetIntegrationAccountAgreementResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationAccountAgreement<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationAccountAgreementArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationAccountAgreementResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetIntegrationAccountAgreement function of the logic mod
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationAccountAgreement<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationAccountAgreementArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupIntegrationAccountAgreementResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationAccountAgreement<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationAccountAgreementArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationAccountAgreementResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIntegrationAccountAgreement` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetIntegrationAccountAgreement function of the logic mod
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIntegrationAccountAgreement </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetIntegrationAccountAgreementResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationAccountAgreementArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationAccountAgreementResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationAccountAgreementArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetIntegrationAccountAgreement Result {#result}
+## getIntegrationAccountAgreement Result {#result}
 
 The following output properties are available:
 
@@ -726,9 +726,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -901,9 +898,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1001,9 +995,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="as2envelopesettingsresponse">AS2Envelope<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -1215,9 +1206,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1315,9 +1303,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="as2mdnsettingsresponse">AS2Mdn<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -1673,9 +1658,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1848,9 +1830,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1984,9 +1963,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="as2protocolsettingsresponse">AS2Protocol<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -2267,9 +2243,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="as2securitysettingsresponse">AS2Security<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -2661,9 +2634,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3052,9 +3022,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3191,9 +3158,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3291,9 +3255,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="edifactacknowledgementsettingsresponse">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -3721,9 +3682,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3821,9 +3779,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="edifactdelimiteroverrideresponse">Edifact<wbr>Delimiter<wbr>Override<wbr>Response</h4>
-
-
-
 
 
 
@@ -4284,9 +4239,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="edifactenvelopeoverrideresponse">Edifact<wbr>Envelope<wbr>Override<wbr>Response</h4>
-
-
-
 
 
 
@@ -4855,9 +4807,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="edifactenvelopesettingsresponse">Edifact<wbr>Envelope<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -6365,9 +6314,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6792,9 +6738,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6859,9 +6802,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6923,9 +6863,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</h4>
-
-
-
 
 
 
@@ -7062,9 +6999,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="edifactprocessingsettingsresponse">Edifact<wbr>Processing<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -7273,9 +7207,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="edifactprotocolsettingsresponse">Edifact<wbr>Protocol<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -7703,9 +7634,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7986,9 +7914,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8266,9 +8191,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="edifactvalidationsettingsresponse">Edifact<wbr>Validation<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -8657,9 +8579,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="x12acknowledgementsettingsresponse">X12Acknowledgement<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -9231,9 +9150,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9331,9 +9247,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="x12delimiteroverridesresponse">X12Delimiter<wbr>Overrides<wbr>Response</h4>
-
-
-
 
 
 
@@ -9686,9 +9599,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="x12envelopeoverrideresponse">X12Envelope<wbr>Override<wbr>Response</h4>
-
-
-
 
 
 
@@ -10077,9 +9987,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="x12envelopesettingsresponse">X12Envelope<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -10975,9 +10882,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -11258,9 +11162,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -11325,9 +11226,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -11389,9 +11287,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response</h4>
-
-
-
 
 
 
@@ -11528,9 +11423,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="x12processingsettingsresponse">X12Processing<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -11775,9 +11667,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="x12protocolsettingsresponse">X12Protocol<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -12241,9 +12130,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12416,9 +12302,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12588,9 +12471,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="x12validationoverrideresponse">X12Validation<wbr>Override<wbr>Response</h4>
-
-
-
 
 
 
@@ -12871,9 +12751,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="x12validationsettingsresponse">X12Validation<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetVpnSite"
-title_tag: "Function GetVpnSite | Module network | Package Azure NextGen"
-meta_desc: "Explore the GetVpnSite function of the network module, including examples, input properties, output properties, and supporting types. "
+title: "getVpnSite"
+title_tag: "azure-nextgen.network.getVpnSite"
+meta_desc: "Documentation for the azure-nextgen.network.getVpnSite function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetVpnSite function of the network module, including exa
 
 
 
-## Using GetVpnSite {#using}
+## Using getVpnSite {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpnSite<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVpnSiteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetVpnSiteResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpnSite<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVpnSiteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVpnSiteResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetVpnSite function of the network module, including exa
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpnSite<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVpnSiteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupVpnSiteResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpnSite<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVpnSiteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVpnSiteResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVpnSite` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetVpnSite function of the network module, including exa
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVpnSite </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetVpnSiteResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetVpnSiteArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVpnSiteResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVpnSiteArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetVpnSite Result {#result}
+## getVpnSite Result {#result}
 
 The following output properties are available:
 
@@ -762,9 +762,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -826,9 +823,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -1004,9 +998,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1140,9 +1131,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response</h4>
-
-
-
 
 
 
@@ -1318,9 +1306,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1457,9 +1442,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1524,9 +1506,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1588,9 +1567,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vpnlinkbgpsettingsresponse">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -1694,9 +1670,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1794,9 +1767,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vpnsitelinkresponse">Vpn<wbr>Site<wbr>Link<wbr>Response</h4>
-
-
-
 
 
 

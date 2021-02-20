@@ -1,8 +1,8 @@
 
 ---
-title: "ListSaasSubscriptionLevelAccessToken"
-title_tag: "Function ListSaasSubscriptionLevelAccessToken | Module saas | Package Azure NextGen"
-meta_desc: "Explore the ListSaasSubscriptionLevelAccessToken function of the saas module, including examples, input properties, output properties, and supporting types. "
+title: "listSaasSubscriptionLevelAccessToken"
+title_tag: "azure-nextgen.saas.listSaasSubscriptionLevelAccessToken"
+meta_desc: "Documentation for the azure-nextgen.saas.listSaasSubscriptionLevelAccessToken function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the ListSaasSubscriptionLevelAccessToken function of the saa
 
 
 
-## Using ListSaasSubscriptionLevelAccessToken {#using}
+## Using listSaasSubscriptionLevelAccessToken {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listSaasSubscriptionLevelAccessToken<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListSaasSubscriptionLevelAccessTokenArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">ListSaasSubscriptionLevelAccessTokenResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listSaasSubscriptionLevelAccessToken<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListSaasSubscriptionLevelAccessTokenArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListSaasSubscriptionLevelAccessTokenResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the ListSaasSubscriptionLevelAccessToken function of the saa
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListSaasSubscriptionLevelAccessToken<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListSaasSubscriptionLevelAccessTokenArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">ListSaasSubscriptionLevelAccessTokenResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListSaasSubscriptionLevelAccessToken<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListSaasSubscriptionLevelAccessTokenArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListSaasSubscriptionLevelAccessTokenResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `ListSaasSubscriptionLevelAccessToken` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListSaasSubscriptionLevelAccessToken </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">ListSaasSubscriptionLevelAccessTokenResult</span>> <span class="p">InvokeAsync(</span><span class="nx">ListSaasSubscriptionLevelAccessTokenArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListSaasSubscriptionLevelAccessTokenResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListSaasSubscriptionLevelAccessTokenArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -144,7 +146,7 @@ The following arguments are supported:
 
 
 
-## ListSaasSubscriptionLevelAccessToken Result {#result}
+## listSaasSubscriptionLevelAccessToken Result {#result}
 
 The following output properties are available:
 

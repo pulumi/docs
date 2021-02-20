@@ -1,8 +1,8 @@
 
 ---
-title: "GetBackend"
-title_tag: "Function GetBackend | Module apimanagement | Package Azure NextGen"
-meta_desc: "Explore the GetBackend function of the apimanagement module, including examples, input properties, output properties, and supporting types. "
+title: "getBackend"
+title_tag: "azure-nextgen.apimanagement.getBackend"
+meta_desc: "Documentation for the azure-nextgen.apimanagement.getBackend function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetBackend function of the apimanagement module, includi
 
 
 
-## Using GetBackend {#using}
+## Using getBackend {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackend<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackendArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetBackendResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackend<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackendArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackendResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetBackend function of the apimanagement module, includi
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackendArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupBackendResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackendArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackendResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBackend` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetBackend function of the apimanagement module, includi
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBackend </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetBackendResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackendArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackendResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackendArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetBackend Result {#result}
+## getBackend Result {#result}
 
 The following output properties are available:
 
@@ -654,9 +654,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -754,9 +751,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="backendcredentialscontractresponse">Backend<wbr>Credentials<wbr>Contract<wbr>Response</h4>
-
-
-
 
 
 
@@ -932,9 +926,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -996,9 +987,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="backendproxycontractresponse">Backend<wbr>Proxy<wbr>Contract<wbr>Response</h4>
-
-
-
 
 
 
@@ -1135,9 +1123,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1349,9 +1334,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1449,9 +1431,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="x509certificatenameresponse">X509Certificate<wbr>Name<wbr>Response</h4>
-
-
-
 
 
 

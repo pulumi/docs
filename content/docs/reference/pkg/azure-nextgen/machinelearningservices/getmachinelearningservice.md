@@ -1,8 +1,8 @@
 
 ---
-title: "GetMachineLearningService"
-title_tag: "Function GetMachineLearningService | Module machinelearningservices | Package Azure NextGen"
-meta_desc: "Explore the GetMachineLearningService function of the machinelearningservices module, including examples, input properties, output properties, and supporting types. "
+title: "getMachineLearningService"
+title_tag: "azure-nextgen.machinelearningservices.getMachineLearningService"
+meta_desc: "Documentation for the azure-nextgen.machinelearningservices.getMachineLearningService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetMachineLearningService function of the machinelearnin
 
 
 
-## Using GetMachineLearningService {#using}
+## Using getMachineLearningService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMachineLearningService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMachineLearningServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetMachineLearningServiceResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMachineLearningService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMachineLearningServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMachineLearningServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetMachineLearningService function of the machinelearnin
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMachineLearningService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMachineLearningServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupMachineLearningServiceResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMachineLearningService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMachineLearningServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMachineLearningServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupMachineLearningService` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetMachineLearningService function of the machinelearnin
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMachineLearningService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetMachineLearningServiceResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetMachineLearningServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMachineLearningServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMachineLearningServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -218,7 +218,7 @@ The following arguments are supported:
 
 
 
-## GetMachineLearningService Result {#result}
+## getMachineLearningService Result {#result}
 
 The following output properties are available:
 
@@ -579,9 +579,6 @@ The following output properties are available:
 
 
 <h4 id="aciserviceresponseresponse">ACIService<wbr>Response<wbr>Response</h4>
-
-
-
 
 
 
@@ -1477,9 +1474,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1577,9 +1571,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="aciserviceresponseresponseencryptionproperties">ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties</h4>
-
-
-
 
 
 
@@ -1716,9 +1707,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="aciserviceresponseresponseenvironmentimagerequest">ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</h4>
-
-
-
 
 
 
@@ -1966,9 +1954,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2069,9 +2054,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2133,9 +2115,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="aksserviceresponseresponse">AKSService<wbr>Response<wbr>Response</h4>
-
-
-
 
 
 
@@ -3175,9 +3154,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3386,9 +3362,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3486,9 +3459,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="aksserviceresponseresponsedeploymentstatus">AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status</h4>
-
-
-
 
 
 
@@ -3661,9 +3631,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="aksserviceresponseresponseenvironmentimagerequest">AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</h4>
-
-
-
 
 
 
@@ -3911,9 +3878,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4119,9 +4083,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="aksvariantresponseresponse">AKSVariant<wbr>Response<wbr>Response</h4>
-
-
-
 
 
 
@@ -4477,9 +4438,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4740,9 +4698,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4840,9 +4795,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 {{% /choosable %}}
 
 <h4 id="environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment</h4>
-
-
-
 
 
 
@@ -5162,9 +5114,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5265,9 +5214,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5365,9 +5311,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 {{% /choosable %}}
 
 <h4 id="errorresponseresponse">Error<wbr>Response<wbr>Response</h4>
-
-
-
 
 
 
@@ -5504,9 +5447,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 {{% /choosable %}}
 
 <h4 id="identityresponse">Identity<wbr>Response</h4>
-
-
-
 
 
 
@@ -5682,9 +5622,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5857,9 +5794,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5921,9 +5855,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 {{% /choosable %}}
 
 <h4 id="modelenvironmentdefinitionresponseresponsedocker">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Docker</h4>
-
-
-
 
 
 
@@ -6060,9 +5991,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 {{% /choosable %}}
 
 <h4 id="modelenvironmentdefinitionresponseresponsepython">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Python</h4>
-
-
-
 
 
 
@@ -6235,9 +6163,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 {{% /choosable %}}
 
 <h4 id="modelenvironmentdefinitionresponseresponser">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>R</h4>
-
-
-
 
 
 
@@ -6561,9 +6486,6 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6697,9 +6619,6 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="modelresponse">Model<wbr>Response</h4>
-
-
-
 
 
 
@@ -7487,9 +7406,6 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7590,9 +7506,6 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7657,9 +7570,6 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7721,9 +7631,6 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
-
-
-
 
 
 
@@ -7824,9 +7731,6 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="sparkmavenpackageresponse">Spark<wbr>Maven<wbr>Package<wbr>Response</h4>
-
-
-
 
 
 
@@ -7963,9 +7867,6 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 
@@ -8210,9 +8111,6 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
-
-
-
 
 
 

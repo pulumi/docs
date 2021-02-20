@@ -1,8 +1,8 @@
 
 ---
-title: "GetWebAppVnetConnection"
-title_tag: "Function GetWebAppVnetConnection | Module web | Package Azure NextGen"
-meta_desc: "Explore the GetWebAppVnetConnection function of the web module, including examples, input properties, output properties, and supporting types. "
+title: "getWebAppVnetConnection"
+title_tag: "azure-nextgen.web.getWebAppVnetConnection"
+meta_desc: "Documentation for the azure-nextgen.web.getWebAppVnetConnection function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetWebAppVnetConnection function of the web module, incl
 
 
 
-## Using GetWebAppVnetConnection {#using}
+## Using getWebAppVnetConnection {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWebAppVnetConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWebAppVnetConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetWebAppVnetConnectionResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWebAppVnetConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWebAppVnetConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWebAppVnetConnectionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetWebAppVnetConnection function of the web module, incl
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWebAppVnetConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWebAppVnetConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupWebAppVnetConnectionResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWebAppVnetConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWebAppVnetConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWebAppVnetConnectionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupWebAppVnetConnection` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetWebAppVnetConnection function of the web module, incl
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetWebAppVnetConnection </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetWebAppVnetConnectionResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetWebAppVnetConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetWebAppVnetConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWebAppVnetConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetWebAppVnetConnection Result {#result}
+## getWebAppVnetConnection Result {#result}
 
 The following output properties are available:
 
@@ -658,9 +658,6 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -902,9 +899,6 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="vnetrouteresponse">Vnet<wbr>Route<wbr>Response</h4>
-
-
-
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetRelationshipLink"
-title_tag: "Function GetRelationshipLink | Module customerinsights | Package Azure NextGen"
-meta_desc: "Explore the GetRelationshipLink function of the customerinsights module, including examples, input properties, output properties, and supporting types. "
+title: "getRelationshipLink"
+title_tag: "azure-nextgen.customerinsights.getRelationshipLink"
+meta_desc: "Documentation for the azure-nextgen.customerinsights.getRelationshipLink function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetRelationshipLink function of the customerinsights mod
 
 
 
-## Using GetRelationshipLink {#using}
+## Using getRelationshipLink {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRelationshipLink<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRelationshipLinkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetRelationshipLinkResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRelationshipLink<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRelationshipLinkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRelationshipLinkResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetRelationshipLink function of the customerinsights mod
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRelationshipLink<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRelationshipLinkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupRelationshipLinkResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRelationshipLink<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRelationshipLinkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRelationshipLinkResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRelationshipLink` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetRelationshipLink function of the customerinsights mod
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRelationshipLink </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetRelationshipLinkResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetRelationshipLinkArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRelationshipLinkResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRelationshipLinkArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetRelationshipLink Result {#result}
+## getRelationshipLink Result {#result}
 
 The following output properties are available:
 
@@ -726,9 +726,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -826,9 +823,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="relationshiplinkfieldmappingresponse">Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Response</h4>
-
-
-
 
 
 

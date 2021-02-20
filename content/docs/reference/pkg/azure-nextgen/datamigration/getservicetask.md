@@ -1,8 +1,8 @@
 
 ---
-title: "GetServiceTask"
-title_tag: "Function GetServiceTask | Module datamigration | Package Azure NextGen"
-meta_desc: "Explore the GetServiceTask function of the datamigration module, including examples, input properties, output properties, and supporting types. "
+title: "getServiceTask"
+title_tag: "azure-nextgen.datamigration.getServiceTask"
+meta_desc: "Documentation for the azure-nextgen.datamigration.getServiceTask function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetServiceTask function of the datamigration module, inc
 
 
 
-## Using GetServiceTask {#using}
+## Using getServiceTask {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceTask<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceTaskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetServiceTaskResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceTask<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceTaskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceTaskResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetServiceTask function of the datamigration module, inc
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceTask<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceTaskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupServiceTaskResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceTask<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceTaskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceTaskResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServiceTask` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetServiceTask function of the datamigration module, inc
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServiceTask </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetServiceTaskResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceTaskArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceTaskResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceTaskArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -218,7 +218,7 @@ The following arguments are supported:
 
 
 
-## GetServiceTask Result {#result}
+## getServiceTask Result {#result}
 
 The following output properties are available:
 
@@ -438,9 +438,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -577,9 +574,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -713,9 +707,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -1107,9 +1098,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1171,9 +1159,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttomongodbtaskpropertiesresponse">Connect<wbr>To<wbr>Mongo<wbr>Db<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1421,9 +1406,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1485,9 +1467,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttosourceoraclesynctaskoutputresponse">Connect<wbr>To<wbr>Source<wbr>Oracle<wbr>Sync<wbr>Task<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -1660,9 +1639,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttosourceoraclesynctaskpropertiesresponse">Connect<wbr>To<wbr>Source<wbr>Oracle<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1910,9 +1886,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1974,9 +1947,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttosourcepostgresqlsynctaskoutputresponse">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -2185,9 +2155,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttosourcepostgresqlsynctaskpropertiesresponse">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -2435,9 +2402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2679,9 +2643,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttosourcesqlservertaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response</h4>
-
-
-
 
 
 
@@ -2962,9 +2923,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttosourcesqlservertaskoutputagentjoblevelresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -3284,9 +3242,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3531,9 +3486,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3775,9 +3727,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttosourcesqlservertaskoutputtasklevelresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -4097,9 +4046,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4344,9 +4290,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4444,9 +4387,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttotargetazuredbformysqltaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -4655,9 +4595,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttotargetazuredbformysqltaskpropertiesresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -4905,9 +4842,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5005,9 +4939,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttotargetazuredbforpostgresqlsynctaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -5216,9 +5147,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttotargetazuredbforpostgresqlsynctaskpropertiesresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -5466,9 +5394,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5530,9 +5455,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttotargetoracleazuredbforpostgresqlsynctaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -5744,9 +5666,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5844,9 +5763,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttotargetoracleazuredbforpostgresqlsynctaskpropertiesresponse">Connect<wbr>To<wbr>Target<wbr>Oracle<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -6094,9 +6010,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6158,9 +6071,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttotargetsqldbtaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -6333,9 +6243,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttotargetsqldbtaskpropertiesresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -6583,9 +6490,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6683,9 +6587,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttotargetsqlmisynctaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -6822,9 +6723,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttotargetsqlmisynctaskpropertiesresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -7072,9 +6970,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7244,9 +7139,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttotargetsqlmitaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -7494,9 +7386,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7741,9 +7630,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7841,9 +7727,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connecttotargetsqlsqldbsynctaskpropertiesresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -8088,9 +7971,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dataitemmigrationsummaryresultresponse">Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response</h4>
-
-
-
 
 
 
@@ -8446,9 +8326,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8765,9 +8642,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9045,9 +8919,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="databasesummaryresultresponse">Database<wbr>Summary<wbr>Result<wbr>Response</h4>
-
-
-
 
 
 
@@ -9439,9 +9310,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9539,9 +9407,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="fileshareresponse">File<wbr>Share<wbr>Response</h4>
-
-
-
 
 
 
@@ -9681,9 +9546,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9820,9 +9682,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9920,9 +9779,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="gettdecertificatessqltaskpropertiesresponse">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -10170,9 +10026,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10270,9 +10123,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getusertablesoracletaskoutputresponse">Get<wbr>User<wbr>Tables<wbr>Oracle<wbr>Task<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -10409,9 +10259,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getusertablesoracletaskpropertiesresponse">Get<wbr>User<wbr>Tables<wbr>Oracle<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -10659,9 +10506,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10759,9 +10603,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getusertablespostgresqltaskoutputresponse">Get<wbr>User<wbr>Tables<wbr>Postgre<wbr>Sql<wbr>Task<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -10898,9 +10739,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getusertablespostgresqltaskpropertiesresponse">Get<wbr>User<wbr>Tables<wbr>Postgre<wbr>Sql<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -11148,9 +10986,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -11323,9 +11158,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -11495,9 +11327,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getusertablessqlsynctaskpropertiesresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -11745,9 +11574,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -11845,9 +11671,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getusertablessqltaskoutputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -11984,9 +11807,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getusertablessqltaskpropertiesresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -12234,9 +12054,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12373,9 +12190,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12440,9 +12254,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12504,9 +12315,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratemisynccompletecommandpropertiesresponse">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -12679,9 +12487,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratemongodbtaskpropertiesresponse">Migrate<wbr>Mongo<wbr>Db<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -12929,9 +12734,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13176,9 +12978,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13315,9 +13114,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13451,9 +13247,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratemysqlazuredbformysqlsynctaskoutputdatabaselevelresponse">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -14061,9 +13854,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -14161,9 +13951,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratemysqlazuredbformysqlsynctaskoutputmigrationlevelresponse">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -14444,9 +14231,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratemysqlazuredbformysqlsynctaskoutputtablelevelresponse">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -14982,9 +14766,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15229,9 +15010,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15473,9 +15251,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migrateoracleazuredbpostgresqlsyncdatabaseinputresponse">Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response</h4>
-
-
-
 
 
 
@@ -15795,9 +15570,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15934,9 +15706,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -16070,9 +15839,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migrateoracleazuredbpostgresqlsynctaskoutputdatabaselevelresponse">Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -16680,9 +16446,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -16780,9 +16543,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migrateoracleazuredbpostgresqlsynctaskoutputmigrationlevelresponse">Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -17063,9 +16823,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migrateoracleazuredbpostgresqlsynctaskoutputtablelevelresponse">Migrate<wbr>Oracle<wbr>Azure<wbr>Db<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -17601,9 +17358,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -17848,9 +17602,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -17912,9 +17663,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratepostgresqlazuredbforpostgresqlsynctaskinputresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</h4>
-
-
-
 
 
 
@@ -18054,9 +17802,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -18190,9 +17935,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratepostgresqlazuredbforpostgresqlsynctaskoutputdatabaselevelresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -18800,9 +18542,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -18900,9 +18639,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratepostgresqlazuredbforpostgresqlsynctaskoutputmigrationlevelresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -19291,9 +19027,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratepostgresqlazuredbforpostgresqlsynctaskoutputtablelevelresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -19829,9 +19562,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -20076,9 +19806,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -20248,9 +19975,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqldbsyncdatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response</h4>
-
-
-
 
 
 
@@ -20570,9 +20294,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -20745,9 +20466,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -20881,9 +20599,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqldbsynctaskoutputdatabaselevelresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -21491,9 +21206,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -21591,9 +21303,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqldbsynctaskoutputmigrationlevelresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -21910,9 +21619,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqldbsynctaskoutputtablelevelresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -22448,9 +22154,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -22695,9 +22398,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -22875,9 +22575,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqldbtaskoutputdatabaselevelresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -23449,9 +23146,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -23513,9 +23207,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqldbtaskoutputerrorresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Error<wbr>Response</h4>
-
-
-
 
 
 
@@ -23616,9 +23307,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqldbtaskoutputmigrationlevelresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -24226,9 +23914,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -24617,9 +24302,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -24681,9 +24363,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqldbtaskpropertiesresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -24931,9 +24610,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -25103,9 +24779,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqlmisynctaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response</h4>
-
-
-
 
 
 
@@ -25350,9 +25023,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqlmisynctaskoutputdatabaselevelresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -25816,9 +25486,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -25916,9 +25583,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqlmisynctaskoutputmigrationlevelresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -26382,9 +26046,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -26626,9 +26287,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqlmitaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response</h4>
-
-
-
 
 
 
@@ -26984,9 +26642,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -27300,9 +26955,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqlmitaskoutputdatabaselevelresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Database<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -27658,9 +27310,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -27758,9 +27407,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqlmitaskoutputloginlevelresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Login<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -28077,9 +27723,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesqlserversqlmitaskoutputmigrationlevelresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Migration<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -28687,9 +28330,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -28934,9 +28574,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -29070,9 +28707,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratessistaskoutputmigrationlevelresponse">Migrate<wbr>Ssis<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response</h4>
-
-
-
 
 
 
@@ -29500,9 +29134,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -29855,9 +29486,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -30102,9 +29730,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -30205,9 +29830,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -30305,9 +29927,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migratesynccompletecommandpropertiesresponse">Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -30483,9 +30102,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -30586,9 +30202,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -30686,9 +30299,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migrationvalidationdatabasesummaryresultresponse">Migration<wbr>Validation<wbr>Database<wbr>Summary<wbr>Result<wbr>Response</h4>
-
-
-
 
 
 
@@ -30972,9 +30582,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -31108,9 +30715,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="migrationvalidationresultresponse">Migration<wbr>Validation<wbr>Result<wbr>Response</h4>
-
-
-
 
 
 
@@ -31286,9 +30890,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -31458,9 +31059,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mongodbcollectioninforesponse">Mongo<wbr>Db<wbr>Collection<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -31921,9 +31519,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mongodbcollectionprogressresponse">Mongo<wbr>Db<wbr>Collection<wbr>Progress<wbr>Response</h4>
-
-
-
 
 
 
@@ -32423,9 +32018,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -32562,9 +32154,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -32698,9 +32287,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mongodbdatabaseinforesponse">Mongo<wbr>Db<wbr>Database<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -32981,9 +32567,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mongodbdatabaseprogressresponse">Mongo<wbr>Db<wbr>Database<wbr>Progress<wbr>Response</h4>
-
-
-
 
 
 
@@ -33519,9 +33102,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -33619,9 +33199,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mongodberrorresponse">Mongo<wbr>Db<wbr>Error<wbr>Response</h4>
-
-
-
 
 
 
@@ -33794,9 +33371,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mongodbmigrationprogressresponse">Mongo<wbr>Db<wbr>Migration<wbr>Progress<wbr>Response</h4>
-
-
-
 
 
 
@@ -34332,9 +33906,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -34579,9 +34150,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -34679,9 +34247,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mongodbshardkeyinforesponse">Mongo<wbr>Db<wbr>Shard<wbr>Key<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -34785,9 +34350,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -34885,9 +34447,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mongodbthrottlingsettingsresponse">Mongo<wbr>Db<wbr>Throttling<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -35024,9 +34583,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -35202,9 +34758,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -35338,9 +34891,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="oracleconnectioninforesponse">Oracle<wbr>Connection<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -35480,9 +35030,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -35580,9 +35127,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -35866,9 +35410,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -36113,9 +35654,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -36213,9 +35751,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -36535,9 +36070,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -36671,9 +36203,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="startmigrationscenarioserverroleresultresponse">Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response</h4>
-
-
-
 
 
 
@@ -36813,9 +36342,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -36949,9 +36475,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="validatemigrationinputsqlserversqldbsynctaskpropertiesresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -37199,9 +36722,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -37446,9 +36966,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -37582,9 +37099,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="validatemigrationinputsqlserversqlmisynctaskpropertiesresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -37829,9 +37343,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="validatemigrationinputsqlserversqlmitaskinputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response</h4>
-
-
-
 
 
 
@@ -38112,9 +37623,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="validatemigrationinputsqlserversqlmitaskoutputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 
@@ -38434,9 +37942,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -38678,9 +38183,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="validatemongodbtaskpropertiesresponse">Validate<wbr>Mongo<wbr>Db<wbr>Task<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -38928,9 +38430,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -39175,9 +38674,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -39239,9 +38735,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="validatesyncmigrationinputsqlservertaskinputresponse">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response</h4>
-
-
-
 
 
 
@@ -39378,9 +38871,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="validatesyncmigrationinputsqlservertaskoutputresponse">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Response</h4>
-
-
-
 
 
 

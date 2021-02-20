@@ -1,8 +1,8 @@
 
 ---
-title: "GetCache"
-title_tag: "Function GetCache | Module storagecache | Package Azure NextGen"
-meta_desc: "Explore the GetCache function of the storagecache module, including examples, input properties, output properties, and supporting types. "
+title: "getCache"
+title_tag: "azure-nextgen.storagecache.getCache"
+meta_desc: "Documentation for the azure-nextgen.storagecache.getCache function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetCache function of the storagecache module, including 
 
 
 
-## Using GetCache {#using}
+## Using getCache {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCache<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetCacheResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCache<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCacheResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetCache function of the storagecache module, including 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCache<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupCacheResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCache<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCacheResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCache` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetCache function of the storagecache module, including 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCache </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetCacheResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetCacheArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCacheResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCacheArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetCache Result {#result}
+## getCache Result {#result}
 
 The following output properties are available:
 
@@ -834,9 +834,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1117,9 +1114,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1217,9 +1211,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="cachedirectorysettingsresponse">Cache<wbr>Directory<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -1323,9 +1314,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1387,9 +1375,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="cachehealthresponse">Cache<wbr>Health<wbr>Response</h4>
-
-
-
 
 
 
@@ -1490,9 +1475,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="cacheidentityresponse">Cache<wbr>Identity<wbr>Response</h4>
-
-
-
 
 
 
@@ -1632,9 +1614,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1735,9 +1714,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1802,9 +1778,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1866,9 +1839,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="cacheupgradestatusresponse">Cache<wbr>Upgrade<wbr>Status<wbr>Response</h4>
-
-
-
 
 
 
@@ -2077,9 +2047,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -2543,9 +2510,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2643,9 +2607,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 
@@ -2749,9 +2710,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2813,9 +2771,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="nfsaccesspolicyresponse">Nfs<wbr>Access<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -2916,9 +2871,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="nfsaccessruleresponse">Nfs<wbr>Access<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 
@@ -3235,9 +3187,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 

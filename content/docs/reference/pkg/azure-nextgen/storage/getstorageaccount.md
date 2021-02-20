@@ -1,8 +1,8 @@
 
 ---
-title: "GetStorageAccount"
-title_tag: "Function GetStorageAccount | Module storage | Package Azure NextGen"
-meta_desc: "Explore the GetStorageAccount function of the storage module, including examples, input properties, output properties, and supporting types. "
+title: "getStorageAccount"
+title_tag: "azure-nextgen.storage.getStorageAccount"
+meta_desc: "Documentation for the azure-nextgen.storage.getStorageAccount function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetStorageAccount function of the storage module, includ
 
 
 
-## Using GetStorageAccount {#using}
+## Using getStorageAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getStorageAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetStorageAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetStorageAccountResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getStorageAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetStorageAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetStorageAccountResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetStorageAccount function of the storage module, includ
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStorageAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupStorageAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupStorageAccountResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStorageAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupStorageAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupStorageAccountResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupStorageAccount` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetStorageAccount function of the storage module, includ
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetStorageAccount </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetStorageAccountResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetStorageAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetStorageAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetStorageAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetStorageAccount Result {#result}
+## getStorageAccount Result {#result}
 
 The following output properties are available:
 
@@ -1410,9 +1410,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1657,9 +1654,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1757,9 +1751,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -1863,9 +1854,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1963,9 +1951,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="blobrestorestatusresponse">Blob<wbr>Restore<wbr>Status<wbr>Response</h4>
-
-
-
 
 
 
@@ -2141,9 +2126,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2241,9 +2223,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="encryptionresponse">Encryption<wbr>Response</h4>
-
-
-
 
 
 
@@ -2419,9 +2398,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2555,9 +2531,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="encryptionservicesresponse">Encryption<wbr>Services<wbr>Response</h4>
-
-
-
 
 
 
@@ -2730,9 +2703,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="endpointsresponse">Endpoints<wbr>Response</h4>
-
-
-
 
 
 
@@ -3052,9 +3022,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3191,9 +3158,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3291,9 +3255,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="identityresponse">Identity<wbr>Response</h4>
-
-
-
 
 
 
@@ -3430,9 +3391,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -3644,9 +3602,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3816,9 +3771,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
-
-
-
 
 
 
@@ -4066,9 +4018,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4130,9 +4079,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
-
-
-
 
 
 
@@ -4272,9 +4218,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4411,9 +4354,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4511,9 +4451,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response</h4>
-
-
-
 
 
 
@@ -4686,9 +4623,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response</h4>
-
-
-
 
 
 
@@ -4933,9 +4867,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 

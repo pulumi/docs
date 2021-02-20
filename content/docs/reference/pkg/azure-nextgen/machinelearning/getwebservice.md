@@ -1,8 +1,8 @@
 
 ---
-title: "GetWebService"
-title_tag: "Function GetWebService | Module machinelearning | Package Azure NextGen"
-meta_desc: "Explore the GetWebService function of the machinelearning module, including examples, input properties, output properties, and supporting types. "
+title: "getWebService"
+title_tag: "azure-nextgen.machinelearning.getWebService"
+meta_desc: "Documentation for the azure-nextgen.machinelearning.getWebService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetWebService function of the machinelearning module, in
 
 
 
-## Using GetWebService {#using}
+## Using getWebService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWebService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWebServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetWebServiceResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWebService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWebServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWebServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetWebService function of the machinelearning module, in
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWebService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWebServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupWebServiceResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWebService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWebServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWebServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupWebService` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetWebService function of the machinelearning module, in
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetWebService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetWebServiceResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetWebServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetWebServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWebServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetWebService Result {#result}
+## getWebService Result {#result}
 
 The following output properties are available:
 
@@ -435,9 +435,6 @@ The following output properties are available:
 
 
 <h4 id="assetitemresponse">Asset<wbr>Item<wbr>Response</h4>
-
-
-
 
 
 
@@ -757,9 +754,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -857,9 +851,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="columnspecificationresponse">Column<wbr>Specification<wbr>Response</h4>
-
-
-
 
 
 
@@ -1071,9 +1062,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1135,9 +1123,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="diagnosticsconfigurationresponse">Diagnostics<wbr>Configuration<wbr>Response</h4>
-
-
-
 
 
 
@@ -1241,9 +1226,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1341,9 +1323,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="graphedgeresponse">Graph<wbr>Edge<wbr>Response</h4>
-
-
-
 
 
 
@@ -1519,9 +1498,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1694,9 +1670,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1833,9 +1806,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1933,9 +1903,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="graphparameterresponse">Graph<wbr>Parameter<wbr>Response</h4>
-
-
-
 
 
 
@@ -2075,9 +2042,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2142,9 +2106,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2206,9 +2167,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="modevalueinforesponse">Mode<wbr>Value<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -2309,9 +2267,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="moduleassetparameterresponse">Module<wbr>Asset<wbr>Parameter<wbr>Response</h4>
-
-
-
 
 
 
@@ -2451,9 +2406,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2518,9 +2470,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2582,9 +2531,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="serviceinputoutputspecificationresponse">Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response</h4>
-
-
-
 
 
 
@@ -2760,9 +2706,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2860,9 +2803,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="tablespecificationresponse">Table<wbr>Specification<wbr>Response</h4>
-
-
-
 
 
 
@@ -3074,9 +3014,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3177,9 +3114,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3277,9 +3211,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="webservicepropertiesforgraphresponse">Web<wbr>Service<wbr>Properties<wbr>For<wbr>Graph<wbr>Response</h4>
-
-
-
 
 
 

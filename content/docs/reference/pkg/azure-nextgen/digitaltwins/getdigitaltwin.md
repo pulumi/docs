@@ -1,8 +1,8 @@
 
 ---
-title: "GetDigitalTwin"
-title_tag: "Function GetDigitalTwin | Module digitaltwins | Package Azure NextGen"
-meta_desc: "Explore the GetDigitalTwin function of the digitaltwins module, including examples, input properties, output properties, and supporting types. "
+title: "getDigitalTwin"
+title_tag: "azure-nextgen.digitaltwins.getDigitalTwin"
+meta_desc: "Documentation for the azure-nextgen.digitaltwins.getDigitalTwin function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetDigitalTwin function of the digitaltwins module, incl
 
 
 
-## Using GetDigitalTwin {#using}
+## Using getDigitalTwin {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDigitalTwin<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDigitalTwinArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetDigitalTwinResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDigitalTwin<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDigitalTwinArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDigitalTwinResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetDigitalTwin function of the digitaltwins module, incl
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDigitalTwin<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDigitalTwinArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupDigitalTwinResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDigitalTwin<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDigitalTwinArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDigitalTwinResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDigitalTwin` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetDigitalTwin function of the digitaltwins module, incl
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDigitalTwin </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetDigitalTwinResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetDigitalTwinArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDigitalTwinResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDigitalTwinArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetDigitalTwin Result {#result}
+## getDigitalTwin Result {#result}
 
 The following output properties are available:
 
@@ -618,9 +618,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -682,9 +679,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connectionpropertiesresponseprivatelinkserviceconnectionstate">Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</h4>
-
-
-
 
 
 
@@ -824,9 +818,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -960,9 +951,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
-
-
-
 
 
 
@@ -1135,9 +1123,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponseproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Properties</h4>
-
-
-
 
 
 

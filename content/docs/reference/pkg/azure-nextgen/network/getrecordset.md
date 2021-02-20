@@ -1,8 +1,8 @@
 
 ---
-title: "GetRecordSet"
-title_tag: "Function GetRecordSet | Module network | Package Azure NextGen"
-meta_desc: "Explore the GetRecordSet function of the network module, including examples, input properties, output properties, and supporting types. "
+title: "getRecordSet"
+title_tag: "azure-nextgen.network.getRecordSet"
+meta_desc: "Documentation for the azure-nextgen.network.getRecordSet function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetRecordSet function of the network module, including e
 
 
 
-## Using GetRecordSet {#using}
+## Using getRecordSet {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRecordSet<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRecordSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetRecordSetResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRecordSet<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRecordSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRecordSetResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetRecordSet function of the network module, including e
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRecordSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRecordSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupRecordSetResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRecordSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRecordSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRecordSetResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRecordSet` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetRecordSet function of the network module, including e
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRecordSet </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetRecordSetResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetRecordSetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRecordSetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRecordSetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -218,7 +218,7 @@ The following arguments are supported:
 
 
 
-## GetRecordSet Result {#result}
+## getRecordSet Result {#result}
 
 The following output properties are available:
 
@@ -834,9 +834,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -898,9 +895,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="aaaarecordresponse">Aaaa<wbr>Record<wbr>Response</h4>
-
-
-
 
 
 
@@ -968,9 +962,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1032,9 +1023,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mxrecordresponse">Mx<wbr>Record<wbr>Response</h4>
-
-
-
 
 
 
@@ -1138,9 +1126,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1202,9 +1187,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="soarecordresponse">Soa<wbr>Record<wbr>Response</h4>
-
-
-
 
 
 
@@ -1488,9 +1470,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1660,9 +1639,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="txtrecordresponse">Txt<wbr>Record<wbr>Response</h4>
-
-
-
 
 
 

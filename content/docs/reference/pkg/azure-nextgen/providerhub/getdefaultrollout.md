@@ -1,8 +1,8 @@
 
 ---
-title: "GetDefaultRollout"
-title_tag: "Function GetDefaultRollout | Module providerhub | Package Azure NextGen"
-meta_desc: "Explore the GetDefaultRollout function of the providerhub module, including examples, input properties, output properties, and supporting types. "
+title: "getDefaultRollout"
+title_tag: "azure-nextgen.providerhub.getDefaultRollout"
+meta_desc: "Documentation for the azure-nextgen.providerhub.getDefaultRollout function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetDefaultRollout function of the providerhub module, in
 
 
 
-## Using GetDefaultRollout {#using}
+## Using getDefaultRollout {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDefaultRollout<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDefaultRolloutArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetDefaultRolloutResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDefaultRollout<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDefaultRolloutArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDefaultRolloutResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetDefaultRollout function of the providerhub module, in
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDefaultRollout<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDefaultRolloutArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupDefaultRolloutResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDefaultRollout<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDefaultRolloutArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDefaultRolloutResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDefaultRollout` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetDefaultRollout function of the providerhub module, in
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDefaultRollout </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetDefaultRolloutResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetDefaultRolloutArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDefaultRolloutResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDefaultRolloutArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetDefaultRollout Result {#result}
+## getDefaultRollout Result {#result}
 
 The following output properties are available:
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -502,9 +499,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="defaultrolloutpropertiesresponsespecification">Default<wbr>Rollout<wbr>Properties<wbr>Response<wbr>Specification</h4>
-
-
-
 
 
 
@@ -824,9 +818,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1035,9 +1026,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1135,9 +1123,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="defaultrolloutspecificationresponsehightraffic">Default<wbr>Rollout<wbr>Specification<wbr>Response<wbr>High<wbr>Traffic</h4>
-
-
-
 
 
 
@@ -1241,9 +1226,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1344,9 +1326,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1444,9 +1423,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="defaultrolloutspecificationresponseproviderregistration">Default<wbr>Rollout<wbr>Specification<wbr>Response<wbr>Provider<wbr>Registration</h4>
-
-
-
 
 
 
@@ -1622,9 +1598,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1725,9 +1698,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1825,9 +1795,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="extendederrorinforesponse">Extended<wbr>Error<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -2039,9 +2006,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2142,9 +2106,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2242,9 +2203,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="linkedaccesscheckresponse">Linked<wbr>Access<wbr>Check<wbr>Response</h4>
-
-
-
 
 
 
@@ -2456,9 +2414,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2631,9 +2586,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2734,9 +2686,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2798,9 +2747,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="providerhubmetadataresponsethirdpartyproviderauthorization">Provider<wbr>Hub<wbr>Metadata<wbr>Response<wbr>Third<wbr>Party<wbr>Provider<wbr>Authorization</h4>
-
-
-
 
 
 
@@ -2901,9 +2847,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="providerregistrationpropertiesresponseproviderhubmetadata">Provider<wbr>Registration<wbr>Properties<wbr>Response<wbr>Provider<wbr>Hub<wbr>Metadata</h4>
-
-
-
 
 
 
@@ -3043,9 +2986,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3143,9 +3083,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="providerregistrationresponseproperties">Provider<wbr>Registration<wbr>Response<wbr>Properties</h4>
-
-
-
 
 
 
@@ -3717,9 +3654,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3853,9 +3787,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourceprovidercapabilitiesresponse">Resource<wbr>Provider<wbr>Capabilities<wbr>Response</h4>
-
-
-
 
 
 
@@ -3995,9 +3926,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4059,9 +3987,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourceprovidermanifestpropertiesresponsemanagement">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Management</h4>
-
-
-
 
 
 
@@ -4381,9 +4306,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4448,9 +4370,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4512,9 +4431,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourceprovidermanifestpropertiesresponsetemplatedeploymentoptions">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Template<wbr>Deployment<wbr>Options</h4>
-
-
-
 
 
 
@@ -4615,9 +4531,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetypeendpointresponse">Resource<wbr>Type<wbr>Endpoint<wbr>Response</h4>
-
-
-
 
 
 
@@ -4901,9 +4814,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4965,9 +4875,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetypeextensionoptionsresponseresourcecreationbegin">Resource<wbr>Type<wbr>Extension<wbr>Options<wbr>Response<wbr>Resource<wbr>Creation<wbr>Begin</h4>
-
-
-
 
 
 
@@ -5068,9 +4975,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetypeextensionresponse">Resource<wbr>Type<wbr>Extension<wbr>Response</h4>
-
-
-
 
 
 
@@ -5210,9 +5114,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5313,9 +5214,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5380,9 +5278,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5444,9 +5339,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetyperegistrationpropertiesresponseidentitymanagement">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Identity<wbr>Management</h4>
-
-
-
 
 
 
@@ -5550,9 +5442,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5614,9 +5503,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetyperegistrationpropertiesresponseresourcemovepolicy">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Resource<wbr>Move<wbr>Policy</h4>
-
-
-
 
 
 
@@ -5756,9 +5642,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5859,9 +5742,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5959,9 +5839,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetyperegistrationresponse">Resource<wbr>Type<wbr>Registration<wbr>Response</h4>
-
-
-
 
 
 
@@ -6134,9 +6011,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcetyperegistrationresponseproperties">Resource<wbr>Type<wbr>Registration<wbr>Response<wbr>Properties</h4>
-
-
-
 
 
 
@@ -7212,9 +7086,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7312,9 +7183,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="subscriptionstateoverrideactionresponse">Subscription<wbr>State<wbr>Override<wbr>Action<wbr>Response</h4>
-
-
-
 
 
 
@@ -7418,9 +7286,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7521,9 +7386,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7621,9 +7483,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="throttlingmetricresponse">Throttling<wbr>Metric<wbr>Response</h4>
-
-
-
 
 
 
@@ -7763,9 +7622,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7899,9 +7755,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="typederrorinforesponse">Typed<wbr>Error<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 

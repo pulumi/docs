@@ -1,8 +1,8 @@
 
 ---
-title: "GetMachineExtension"
-title_tag: "Function GetMachineExtension | Module hybridcompute | Package Azure NextGen"
-meta_desc: "Explore the GetMachineExtension function of the hybridcompute module, including examples, input properties, output properties, and supporting types. "
+title: "getMachineExtension"
+title_tag: "azure-nextgen.hybridcompute.getMachineExtension"
+meta_desc: "Documentation for the azure-nextgen.hybridcompute.getMachineExtension function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetMachineExtension function of the hybridcompute module
 
 
 
-## Using GetMachineExtension {#using}
+## Using getMachineExtension {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMachineExtension<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMachineExtensionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetMachineExtensionResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMachineExtension<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMachineExtensionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMachineExtensionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetMachineExtension function of the hybridcompute module
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMachineExtension<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMachineExtensionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupMachineExtensionResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMachineExtension<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMachineExtensionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMachineExtensionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupMachineExtension` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetMachineExtension function of the hybridcompute module
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMachineExtension </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetMachineExtensionResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetMachineExtensionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMachineExtensionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMachineExtensionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetMachineExtension Result {#result}
+## getMachineExtension Result {#result}
 
 The following output properties are available:
 
@@ -690,9 +690,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -898,9 +895,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="machineextensionpropertiesresponseinstanceview">Machine<wbr>Extension<wbr>Properties<wbr>Response<wbr>Instance<wbr>View</h4>
-
-
-
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetReplicationFabric"
-title_tag: "Function GetReplicationFabric | Module recoveryservices | Package Azure NextGen"
-meta_desc: "Explore the GetReplicationFabric function of the recoveryservices module, including examples, input properties, output properties, and supporting types. "
+title: "getReplicationFabric"
+title_tag: "azure-nextgen.recoveryservices.getReplicationFabric"
+meta_desc: "Documentation for the azure-nextgen.recoveryservices.getReplicationFabric function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetReplicationFabric function of the recoveryservices mo
 
 
 
-## Using GetReplicationFabric {#using}
+## Using getReplicationFabric {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationFabric<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationFabricArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetReplicationFabricResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationFabric<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationFabricArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReplicationFabricResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetReplicationFabric function of the recoveryservices mo
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationFabric<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationFabricArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupReplicationFabricResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationFabric<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationFabricArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReplicationFabricResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupReplicationFabric` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetReplicationFabric function of the recoveryservices mo
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetReplicationFabric </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetReplicationFabricResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationFabricArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetReplicationFabricResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationFabricArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetReplicationFabric Result {#result}
+## getReplicationFabric Result {#result}
 
 The following output properties are available:
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -610,9 +607,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="agentdiskdetailsresponse">Agent<wbr>Disk<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -824,9 +818,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -924,9 +915,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="datastoreresponse">Data<wbr>Store<wbr>Response</h4>
-
-
-
 
 
 
@@ -1135,9 +1123,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dradetailsresponse">Dra<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -1385,9 +1370,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1521,9 +1503,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="fabricpropertiesresponse">Fabric<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1840,9 +1819,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="healtherrorresponse">Health<wbr>Error<wbr>Response</h4>
-
-
-
 
 
 
@@ -2414,9 +2390,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2442,9 +2415,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="inmagercmfabricspecificdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -2980,9 +2950,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3440,9 +3407,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mastertargetserverresponse">Master<wbr>Target<wbr>Server<wbr>Response</h4>
-
-
-
 
 
 
@@ -4122,9 +4086,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4258,9 +4219,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="processserverdetailsresponse">Process<wbr>Server<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -4937,9 +4895,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="processserverresponse">Process<wbr>Server<wbr>Response</h4>
-
-
-
 
 
 
@@ -6267,9 +6222,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6511,9 +6463,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="rcmproxydetailsresponse">Rcm<wbr>Proxy<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -6761,9 +6710,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7005,9 +6951,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="reprotectagentdetailsresponse">Reprotect<wbr>Agent<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -7255,9 +7198,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7430,9 +7370,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7530,9 +7467,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vmwaredetailsresponse">VMware<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -8716,9 +8650,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8891,9 +8822,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9027,9 +8955,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vmmdetailsresponse">Vmm<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 

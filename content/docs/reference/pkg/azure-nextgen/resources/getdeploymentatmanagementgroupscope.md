@@ -1,8 +1,8 @@
 
 ---
-title: "GetDeploymentAtManagementGroupScope"
-title_tag: "Function GetDeploymentAtManagementGroupScope | Module resources | Package Azure NextGen"
-meta_desc: "Explore the GetDeploymentAtManagementGroupScope function of the resources module, including examples, input properties, output properties, and supporting types. "
+title: "getDeploymentAtManagementGroupScope"
+title_tag: "azure-nextgen.resources.getDeploymentAtManagementGroupScope"
+meta_desc: "Documentation for the azure-nextgen.resources.getDeploymentAtManagementGroupScope function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetDeploymentAtManagementGroupScope function of the reso
 
 
 
-## Using GetDeploymentAtManagementGroupScope {#using}
+## Using getDeploymentAtManagementGroupScope {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDeploymentAtManagementGroupScope<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeploymentAtManagementGroupScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetDeploymentAtManagementGroupScopeResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDeploymentAtManagementGroupScope<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeploymentAtManagementGroupScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDeploymentAtManagementGroupScopeResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetDeploymentAtManagementGroupScope function of the reso
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDeploymentAtManagementGroupScope<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDeploymentAtManagementGroupScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupDeploymentAtManagementGroupScopeResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDeploymentAtManagementGroupScope<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDeploymentAtManagementGroupScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDeploymentAtManagementGroupScopeResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDeploymentAtManagementGroupScope` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetDeploymentAtManagementGroupScope function of the reso
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDeploymentAtManagementGroupScope </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetDeploymentAtManagementGroupScopeResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeploymentAtManagementGroupScopeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDeploymentAtManagementGroupScopeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeploymentAtManagementGroupScopeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetDeploymentAtManagementGroupScope Result {#result}
+## getDeploymentAtManagementGroupScope Result {#result}
 
 The following output properties are available:
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -502,9 +499,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="aliaspathresponse">Alias<wbr>Path<wbr>Response</h4>
-
-
-
 
 
 
@@ -680,9 +674,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -816,9 +807,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="aliasresponse">Alias<wbr>Response</h4>
-
-
-
 
 
 
@@ -1066,9 +1054,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1166,9 +1151,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="basicdependencyresponse">Basic<wbr>Dependency<wbr>Response</h4>
-
-
-
 
 
 
@@ -1308,9 +1290,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1372,9 +1351,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dependencyresponse">Dependency<wbr>Response</h4>
-
-
-
 
 
 
@@ -1547,9 +1523,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="deploymentpropertiesextendedresponse">Deployment<wbr>Properties<wbr>Extended<wbr>Response</h4>
-
-
-
 
 
 
@@ -2193,9 +2166,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2293,9 +2263,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="errorresponseresponse">Error<wbr>Response<wbr>Response</h4>
-
-
-
 
 
 
@@ -2507,9 +2474,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2646,9 +2610,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2746,9 +2707,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="providerextendedlocationresponse">Provider<wbr>Extended<wbr>Location<wbr>Response</h4>
-
-
-
 
 
 
@@ -2885,9 +2843,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="providerresourcetyperesponse">Provider<wbr>Resource<wbr>Type<wbr>Response</h4>
-
-
-
 
 
 
@@ -3243,9 +3198,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3454,9 +3406,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3518,9 +3467,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="templatelinkresponse">Template<wbr>Link<wbr>Response</h4>
-
-
-
 
 
 
