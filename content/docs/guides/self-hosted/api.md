@@ -36,7 +36,9 @@ The Pulumi API is one of the components required for self-hosting Pulumi in your
 
 ## What's In The Container?
 
-> **Note**: The container image repository is private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+{{% notes type="info" %}}
+The container image repository is private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+{{% /notes %}}
 
 The API service is a Go-based application. This is a single binary application that has all of the dependencies it needs in order to run.
 

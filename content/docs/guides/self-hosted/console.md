@@ -34,7 +34,9 @@ You can run this container on the same host that your API container is running o
 
 ## What's In The Container?
 
-> **Note**: The container image repository is private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+{{% notes type="info" %}}
+The container image repository is private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+{{% /notes %}}
 
 The Console container runs a web server using a Node 10-based image.
 
