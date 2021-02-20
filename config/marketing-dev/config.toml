@@ -1,2 +1,2 @@
-ignoreFiles = [ "content/docs/.*" ]
+ignoreFiles = [ "content/docs/reference/pkg/*" ]
 refLinksErrorLevel = "WARNING"

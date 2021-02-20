@@ -35,7 +35,4 @@ yarn run tsc --outFile ${JS_BUNDLE}
 printf "Compiling Sass and running PostCSS...\n\n"
 yarn run --silent node-sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE}
 
-printf "Building the search index...\n\n"
-make build_search_index
-
 printf "Done!\n\n"
