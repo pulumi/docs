@@ -1,24 +1,40 @@
 ---
-title: "pulumi config refresh"
+title: "pulumi config set-all"
 ---
 
 
 
-Update the local configuration based on the most recent deployment of the stack
+Set multiple configuration values
 
 ### Synopsis
 
-Update the local configuration based on the most recent deployment of the stack
+pulumi set-all allows you to set multiple configuration values in one command.
+
+Each key-value pair must be preceded by either the `--secret` or the `--plaintext` flag to denote whether 
+it should be encrypted:
+
+  - `pulumi config set-all --secret key1=value1 --plaintext key2=value --secret key3=value3`
+
+The `--path` flag can be used to set values inside a map or list:
+
+  - `pulumi config set-all --path --plaintext "names[0]"=a --plaintext "names[1]"=b` 
+    will set the value to a list with the first item `a` and second item `b`.
+  - `pulumi config set-all --path --plaintext parent.nested=value --plaintext parent.other=value2` 
+    will set the value of `parent` to a map `{nested: value, other: value2}`.
+  - `pulumi config set-all --path --plaintext '["parent.name"].["nested.name"]'=value` will set the 
+    value of `parent.name` to a map `nested.name: value`.
 
 ```
-pulumi config refresh [flags]
+pulumi config set-all --plaintext key1=value1 --plaintext key2=value2 --secret key3=value3 [flags]
 ```
 
 ### Options
 
 ```
-  -f, --force   Overwrite configuration file, if it exists, without creating a backup
-  -h, --help    help for refresh
+  -h, --help                    help for set-all
+      --path                    Parse the keys as paths in a map or list rather than raw strings
+      --plaintext stringArray   Marks a value as plaintext (unencrypted)
+      --secret stringArray      Marks a value as secret to be encrypted
 ```
 
 ### Options inherited from parent commands
