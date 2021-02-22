@@ -12,9 +12,7 @@ meta_desc: "Documentation for the aws.ec2.getSubnet function with examples, inpu
 
 `aws.ec2.Subnet` provides details about a specific VPC subnet.
 
-This resource can prove useful when a module accepts a subnet id as
-an input variable and needs to, for example, determine the id of the
-VPC that the subnet belongs to.
+This resource can prove useful when a module accepts a subnet ID as an input variable and needs to, for example, determine the ID of the VPC that the subnet belongs to.
 
 
 {{% examples %}}
@@ -149,6 +147,97 @@ const subnet = new aws.ec2.SecurityGroup("subnet", {
 
 {{% /example %}}
 
+### Filter Example
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var selected = Output.Create(Aws.Ec2.GetSubnet.InvokeAsync(new Aws.Ec2.GetSubnetArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetSubnetFilterArgs
+                {
+                    Name = "tag:Name",
+                    Values = 
+                    {
+                        "yakdriver",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.LookupSubnet(ctx, &ec2.LookupSubnetArgs{
+			Filters: []ec2.GetSubnetFilter{
+				ec2.GetSubnetFilter{
+					Name: "tag:Name",
+					Values: []string{
+						"yakdriver",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+selected = aws.ec2.get_subnet(filters=[aws.ec2.GetSubnetFilterArgs(
+    name="tag:Name",
+    values=["yakdriver"],
+)])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const selected = pulumi.output(aws.ec2.getSubnet({
+    filters: [{
+        name: "tag:Name",
+        values: ["yakdriver"],
+    }],
+}, { async: true }));
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -197,8 +286,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The availability zone where the
-subnet must reside.
+    <dd>{{% md %}}Availability zone where the subnet must reside.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -208,7 +296,7 @@ subnet must reside.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Availability Zone for the subnet.
+    <dd>{{% md %}}ID of the Availability Zone for the subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -218,7 +306,7 @@ subnet must reside.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cidr block of the desired subnet.
+    <dd>{{% md %}}CIDR block of the desired subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -228,8 +316,7 @@ subnet must reside.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean constraint for whether the desired
-subnet must be the default subnet for its associated availability zone.
+    <dd>{{% md %}}Whether the desired subnet must be the default subnet for its associated availability zone.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -239,7 +326,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsubnetfilter">List&lt;Get<wbr>Subnet<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Custom filter block as described below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -249,7 +336,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the specific subnet to retrieve.
+    <dd>{{% md %}}ID of the specific subnet to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -259,7 +346,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Ipv6 cidr block of the desired subnet
+    <dd>{{% md %}}IPv6 CIDR block of the desired subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -269,7 +356,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state that the desired subnet must have.
+    <dd>{{% md %}}State that the desired subnet must have.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -279,8 +366,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match
-a pair on the desired subnet.
+    <dd>{{% md %}}Map of tags, each pair of which must exactly match a pair on the desired subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -290,7 +376,7 @@ a pair on the desired subnet.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the VPC that the desired subnet belongs to.
+    <dd>{{% md %}}ID of the VPC that the desired subnet belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -306,8 +392,7 @@ a pair on the desired subnet.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The availability zone where the
-subnet must reside.
+    <dd>{{% md %}}Availability zone where the subnet must reside.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -317,7 +402,7 @@ subnet must reside.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Availability Zone for the subnet.
+    <dd>{{% md %}}ID of the Availability Zone for the subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -327,7 +412,7 @@ subnet must reside.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cidr block of the desired subnet.
+    <dd>{{% md %}}CIDR block of the desired subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -337,8 +422,7 @@ subnet must reside.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean constraint for whether the desired
-subnet must be the default subnet for its associated availability zone.
+    <dd>{{% md %}}Whether the desired subnet must be the default subnet for its associated availability zone.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -348,7 +432,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsubnetfilter">[]Get<wbr>Subnet<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}Custom filter block as described below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -358,7 +442,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the specific subnet to retrieve.
+    <dd>{{% md %}}ID of the specific subnet to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -368,7 +452,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Ipv6 cidr block of the desired subnet
+    <dd>{{% md %}}IPv6 CIDR block of the desired subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -378,7 +462,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state that the desired subnet must have.
+    <dd>{{% md %}}State that the desired subnet must have.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -388,8 +472,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match
-a pair on the desired subnet.
+    <dd>{{% md %}}Map of tags, each pair of which must exactly match a pair on the desired subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -399,7 +482,7 @@ a pair on the desired subnet.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the VPC that the desired subnet belongs to.
+    <dd>{{% md %}}ID of the VPC that the desired subnet belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -415,8 +498,7 @@ a pair on the desired subnet.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The availability zone where the
-subnet must reside.
+    <dd>{{% md %}}Availability zone where the subnet must reside.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -426,7 +508,7 @@ subnet must reside.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Availability Zone for the subnet.
+    <dd>{{% md %}}ID of the Availability Zone for the subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -436,7 +518,7 @@ subnet must reside.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cidr block of the desired subnet.
+    <dd>{{% md %}}CIDR block of the desired subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -446,8 +528,7 @@ subnet must reside.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean constraint for whether the desired
-subnet must be the default subnet for its associated availability zone.
+    <dd>{{% md %}}Whether the desired subnet must be the default subnet for its associated availability zone.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -457,7 +538,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsubnetfilter">Get<wbr>Subnet<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}Custom filter block as described below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -467,7 +548,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the specific subnet to retrieve.
+    <dd>{{% md %}}ID of the specific subnet to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -477,7 +558,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Ipv6 cidr block of the desired subnet
+    <dd>{{% md %}}IPv6 CIDR block of the desired subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -487,7 +568,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state that the desired subnet must have.
+    <dd>{{% md %}}State that the desired subnet must have.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -497,8 +578,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match
-a pair on the desired subnet.
+    <dd>{{% md %}}Map of tags, each pair of which must exactly match a pair on the desired subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -508,7 +588,7 @@ a pair on the desired subnet.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the VPC that the desired subnet belongs to.
+    <dd>{{% md %}}ID of the VPC that the desired subnet belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -524,8 +604,7 @@ a pair on the desired subnet.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The availability zone where the
-subnet must reside.
+    <dd>{{% md %}}Availability zone where the subnet must reside.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -535,7 +614,7 @@ subnet must reside.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Availability Zone for the subnet.
+    <dd>{{% md %}}ID of the Availability Zone for the subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -545,7 +624,7 @@ subnet must reside.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cidr block of the desired subnet.
+    <dd>{{% md %}}CIDR block of the desired subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -555,8 +634,7 @@ subnet must reside.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean constraint for whether the desired
-subnet must be the default subnet for its associated availability zone.
+    <dd>{{% md %}}Whether the desired subnet must be the default subnet for its associated availability zone.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -566,7 +644,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsubnetfilter">Sequence[Get<wbr>Subnet<wbr>Filter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Custom filter block as described below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -576,7 +654,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the specific subnet to retrieve.
+    <dd>{{% md %}}ID of the specific subnet to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -586,7 +664,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Ipv6 cidr block of the desired subnet
+    <dd>{{% md %}}IPv6 CIDR block of the desired subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -596,7 +674,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state that the desired subnet must have.
+    <dd>{{% md %}}State that the desired subnet must have.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -606,8 +684,7 @@ subnet must be the default subnet for its associated availability zone.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match
-a pair on the desired subnet.
+    <dd>{{% md %}}Map of tags, each pair of which must exactly match a pair on the desired subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -617,7 +694,7 @@ a pair on the desired subnet.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the VPC that the desired subnet belongs to.
+    <dd>{{% md %}}ID of the VPC that the desired subnet belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -642,7 +719,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the subnet.
+    <dd>{{% md %}}ARN of the subnet.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -652,7 +729,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether an IPv6 address is assigned on creation.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="availabilityzone_csharp">
@@ -671,6 +749,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="availableipaddresscount_csharp">
+<a href="#availableipaddresscount_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Ip<wbr>Address<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Available IP addresses of the subnet.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="cidrblock_csharp">
@@ -725,7 +813,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Association ID of the IPv6 CIDR block.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="mapcustomerownediponlaunch_csharp">
@@ -754,7 +843,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
+    <dd>{{% md %}}ARN of the Outpost.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -764,7 +853,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns the subnet.
+    <dd>{{% md %}}ID of the AWS account that owns the subnet.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -816,7 +905,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the subnet.
+    <dd>{{% md %}}ARN of the subnet.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -826,7 +915,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether an IPv6 address is assigned on creation.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="availabilityzone_go">
@@ -845,6 +935,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="availableipaddresscount_go">
+<a href="#availableipaddresscount_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Ip<wbr>Address<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Available IP addresses of the subnet.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="cidrblock_go">
@@ -899,7 +999,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Association ID of the IPv6 CIDR block.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="mapcustomerownediponlaunch_go">
@@ -928,7 +1029,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
+    <dd>{{% md %}}ARN of the Outpost.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -938,7 +1039,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns the subnet.
+    <dd>{{% md %}}ID of the AWS account that owns the subnet.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -990,7 +1091,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the subnet.
+    <dd>{{% md %}}ARN of the subnet.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1000,7 +1101,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether an IPv6 address is assigned on creation.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="availabilityzone_nodejs">
@@ -1019,6 +1121,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="availableipaddresscount_nodejs">
+<a href="#availableipaddresscount_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Ip<wbr>Address<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Available IP addresses of the subnet.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="cidrblock_nodejs">
@@ -1073,7 +1185,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Association ID of the IPv6 CIDR block.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="mapcustomerownediponlaunch_nodejs">
@@ -1102,7 +1215,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
+    <dd>{{% md %}}ARN of the Outpost.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1112,7 +1225,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns the subnet.
+    <dd>{{% md %}}ID of the AWS account that owns the subnet.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1164,7 +1277,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the subnet.
+    <dd>{{% md %}}ARN of the subnet.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1174,7 +1287,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether an IPv6 address is assigned on creation.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="availability_zone_python">
@@ -1193,6 +1307,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="available_ip_address_count_python">
+<a href="#available_ip_address_count_python" style="color: inherit; text-decoration: inherit;">available_<wbr>ip_<wbr>address_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Available IP addresses of the subnet.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="cidr_block_python">
@@ -1247,7 +1371,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Association ID of the IPv6 CIDR block.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="map_customer_owned_ip_on_launch_python">
@@ -1276,7 +1401,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
+    <dd>{{% md %}}ARN of the Outpost.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1286,7 +1411,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns the subnet.
+    <dd>{{% md %}}ID of the AWS account that owns the subnet.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1348,9 +1473,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the field to filter by, as defined by
-[the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html).
-For example, if matching against tag `Name`, use:
+    <dd>{{% md %}}The name of the field to filter by, as defined by [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1360,8 +1483,7 @@ For example, if matching against tag `Name`, use:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Set of values that are accepted for the given field.
-A subnet will be selected if any one of the given values matches.
+    <dd>{{% md %}}Set of values that are accepted for the given field. A subnet will be selected if any one of the given values matches.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1377,9 +1499,7 @@ A subnet will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the field to filter by, as defined by
-[the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html).
-For example, if matching against tag `Name`, use:
+    <dd>{{% md %}}The name of the field to filter by, as defined by [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1389,8 +1509,7 @@ For example, if matching against tag `Name`, use:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Set of values that are accepted for the given field.
-A subnet will be selected if any one of the given values matches.
+    <dd>{{% md %}}Set of values that are accepted for the given field. A subnet will be selected if any one of the given values matches.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1406,9 +1525,7 @@ A subnet will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the field to filter by, as defined by
-[the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html).
-For example, if matching against tag `Name`, use:
+    <dd>{{% md %}}The name of the field to filter by, as defined by [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1418,8 +1535,7 @@ For example, if matching against tag `Name`, use:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Set of values that are accepted for the given field.
-A subnet will be selected if any one of the given values matches.
+    <dd>{{% md %}}Set of values that are accepted for the given field. A subnet will be selected if any one of the given values matches.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1435,9 +1551,7 @@ A subnet will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the field to filter by, as defined by
-[the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html).
-For example, if matching against tag `Name`, use:
+    <dd>{{% md %}}The name of the field to filter by, as defined by [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1447,8 +1561,7 @@ For example, if matching against tag `Name`, use:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Set of values that are accepted for the given field.
-A subnet will be selected if any one of the given values matches.
+    <dd>{{% md %}}Set of values that are accepted for the given field. A subnet will be selected if any one of the given values matches.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

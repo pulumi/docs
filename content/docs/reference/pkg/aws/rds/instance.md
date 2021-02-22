@@ -52,14 +52,14 @@ class MyStack : Stack
     {
         var @default = new Aws.Rds.Instance("default", new Aws.Rds.InstanceArgs
         {
-            AllocatedStorage = 20,
+            AllocatedStorage = 10,
             Engine = "mysql",
             EngineVersion = "5.7",
-            InstanceClass = "db.t2.micro",
+            InstanceClass = "db.t3.micro",
             Name = "mydb",
             ParameterGroupName = "default.mysql5.7",
             Password = "foobarbaz",
-            StorageType = "gp2",
+            SkipFinalSnapshot = true,
             Username = "foo",
         });
     }
@@ -81,14 +81,14 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := rds.NewInstance(ctx, "_default", &rds.InstanceArgs{
-			AllocatedStorage:   pulumi.Int(20),
+			AllocatedStorage:   pulumi.Int(10),
 			Engine:             pulumi.String("mysql"),
 			EngineVersion:      pulumi.String("5.7"),
-			InstanceClass:      pulumi.String("db.t2.micro"),
+			InstanceClass:      pulumi.String("db.t3.micro"),
 			Name:               pulumi.String("mydb"),
 			ParameterGroupName: pulumi.String("default.mysql5.7"),
 			Password:           pulumi.String("foobarbaz"),
-			StorageType:        pulumi.String("gp2"),
+			SkipFinalSnapshot:  pulumi.Bool(true),
 			Username:           pulumi.String("foo"),
 		})
 		if err != nil {
@@ -107,14 +107,14 @@ import pulumi
 import pulumi_aws as aws
 
 default = aws.rds.Instance("default",
-    allocated_storage=20,
+    allocated_storage=10,
     engine="mysql",
     engine_version="5.7",
-    instance_class="db.t2.micro",
+    instance_class="db.t3.micro",
     name="mydb",
     parameter_group_name="default.mysql5.7",
     password="foobarbaz",
-    storage_type="gp2",
+    skip_final_snapshot=True,
     username="foo")
 ```
 
@@ -127,14 +127,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const defaultInstance = new aws.rds.Instance("default", {
-    allocatedStorage: 20,
+    allocatedStorage: 10,
     engine: "mysql",
     engineVersion: "5.7",
-    instanceClass: "db.t2.micro",
+    instanceClass: "db.t3.micro",
     name: "mydb",
     parameterGroupName: "default.mysql5.7",
     password: "foobarbaz",
-    storageType: "gp2",
+    skipFinalSnapshot: true,
     username: "foo",
 });
 ```

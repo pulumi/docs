@@ -2214,8 +2214,18 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationarn_csharp">
+<a href="#applicationarn_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
 </span>
@@ -2224,25 +2234,25 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The application ID for an Amazon Pinpoint application.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalid_csharp">
 <a href="#externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An ID for the Analytics Configuration.
+    <dd>{{% md %}}An ID for the Analytics Configuration. Conflicts with `application_arn`.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics.
+    <dd>{{% md %}}The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2260,8 +2270,18 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationarn_go">
+<a href="#applicationarn_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
 </span>
@@ -2270,25 +2290,25 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The application ID for an Amazon Pinpoint application.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalid_go">
 <a href="#externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An ID for the Analytics Configuration.
+    <dd>{{% md %}}An ID for the Analytics Configuration. Conflicts with `application_arn`.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics.
+    <dd>{{% md %}}The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2306,8 +2326,18 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationarn_nodejs">
+<a href="#applicationarn_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
 </span>
@@ -2316,25 +2346,25 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The application ID for an Amazon Pinpoint application.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalid_nodejs">
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An ID for the Analytics Configuration.
+    <dd>{{% md %}}An ID for the Analytics Configuration. Conflicts with `application_arn`.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics.
+    <dd>{{% md %}}The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2352,8 +2382,18 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="application_arn_python">
+<a href="#application_arn_python" style="color: inherit; text-decoration: inherit;">application_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span>
@@ -2362,25 +2402,25 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The application ID for an Amazon Pinpoint application.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="external_id_python">
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An ID for the Analytics Configuration.
+    <dd>{{% md %}}An ID for the Analytics Configuration. Conflicts with `application_arn`.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics.
+    <dd>{{% md %}}The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

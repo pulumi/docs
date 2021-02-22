@@ -32,7 +32,7 @@ class MyStack : Stack
             InfrastructureConfigurationArn = aws_imagebuilder_infrastructure_configuration.Example.Arn,
             Schedule = new Aws.ImageBuilder.Inputs.ImagePipelineScheduleArgs
             {
-                ScheduleExpression = "cron(0 0 * * *)",
+                ScheduleExpression = "cron(0 0 * * ? *)",
             },
         });
     }
@@ -57,7 +57,7 @@ func main() {
 			ImageRecipeArn:                 pulumi.Any(aws_imagebuilder_image_recipe.Example.Arn),
 			InfrastructureConfigurationArn: pulumi.Any(aws_imagebuilder_infrastructure_configuration.Example.Arn),
 			Schedule: &imagebuilder.ImagePipelineScheduleArgs{
-				ScheduleExpression: pulumi.String("cron(0 0 * * *)"),
+				ScheduleExpression: pulumi.String("cron(0 0 * * ? *)"),
 			},
 		})
 		if err != nil {
@@ -79,7 +79,7 @@ example = aws.imagebuilder.ImagePipeline("example",
     image_recipe_arn=aws_imagebuilder_image_recipe["example"]["arn"],
     infrastructure_configuration_arn=aws_imagebuilder_infrastructure_configuration["example"]["arn"],
     schedule=aws.imagebuilder.ImagePipelineScheduleArgs(
-        schedule_expression="cron(0 0 * * *)",
+        schedule_expression="cron(0 0 * * ? *)",
     ))
 ```
 
@@ -95,7 +95,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
     imageRecipeArn: aws_imagebuilder_image_recipe.example.arn,
     infrastructureConfigurationArn: aws_imagebuilder_infrastructure_configuration.example.arn,
     schedule: {
-        scheduleExpression: "cron(0 0 * * *)",
+        scheduleExpression: "cron(0 0 * * ? *)",
     },
 });
 ```
@@ -1928,7 +1928,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cron expression of how often the pipeline start condition is evaluated. For example, `cron(0 0 * * *)` is evaluated every day at midnight UTC.
+    <dd>{{% md %}}Cron expression of how often the pipeline start condition is evaluated. For example, `cron(0 0 * * ? *)` is evaluated every day at midnight UTC. Configurations using the five field syntax that was previously accepted by the API, such as `cron(0 0 * * *)`, must be updated to the six field syntax. For more information, see the [Image Builder User Guide](https://docs.aws.amazon.com/imagebuilder/latest/userguide/cron-expressions.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1954,7 +1954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cron expression of how often the pipeline start condition is evaluated. For example, `cron(0 0 * * *)` is evaluated every day at midnight UTC.
+    <dd>{{% md %}}Cron expression of how often the pipeline start condition is evaluated. For example, `cron(0 0 * * ? *)` is evaluated every day at midnight UTC. Configurations using the five field syntax that was previously accepted by the API, such as `cron(0 0 * * *)`, must be updated to the six field syntax. For more information, see the [Image Builder User Guide](https://docs.aws.amazon.com/imagebuilder/latest/userguide/cron-expressions.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1980,7 +1980,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cron expression of how often the pipeline start condition is evaluated. For example, `cron(0 0 * * *)` is evaluated every day at midnight UTC.
+    <dd>{{% md %}}Cron expression of how often the pipeline start condition is evaluated. For example, `cron(0 0 * * ? *)` is evaluated every day at midnight UTC. Configurations using the five field syntax that was previously accepted by the API, such as `cron(0 0 * * *)`, must be updated to the six field syntax. For more information, see the [Image Builder User Guide](https://docs.aws.amazon.com/imagebuilder/latest/userguide/cron-expressions.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2006,7 +2006,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cron expression of how often the pipeline start condition is evaluated. For example, `cron(0 0 * * *)` is evaluated every day at midnight UTC.
+    <dd>{{% md %}}Cron expression of how often the pipeline start condition is evaluated. For example, `cron(0 0 * * ? *)` is evaluated every day at midnight UTC. Configurations using the five field syntax that was previously accepted by the API, such as `cron(0 0 * * *)`, must be updated to the six field syntax. For more information, see the [Image Builder User Guide](https://docs.aws.amazon.com/imagebuilder/latest/userguide/cron-expressions.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

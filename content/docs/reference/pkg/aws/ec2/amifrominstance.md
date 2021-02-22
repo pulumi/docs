@@ -647,6 +647,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="hypervisor_csharp">
+<a href="#hypervisor_csharp" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -667,6 +676,24 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="imageowneralias_csharp">
+<a href="#imageowneralias_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Owner<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="imagetype_csharp">
+<a href="#imagetype_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="kernelid_csharp">
 <a href="#kernelid_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
 </span>
@@ -680,6 +707,42 @@ kernel in created instances.
             title="">
         <span id="manageebssnapshots_csharp">
 <a href="#manageebssnapshots_csharp" style="color: inherit; text-decoration: inherit;">Manage<wbr>Ebs<wbr>Snapshots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="ownerid_csharp">
+<a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="platform_csharp">
+<a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="platformdetails_csharp">
+<a href="#platformdetails_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="public_csharp">
+<a href="#public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -726,6 +789,15 @@ created instances.
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="usageoperation_csharp">
+<a href="#usageoperation_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="virtualizationtype_csharp">
@@ -776,6 +848,15 @@ changes the set of further arguments that are required, as described below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="hypervisor_go">
+<a href="#hypervisor_go" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -796,6 +877,24 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="imageowneralias_go">
+<a href="#imageowneralias_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Owner<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="imagetype_go">
+<a href="#imagetype_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="kernelid_go">
 <a href="#kernelid_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
 </span>
@@ -809,6 +908,42 @@ kernel in created instances.
             title="">
         <span id="manageebssnapshots_go">
 <a href="#manageebssnapshots_go" style="color: inherit; text-decoration: inherit;">Manage<wbr>Ebs<wbr>Snapshots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="ownerid_go">
+<a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="platform_go">
+<a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="platformdetails_go">
+<a href="#platformdetails_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="public_go">
+<a href="#public_go" style="color: inherit; text-decoration: inherit;">Public</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -855,6 +990,15 @@ created instances.
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="usageoperation_go">
+<a href="#usageoperation_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="virtualizationtype_go">
@@ -905,6 +1049,15 @@ changes the set of further arguments that are required, as described below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="hypervisor_nodejs">
+<a href="#hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -925,6 +1078,24 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="imageowneralias_nodejs">
+<a href="#imageowneralias_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Owner<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="imagetype_nodejs">
+<a href="#imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="kernelid_nodejs">
 <a href="#kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
 </span>
@@ -938,6 +1109,42 @@ kernel in created instances.
             title="">
         <span id="manageebssnapshots_nodejs">
 <a href="#manageebssnapshots_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Ebs<wbr>Snapshots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="ownerid_nodejs">
+<a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="platform_nodejs">
+<a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="platformdetails_nodejs">
+<a href="#platformdetails_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="public_nodejs">
+<a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -984,6 +1191,15 @@ created instances.
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="usageoperation_nodejs">
+<a href="#usageoperation_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="virtualizationtype_nodejs">
@@ -1034,6 +1250,15 @@ changes the set of further arguments that are required, as described below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="hypervisor_python">
+<a href="#hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1054,6 +1279,24 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="image_owner_alias_python">
+<a href="#image_owner_alias_python" style="color: inherit; text-decoration: inherit;">image_<wbr>owner_<wbr>alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="image_type_python">
+<a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="kernel_id_python">
 <a href="#kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
 </span>
@@ -1067,6 +1310,42 @@ kernel in created instances.
             title="">
         <span id="manage_ebs_snapshots_python">
 <a href="#manage_ebs_snapshots_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>ebs_<wbr>snapshots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="owner_id_python">
+<a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="platform_python">
+<a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="platform_details_python">
+<a href="#platform_details_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="public_python">
+<a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1115,6 +1394,15 @@ for created instances. No other value is supported at this time.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="usage_operation_python">
+<a href="#usage_operation_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="virtualization_type_python">
 <a href="#virtualization_type_python" style="color: inherit; text-decoration: inherit;">virtualization_<wbr>type</a>
 </span>
@@ -1141,7 +1429,7 @@ Get an existing AmiFromInstance resource's state with the given name, ID, and op
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[AmiFromInstanceEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ena_support</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[AmiFromInstanceEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">image_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manage_ebs_snapshots</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ramdisk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_without_reboot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sriov_net_support</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtualization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AmiFromInstance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[AmiFromInstanceEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ena_support</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[AmiFromInstanceEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_owner_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manage_ebs_snapshots</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_details</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ramdisk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_without_reboot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sriov_net_support</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">usage_operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtualization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AmiFromInstance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1318,6 +1606,15 @@ should be attached to created instances. The structure of this block is describe
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hypervisor_csharp">
+<a href="#state_hypervisor_csharp" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_imagelocation_csharp">
 <a href="#state_imagelocation_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Location</a>
 </span>
@@ -1327,6 +1624,24 @@ should be attached to created instances. The structure of this block is describe
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_imageowneralias_csharp">
+<a href="#state_imageowneralias_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Owner<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_imagetype_csharp">
+<a href="#state_imagetype_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_kernelid_csharp">
@@ -1357,6 +1672,42 @@ kernel in created instances.
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ownerid_csharp">
+<a href="#state_ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_platform_csharp">
+<a href="#state_platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_platformdetails_csharp">
+<a href="#state_platformdetails_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_public_csharp">
+<a href="#state_public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ramdiskid_csharp">
@@ -1431,6 +1782,15 @@ for created instances. No other value is supported at this time.
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usageoperation_csharp">
+<a href="#state_usageoperation_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualizationtype_csharp">
@@ -1513,6 +1873,15 @@ should be attached to created instances. The structure of this block is describe
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hypervisor_go">
+<a href="#state_hypervisor_go" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_imagelocation_go">
 <a href="#state_imagelocation_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Location</a>
 </span>
@@ -1522,6 +1891,24 @@ should be attached to created instances. The structure of this block is describe
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_imageowneralias_go">
+<a href="#state_imageowneralias_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Owner<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_imagetype_go">
+<a href="#state_imagetype_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_kernelid_go">
@@ -1552,6 +1939,42 @@ kernel in created instances.
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ownerid_go">
+<a href="#state_ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_platform_go">
+<a href="#state_platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_platformdetails_go">
+<a href="#state_platformdetails_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_public_go">
+<a href="#state_public_go" style="color: inherit; text-decoration: inherit;">Public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ramdiskid_go">
@@ -1626,6 +2049,15 @@ for created instances. No other value is supported at this time.
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usageoperation_go">
+<a href="#state_usageoperation_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualizationtype_go">
@@ -1708,6 +2140,15 @@ should be attached to created instances. The structure of this block is describe
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hypervisor_nodejs">
+<a href="#state_hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_imagelocation_nodejs">
 <a href="#state_imagelocation_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Location</a>
 </span>
@@ -1717,6 +2158,24 @@ should be attached to created instances. The structure of this block is describe
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_imageowneralias_nodejs">
+<a href="#state_imageowneralias_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Owner<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_imagetype_nodejs">
+<a href="#state_imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_kernelid_nodejs">
@@ -1747,6 +2206,42 @@ kernel in created instances.
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ownerid_nodejs">
+<a href="#state_ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_platform_nodejs">
+<a href="#state_platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_platformdetails_nodejs">
+<a href="#state_platformdetails_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_public_nodejs">
+<a href="#state_public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ramdiskid_nodejs">
@@ -1821,6 +2316,15 @@ for created instances. No other value is supported at this time.
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usageoperation_nodejs">
+<a href="#state_usageoperation_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualizationtype_nodejs">
@@ -1903,6 +2407,15 @@ should be attached to created instances. The structure of this block is describe
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hypervisor_python">
+<a href="#state_hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_image_location_python">
 <a href="#state_image_location_python" style="color: inherit; text-decoration: inherit;">image_<wbr>location</a>
 </span>
@@ -1912,6 +2425,24 @@ should be attached to created instances. The structure of this block is describe
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_image_owner_alias_python">
+<a href="#state_image_owner_alias_python" style="color: inherit; text-decoration: inherit;">image_<wbr>owner_<wbr>alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_image_type_python">
+<a href="#state_image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_kernel_id_python">
@@ -1942,6 +2473,42 @@ kernel in created instances.
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_owner_id_python">
+<a href="#state_owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_platform_python">
+<a href="#state_platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_platform_details_python">
+<a href="#state_platform_details_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_public_python">
+<a href="#state_public_python" style="color: inherit; text-decoration: inherit;">public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ramdisk_id_python">
@@ -2016,6 +2583,15 @@ for created instances. No other value is supported at this time.
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usage_operation_python">
+<a href="#state_usage_operation_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualization_type_python">

@@ -147,9 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritygroupsfilter">List&lt;Get<wbr>Security<wbr>Groups<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more name/value pairs to use as filters. There are
-several valid keys, for a full reference, check out
-[describe-security-groups in the AWS CLI reference][1].
+    <dd>{{% md %}}One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out [describe-security-groups in the AWS CLI reference][1].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -159,8 +157,7 @@ several valid keys, for a full reference, check out
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match for
-desired security groups.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match for desired security groups.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -176,9 +173,7 @@ desired security groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritygroupsfilter">[]Get<wbr>Security<wbr>Groups<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}One or more name/value pairs to use as filters. There are
-several valid keys, for a full reference, check out
-[describe-security-groups in the AWS CLI reference][1].
+    <dd>{{% md %}}One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out [describe-security-groups in the AWS CLI reference][1].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -188,8 +183,7 @@ several valid keys, for a full reference, check out
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match for
-desired security groups.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match for desired security groups.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -205,9 +199,7 @@ desired security groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritygroupsfilter">Get<wbr>Security<wbr>Groups<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more name/value pairs to use as filters. There are
-several valid keys, for a full reference, check out
-[describe-security-groups in the AWS CLI reference][1].
+    <dd>{{% md %}}One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out [describe-security-groups in the AWS CLI reference][1].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -217,8 +209,7 @@ several valid keys, for a full reference, check out
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match for
-desired security groups.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match for desired security groups.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -234,9 +225,7 @@ desired security groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritygroupsfilter">Sequence[Get<wbr>Security<wbr>Groups<wbr>Filter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}One or more name/value pairs to use as filters. There are
-several valid keys, for a full reference, check out
-[describe-security-groups in the AWS CLI reference][1].
+    <dd>{{% md %}}One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out [describe-security-groups in the AWS CLI reference][1].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -246,8 +235,7 @@ several valid keys, for a full reference, check out
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match for
-desired security groups.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match for desired security groups.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -264,6 +252,16 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arns_csharp">
+<a href="#arns_csharp" style="color: inherit; text-decoration: inherit;">Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}ARNs of the matched security groups.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -301,8 +299,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs*
-unless the `vpc-id` filter is also used.
+    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -319,6 +316,16 @@ unless the `vpc-id` filter is also used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arns_go">
+<a href="#arns_go" style="color: inherit; text-decoration: inherit;">Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}ARNs of the matched security groups.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -356,8 +363,7 @@ unless the `vpc-id` filter is also used.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs*
-unless the `vpc-id` filter is also used.
+    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -374,6 +380,16 @@ unless the `vpc-id` filter is also used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arns_nodejs">
+<a href="#arns_nodejs" style="color: inherit; text-decoration: inherit;">arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}ARNs of the matched security groups.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -411,8 +427,7 @@ unless the `vpc-id` filter is also used.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs*
-unless the `vpc-id` filter is also used.
+    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -429,6 +444,16 @@ unless the `vpc-id` filter is also used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arns_python">
+<a href="#arns_python" style="color: inherit; text-decoration: inherit;">arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}ARNs of the matched security groups.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -466,8 +491,7 @@ unless the `vpc-id` filter is also used.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs*
-unless the `vpc-id` filter is also used.
+    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
