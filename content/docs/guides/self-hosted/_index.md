@@ -7,11 +7,9 @@ menu:
 meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi within your organization's infrastructure.
 ---
 
-<div class="note note-info" role="alert">
-    <p>
-        Self-hosting is only available with the <strong>Pulumi Enterprise Edition</strong>.
-    </p>
-</div>
+{{% notes type="info" %}}
+Self-hosting is only available with the **Pulumi Enterprise Edition**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+{{% /notes %}}
 
 This guide walks you through the components that are required to get the Pulumi Service running in your own environment.
 
@@ -26,7 +24,7 @@ There are two services that need to be hosted for the purposes of remote state m
 
 The self-hosted version of the Pulumi Service also offers some features that are not available with the managed version (i.e. [app.pulumi.com](https://app.pulumi.com)). The self-hosted installation of Pulumi provides full control of your data -- a requirement for enterprises in certain industries with specific security compliance requirements.
 
-If you are unsure about whether a self-hosted version of the Pulumi Service is right for your organization, [contact us]({{< relref "/about#contact" >}}) to learn more.
+If you are unsure about whether a self-hosted version of the Pulumi Service is right for your organization, [contact us]({{< relref "/contact.md" >}}) to learn more.
 
 ## Deployment Topology
 
@@ -51,7 +49,9 @@ Here are some examples of deployment topologies:
 | [Console]({{< relref "console" >}}) |	[https://hub.docker.com/r/pulumi/console/](https://hub.docker.com/r/pulumi/console/) |
 | Migrations | [https://hub.docker.com/r/pulumi/migrations/](https://hub.docker.com/r/pulumi/migrations/) |
 
-> **Note**: The above container image repositories are private.
+{{% notes type="info" %}}
+The above container image repositories are private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+{{% /notes %}}
 
 ## Quickstart
 
