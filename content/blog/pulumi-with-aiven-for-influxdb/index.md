@@ -57,7 +57,7 @@ The lambda function code (located in the file lambda_code.py) is very basic. It 
 This tutorial is about as cheap as they come; all you need is some time to perform all the steps.
 
 - $0 for AWS Lambda charges
-- Free Pulumi trial account
+- [Free Pulumi trial account](https://app.pulumi.com/site/trial)
 - Free credits for new Aiven users (less than $1/hr for existing customers)
 - 20-minute time estimate
 
