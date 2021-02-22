@@ -1060,6 +1060,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="instancewarmupperiod_csharp">
+<a href="#instancewarmupperiod_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Warmup<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maximumscalingstepsize_csharp">
 <a href="#maximumscalingstepsize_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Scaling<wbr>Step<wbr>Size</a>
 </span>
@@ -1104,6 +1114,16 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancewarmupperiod_go">
+<a href="#instancewarmupperiod_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Warmup<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximumscalingstepsize_go">
@@ -1152,6 +1172,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="instancewarmupperiod_nodejs">
+<a href="#instancewarmupperiod_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Warmup<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maximumscalingstepsize_nodejs">
 <a href="#maximumscalingstepsize_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Scaling<wbr>Step<wbr>Size</a>
 </span>
@@ -1196,6 +1226,16 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_warmup_period_python">
+<a href="#instance_warmup_period_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>warmup_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_scaling_step_size_python">

@@ -12,9 +12,7 @@ meta_desc: "Documentation for the aws.ec2.getRouteTable function with examples, 
 
 `aws.ec2.RouteTable` provides details about a specific Route Table.
 
-This resource can prove useful when a module accepts a Subnet id as
-an input variable and needs to, for example, add a route in
-the Route Table.
+This resource can prove useful when a module accepts a Subnet ID as an input variable and needs to, for example, add a route in the Route Table.
 
 
 {{% examples %}}
@@ -170,7 +168,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getroutetablefilter">List&lt;Get<wbr>Route<wbr>Table<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Custom filter block as described below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -180,7 +178,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -190,7 +188,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the specific Route Table to retrieve.
+    <dd>{{% md %}}ID of the specific Route Table to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -200,7 +198,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -210,8 +208,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match
-a pair on the desired Route Table.
+    <dd>{{% md %}}Map of tags, each pair of which must exactly match a pair on the desired Route Table.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -221,7 +218,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the VPC that the desired Route Table belongs to.
+    <dd>{{% md %}}ID of the VPC that the desired Route Table belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -237,7 +234,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getroutetablefilter">[]Get<wbr>Route<wbr>Table<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}Custom filter block as described below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -247,7 +244,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -257,7 +254,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the specific Route Table to retrieve.
+    <dd>{{% md %}}ID of the specific Route Table to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -267,7 +264,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -277,8 +274,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match
-a pair on the desired Route Table.
+    <dd>{{% md %}}Map of tags, each pair of which must exactly match a pair on the desired Route Table.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -288,7 +284,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the VPC that the desired Route Table belongs to.
+    <dd>{{% md %}}ID of the VPC that the desired Route Table belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -304,7 +300,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getroutetablefilter">Get<wbr>Route<wbr>Table<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}Custom filter block as described below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -314,7 +310,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -324,7 +320,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the specific Route Table to retrieve.
+    <dd>{{% md %}}ID of the specific Route Table to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -334,7 +330,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -344,8 +340,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match
-a pair on the desired Route Table.
+    <dd>{{% md %}}Map of tags, each pair of which must exactly match a pair on the desired Route Table.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -355,7 +350,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the VPC that the desired Route Table belongs to.
+    <dd>{{% md %}}ID of the VPC that the desired Route Table belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -371,7 +366,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getroutetablefilter">Sequence[Get<wbr>Route<wbr>Table<wbr>Filter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Custom filter block as described below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -381,7 +376,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -391,7 +386,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the specific Route Table to retrieve.
+    <dd>{{% md %}}ID of the specific Route Table to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -401,7 +396,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -411,8 +406,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match
-a pair on the desired Route Table.
+    <dd>{{% md %}}Map of tags, each pair of which must exactly match a pair on the desired Route Table.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -422,7 +416,7 @@ a pair on the desired Route Table.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the VPC that the desired Route Table belongs to.
+    <dd>{{% md %}}ID of the VPC that the desired Route Table belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -441,13 +435,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the route table.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="associations_csharp">
 <a href="#associations_csharp" style="color: inherit; text-decoration: inherit;">Associations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getroutetableassociation">List&lt;Get<wbr>Route<wbr>Table<wbr>Association&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of associations with attributes detailed below.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="gatewayid_csharp">
@@ -456,7 +461,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
+    <dd>{{% md %}}Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -476,7 +481,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns the route table
+    <dd>{{% md %}}ID of the AWS account that owns the route table.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -486,7 +491,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Route Table ID.
+    <dd>{{% md %}}Route Table ID.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -496,7 +501,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getroutetableroute">List&lt;Get<wbr>Route<wbr>Table<wbr>Route&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of routes with attributes detailed below.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="subnetid_csharp">
@@ -505,7 +511,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Subnet ID. Only set when associated with a Subnet.
+    <dd>{{% md %}}Subnet ID. Only set when associated with a subnet.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -542,13 +548,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the route table.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="associations_go">
 <a href="#associations_go" style="color: inherit; text-decoration: inherit;">Associations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getroutetableassociation">[]Get<wbr>Route<wbr>Table<wbr>Association<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of associations with attributes detailed below.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="gatewayid_go">
@@ -557,7 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
+    <dd>{{% md %}}Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -577,7 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns the route table
+    <dd>{{% md %}}ID of the AWS account that owns the route table.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -587,7 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Route Table ID.
+    <dd>{{% md %}}Route Table ID.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -597,7 +614,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getroutetableroute">[]Get<wbr>Route<wbr>Table<wbr>Route</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of routes with attributes detailed below.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="subnetid_go">
@@ -606,7 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Subnet ID. Only set when associated with a Subnet.
+    <dd>{{% md %}}Subnet ID. Only set when associated with a subnet.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -643,13 +661,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the route table.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="associations_nodejs">
 <a href="#associations_nodejs" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getroutetableassociation">Get<wbr>Route<wbr>Table<wbr>Association[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of associations with attributes detailed below.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="gatewayid_nodejs">
@@ -658,7 +687,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
+    <dd>{{% md %}}Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -678,7 +707,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns the route table
+    <dd>{{% md %}}ID of the AWS account that owns the route table.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -688,7 +717,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Route Table ID.
+    <dd>{{% md %}}Route Table ID.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -698,7 +727,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getroutetableroute">Get<wbr>Route<wbr>Table<wbr>Route[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of routes with attributes detailed below.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="subnetid_nodejs">
@@ -707,7 +737,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Subnet ID. Only set when associated with a Subnet.
+    <dd>{{% md %}}Subnet ID. Only set when associated with a subnet.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -744,13 +774,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARN of the route table.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="associations_python">
 <a href="#associations_python" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getroutetableassociation">Sequence[Get<wbr>Route<wbr>Table<wbr>Association]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of associations with attributes detailed below.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="gateway_id_python">
@@ -759,7 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
+    <dd>{{% md %}}Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -779,7 +820,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the AWS account that owns the route table
+    <dd>{{% md %}}ID of the AWS account that owns the route table.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -789,7 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Route Table ID.
+    <dd>{{% md %}}Route Table ID.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -799,7 +840,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getroutetableroute">Sequence[Get<wbr>Route<wbr>Table<wbr>Route]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of routes with attributes detailed below.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="subnet_id_python">
@@ -808,7 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Subnet ID. Only set when associated with a Subnet.
+    <dd>{{% md %}}Subnet ID. Only set when associated with a subnet.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -861,7 +903,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -871,7 +913,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the Association due to the Main Route Table.
+    <dd>{{% md %}}Whether the association is due to the main route table.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -881,7 +923,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Association ID.
+    <dd>{{% md %}}Association ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -891,7 +933,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the specific Route Table to retrieve.
+    <dd>{{% md %}}ID of the specific Route Table to retrieve.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -901,7 +943,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -917,7 +959,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -927,7 +969,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the Association due to the Main Route Table.
+    <dd>{{% md %}}Whether the association is due to the main route table.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -937,7 +979,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Association ID.
+    <dd>{{% md %}}Association ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -947,7 +989,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the specific Route Table to retrieve.
+    <dd>{{% md %}}ID of the specific Route Table to retrieve.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -957,7 +999,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -973,7 +1015,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -983,7 +1025,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If the Association due to the Main Route Table.
+    <dd>{{% md %}}Whether the association is due to the main route table.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -993,7 +1035,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Association ID.
+    <dd>{{% md %}}Association ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1003,7 +1045,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the specific Route Table to retrieve.
+    <dd>{{% md %}}ID of the specific Route Table to retrieve.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1013,7 +1055,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1029,7 +1071,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1039,7 +1081,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the Association due to the Main Route Table.
+    <dd>{{% md %}}Whether the association is due to the main route table.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1049,7 +1091,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Association ID.
+    <dd>{{% md %}}Association ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1059,7 +1101,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the specific Route Table to retrieve.
+    <dd>{{% md %}}ID of the specific Route Table to retrieve.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1069,7 +1111,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1089,8 +1131,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the field to filter by, as defined by
-[the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html).
+    <dd>{{% md %}}Name of the field to filter by, as defined by [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1100,8 +1141,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Set of values that are accepted for the given field.
-A Route Table will be selected if any one of the given values matches.
+    <dd>{{% md %}}Set of values that are accepted for the given field. A Route Table will be selected if any one of the given values matches.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1117,8 +1157,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the field to filter by, as defined by
-[the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html).
+    <dd>{{% md %}}Name of the field to filter by, as defined by [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1128,8 +1167,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Set of values that are accepted for the given field.
-A Route Table will be selected if any one of the given values matches.
+    <dd>{{% md %}}Set of values that are accepted for the given field. A Route Table will be selected if any one of the given values matches.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1145,8 +1183,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the field to filter by, as defined by
-[the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html).
+    <dd>{{% md %}}Name of the field to filter by, as defined by [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1156,8 +1193,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Set of values that are accepted for the given field.
-A Route Table will be selected if any one of the given values matches.
+    <dd>{{% md %}}Set of values that are accepted for the given field. A Route Table will be selected if any one of the given values matches.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1173,8 +1209,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the field to filter by, as defined by
-[the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html).
+    <dd>{{% md %}}Name of the field to filter by, as defined by [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1184,8 +1219,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Set of values that are accepted for the given field.
-A Route Table will be selected if any one of the given values matches.
+    <dd>{{% md %}}Set of values that are accepted for the given field. A Route Table will be selected if any one of the given values matches.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1199,13 +1233,23 @@ A Route Table will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
+        <span id="carriergatewayid_csharp">
+<a href="#carriergatewayid_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the Carrier Gateway.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the route.
+    <dd>{{% md %}}CIDR block of the route.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1215,7 +1259,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Egress Only Internet Gateway.
+    <dd>{{% md %}}ID of the Egress Only Internet Gateway.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1225,7 +1269,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1235,7 +1279,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EC2 instance ID.
+    <dd>{{% md %}}EC2 instance ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1245,7 +1289,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPv6 CIDR block of the route.
+    <dd>{{% md %}}IPv6 CIDR block of the route.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1255,7 +1299,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Local Gateway ID.
+    <dd>{{% md %}}Local Gateway ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1265,7 +1309,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The NAT Gateway ID.
+    <dd>{{% md %}}NAT Gateway ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1275,7 +1319,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the elastic network interface (eni) to use.
+    <dd>{{% md %}}ID of the elastic network interface (eni) to use.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1285,7 +1329,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EC2 Transit Gateway ID.
+    <dd>{{% md %}}EC2 Transit Gateway ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1295,7 +1339,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Endpoint ID.
+    <dd>{{% md %}}VPC Endpoint ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1305,7 +1349,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Peering ID.
+    <dd>{{% md %}}VPC Peering ID.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1315,13 +1359,23 @@ A Route Table will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
+        <span id="carriergatewayid_go">
+<a href="#carriergatewayid_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the Carrier Gateway.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the route.
+    <dd>{{% md %}}CIDR block of the route.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1331,7 +1385,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Egress Only Internet Gateway.
+    <dd>{{% md %}}ID of the Egress Only Internet Gateway.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1341,7 +1395,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1351,7 +1405,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EC2 instance ID.
+    <dd>{{% md %}}EC2 instance ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1361,7 +1415,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPv6 CIDR block of the route.
+    <dd>{{% md %}}IPv6 CIDR block of the route.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1371,7 +1425,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Local Gateway ID.
+    <dd>{{% md %}}Local Gateway ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1381,7 +1435,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The NAT Gateway ID.
+    <dd>{{% md %}}NAT Gateway ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1391,7 +1445,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the elastic network interface (eni) to use.
+    <dd>{{% md %}}ID of the elastic network interface (eni) to use.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1401,7 +1455,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EC2 Transit Gateway ID.
+    <dd>{{% md %}}EC2 Transit Gateway ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1411,7 +1465,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Endpoint ID.
+    <dd>{{% md %}}VPC Endpoint ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1421,7 +1475,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Peering ID.
+    <dd>{{% md %}}VPC Peering ID.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1431,13 +1485,23 @@ A Route Table will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
+        <span id="carriergatewayid_nodejs">
+<a href="#carriergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the Carrier Gateway.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the route.
+    <dd>{{% md %}}CIDR block of the route.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1447,7 +1511,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Egress Only Internet Gateway.
+    <dd>{{% md %}}ID of the Egress Only Internet Gateway.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1457,7 +1521,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1467,7 +1531,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EC2 instance ID.
+    <dd>{{% md %}}EC2 instance ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1477,7 +1541,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPv6 CIDR block of the route.
+    <dd>{{% md %}}IPv6 CIDR block of the route.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1487,7 +1551,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Local Gateway ID.
+    <dd>{{% md %}}Local Gateway ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1497,7 +1561,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The NAT Gateway ID.
+    <dd>{{% md %}}NAT Gateway ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1507,7 +1571,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the elastic network interface (eni) to use.
+    <dd>{{% md %}}ID of the elastic network interface (eni) to use.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1517,7 +1581,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EC2 Transit Gateway ID.
+    <dd>{{% md %}}EC2 Transit Gateway ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1527,7 +1591,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Endpoint ID.
+    <dd>{{% md %}}VPC Endpoint ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1537,7 +1601,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Peering ID.
+    <dd>{{% md %}}VPC Peering ID.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1547,13 +1611,23 @@ A Route Table will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
+        <span id="carrier_gateway_id_python">
+<a href="#carrier_gateway_id_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>gateway_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the Carrier Gateway.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the route.
+    <dd>{{% md %}}CIDR block of the route.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1563,7 +1637,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Egress Only Internet Gateway.
+    <dd>{{% md %}}ID of the Egress Only Internet Gateway.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1573,7 +1647,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+    <dd>{{% md %}}ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1583,7 +1657,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The EC2 instance ID.
+    <dd>{{% md %}}EC2 instance ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1593,7 +1667,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IPv6 CIDR block of the route.
+    <dd>{{% md %}}IPv6 CIDR block of the route.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1603,7 +1677,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Local Gateway ID.
+    <dd>{{% md %}}Local Gateway ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1613,7 +1687,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The NAT Gateway ID.
+    <dd>{{% md %}}NAT Gateway ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1623,7 +1697,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the elastic network interface (eni) to use.
+    <dd>{{% md %}}ID of the elastic network interface (eni) to use.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1633,7 +1707,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The EC2 Transit Gateway ID.
+    <dd>{{% md %}}EC2 Transit Gateway ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1643,7 +1717,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VPC Endpoint ID.
+    <dd>{{% md %}}VPC Endpoint ID.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1653,7 +1727,7 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VPC Peering ID.
+    <dd>{{% md %}}VPC Peering ID.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

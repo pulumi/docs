@@ -3900,8 +3900,8 @@ handles query strings, cookies and headers (maximum one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">List&lt;Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A config block that triggers a lambda function with
-specific actions. Defined below, maximum 4.
+    <dd>{{% md %}}A config block that triggers a lambda
+function with specific actions (maximum 4).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3937,7 +3937,9 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique identifier of the origin request policy
+that is attached to the behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="realtimelogconfigarn_csharp">
@@ -4089,8 +4091,8 @@ handles query strings, cookies and headers (maximum one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">[]Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</a></span>
     </dt>
-    <dd>{{% md %}}A config block that triggers a lambda function with
-specific actions. Defined below, maximum 4.
+    <dd>{{% md %}}A config block that triggers a lambda
+function with specific actions (maximum 4).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4126,7 +4128,9 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique identifier of the origin request policy
+that is attached to the behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="realtimelogconfigarn_go">
@@ -4278,8 +4282,8 @@ handles query strings, cookies and headers (maximum one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association[]</a></span>
     </dt>
-    <dd>{{% md %}}A config block that triggers a lambda function with
-specific actions. Defined below, maximum 4.
+    <dd>{{% md %}}A config block that triggers a lambda
+function with specific actions (maximum 4).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4315,7 +4319,9 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique identifier of the origin request policy
+that is attached to the behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="realtimelogconfigarn_nodejs">
@@ -4467,8 +4473,8 @@ handles query strings, cookies and headers (maximum one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Sequence[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A config block that triggers a lambda function with
-specific actions. Defined below, maximum 4.
+    <dd>{{% md %}}A config block that triggers a lambda
+function with specific actions (maximum 4).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4504,7 +4510,9 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique identifier of the origin request policy
+that is attached to the behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="realtime_log_config_arn_python">
@@ -5321,8 +5329,8 @@ handles query strings, cookies and headers (maximum one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A config block that triggers a lambda function with
-specific actions. Defined below, maximum 4.
+    <dd>{{% md %}}A config block that triggers a lambda
+function with specific actions (maximum 4).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5358,7 +5366,9 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique identifier of the origin request policy
+that is attached to the behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="realtimelogconfigarn_csharp">
@@ -5521,8 +5531,8 @@ handles query strings, cookies and headers (maximum one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</a></span>
     </dt>
-    <dd>{{% md %}}A config block that triggers a lambda function with
-specific actions. Defined below, maximum 4.
+    <dd>{{% md %}}A config block that triggers a lambda
+function with specific actions (maximum 4).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5558,7 +5568,9 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique identifier of the origin request policy
+that is attached to the behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="realtimelogconfigarn_go">
@@ -5721,8 +5733,8 @@ handles query strings, cookies and headers (maximum one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association[]</a></span>
     </dt>
-    <dd>{{% md %}}A config block that triggers a lambda function with
-specific actions. Defined below, maximum 4.
+    <dd>{{% md %}}A config block that triggers a lambda
+function with specific actions (maximum 4).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5758,7 +5770,9 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique identifier of the origin request policy
+that is attached to the behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="realtimelogconfigarn_nodejs">
@@ -5921,8 +5935,8 @@ handles query strings, cookies and headers (maximum one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Sequence[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A config block that triggers a lambda function with
-specific actions. Defined below, maximum 4.
+    <dd>{{% md %}}A config block that triggers a lambda
+function with specific actions (maximum 4).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5958,7 +5972,9 @@ whether the object has been updated. Defaults to 0 seconds.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique identifier of the origin request policy
+that is attached to the behavior.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="realtime_log_config_arn_python">

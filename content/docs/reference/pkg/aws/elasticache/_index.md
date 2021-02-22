@@ -12,6 +12,7 @@ Explore the resources and functions of the aws.elasticache module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="globalreplicationgroup" title="GlobalReplicationGroup"><span class="symbol resource"></span>GlobalReplicationGroup</a></li>
     <li><a href="parametergroup" title="ParameterGroup"><span class="symbol resource"></span>ParameterGroup</a></li>
     <li><a href="replicationgroup" title="ReplicationGroup"><span class="symbol resource"></span>ReplicationGroup</a></li>
     <li><a href="securitygroup" title="SecurityGroup"><span class="symbol resource"></span>SecurityGroup</a></li>
@@ -33,6 +34,6 @@ Explore the resources and functions of the aws.elasticache module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.29.1</dd>
+	<dd>3.30.0</dd>
 </dl>
 

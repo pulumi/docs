@@ -13,6 +13,7 @@ Explore the resources and functions of the aws.securityhub module.
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
     <li><a href="actiontarget" title="ActionTarget"><span class="symbol resource"></span>ActionTarget</a></li>
+    <li><a href="inviteaccepter" title="InviteAccepter"><span class="symbol resource"></span>InviteAccepter</a></li>
     <li><a href="member" title="Member"><span class="symbol resource"></span>Member</a></li>
     <li><a href="organizationadminaccount" title="OrganizationAdminAccount"><span class="symbol resource"></span>OrganizationAdminAccount</a></li>
     <li><a href="productsubscription" title="ProductSubscription"><span class="symbol resource"></span>ProductSubscription</a></li>
@@ -28,6 +29,6 @@ Explore the resources and functions of the aws.securityhub module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.29.1</dd>
+	<dd>3.30.0</dd>
 </dl>
 

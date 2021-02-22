@@ -270,7 +270,7 @@ class MyStack : Stack
 ",
             LoggingConfiguration = new Aws.Sfn.Inputs.StateMachineLoggingConfigurationArgs
             {
-                LogDestination = aws_cloudwatch_log_group.Log_group_for_sfn.Arn,
+                LogDestination = $"{aws_cloudwatch_log_group.Log_group_for_sfn.Arn}:*",
                 IncludeExecutionData = true,
                 Level = "ERROR",
             },
@@ -299,7 +299,7 @@ func main() {
 			RoleArn:    pulumi.Any(aws_iam_role.Iam_for_sfn.Arn),
 			Definition: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Comment\": \"A Hello World example of the Amazon States Language using an AWS Lambda Function\",\n", "  \"StartAt\": \"HelloWorld\",\n", "  \"States\": {\n", "    \"HelloWorld\": {\n", "      \"Type\": \"Task\",\n", "      \"Resource\": \"", aws_lambda_function.Lambda.Arn, "\",\n", "      \"End\": true\n", "    }\n", "  }\n", "}\n")),
 			LoggingConfiguration: &sfn.StateMachineLoggingConfigurationArgs{
-				LogDestination:       pulumi.Any(aws_cloudwatch_log_group.Log_group_for_sfn.Arn),
+				LogDestination:       pulumi.String(fmt.Sprintf("%v%v", aws_cloudwatch_log_group.Log_group_for_sfn.Arn, ":*")),
 				IncludeExecutionData: pulumi.Bool(true),
 				Level:                pulumi.String("ERROR"),
 			},
@@ -335,7 +335,7 @@ sfn_state_machine = aws.sfn.StateMachine("sfnStateMachine",
 }}
 """,
     logging_configuration=aws.sfn.StateMachineLoggingConfigurationArgs(
-        log_destination=aws_cloudwatch_log_group["log_group_for_sfn"]["arn"],
+        log_destination=f"{aws_cloudwatch_log_group['log_group_for_sfn']['arn']}:*",
         include_execution_data=True,
         level="ERROR",
     ))
@@ -365,7 +365,7 @@ const sfnStateMachine = new aws.sfn.StateMachine("sfnStateMachine", {
 }
 `,
     loggingConfiguration: {
-        logDestination: aws_cloudwatch_log_group.log_group_for_sfn.arn,
+        logDestination: `${aws_cloudwatch_log_group.log_group_for_sfn.arn}:*`,
         includeExecutionData: true,
         level: "ERROR",
     },
@@ -1554,7 +1554,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of CloudWatch log group. Make sure the State Machine does have the right IAM Policies for Logging.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of CloudWatch log group. Make sure the State Machine does have the right IAM Policies for Logging. The ARN must end with `:*`
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of CloudWatch log group. Make sure the State Machine does have the right IAM Policies for Logging.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of CloudWatch log group. Make sure the State Machine does have the right IAM Policies for Logging. The ARN must end with `:*`
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1626,7 +1626,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of CloudWatch log group. Make sure the State Machine does have the right IAM Policies for Logging.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of CloudWatch log group. Make sure the State Machine does have the right IAM Policies for Logging. The ARN must end with `:*`
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1662,7 +1662,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of CloudWatch log group. Make sure the State Machine does have the right IAM Policies for Logging.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of CloudWatch log group. Make sure the State Machine does have the right IAM Policies for Logging. The ARN must end with `:*`
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
