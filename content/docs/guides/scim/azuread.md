@@ -19,9 +19,9 @@ Please note that some advanced SCIM features aren't supported yet. For more info
 
 ## Enabling Automatic Provisioning
 
-* Navigate to the Azure Active Directory where you have configured Single Sign On using SAML with Pulumi.
-* Click on **Enterprise Applications** and select the app in which you configured Single Sign On with Pulumi earlier.
-* Then, click on the **Provisioning** feature, and change the value of **Provisioning Mode** to **Automatic**.
+1. Navigate to the Azure Active Directory where you have configured Single Sign On using SAML with Pulumi.
+2. Click **Enterprise Applications** and select the app in which you configured Single Sign On with Pulumi earlier.
+3. Click on the **Provisioning** feature, and change the value of **Provisioning Mode** to **Automatic**.
 
 ### Admin Credentials
 
@@ -34,7 +34,7 @@ Under the **Admin Credentials** section of the **Provisioning** feature, fill ou
 Once you generate the token, please save it securely. Neither the Pulumi Console nor Pulumi support can retrieve a token once it's been initially generated. If you lose the SCIM token and need it again, you'll have to generate a new token, which invalidates any previous tokens for your Pulumi organization.
     {{% /notes %}}
 
-* Click the **Test Connection** button. You should get a success notification once the connection is successful.
+Click **Test Connection**. You should get a success notification once the connection is successful.
 
 ### Mappings
 
@@ -48,7 +48,7 @@ If you are not yet ready to enable provisioning for Groups, disable that.
 
 ### Adjust User Attribute Mappings
 
-Update the mapping for the **userName** attribute to be sourced from **mailNickname** instead of **userPrincipalName**. If you are not already there, click on **Provision Azure Active Directory _Users_** from the **Mappings** expansion panel, then click on the corresponding attribute mapping as shown below.
+Update the mapping for the **userName** attribute to be sourced from **mailNickname** instead of **userPrincipalName**. In the **Mappings** expansion panel, click **Provision Azure Active Directory _Users_** and then click on the corresponding attribute mapping as shown below.
 
 In the configuration window, change the value of the **Source attribute** drop-down to **mailNickname**.
 
@@ -81,8 +81,7 @@ You are now done with the Mappings configuration. Click **Save** and close the c
 
 ## Enable Group Provisioning
 
-To enable provisioning of Azure AD groups to Pulumi Service, click the **Edit Provisioning** button if you are not already
-editing the provisioning setup. Then click the **Provision Azure Active Directory Groups** setting under the **Mappings**
+To enable provisioning of Azure AD groups to Pulumi Service, click **Edit Provisioning** and then click the **Provision Azure Active Directory Groups** setting under the **Mappings**
 expansion panel and switch the **Enabled** setting to **Yes**.
 
 ### Update Group Attribute Mappings
@@ -92,11 +91,11 @@ between `objectId` and `externalId`. Click **Save** once you are done.
 
 ## Enable Provisioning
 
-Under the **Settings** expansion panel the **Scope** drop-down should be set to **Sync only assigned users and groups**. This ensures that only the users who are assigned to this application are synced with Pulumi, and not everyone in your Azure Active Directory.
+Under the **Settings** expansion panel, the **Scope** drop-down should be set to **Sync only assigned users and groups**. This ensures that only the users who are assigned to this application are synced with Pulumi, and not everyone in your Azure Active Directory.
 
 ![settings scope](/images/docs/guides/scim/azuread/settings_scope.png)
 
-Next set the **Provisioning Status** to **On**, and then click on the **Save** button.
+Set the **Provisioning Status** to **On** and then click **Save**.
 
 ## Assign Users and/or Groups
 
