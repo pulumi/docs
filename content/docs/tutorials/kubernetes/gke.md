@@ -296,7 +296,7 @@ Next, we need to setup the `kubeconfig` file to configure `kubectl`. We can leve
 stack output in the CLI, as Pulumi facilitates exporting these objects for us.
 
 ```bash
-pulumi stack output kubeconfig > kubeconfig
+pulumi stack output kubeconfig --show-secrets > kubeconfig
 export KUBECONFIG=$PWD/kubeconfig
 
 kubectl version
