@@ -17,7 +17,7 @@ This failure occurred because there is a conflict with an existing user account 
 
 **Resolving an email conflict** - This occurs when the user being provisioned has already created a Pulumi account with the same email address. The conflict can be resolved by changing the email associated with their Pulumi account. _The actions to resolve this conflict must be done by the user being provisioned_.
 
-1. If this account was created using a third-party application such as GitHub, GitLab, or BitBucket, the email must be updated by logging into that application (e.g. GitHub) and changing the primary email. If this account is a Pulumi account (i.e. you did not sign in with GitHub or another provider when creating the account) you can update your email in the Pulumi Console on the profile settings page, _app.pulumi.com/{your-username}/settings/profile_, then skip to step 3.
+1. If this account was created using a third-party application such as GitHub, GitLab, or Bitbucket, the email must be updated by logging into that application (e.g. GitHub) and changing the primary email. If this account is a Pulumi account (i.e. you did not sign in with GitHub or another provider when creating the account) you can update your email in the Pulumi Console on the profile settings page, _app.pulumi.com/{your-username}/settings/profile_, then skip to step 3.
 2. Next, log into the Pulumi console, go to the user profile settings page, and click the refresh button associated with the third-party application under the Identities section.
 3. Contact the your organization administrator and have them retry the provisioning of your account.
 
