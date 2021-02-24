@@ -97,7 +97,7 @@ console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
 ```python
 config = pulumi.Config();
 name = config.require('name');
-lucky = config.get_number('lucky') or 42
+lucky = config.get_int('lucky') or 42
 print(f'Hello, {name} -- I see your lucky number is {lucky}!')
 ```
 
