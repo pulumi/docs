@@ -22,6 +22,7 @@ Explore the resources and functions of the openstack.loadbalancer module.
     <li><a href="monitorv1" title="MonitorV1"><span class="symbol resource"></span>MonitorV1</a></li>
     <li><a href="pool" title="Pool"><span class="symbol resource"></span>Pool</a></li>
     <li><a href="poolv1" title="PoolV1"><span class="symbol resource"></span>PoolV1</a></li>
+    <li><a href="quota" title="Quota"><span class="symbol resource"></span>Quota</a></li>
     <li><a href="vip" title="Vip"><span class="symbol resource"></span>Vip</a></li>
 </ul>
 
@@ -34,6 +35,6 @@ Explore the resources and functions of the openstack.loadbalancer module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.14.1</dd>
+	<dd>2.15.0</dd>
 </dl>
 

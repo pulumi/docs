@@ -12,7 +12,7 @@ meta_desc: "Documentation for the openstack.identity.getAuthScope function with 
 
 Use this data source to get authentication information about the current
 auth scope in use. This can be used as self-discovery or introspection of
-the username or project name currently in use.
+the username or project name currently in use as well as the service catalog.
 
 
 {{% examples %}}
@@ -290,7 +290,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="projectdomainid_csharp">
@@ -339,7 +340,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region of the endpoint.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="roles_csharp">
@@ -349,6 +351,16 @@ The following output properties are available:
         <span class="property-type"><a href="#getauthscoperole">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Identity.<wbr>Outputs.<wbr>Get<wbr>Auth<wbr>Scope<wbr>Role&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of roles in the current scope. See reference below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="servicecatalogs_csharp">
+<a href="#servicecatalogs_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Catalogs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getauthscopeservicecatalog">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Identity.<wbr>Outputs.<wbr>Get<wbr>Auth<wbr>Scope<wbr>Service<wbr>Catalog&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of service catalog entries returned with the token.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -434,7 +446,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="projectdomainid_go">
@@ -483,7 +496,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region of the endpoint.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="roles_go">
@@ -493,6 +507,16 @@ The following output properties are available:
         <span class="property-type"><a href="#getauthscoperole">[]Get<wbr>Auth<wbr>Scope<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}A list of roles in the current scope. See reference below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="servicecatalogs_go">
+<a href="#servicecatalogs_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Catalogs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getauthscopeservicecatalog">[]Get<wbr>Auth<wbr>Scope<wbr>Service<wbr>Catalog</a></span>
+    </dt>
+    <dd>{{% md %}}A list of service catalog entries returned with the token.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -578,7 +602,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="projectdomainid_nodejs">
@@ -627,7 +652,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region of the endpoint.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="roles_nodejs">
@@ -637,6 +663,16 @@ The following output properties are available:
         <span class="property-type"><a href="#getauthscoperole">Get<wbr>Auth<wbr>Scope<wbr>Role[]</a></span>
     </dt>
     <dd>{{% md %}}A list of roles in the current scope. See reference below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="servicecatalogs_nodejs">
+<a href="#servicecatalogs_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Catalogs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getauthscopeservicecatalog">Get<wbr>Auth<wbr>Scope<wbr>Service<wbr>Catalog[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of service catalog entries returned with the token.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -722,7 +758,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="project_domain_id_python">
@@ -771,7 +808,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region of the endpoint.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="roles_python">
@@ -781,6 +819,16 @@ The following output properties are available:
         <span class="property-type"><a href="#getauthscoperole">Sequence[Get<wbr>Auth<wbr>Scope<wbr>Role]</a></span>
     </dt>
     <dd>{{% md %}}A list of roles in the current scope. See reference below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="service_catalogs_python">
+<a href="#service_catalogs_python" style="color: inherit; text-decoration: inherit;">service_<wbr>catalogs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getauthscopeservicecatalog">Sequence[Get<wbr>Auth<wbr>Scope<wbr>Service<wbr>Catalog]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of service catalog entries returned with the token.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -935,6 +983,434 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getauthscopeservicecatalog">Get<wbr>Auth<wbr>Scope<wbr>Service<wbr>Catalog</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoints_csharp">
+<a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getauthscopeservicecatalogendpoint">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Identity.<wbr>Inputs.<wbr>Get<wbr>Auth<wbr>Scope<wbr>Service<wbr>Catalog<wbr>Endpoint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of endpoints for the service.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the scope. This is an arbitrary name which is
+only used as a unique identifier so an actual token isn't used as the ID.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the service.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoints_go">
+<a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getauthscopeservicecatalogendpoint">[]Get<wbr>Auth<wbr>Scope<wbr>Service<wbr>Catalog<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}A list of endpoints for the service.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the scope. This is an arbitrary name which is
+only used as a unique identifier so an actual token isn't used as the ID.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the service.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoints_nodejs">
+<a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getauthscopeservicecatalogendpoint">Get<wbr>Auth<wbr>Scope<wbr>Service<wbr>Catalog<wbr>Endpoint[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of endpoints for the service.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the scope. This is an arbitrary name which is
+only used as a unique identifier so an actual token isn't used as the ID.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the service.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoints_python">
+<a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getauthscopeservicecatalogendpoint">Sequence[Get<wbr>Auth<wbr>Scope<wbr>Service<wbr>Catalog<wbr>Endpoint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of endpoints for the service.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the scope. This is an arbitrary name which is
+only used as a unique identifier so an actual token isn't used as the ID.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the service.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getauthscopeservicecatalogendpoint">Get<wbr>Auth<wbr>Scope<wbr>Service<wbr>Catalog<wbr>Endpoint</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="interface_csharp">
+<a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The interface of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V3 Identity client.
+A Identity client is needed to retrieve tokens IDs. If omitted, the
+`region` argument of the provider is used.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="regionid_csharp">
+<a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region ID of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the endpoint.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="interface_go">
+<a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The interface of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V3 Identity client.
+A Identity client is needed to retrieve tokens IDs. If omitted, the
+`region` argument of the provider is used.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="regionid_go">
+<a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region ID of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the endpoint.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="interface_nodejs">
+<a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The interface of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V3 Identity client.
+A Identity client is needed to retrieve tokens IDs. If omitted, the
+`region` argument of the provider is used.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="regionid_nodejs">
+<a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region ID of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the endpoint.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="interface_python">
+<a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The interface of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V3 Identity client.
+A Identity client is needed to retrieve tokens IDs. If omitted, the
+`region` argument of the provider is used.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region ID of the endpoint.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL of the endpoint.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
