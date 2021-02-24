@@ -1,6 +1,6 @@
 ---
 title: Easily bring your team to Pulumi with SAML SSO and SCIM
-date: 2021-02-23
+date: 2021-02-24
 meta_desc: Pulumi has full support for enterprise authentication standards like SAML and SCIM
 meta_image: sso.png
 authors:
