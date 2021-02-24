@@ -1,13 +1,13 @@
 {{ define "hero" }}
     <div class="pulumi-up-hero bg-black shadow-2xl relative overflow-hidden flex justify-center">
-        <div class="py-12 pl-24">
+        <div class="pt-12 pb-4 flex flex-col w-full">
             <div class="neon-container">
-                <div class="flux">Pulumi<span class="neon">UP</span></div>
+                <div><span class="flux">Pulumi</span><span class="neon">UP</span></div>
             </div>
-            <div class="absolute bottom-0 ml-12">
+            <div class="flex-grow relative text-center">
                 <pulumi-date-countdown
                     value-label-class="text-2xl"
-                    text-class="text-white text-6xl neon-basic"
+                    text-class="absolute bottom-0 w-full text-center text-white text-6xl neon-basic"
                     date-string="2021-04-20T09:00:00-08:00"
                 ></pulumi-date-countdown>
             </div>

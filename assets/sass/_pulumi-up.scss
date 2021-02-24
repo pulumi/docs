@@ -1,9 +1,6 @@
 // Neon Animation found on Codepen
 // https://codepen.io/Trinca/pen/NAvpWa
-@font-face {
-    font-family: neon;
-    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
-}
+@import url(//fonts.googleapis.com/css?family=Vibur);
 
 $lightGreen: theme('colors.green.400');
 $darkGreen: theme('colors.green.700');
@@ -24,8 +21,10 @@ $veryDarkOrange: theme('colors.orange.900');
 }
 
 .neon {
+    font: 400 19vh "Vibur";
+    line-height: 9vw;
     color: $lightGreen;
-    text-shadow: 0 0 3vw $darkGreen;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $darkGreen, 0 0 0.5em $darkGreen, 0 0 0.1em $darkGreen, 0 10px 3px #000;
 
     animation: neon 3s linear infinite;
     -moz-animation: neon 3s linear infinite;
@@ -44,27 +43,25 @@ $veryDarkOrange: theme('colors.orange.900');
 }
 
 .flux {
-    font-family: neon;;
-    font-size: 9vw;
+    font: 400 19vh "Vibur";
     line-height: 9vw;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $darkBlue, 0 0 0.5em $darkBlue, 0 0 0.1em $darkBlue, 0 10px 3px #000;
 
     color: $lightBlue;
-    text-shadow: 0 0 3vw $darkBlue;
-
-    animation: flux 2s linear infinite;
-    -moz-animation: flux 2s linear infinite;
-    -webkit-animation: flux 2s linear infinite;
-    -o-animation: flux 2s linear infinite;
+    animation: flux 4s linear infinite;
+    -moz-animation: flux 4s linear infinite;
+    -webkit-animation: flux 4s linear infinite;
+    -o-animation: flux 4s linear infinite;
 }
 
 @keyframes flux {
   0%,
   100% {
-    text-shadow: 0 0 1vw $darkBlue, 0 0 3vw $darkBlue, 0 0 10vw $darkBlue, 0 0 10vw $darkBlue, 0 0 .4vw $lightBlue, .5vw .5vw .1vw $darkBlue;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $darkBlue, 0 0 0.5em $darkBlue, 0 0 0.1em $darkBlue, 0 10px 3px #000;
     color: $lightBlue;
   }
   50% {
-    text-shadow: 0 0 .5vw $veryDarkBlue, 0 0 1.5vw $veryDarkBlue, 0 0 5vw $veryDarkBlue, 0 0 5vw $veryDarkBlue, 0 0 .2vw $veryDarkBlue, .5vw .5vw .1vw $darkBlue;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $veryDarkBlue, 0 0 0.5em $veryDarkBlue, 0 0 0.1em $veryDarkBlue, 0 10px 3px #000;
     color: $darkBlue;
   }
 }
@@ -72,11 +69,11 @@ $veryDarkOrange: theme('colors.orange.900');
 @keyframes neon {
     0%,
     100% {
-      text-shadow: 0 0 1vw $darkGreen, 0 0 3vw $darkGreen, 0 0 10vw $darkGreen, 0 0 10vw $darkGreen, 0 0 .4vw $lightGreen, .5vw .5vw .1vw $darkGreen;
+      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $darkGreen, 0 0 0.5em $darkGreen, 0 0 0.1em $darkGreen, 0 10px 3px #000;
       color: $lightGreen;
     }
     50% {
-      text-shadow: 0 0 .5vw $veryDarkGreen, 0 0 1.5vw $veryDarkGreen, 0 0 5vw $veryDarkGreen, 0 0 5vw $veryDarkGreen, 0 0 .2vw $veryDarkGreen, .5vw .5vw .1vw $darkGreen;
+      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $veryDarkGreen, 0 0 0.5em $veryDarkGreen, 0 0 0.1em $veryDarkGreen, 0 10px 3px #000;
       color: $darkGreen;
     }
 }
@@ -93,6 +90,39 @@ $veryDarkOrange: theme('colors.orange.900');
   }
 }
 
+@keyframes blink {
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79%{
+      color: #333;
+    }
+    80% {
+
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: #333;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: #333;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+}
 
 .pulumi-up-hero {
     height: 650px;
