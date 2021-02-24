@@ -195,7 +195,7 @@ While some properties make sense as "strict" enums (i.e., the input value **must
 
 A property is a "strict" enum when the input value **must** be one of the enumerated values. In this case, the property type is specified as the enum type.
 
-We will use "strict" enums when we are sure that the enum will include all legal values, such as when a provider is auto-generated from a cloud provider specification (like our [Azure NextGen](https://www.pulumi.com/blog/announcing-nextgen-azure-provider/) or [Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/#pulumi-kubernetes-provider) providers).
+We will use "strict" enums when we are sure that the enum will include all legal values, such as when a provider is auto-generated from a cloud provider specification (like our [Azure-Native]({{< relref "/blog/full-coverage-of-azure-resources-with-azure-native" >}}) or [Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/#pulumi-kubernetes-provider) providers).
 
 {{< chooser language "typescript,python,csharp,go" >}}
 {{< choosable language typescript >}}
@@ -227,7 +227,7 @@ class StorageAccount(pulumi.CustomResource):
 {{< choosable language csharp >}}
 
 ```csharp
-namespace Pulumi.AzureNextGen.Storage.Latest
+namespace Pulumi.AzureNative.Storage
 {
     public partial class StorageAccount : Pulumi.CustomResource
     {
@@ -239,7 +239,7 @@ namespace Pulumi.AzureNextGen.Storage.Latest
     public sealed class StorageAccountArgs : Pulumi.ResourceArgs
     {
         [Input("accessTier")]
-        public Input<Pulumi.AzureNextGen.Storage.Latest.AccessTier>? AccessTier { get; set; }
+        public Input<Pulumi.AzureNative.Storage.AccessTier>? AccessTier { get; set; }
 
         ...
     }
@@ -353,9 +353,9 @@ type BucketArgs struct {
 
 ## Try them out!
 
-You can find enum types integrated into `v3.19.0` of the [AWS provider](https://www.pulumi.com/docs/reference/pkg/aws/) and `v0.3.0` of the [Azure NextGen provider](https://www.pulumi.com/docs/reference/pkg/azure-nextgen/), and we will be adding enums to other providers in the coming weeks and months.
+You can find enum types integrated into `v3.19.0` of the [AWS provider](https://www.pulumi.com/docs/reference/pkg/aws/) and `v0.7.0` of the [Azure-Native provider](https://www.pulumi.com/docs/reference/pkg/azure-native/), and we will be adding enums to other providers in the coming weeks and months.
 
-**Azure NextGen**: In the Azure NextGen provider, all properties labeled as enums in the OpenAPI spec are represented as such. In all, there are over 1300 enums provided in the SDKs. The Azure NextGen provider uses both "strict" and "relaxed" enums since the OpenAPI specification explicitly defines its properties as such.
+**Azure-Native**: In the native Azure provider, all properties labeled as enums in the OpenAPI spec are represented as such. In all, there are over 1300 enums provided in the SDKs. The native Azure provider uses both "strict" and "relaxed" enums since the OpenAPI specification explicitly defines its properties as such.
 
 **AWS**: The AWS provider enums are manually identified and maintained as part of the [provider schema](https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go#L2392-L3375). We've already added many that you might find useful, such as Lambda Runtimes, EC2 Instance Types, and IAM Managed Policies, and will continue to add more in the coming months.
 

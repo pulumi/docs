@@ -2,12 +2,12 @@
 title: Azure Setup
 meta_desc: This page provides an overview of how to set up and configure credentials
            for the Pulumi Azure Provider.
-aliases: ["/docs/reference/clouds/azure/setup/"]
 ---
 
-The [native Azure provider for Pulumi]({{< relref "./" >}}) uses the Azure SDK to manage and provision resources.
+The [Pulumi Azure provider]({{< relref "./" >}}) uses the Azure SDK to manage and provision resources.
 
-> Pulumi relies on the Azure SDK to authenticate requests from your computer to Azure. Your credentials are never sent to pulumi.com.
+> Pulumi relies on the Azure SDK to authenticate requests from your computer to Azure. Your credentials are never sent
+> to pulumi.com.
 
 We recommend using the [Azure CLI 2.0](https://github.com/Azure/azure-cli), instead of the legacy
 [Azure xPlat CLI](https://github.com/Azure/azure-xplat-cli).  We support both, but we recommend upgrading.
@@ -17,7 +17,8 @@ The below instructions assume that you are using the Azure CLI 2.0.
 
 Pulumi can authenticate to Azure using a Service Principal or the Azure CLI.
 
-If you're running the Pulumi CLI locally, in a developer scenario, we recommend using the Azure CLI.  For team environments, particularly in CI, a Service Principal is recommended.
+If you're running the Pulumi CLI locally, in a developer scenario, we recommend using the Azure CLI.  For team
+environments, particularly in CI, a Service Principal is recommended.
 
 > **Note:** Authenticating using the CLI will not work for Service Principal logins (e.g.,
 > `az login --service-principal`).  For such cases, authenticate using the Service Principal method instead.
@@ -67,10 +68,10 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
 2. Set them using configuration
 
     ```bash
-    $ pulumi config set azure-native:clientId <clientID>
-    $ pulumi config set azure-native:clientSecret <clientSecret> --secret
-    $ pulumi config set azure-native:tenantId <tenantID>
-    $ pulumi config set azure-native:subscriptionId <subscriptionId>
+    $ pulumi config set azure:clientId <clientID>
+    $ pulumi config set azure:clientSecret <clientSecret> --secret
+    $ pulumi config set azure:tenantId <tenantID>
+    $ pulumi config set azure:subscriptionId <subscriptionId>
     ```
 
 ### Creating a Service Principal
@@ -124,10 +125,10 @@ $ export ARM_SUBSCRIPTION_ID="ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
 Or configuration variables, if you prefer that they be stored alongside your Pulumi stack for easy multi-user access:
 
 ```bash
-$ pulumi config set azure-native:clientId "WWWWWWWW-WWWW-WWWW-WWWW-WWWWWWWWWWWW"
-$ pulumi config set azure-native:clientSecret "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" --secret
-$ pulumi config set azure-native:tenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
-$ pulumi config set azure-native:subscriptionId "ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
+$ pulumi config set azure:clientId "WWWWWWWW-WWWW-WWWW-WWWW-WWWWWWWWWWWW"
+$ pulumi config set azure:clientSecret "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" --secret
+$ pulumi config set azure:tenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
+$ pulumi config set azure:subscriptionId "ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
 ```
 
 Remember to pass `--secret` when setting `clientSecret` so that it is properly encrypted.

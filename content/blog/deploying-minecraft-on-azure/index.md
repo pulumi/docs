@@ -1,7 +1,7 @@
 ---
 title: "Deploying Minecraft on Azure"
 date: 2020-11-04
-meta_desc: "Deploy and provision a Minecraft server on Azure with the Pulumi nextgen Azure provider."
+meta_desc: "Deploy and provision a Minecraft server on Azure with the native Pulumi Azure provider."
 meta_image: minecraft-pulumi.png
 authors:
     - sophia-parafina
@@ -11,7 +11,7 @@ tags:
     - Minecraft
 ---
 
-This article demonstrates how to deploy and provision a virtual machine in Azure using the Pulumi [Next Generation Azure provider]({{< relref "/blog/announcing-nextgen-azure-provider" >}}). While there are numerous examples of using the Azure console, the Azure CLI, or ARM templates to deploy and provision virtual machines, we'll use Python to implement a repeatable deployment.
+This article demonstrates how to deploy and provision a virtual machine in Azure using the Pulumi [Azure-Native provider]({{< relref "/blog/full-coverage-of-azure-resources-with-azure-native" >}}). While there are numerous examples of using the Azure console, the Azure CLI, or ARM templates to deploy and provision virtual machines, we'll use Python to implement a repeatable deployment.
 
 <!--more-->
 
@@ -190,11 +190,10 @@ export("Minecraft Server IP Address", public_ip_addr.ip_address)
 
 This article demonstrates the process to create a virtual machine and provision it with a Minecraft server. However, there's always room for improvement, such as adding Azure Disk Storage to provide durable storage, add a configuration file to customize the server, and automatically updating the server jar file when a new version is released. All these options are available to you when you build your infrastructure with code.
 
-You can download the [code](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-minecraft-server) from the Pulumi examples repository on Github.
+You can download the [code](https://github.com/pulumi/examples/tree/master/azure-py-minecraft-server) from the Pulumi examples repository on Github.
 
 See these resources to learn more about deploying infrastructure on Azure.
 
 - [Get Started with Azure]({{< relref "/docs/get-started/azure" >}})
-- [Azure Cloud Provider]({{< relref "/docs/intro/cloud-providers/azure" >}})
-- [Azure Next Generation Provider]({{< relref "/docs/reference/pkg/azure-nextgen" >}})
+- [Azure-Native Provider]({{< relref "/docs/reference/pkg/azure-native" >}})
 - [Dynamic Providers]({{< relref "/blog/dynamic-providers" >}})

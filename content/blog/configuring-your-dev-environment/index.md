@@ -675,7 +675,7 @@ $ pulumi new https://github.com/pulumi/examples/tree/master/aws-py-webserver
 This command will download the project from Github, create a virtual environment and activate it, and download all the python package dependencies. You're ready to go and deploy with `pulumi up`. Want more? How about deploying Kubernetes on Azure with python?
 
 ```bash
-$ pulumi new https://github.com/pulumi/examples/tree/master/azure-nextgen-py-aks
+$ pulumi new https://github.com/pulumi/examples/tree/master/azure-py-aks
 ```
 
 You can use the examples as a starting point for building your cloud infrastructure and add resources documented on Pulumi's [API reference]({{< relref "/docs/reference/pkg" >}}) and [Guides]({{< relref "/docs/guides" >}}).

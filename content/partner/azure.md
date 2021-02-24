@@ -12,48 +12,35 @@ hero:
         Microsoft Azure infrastructure, including containers, serverless functions, and
         infrastructure using modern programming languages.
     cta_text: See what's new
-    cta_url: "/blog/announcing-nextgen-azure-provider"
+    cta_url: "/blog/full-coverage-of-azure-resources-with-azure-native"
     ide:
         tabs:
             - title: index.ts
               language: typescript
               code: |
-                import * as resources from "@pulumi/azure-nextgen/resources/latest";
-                import * as storage from "@pulumi/azure-nextgen/storage/latest";
+                import * as resources from "@pulumi/azure-native/resources";
+                import * as storage from "@pulumi/azure-native/storage";
 
-                const resourceGroup = new resources.ResourceGroup("resourceGroup", {
-                    resourceGroupName: "my-rg",
-                    location: "WestUS",
-                });
+                const resourceGroup = new resources.ResourceGroup("resourceGroup");
 
                 const storageAccount = new storage.StorageAccount("sa", {
                     resourceGroupName: resourceGroup.name,
-                    accountName: "mystorageaccount",
-                    location: resourceGroup.location,
                     sku: {
                         name: "Standard_LRS",
-                        tier: "Standard",
                     },
                     kind: "StorageV2",
                 });
             - title: __main__.py
               language: python
               code: |
-                from pulumi_azure_nextgen.storage import latest as storage
-                from pulumi_azure_nextgen.resources import latest as resources
+                from pulumi_azure_native import storage
+                from pulumi_azure_native import resources
 
-                resource_group = resources.ResourceGroup('resource_group',
-                    resource_group_name='my-rg',
-                    location='WestUS')
+                resource_group = resources.ResourceGroup('resource_group')
 
                 account = storage.StorageAccount('sa',
-                    account_name='mystorageaccount',
                     resource_group_name=resource_group.name,
-                    location=resource_group.location,
-                    sku=storage.SkuArgs(
-                        name='Standard_LRS',
-                        tier='Standard',
-                    ),
+                    sku=storage.SkuArgs(name='Standard_LRS'),
                     kind='StorageV2')
             - title: main.go
               language: go
@@ -61,28 +48,22 @@ hero:
                 package main
 
                 import (
-                    resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
-                    storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+                    "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+                    "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
                     "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
                 )
 
                 func main() {
                     pulumi.Run(func(ctx *pulumi.Context) error {
-                        resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup", &resources.ResourceGroupArgs{
-                            ResourceGroupName: pulumi.String("my-rg"),
-                            Location:          pulumi.String("WestUS"),
-                        })
+                        resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup")
                         if err != nil {
                             return err
                         }
 
                         account, err := storage.NewStorageAccount(ctx, "sa", &storage.StorageAccountArgs{
                             ResourceGroupName: resourceGroup.Name,
-                            AccountName:       pulumi.String("mystorageaccount"),
-                            Location:          resourceGroup.Location,
                             Sku: &storage.SkuArgs{
                                 Name: pulumi.String("Standard_LRS"),
-                                Tier: pulumi.String("Standard"),
                             },
                             Kind: pulumi.String("StorageV2"),
                         })
@@ -94,30 +75,20 @@ hero:
               language: csharp
               code: |
                 using Pulumi;
-                using Pulumi.AzureNextGen.Resources.Latest;
-                using Pulumi.AzureNextGen.Storage.Latest;
-                using Pulumi.AzureNextGen.Storage.Latest.Inputs;
+                using Pulumi.AzureNative.Resources;
+                using Pulumi.AzureNative.Storage;
+                using Pulumi.AzureNative.Storage.Inputs;
 
                 class MyStack : Stack
                 {
                     public MyStack()
                     {
-                        var resourceGroup = new ResourceGroup("resourceGroup", new ResourceGroupArgs
-                        {
-                            ResourceGroupName = "my-rg",
-                            Location = "WestUS"
-                        });
+                        var resourceGroup = new ResourceGroup("resourceGroup");
 
                         var storageAccount = new StorageAccount("sa", new StorageAccountArgs
                         {
                             ResourceGroupName = resourceGroup.Name,
-                            AccountName = "mystorageaccount",
-                            Location = resourceGroup.Location,
-                            Sku = new SkuArgs
-                            {
-                                Name = "Standard_LRS",
-                                Tier = "Standard"
-                            },
+                            Sku = new SkuArgs { Name = "Standard_LRS" },
                             Kind = "StorageV2"
                         });
                     }
@@ -131,7 +102,7 @@ azure_overview:
     - Keep your cloud secure and in compliance by enforcing policies on every deployment.
     - Codify best practices and policies then share them with your team or community as self-service architectures.
   cta: Learn More
-  cta_url: "/blog/announcing-nextgen-azure-provider"
+  cta_url: "/blog/full-coverage-of-azure-resources-with-azure-native"
 
 arm2pulumi:
   title: ARM &rarr; Pulumi
@@ -150,7 +121,7 @@ detail_sections:
         Resource Manager giving you the full power of Azure at your fingertips. Every
         property of each resource is always represented in the SDKs.
     cta: Learn More
-    cta_url: "/blog/announcing-nextgen-azure-provider"
+    cta_url: "/blog/full-coverage-of-azure-resources-with-azure-native"
     items:
         - title: Everything In One Place
           description: The SDKs include full coverage for Azure services, including Azure Static Web Apps, Azure Synapse Analytics, Azure Logic Apps, Azure Service Fabric, Azure Blockchain Service, Azure API Management, and dozens of other services.
@@ -171,11 +142,11 @@ detail_sections:
   - title: Always Up to Date
     description: |
         Pulumi's Microsoft Azure provider is designed to stay up-to-date with additions and changes
-        to Azure APIs. The `azure-nextgen` SDK is generated automatically from the Azure API
+        to Azure APIs. The `azure-native` SDK is generated automatically from the Azure API
         specifications published by Microsoft, which means you'll always have access to the latest
         Azure features and improvements.
     cta: Learn More
-    cta_url: "/blog/announcing-nextgen-azure-provider"
+    cta_url: "/blog/full-coverage-of-azure-resources-with-azure-native"
     items:
         - title: Auto Generated
           description: An automated pipeline releases updated resources within hours after any current API specifications are merged. Auto generated means less manual implementation and fewer chances for bugs, meaning a high fidelity, high quality experience.

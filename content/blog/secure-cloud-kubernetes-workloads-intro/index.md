@@ -88,7 +88,7 @@ Pulumi's first-class support for Kubernetes Helm Charts and AWS resources means 
 
 Azure AKS uses a different approach to assign roles to pods. [AAD Pod Identity](https://github.com/Azure/aad-pod-identity) project is an add-on deployed into your AKS cluster. AAD Pod Identity includes a Kubernetes [CustomResource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), which the running components of AAD Pod Identity watch. You can then create a [Service Principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals) and assign it to your pod.
 
-Again, Pulumi has first-class support for all of Azure's resources via the [Azure NextGen Provider](https://github.com/pulumi/pulumi-azure-nextgen). Watch out for the rest of the series for a real world example!
+Again, Pulumi has first-class support for all of Azure's resources via the [native Azure Provider](https://github.com/pulumi/pulumi-azure-native). Watch out for the rest of the series for a real world example!
 
 ### Google Cloud GKE
 

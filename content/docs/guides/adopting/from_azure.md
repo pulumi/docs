@@ -23,56 +23,30 @@ For instance, let's say your infrastructure team has provisioned your Azure stor
 
 Instead, you can look up that ARM deployment by name and use one of its output values. The following example reads a deployment by its fully qualified ID and then uses the exported `storageAccountName` value to upload a private zipfile to blob storage, containing a `wwwroot/` directory locally:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let azure = require("@pulumi/azure");
-let pulumi = require("@pulumi/pulumi");
-
-// Read the deployment and the storage account name.
-let deployment = azure.core.TemplateDeployment.get("myStorageDeployment",
-    "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Resources/deployments/myStorageDeployment62ba53a3");
-let storageAccountName = deployment.outputs["storageAccountName"];
-
-// Create a blob for our own deployment.
-let blob = new azure.storage.ZipBlob("myBlob", {
-    storageAccountName: storageAccountName,
-    storageContainerName: new azure.storage.Container("myStorageContainer", {
-        storageAccountName: storageAccountName,
-        containerAccessType: "private",
-    }).name,
-    type: "block",
-    content: new pulumi.asset.FileArchive("wwwroot"),
-});
-
-module.exports = {
-    blobUrl: blob.url,
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
-import * as azure from "@pulumi/azure";
+import * as resources from "@pulumi/azure-native/resources";
+import * as storage from "@pulumi/azure-native/storage";
 import * as pulumi from "@pulumi/pulumi";
 
 // Read the deployment and the storage account name.
-const deployment = azure.core.TemplateDeployment.get("myStorageDeployment",
-    "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Resources/deployments/myStorageDeployment62ba53a3");
-const storageAccountName = deployment.outputs["storageAccountName"];
+const deployment = resources.Deployment.get("myStorageDeployment",
+    "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg/providers/Microsoft.Resources/deployments/myStorageDeployment62ba53a3");
+const storageAccountName = deployment.properties.outputs["storageAccountName"].value;
 
 // Create a blob for our own deployment.
-const blob = new azure.storage.ZipBlob("myBlob", {
-    storageAccountName: storageAccountName,
-    storageContainerName: new azure.storage.Container("myStorageContainer", {
-        storageAccountName: storageAccountName,
-        containerAccessType: "private",
+const blob = new storage.Blob("zip", {
+    resourceGroupName: "myrg",
+    accountName: storageAccountName,
+    containerName: new storage.BlobContainer("myStorageContainer", {
+        resourceGroupName: "myrg",
+        accountName: storageAccountName,
+        containerName: "files",
     }).name,
-    type: "block",
-    content: new pulumi.asset.FileArchive("wwwroot"),
+    source: new pulumi.asset.FileArchive("wwwroot"),
 });
 
 export const blobUrl = blob.url;
@@ -83,22 +57,24 @@ export const blobUrl = blob.url;
 
 ```python
 import pulumi
-import pulumi_azure as azure
+from pulumi_azure_native import storage
+from pulumi_azure_native import resources
 
 # Read the deployment and the storage account name.
-deployment = azure.core.TemplateDeployment.get('myStorageDeployment',
-    '/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Resources/deployments/myStorageDeployment62ba53a3')
-storage_account_name = deployment.outputs['storageAccountName']
+deployment = resources.Deployment.get('myStorageDeployment',
+    '/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg/providers/Microsoft.Resources/deployments/myStorageDeployment62ba53a3')
+storage_account_name = deployment.properties.outputs['storageAccountName'].value
 
 # Create a blob for our own deployment.
-blob = azure.storage.ZipBlob('myBlob',
-    storage_account_name=storage_account_name,
-    storage_container_name=azure.storage.Container('myStorageContainer',
-        storage_account_name=storage_account_name,
-        container_access_type='private',
+blob = storage.Blob('zip',
+    resource_group_name='myrg',
+    account_name=storage_account_name,
+    container_name=storage.BlobContainer('myStorageContainer',
+        resource_group_name='myrg',
+        account_name=storage_account_name,
+        container_name='files'
     ).name,
-    type='block',
-    content=pulumi.asset.FileArchive('wwwroot'),
+    source=pulumi.asset.FileArchive('wwwroot'),
 )
 
 pulumi.export('blob_url', blob.url)
@@ -111,35 +87,36 @@ pulumi.export('blob_url', blob.url)
 package main
 
 import (
-    "github.com/pulumi/pulumi-azure/sdk/go/azure/core"
-    "github.com/pulumi/pulumi-azure/sdk/go/azure/storage"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+    resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+	  storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
         // Read the deployment and the storage account name.
-        deployment, err := core.GetTemplateDeployment(ctx, "myStorageDeployment",
-            "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Resources/deployments/myStorageDeployment62ba53a3",
+        deployment, err := resources.GetDeployment(ctx, "myStorageDeployment",
+            "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg/providers/Microsoft.Resources/deployments/myStorageDeployment62ba53a3",
             nil)
         if err != nil {
             return nil
         }
-        storageAccountName := deployment.Outputs["storageAccountName"].(string)
+        storageAccountName := deployment.Properties.Outputs["storageAccountName"].Value.(string)
 
         // Create a blob for our own deployment.
-        cont, err := storage.NewContainer(ctx, "myStorageContainer", &storage.ContainerArgs{
-            StorageAccountName: pulumi.String(storageAccountName),
-            ContainerAccessType: pulumui.String("private"),
+        cont, err := storage.NewBlobContainer(ctx, "myStorageContainer", &storage.BlobContainerArgs{
+            ResourceGroupName: pulumi.String("myrg"),
+            AccountName: pulumi.String(storageAccountName),
+            ContainerName: pulumi.String("files"),
         })
         if err != nil {
             return err
         }
-        blob, err := storage.NewZipBlob(ctx, "myBlob", &storage.ZipBlobArgs{
-            StorageAccountName: pulumi.String(storageAccountName),
-            StorageContainerName: cont.Name,
-            Type: pulumi.String("block"),
-            Content: pulumi.NewFileArchive("wwwroot"),
+        blob, err := storage.NewBlob(ctx, "zip", &storage.BlobArgs{
+            ResourceGroupName: pulumi.String("myrg"),
+            AccountName: pulumi.String(storageAccountName),
+            ContainerName: cont.Name,
+            Source: pulumi.NewFileArchive("wwwroot"),
         })
         if err != nil {
             return err
@@ -156,42 +133,42 @@ func main() {
 
 ```csharp
 using System.Collections.Generic;
-using System.Threading.Tasks;
-
 using Pulumi;
-using Core = Pulumi.Azure.Core;
-using Storage = Pulumi.Azure.Storage;
 
-class Program
+using Pulumi.AzureNative.Storage;
+using TemplateDeployment = Pulumi.AzureNative.Resources.Deployment;
+
+class MyStack : Stack
 {
-    static Task<int> Main()
+    public MyStack()
     {
-        return Deployment.RunAsync(async () =>
+        // Read the deployment and the storage account name.
+        var deployment = TemplateDeployment.Get("myStorageDeployment",
+            "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg/providers/Microsoft.Resources/deployments/myStorageDeployment62ba53a3");
+        var storageAccountName = deployment.Properties
+            .Apply(v => ((IDictionary<string, object>)v.Outputs)["storageAccountName"])
+            .Apply(v => (string)((IDictionary<string, object>)v)["value"]);
+
+        // Create a blob for our own deployment.
+        var blob = new Blob("zip", new BlobArgs
         {
-            // Read the deployment and the storage account name.
-            var deployment = Core.TemplateDeployment.Get("myStorageDeployment",
-                "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Resources/deployments/myStorageDeployment62ba53a3");
-            var storageAccountName = (string)deployment.Outputs["storageAccountName"];
-
-            // Create a blob for our own deployment.
-            var blob = new Storage.ZipBlob("myBlob", new Storage.ZipBlobArgs
+            ResourceGroupName = "myrg",
+            AccountName = storageAccountName,
+            ContainerName = new BlobContainer("myStorageContainer", new BlobContainerArgs
             {
-                StorageAccountName = storageAccountName,
-                StorageContainerName = new Storage.Container("myStorageContainer", new Storage.ContainerArgs
-                {
-                    StorageAccountName = storageAccountName,
-                    ContainerAccessType = "private",
-                }.Name,
-                Type = "block",
-                Content = new FileArchive("wwwroot"),
-            });
-
-            return new Dictionary<string, object?>({
-                { "blobUrl", blob.Url },
-            });
+                ResourceGroupName = "myrg",
+                AccountName = storageAccountName,
+                ContainerName = "files",
+            }).Name,
+            Source = new FileArchive("wwwroot"),
         });
+
+        this.BlobUrl = blob.Url;
     }
+
+    [Output] public Output<string> BlobUrl { get; set; }
 }
+
 ```
 
 {{% /choosable %}}
@@ -200,452 +177,65 @@ class Program
 
 All we need to do is run `pulumi up` and the Pulumi runtime will know how to query the ARM deployment to retrieve its output values. In this case, the deployment and all of its resources are treated entirely as read-only, and Pulumi will never attempt to modify any of them.
 
-Notice that the ID is of the format: `/subscriptions/<YOUR-SUBSCRIPTION-ID>/resourceGroups/<DEPLOYMENT-RG-ID>/providers/Microsoft.Resources/deployments/<DEPLOYMENT-ID>`. Consult the Azure CLI or portal to find this ID.
+Notice that the ID is of the format: `/subscriptions/<YOUR-SUBSCRIPTION-ID>/resourceGroups/<DEPLOYMENT-RG-NAME>/providers/Microsoft.Resources/deployments/<DEPLOYMENT-NAME>`. Consult the Azure CLI or portal to find this ID.
 
-> Although we've hard-coded the ARM deployment ID here, it's common to dynamically compute a name using unique per-stack information, like the stack name, Azure location, or other configuration variables.
+> Although we've hard-coded the ARM deployment ID here, it's common to dynamically compute a name using unique per-stack information, like the stack name, subscription ID, or other configuration variables.
 
 ## Converting Stacks and Resources
 
-Let's say you want to migrate from ARM to Pulumi and that simply co-existing side-by-side as shown above isn't sufficient. There are two approaches:
+Let's say you want to migrate from ARM to Pulumi and that simply co-existing side-by-side as shown above isn't sufficient.
 
-1. Deploy your ARM template using Pulumi.
-2. Migrate resources from your ARM deployments to Pulumi code.
-
-Depending on what you're trying to accomplish, you may prefer to start with (1) and move to (2) incrementally, or simply jump straight to (2) directly.
-
-### Deploy Templates Using Pulumi
-
-The Pulumi Azure package [provides an ARM TemplateDeployment]({{< relref "/docs/reference/pkg/azure/core/templatedeployment" >}}) resource type. Using this type, you can deploy an existing ARM template written in JSON without needing to make any edits to it.
-
-For instance, this code deploys a simple ARM template using the given parameters, and exports the resulting Storage Account name:
-
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-let pulumi = require("@pulumi/pulumi");
-let azure = require("@pulumi/azure");
-
-let resourceGroup = new azure.core.ResourceGroup("myRG");
-
-let template = `{
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "storageAccountType": {
-      "type": "string",
-      "defaultValue": "Standard_LRS",
-      "allowedValues": [
-        "Standard_LRS",
-        "Standard_GRS",
-        "Standard_ZRS"
-      ],
-      "metadata": {
-        "description": "Storage Account type"
-      }
-    }
-  },
-  "variables": {
-    "location": "[resourceGroup().location]",
-    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'storage')]",
-    "apiVersion": "2015-06-15"
-  },
-  "resources": [
-    {
-      "type": "Microsoft.Storage/storageAccounts",
-      "name": "[variables('storageAccountName')]",
-      "apiVersion": "[variables('apiVersion')]",
-      "location": "[variables('location')]",
-      "properties": {
-        "accountType": "[parameters('storageAccountType')]"
-      }
-    }
-  ],
-  "outputs": {
-    "storageAccountName": {
-      "type": "string",
-      "value": "[variables('storageAccountName')]"
-    }
-  }
-}
-`;
-
-let deployment = new azure.core.TemplateDeployment("myStorageDeployment", {
-    resourceGroupName: resourceGroup.name,
-    templateBody: template,
-    parameters: {
-        "storageAccountType": "Standard_GRS",
-    },
-    deploymentMode: "Incremental",
-});
-
-module.exports = {
-    storageAccountName = deployment.outputs["storageAccountName"],
-};
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const resourceGroup = new azure.core.ResourceGroup("myRG");
-
-const template = `{
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "storageAccountType": {
-      "type": "string",
-      "defaultValue": "Standard_LRS",
-      "allowedValues": [
-        "Standard_LRS",
-        "Standard_GRS",
-        "Standard_ZRS"
-      ],
-      "metadata": {
-        "description": "Storage Account type"
-      }
-    }
-  },
-  "variables": {
-    "location": "[resourceGroup().location]",
-    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'storage')]",
-    "apiVersion": "2015-06-15"
-  },
-  "resources": [
-    {
-      "type": "Microsoft.Storage/storageAccounts",
-      "name": "[variables('storageAccountName')]",
-      "apiVersion": "[variables('apiVersion')]",
-      "location": "[variables('location')]",
-      "properties": {
-        "accountType": "[parameters('storageAccountType')]"
-      }
-    }
-  ],
-  "outputs": {
-    "storageAccountName": {
-      "type": "string",
-      "value": "[variables('storageAccountName')]"
-    }
-  }
-}
-`;
-
-const deployment = new azure.core.TemplateDeployment("myStorageDeployment", {
-    resourceGroupName: resourceGroup.name,
-    templateBody: template,
-    parameters: {
-        "storageAccountType": "Standard_GRS",
-    },
-    deploymentMode: "Incremental",
-});
-
-export const storageAccountName = deployment.outputs["storageAccountName"];
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-import pulumi
-import pulumi_azure as azure
-
-resource_group = azure.core.ResourceGroup('myRG')
-
-template = """{
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "storageAccountType": {
-      "type": "string",
-      "defaultValue": "Standard_LRS",
-      "allowedValues": [
-        "Standard_LRS",
-        "Standard_GRS",
-        "Standard_ZRS"
-      ],
-      "metadata": {
-        "description": "Storage Account type"
-      }
-    }
-  },
-  "variables": {
-    "location": "[resourceGroup().location]",
-    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'storage')]",
-    "apiVersion": "2015-06-15"
-  },
-  "resources": [
-    {
-      "type": "Microsoft.Storage/storageAccounts",
-      "name": "[variables('storageAccountName')]",
-      "apiVersion": "[variables('apiVersion')]",
-      "location": "[variables('location')]",
-      "properties": {
-        "accountType": "[parameters('storageAccountType')]"
-      }
-    }
-  ],
-  "outputs": {
-    "storageAccountName": {
-      "type": "string",
-      "value": "[variables('storageAccountName')]"
-    }
-  }
-}
-"""
-
-deployment = azure.core.TemplateDeployment('myStorageDeployment',
-    resource_group_name=resource_group.name,
-    template_body=template,
-    parameters={
-        'storageAccountType': 'Standard_GRS',
-    },
-    deployment_mode='Incremental',
-)
-
-pulumi.export('storage_account_name', deployment.outputs["storageAccountName"])
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-package main
-
-import (
-    "github.com/pulumi/pulumi-azure/sdk/go/azure/core"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
-)
-
-const (
-    template = `{
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "storageAccountType": {
-      "type": "string",
-      "defaultValue": "Standard_LRS",
-      "allowedValues": [
-        "Standard_LRS",
-        "Standard_GRS",
-        "Standard_ZRS"
-      ],
-      "metadata": {
-        "description": "Storage Account type"
-      }
-    }
-  },
-  "variables": {
-    "location": "[resourceGroup().location]",
-    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'storage')]",
-    "apiVersion": "2015-06-15"
-  },
-  "resources": [
-    {
-      "type": "Microsoft.Storage/storageAccounts",
-      "name": "[variables('storageAccountName')]",
-      "apiVersion": "[variables('apiVersion')]",
-      "location": "[variables('location')]",
-      "properties": {
-        "accountType": "[parameters('storageAccountType')]"
-      }
-    }
-  ],
-  "outputs": {
-    "storageAccountName": {
-      "type": "string",
-      "value": "[variables('storageAccountName')]"
-    }
-  }
-}
-)
-
-func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        resourceGroup, err := core.NewResourceGroup(ctx, "myRG", nil)
-        if err != nil {
-            return err
-        }
-
-        deployment, err := core.NewTemplateDeployment(ctx, "myStorageDeployment", &core.TemplateDeploymentArgs{
-            ResourceGroupName: resourceGroup.Name,
-            TemplateBody: pulumi.String(template),
-            Parameters: pulumi.Map{
-                "storageAccountType": pulumi.String("Standard_GRS"),
-            },
-            DeploymentMode: pulumi.String("Incremental"),
-        })
-        if err != nil {
-            return err
-        }
-
-        ctx.Export("storageAccountName", network.Outputs.MapIndex(pulumi.String("storageAccountName")))
-        return nil
-    })
-}
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
-using Pulumi;
-
-class Program
-{
-    static Task<int> Main()
-    {
-        return Deployment.RunAsync(() => {
-            var template = @""{
-  ""$schema"": ""https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"",
-  ""contentVersion"": ""1.0.0.0"",
-  ""parameters"": {
-    ""storageAccountType"": {
-      ""type"": ""string"",
-      ""defaultValue"": ""Standard_LRS"",
-      ""allowedValues"": [
-        ""Standard_LRS"",
-        ""Standard_GRS"",
-        ""Standard_ZRS""
-      ],
-      ""metadata"": {
-        ""description"": ""Storage Account type""
-      }
-    }
-  },
-  ""variables"": {
-    ""location"": ""[resourceGroup().location]"",
-    ""storageAccountName"": ""[concat(uniquestring(resourceGroup().id), 'storage')]"",
-    ""apiVersion"": ""2015-06-15""
-  },
-  ""resources"": [
-    {
-      ""type"": ""Microsoft.Storage/storageAccounts"",
-      ""name"": ""[variables('storageAccountName')]"",
-      ""apiVersion"": ""[variables('apiVersion')]"",
-      ""location"": ""[variables('location')]"",
-      ""properties"": {
-        ""accountType"": ""[parameters('storageAccountType')]""
-      }
-    }
-  ],
-  ""outputs"": {
-    ""storageAccountName"": {
-      ""type"": ""string"",
-      ""value"": ""[variables('storageAccountName')]""
-    }
-  }
-}"";
-
-            var resourceGroup = new Core.ResourceGroup("myRG")
-
-            var deployent = new Core.TemplateDeployment("myStorageDeployment", new Core.TemplateDeploymentArgs
-            {
-                ResourceGroupName = resourceGroup.Name,
-                TemplateBody = template,
-                Parameters = new Dictionary<string, object?>
-                {
-                    { "storageAccountType", "Standard_GRS" },
-                },
-                DeploymentMode = "Incremental",
-            })
-
-            return new Dictionary<string, object?>
-            {
-                { "storageAccountName", network.Outputs.Apply(nw => nw["storageAccountName"]) },
-            };
-        });
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-> We could have just as well read the template off disk, instead of putting it right in the source code.
-
-Notice here that Pulumi is actually deploying the resource group itself which the ARM template deployment then uses, since the deployment itself needs its own resource group. This demonstrates the ability to mix resources in the same Pulumi program. We could have used an existing ID instead if we wanted.
-
-After deploying this, Pulumi will see the ARM deployment as an opaque single resource. That is, it won't assume control of individual resources inside of the stack. For that, you will need to migrate and/or import individual resources, per the following section:
-
-```bash
-$ pulumi up
-Updating (dev):
-     Type                              Name                 Status
- +   pulumi:pulumi:Stack               arm-tmpl-dev         created
- +   ├─ azure:core:ResourceGroup       myRG                 created
- +   └─ azure:core:TemplateDeployment  myStorageDeployment  created
-
-Outputs:
-    storageAccountName: "e9ejbnipspvecstorage"
-
-Resources:
- + 3 created
-```
-
-From here, you can change the template body and/or surrounding code, rerun `pulumi up`, and the right incremental changes will take place.
-
-### Migrate Resources into Code
-
-Now let's see how to actually migrate your ARM-managed resources fully to Pulumi. This requires rewriting the ARM template JSON as real code, either entirely, or one resource at a time. Because you can query deployment outputs and provide parameters in code, you can more easily intermingle ARM-managed resources alongside Pulumi ones. Cyclic dependencies, of course, cannot be expressed, since the entire ARM deployment is seen as one opaque resource to Pulumi.
-
-> Because Pulumi's Azure resource model doesn't match ARM's resource projections exactly, there is no tool currently available to automate this translation. A good approach is to copy the ARM template definition into your code and then rewrite it to your language of choice, translating resource and property names as appropriate.
-
-Note that you can always skip the intermediate step of deploying your ARM template using Pulumi and go straight to migrating your resources. For deployments with many resources, however, doing this in multiple incremental steps can help minimize disruption and allow you to do this migration more slowly over time.
+Let's see how to actually migrate your ARM-managed resources fully to Pulumi. This requires rewriting the ARM template JSON as your favorite programming language code, either entirely, or one resource at a time. Because you can query deployment outputs and provide parameters in code, you can more easily intermingle ARM-managed resources alongside Pulumi ones. Cyclic dependencies, of course, cannot be expressed, since the entire ARM deployment is seen as one opaque resource to Pulumi.
 
 Our example below will result in a Pulumi program that creates a Storage Account equivalent to the above ARM template example. The example will also use [import]({{< relref "import" >}}) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
 
-> This requires that we are using ARM's "incremental" deployment mode. This is the default mode, however, if you've specified that your ARM deployment should use "complete" mode, the import flow below will be complicated because ARM prefers to delete any resources it doesn't recognize as belonging to the template. [More about ARM deployment modes](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deployment-modes).
+### Generate Code with Arm2Pulumi
 
-To adopt the ARM resources under Pulumi's control, we will rewrite the ARM template in code, and use `import` IDs. For this example, recall that our Storage Account name was `"e9ejbnipspvecstorage"`. Also, in this example, there is just one resource, so we can simply delete the ARM template and deployment in its entirety and replace it with a Pulumi definition of the Storage Account. In cases where multiple resources exist, you can delete them one by one, until the ARM deployment is eventually empty.
+With the Next Generation Pulumi Azure Provider, it's possible to convert ARM templates into Pulumi program code using [arm2pulumi]({{< relref "/arm2pulumi" >}}). Simply provide your ARM template
+and get back a Pulumi program in C#, TypeScript, Python, or Go.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+Let's say you have an existing ARM Template shown below.
 
-{{% choosable language javascript %}}
-
-```javascript
-let azure = require("@pulumi/azure");
-
-let resourceGroup = new azure.core.ResourceGroup("myRG");
-
-let storageAccount = new azure.storage.Account("myStorageAccount", {
-    resourceGroupName: resourceGroup.name,
-    name: "e9ejbnipspvecstorage",
-    accountTier: "Standard",
-    accountReplicationType: "GRS",
-}, { import: "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Storage/storageAccounts/e9ejbnipspvecstorage" });
-
-module.exports = {
-    storageAccountName: storageAccount.name,
-};
+```json
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "name": "storagecreatedbyarm",
+            "location": "westeurope",
+            "sku": {
+                "name": "Standard_LRS"
+            },
+            "kind": "StorageV2"
+        }
+    ]
+}
 ```
 
-{{% /choosable %}}
+Navigate to the [`arm2pulumi`](https://www.pulumi.com/arm2pulumi/) page, select the Custom tab, paste your template to the editor, select the desired language, and click the Convert button. You will receive the Pulumi program that is equivalent to the ARM template.
+
+{{< chooser language "typescript,python,go,csharp" >}}
+
 {{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+import * as azure_native from "@pulumi/azure-native";
 
-const resourceGroup = new azure.core.ResourceGroup("myRG");
-
-const storageAccount = new azure.storage.Account("myStorageAccount", {
-    resourceGroupName: resourceGroup.name,
-    name: "e9ejbnipspvecstorage",
-    accountTier: "Standard",
-    accountReplicationType: "GRS",
-}, { import: "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Storage/storageAccounts/e9ejbnipspvecstorage" });
-
-export const storageAccountName = storageAccount.name;
+const config = new pulumi.Config();
+const resourceGroupNameParam = config.require("resourceGroupNameParam");
+const storagecreatedbyarm = new azure_native.storage.StorageAccount("storagecreatedbyarm", {
+    accountName: "storagecreatedbyarm",
+    kind: "StorageV2",
+    location: "westeurope",
+    resourceGroupName: resourceGroupNameParam,
+    sku: {
+        name: "Standard_LRS",
+    },
+});
 ```
 
 {{% /choosable %}}
@@ -653,19 +243,18 @@ export const storageAccountName = storageAccount.name;
 
 ```python
 import pulumi
-import pulumi_azure as azure
+import pulumi_azure_native as azure_native
 
-resource_group = azure.core.ResourceGroup('myRG')
-
-storage_account = azure.storage.Account('myStorageAccount'
-    resource_group_name=resource_group.name,
-    name='e9ejbnipspvecstorage',
-    accountTier: 'Standard',
-    accountReplicationType: 'GRS',
-    opts=ResourceOptions(import_='/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Storage/storageAccounts/e9ejbnipspvecstorage')
-)
-
-pulumi.export('storage_account_name', storage_account.name)
+config = pulumi.Config()
+resource_group_name_param = config.require("resourceGroupNameParam")
+storagecreatedbyarm = azure_native.storage.StorageAccount("storagecreatedbyarm",
+    account_name="storagecreatedbyarm",
+    kind="StorageV2",
+    location="westeurope",
+    resource_group_name=resource_group_name_param,
+    sku=azure_native.storage.SkuArgs(
+        name="Standard_LRS",
+    ))
 ```
 
 {{% /choosable %}}
@@ -675,34 +264,29 @@ pulumi.export('storage_account_name', storage_account.name)
 package main
 
 import (
-    "github.com/pulumi/pulumi-azure/sdk/go/azure/core"
-    "github.com/pulumi/pulumi-azure/sdk/go/azure/storage"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+	"github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        resourceGroup, err := core.NewResourceGroup(ctx, "myRG", nil)
-        if err != nil {
-            return err
-        }
-
-        storageAccount, err := storage.NewAccount(ctx, "myStorageAccount",
-            &storage.AccountArgs{
-                ResourceGroupName: resourceGroup.Name,
-                Name: pulumi.String("e9ejbnipspvecstorage"),
-                AccountTier: pulumi.String("Standard"),
-                AccountReplicationType: pulumi.String("GRS"),
-            },
-            pulumi.Import(pulumi.ID("/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Storage/storageAccounts/e9ejbnipspvecstorage")),
-        })
-        if err != nil {
-            return err
-        }
-
-        ctx.Export("storageAccountName", storageAccount.Name)
-        return nil
-    })
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		resourceGroupNameParam := cfg.Require("resourceGroupNameParam")
+		_, err := storage.NewStorageAccount(ctx, "storagecreatedbyarm", &storage.StorageAccountArgs{
+			AccountName:       pulumi.String("storagecreatedbyarm"),
+			Kind:              pulumi.String("StorageV2"),
+			Location:          pulumi.String("westeurope"),
+			ResourceGroupName: pulumi.String(resourceGroupNameParam),
+			Sku: &storage.SkuArgs{
+				Name: pulumi.String("Standard_LRS"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 
@@ -710,37 +294,25 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
 using Pulumi;
-using Core = Pulumi.Azure.Core;
-using Storage = Pulumi.Azure.Storage;
+using AzureNative = Pulumi.AzureNative;
 
-class Program
+class MyStack : Stack
 {
-    static Task<int> Main()
+    public MyStack()
     {
-        return Deployment.RunAsync(() => {
-            var resourceGroup = new Core.ResourceGroup("myRG");
-
-            var storageAccount = new Storage.Account("myStorageAccount",
-                new Storage.AccountArgs
-                {
-                    ResourceGroupName = resourceGroup.Name,
-                    Name = "e9ejbnipspvecstorage",
-                    AccountTier = "Standard",
-                    AccountReplicationType = "GRS",
-                },
-                new CustomResourceOptions {
-                    ImportId = "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Storage/storageAccounts/e9ejbnipspvecstorage",
-                },
-            );
-
-            return new Dictionary<string, object?>
+        var config = new Config();
+        var resourceGroupNameParam = config.Require("resourceGroupNameParam");
+        var storagecreatedbyarm = new AzureNative.Storage.StorageAccount("storagecreatedbyarm", new AzureNative.Storage.StorageAccountArgs
+        {
+            AccountName = "storagecreatedbyarm",
+            Kind = "StorageV2",
+            Location = "westeurope",
+            ResourceGroupName = resourceGroupNameParam,
+            Sku = new AzureNative.Storage.Inputs.SkuArgs
             {
-                { "storageAccountName", storageAccount.Name },
-            };
+                Name = "Standard_LRS",
+            },
         });
     }
 }
@@ -750,11 +322,136 @@ class Program
 
 {{< /chooser >}}
 
-> Notice here that we've used the fully qualified resource ID for the import, `"/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Storage/storageAccounts/e9ejbnipspvecstorage"`. If you're having trouble locating this, consult the Azure CLI or console.
+Next, we will adjust the code to adopt the existing resource instead of creating a new one.
 
-After running `pulumi up`, your storage account will become under the control of Pulumi without any disruption, and you can then delete the import directives from your code. All subsequent infrastructure changes you'd like to be made can happen within Pulumi instead of ARM template deployments.
+### Import The Resource
 
-### Using the Next Generation Pulumi Azure Provider
+To adopt the ARM resources under Pulumi's control, we will rewrite the code generated by the tool, and use the `import` ID. For this example, recall that our Storage Account name was `"storagecreatedbyarm"`.
 
-With the Next Generation Pulumi Azure Provider, it's possible to convert ARM templates into Pulumi program code using [arm2pulumi]({{< relref "/arm2pulumi" >}}). Simply provide your ARM template
-and get back a Pulumi program in C#, TypeScript, Python, or Go.
+Create a new Pulumi project, if you don't have one yet, and copy-paste the program from the `arm2pulumi` window. Adjust the code to specify the `import` ID for the storage account.
+
+{{< chooser language "typescript,python,go,csharp" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as azure_native from "@pulumi/azure-native";
+
+const storagecreatedbyarm = new azure_native.storage.StorageAccount("storagecreatedbyarm", {
+    accountName: "storagecreatedbyarm",
+    kind: "StorageV2",
+    location: "westeurope",
+    resourceGroupName: "existing-rg",
+    sku: {
+        name: "Standard_LRS",
+    },
+}, { import: "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/existing-rg/providers/Microsoft.Storage/storageAccounts/storagecreatedbyarm" });
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+config = pulumi.Config()
+resource_group_name_param = config.require("resourceGroupNameParam")
+storagecreatedbyarm = azure_native.storage.StorageAccount("storagecreatedbyarm",
+    account_name="storagecreatedbyarm",
+    kind="StorageV2",
+    location="westeurope",
+    resource_group_name=resource_group_name_param,
+    sku=azure_native.storage.SkuArgs(
+        name="Standard_LRS",
+    ),
+    opts=ResourceOptions(import_='/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/existing-rg/providers/Microsoft.Storage/storageAccounts/storagecreatedbyarm')
+)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		resourceGroupNameParam := cfg.Require("resourceGroupNameParam")
+		_, err := storage.NewStorageAccount(ctx, "storagecreatedbyarm", &storage.StorageAccountArgs{
+			AccountName:       pulumi.String("storagecreatedbyarm"),
+			Kind:              pulumi.String("StorageV2"),
+			Location:          pulumi.String("westeurope"),
+			ResourceGroupName: pulumi.String(resourceGroupNameParam),
+			Sku: &storage.SkuArgs{
+				Name: pulumi.String("Standard_LRS"),
+			},
+		},
+    pulumi.Import(pulumi.ID("/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/existing-rg/providers/Microsoft.Storage/storageAccounts/storagecreatedbyarm")))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var resourceGroupNameParam = config.Require("resourceGroupNameParam");
+        var storagecreatedbyarm = new AzureNative.Storage.StorageAccount("storagecreatedbyarm", new AzureNative.Storage.StorageAccountArgs
+        {
+            AccountName = "storagecreatedbyarm",
+            Kind = "StorageV2",
+            Location = "westeurope",
+            ResourceGroupName = resourceGroupNameParam,
+            Sku = new AzureNative.Storage.Inputs.SkuArgs
+            {
+                Name = "Standard_LRS",
+            },
+        },
+        new CustomResourceOptions {
+            ImportId = "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/existing-rg/providers/Microsoft.Storage/storageAccounts/storagecreatedbyarm",
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+> Notice here that we've used the fully qualified resource ID for the import, `"/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/existing-rg/providers/Microsoft.Storage/storageAccounts/storagecreatedbyarm"`. If you're having trouble locating this, consult the Azure CLI or the Azure portal.
+
+While running `pulumi up` with the code above, you will likely see a warning
+
+```
+  Type                                     Name                 Plan   Info
+  pulumi:pulumi:Stack                      proj-dev
+ =└─ azure-native:storage/StorageAccount  storagecreatedbyarm  import [diff: -accessTier,enableHttpsTrafficOnly,encryption,networkRuleSet
+
+Diagnostics:
+  azure-native:storage:StorageAccount (storagecreatedbyarm):
+    warning: inputs to import do not match the existing resource; importing this resource will fail
+```
+
+This is because the import operation requires explicit definitions for all properties that may have been auto-populated by Azure during the resource creation. You can supress the warning by setting the [`ignoreChanges`](https://pulumi.com/docs/intro/concepts/resources/#ignorechanges) option to `["accessTier","enableHttpsTrafficOnly","encryption","networkRuleSet"]`.
+
+After running `pulumi up` again, your storage account will become under the control of Pulumi without any disruption. All subsequent infrastructure changes you'd like to be made can happen within Pulumi instead of ARM template deployments.
