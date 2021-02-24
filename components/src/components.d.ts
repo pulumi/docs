@@ -76,6 +76,9 @@ export namespace Components {
     'selectClass'?: string;
     'sessions': string;
   }
+  interface PulumiYoutubeAudioPlayer {
+    'videoId': string;
+  }
 }
 
 declare global {
@@ -164,6 +167,12 @@ declare global {
     prototype: HTMLPulumiWebinarFormSelectElement;
     new (): HTMLPulumiWebinarFormSelectElement;
   };
+
+  interface HTMLPulumiYoutubeAudioPlayerElement extends Components.PulumiYoutubeAudioPlayer, HTMLStencilElement {}
+  var HTMLPulumiYoutubeAudioPlayerElement: {
+    prototype: HTMLPulumiYoutubeAudioPlayerElement;
+    new (): HTMLPulumiYoutubeAudioPlayerElement;
+  };
   interface HTMLElementTagNameMap {
     'pulumi-banner': HTMLPulumiBannerElement;
     'pulumi-choosable': HTMLPulumiChoosableElement;
@@ -179,6 +188,7 @@ declare global {
     'pulumi-tooltip': HTMLPulumiTooltipElement;
     'pulumi-top-button': HTMLPulumiTopButtonElement;
     'pulumi-webinar-form-select': HTMLPulumiWebinarFormSelectElement;
+    'pulumi-youtube-audio-player': HTMLPulumiYoutubeAudioPlayerElement;
   }
 }
 
@@ -235,6 +245,9 @@ declare namespace LocalJSX {
     'selectClass'?: string;
     'sessions'?: string;
   }
+  interface PulumiYoutubeAudioPlayer {
+    'videoId'?: string;
+  }
 
   interface IntrinsicElements {
     'pulumi-banner': PulumiBanner;
@@ -251,6 +264,7 @@ declare namespace LocalJSX {
     'pulumi-tooltip': PulumiTooltip;
     'pulumi-top-button': PulumiTopButton;
     'pulumi-webinar-form-select': PulumiWebinarFormSelect;
+    'pulumi-youtube-audio-player': PulumiYoutubeAudioPlayer;
   }
 }
 
@@ -274,6 +288,7 @@ declare module "@stencil/core" {
       'pulumi-tooltip': LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
       'pulumi-top-button': LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
       'pulumi-webinar-form-select': LocalJSX.PulumiWebinarFormSelect & JSXBase.HTMLAttributes<HTMLPulumiWebinarFormSelectElement>;
+      'pulumi-youtube-audio-player': LocalJSX.PulumiYoutubeAudioPlayer & JSXBase.HTMLAttributes<HTMLPulumiYoutubeAudioPlayerElement>;
     }
   }
 }

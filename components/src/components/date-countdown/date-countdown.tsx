@@ -25,7 +25,7 @@ export class DateCountdown {
     @State()
     countdownData: CountdownData;
 
-    componentDidLoad() {
+    componentWillLoad() {
         const countdownEndDate = new Date(this.dateString).getTime();
         this.countdownData = this.generateCountdownData(countdownEndDate)
 
@@ -59,7 +59,7 @@ export class DateCountdown {
 
     private renderLoading() {
         return <p class={this.textClass}>
-            <i class="fa fa-spinner fa-spin mr-2"></i>
+            <i class="fa fa-spinner fa-spin"></i>
         </p>;
     }
 
