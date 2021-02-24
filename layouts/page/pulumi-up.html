@@ -1,0 +1,53 @@
+{{ define "hero" }}
+    <div class="pulumi-up-hero bg-black shadow-2xl relative overflow-hidden flex items-center justify-center">
+        <div class="py-12 pl-24">
+            <div class="neon-container">
+                <div class="flux">Pulumi<span class="neon">UP</span></div>
+            </div>
+            <div class="absolute bottom-0">
+                <p class="text-white mt-8">Some great countdown thing</p>
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+{{ define "main" }}
+    <div class="container mx-auto">
+        <section id="about">
+            <h2>{{ .Params.about.title }}</h2>
+            <p>{{ .Params.about.description }}</p>
+            <a href="#">Register For All Sessions</a>
+        </section>
+
+        <section id="agenda">
+            <h2>{{ .Params.agenda.title }}</h2>
+
+            {{ range .Params.agenda.items }}
+                <ul class="flex flex-col items-start w-full list-none p-0">
+
+                    <!-- PaC -->
+                    <li class="md:flex w-full items-start pb-12 mb-12 border-b border-gray-200">
+                        <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
+                            <a href="#" class="rounded transition-all block border-2 border-gray-400" title="{{ .name }}">
+                                <img src="{{ .image }}" alt="{{ .name }}">
+                            </a>
+                        </div>
+                        <div class="md:mt-2 md:w-3/5">
+                            <h3>
+                                <a href="#" class="text-blue-600 text-2xl">{{ .name }}</a>
+                            </h3>
+                            <p class="leading-relaxed mb-8 text-lg">{{ .description }}</p>
+                            <div>
+                                <a href="#" class="btn btn-secondary">Register</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            {{ end }}
+        </section>
+
+        <section id="register">
+            <h2>Register Here</h2>
+        </section>
+    </div>
+{{ end }}
