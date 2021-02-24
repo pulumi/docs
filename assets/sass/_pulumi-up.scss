@@ -2,6 +2,8 @@
 // https://codepen.io/Trinca/pen/NAvpWa
 @import url(//fonts.googleapis.com/css?family=Vibur);
 
+$pageBackgroundColor: #11151c;
+
 $lightGreen: theme('colors.green.400');
 $darkGreen: theme('colors.green.700');
 $veryDarkGreen: theme('colors.green.900');
@@ -90,40 +92,6 @@ $veryDarkOrange: theme('colors.orange.900');
   }
 }
 
-@keyframes blink {
-    78% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-    79%{
-      color: #333;
-    }
-    80% {
-
-      text-shadow: none;
-    }
-    81% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-    82% {
-      color: #333;
-      text-shadow: none;
-    }
-    83% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-    92% {
-      color: #333;
-      text-shadow: none;
-    }
-    92.5% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-}
-
 .pulumi-up-hero {
     height: 650px;
     background: url(/images/pulumi-up/nighthawks_smoke.jpg);
@@ -132,5 +100,46 @@ $veryDarkOrange: theme('colors.orange.900');
 }
 
 .pulumi-up-body {
-    background-color: #11151c;
+    background-color: $pageBackgroundColor;
+}
+
+%dialog-box {
+  border-radius: 1em;
+  color: $white;
+  margin: 5% auto;
+  padding: 2em;
+  position: relative;
+  width: 95%;
+
+  &:before {
+    background: $pageBackgroundColor;
+    content: attr(data-title);
+    left: 50%;
+    padding: 0 1em;
+    position: absolute;
+    text-transform: uppercase;
+    top: -0.6em;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+}
+
+@mixin dialog-box ($color: #05d5fc){
+  @extend %dialog-box;
+  font-size: 1.3rem;
+  border: 0.2em solid $color;
+  box-shadow:
+    inset 0 0 0.4em $color,
+    0 0 0.4em $color;
+
+  &:before {
+    //border-left: 0.2em solid $color;
+    //border-right: 0.2em solid $color;
+    color: $lightOrange;
+    text-shadow: 0 0 0.4em $lightOrange;
+  }
+}
+
+.dialog-box_purple {
+  @include dialog-box(theme('colors.purple.400'));
 }

@@ -28,31 +28,28 @@
                 <p>{{ .Params.about.description }}</p>
             </section>
 
-            <section id="agenda" class="mt-24">
-                <h2 class="text-white">{{ .Params.agenda.title }}</h2>
+            <section id="agenda" class="mt-24 max-w-4xl mx-auto">
+                <h2 class="neon text-center text-7xl">{{ .Params.agenda.title }}</h2>
 
-                {{ range .Params.agenda.items }}
-                    <ul class="flex flex-col items-start w-full list-none p-0">
-
-                        <!-- PaC -->
-                        <li class="md:flex w-full items-start pb-12 mb-12 border-b border-gray-200">
-                            <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
-                                <a href="#" class="rounded transition-all block border-2 border-gray-400" title="{{ .name }}">
-                                    <img src="{{ .image }}" alt="{{ .name }}">
-                                </a>
-                            </div>
-                            <div class="md:mt-2 md:w-3/5">
-                                <h3>
-                                    <a href="#" class="text-white text-2xl">{{ .name }}</a>
-                                </h3>
-                                <p class="leading-relaxed mb-8 text-lg">{{ .description }}</p>
-                                <div>
+                <ul class="flex flex-col items-start w-full list-none p-0">
+                    {{ range .Params.agenda.items }}
+                        <li data-title="{{ .name }}" class="w-full items-start pb-12 mb-12 dialog-box_purple">
+                            <div class="pt-8 md:flex">
+                                <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
+                                    <a href="#" class="rounded transition-all block border-2 border-gray-400" title="{{ .name }}">
+                                        <img src="{{ .image }}" alt="{{ .name }}">
+                                    </a>
+                                </div>
+                                <div class="md:mt-2 md:w-3/5">
+                                    <p class="mb-8">
+                                        {{ .description }}
+                                    </p>
                                     <a href="#" class="btn btn-orange-translucent">Register</a>
                                 </div>
                             </div>
                         </li>
-                    </ul>
-                {{ end }}
+                    {{ end }}
+                </ul>
             </section>
 
             <section id="register">
