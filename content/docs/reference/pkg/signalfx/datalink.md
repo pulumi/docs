@@ -53,7 +53,6 @@ class MyStack : Stack
             {
                 new SignalFx.Inputs.DataLinkTargetExternalUrlArgs
                 {
-                    IsDefault = false,
                     Name = "ex_url",
                     TimeFormat = "ISO8601",
                     Url = "https://www.example.com",
@@ -103,7 +102,6 @@ func main() {
 			PropertyValue:      pulumi.String("pvalue"),
 			TargetExternalUrls: signalfx.DataLinkTargetExternalUrlArray{
 				&signalfx.DataLinkTargetExternalUrlArgs{
-					IsDefault:  pulumi.Bool(false),
 					Name:       pulumi.String("ex_url"),
 					TimeFormat: pulumi.String("ISO8601"),
 					Url:        pulumi.String("https://www.example.com"),
@@ -144,7 +142,6 @@ my_data_link_dash = signalfx.DataLink("myDataLinkDash",
     property_name="pname2",
     property_value="pvalue",
     target_external_urls=[signalfx.DataLinkTargetExternalUrlArgs(
-        is_default=False,
         name="ex_url",
         time_format="ISO8601",
         url="https://www.example.com",
@@ -179,7 +176,6 @@ const myDataLinkDash = new signalfx.DataLink("myDataLinkDash", {
     propertyName: "pname2",
     propertyValue: "pvalue",
     targetExternalUrls: [{
-        isDefault: false,
         name: "ex_url",
         timeFormat: "ISO8601",
         url: "https://www.example.com",
