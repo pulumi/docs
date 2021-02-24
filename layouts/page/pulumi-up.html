@@ -1,53 +1,62 @@
 {{ define "hero" }}
-    <div class="pulumi-up-hero bg-black shadow-2xl relative overflow-hidden flex items-center justify-center">
+    <div class="pulumi-up-hero bg-black shadow-2xl relative overflow-hidden flex justify-center">
         <div class="py-12 pl-24">
             <div class="neon-container">
                 <div class="flux">Pulumi<span class="neon">UP</span></div>
             </div>
-            <div class="absolute bottom-0">
-                <p class="text-white mt-8">Some great countdown thing</p>
+            <div class="absolute bottom-0 ml-12">
+                <pulumi-date-countdown
+                    value-label-class="text-2xl"
+                    text-class="text-white text-6xl neon-basic"
+                    date-string="2021-04-20T09:00:00-08:00"
+                ></pulumi-date-countdown>
             </div>
         </div>
     </div>
 {{ end }}
 
 {{ define "main" }}
-    <div class="container mx-auto">
-        <section id="about">
-            <h2>{{ .Params.about.title }}</h2>
-            <p>{{ .Params.about.description }}</p>
-            <a href="#">Register For All Sessions</a>
-        </section>
+    <div class="pulumi-up-body text-white py-24">
+        <div class="container mx-auto">
+            <section id="about">
+                <h2 class="text-white">{{ .Params.about.title }}</h2>
+                <p>{{ .Params.about.description }}</p>
+            </section>
 
-        <section id="agenda">
-            <h2>{{ .Params.agenda.title }}</h2>
+            <section id="agenda" class="mt-24">
+                <h2 class="text-white">{{ .Params.agenda.title }}</h2>
 
-            {{ range .Params.agenda.items }}
-                <ul class="flex flex-col items-start w-full list-none p-0">
+                {{ range .Params.agenda.items }}
+                    <ul class="flex flex-col items-start w-full list-none p-0">
 
-                    <!-- PaC -->
-                    <li class="md:flex w-full items-start pb-12 mb-12 border-b border-gray-200">
-                        <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
-                            <a href="#" class="rounded transition-all block border-2 border-gray-400" title="{{ .name }}">
-                                <img src="{{ .image }}" alt="{{ .name }}">
-                            </a>
-                        </div>
-                        <div class="md:mt-2 md:w-3/5">
-                            <h3>
-                                <a href="#" class="text-blue-600 text-2xl">{{ .name }}</a>
-                            </h3>
-                            <p class="leading-relaxed mb-8 text-lg">{{ .description }}</p>
-                            <div>
-                                <a href="#" class="btn btn-secondary">Register</a>
+                        <!-- PaC -->
+                        <li class="md:flex w-full items-start pb-12 mb-12 border-b border-gray-200">
+                            <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
+                                <a href="#" class="rounded transition-all block border-2 border-gray-400" title="{{ .name }}">
+                                    <img src="{{ .image }}" alt="{{ .name }}">
+                                </a>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-            {{ end }}
-        </section>
+                            <div class="md:mt-2 md:w-3/5">
+                                <h3>
+                                    <a href="#" class="text-white text-2xl">{{ .name }}</a>
+                                </h3>
+                                <p class="leading-relaxed mb-8 text-lg">{{ .description }}</p>
+                                <div>
+                                    <a href="#" class="btn btn-orange-translucent">Register</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                {{ end }}
+            </section>
 
-        <section id="register">
-            <h2>Register Here</h2>
-        </section>
+            <section id="register">
+                <div class="w-full lg:w-1/2 mx-auto">
+                    {{ partial "form-section" (dict "form" .Params.form) }}
+                </div>
+            </section>
+        </div>
+
+        <iframe src="https://open.spotify.com/embed/playlist/4kAqBBEZQsBIXMIJl6u8tO" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
 {{ end }}

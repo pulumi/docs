@@ -48,6 +48,11 @@ export namespace Components {
     'from': SourceKind;
     'theme': string;
   }
+  interface PulumiDateCountdown {
+    'dateString': string;
+    'textClass': string;
+    'valueLabelClass': string;
+  }
   interface PulumiDatetime {
     'class'?: string;
     'date': string;
@@ -98,6 +103,12 @@ declare global {
   var HTMLPulumiConvertElement: {
     prototype: HTMLPulumiConvertElement;
     new (): HTMLPulumiConvertElement;
+  };
+
+  interface HTMLPulumiDateCountdownElement extends Components.PulumiDateCountdown, HTMLStencilElement {}
+  var HTMLPulumiDateCountdownElement: {
+    prototype: HTMLPulumiDateCountdownElement;
+    new (): HTMLPulumiDateCountdownElement;
   };
 
   interface HTMLPulumiDatetimeElement extends Components.PulumiDatetime, HTMLStencilElement {}
@@ -158,6 +169,7 @@ declare global {
     'pulumi-choosable': HTMLPulumiChoosableElement;
     'pulumi-chooser': HTMLPulumiChooserElement;
     'pulumi-convert': HTMLPulumiConvertElement;
+    'pulumi-date-countdown': HTMLPulumiDateCountdownElement;
     'pulumi-datetime': HTMLPulumiDatetimeElement;
     'pulumi-example': HTMLPulumiExampleElement;
     'pulumi-examples': HTMLPulumiExamplesElement;
@@ -196,6 +208,11 @@ declare namespace LocalJSX {
     'from'?: SourceKind;
     'theme'?: string;
   }
+  interface PulumiDateCountdown {
+    'dateString'?: string;
+    'textClass'?: string;
+    'valueLabelClass'?: string;
+  }
   interface PulumiDatetime {
     'class'?: string;
     'date'?: string;
@@ -224,6 +241,7 @@ declare namespace LocalJSX {
     'pulumi-choosable': PulumiChoosable;
     'pulumi-chooser': PulumiChooser;
     'pulumi-convert': PulumiConvert;
+    'pulumi-date-countdown': PulumiDateCountdown;
     'pulumi-datetime': PulumiDatetime;
     'pulumi-example': PulumiExample;
     'pulumi-examples': PulumiExamples;
@@ -246,6 +264,7 @@ declare module "@stencil/core" {
       'pulumi-choosable': LocalJSX.PulumiChoosable & JSXBase.HTMLAttributes<HTMLPulumiChoosableElement>;
       'pulumi-chooser': LocalJSX.PulumiChooser & JSXBase.HTMLAttributes<HTMLPulumiChooserElement>;
       'pulumi-convert': LocalJSX.PulumiConvert & JSXBase.HTMLAttributes<HTMLPulumiConvertElement>;
+      'pulumi-date-countdown': LocalJSX.PulumiDateCountdown & JSXBase.HTMLAttributes<HTMLPulumiDateCountdownElement>;
       'pulumi-datetime': LocalJSX.PulumiDatetime & JSXBase.HTMLAttributes<HTMLPulumiDatetimeElement>;
       'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
