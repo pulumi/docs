@@ -37,6 +37,10 @@ In addition to the tutorial, several interesting examples are available complete
 
 ## Example
 
+{{< chooser language "typescript,python,csharp,go" >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 import * as resources from "@pulumi/azure-nextgen/resources/latest";
 
@@ -45,6 +49,75 @@ const resourceGroup = new resources.ResourceGroup("resourceGroup", {
   location: "WestUS",
 });
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi_azure_nextgen as azure_nextgen
+
+resource_group = azure_nextgen.resources.latest.ResourceGroup("resourceGroup",
+                                                              resource_group_name="my-rg",
+                                                              location="WestUS")
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var resourceGroup = new AzureNextGen.Resources.Latest.ResourceGroup("resourceGroup", new AzureNextGen.Resources.Latest.ResourceGroupArgs
+        {
+            ResourceGroupName = "my-rg",
+            Location = "WestUS",
+        });
+    }
+
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+    resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        _, err := resources.NewResourceGroup(ctx, "resourceGroup", &resources.ResourceGroupArgs{
+            ResourceGroupName: pulumi.String("my-rg"),
+            Location:          pulumi.String("WestUS"),
+        })
+        if err != nil {
+            return err
+        }
+        return nil
+    })
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Above is one example of an Azure resource group using Pulumi. You can find additional examples in [the Pulumi examples repo](https://github.com/pulumi/examples).
 
