@@ -38,7 +38,7 @@ Snowflake’s success meant they needed to make some large-scale changes to thei
 
 The complexity and scale of this change were daunting. Each cloud provider does things differently and Snowflake’s architecture is made up of more than a dozen components that must both seamlessly support those differences and work in concert with each other. There is a great deal of intraservice communication and the requirements for data security are high.
 
-However, to make life even more interesting, all deployments had to be completed in three months Because Snowflake wanted to unveil its new platform at its company-wide annual conference.
+However, to make life even more interesting, all deployments had to be completed in three months because Snowflake wanted to unveil its new platform at its company-wide annual conference.
 
 The complexity of the project, along with the tight deadline, meant that the Snowflake cloud engineering team had to ask themselves if the tools they were currently using could do the job or was it time for a change?
 
