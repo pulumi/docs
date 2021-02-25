@@ -18,7 +18,7 @@ Now let's deploy your changes.
 $ pulumi up
 ```
 
-First, Pulumi will run the `preview` step of the update, which computes the minimally disruptive change to achieve the desired state described by the program.
+Pulumi will run the `preview` step of the update, which computes the minimally disruptive change to achieve the desired state described by the program.
 
 ```
 Previewing update (dev):
