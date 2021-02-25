@@ -1,6 +1,6 @@
 ---
 title: "Zero Downtime InfluxDB Migration with Pulumi and Aiven"
-date: 2021-02-18
+date: 2021-02-25
 meta_desc: "Zero downtime Pulumi in Aiven when transferring InfluxDB from cloud to cloud."
 meta_image: aiven.png
 authors:
